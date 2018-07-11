@@ -1,0 +1,92 @@
+\documentclass{ximera}
+
+\input{../preamble}
+
+\author{Bart Snapp}
+
+
+\title{Translations}
+
+\begin{document}
+\begin{abstract}
+  We view translations as matrices.
+\end{abstract}
+\maketitle
+
+Of all the isometries, \textit{translations} are probably the
+easiest. With a translation, all we do is move our object in a
+straight line, that is, every point in the plane is moved the same
+distance and the same direction. Let's see what happens to Louie
+Llama\index{Louie Llama} when he is translated:
+\begin{image}
+\includegraphics{transIdeaEg.pdf}
+\end{image}
+
+Pretty simple eh? We can give a more ``mathematical'' definition of a
+translation involving our newly-found knowledge of matrices! Check it:
+
+\begin{definition}
+A \dfn{translation}, denoted by $\mat{T}_{(u,v)}$, is a function
+that moves every point a given distance $u$ in the $x$-direction and a
+given distance $v$ in the $y$-direction. We will use the following
+matrix to represent translations:
+\[
+\mat{T}_{(u,v)} = 
+\begin{bmatrix}
+1 & 0 & u \\ 
+0 & 1 & v \\
+0 & 0 & 1
+\end{bmatrix}
+\]
+\end{definition}
+
+
+\begin{example} 
+Consider the point $\vec{p} = (-3,2)$. Use a matrix to translate
+$\vec{p}$ $5$ units right and $4$ units down.
+\begin{image}
+\includegraphics{transEg1.pdf}
+\end{image}
+Here is how you do it:
+\begin{align*}
+\mat{T}_{(5,-4)} \vec{p} &= 
+\begin{bmatrix}
+1 & 0 & 5 \\ 
+0 & 1 & -4 \\
+0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+-3 \\
+2 \\
+1
+\end{bmatrix}\\
+&=
+\begin{bmatrix}
+-3 + 0 + 5\\
+0 + 2 - 4 \\
+0 + 0 + 1
+\end{bmatrix}\\
+&=
+\begin{bmatrix}
+2\\
+-2 \\
+1
+\end{bmatrix}
+\end{align*}
+Hence, we end up with the point $(2,-2)$. But you knew that already,
+didn't you?
+\end{example}
+
+\begin{question} 
+Can you demonstrate with algebra why translations are isometries?
+\end{question}
+
+
+
+\begin{question} 
+We know how to translate individual points. How do we move entire
+figures and other funky shapes?
+\end{question}
+
+
+\end{document}
