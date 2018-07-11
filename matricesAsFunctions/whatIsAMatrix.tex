@@ -1,0 +1,131 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\title{What is a matrix?}
+
+\author{Bart Snapp}
+
+\begin{document}
+\begin{abstract}
+  We will think of a matrix as a function.
+\end{abstract}
+\maketitle
+
+We're going to discuss some basic functions in geometry.
+Specifically, we will talk about translations, reflections, and
+rotations. To start us off, we need a little background on
+\textit{matrices}.\index{matrix} You might think of a matrix as just a jumble
+of large brackets and numbers:
+\[
+\begin{bmatrix}
+  2 & 3 & -4 & 8 \\
+  -2 & 8 & 9 & -1 \\
+  0 & 4 & 9 & -7\\
+  1 & 0  & -3 & 9
+\end{bmatrix}
+\]
+However, we are going to think of
+matrices as \textit{functions}. Just as we write $f(x)$ for a function
+$f$ acting on a number $x$, we'll write:
+\[
+\mat{M} \vec{p} = \vec{q} 
+\]
+to represent a matrix $\mat{M}$ mapping point $\vec{p}$ to point
+$\vec{q}$. A point $\vec p$ is often represented as an ordered pair of
+coordinates, $\vec{p} = (x,y)$. However, to make things work out
+nicely, we need to write our points all straight and narrow, with a
+little buddy at the end:
+\[
+(x,y) \leadsto \begin{bmatrix} 
+x \\ 
+y \\
+1
+\end{bmatrix}
+\]
+Throughout this chapter, we will abuse notation slightly, freely
+interchanging several notations for a point:
+\[
+\vec{p} \leftrightsquigarrow
+(x,y) \leftrightsquigarrow
+\begin{bmatrix} 
+x \\ 
+y \\
+1
+\end{bmatrix}
+\]
+With this in mind, our work will be done via matrices and
+points that look like this:
+\[
+\mat{M} = 
+\begin{bmatrix}
+a & b & c \\ 
+d & e & f \\
+0 & 0 & 1
+\end{bmatrix}\qquad\text{and}\qquad \vec{p} = 
+\begin{bmatrix}
+x \\
+y \\
+1
+\end{bmatrix}
+\]
+Now recall the nitty gritty details of \textit{matrix
+  multiplication}:\index{matrix!multiplication}
+\begin{align*}
+\mat{M} \vec{p} &= 
+\begin{bmatrix}
+a & b & c \\ 
+d & e & f \\
+0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+x \\
+y \\
+1
+\end{bmatrix} \\
+&= \begin{bmatrix}
+ax + by + c\cdot 1\\
+dx + ey + f\cdot 1\\
+0\cdot x + 0 \cdot y  + 1\cdot 1
+\end{bmatrix}\\
+&= \begin{bmatrix}
+ax + by + c\\ 
+dx + ey + f\\
+1
+\end{bmatrix}
+\end{align*}
+
+\begin{question} Fine, but what does this have to do with geometry?
+\begin{center}
+  \youtube{vQ60rFwh2ig}
+\end{center}
+\end{question}
+
+In this chapter we are going to study a special type of functions,
+called \textit{isometries}. These are functions that preserve
+distances. Let's see what we mean by this:
+
+\begin{definition} 
+An \dfn{isometry} is a function $\mat{M}$ that maps points in the
+plane to other points in the plane such that
+\[
+d(\vec{p}, \vec{q}) = d(\mat{M} \vec{p},\mat{M}\vec{q}),
+\]
+where $d$ is the distance function.
+\end{definition}
+
+
+\begin{question}
+  How do you compute the distance between two points again?
+  \begin{multipleChoice}
+    \choice[correct]{I remember how to do this.}
+    \choice[correct]{I don't remember how to do this.}
+  \end{multipleChoice}
+\end{question}
+
+
+We're going to see that several ideas in geometry which all seem very different are actually all isometries.  Specifically, we'll look at
+translations, reflections, and rotations.  Since they are isometries, 
+we will be thinking of these concepts as matrices.
+
+\end{document}
