@@ -1,0 +1,131 @@
+\documentclass{ximera}
+
+\input{../preamble}
+
+\author{Jenny Sheldon \and Bart Snapp}
+
+
+\outcome{Explain what is meant by a reflection.}
+\outcome{Compute reflections using matrix multiplication.}
+\outcome{Use the distance formula to show that a given reflection is an isometry.}
+
+\title{Reflections}
+
+\begin{document}
+\begin{abstract}
+  We view reflections as matrices.
+\end{abstract}
+\maketitle
+
+The act of reflection has fascinated humanity for millennia.  It has a
+strong effect on our perception of beauty and has a defined place in
+art---not to mention how useful it is for the application
+of make-up. Here is our definition of a reflection:
+
+\begin{definition}
+The \dfn{reflection} across a line $\l$, denoted by $\mat{F}_\l$, is the
+function that maps a point $\vec{p}$ to a point $\mat{F}_\l
+\vec{p}$ such that:
+\begin{enumerate}
+\item If $\vec{p}$ is on $\l$, then $\mat{F}_\l \vec{p} = \vec{p}$.
+\item If $\vec{p}$ is not on $\l$, then $\l$ is the perpendicular
+  bisector of the segment connecting $\vec{p}$ and $\mat{F}_\l \vec{p}$. 
+\end{enumerate}
+\end{definition}
+
+You might be saying, ``Huh?''  It's not as hard as it looks.  Check
+out this picture of the situation; again Louie Llama\index{Louie Llama} 
+will help us out:
+\[
+\includegraphics{refIdeaEg.pdf}
+\]
+
+\subsubsection{A Collection of Reflections}
+
+We are going to begin with a trio of reflections. We'll start with a
+\textbf{horizontal reflection}\index{horizontal reflection}\index{reflection!horizontal} across the $y$-axis.  Using
+our matrix notation, we write:
+\[
+\mat{F}_{x=0} =
+\begin{bmatrix}
+-1 & 0 & 0\\
+ 0 & 1 & 0\\
+ 0 & 0 & 1
+\end{bmatrix}
+\]
+
+The next reflection in our collection is a \textbf{vertical
+  reflection}\index{vertical reflection}\index{reflection!vertical}
+across the $x$-axis.  Using our matrix notation, we write:
+\[
+\mat{F}_{y=0} =
+\begin{bmatrix}
+1 &  0 & 0\\
+0 & -1 & 0\\
+0 &  0 & 1
+\end{bmatrix}
+\]
+The final reflection to add to our collection is a \textbf{diagonal
+  reflection}\index{diagonal reflection}\index{reflection!diagonal}
+across the line $y=x$.  Using our matrix notation, we write:
+\[
+\mat{F}_{y=x} =
+\begin{bmatrix}
+0 & 1 & 0\\
+1 & 0 & 0\\
+0 & 0 & 1
+\end{bmatrix}
+\]
+
+
+\begin{example}
+Consider the point $\vec{p} =(3,-1)$.  Use a matrix to reflect
+$\vec{p}$ across the line $y = x$.
+\[
+\includegraphics{refEg1.pdf}
+\]
+Here is how you do it:
+\begin{align*}
+\mat{F}_{y = x} \vec{p} &= 
+\begin{bmatrix}
+0 & 1 & 0 \\ 
+1 & 0 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+3 \\
+-1 \\
+1
+\end{bmatrix}\\
+&=
+\begin{bmatrix}
+0-1+0\\
+3+0+0 \\
+0+0+1
+\end{bmatrix}\\
+&=
+\begin{bmatrix}
+-1\\
+3 \\
+1
+\end{bmatrix}
+\end{align*}
+Hence we end up with the point $(-1,3)$. 
+\end{example}
+
+\begin{question}
+Let $\vec{p}$ be some point in Quadrant I of the $(x,y)$-plane. What
+reflection will map this point to Quadrant II? What about Quadrant IV?
+What about Quadrant III?
+\end{question}
+
+
+
+\begin{question} 
+Can you demonstrate with algebra why each of our reflections above are
+isometries?
+\end{question}
+
+
+
+\end{document}

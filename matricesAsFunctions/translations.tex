@@ -2,7 +2,13 @@
 
 \input{../preamble}
 
-\author{Bart Snapp}
+\author{Jenny Sheldon \and Bart Snapp}
+
+
+\outcome{Explain what is meant by a translation.}
+\outcome{Describe a translation using a matrix.}
+\outcome{Compute translations using matrix multiplication.}
+\outcome{Use the distance formula to show a translation is an isometry.}
 
 
 \title{Translations}
@@ -81,7 +87,42 @@ didn't you?
 \end{example}
 
 \begin{question} 
-Can you demonstrate with algebra why translations are isometries?
+  Can you demonstrate with algebra why translations are isometries?
+  \begin{prompt}
+    To start we need two points, say $\vec{a} = (a,b)$ and $\vec{p} =
+    (p,q)$. Now compute the distance between these two points using
+    the distance formula:
+    \[
+    d(\vec{a},\vec{p}) = \answer{\sqrt{(a-p)^2 + (b-q)^2}}
+    \]
+    Now we will translate these two points using $\mat{T}_{(u,v)}$ and
+    show that the distance between the translated points is the same
+    distance found above. Write with me:
+    \[
+    \mat{T}_{(u,v)} \vec{a} =
+    \begin{bmatrix}
+      \answer{a + u}\\
+      \answer{b + v}
+    \end{bmatrix}
+    \]
+    and
+    \[
+    \mat{T}_{(u,v)} \vec{p} =
+    \begin{bmatrix}
+      \answer{p + u}\\
+      \answer{q + v}
+    \end{bmatrix}
+    \]
+    Now, compute the distance between $\mat{T}_{(u,v)} \vec{a}$ and
+    $\mat{T}_{(u,v)} \vec{p}$:
+    \[
+    d(\mat{T}_{(u,v)} \vec{a}, \mat{T}_{(u,v)} \vec{p}) =
+    \answer{\sqrt{(a-p)^2 + (b-q)^2}}.
+    \]
+    Since the distances found \wordChoice{\choice{are
+        different}\choice[correct]{are the same}}, we see that
+    translations are isometries.
+  \end{prompt}
 \end{question}
 
 
@@ -89,6 +130,21 @@ Can you demonstrate with algebra why translations are isometries?
 \begin{question} 
 We know how to translate individual points. How do we move entire
 figures and other funky shapes?
+\begin{prompt}
+\begin{multipleChoice}
+  \choice[correct]{I've thought about this.}
+  \choice{I've not thought about this.}
+\end{multipleChoice}
+\begin{idea}
+  Well, one way to do it is to apply a translation to every single
+  point in the picture. This is hard for a human to do, and usually
+  requires a computer.
+
+  On the other hand, if you can somehow group all the pieces together,
+  you just move one point, and then place all the other points
+  relative to the first.
+\end{idea}
+\end{prompt}
 \end{question}
 
 
