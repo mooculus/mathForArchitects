@@ -84,6 +84,7 @@ $\vec{p}$ across the line $y = x$.
 \begin{image}
 \includegraphics{refEg1.pdf}
 \end{image}
+\begin{explanation}
 Here is how you do it:
 \begin{align*}
 \mat{F}_{y = x} \vec{p} &= 
@@ -99,31 +100,78 @@ Here is how you do it:
 \end{bmatrix}\\
 &=
 \begin{bmatrix}
-0-1+0\\
-3+0+0 \\
-0+0+1
-\end{bmatrix}\\
-&=
-\begin{bmatrix}
--1\\
-3 \\
-1
+\answer[given]{-1}\\
+\answer[given]{3} \\
+\answer[given]{1}
 \end{bmatrix}
 \end{align*}
-Hence we end up with the point $(-1,3)$. 
+Hence we end up with the point $\left(\answer[given]{-1},\answer[given]{3}\right)$.
+\end{explanation}
 \end{example}
 
 \begin{question}
 Let $\vec{p}$ be some point in Quadrant I of the $(x,y)$-plane. What
-reflection will map this point to Quadrant II? What about Quadrant IV?
-What about Quadrant III?
+reflection will map this point to Quadrant II?
+\begin{hint}
+  If you have forgotten about the quadrants of hte $(x,y)$-plane, checkout \link[this]{https://en.wikipedia.org/wiki/Quadrant_(plane_geometry)}.
+\end{hint}
+\begin{prompt}
+  To map a point in Quadrant I to Quadrant II, use the reflection $\mat{F}_{\answer{x}=\answer{0}}$
+\end{prompt}
+\begin{question}
+  What about mapping a point in Quadrant I to Quadrant IV?
+  \begin{prompt}
+    To map a point in Quadrant I to Quadrant IV, use the reflection $\mat{F}_{\answer{y}=\answer{0}}$
+  \end{prompt}
+  \begin{question}
+  What about Quadrant III?
+  \begin{prompt}
+    None of the reflections explicitly given in this section will do
+    the trick. Instead you need to find a line of the form $y=
+    \text{something}$ that will work. Thinking a bit, we see
+    $\mat{F}_{y= \answer{-x}}$ does the trick.
+  \end{prompt}
+  \end{question}
+\end{question}
 \end{question}
 
-
-
 \begin{question} 
-Can you demonstrate with algebra why each of our reflections above are
-isometries?
+  Can you demonstrate with algebra why $\mat{F}_{y=x}$ is an isometry?
+    \begin{prompt}
+    To start we need two points, say $\vec{a} = (a,b)$ and $\vec{p} =
+    (p,q)$. Now compute the distance between these two points using
+    the distance formula:
+    \[
+    d(\vec{a},\vec{p}) = \answer{\sqrt{(a-p)^2 + (b-q)^2}}
+    \]
+    Now we will reflect these two points across the line $y=x$ using
+    $\mat{F}_{y=x}$ and show that the distance between the reflected
+    points is the same distance found above. Write with me:
+    \[
+    \mat{F}_{y=x} \vec{a} =
+    \begin{bmatrix}
+      \answer{b}\\
+      \answer{a}
+    \end{bmatrix}
+    \]
+    and
+    \[
+    \mat{F}_{y=x} \vec{p} =
+    \begin{bmatrix}
+      \answer{q}\\
+      \answer{p}
+    \end{bmatrix}
+    \]
+    Now, compute the distance between $\mat{F}_{y=x} \vec{a}$ and
+    $\mat{F}_{y=x} \vec{p}$:
+    \[
+    d(\mat{F}_{y=x} \vec{a}, \mat{F}_{y=x} \vec{p}) =
+    \answer{\sqrt{(b-q)^2 + (a-p)^2}}.
+    \]
+    Since the distances found \wordChoice{\choice{are
+        different}\choice[correct]{are the same}}, we see that $\mat{F}_{y=x}$ is
+    an isometry.
+  \end{prompt}
 \end{question}
 
 
