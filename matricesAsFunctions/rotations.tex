@@ -136,8 +136,43 @@ Hence, we end up with the point $\left(\answer[given]{2+\sqrt{3}},\answer[given]
 
 
 \begin{question} 
-Can you demonstrate with algebra why our rotations
-above are isometries?
+  Can you demonstrate with algebra why $\mat{R}_{60}$ is an isometry?
+
+  \begin{prompt}
+    To start we need two points, say $\vec{a} = (a,b)$ and $\vec{p} =
+    (p,q)$. Now compute the distance between these two points using
+    the distance formula:
+    \[
+    d(\vec{a},\vec{p}) = \answer{\sqrt{(a-p)^2 + (b-q)^2}}
+    \]
+    Now we will rotate these two points $60^\circ$  using
+    $\mat{R}_{60}$ and show that the distance between the rotated
+    points is the same distance found above. Write with me:
+    \[
+    \mat{R}_{60} \vec{a} =
+    \begin{bmatrix}
+      \answer{a/2-b\sqrt{3}/2}\\
+      \answer{a\sqrt{3}/2+b/2}
+    \end{bmatrix}
+    \]
+    and
+    \[
+    \mat{R}_{60} \vec{p} =
+    \begin{bmatrix}
+      \answer{p/2-q\sqrt{3}/2}\\
+      \answer{p\sqrt{3}/2+q/2}
+    \end{bmatrix}
+    \]
+    Now, compute the distance between $\mat{R}_{60} \vec{a}$ and
+    $\mat{R}_{60} \vec{p}$:
+    \[
+    d(\mat{R}_{60} \vec{a}, \mat{R}_{60} \vec{p}) =
+    \answer{\sqrt{(a-p)^2 + (b-q)^2}}.
+    \]
+    Since the distances found \wordChoice{\choice{are
+        different}\choice[correct]{are the same}}, we see that $\mat{R}_{60}$ is
+    an isometry.
+  \end{prompt}
 \end{question}
 
 
