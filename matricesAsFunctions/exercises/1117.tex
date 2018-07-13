@@ -1,0 +1,30 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Jenny Sheldon \and Bart Snapp}
+
+\begin{document}
+
+\makerandom
+ 
+\begin{sagesilent}
+  a = randint(-10,10)
+  b = randint(-10,10)
+  u = randint(-10,10)
+  v = randint(-10,10)
+\end{sagesilent}
+
+\begin{exercise}
+  Give a matrix that will translate the point $(\sage{a},\sage{b})$ $\sage{u}$ units to the right and $\sage{v}$ units up. 
+  \begin{prompt}
+    \[
+    \mat{T}_{\sage{u},\sage{v})}=\begin{bmatrix}
+      \answer{1} & \answer{0} & \answer{\sage{u}}\\
+      \answer{0} & \answer{1} & \answer{\sage{v}}\\
+      \answer{0} & \answer{0} & \answer{1}
+    \end{bmatrix}
+    \]
+  \end{prompt}
+\end{exercise}
+\end{document}
