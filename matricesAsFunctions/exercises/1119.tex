@@ -1,0 +1,25 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Jenny Sheldon \and Bart Snapp}
+
+\begin{document}
+
+\makerandom
+ 
+\begin{sagesilent}
+  a = randint(-10,10)
+  b = randint(-10,10)
+\end{sagesilent}
+
+\begin{exercise}
+  Use a matrix to reflect the point $(\sage{a},\sage{b})$ across the
+  $x$-axis.
+  \begin{prompt}
+    \[
+    \vec{p} = (\sage{a},\sage{-b})
+    \]
+  \end{prompt}
+\end{exercise}
+\end{document}

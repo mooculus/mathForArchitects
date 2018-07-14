@@ -1,0 +1,27 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Jenny Sheldon \and Bart Snapp}
+
+\begin{document}
+
+\makerandom
+ 
+\begin{sagesilent}
+  a = randint(-10,10)
+  b = randint(-10,10)
+  u = randint(-10,10)
+  v = randint(-10,10)
+\end{sagesilent}
+
+\begin{exercise}
+  The matrix $\mat{T}_{(\sage{u},\sage{v})}$ was used to translate the point
+  $\vec{p}$ to $(\sage{a},\sage{b})$.  What is $\vec{p}$?
+  \begin{prompt}
+    \[
+    \vec{p} = (\sage{a-u},\sage{b-v})
+    \]
+  \end{prompt}
+\end{exercise}
+\end{document}
