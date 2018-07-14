@@ -1,0 +1,218 @@
+\documentclass{ximera}
+
+\input{../preamble}
+
+\author{Jenny Sheldon \and Bart Snapp}
+
+
+\outcome{}
+
+
+\title{Compositions of matrices}
+
+\begin{document}
+\begin{abstract}
+  We study repeated applications of our isometries.
+\end{abstract}
+\maketitle
+
+
+It is often the case that we wish to apply several isometries
+successively to a point. Consider the following:
+\[
+\mat{M} =
+\begin{bmatrix}
+a & b & c\\
+d & e & f \\
+0 & 0 & 1
+\end{bmatrix}
+\qquad
+\mat{N} =
+\begin{bmatrix}
+g & h & i\\
+j & k & l\\
+0 & 0 & 1
+\end{bmatrix}
+\qquad\text{and}\qquad \vec{p} =
+\begin{bmatrix}
+x \\
+y \\
+1
+\end{bmatrix}
+\]
+Now let's compute 
+\begin{align*}
+\mat{M}(\mat{N}\vec{p}) &= \begin{bmatrix}
+a & b & c\\
+d & e & f \\
+0 & 0 & 1
+\end{bmatrix} 
+\left(
+\begin{bmatrix}
+g & h & i\\
+j & k & l\\
+0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+x \\
+y \\
+1
+\end{bmatrix}
+\right)\\
+&= 
+\begin{bmatrix}
+a & b & c\\
+d & e & f \\
+0 & 0 & 1
+\end{bmatrix} 
+\begin{bmatrix}
+gx+hy + i\\
+jx+ky +l\\
+1
+\end{bmatrix} \\
+&=
+\begin{bmatrix}
+agx+ahy +ai + bjx+bky+bl+c\\
+dgx+dhy+ di + ejx+eky+el+f\\
+1
+\end{bmatrix}
+\end{align*}
+Now \textit{you} compute $(\mat{M}\mat{N})\vec{p}$ and compare what
+\textit{you} get to what we got above.
+
+
+
+\section{Compositions of translations}
+
+A composition of translations occurs when two or more successive
+translations are applied to the same point. Check it out:
+\begin{align*}
+\mat{T}_{(5,-4)}\mat{T}_{(-3,2)} &= \begin{bmatrix}
+1 & 0 &  5\\
+0 & 1 & -4\\
+0 & 0 &  1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & -3\\
+0 & 1 &  2\\
+0 & 0 &  1
+\end{bmatrix}\\
+&=\begin{bmatrix}
+1 & 0 &  2\\
+0 & 1 & -2\\
+0 & 0 &  1
+\end{bmatrix}\\
+&=\mat{T}_{(5+(-3),(-4)+2)}\\
+&=\mat{T}_{(2,-2)}
+\end{align*}
+
+\begin{theorem}
+The composition of two translations $\mat{T}_{(u,v)}$ and
+$\mat{T}_{(s,t)}$ is equal to the translation $\mat{T}_{(u+s,v+t)}$.
+\end{theorem}
+
+\begin{question} How do you prove the theorem above?
+\end{question}
+
+
+\begin{question}
+Can you give a single translation that is equal to the following composition?
+\[
+\mat{T}_{(-7,5)}\mat{T}_{(0,-6)}\mat{T}_{(2,8)}\mat{T}_{(5,-4)}
+\]
+\end{question}
+
+
+\begin{question}
+Are compositions of translations commutative?  Are they
+associative?
+\end{question}
+
+
+
+\section{Compositions of reflections}
+
+A composition of reflections occurs when two or more successive
+reflections are applied to the same point. Check it out:
+
+\begin{align*}
+\mat{F}_{y=0}\mat{F}_{y=x} &= \begin{bmatrix}
+1 &  0 & 0\\
+0 & -1 & 0\\
+0 &  0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+0 & 1 & 0\\
+1 & 0 & 0\\
+0 & 0 & 1
+\end{bmatrix}\\
+&= \begin{bmatrix}
+ 0 & 1 & 0\\
+-1 & 0 & 0\\
+ 0 & 0 & 1
+\end{bmatrix}
+\end{align*}
+
+
+\begin{question}
+Is the composition $\mat{F}_{y=0}\mat{F}_{y=x}$ still a reflection?
+\end{question}
+
+
+\begin{question}
+Are compositions of reflections commutative?  Are they
+associative?
+\end{question}
+
+
+
+
+\section{Compositions of rotations}
+
+
+A composition of rotations occurs when two or more successive
+rotations are applied to the same point. Check it out: 
+\begin{align*}
+\mat{R}_{60}\mat{R}_{60} &= \begin{bmatrix}
+\frac{1}{2} & \frac{-\sqrt{3}}{2} & 0\\
+\frac{\sqrt{3}}{2} & \frac{1}{2} & 0\\
+0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+\frac{1}{2} & \frac{-\sqrt{3}}{2} & 0\\
+\frac{\sqrt{3}}{2} & \frac{1}{2} & 0\\
+0 & 0 & 1
+\end{bmatrix}\\
+&= \begin{bmatrix}
+\frac{-1}{2} & \frac{-\sqrt{3}}{2} & 0\\
+\frac{\sqrt{3}}{2} & \frac{-1}{2} & 0\\
+0 & 0 & 1
+\end{bmatrix}
+\end{align*}
+
+\begin{theorem}
+The product of two rotations $\mat{R}_\theta$ and $\mat{R}_\ph$ is
+equal to the rotation $\mat{R}_{\theta+\ph}$.
+\end{theorem}
+
+From this we see that:
+\[
+\mat{R}_{120} =
+\begin{bmatrix}
+\frac{-1}{2} & \frac{-\sqrt{3}}{2} & 0\\
+\frac{\sqrt{3}}{2} & \frac{-1}{2} & 0\\
+0 & 0 & 1
+\end{bmatrix}
+\]
+
+\begin{question} What is the rotation matrix for a $360^\circ$ rotation? What about a $405^\circ$ rotation?
+\end{question}
+
+
+\begin{question}
+Are compositions of rotations commutative?  Are they
+associative?
+\end{question}
+
+
+\end{document}
