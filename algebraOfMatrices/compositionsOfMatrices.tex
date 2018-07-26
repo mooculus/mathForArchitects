@@ -112,6 +112,49 @@ $\mat{T}_{(s,t)}$ is equal to the translation $\mat{T}_{(u+s,v+t)}$.
 \end{theorem}
 
 \begin{question} How do you prove the theorem above?
+
+  \begin{prompt}
+    A proof is nothing but a fancy word for an explanation. So what we
+    do is work generally, with
+    \[
+    \mat{T}_{(u,v)} =
+    \begin{bmatrix}
+      \answer{1} & \answer{0} & \answer{u} \\
+      \answer{0} & \answer{1} & \answer{v} \\
+      \answer{0} & \answer{0} & \answer{1}
+    \end{bmatrix}
+    \]
+    and
+    \[
+    \mat{T}_{(s,t)} =
+    \begin{bmatrix}
+      \answer{1} & \answer{0} & \answer{s} \\
+      \answer{0} & \answer{1} & \answer{t} \\
+      \answer{0} & \answer{0} & \answer{1}
+    \end{bmatrix}
+    \]
+    so, write with me
+    \begin{align*}
+      \mat{T}_{(u,v)} \mat{T}_{(s,t)} &=
+      \begin{bmatrix}
+      \answer{1} & \answer{0} & \answer{u} \\
+      \answer{0} & \answer{1} & \answer{v} \\
+      \answer{0} & \answer{0} & \answer{1}
+    \end{bmatrix}
+    \begin{bmatrix}
+      \answer{1} & \answer{0} & \answer{s} \\
+      \answer{0} & \answer{1} & \answer{t} \\
+      \answer{0} & \answer{0} & \answer{1}
+    \end{bmatrix} \\
+    &=\begin{bmatrix}
+      \answer{1} & \answer{0} & \answer{u+s} \\
+      \answer{0} & \answer{1} & \answer{v+t} \\
+      \answer{0} & \answer{0} & \answer{1}
+    \end{bmatrix}\\
+    &=\mat{T}_{(u+s,v+t)}
+    \end{align*}
+    And boom! We're done.
+  \end{prompt}
 \end{question}
 
 
