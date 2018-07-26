@@ -1,0 +1,459 @@
+
+
+
+
+
+
+\newpage
+
+
+\problems
+\begin{enumerate}
+
+
+\item Consider the following matrix:
+\[
+\mat{M} = 
+\begin{bmatrix}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{bmatrix}
+\]
+Is $\mat{M}$ an isometry? Explain your reasoning.
+\item Consider the following matrix:
+\[
+\mat{M} = 
+\begin{bmatrix}
+0 & 0 & 8\\
+2 & 1 & 0\\
+0 & 0 & 1
+\end{bmatrix}
+\]
+Is $\mat{M}$ an isometry? Explain your reasoning.
+\item Consider the following matrix:
+\[
+\mat{M} = 
+\begin{bmatrix}
+0  & -1  & 0\\
+-1 & 0  & 0\\
+0  & 0  & 1
+\end{bmatrix}
+\]
+Is $\mat{M}$ an isometry? Explain your reasoning.
+\item Consider the following matrix:
+\[
+\mat{M} = 
+\begin{bmatrix}
+0  & 2  & 0\\
+-3 & 0  & 0\\
+0  & 0  & 1
+\end{bmatrix}
+\]
+\item Consider the following matrix:
+\[
+\mat{M} = 
+\begin{bmatrix}
+1  & 2  & 1\\
+1 & 1  & 2\\
+0  & 0  & 1
+\end{bmatrix}
+\]
+Is $\mat{M}$ an isometry? Explain your reasoning.
+
+
+
+\item 
+\item The matrix $\mat{F}_{y=0}$ was used to reflect the point $\vec{p}$
+  to $(0,-8)$.  What is $\vec{p}$? Explain your reasoning.
+\item The matrix $\mat{F}_{x=0}$ was used to reflect the point $\vec{p}$
+  to $(-5,-1)$.  What is $\vec{p}$? Explain your reasoning.
+\item The matrix $\mat{F}_{y=x}$ was used to reflect the point $\vec{p}$
+  to $(9,-2)$.  What is $\vec{p}$? Explain your reasoning.
+\item The matrix $\mat{F}_{y=x}$ was used to reflect the point $\vec{p}$
+  to $(-3,-3)$.  What is $\vec{p}$? Explain your reasoning.
+\item Considering the point $(3,2)$, use a matrix to rotate this point
+  $60^\circ$ about the origin.  Sketch this situation and explain your
+  reasoning.  
+\item Considering the point $(\sqrt{2},-\sqrt{2})$, use a matrix to
+  rotate this point $45^\circ$ about the origin.  Sketch this
+  situation and explain your reasoning.
+\item Considering the point $(-7,6)$, use a matrix to rotate this point
+  $90^\circ$ about the origin.  Sketch this situation and explain your
+  reasoning.  
+\item Considering the point $(-1,3)$, use a matrix to rotate this point
+  $0^\circ$ about the origin.  Sketch this situation and explain your
+  reasoning.  
+\item Considering the point $(0,0)$, use a matrix to rotate this point
+  $120^\circ$ about the origin.  Sketch this situation and explain your
+  reasoning.  
+\item Considering the point $(1,1)$, use a matrix to rotate this point
+  $-90^\circ$ about the origin.  Sketch this situation and explain your
+  reasoning.  
+\item The matrix $\mat{R}_{90}$ was used to rotate the point $\vec{p}$
+  to $(2,-5)$.  What is $\vec{p}$? Explain your reasoning.
+\item The matrix $\mat{R}_{60}$ was used to rotate the point $\vec{p}$
+  to $(0,2)$.  What is $\vec{p}$? Explain your reasoning.
+\item The matrix $\mat{R}_{45}$ was used to rotate the point $\vec{p}$
+  to $(-\frac{1}{2}, \frac{5}{2})$.  What is $\vec{p}$? Explain your reasoning.
+\item The matrix $\mat{R}_{-90}$ was used to rotate the point $\vec{p}$
+  to $(4,3)$.  What is $\vec{p}$? Explain your reasoning.
+\item If someone wanted to plot the graph of $y=x^2$, they might start
+  by filling in the following table:
+\[
+\begin{array}{r | c}
+ x & x^2 \\
+\hline\hline
+0  & \\\hline
+1  & \\\hline
+-1 & \\\hline
+2  & \\\hline
+-2 & \\\hline
+3  & \\\hline
+-3 & 
+\end{array}
+\]
+Reflect each point you obtain from the table above about the line
+$y=x$. Give a plot of this situation. What curve do you obtain? What
+is this new curve's relationship to $y=x^2$? Explain your reasoning.
+\item Some translation $\mat{T}$ was used to map point $\vec{p}$ to
+  point $\vec{q}$.  Given $\vec{p}$ = $(1,2)$ and $\vec{q}$ = $(3,4)$,
+  find $\mat{T}$ and explain your reasoning.
+\item Some translation $\mat{T}$ was used to map point $\vec{p}$ to
+  point $\vec{q}$.  Given $\vec{p}$ = $(-2,3)$ and $\vec{q}$ =
+  $(2,3)$, find $\mat{T}$ and explain your reasoning.
+\item Some reflection $\mat{F}$ was used to map point $\vec{p}$ to
+  point $\vec{q}$.  Given $\vec{p}$ = $(1,4)$ and $\vec{q}$ =
+  $(1,-4)$, find $\mat{F}$ and explain your reasoning.
+\item Some reflection $\mat{F}$ was used to map point $\vec{p}$ to
+  point $\vec{q}$.  Given $\vec{p}$ = $(5,0)$ and $\vec{q}$ = $(0,5)$,
+  find $\mat{F}$ and explain your reasoning.
+\item Some rotation $\mat{R}$ was used to map point $\vec{p}$ to point
+  $\vec{q}$.  Given $\vec{p}$ = $(3,0)$ and $\vec{q}$ = $(0,3)$, find
+  $\mat{R}$ and explain your reasoning.
+\item Some rotation $\mat{R}$ was used to map point $\vec{p}$ to point
+  $\vec{q}$.  Given $\vec{p}$ = $(\sqrt{2},\sqrt{2})$ and $\vec{q}$ =
+  $(0,2)$, find $\mat{R}$ and explain your reasoning.
+\item Some matrix $\mat{M}$ maps 
+\begin{align*}
+(0,0) &\mapsto (0,0), \\
+(1,0) &\mapsto (3,0), \\
+(0,1) &\mapsto (0,5).
+\end{align*}
+Find $\mat{M}$ and explain your reasoning.
+\item Some matrix $\mat{M}$ maps 
+\begin{align*}
+(0,0) &\mapsto (-1,1), \\
+(1,0) &\mapsto (3,0), \\
+(0,1) &\mapsto (0,5).
+\end{align*}
+Find $\mat{M}$ and explain your reasoning.
+\item Some matrix $\mat{M}$ maps 
+\begin{align*}
+(0,0) &\mapsto (1,1), \\
+(1,0) &\mapsto (2,1), \\
+(0,1) &\mapsto (1,2).
+\end{align*}
+Find $\mat{M}$ and explain your reasoning.
+\item Some matrix $\mat{M}$ maps 
+\begin{align*}
+(0,0) &\mapsto (2,2), \\
+(1,1) &\mapsto (3,3), \\
+(-1,1) &\mapsto (1,3).
+\end{align*}
+Find $\mat{M}$ and explain your reasoning.
+\item Some matrix $\mat{M}$ maps 
+\begin{align*}
+(0,0) &\mapsto (0,0), \\
+(1,1) &\mapsto (0,3), \\
+(-1,1) &\mapsto (5,0).
+\end{align*}
+Find $\mat{M}$ and explain your reasoning.
+\item Some matrix $\mat{M}$ maps 
+\begin{align*}
+(0,0) &\mapsto (1,2), \\
+(1,1) &\mapsto (-3,1), \\
+(-1,1) &\mapsto (2,-3).
+\end{align*}
+Find $\mat{M}$ and explain your reasoning.
+
+%\item\label{P:lineCoord}  Consider the line $3x+4y = 2$. 
+%\begin{enumerate}
+%\item If $\vec{p}$ is a point on the line, and the $x$-coordinate of
+%  $\vec{p}$ is $6$, what is the $y$ coordinate?
+%\item If $\vec{p}$ is a point on the line, and the $x$-coordinate of
+%  $\vec{p}$ is $-3$, what is the $y$ coordinate?
+%\item If $\vec{p}$ is a point on the line, what are the coordinates of
+%  $\vec{p}$ purely in terms of $x$?
+%\item Now consider the line $ax+by = c$. If $\vec{p}$ is a point on
+%  the line, what are the coordinates of $\vec{p}$ in terms of $x$ and
+%  $y$?
+%\end{enumerate}
+%\item Consider $\mat{T}_{(u,v)}$ and a line $\l: ax + by = c$. Use
+%  algebra to explain why $\mat{T}_{(u,v)}\l$ is a new line and not
+%  some other curve. Hint: See Problem~\ref{P:lineCoord}.
+%\item Consider $\mat{T}_{(u,v)}$ and a line $\l: ax + by = c$. Use
+%  algebra to explain why $\mat{T}_{(u,v)}\l$ is a new line that is
+%  parallel to the original line. Hint: See Problem~\ref{P:lineCoord}.
+\end{enumerate}
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+\problems FOR ALGEBRA OF MATRICES
+
+\begin{enumerate}
+\item Give a single translation that is equal to
+  $\mat{T}_{(-3,2)}\mat{T}_{(5,-1)}$. Explain your reasoning.
+\item Consider the two translations $\mat{T}_{(-4,8)}$ and
+  $\mat{T}_{(4,-8)}$.  Do these commute?  Explain your reasoning.
+\item Give a single reflection that is equal to
+  $\mat{F}_{x=0}\mat{F}_{y=0}$. Sketch this situation and
+  explain your reasoning.
+\item Given any point $\vec{p} = (x,y)$, express
+  $\mat{T}_{(4,2)}\mat{T}_{(6,-5)}\vec{p}$ as $\mat{T}_{(u,v)}\vec{p}$
+  for some values of $u$ and $v$. Sketch this situation and explain
+  your reasoning.
+\item Give a matrix for $\mat{R}_{-45}$. Explain your reasoning.
+\item Give a matrix for $\mat{R}_{-60}$. Explain your reasoning.
+\item Sam suggests that:
+\[
+\mat{R}_{-90} = 
+\begin{bmatrix}
+0 & 1 & 0 \\
+-1 & 0 & 0 \\ 
+0 & 0 & 1
+\end{bmatrix}
+\]
+Why does he suggest this? Is it even true? Explain your reasoning.
+\item Give a matrix for $\mat{F}_{y=-x}$. Explain your reasoning.
+\item Given the point $\vec{p}=(-4,2)$, use matrices to compute
+  $\mat{F}_{y=0}\mat{F}_{y=x}\vec{p}$. Sketch this situation and
+  explain your reasoning.
+\item Given the point $\vec{p}=(5,0)$, use matrices to compute
+  $\mat{F}_{y=x}\mat{F}_{y=-x}\vec{p}$. Sketch this situation and
+  explain your reasoning.
+\item Give a single rotation that is equal to
+  $\mat{R}_{45}\mat{R}_{60}$. Explain your reasoning.
+\item Given the point $\vec{p}=(1,3)$, use matrices to compute
+  $\mat{R}_{45}\mat{R}_{90}\vec{p}$.  Sketch this situation and
+  explain your reasoning.
+\item Given the point $\vec{p}=(-7,2)$, use matrices to compute
+  $\mat{R}_{45}\mat{R}_{-45}\vec{p}$.  Sketch this situation and
+  explain your reasoning.
+\item Given the point $\vec{p}=(-2,5)$, use matrices to compute
+  $\mat{R}_{90}\mat{R}_{-90}\mat{R}_{360}\vec{p}$.  Sketch this
+  situation and explain your reasoning.
+\item Given the point $\vec{p}=(5,4)$, use matrices to compute
+  $\mat{F}_{y=0}\mat{T}_{(2,-4)}\vec{p}$.  Sketch this
+  situation and explain your reasoning.
+\item Given the point $\vec{p}=(-1,6)$, use matrices to compute
+  $\mat{R}_{45}\mat{T}_{(0,0)}\vec{p}$.  Sketch this situation and
+  explain your reasoning.
+\item Given the point $\vec{p}=(11,13)$, use matrices to  compute
+  $\mat{T}_{(-6,-3)}\mat{R}_{135}\vec{p}$.  Sketch this situation and
+  explain your reasoning.
+\item Given the point $\vec{p}=(-7,-5)$, use matrices to compute
+  $\mat{R}_{540}\mat{F}_{x=0}\vec{p}$.  Sketch this situation and
+  explain your reasoning.
+
+
+
+\item Give a composition of matrices that will take a
+  point and reflect it across the $x$-axis and then rotate the result
+  $90^\circ$ around the origin. Sketch this situation and
+  explain your reasoning.
+
+\item Give a composition of matrices that will take a
+  point and translate it three units up and 2 units left and then
+  rotate it $90^\circ$ clockwise around the origin. Sketch this situation and
+  explain your reasoning.
+
+\item Give a composition of matrices that will take a
+  point and rotate it $270^\circ$ around the origin, reflect it across
+  the line $y=x$, and then translate the result down 5 units and 3
+  units to the right. Sketch this situation and
+  explain your reasoning.
+
+\item Give a composition of translations and any of the following matrices
+\[
+\{\mat{F}_{x=0},\mat{F}_{y=0}, \mat{F}_{y=x}, \mat{R}_{90},\mat{R}_{60},\mat{R}_{45}\}
+\]
+that will take a point and reflect it across the line $x=1$. Sketch
+this situation and explain your reasoning.
+
+\item Give a composition of translations and any of the following
+  matrices
+\[
+\{\mat{F}_{x=0},\mat{F}_{y=0}, \mat{F}_{y=x}, \mat{R}_{90},\mat{R}_{60},\mat{R}_{45}\}
+\]
+that will take a point and reflect it across the line $y=-4$. Sketch
+this situation and explain your reasoning.
+
+\item Give a composition of translations and any of the following matrices
+\[
+\{\mat{F}_{x=0},\mat{F}_{y=0}, \mat{F}_{y=x}, \mat{R}_{90},\mat{R}_{60},\mat{R}_{45}\}
+\]
+that will take a
+  point and reflect it across the line $y=x+5$. Sketch this situation
+  and explain your reasoning.
+
+\item Give a composition of translations and any of the following matrices
+\[
+\{
+\mat{F}_{x=0},\mat{F}_{y=0}, \mat{F}_{y=x}, \mat{R}_{90},\mat{R}_{60},\mat{R}_{45}\}
+\]
+that will take a point and rotate it $45^\circ$ around the point
+$(2,3)$. Sketch this situation and explain your reasoning.
+
+\item Give a composition of translations and any of the following matrices
+\[
+\{\mat{F}_{x=0},\mat{F}_{y=0}, \mat{F}_{y=x}, \mat{R}_{90},\mat{R}_{60},\mat{R}_{45}\}
+\]
+that will take a point and rotate it $90^\circ$ clockwise around the
+point $(-3,4)$ Sketch this situation and explain your reasoning.
+
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+\problems FOR SYMMETRY
+\begin{enumerate}
+\item Explain what \textit{symmetry} is.
+\item State the definition of a group of matrices.
+\item How many lines of reflectional symmetry exist for a square?
+  Provide a drawing to justify your answer.
+\item What are the equations for the lines of reflectional symmetry that exist for
+  the square? Explain your answers.
+\item How many lines of reflectional symmetry exist for a regular hexagon?  Provide a
+  drawing to justify your answer.
+\item What are the equations for the lines of reflectional symmetry
+  for a regular hexagon?  Explain your answers.
+%\item Give the group table for the rotations of a square.
+%\item Give the group table for the rotations of a regular hexagon.
+%\item Give the group table for the reflections of a square.
+%\item Give the group table for the reflections of a regular hexagon.
+%\item Give the group table for the symmetries of a square.
+%\item Give the group table for the symmetries of a regular hexagon.
+\item How many consecutive rotations are needed to return the vertices
+  of a square to their original position? Provide a drawing to justify
+  your answer, labeling the vertices.
+\item How many degrees are in one-fourth of a complete rotation of the
+  square?  Explain your answer.
+\item How many degrees are in one-sixth of a complete rotation of the
+  regular hexagon?  Explain your answer.
+\item In this section, we've focused on a 3-sided figure, a 4-sided
+  figure, and a 6-sided figure.  Why do we not include the rotation
+  group for the pentagon in this section?  If we did, how many degrees
+  would be in one-fifth of a complete rotation?
+\item With the notation used in this section, draw pictures representing
+  the action of each of $\mat{F}_\l$, $\mat{R}$,
+  $\mat{R}\mat{F}_\l$ and $\mat{F}_\l\mat{R}$ on the equilateral
+  triangle.
+\item Consider a square centered at the origin. Draw pictures
+  representing the action of $\mat{F}_{y=0}$, $\mat{R}_{90}$,
+  $\mat{R}_{90}\mat{F}_{y=0}$, and $\mat{F}_{y=0} \mat{R}_{90}$ on
+  this square.
+\item Consider a regular hexagon centered at the origin. Draw pictures
+  representing the action of $\mat{F}_{x=0}$, $\mat{R}_{60}$,
+  $\mat{R}_{60}\mat{F}_{x=0}$, and $\mat{F}_{x=0} \mat{R}_{60}$ on
+  this hexagon.
+\item Find two symmetries of the equilateral triangle, neither of
+  which is the identity, such that their composition is
+  $\mat{R}_{120}$. Explain and illustrate your answer.
+\item Find two symmetries of the equilateral triangle, neither of
+  which is the identity, such that their composition is
+  $\mat{F}_{x=0}$. Explain and illustrate your answer.
+\item Find two symmetries of the equilateral triangle, neither of
+  which is the identity, such that their composition is
+  $\mat{R}_{120}^2$. Explain and illustrate your answer.
+\item Find two symmetries of the square, neither of which is the
+  identity, such that their composition is $\mat{R}_{180}$. Explain
+  and illustrate your answer.
+\item Find two symmetries of the square, neither of which is the
+  identity, such that their composition is $\mat{F}_{\l}$.  The line $\l$ is a vertical line through the center of the square. Explain
+  and illustrate your answer.
+\item Find two symmetries of the square, neither of which is the
+  identity, such that their composition is $\mat{R}_{270}$. Explain
+  and illustrate your answer.
+\item Use a group table to help you write out the symmetries of the
+  equilateral triangle. List all elements that commute with every
+  other element in the table. Explain your reasoning.
+\item Use a group table to help you write out the symmetries of the
+  square. List all elements that commute with every other element in
+  the table. Explain your reasoning.
+\item Use a group table to help you write out the symmetries of the
+  regular hexagon. List all elements that commute with every other
+  element in the table. Explain your reasoning.
+\item Let $\mat{M}$ be a symmetry of the equilateral triangle. Define
+\[
+C(\mat{M}) = \{\text{all symmetries that commute with $\mat{M}$}\}.
+\]
+Write out $C(\mat{M})$ for every symmetry $\mat{M}$ of the equilateral
+triangle. Make some observations.
+\end{enumerate}
+
