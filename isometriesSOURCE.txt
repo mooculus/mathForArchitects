@@ -61,14 +61,6 @@ Is $\mat{M}$ an isometry? Explain your reasoning.
 
 
 \item 
-\item The matrix $\mat{F}_{y=0}$ was used to reflect the point $\vec{p}$
-  to $(0,-8)$.  What is $\vec{p}$? Explain your reasoning.
-\item The matrix $\mat{F}_{x=0}$ was used to reflect the point $\vec{p}$
-  to $(-5,-1)$.  What is $\vec{p}$? Explain your reasoning.
-\item The matrix $\mat{F}_{y=x}$ was used to reflect the point $\vec{p}$
-  to $(9,-2)$.  What is $\vec{p}$? Explain your reasoning.
-\item The matrix $\mat{F}_{y=x}$ was used to reflect the point $\vec{p}$
-  to $(-3,-3)$.  What is $\vec{p}$? Explain your reasoning.
 \item Considering the point $(3,2)$, use a matrix to rotate this point
   $60^\circ$ about the origin.  Sketch this situation and explain your
   reasoning.  
