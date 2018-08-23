@@ -59,12 +59,7 @@ Is $\mat{M}$ an isometry? Explain your reasoning.
 Is $\mat{M}$ an isometry? Explain your reasoning.
 
 
-
-\item 
-\item Considering the point $(3,2)$, use a matrix to rotate this point
-  $60^\circ$ about the origin.  Sketch this situation and explain your
-  reasoning.  
-\item Considering the point $(\sqrt{2},-\sqrt{2})$, use a matrix to
+item Considering the point $(\sqrt{2},-\sqrt{2})$, use a matrix to
   rotate this point $45^\circ$ about the origin.  Sketch this
   situation and explain your reasoning.
 \item Considering the point $(-7,6)$, use a matrix to rotate this point
