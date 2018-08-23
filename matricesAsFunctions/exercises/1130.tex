@@ -1,0 +1,23 @@
+\input{../../preamble.tex}
+
+\author{Jenny Sheldon \and Bart Snapp}
+
+\begin{document}
+
+\makerandom
+
+\begin{sagesilent}
+  a = randint(-5,5)
+  b = randint(-5,5)
+\end{sagesilent}
+
+\begin{exercise}
+  Considering the point $(\sage{a},\sage{b})$, use a
+  matrix to rotate this point $60^\circ$ about the origin.
+  \begin{prompt}
+    \[
+    \mat{R}_{60}\vec{p} = \left(\answer{\sage{(a / 2 )-((b / 2 ) * sqrt(3) )}},\answer{\sage{(( a / 2 ) * sqrt(3) ) + (b / 2 )}}\right)
+    \]
+  \end{prompt}
+\end{exercise}
+\end{document}
