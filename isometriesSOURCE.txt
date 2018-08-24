@@ -82,24 +82,10 @@ item Considering the point $(\sqrt{2},-\sqrt{2})$, use a matrix to
   to $(-\frac{1}{2}, \frac{5}{2})$.  What is $\vec{p}$? Explain your reasoning.
 \item The matrix $\mat{R}_{-90}$ was used to rotate the point $\vec{p}$
   to $(4,3)$.  What is $\vec{p}$? Explain your reasoning.
-\item If someone wanted to plot the graph of $y=x^2$, they might start
-  by filling in the following table:
-\[
-\begin{array}{r | c}
- x & x^2 \\
-\hline\hline
-0  & \\\hline
-1  & \\\hline
--1 & \\\hline
-2  & \\\hline
--2 & \\\hline
-3  & \\\hline
--3 & 
-\end{array}
-\]
-Reflect each point you obtain from the table above about the line
-$y=x$. Give a plot of this situation. What curve do you obtain? What
-is this new curve's relationship to $y=x^2$? Explain your reasoning.
+\item 
+
+
+
 \item Some translation $\mat{T}$ was used to map point $\vec{p}$ to
   point $\vec{q}$.  Given $\vec{p}$ = $(1,2)$ and $\vec{q}$ = $(3,4)$,
   find $\mat{T}$ and explain your reasoning.
