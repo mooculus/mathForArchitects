@@ -1,0 +1,67 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Jenny Sheldon \and Bart Snapp}
+
+\begin{document}
+
+\begin{exercise}
+  If someone wanted to plot the graph of $y=x^2$, they might start
+  by filling in the following table:
+  \[
+  \begin{array}{r | c}
+    x & x^2 \\
+    \hline\hline
+    0  & \answer{0} \\\hline
+    1  & \answer{1} \\\hline
+    -1 & \answer{1} \\\hline
+    2  & \answer{4} \\\hline
+    -2 & \answer{4} \\\hline
+    3  & \answer{9} \\\hline
+    -3 & \answer{9} 
+  \end{array}
+  \]
+  \begin{exercise}
+  Reflect each point you obtain from the table above about the line
+  $y=x$.
+  \begin{prompt}
+    \begin{align*}
+      \mat{F}_{y=x} (0,0) &= \left(\answer{0},\answer{0}\right)\\
+      \mat{F}_{y=x} (1,1) &= \left(\answer{1},\answer{1}\right)\\
+      \mat{F}_{y=x} (-1,1) &= \left(\answer{1},\answer{-1}\right)\\
+      \mat{F}_{y=x} (2,4) &= \left(\answer{4},\answer{2}\right)\\
+      \mat{F}_{y=x} (-2,4) &= \left(\answer{4},\answer{-2}\right)\\
+      \mat{F}_{y=x} (3,9) &= \left(\answer{9},\answer{3}\right)\\
+      \mat{F}_{y=x} (-3,9) &= \left(\answer{9},\answer{-3}\right)
+    \end{align*}
+  \end{prompt}
+  \begin{exercise}
+    Give a plot the new points and connect the dots in a reasonable
+    way. (You should do this with pencil and paper.) What curve do you obtain?
+    \begin{image}
+      \begin{tikzpicture}  
+        \begin{axis}[  
+            xmin=-10.5,  
+            xmax=10.5,  
+            ymin=-10.5,  
+            ymax=10.5,  
+        axis lines=center,  
+        xlabel=$x$,  
+        ylabel=$y$,  
+        every axis y label/.style={at=(current axis.above origin),anchor=south},  
+        every axis x label/.style={at=(current axis.right of origin),anchor=west},  
+          ]  
+          \addplot [ultra thick, blue, smooth] {x^2};
+          \addplot [ultra thick, red, smooth] ({x^2},{x});  
+        \end{axis}  
+      \end{tikzpicture}  
+    \end{image}
+    What
+
+
+  is this new curve's relationship to $y=x^2$? Explain your reasoning.
+  \end{exercise}
+  \end{exercise}
+\end{exercise}
+\end{document}
