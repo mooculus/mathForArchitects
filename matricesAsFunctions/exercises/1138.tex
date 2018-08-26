@@ -37,8 +37,13 @@
     \end{align*}
   \end{prompt}
   \begin{exercise}
-    Give a plot the new points and connect the dots in a reasonable
-    way. (You should do this with pencil and paper.) What curve do you obtain?
+    Give a plot of the new points and connect the dots in a reasonable
+    way. (You should do this with pencil and paper.) What curve do you
+    obtain?
+    \begin{multipleChoice}
+      \choice[correct]{I've plotted this.}
+    \end{multipleChoice}
+    \begin{feedback}
     \begin{image}
       \begin{tikzpicture}  
         \begin{axis}[  
@@ -52,12 +57,13 @@
         every axis y label/.style={at=(current axis.above origin),anchor=south},  
         every axis x label/.style={at=(current axis.right of origin),anchor=west},  
           ]  
-          \addplot [ultra thick, blue, smooth] {x^2};
+          %\addplot [ultra thick, blue, smooth] {x^2};
           \addplot [ultra thick, red, smooth] ({x^2},{x});  
         \end{axis}  
       \end{tikzpicture}  
     \end{image}
-    What is this new curve's relationship to $y=x^2$? Explain your reasoning.
+    You get a horizontal parabola. This is the inverse of $y=x^2$ (note, it is not a function of $x$).
+    \end{feedback}
   \end{exercise}
   \end{exercise}
 \end{exercise}
