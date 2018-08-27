@@ -1,0 +1,29 @@
+% !TEX TS-program = sage
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Jenny Sheldon \and Bart Snapp}
+
+\begin{document}
+
+\makerandom
+
+\begin{sagesilent}
+  a = randint(-10,10)
+  b = randint(-10,10)
+\end{sagesilent}
+
+\begin{exercise}
+  Given the point $\vec{p}=(\sage{a}, \sage{b})$, use matrices to compute $\vec{q}=\mat{R}_{45}\mat{R}_{90} \vec{p}$.
+
+
+  \begin{prompt}
+    \[
+      \vec{q} = (\answer{\sage{ 1/2 * sqrt(2) * (a + b) }}, \answer{\sage{ 1/2 * sqrt(2) * (a - b) }})
+    \]
+  \end{prompt}
+\end{exercise}
+\end{document}
+
+
