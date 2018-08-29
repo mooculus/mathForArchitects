@@ -1,0 +1,28 @@
+% !TEX TS-program = sage
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Jenny Sheldon \and Bart Snapp}
+
+\begin{document}
+
+\makerandom
+
+
+\begin{exercise}
+Give a matrix that is a composition of translations and any of the following matrices  %$ \{ \mat{F}_{x=0}, \mat{F}_{y=0}, \mat{F}_{y=x}, \mat{R}_{90}, \mat_{R}_{60}, \mat{R}_{45} \} $ 
+$ \{ \mat{F}_{x=0}, \mat{F}_{y=0}, \mat{F}_{y=x}, \mat{R}_{90}, \mat{R}_{60}, \mat{R}_{45} \} $ that will take a point and reflect it across the line $x = 1$ (observe that this line is parallel to the $y$ axis).
+
+\begin{prompt}
+    \[
+    \begin{bmatrix}
+      \answer{\sage{-1}} & \answer{\sage{0}} & \answer{\sage{1}}\\
+      \answer{\sage{0}} & \answer{\sage{1}} & \answer{\sage{0}}\\
+      \answer{\sage{0}} & \answer{\sage{0}} & \answer{\sage{1}}
+    \end{bmatrix}      
+    \]
+  \end{prompt}
+\end{exercise}
+\end{document}
+
