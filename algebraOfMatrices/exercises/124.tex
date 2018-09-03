@@ -1,0 +1,35 @@
+% !TEX TS-program = sage
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Jenny Sheldon \and Bart Snapp}
+
+\begin{document}
+
+\makerandom
+
+
+\begin{sagesilent}
+a = randint(-10,10)
+b = randint(-10,10)
+c = randint(-10,10)
+d = randint(-10,10)
+\end{sagesilent}
+
+\begin{exercise}
+  Given a point $\vec{p}=(x, y)$, express  $\mat{T}_{(\sage{a},\sage{b})} \mat{T}_{(\sage{c},\sage{d})} \vec{p}$ as $\mat{T}_{(u, v)} \vec{p}$ for some values of $u$ and $v$.
+
+  \begin{prompt}
+    \[
+    \mat{T}_{(u,v)}=\begin{bmatrix}
+      \answer{\sage{1}} & \answer{\sage{0}} & \answer{\sage{a+c}}\\
+      \answer{\sage{0}} & \answer{\sage{1}} & \answer{\sage{b+d}}\\
+      \answer{\sage{0}} & \answer{\sage{0}} & \answer{\sage{1}}
+    \end{bmatrix}
+    \]
+  \end{prompt}
+\end{exercise}
+\end{document}
+
+
