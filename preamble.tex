@@ -80,3 +80,140 @@
 }
 \fi
 \makeatother
+
+
+
+%%% This next bit of code defines all our theorem environments
+\makeatletter
+\let\c@theorem\relax
+\let\c@corollary\relax
+%\let\c@example\relax
+
+\let\problem\relax
+\let\endproblem\relax
+\let\c@problem\relax 
+
+\makeatother
+
+\let\definition\relax
+\let\enddefinition\relax
+
+\let\theorem\relax
+\let\endtheorem\relax
+
+\let\proposition\relax
+\let\endproposition\relax
+
+\let\exercise\relax
+\let\endexercise\relax
+
+\let\question\relax
+\let\endquestion\relax
+
+\let\remark\relax
+\let\endremark\relax
+
+\let\corollary\relax
+\let\endcorollary\relax
+
+
+\let\example\relax
+\let\endexample\relax
+
+\let\warning\relax
+\let\endwarning\relax
+
+\let\lemma\relax
+\let\endlemma\relax
+
+
+\let\algorithm\relax
+\let\endalgorithm\relax
+\usepackage{algpseudocode}
+
+\newtheoremstyle{SlantTheorem}{\topsep}{\topsep}%%% space between body and thm
+		{\slshape}                      %%% Thm body font
+		{}                              %%% Indent amount (empty = no indent)
+		{\bfseries\sffamily}            %%% Thm head font
+		{}                              %%% Punctuation after thm head
+		{3ex}                           %%% Space after thm head
+		{\thmname{#1}\thmnumber{ #2}\thmnote{ \bfseries(#3)}}%%% Thm head spec
+\theoremstyle{SlantTheorem}
+\newtheorem{theorem}{Theorem}
+%\newtheorem{definition}[theorem]{Definition}
+%\newtheorem{proposition}[theorem]{Proposition}
+%% \newtheorem*{dfnn}{Definition}
+%% \newtheorem{ques}{Question}[theorem]
+%% \newtheorem*{war}{WARNING}
+%% \newtheorem*{cor}{Corollary}
+%% \newtheorem*{eg}{Example}
+\newtheorem*{remark}{Remark}
+\newtheorem*{touchstone}{Touchstone}
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem*{warning}{WARNING}
+\newtheorem{example}[corollary]{Example}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem*{question}{Question}
+
+
+
+\newtheoremstyle{Definition}{\topsep}{\topsep}%%% space between body and thm
+		{}                              %%% Thm body font
+		{}                              %%% Indent amount (empty = no indent)
+		{\bfseries\sffamily}            %%% Thm head font
+		{}                              %%% Punctuation after thm head
+		{3ex}                           %%% Space after thm head
+		{\thmname{#1}\thmnumber{ #2}\thmnote{ \bfseries(#3)}}%%% Thm head spec
+\theoremstyle{Definition}
+\newtheorem{definition}[theorem]{Definition}
+
+
+
+\let\algorithm\relax
+\let\endalgorithm\relax
+\newtheoremstyle{Alg}{\topsep}{\topsep}%%% space between body and thm
+		{}                              %%% Thm body font
+		{}                              %%% Indent amount (empty = no indent)
+		{\bfseries\sffamily}            %%% Thm head font
+		{}                              %%% Punctuation after thm head
+		{3ex}                           %%% Space after thm head
+		{\thmname{#1}\thmnumber{ #2}\thmnote{ \bfseries(#3)}}%%% Thm head spec
+\theoremstyle{Alg}
+\newtheorem*{algorithm}{Algorithm}
+\newtheorem*{construction}{Construction}
+
+
+
+
+\newtheoremstyle{Exercise}{\topsep}{\topsep} %%% space between body and thm
+		{}                           %%% Thm body font
+		{}                           %%% Indent amount (empty = no indent)
+		{\bfseries\sffamily}         %%% Thm head font
+		{)}                          %%% Punctuation after thm head
+		{ }                          %%% Space after thm head
+		{\thmnumber{#2}\thmnote{ \bfseries(#3)}}%%% Thm head spec
+\theoremstyle{Exercise}
+\newtheorem{exercise}[corollary]{}%[theorem]
+
+
+\newtheoremstyle{problem}
+{\topsep}{\topsep}{}{}{\bfseries}{)}{ }{}
+\theoremstyle{problem}
+\newtheorem{problem}{}
+
+
+\makeatletter
+\renewcommand\section{\@startsection{paragraph}{10}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\normalfont\large\sffamily\bfseries}}
+\renewcommand\subsection{\@startsection{subparagraph}{10}{\z@}%
+                                    {3.25ex \@plus1ex \@minus.2ex}%
+                                    {-1em}%
+                                    {\normalfont\normalsize\sffamily\bfseries}}
+\makeatother
+
+%% Fix weird index/bib issue.
+\makeatletter
+\gdef\ttl@savemark{\sectionmark{}}
+\makeatother
