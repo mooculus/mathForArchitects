@@ -1,0 +1,116 @@
+\documentclass[handout,nooutcomes,noauthor]{ximera}
+
+\input{../../preamble.tex}
+
+\title{A bigger apartment please}
+
+\author{Bart Snapp}
+
+\begin{document}
+\begin{abstract}
+  We study dilations.
+\end{abstract}
+\maketitle
+
+\noindent\textbf{Group members (please print):}\ \hrulefill \\
+
+\hrulefill
+
+
+Marcy Matrix designs apartments. Here is her latest design:
+\[
+\includegraphics{apt.pdf}
+\]
+In the picture above, one square has a side-length of $5'$.  Marcy's
+client, Large Linus, is unhappy with the design. He insists that it
+must be three times bigger:  he wants every dimension of his
+apartment to be bigger! For Marcy this is no problem at all because she
+knows about the following \textit{dilation} matrix:
+\[
+\mat{D}_s = \begin{bmatrix}
+s & 0 & 0 \\
+0 & s & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\]
+This handy matrix will dilate (think scale) pictures by a factor of
+$s$. However, there is one minor hiccup: Does Linus want
+the \textit{perimeter} or the \textit{area} of his apartment to be
+three times bigger?
+
+\begin{problem}
+What is the current perimeter of Linus' apartment? What is the current
+area of Linus' apartment?
+\end{problem}
+
+                         
+\begin{problem}
+Apply $\mat{D}_3$ to every point of the apartment. What is the new
+perimeter? What is the new area?
+\end{problem}
+
+\begin{problem}
+What dilation matrix should Marcy use to make the area of Linus' apartment
+three times bigger?  Use this matrix to actually scale the
+apartment. What is the perimeter in this case?
+\end{problem}
+
+\begin{problem}
+Once someone told me that ``five square feet'' is the same as ``five
+feet square.'' Do you agree or disagree with this statement?  Explain
+how you arrived at your conclusion.
+\end{problem}
+
+
+%% Maverick Metric likes Linus' apartment, but he wants the measurements
+%% to be metric. This is not a problem for Marcy, as she knows the
+%% following \textit{conversion} matrices (note, we rounded here!):
+%% \[
+%% \mat{C}_{\text{ft} \to \text{m}} = \begin{bmatrix} 
+%% 0.305 & 0 & 0 \\
+%% 0 & 0.305 & 0 \\
+%% 0 & 0 & 1
+%% \end{bmatrix}
+%% \qquad\text{and}\qquad
+%% \mat{C}_{\text{m} \to \text{ft}} = \begin{bmatrix} 
+%% 3.28 & 0 & 0 \\
+%% 0 & 3.28 & 0 \\
+%% 0 & 0 & 1
+%% \end{bmatrix}
+%% \]
+
+%% \begin{problem}
+%% Compute:
+%% \[
+%% \mat{C}_{\text{ft} \to \text{m}}\mat{C}_{\text{m} \to \text{ft}} \qquad\text{and}\qquad \mat{C}_{\text{m} \to \text{ft}}\mat{C}_{\text{ft} \to \text{m}}
+%% \]
+%% What do you get in each case? Explain why this makes sense.
+%% \end{problem}
+
+%% \begin{problem}
+%% What's the perimeter of the apartment in meters? What is the area in
+%% square-meters?
+%% \end{problem}
+
+%% \begin{problem}
+%% Compare/contrast the scaling matrix to the conversion matrix. What do
+%% you notice?
+%% \end{problem}
+
+
+\begin{problem}
+Maverick Metric likes Linus' apartment, but he wants the measurements
+to be metric. He asks you for the measurement for the area of Linus'
+apartment in feet. Since there are around $.3$ feet per meter,
+Maverick Metric claims that the area of the apartment in meters is:
+\[
+\text{area of apartment in feet} \times .3 
+\]
+Is this correct? Hint: No. Explain why not and solve the problem
+correctly.
+\end{problem}
+
+
+
+
+\end{document}
