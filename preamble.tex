@@ -226,3 +226,36 @@
 \makeatletter
 \gdef\ttl@savemark{\sectionmark{}}
 \makeatother
+
+
+
+
+
+
+\usetikzlibrary{math} %% for assigning variables
+
+%% N-GON code
+\tikzset{
+    pics/tikzngon/.style={
+        code={
+        \tikzmath{\xx = #1;\rr=1.7;}
+        \draw[ultra thick,rounded corners=.05mm] ({\rr*sin(0*360/\xx)},{\rr*cos(0*360/\xx)})
+        \foreach \x in {-1,0,...,\xx}
+        {
+        -- ({\rr*sin(\x*360/\xx)},{\rr*cos(\x*360/\xx)})
+        }
+           -- cycle;
+  }}}
+
+%% N-GON code (even)
+\tikzset{
+    pics/tikzegon/.style={
+        code={
+        \tikzmath{\xx = #1;\rr=1.7;}
+        \draw[ultra thick,rounded corners=.05mm] ({\rr*sin(0*360/\xx+180/\xx)},{\rr*cos(0*360/\xx+180/\xx)})
+        \foreach \x in {-1,0,...,\xx}
+           {
+           -- ({\rr*sin(\x*360/\xx+180/\xx)},{\rr*cos(\x*360/\xx+180/\xx)}) 
+           }
+           -- cycle;
+  }}}
