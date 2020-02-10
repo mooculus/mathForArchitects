@@ -109,7 +109,7 @@ This may cause the page layout to be inconsistent, however\@gobble }\dimen 0=##1
 \newcommand {\ifcurrfiledir }[0]{\begingroup \currfile@if \currfiledir }
 \newcommand {\ifcurrfilepath }[0]{\begingroup \currfile@if \currfilepath }
 \newcommand {\ifcurrfile }[1]{\begingroup \edef \@tempb {##1}\@onelevel@sanitize \@tempb \currfile@if \@tempb }
-\newcommand {\makerandom }[0]{\ST@wsf {jobname="\currfilebase "}\ST@wsf {import hashlib}\ST@wsf {set_random_seed(int(hashlib.sha256(jobname.encode('utf-8')).hexdigest(), 16))}}
+\newcommand {\makerandom }[0]{}
 \newcommand {\ALG@beginblock }[1]{\ALG@thistlm \ALG@tlm \addtolength \ALG@tlm {##1}\addtocounter {ALG@nested}{1}\setlength \ALG@tmplength {##1}\expandafter \edef \csname ALG@ind@\theALG@nested \endcsname {\the \ALG@tmplength }}
 \newcommand {\ALG@endblock }[0]{\addtolength \ALG@tlm {-\csname ALG@ind@\theALG@nested \endcsname }\addtocounter {ALG@nested}{-1}\ALG@thistlm \ALG@tlm }
 \newcommand {\algdef }[1]{\ALG@p@undef {oldblock}\ALG@p@undef {start}\ALG@p@undef {end}\def \ALG@v@credits {}\ALG@p@undef {credits}\ALG@p@undef {indent}\ALG@p@undef {starttext}\ALG@p@undef {endtext}\def \ALG@p@state {}\let \ALG@p@rec \ALG@p@main \ALG@p@rec ##1]\ALG@p@newblock }
