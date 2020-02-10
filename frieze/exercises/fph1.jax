@@ -1,0 +1,183 @@
+\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\ungraded }[0]{}
+\newcommand {\DeclareMicrotypeVariants }[1]{}
+\newcommand {\DeclareMicrotypeAlias }[2]{}
+\newcommand {\LoadMicrotypeFile }[1]{}
+\newcommand {\DeclareMicrotypeBabelHook }[2]{}
+\newcommand {\microtypesetup }[1]{}
+\newcommand {\microtypecontext }[1]{}
+\newcommand {\textmicrotypecontext }[2]{##2}
+\newcommand {\lsstyle }[0]{}
+\newcommand {\lslig }[1]{##1}
+\newcommand {\DeclareMicroTypeAlias }[0]{\MT@warning {\string \DeclareMicroTypeAlias  is deprecated. Please use\MessageBreak \string \DeclareMicrotypeAlias  instead}\let \DeclareMicroTypeAlias \DeclareMicrotypeAlias \DeclareMicrotypeAlias }
+\newcommand {\DeclareMicroTypeSet }[0]{\MT@warning {\string \DeclareMicroTypeSet  is deprecated. Please use\MessageBreak \string \DeclareMicrotypeSet  instead}\let \DeclareMicroTypeSet \DeclareMicrotypeSet \DeclareMicrotypeSet }
+\newcommand {\UseMicroTypeSet }[0]{\MT@warning {\string \UseMicroTypeSet  is deprecated. Please use\MessageBreak \string \UseMicrotypeSet  instead}\let \UseMicroTypeSet \UseMicrotypeSet \UseMicrotypeSet }
+\newcommand {\LoadMicroTypeFile }[0]{\MT@warning {\string \LoadMicroTypeFile  is deprecated. Please use\MessageBreak \string \LoadMicrotypeFile  instead}\let \LoadMicroTypeFile \LoadMicrotypeFile \LoadMicrotypeFile }
+\newcommand {\textls  }[0]{\@ifstar {\let \MT@ls@adjust@ \MT@ls@adjust@empty \MT@textls }{\let \MT@ls@adjust@ \MT@ls@adjust@relax \MT@textls }}
+\newcommand {\textmicrotypecontext  }[2]{{\microtypecontext {##1}##2}}
+\newcommand {\MT@DeclareMicrotypeAlias }[2]{\def \@tempb {##2}\@onelevel@sanitize \@tempb \MT@ifdefined@n@T {MT@##1@alias}{\MT@warning {Alias font family `\@tempb ' will override alias `\@nameuse {MT@##1@alias}'\MessageBreak for font family `##1'}}\MT@xdef@n {MT@##1@alias}{\@tempb }\MT@ifdefined@c@T \MT@family {\MT@glet \MT@familyalias \@tempb }\MT@end@catcodes }
+\newcommand {\lsstyle  }[0]{\not@math@alphabet \lsstyle \textls \MT@maybe@gobble@with@tikz {\aftergroup \glb@settings }\def \MT@feat {tr}\let \MT@tracking \MT@set@tr@codes \selectfont }
+\newcommand {\lslig  }[1]{{\MT@ifdefined@c@TF \MT@curr@ls {\escapechar \m@ne \MT@get@ls@basefont \MT@outer@kern =\dimexpr \MT@curr@ls sp * \fontdimen 6\font@name /2000\relax \kern \MT@outer@kern \font@name ##1\kern \MT@outer@kern }{##1}}}
+\newcommand {\f@nch@ifundefined }[1]{\begingroup \expandafter \expandafter \expandafter \endgroup \expandafter \ifx \csname ##1\endcsname \relax \expandafter \@firstoftwo \else \expandafter \@secondoftwo \fi }
+\newcommand {\f@nch@errmsg }[1]{\f@nch@ifundefined {PackageError}{\errmessage {##1}}{\PackageError {Fancyhdr}{##1}{}}}
+\newcommand {\f@nch@warning }[1]{\f@nch@ifundefined {PackageWarning}{\errmessage {##1}}{\PackageWarning {Fancyhdr}{##1}{}}}
+\newcommand {\f@nch@forc }[3]{\expandafter \f@rc \expandafter ##1\expandafter {##2}{##3}}
+\newcommand {\f@rc }[3]{\def \temp@ty {##2}\ifx \@empty \temp@ty \else \f@nch@rc ##1##2\f@nch@rc {##3}\fi }
+\newcommand {\f@nch@for }[3]{\edef \@fortmp {##2}\expandafter \@forloop ##2,\@nil ,\@nil \@@ ##1{##3}}
+\newcommand {\f@nch@default }[3]{\edef \temp@a {\lowercase {\edef \noexpand \temp@a {##3}}}\temp@a \def ##1{}\f@nch@forc \tmpf@ra {##2}{\expandafter \f@nch@ifin \tmpf@ra \temp@a {\edef ##1{##1\tmpf@ra }}{}}\ifx \@empty ##1\def ##1{##2}\fi }
+\newcommand {\f@nch@ifin }[4]{\edef \temp@a {##2}\def \temp@b ####1##1####2\temp@b {\def \temp@b {####1}}\expandafter \temp@b ##2##1\temp@b \ifx \temp@a \temp@b ##4\else ##3\fi }
+\newcommand {\headrulewidth }[0]{0.4pt}
+\newcommand {\footrulewidth }[0]{0pt}
+\newcommand {\footruleskip }[0]{.3\normalbaselineskip }
+\newcommand {\plainheadrulewidth }[0]{0pt}
+\newcommand {\plainfootrulewidth }[0]{0pt}
+\newcommand {\f@nch@vbox }[2]{\setbox 0\vbox {##2}\ifdim \ht 0>##1\relax \f@nch@warning {\string ##1 is too small (\the ##1): 
+Make it at least \the \ht 0.
+We now make it that large for the rest of the document.
+This may cause the page layout to be inconsistent, however\@gobble }\dimen 0=##1\relax \global ##1=\ht 0\relax \ht 0=\dimen 0 \fi \box 0}
+\newcommand {\f@nch@head }[5]{##1\hbox to\headwidth {\f@nch@reset \f@nch@vbox \headheight {\hbox {\rlap {\parbox [b]{\headwidth }{\raggedright ##2}}\hfill \parbox [b]{\headwidth }{\centering ##3}\hfill \llap {\parbox [b]{\headwidth }{\raggedleft ##4}}}\headrule }}##5}
+\newcommand {\f@nch@foot }[5]{##1\hbox to\headwidth {\f@nch@reset \f@nch@vbox \footskip {\setbox 0=\vbox {\footrule }\unvbox 0 \vskip \footruleskip \hbox {\rlap {\parbox [t]{\headwidth }{\raggedright ##2}}\hfill \parbox [t]{\headwidth }{\centering ##3}\hfill \llap {\parbox [t]{\headwidth }{\raggedleft ##4}}}}}##5}
+\newcommand {\iftopfloat }[2]{\ifx \topfloat \empty ##2\else ##1\fi }
+\newcommand {\ifbotfloat }[2]{\ifx \botfloat \empty ##2\else ##1\fi }
+\newcommand {\iffloatpage }[2]{\if@fcolmade ##1\else ##2\fi }
+\newcommand {\iffootnote }[2]{\iff@nch@footnote ##1\else ##2\fi }
+\newcommand {\fancypagestyle }[2]{\@namedef {ps@##1}{\let \f@nch@gbl \relax ##2\relax \ps@fancy }}
+\newcommand {\bysame }[0]{\mbox {\rule {3em}{.4pt}}\,}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\Zt }[0]{\mathcal {Z}_\mat {T}}
+\newcommand {\Zg }[0]{\mathcal {Z}_\mat {G}}
+\newcommand {\Zgf }[0]{\mathcal {Z}_{\mat {G},\mat {F}}}
+\newcommand {\Ztf }[0]{\mathcal {Z}_{\mat {T},\mat {F}}}
+\newcommand {\Ztr }[0]{\mathcal {Z}_{\mat {T},\mat {R}}}
+\newcommand {\Zgr }[0]{\mathcal {Z}_{\mat {G},\mat {R}}}
+\newcommand {\Ztfr }[0]{\mathcal {Z}_{\mat {T},\mat {F},\mat {R}}}
+\newcommand {\R }[0]{\mathcal R}
+\newcommand {\D }[0]{\mathcal D}
+\newcommand {\F }[0]{\mathcal F}
+\newcommand {\C }[0]{\mathbb C}
+\newcommand {\ph }[0]{\varphi }
+\newcommand {\ep }[0]{\varepsilon }
+\newcommand {\aph }[0]{\alpha }
+\newcommand {\QM }[0]{\begin {center}{\huge \textbf {?}}\end {center}}
+\newcommand {\le }[0]{\leqslant }
+\newcommand {\ge }[0]{\geqslant }
+\newcommand {\a }[0]{\wedge }
+\newcommand {\v }[0]{\vee }
+\newcommand {\l }[0]{\ell }
+\newcommand {\subset }[0]{\subseteq }
+\newcommand {\supset }[0]{\supseteq }
+\newcommand {\emptyset }[0]{\varnothing }
+\newcommand {\xto }[0]{\xrightarrow }
+\newcommand {\qedsymbol }[0]{$\blacksquare $}
+\newcommand {\bar }[0]{\protect \overline }
+\newcommand {\hat }[0]{\protect \widehat }
+\newcommand {\tilde }[0]{\widetilde }
+\newcommand {\star }[2]{\left \{\frac {##1}{##2}\right \}}
+\newcommand {\iso }[0]{\simeq }
+\newcommand {\problems }[0]{\subsection *{Problems for Section~\thesection }\hrule \vspace {1ex}}
+\newcommand {\tri }[0]{\triangle }
+\newcommand {\mat }[0]{\mathsf }
+\newcommand {\vec }[0]{\mathbf }
+\newcommand {\dfn }[1]{\textbf {##1}\index {##1}}
+\newcommand {\AtBeginOfIncludes }[0]{\filehook@append \filehook@include@@atbegin }
+\newcommand {\AtEndOfIncludes }[0]{\filehook@prefix \filehook@include@@atend }
+\newcommand {\AfterIncludes }[0]{\filehook@prefix \filehook@include@@after }
+\newcommand {\AtBeginOfIncludeFile }[1]{\filehook@addtohook \filehook@append \filehook@include@atbegin@ {\filehook@ensuretex {##1}}}
+\newcommand {\AtEndOfIncludeFile }[1]{\filehook@addtohook \filehook@prefix \filehook@include@atend@ {\filehook@ensuretex {##1}}}
+\newcommand {\AfterIncludeFile }[1]{\filehook@addtohook \filehook@prefix \filehook@include@after@ {\filehook@ensuretex {##1}}}
+\newcommand {\AtBeginOfInputs }[0]{\filehook@append \filehook@input@@atbegin }
+\newcommand {\AtEndOfInputs }[0]{\filehook@prefix \filehook@input@@atend }
+\newcommand {\AtBeginOfInputFile }[0]{\filehook@addtohook \filehook@append \filehook@input@atbegin@ }
+\newcommand {\AtEndOfInputFile }[0]{\filehook@addtohook \filehook@prefix \filehook@input@atend@ }
+\newcommand {\AtBeginOfFiles }[0]{\filehook@append \filehook@@atbegin }
+\newcommand {\AtEndOfFiles }[0]{\filehook@prefix \filehook@@atend }
+\newcommand {\AtBeginOfEveryFile }[0]{\filehook@append \filehook@every@@atbegin }
+\newcommand {\AtEndOfEveryFile }[0]{\filehook@prefix \filehook@every@@atend }
+\newcommand {\AtBeginOfFile }[0]{\filehook@addtohook \filehook@append \filehook@atbegin@ }
+\newcommand {\AtEndOfFile }[0]{\filehook@addtohook \filehook@prefix \filehook@atend@ }
+\newcommand {\AtBeginOfClassFile }[0]{\@ifnextchar * {\AtBeginOfXFile@star \@clsextension }{\AtBeginOfXFile@normal \@clsextension }}
+\newcommand {\AtBeginOfPackageFile }[0]{\@ifnextchar * {\AtBeginOfXFile@star \@pkgextension }{\AtBeginOfXFile@normal \@pkgextension }}
+\newcommand {\AtEndOfClassFile }[0]{\@ifnextchar * {\AtEndOfXFile@star \@clsextension }{\AtEndOfXFile@normal \@clsextension }}
+\newcommand {\AtEndOfPackageFile }[0]{\@ifnextchar * {\AtEndOfXFile@star \@pkgextension }{\AtEndOfXFile@normal \@pkgextension }}
+\newcommand {\ClearHook }[0]{\begingroup \def \filehook@prefix ####1####2{\gdef ####1{}\endgroup }\let \filehook@append \filehook@prefix }
+\newcommand {\latex@InputIfFileExists  }[2]{\IfFileExists {##1}{\expandafter \@swaptwoargs \expandafter {\@filef@und }{##2\@addtofilelist {##1}\@@input }}}
+\newcommand {\ifcurrfilename }[0]{\begingroup \currfile@if \currfilename }
+\newcommand {\ifcurrfilebase }[0]{\begingroup \currfile@if \currfilebase }
+\newcommand {\ifcurrfileext }[0]{\begingroup \currfile@if \currfileext }
+\newcommand {\ifcurrfiledir }[0]{\begingroup \currfile@if \currfiledir }
+\newcommand {\ifcurrfilepath }[0]{\begingroup \currfile@if \currfilepath }
+\newcommand {\ifcurrfile }[1]{\begingroup \edef \@tempb {##1}\@onelevel@sanitize \@tempb \currfile@if \@tempb }
+\newcommand {\makerandom }[0]{\ST@wsf {jobname="\currfilebase "}\ST@wsf {import hashlib}\ST@wsf {set_random_seed(int(hashlib.sha256(jobname.encode('utf-8')).hexdigest(), 16))}}
+\newcommand {\ALG@beginblock }[1]{\ALG@thistlm \ALG@tlm \addtolength \ALG@tlm {##1}\addtocounter {ALG@nested}{1}\setlength \ALG@tmplength {##1}\expandafter \edef \csname ALG@ind@\theALG@nested \endcsname {\the \ALG@tmplength }}
+\newcommand {\ALG@endblock }[0]{\addtolength \ALG@tlm {-\csname ALG@ind@\theALG@nested \endcsname }\addtocounter {ALG@nested}{-1}\ALG@thistlm \ALG@tlm }
+\newcommand {\algdef }[1]{\ALG@p@undef {oldblock}\ALG@p@undef {start}\ALG@p@undef {end}\def \ALG@v@credits {}\ALG@p@undef {credits}\ALG@p@undef {indent}\ALG@p@undef {starttext}\ALG@p@undef {endtext}\def \ALG@p@state {}\let \ALG@p@rec \ALG@p@main \ALG@p@rec ##1]\ALG@p@newblock }
+\newcommand {\algnewlanguage }[1]{\@ifundefined {ALG@L@##1}{}{\PackageError {algorithmicx}{Language '##1' already defined!}{}}\addtocounter {ALG@Lnr}{1}\expandafter \edef \csname ALG@L@##1\endcsname {\arabic {ALG@Lnr}}\edef \ALG@Ld {\csname ALG@L@##1\endcsname }\expandafter \let \csname ALG@bl@\ALG@Ld @\endcsname \ALG@bl@ \expandafter \let \csname ALG@bl@\ALG@Ld @@\endcsname \ALG@bl@ \algdef {SL}[STATE]{State}{0}{}\expandafter \def \csname ALG@deftext@\ALG@Ld \endcsname {\textbf }\algnewcommand \algorithmiccomment [1]{\hfill \(\triangleright \) ####1}\algnewcommand \algorithmicindent {1.5em}\algnewcommand \alglinenumber [1]{\footnotesize ####1:}\algnewcommand \ALG@beginalgorithmic \relax \algnewcommand \ALG@endalgorithmic \relax }
+\newcommand {\algsetlanguage }[1]{\@ifundefined {ALG@L@##1}{\PackageError {algorithmicx}{Language '##1' is not yet defined!}{}}{}\edef \ALG@L {\csname ALG@L@##1\endcsname }}
+\newcommand {\algdeflanguage }[1]{\@ifundefined {ALG@L@##1}{\PackageError {algorithmicx}{Language '##1' is not yet defined!}{}}{}\edef \ALG@Ld {\csname ALG@L@##1\endcsname }}
+\newcommand {\alglanguage }[1]{\algdeflanguage {##1}\algsetlanguage {##1}}
+\newcommand {\algnewcommand }[0]{\ALG@defbasecmd \newcommand }
+\newcommand {\algrenewcommand }[0]{\ALG@defbasecmd \renewcommand }
+\newcommand {\algrenewcomment }[0]{\algrenewcommand \algorithmiccomment }
+\newcommand {\ALG@t@1@State }[0]{}
+\newcommand {\ALG@cmd@1@algorithmiccomment }[1]{\hfill \(\triangleright \) ##1}
+\newcommand {\ALG@cmd@1@algorithmicindent }[0]{1.5em}
+\newcommand {\ALG@cmd@1@alglinenumber }[1]{\footnotesize ##1:}
+\newcommand {\ALG@cmd@1@ALG@beginalgorithmic }[0]{\relax }
+\newcommand {\ALG@cmd@1@ALG@endalgorithmic }[0]{\relax }
+\newcommand {\algbreak }[0]{\item }
+\newcommand {\ALG@t@2@State }[0]{}
+\newcommand {\ALG@cmd@2@algorithmiccomment }[1]{\hfill \(\triangleright \) ##1}
+\newcommand {\ALG@cmd@2@algorithmicindent }[0]{1.5em}
+\newcommand {\ALG@cmd@2@alglinenumber }[1]{\footnotesize ##1:}
+\newcommand {\ALG@cmd@2@ALG@beginalgorithmic }[0]{\relax }
+\newcommand {\ALG@cmd@2@ALG@endalgorithmic }[0]{\relax }
+\newcommand {\ALG@cmd@2@algorithmicend }[0]{\textbf {end}}
+\newcommand {\ALG@cmd@2@algorithmicdo }[0]{\textbf {do}}
+\newcommand {\ALG@cmd@2@algorithmicwhile }[0]{\textbf {while}}
+\newcommand {\ALG@cmd@2@algorithmicfor }[0]{\textbf {for}}
+\newcommand {\ALG@cmd@2@algorithmicforall }[0]{\textbf {for all}}
+\newcommand {\ALG@cmd@2@algorithmicloop }[0]{\textbf {loop}}
+\newcommand {\ALG@cmd@2@algorithmicrepeat }[0]{\textbf {repeat}}
+\newcommand {\ALG@cmd@2@algorithmicuntil }[0]{\textbf {until}}
+\newcommand {\ALG@cmd@2@algorithmicprocedure }[0]{\textbf {procedure}}
+\newcommand {\ALG@cmd@2@algorithmicfunction }[0]{\textbf {function}}
+\newcommand {\ALG@cmd@2@algorithmicif }[0]{\textbf {if}}
+\newcommand {\ALG@cmd@2@algorithmicthen }[0]{\textbf {then}}
+\newcommand {\ALG@cmd@2@algorithmicelse }[0]{\textbf {else}}
+\newcommand {\ALG@cmd@2@algorithmicrequire }[0]{\textbf {Require:}}
+\newcommand {\ALG@cmd@2@algorithmicensure }[0]{\textbf {Ensure:}}
+\newcommand {\ALG@cmd@2@algorithmicreturn }[0]{\textbf {return}}
+\newcommand {\ALG@cmd@2@textproc }[0]{\textsc }
+\newcommand {\ALG@t@2@While }[1]{\algorithmicwhile \ ##1\ \algorithmicdo }
+\newcommand {\ALG@t@2@EndWhile }[0]{\algorithmicend \ \algorithmicwhile }
+\newcommand {\ALG@t@2@For }[1]{\algorithmicfor \ ##1\ \algorithmicdo }
+\newcommand {\ALG@t@2@EndFor }[0]{\algorithmicend \ \algorithmicfor }
+\newcommand {\ALG@t@2@ForAll }[1]{\algorithmicforall \ ##1\ \algorithmicdo }
+\newcommand {\ALG@t@2@Loop }[0]{\algorithmicloop }
+\newcommand {\ALG@t@2@EndLoop }[0]{\algorithmicend \ \algorithmicloop }
+\newcommand {\ALG@t@2@Repeat }[0]{\algorithmicrepeat }
+\newcommand {\ALG@t@2@Until }[1]{\algorithmicuntil \ ##1}
+\newcommand {\ALG@t@2@If }[1]{\algorithmicif \ ##1\ \algorithmicthen }
+\newcommand {\ALG@t@2@EndIf }[0]{\algorithmicend \ \algorithmicif }
+\newcommand {\ALG@t@2@ElsIf }[1]{\algorithmicelse \ \algorithmicif \ ##1\ \algorithmicthen }
+\newcommand {\ALG@t@2@Else }[0]{\algorithmicelse }
+\newcommand {\ALG@t@2@Procedure }[2]{\algorithmicprocedure \ \textproc {##1}\ifthenelse {\equal {##2}{}}{}{(##2)}}
+\newcommand {\ALG@t@2@EndProcedure }[0]{\algorithmicend \ \algorithmicprocedure }
+\newcommand {\ALG@t@2@Function }[2]{\algorithmicfunction \ \textproc {##1}\ifthenelse {\equal {##2}{}}{}{(##2)}}
+\newcommand {\ALG@t@2@EndFunction }[0]{\algorithmicend \ \algorithmicfunction }
+\newcommand {\ALG@cmd@2@Require }[0]{\item [\algorithmicrequire ]}
+\newcommand {\ALG@cmd@2@Ensure }[0]{\item [\algorithmicensure ]}
+\newcommand {\ALG@cmd@2@Return }[0]{\algorithmicreturn {} }
+\newcommand {\ALG@cmd@2@Call }[2]{\textproc {##1}\ifthenelse {\equal {##2}{}}{}{(##2)}}
+\newcommand {\section }[0]{\@startsection {paragraph}{10}{\z@ }{-3.25ex\@plus -1ex \@minus -.2ex}{1.5ex \@plus .2ex}{\normalfont \large \sffamily \bfseries }}
+\newcommand {\subsection }[0]{\@startsection {subparagraph}{10}{\z@ }{3.25ex \@plus 1ex \@minus .2ex}{-1em}{\normalfont \normalsize \sffamily \bfseries }}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\ST@wsf }[1]{\immediate \write \ST@sf {##1}}
+\newcommand {\microtypecontext  }[1]{\MT@setup@contexts \let \MT@reset@context \relax \MT@glet \glb@currsize \@empty \setkeys {MTC}{##1}\selectfont \MT@reset@context }
+\newcommand {\reserved@a }[1]{\setbox 0\vbox {\color@begingroup \everypar {}\parfillskip \z@skip \hsize \maxdimen \normalfont \pretolerance \m@ne \tolerance \m@ne \hbadness \z@ \showboxdepth \z@ \ ##1\color@endgroup }}
+\newcommand {\showhyphens  }[1]{\setbox 0\vbox {\color@begingroup \pdfadjustspacing \z@ \everypar {}\parfillskip \z@skip \hsize \maxdimen \normalfont \pretolerance \m@ne \tolerance \m@ne \hbadness \z@ \showboxdepth \z@ \ ##1\color@endgroup }}
