@@ -1,0 +1,258 @@
+%\documentclass[handout]{ximera}
+\documentclass[nooutcomes,noauthor]{ximera}
+
+\input{../../preamble}
+\input{../../activityPreamble.tex}
+
+\title{There can be only seven}
+\author{Bart Snapp}
+
+\outcome{Learning outcome goes here.}
+
+\begin{document}
+\begin{abstract}
+  We classify all frieze patterns.
+\end{abstract}
+\maketitle
+
+\noindent\textbf{Group members (please print):}\ \hrulefill \\
+
+\hrulefill
+
+The title of this section says it all---there are only seven frieze
+groups. Believe it or not, we will tackle this monster by solving an
+unrelated problem!
+
+\section{Pascal's Pizza Shop}
+
+\textit{Pascal's Pizza Shop} makes a variety of pizzas, all which come
+with cheese.  However, they do not offer double toppings---no ``double
+cheese'' and so on.
+
+\begin{problem}
+If the shop offers two additional toppings, namely basil and garlic.
+\begin{enumerate}
+\item How many different 1-item pizzas (cheese plus one other
+  topping) can he make?  List the possibilities.
+\item How many different 2-item pizzas can he make?  List them.
+\item How many different 0-item pizzas can he make?
+\item In total, how many different pizzas can he make?
+\end{enumerate}
+\end{problem}
+
+
+\begin{problem}
+Now suppose the shop has basil, garlic, and spinach toppings
+available.
+\begin{enumerate}
+\item How many 0-item pizzas can he make?
+\item How many 1-item pizzas can he make?
+\item How many 2-item pizzas can he make?
+\item How many 3-item pizzas can he make?
+\item In total, how many different pizzas can he make?
+\end{enumerate}
+\end{problem}
+
+
+\begin{problem}
+Complete the following chart by listing and counting the
+possibilities, where $n$ is the number of toppings Pascal has
+available, and $k$ is the number of toppings used.\\
+\[
+{\renewcommand{\arraystretch}{2}
+\begin{array}{|c||c|c|c|c|c|c||c|}
+    \hline
+          & k=0 & k=1 & k=2 & k=3 & k=4 & k=5 & \text{Total}\\
+    \hline\hline
+    n=0 &       &       &       &       &       &    &  \\
+    \hline
+    n=1 &       &       &       &       &       &    &  \\
+    \hline
+    n=2 &       &       &       &       &       &    &  \\
+    \hline
+    n=3 &       &       &       &       &       &    &  \\
+    \hline
+    n=4 &       &       &       &       &       &    &  \\
+    \hline
+    n=5 &       &       &       &       &       &    &  \\
+    \hline
+\end{array}}
+\]
+\end{problem}
+
+
+\begin{problem} 
+Often the numbers in the table you filled in above are arranged a bit
+differently, as below, where the top ``1'' counts the number of
+$0$-topping pizzas that can be made if zero toppings are
+available. Complete the first 8 rows of the triangle, which is called
+\textit{Pascal's Triangle}.\index{Pascal's Triangle}
+\[
+\begin{tabular}{c c c c c c c}
+      &   &   & 1 &   &   &  \\
+      &   & 1 &   & 1 &   &  \\
+      & 1 &   & 2 &   & 1 &  \\
+    1 &   & 3 &   & 3 &   & 1
+\end{tabular}
+\vspace{2in}
+\]
+Do you see some patterns in the triangle?  Describe them and try to
+explain why (in terms of pizzas) why they occur.
+\end{problem}
+
+
+
+
+\section{Symmetries as toppings}
+
+We are going to count the various way that a frieze pattern could have
+symmetry. Let's list the basic geometric transformations that can
+preserve frieze patterns:
+\begin{enumerate}
+\item Horizontal translations denoted by $\mat{T}$.
+\item Horizontal reflections denoted by $\mat{F_h}$.
+\item Vertical reflections denoted by $\mat{F_v}$.
+\item Glide reflections denoted by $\mat{G}$.
+\item Rotations of $180^\circ$ denoted by $\mat{R}$.
+\end{enumerate}
+Hence, just as we counted pizza's with a number of toppings, we can
+count groups of symmetries, where we select groups containing the
+transformations above.
+
+To start, note that every frieze pattern has symmetry through horizontal
+translations. So we don't need to count that one---this is like saying
+that every pizza has cheese on it. Let's list out all possible combinations
+of the remaining 4 transformations. To make sure we get them all, we are
+going to do this in a very orderly fashion.
+
+\begin{problem} 
+How many combinations of symmetries should there be with a single
+transformation?  What are they?
+\end{problem}
+
+
+\begin{problem} 
+How many combinations of symmetries should there be with two
+transformations?  What are they?
+\end{problem}
+
+
+\begin{problem} 
+How many combinations of symmetries should there be with three
+transformations?  What are they?
+\end{problem}
+
+
+\begin{problem} 
+How many combinations of symmetries should there be with four
+transformations?  What are they?
+\end{problem}
+
+
+
+
+\section{Grouping by groups}
+
+Now that you have a listing of all possible combinations of the
+symmetries of the frieze patterns, let's literally try to group them
+by groups---we're going to put the combinations you already found into
+the groups we already know. Here are two leading questions to help you
+out:
+
+
+\begin{problem} 
+Why must a frieze pattern have symmetry through glide reflections, if
+you know it has symmetry through both translations and vertical
+reflections?
+\end{problem}
+
+I'll take this one, just to show you how it's done. We'll imagine some
+sort of generic frieze pattern, and draw the following pictures:
+\[
+\includegraphics{friezeTF-G.pdf}
+\]
+Hence, from the picture we see that if the frieze pattern has symmetry
+through both $\mat{T}$ and $\mat{F_v}$, then it must also have
+symmetry through $\mat{G}$.
+
+
+\begin{problem} 
+Why must a frieze pattern have symmetry through $180^\circ$ rotations,
+if you know it has symmetry through translations, glide reflections,
+and horizontal reflections?
+\end{problem}
+
+
+
+\begin{problem} 
+Why must a frieze pattern have symmetry through glide reflections, if
+you know it has symmetry through translations, horizontal reflections,
+and $180^\circ$ rotations?
+\end{problem}
+
+
+\begin{problem} 
+Why must a frieze pattern have symmetry through glide reflections, if
+you know it has symmetry through translations, horizontal reflections,
+and vertical reflections?
+\end{problem}
+
+
+\begin{problem} 
+Why must a frieze pattern have symmetry through $180^\circ$ rotations, if
+you know it has symmetry through translations, horizontal reflections,
+and vertical reflections?
+\end{problem}
+
+
+
+\begin{problem} 
+Why must a frieze pattern have symmetry through vertical reflections,
+if you know it has symmetry through translations, horizontal
+reflections, and $180^\circ$ rotations?
+\end{problem}
+
+
+
+
+
+\begin{problem} 
+Can you figure out which frieze groups go with which collections of
+symmetries you listed above?
+\end{problem}
+
+
+
+From this we can finally give a rigorous definition of a frieze pattern
+as promised:
+
+\begin{definition}\index{frieze pattern}
+A \dfn{frieze pattern} is a pattern whose symmetries are given by
+one of the seven frieze groups.
+\end{definition}
+
+
+
+
+\paragraph{Some Observations and Thoughts}
+
+
+Now that we have classified all of the frieze groups, let me tell you about
+another classification project. Around 1971, a mathematician by the
+name of Gorenstein sought to understand \textbf{all} finite
+groups. To do this, he proposed that we attempt to classify all of
+what are called ``finite simple groups.'' While the definition of a
+\textit{simple group} is somewhat beyond the scope of this course, to
+put it in SAT terms:
+\begin{center}
+\textit{simple group} is to \textit{group} \qquad as \qquad \textit{prime number} is to \textit{number}
+\end{center}
+This goal was eventually finished in 2004---however, the proof of the
+classification was enormous. It spanned 15000 pages and required the
+work of over 100 mathematicians. Some of the arguments are described
+as ``diabolically difficult'' and the proof surely presses to the
+limits of human thought.
+
+
+
+\end{document}
