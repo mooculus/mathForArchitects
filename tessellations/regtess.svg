@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5a -->
+
+<!-- CreationDate: Tue Dec 14 14:44:05 2010 -->
+
+<!-- Magnification: 1.000 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="3.5in"
+   height="0.9in"
+   viewBox="2228 2486 4233 1062"
+   id="svg4522"
+   version="1.1"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="regtess.fig">
+  <metadata
+     id="metadata4582">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs4580">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 40.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="315 : 40.5 : 1"
+       inkscape:persp3d-origin="157.5 : 27 : 1"
+       id="perspective4584" />
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="487"
+     id="namedview4578"
+     showgrid="false"
+     inkscape:zoom="1.7269841"
+     inkscape:cx="157.5"
+     inkscape:cy="40.5"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg4522" />
+  <g
+     style="stroke-width:.025in; fill:none"
+     id="g4524">
+    <!-- Line -->
+    <polygon
+       points="5999,3276 5849,3016 5549,3016 5399,3276 5549,3536 5849,3536 5999,3276 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polygon4526" />
+    <!-- Line -->
+    <polygon
+       points="6449,3016 6299,2756 5999,2756 5849,3016 5999,3276 6299,3276 6449,3016 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polygon4528" />
+    <!-- Line -->
+    <polygon
+       points="5549,3016 5399,2756 5099,2756 4949,3016 5099,3276 5399,3276 5549,3016 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polygon4530" />
+    <!-- Line -->
+    <polygon
+       points="5995,2758 5845,2498 5545,2498 5395,2758 5545,3018 5845,3018 5995,2758 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polygon4532" />
+    <!-- Line: box -->
+    <rect
+       x="3600"
+       y="3000"
+       width="300"
+       height="300"
+       rx="0"
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="rect4534" />
+    <!-- Line: box -->
+    <rect
+       x="3900"
+       y="3000"
+       width="300"
+       height="300"
+       rx="0"
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="rect4536" />
+    <!-- Line: box -->
+    <rect
+       x="4200"
+       y="3000"
+       width="300"
+       height="300"
+       rx="0"
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="rect4538" />
+    <!-- Line: box -->
+    <rect
+       x="3600"
+       y="2700"
+       width="300"
+       height="300"
+       rx="0"
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="rect4540" />
+    <!-- Line: box -->
+    <rect
+       x="3900"
+       y="2700"
+       width="300"
+       height="300"
+       rx="0"
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="rect4542" />
+    <!-- Line: box -->
+    <rect
+       x="4200"
+       y="2700"
+       width="300"
+       height="300"
+       rx="0"
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="rect4544" />
+    <!-- Line -->
+    <polygon
+       points="2746,3019 2616,3244 2876,3244 2746,3019 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polygon4546" />
+    <!-- Line -->
+    <polygon
+       points="2746,3019 2616,3244 2876,3244 2746,3019 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polygon4548" />
+    <!-- Line -->
+    <polygon
+       points="3001,3009 2871,2784 3131,2784 3001,3009 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:bevel; stroke-linecap:butt; "
+       id="polygon4550" />
+    <!-- Line -->
+    <polygon
+       points="2743,3008 2613,2783 2873,2783 2743,3008 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:bevel; stroke-linecap:butt; "
+       id="polygon4552" />
+    <!-- Line -->
+    <polygon
+       points="2619,2788 2489,3013 2749,3013 2619,2788 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:bevel; stroke-linecap:butt; "
+       id="polygon4554" />
+    <!-- Line -->
+    <polygon
+       points="3004,3018 2874,3243 3134,3243 3004,3018 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:bevel; stroke-linecap:butt; "
+       id="polygon4556" />
+    <!-- Line -->
+    <polygon
+       points="2373,3240 2243,3015 2503,3015 2373,3240 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:bevel; stroke-linecap:butt; "
+       id="polygon4558" />
+    <!-- Line -->
+    <polygon
+       points="2497,3018 2367,3243 2627,3243 2497,3018 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:bevel; stroke-linecap:butt; "
+       id="polygon4560" />
+    <!-- Line -->
+    <polygon
+       points="2619,2788 2489,3013 2749,3013 2619,2788 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:bevel; stroke-linecap:butt; "
+       id="polygon4562" />
+    <!-- Line -->
+    <polygon
+       points="2370,2787 2240,3012 2500,3012 2370,2787 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:bevel; stroke-linecap:butt; "
+       id="polygon4564" />
+    <!-- Line -->
+    <polygon
+       points="2494,3009 2364,2784 2624,2784 2494,3009 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:bevel; stroke-linecap:butt; "
+       id="polygon4566" />
+    <!-- Line -->
+    <polygon
+       points="2743,3008 2613,2783 2873,2783 2743,3008 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:bevel; stroke-linecap:butt; "
+       id="polygon4568" />
+    <!-- Line -->
+    <polygon
+       points="2622,3239 2492,3014 2752,3014 2622,3239 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:bevel; stroke-linecap:butt; "
+       id="polygon4570" />
+    <!-- Line -->
+    <polygon
+       points="2880,3240 2750,3015 3010,3015 2880,3240 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:bevel; stroke-linecap:butt; "
+       id="polygon4572" />
+    <!-- Line -->
+    <polygon
+       points="2877,2787 2747,3012 3007,3012 2877,2787 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:bevel; stroke-linecap:butt; "
+       id="polygon4574" />
+    <!-- Line -->
+    <polygon
+       points="2622,3239 2492,3014 2752,3014 2622,3239 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:bevel; stroke-linecap:butt; "
+       id="polygon4576" />
+  </g>
+</svg>

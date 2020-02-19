@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5a -->
+
+<!-- CreationDate: Tue Dec 14 14:43:32 2010 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="2.2in"
+   height="2.2in"
+   viewBox="449 7063 2644 2644"
+   id="svg4057"
+   version="1.1"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="pbppyth2.svg">
+  <metadata
+     id="metadata4118">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs4116">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 99 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="198 : 99 : 1"
+       inkscape:persp3d-origin="99 : 66 : 1"
+       id="perspective4120" />
+    <defs
+       id="defs4103">
+      <pattern
+         id="tile1"
+         x="0"
+         y="0"
+         width="200"
+         height="200"
+         patternUnits="userSpaceOnUse">
+        <path
+           d="M 100 0 200 100"
+           id="path4106" />
+        <path
+           d="M 0 0 200 200"
+           id="path4108" />
+        <path
+           d="M 0 100 100 200"
+           id="path4110" />
+      </pattern>
+    </defs>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1280"
+     inkscape:window-height="968"
+     id="namedview4114"
+     showgrid="true"
+     inkscape:zoom="3.6613709"
+     inkscape:cx="99"
+     inkscape:cy="98.962557"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4057">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3037"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
+  <g
+     id="g3155"
+     transform="translate(25.525253,-34.515152)">
+    <rect
+       x="1417"
+       y="7086"
+       width="472"
+       height="472"
+       rx="0"
+       style="fill:#b46100;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:bevel"
+       id="rect4061" />
+    <rect
+       x="2598"
+       y="7322"
+       width="472"
+       height="472"
+       rx="0"
+       style="fill:#b46100;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:bevel"
+       id="rect4063" />
+    <rect
+       x="1181"
+       y="7559"
+       width="708"
+       height="708"
+       rx="0"
+       style="fill:#ffbfbf;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:bevel"
+       id="rect4065" />
+    <rect
+       x="1653"
+       y="8267"
+       width="708"
+       height="708"
+       rx="0"
+       style="fill:#ffbfbf;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:bevel"
+       id="rect4067" />
+    <rect
+       x="944"
+       y="8740"
+       width="708"
+       height="708"
+       rx="0"
+       style="fill:#ffbfbf;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:bevel"
+       id="rect4069" />
+    <rect
+       x="472"
+       y="8031"
+       width="708"
+       height="708"
+       rx="0"
+       style="fill:#ffbfbf;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:bevel"
+       id="rect4071" />
+    <rect
+       x="1653"
+       y="8976"
+       width="472"
+       height="472"
+       rx="0"
+       style="fill:#b46100;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:bevel"
+       id="rect4073" />
+    <rect
+       x="708"
+       y="7559"
+       width="472"
+       height="472"
+       rx="0"
+       style="fill:#b46100;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:bevel"
+       id="rect4075" />
+    <rect
+       x="472"
+       y="8740"
+       width="472"
+       height="472"
+       rx="0"
+       style="fill:#b46100;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:bevel"
+       id="rect4077" />
+    <rect
+       x="2362"
+       y="8503"
+       width="472"
+       height="472"
+       rx="0"
+       style="fill:#b46100;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:bevel"
+       id="rect4079" />
+    <rect
+       x="2362"
+       y="7795"
+       width="708"
+       height="708"
+       rx="0"
+       style="fill:#ffbfbf;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:bevel"
+       id="rect4081" />
+    <rect
+       x="1889"
+       y="7086"
+       width="708"
+       height="708"
+       rx="0"
+       style="fill:#ffbfbf;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:bevel"
+       id="rect4083" />
+    <polyline
+       points="2598,7322 1889,7795 2362,8503 3070,8031 2598,7322 "
+       style="fill:none;stroke:#000000;stroke-width:16;stroke-linecap:butt;stroke-linejoin:bevel"
+       id="polyline4085" />
+    <polyline
+       points="1181,8267 472,8740 944,9448 1653,8976 1181,8267 "
+       style="fill:none;stroke:#000000;stroke-width:16;stroke-linecap:butt;stroke-linejoin:bevel"
+       id="polyline4087" />
+    <polyline
+       points="2362,8503 1653,8976 2125,9685 2834,9212 2362,8503 "
+       style="fill:none;stroke:#000000;stroke-width:16;stroke-linecap:butt;stroke-linejoin:bevel"
+       id="polyline4089" />
+    <polyline
+       points="1417,7086 708,7559 1181,8267 1889,7795 1417,7086 "
+       style="fill:none;stroke:#000000;stroke-width:16;stroke-linecap:butt;stroke-linejoin:bevel"
+       id="polyline4091" />
+    <rect
+       x="1181"
+       y="8267"
+       width="472"
+       height="472"
+       rx="0"
+       style="fill:#b46100;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:bevel"
+       id="rect4093" />
+    <rect
+       x="1889"
+       y="7795"
+       width="472"
+       height="472"
+       rx="0"
+       style="fill:#b46100;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:bevel"
+       id="rect4095" />
+    <polyline
+       points="1889,7795 1181,8267 1653,8976 2362,8503 1889,7795 "
+       style="fill:none;stroke:#000000;stroke-width:16;stroke-linecap:butt;stroke-linejoin:bevel"
+       id="polyline4097" />
+    <polyline
+       points="1889,7795 1889,8267 1181,8267 1889,7795 "
+       style="fill:#ffffff;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:bevel"
+       id="polyline4099" />
+  </g>
+</svg>

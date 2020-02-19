@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5a -->
+
+<!-- CreationDate: Tue Dec 14 14:43:03 2010 -->
+
+<!-- Magnification: 1.000 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="3.0in"
+   height="2.0in"
+   viewBox="-12 -312 3624 2424"
+   id="svg3248"
+   version="1.1"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="nonconvextess.fig">
+  <metadata
+     id="metadata3288">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3286">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 90 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="270 : 90 : 1"
+       inkscape:persp3d-origin="135 : 60 : 1"
+       id="perspective3290" />
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="487"
+     id="namedview3284"
+     showgrid="false"
+     inkscape:zoom="1.3111111"
+     inkscape:cx="135"
+     inkscape:cy="90"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg3248" />
+  <g
+     style="stroke-width:.025in; fill:none"
+     id="g3250">
+    <!-- Line -->
+    <polyline
+       points="1200,600 600,1200 1800,1500 1200,1200 1200,600 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:bevel; stroke-linecap:butt; "
+       id="polyline3252" />
+    <!-- Line -->
+    <polyline
+       points="600,1200 1200,600 0,300 600,600 600,1200 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:bevel; stroke-linecap:butt; fill:#ff8080; "
+       id="polyline3254" />
+    <!-- Line -->
+    <polyline
+       points="1800,600 1200,1200 2400,1500 1800,1200 1800,600 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:bevel; stroke-linecap:butt; "
+       id="polyline3256" />
+    <!-- Line -->
+    <polyline
+       points="2400,600 1800,1200 3000,1500 2400,1200 2400,600 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:bevel; stroke-linecap:butt; "
+       id="polyline3258" />
+    <!-- Line -->
+    <polyline
+       points="3000,600 2400,1200 3600,1500 3000,1200 3000,600 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:bevel; stroke-linecap:butt; "
+       id="polyline3260" />
+    <!-- Line -->
+    <polyline
+       points="1200,1200 1800,600 600,300 1200,600 1200,1200 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:bevel; stroke-linecap:butt; fill:#ff8080; "
+       id="polyline3262" />
+    <!-- Line -->
+    <polyline
+       points="1800,1200 2400,600 1200,300 1800,600 1800,1200 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:bevel; stroke-linecap:butt; fill:#ff8080; "
+       id="polyline3264" />
+    <!-- Line -->
+    <polyline
+       points="2400,1200 3000,600 1800,300 2400,600 2400,1200 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:bevel; stroke-linecap:butt; fill:#ff8080; "
+       id="polyline3266" />
+    <!-- Line -->
+    <polyline
+       points="2400,2100 3000,1500 1800,1200 2400,1500 2400,2100 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:bevel; stroke-linecap:butt; fill:#ff8080; "
+       id="polyline3268" />
+    <!-- Line -->
+    <polyline
+       points="1800,2100 2400,1500 1200,1200 1800,1500 1800,2100 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:bevel; stroke-linecap:butt; fill:#ff8080; "
+       id="polyline3270" />
+    <!-- Line -->
+    <polyline
+       points="1200,2100 1800,1500 600,1200 1200,1500 1200,2100 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:bevel; stroke-linecap:butt; fill:#ff8080; "
+       id="polyline3272" />
+    <!-- Line -->
+    <polyline
+       points="2400,-300 1800,300 3000,600 2400,300 2400,-300 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:bevel; stroke-linecap:butt; "
+       id="polyline3274" />
+    <!-- Line -->
+    <polyline
+       points="1800,-300 1200,300 2400,600 1800,300 1800,-300 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:bevel; stroke-linecap:butt; "
+       id="polyline3276" />
+    <!-- Line -->
+    <polyline
+       points="1200,-300 600,300 1800,600 1200,300 1200,-300 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:bevel; stroke-linecap:butt; "
+       id="polyline3278" />
+    <!-- Line -->
+    <polyline
+       points="600,-300 0,300 1200,600 600,300 600,-300 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:bevel; stroke-linecap:butt; "
+       id="polyline3280" />
+    <!-- Line -->
+    <polyline
+       points="3000,2100 3600,1500 2400,1200 3000,1500 3000,2100 "
+       style="stroke:#000000;stroke-width:7; stroke-linejoin:bevel; stroke-linecap:butt; fill:#ff8080; "
+       id="polyline3282" />
+  </g>
+</svg>
