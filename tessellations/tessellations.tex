@@ -1,0 +1,165 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+
+\title{Tessellations}
+
+\author{Bart Snapp}
+
+
+
+\begin{document}
+\begin{abstract}
+  We introduce tessellations.
+\end{abstract}
+\maketitle
+
+Go to the internet and look up M.C.\ Escher.\index{Escher, M.C.} He
+was an artist. Look at some of his work. When you do your search be
+sure to include the word ``tessellation''. OK? Back already? Very
+good. Sometimes Escher worked with tessellations. What's a
+tessellation? I'm glad you asked:
+
+\begin{definition}\index{tessellation} A \textbf{tessellation} is a pattern of 
+polygons fitted together to cover the entire plane without
+overlapping.  
+\end{definition}
+While it is impossible to actually cover the entire plane with shapes,
+if we give you enough of a tessellation, you should be able to continue
+its pattern indefinitely.  Here are pieces of tessellations:
+\[
+\includegraphics{semiRegTess.pdf}
+\]
+On the left we have a tessellation of a square and an octagon. On the
+right we have a ``brick-like'' tessellation.
+
+\begin{definition}\index{tessellation!regular}\index{regular!tessellation}
+A tessellation is called a \textbf{regular tessellation} if it is
+composed of copies of a single regular polygon and these polygons meet
+vertex to vertex.\index{regular!polygon}
+\end{definition}
+
+
+\begin{example} Here are some examples of regular tessellations:
+\[
+\includegraphics{regtess.pdf}
+\]
+\end{example}
+
+Johannes Kepler\index{Kepler, Johannes}, who lived from 1571--1630,
+was one of the first people to study tessellations. He certainly knew
+the next theorem:
+
+\begin{theorem} There are only three regular tessellations.
+\end{theorem}
+
+\begin{question} Why is the theorem above true?
+\end{question}
+
+
+Since one can prove that there are only three regular tessellations,
+and we have shown three above, then that is all of them. On the other
+hand there are lots of nonregular tessellations. Here are two
+different ways to tessellate the plane with a
+triangle:\index{tessellation!triangles}
+\[
+\includegraphics{triangletess.pdf}
+\]
+Here is a way that you can tessellate the plane with any old
+quadrilateral:
+\[\index{tessellation!any quadrilateral}\index{quadrilateral!tessellation of}
+\includegraphics{quadtess.pdf}
+\]
+
+\section{Tessellations and Art}
+
+How does one make art with tessellations? To start, a little
+decoration goes a long way. Check this out: Decorate two squares as
+such:
+\[
+\includegraphics{lightningsquares.pdf}
+\]
+Tessellate them randomly in the plane to get this lightning-like picture:
+\[
+\includegraphics{lightningtess.pdf}
+\]
+\begin{question} 
+What sort of picture do you get if you tessellate these decorated
+squares randomly in a plane?
+\[
+\includegraphics{watersquares.pdf}
+\]
+\end{question}
+
+
+Another way to go is to start with your favorite tessellation:
+\[
+\includegraphics{nonconvextess.pdf}
+\]
+Then you modify it a bunch to get something different:
+\[
+\includegraphics{birdstess.pdf}
+\]
+
+\begin{question} What kind of art can you make with tessellations?
+\end{question}
+
+
+
+I'm not a very good artist, but I am a mathematician. So let's use a
+tessellation to give a proof! Let me ask you something:
+
+\begin{question} What is the most famous theorem in mathematics? 
+\end{question}
+Probably the Pythagorean Theorem comes to mind. Let's recall the statement of the Pythagorean Theorem:
+
+\begin{theorem}[Pythagorean Theorem]\index{Pythagorean Theorem} Given a right triangle, the sum of the squares of the 
+lengths of the two legs is equal to the square of the length of 
+the hypotenuse.  Symbolically, if $a$ and $b$ represent the 
+lengths of the legs and $c$ is the length of the hypotenuse, 
+\[
+\includegraphics{pbppyth.pdf}
+\]
+then 
+\[
+a^2 + b^2 = c^2.
+\]
+\end{theorem}
+
+
+Let's give a proof! Check out this tessellation involving $2$ squares:
+\[
+\includegraphics{pbppyth2.pdf}
+\]
+\begin{question} How does the picture above ``prove'' the Pythagorean Theorem?
+\end{question}
+\begin{proof}[Solution]  
+The white triangle is our right triangle. The area of the middle
+overlaid square is $c^2$, the area of the small dark squares is $a^2$,
+and the area of the medium lighter square is $b^2$. Now label all the
+``parts'' of the large overlaid square:
+\[
+\includegraphics{pbppyth2a.pdf}
+\]
+From the picture we see that
+\begin{align*}
+a^2 &= \{\text{3 and 4}\}\\
+b^2 &= \{\text{1, 2, and 5}\}\\
+c^2 &= \{\text{1, 2, 3, 4, and 5}\}
+\end{align*}
+Hence
+\[
+c^2 = a^2 + b^2
+\]
+Since we can always put two squares together in this pattern, this
+proof will work for any right triangle.
+\end{proof}
+
+\begin{question} Can you use the above tessellation to give a dissection proof of the Pythagorean Theorem?
+\end{question}
+
+
+
+
+\end{document}
