@@ -1,1 +1,17 @@
 \usepackage{fullpage}
+\makeatletter
+%% no number for activity
+\newcommand\logostyle{%
+  \def\activitystyle{activity-chapter}
+  \def\maketitle{%
+                {\flushleft\small\sffamily\bfseries\@pretitle\par\vspace{-1.5em}}%
+                {\flushleft\LARGE\sffamily\bfseries\@title \par }%
+                {\vskip .6em\noindent\textit\theabstract\setcounter{problem}{0}\setcounter{sectiontitlenumber}{0}}%
+                    \par\vspace{2em}
+                    \phantomsection\addcontentsline{toc}{section}{\textbf{\@title}}%
+                     \setcounter{titlenumber}{0}}}
+\makeatother
+\newcommand{\nameblankgen}{\noindent\textbf{Name(s) (please print):}\ \hrulefill \\
+
+\hrulefill}
+\logostyle

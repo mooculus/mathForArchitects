@@ -3,6 +3,7 @@
 \input{../../preamble.tex}
 \input{../../activityPreamble.tex}
 
+
 \title{Basic shapes}
 \author{Bart Snapp}
 
@@ -12,42 +13,88 @@ Let's get started with \LOGO.
 \end{abstract}
 \maketitle
 
-\noindent\textbf{Group members (please print):}\ \hrulefill \\
+\nameblankgen
 
-\hrulefill
+\begin{multicols}{2}
+\LOGO~is a fun programming language where you help a ``drawing
+turtle'' create beautiful pictures. That is, there is this turtle,
+\turtle, who loves nothing more than drawing pictures with
+you. \LOGO~is quite old and there are many flavors. We suggest
+\logoFlavor, though you do you.
 
+Your shelled friend could look more like a turtle than \turtle, but
+she's still a turtle. The turtle
+\[
+\turtle
+\]
+is standing with her ``head'' pointing up. If she moves forward, she
+will move up.  To guide the turtle around, you give it directions like
+\lc{fd 100} to mean ``forward 100 units'' in which case you will see
+something like:
+\begin{logoout}
+\begin{tikzpicture}[turtle/distance=2cm]
+  \draw [thick,black,turtle={home,forward}];
+  \node at (0,2) {\turtle};
+\end{tikzpicture}
+\end{logoout}
+Remember, she's a drawing turtle, drawing a path wherever she goes.
 
-\LOGO~is a programming language where you boss a ``drawing turtle''
-around. That is, there is this turtle, \turtle.
+To help her turn, use a command like and \lc{lt 90} to mean ``turn
+$90$ degrees to the left.'' So for example, the code below draws a
+square:
 
-who draws pictures for you. This is an old programming language with
-many implementations. We suggest \logoFlavor. 
+\begin{logo}
+fd 100
+lt 90
+fd 100
+lt 90
+fd 100
+lt 90
+fd 100
+\end{logo}
+\begin{logoout}
+\begin{tikzpicture}[turtle/distance=2cm]
+  \draw [thick,black,turtle={home,forward,left,forward,left,forward,left,forward}];
+  \node at (0,0) {\turtler};
+\end{tikzpicture}
+\end{logoout}
+
+Note, now she has turned, and is pointing directly right, like
+$\turtler$, thus proving the old adage,
+\begin{quote}
+  Two wrongs don't make a right, but four lefts do.
+\end{quote}
+\end{multicols}
+
+\newpage
+
+\begin{problem}
+  Use the techniques above to help the turtle draw an equilateral
+  triangle with side length $250$. Show your code and your picture.
+\end{problem}
+
+\newpage
+
+\begin{problem}
+  Use the techniques above to help the turtle draw a regular pentagon
+  triangle with side length $90$. Show your code and your picture. 
+\end{problem}
+
+\newpage
 
 
 \begin{problem}
-Remind me, gentle reader, what is the definition of an isometry?
-
-\vspace{2.5in}
-
+  Use the techniques above to help the turtle draw an regular hexagon
+  with side length $80$. Show your code and your picture. 
 \end{problem}
 
+\newpage
 
-
-\begin{tikzpicture}[turtle/distance=1cm]
-  \draw [thick,red,turtle={home,forward,right,forward,left,forward,left,forward}];
-  
-  \filldraw [thick,blue,fill=blue!20][turtle=home]
-  \foreach \i in {1,...,5}
-           {
-             [turtle={forward,right=144}]
-           };
-\end{tikzpicture}
-
-
-\begin{logo}
-fd 10
-\end{logo}
-
+\begin{problem}
+  Use the techniques above to help the turtle draw a regular
+  five-pointed star of a reasonable size. Show your code and your
+  picture.
+\end{problem}
 
 
 

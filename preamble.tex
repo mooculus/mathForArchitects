@@ -1,3 +1,15 @@
+\usepackage{gillius}
+\usepackage{concmath}
+\usepackage[T1]{fontenc}
+
+%% \usepackage[sfmath]{kpfonts} %% sfmath option only to make math in sans serif. Probablye only for use when base font is sans serif.
+%% \renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+%% \usepackage[T1]{fontenc}
+
+
+
+\usepackage{multicol} %% for logo
+
 
 \graphicspath{  
 {./}
@@ -25,9 +37,13 @@
 {activities/areYouGettingStairs/}
 {activities/rep-tiles/}
 {activities/snowflakes/}
-} 
+}
 
-\usepackage{microtype,amssymb,amsmath,amsfonts,amsthm,fancyhdr,graphicx}
+
+
+
+
+\usepackage{amssymb,amsmath,amsfonts,amsthm,fancyhdr,graphicx}
 %% \usepackage{tkz-euclide}
 %% \usetkzobj{all}
 \tikzset{%% partial ellipse
@@ -39,7 +55,28 @@
 \tikzstyle geometryDiagrams=[rounded corners=.5pt,ultra thick,color=black]
 
 \usetikzlibrary{calc}
+
+\usetikzlibrary{turtle} %for LOGO
+\DefineVerbatimEnvironment{logo}{Verbatim}{frame=lines,label=\LOGO,labelposition=topline}
+\NewEnviron{logoout}{
+\begin{center}
+\sep~\LOGO~OUTPUT~\sep \\[.5cm]
+\BODY\\[-.2cm]
+\sep
+\end{center}
+}
+
 %%% This set of code is all of our user defined commands
+\usepackage{fdsymbol}
+\newcommand{\turtle}{\text{$\blacktriangle$}}
+\newcommand{\turtler}{\text{$\blacktriangleright$}}
+\newcommand{\turtlel}{\text{$\blacktriangleleft$}}
+\newcommand{\turtled}{\text{$\blacktriangledown$}}
+\newcommand{\sep}{\hrulefill}
+
+
+\newcommand{\lc}[1]{$\pmb{\texttt{#1}}$}
+
 \newcommand{\bysame}{\mbox{\rule{3em}{.4pt}}\,}
 \newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
@@ -70,6 +107,9 @@
 \renewcommand{\qedsymbol}{$\blacksquare$}
 %% \renewcommand{\bibname}{References and Further Reading}
 %% \renewcommand{\abstractname}{Distributing this Document}
+\newcommand{\LOGO}{\textsl{\textsf{LOGO}}}
+\newcommand{\logoFlavor}{\link[Turtle Academy]{https://turtleacademy.com/}}
+
 \renewcommand{\bar}{\protect\overline}
 \renewcommand{\hat}{\protect\widehat}
 \renewcommand{\tilde}{\widetilde}
