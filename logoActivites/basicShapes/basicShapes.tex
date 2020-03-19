@@ -1,0 +1,54 @@
+\documentclass[noauthor,nooutcomes,12pt]{ximera}
+
+\input{../../preamble.tex}
+\input{../../activityPreamble.tex}
+
+\title{Basic shapes}
+\author{Bart Snapp}
+
+\begin{document}
+\begin{abstract}
+Let's get started with \LOGO.
+\end{abstract}
+\maketitle
+
+\noindent\textbf{Group members (please print):}\ \hrulefill \\
+
+\hrulefill
+
+
+\LOGO~is a programming language where you boss a ``drawing turtle''
+around. That is, there is this turtle, \turtle.
+
+who draws pictures for you. This is an old programming language with
+many implementations. We suggest \logoFlavor. 
+
+
+\begin{problem}
+Remind me, gentle reader, what is the definition of an isometry?
+
+\vspace{2.5in}
+
+\end{problem}
+
+
+
+\begin{tikzpicture}[turtle/distance=1cm]
+  \draw [thick,red,turtle={home,forward,right,forward,left,forward,left,forward}];
+  
+  \filldraw [thick,blue,fill=blue!20][turtle=home]
+  \foreach \i in {1,...,5}
+           {
+             [turtle={forward,right=144}]
+           };
+\end{tikzpicture}
+
+
+\begin{logo}
+fd 10
+\end{logo}
+
+
+
+
+\end{document}
