@@ -1,0 +1,105 @@
+\documentclass[noauthor,nooutcomes,12pt]{ximera}
+
+\input{../../preamble.tex}
+\input{../../activityPreamble.tex}
+
+
+\title{Repeating steps}
+\author{Bart Snapp}
+
+\begin{document}
+\begin{abstract}
+  Don't type so much, let the turtle repeat!
+\end{abstract}
+\maketitle
+
+\nameblankgen
+
+\begin{multicols}{2}
+  Drawing picturs in \LOGO\ often means making the turtle do things
+  over and over again. The drawing-turtle doesn't mind, but there are
+  efficient ways to communicate. One way is the \lc{repeat} command.
+\begin{logo}
+repeat 4 [
+  fd 100
+  lt 90
+  ]
+\end{logo}
+
+Remember, she's a drawing turtle, drawing a path wherever she goes.
+
+To help her turn, use a command like \lc{lt 90} to mean ``turn $90$
+degrees to the left.'' So for example, the code below draws a square:
+
+\begin{logo}
+fd 100
+lt 90
+fd 100
+lt 90
+fd 100
+lt 90
+fd 100
+\end{logo}
+\begin{logoout}
+\begin{tikzpicture}[turtle/distance=2cm]
+  \draw [thick,black,turtle={home,forward,left,forward,left,forward,left,forward}];
+  \node at (0,0) {\turtler};
+\end{tikzpicture}
+\end{logoout}
+
+Note, now she has turned, and is pointing directly right, like
+$\turtler$, thus proving the old adage,
+\begin{quote}
+  Two wrongs don't make a right, but four lefts do.
+\end{quote}
+\end{multicols}
+
+\newpage
+
+\begin{problem}
+  Use the techniques above to help the turtle draw an equilateral
+  triangle with side length $250$. Show your code and your picture.
+\end{problem}
+
+\newpage
+
+\begin{problem}
+  Use the techniques above to help the turtle draw a regular pentagon
+  triangle with side length $90$. Show your code and your picture. 
+\end{problem}
+
+\newpage
+
+
+\begin{problem}
+  Use the techniques above to help the turtle draw an regular hexagon
+  with side length $80$. Show your code and your picture. 
+\end{problem}
+
+\newpage
+
+\begin{problem}
+  Use the techniques above to help the turtle draw a regular
+  five-pointed star of a reasonable size. Show your code and your
+  picture.
+\end{problem}
+
+\newpage
+
+\begin{problem}
+  Use the techniques above to draw the rep-4-tile known as the sphinx,
+  that is, produce this picture:
+  \begin{logoout}
+\begin{tikzpicture}[turtle/distance=2cm]
+  \draw [thick,black,turtle={home,right,forward,forward,forward,left=120,forward,left=60,forward,right=60,forward,left=120,forward,forward}];
+  %\node at (0,0) {\rotatebox{140}{\turtle}};
+\end{tikzpicture}
+\end{logoout}
+
+  Show your code and your
+  picture.
+\end{problem}
+
+
+
+\end{document}
