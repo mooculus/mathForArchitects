@@ -4,7 +4,7 @@
 \input{../../activityPreamble.tex}
 
 
-\title{Basic shapes}
+\title{Basic directions}
 \author{Bart Snapp}
 
 \begin{document}
@@ -39,9 +39,8 @@ something like:
 \end{logoout}
 Remember, she's a drawing turtle, drawing a path wherever she goes.
 
-To help her turn, use a command like and \lc{lt 90} to mean ``turn
-$90$ degrees to the left.'' So for example, the code below draws a
-square:
+To help her turn, use a command like \lc{lt 90} to mean ``turn $90$
+degrees to the left.'' So for example, the code below draws a square:
 
 \begin{logo}
 fd 100
@@ -93,6 +92,22 @@ $\turtler$, thus proving the old adage,
 \begin{problem}
   Use the techniques above to help the turtle draw a regular
   five-pointed star of a reasonable size. Show your code and your
+  picture.
+\end{problem}
+
+\newpage
+
+\begin{problem}
+  Use the techniques above to draw the rep-4-tile known as the sphinx,
+  that is, produce this picture:
+  \begin{logoout}
+\begin{tikzpicture}[turtle/distance=2cm]
+  \draw [thick,black,turtle={home,right,forward,forward,forward,left=120,forward,left=60,forward,right=60,forward,left=120,forward,forward}];
+  %\node at (0,0) {\rotatebox{140}{\turtle}};
+\end{tikzpicture}
+\end{logoout}
+
+  Show your code and your
   picture.
 \end{problem}
 

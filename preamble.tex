@@ -9,7 +9,7 @@
 
 
 \usepackage{multicol} %% for logo
-
+\setlength{\columnseprule}{1pt} %%  for gutter rule
 
 \graphicspath{  
 {./}
@@ -57,7 +57,7 @@
 \usetikzlibrary{calc}
 
 \usetikzlibrary{turtle} %for LOGO
-\DefineVerbatimEnvironment{logo}{Verbatim}{frame=lines,label=\LOGO,labelposition=topline}
+\DefineVerbatimEnvironment{logo}{Verbatim}{framerule=1pt,frame=lines,label=\LOGO,labelposition=topline}
 \NewEnviron{logoout}{
 \begin{center}
 \sep~\LOGO~OUTPUT~\sep \\[.5cm]
@@ -73,8 +73,9 @@
 \newcommand{\turtlel}{\text{$\blacktriangleleft$}}
 \newcommand{\turtled}{\text{$\blacktriangledown$}}
 \newcommand{\sep}{\hrulefill}
-
-
+\makeatletter
+\def\hrulefill{\leavevmode\leaders\hrule height 1pt\hfill\kern\z@}
+\makeatother
 \newcommand{\lc}[1]{$\pmb{\texttt{#1}}$}
 
 \newcommand{\bysame}{\mbox{\rule{3em}{.4pt}}\,}
