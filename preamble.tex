@@ -56,8 +56,11 @@
 
 \usetikzlibrary{calc}
 
+
 \usetikzlibrary{turtle} %for LOGO
+
 \DefineVerbatimEnvironment{logo}{Verbatim}{framerule=1pt,frame=lines,label=\LOGO,labelposition=topline}
+
 \NewEnviron{logoout}{
 \begin{center}
 \sep~\LOGO~OUTPUT~\sep \\[.5cm]
@@ -67,11 +70,11 @@
 }
 
 %%% This set of code is all of our user defined commands
-\usepackage{fdsymbol}
-\newcommand{\turtle}{\text{$\blacktriangle$}}
-\newcommand{\turtler}{\text{$\blacktriangleright$}}
-\newcommand{\turtlel}{\text{$\blacktriangleleft$}}
-\newcommand{\turtled}{\text{$\blacktriangledown$}}
+\usepackage{wasysym}
+\newcommand{\turtle}{\text{\UParrow}}
+\newcommand{\turtler}{\rotatebox[origin=c]{-90}{\text{\UParrow}}}
+\newcommand{\turtlel}{\rotatebox[origin=c]{90}{\text{\UParrow}}}
+\newcommand{\turtled}{\rotatebox[origin=c]{180}{\text{\UParrow}}}
 \newcommand{\sep}{\hrulefill}
 \makeatletter
 \def\hrulefill{\leavevmode\leaders\hrule height 1pt\hfill\kern\z@}
@@ -119,6 +122,14 @@
 \newcommand{\problems}{\subsection*{Problems for Section~\thesection}\hrule\vspace{1ex}}
 \newcommand{\tri}{\triangle}
 
+
+%%% thicker hline
+\makeatletter
+\usepackage{tabularx}
+\def\hlinewd#1{%
+\noalign{\ifnum0=`}\fi\hrule \@height #1 %
+\futurelet\reserved@a\@xhline} 
+\makeatother
 
 \newcommand{\mat}{\mathsf}
 \renewcommand{\vec}{\mathbf}
@@ -258,7 +269,7 @@
 
 
 \newtheoremstyle{problem}
-{\topsep}{\topsep}{}{}{\bfseries}{)}{ }{}
+{\topsep}{\topsep}{}{}{\bfseries\sffamily}{)}{ }{}
 \theoremstyle{problem}
 \newtheorem{problem}{}
 

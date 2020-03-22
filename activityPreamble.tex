@@ -1,4 +1,4 @@
-\usepackage{fullpage}
+\usepackage[cm]{fullpage}
 \makeatletter
 %% no number for activity
 \newcommand\logostyle{%
@@ -11,9 +11,8 @@
                     \phantomsection\addcontentsline{toc}{section}{\textbf{\@title}}%
                      \setcounter{titlenumber}{0}}}
 \makeatother
-\newcommand{\nameblankgen}{\noindent\textbf{Name(s) (please print):}\ \hrulefill \\
-
-\hrulefill}
+\newcommand{\nameblankgen}{\noindent\textbf{\textsf{Name(s) (please print):}}\ \hrulefill} %% \\
+%% \hrulefill}
 \logostyle
 
 

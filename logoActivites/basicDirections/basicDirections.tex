@@ -15,7 +15,7 @@ Let's get started with \LOGO.
 
 \nameblankgen
 
-\begin{multicols}{2}
+\begin{multicols*}{2}
 \LOGO~is a fun programming language where you help a ``drawing
 turtle'' create beautiful pictures. That is, there is this turtle,
 \turtle, who loves nothing more than drawing pictures with
@@ -23,24 +23,31 @@ you. \LOGO~is quite old and there are many flavors. We suggest
 \logoFlavor, though you do you.
 
 Your shelled friend could look more like a turtle than \turtle, but
-she's still a turtle. The turtle
+they're still a turtle. The turtle
 \[
 \turtle
 \]
-is standing with her ``head'' pointing up. If she moves forward, she
-will move up.  To guide the turtle around, you give it directions like
-\lc{fd 100} to mean ``forward 100 units'' in which case you will see
-something like:
+is standing with their ``head'' pointing up. If the turtle moves
+forward, they will move up.  To guide the turtle around, you give it
+directions like \lc{fd 100} to mean ``forward 100 units'' in which
+case you will see something like:
 \begin{logoout}
 \begin{tikzpicture}[turtle/distance=2cm]
   \draw [thick,black,turtle={home,forward}];
   \node at (0,2) {\turtle};
 \end{tikzpicture}
 \end{logoout}
-Remember, she's a drawing turtle, drawing a path wherever she goes.
+Remember, they are a drawing turtle, drawing a path wherever they go.
 
-To help her turn, use a command like \lc{lt 90} to mean ``turn $90$
-degrees to the left.'' So for example, the code below draws a square:
+To help them turn, use a command like \lc{rt 60} to mean ``turn $60$
+degrees to the right and \lc{lt 90} to mean ``turn $90$ degrees to the
+left.''
+
+
+\columnbreak
+
+We can put these commands together to draw a square:
+
 
 \begin{logo}
 fd 100
@@ -58,12 +65,27 @@ fd 100
 \end{tikzpicture}
 \end{logoout}
 
-Note, now she has turned, and is pointing directly right, like
+Note, now the turtle has turned, and is pointing directly right, like
 $\turtler$, thus proving the old adage,
 \begin{quote}
   Two wrongs don't make a right, but four lefts do.
 \end{quote}
-\end{multicols}
+
+\section{Commands to know}
+\begin{tabular}{lll}
+  \lc{CMD}   & Description                 &  \lc{EG} \\ \hlinewd{1pt}
+  \lc{fd \#} & Move forward \lc{\#} units  &  \lc{fd 78}\\
+  \lc{bk \#} & Move backward \lc{\#} units & \lc{bk 96}\\
+  \lc{rt \#} & Turn right \lc{\#} degrees  & \lc{rt 72}\\
+  \lc{lt \#} & Turn left  \lc{\#} degrees  & \lc{lt 61}\\
+  \lc{home}  & Reset the turtle            & \lc{home}\\
+  \lc{cs}    & Clear the screen and send home            & \lc{cs}\\
+  \lc{pu}    & Pen-up, stop drawing        & \lc{pu}\\
+  \lc{pd}    & Pen-down, start drawing     & \lc{pd}\\
+\end{tabular}
+
+  
+\end{multicols*}
 
 \newpage
 
@@ -83,8 +105,8 @@ $\turtler$, thus proving the old adage,
 
 
 \begin{problem}
-  Use the techniques above to help the turtle draw an regular hexagon
-  with side length $80$. Show your code and your picture. 
+  Use the techniques above to help the turtle draw a regular hexagon
+  with side length $80$. Show your code and your picture.
 \end{problem}
 
 \newpage
