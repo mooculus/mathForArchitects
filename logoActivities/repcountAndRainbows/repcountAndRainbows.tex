@@ -1,0 +1,129 @@
+\documentclass[noauthor,nooutcomes,12pt]{ximera}
+
+\input{../../preamble.tex}
+\input{../../activityPreamble.tex}
+
+
+\title{Repcount and rainbows}
+\author{Bart Snapp}
+
+\begin{document}
+\begin{abstract}
+  Change your code as you repeat it!
+\end{abstract}
+\maketitle
+
+\nameblankgen
+
+\begin{multicols*}{2}
+  
+The command \lc{repeat} might seem pretty cool, but it really comes
+alive when you combine it with \lc{repcount}. On the $i$th repetition
+of a \lc{repeat} command The command \lc{repcount} produces the number
+$i$. We can use the command \lc{print} to witness this:
+\begin{logo}
+repeat 10 [ print repcount ]
+\end{logo}
+This produces a list of numbers. The command \lc{print} is used to
+figure out values in programs while you write them.  Using
+\lc{repcount} we can produce some really cool drawings, especially
+when combined with commands that \lc{\%}, that mean ``take the
+remainder.''
+
+\begin{logo}
+ht setcolor 0 fill rt 17
+repeat 45 [ 
+  setwidth .2*repcount 
+  setcolor repcount % 15 + 1 
+  fd repcount * 15 rt 144 ]
+\end{logo}
+
+\begin{logoout}
+  \includegraphics[width=.4\textwidth]{superStar.png}
+\end{logoout}
+
+
+Here we use \lc{repeat} and \lc{repcount} to produce a picture of the
+Sun.
+\begin{logo}
+ht setcolor [ 10 10 30 ] fill
+to rays
+  repeat 12 [ pu fd 120 pd
+  repeat 100 [
+    setwidth 14-14*repcount/(100) fd 1.2 ]
+  pu bk 240 rt 30 ]
+end
+repeat 6 [ rt 41
+  setcolor pick [ 4 6 14 ] rays ]
+setcolor 6
+filled 6 [ circle ]
+\end{logo}
+If you remember to define \lc{circle}, it makes:
+\begin{logoout}
+  \includegraphics[width=.4\textwidth]{sun.png}
+\end{logoout}
+
+
+\section{Commands to know}
+\begin{tabular}{lll}
+  \lc{CMD}   & Description                 \\ \hlinewd{1pt}
+  \lc{repcount} & tells you which repetition  \\
+  \lc{print \#}     & prints \lc{\#}\\
+  \lc{:n \% :d} & remainder of \lc{:n} divided by \lc{:d} 
+\end{tabular}
+
+
+\end{multicols*}
+
+\newpage
+
+\begin{problem}
+  Above, we introduce the command \lc{\%} but we do not explain it
+  very well. Can you explain the command \lc{\%}? Note, this command
+  is sometimes called ``mod.''
+\end{problem}
+
+\mynewpage
+
+\begin{problem}
+  Use \lc{repcount} to help you make a command that will make
+  rainbows.  Show-off your work with your code and a picture.
+\end{problem}
+
+\mynewpage
+
+\begin{problem}
+  Create a picture involving a rainbow, clouds, and the Sun in the
+  sky. Show-off your work with your code and a picture.
+\end{problem}
+
+\mynewpage
+
+\begin{problem}%http://fmslogo.sourceforge.net/workshop/basic-loops.shtml
+  Here's some code I found lying around the interwebs:
+\begin{logo}
+repeat 100 [
+  fd repcount * 2 rt 91 ]
+\end{logo}
+  Use \lc{repcount} to help you make it awesome! Show-off your work
+  with your code and a picture.
+\end{problem}
+
+
+
+\mynewpage
+
+\begin{problem}
+Here's some code I found lying around the interwebs:
+\begin{logo}
+repeat 20 [
+  repeat 180 [
+    fd 4 rt 2 ]
+  rt 18 ]
+\end{logo}
+Use \lc{repcount} to help you make it awesome! Show-off your work with
+your code and a picture
+\end{problem}
+
+
+\end{document}
