@@ -1,0 +1,80 @@
+\documentclass[noauthor,nooutcomes,12pt]{ximera}
+
+\input{../../preamble.tex}
+\input{../../activityPreamble.tex}
+
+
+\title{Repcount and rainbows}
+\author{Bart Snapp}
+
+\begin{document}
+\begin{abstract}
+  Change your code as you repeat it!
+\end{abstract}
+\maketitle
+
+\nameblankgen
+
+\begin{multicols*}{2}
+  
+The command \lc{repeat} might seem pretty cool, but it really comes
+alive when you combine it with \lc{repcount}. On the $i$th repetition
+of a \lc{repeat} command The command \lc{repcount} produces the number
+$i$. We can use the command \lc{print} to witness this:
+\begin{logo}
+repeat 10 [ print repcount ]
+\end{logo}
+This produces:
+\begin{logoout}
+\end{logoout}
+
+  
+\section{Commands to know}
+\begin{tabular}{lll}
+  \lc{CMD}   & Description                 \\ \hlinewd{1pt}
+  \lc{repcount} & tells you which repetition  \\
+  \lc{print \#}     & prints \lc{\#}
+\end{tabular}
+
+
+\end{multicols*}
+
+\newpage
+
+\begin{problem}
+  Above, there is code that draws a flower. Explain in words what each
+  line of the code does.
+\end{problem}
+
+\newpage
+
+\begin{problem}
+  Make a command \lc{flower} that will make a small version ($\sim 50$
+  units tall) of the flower above.  Show your code and your picture.
+\end{problem}
+
+\newpage
+
+
+\begin{problem}
+  What direction is the turtle facing after your flower command is
+  made? Explain how you know with words/pictures.
+\end{problem}
+
+\newpage
+
+\begin{problem}
+  Make a command \lc{patch} that will make a `patch' of three flowers
+  in a row.  Show your code and your picture. 
+\end{problem}
+
+\newpage
+
+\begin{problem}
+  Make a command \lc{field} that will produce a field of color
+  \lc{[80 100 80]} covered in patches of flowers. Show your
+  code and your picture.
+\end{problem}
+
+
+\end{document}
