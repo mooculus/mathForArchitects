@@ -1,0 +1,155 @@
+\documentclass[noauthor,nooutcomes,12pt]{ximera}
+
+\input{../../preamble.tex}
+\input{../../activityPreamble.tex}
+
+
+\title{Curves and headings}
+\author{Bart Snapp}
+
+\begin{document}
+\begin{abstract}
+  We give ways to draw curves and point the turtle.
+\end{abstract}
+\maketitle
+
+\nameblankgen
+
+\begin{multicols*}{2}
+  So far, we've been drawing polygons. We can draw a regular $n$-gon
+  with
+\begin{logo}
+  repeat :n [ fd :s rt 360/:n ]
+\end{logo}
+where the character \lc{:n} represents the number of sides of the
+regular $n$-gon and \lc{:s} represents the side-length of the regular
+polygon. Both \lc{:n} and \lc{:s} are NUMBERS that you should
+FILL-IN. So for example, \lc{repeat 17 [ fd 20 rt 360/17 ]}, draws
+\begin{logoout}
+\begin{tikzpicture}[turtle/distance=.3cm]
+  \draw [thick,black,turtle={home,forward,right=21,fd,right=21,
+      fd,right=21,
+      fd,right=21,
+      fd,right=21,
+      fd,right=21,
+      fd,right=21,
+      fd,right=21,
+      fd,right=21,
+      fd,right=21,
+      fd,right=21,
+      fd,right=21,
+      fd,right=21,
+      fd,right=21,
+      fd,right=21,
+      fd,right=21,
+      fd,right=21,
+      fd,right=21,
+  }];
+  \node at (0,0) {\turtle};
+\end{tikzpicture}
+\end{logoout}
+So one way to draw a ``circle'' is by making a regular $n$-gon with
+many sides. So something like \lc{repeat 360 [fd :s rt 1]} for some
+number \lc{:s}. As a gesture of friendship, I offer you:
+\begin{logo}
+to circle
+pu rt 90 bk 100 lt 90 pd
+repeat 360 [fd 1.74538 rt 1]
+pu rt 90 fd 100 lt 90 pd
+end
+\end{logo}
+This program draws a ``circle'' of radius $100$ around the point you
+start at. The value $1.74538$ was found by trial-and-error.
+
+
+Now that we can draw a ``circle,'' we can use \lc{seth \#} to set the
+heading of the turtle to different points on the circle. Basically
+\lc{seth \#} points the turtle at a heading of \lc{\#} degrees when
+measured from the TOP OF THE CIRCLE in a CLOCKWISE DIRECTION. This is
+especially useful if you have a shape that needs to be the same
+orientation every time. Check out this starry night. 
+
+\begin{logo}
+to star 
+  filled 7 [
+    seth 90
+    repeat 5 [ fd 50 rt 144 ]
+  ]
+end
+
+ht setcolor [10 10 50] fill setcolor 7 pu
+repeat 10 [ pu
+  rt random 50 + 20 fd random 200 + 100
+  pd star ]
+\end{logo}
+NOTE: The stars are all at the same orientation, all thanks to \lc{seth}.
+\begin{logoout}
+  \includegraphics[width=.3\textwidth]{starryNight.png}
+\end{logoout}
+
+
+
+\section{Commands to know}
+\begin{tabular}{lll}
+  \lc{CMD}   & Description                 \\ \hlinewd{1pt}
+  \lc{seth \#}   & set the heading to \lc{\#}\\
+  \lc{filled \# [ BODY ]} & fill \lc{BODY} with color \lc{\#}
+\end{tabular}
+
+
+\end{multicols*}
+
+\newpage
+
+\begin{problem}
+  Draw and label a picture (by hand or using a computer) showing how
+  \lc{seth \#} points the turtle.
+\end{problem}
+
+\mynewpage
+
+\begin{problem}
+  FIRST:  Explain in words what the \lc{circle} program is doing line-by-line.
+
+
+  SECOND: Based on the \lc{circle} program above, make a new program
+  \lc{circle.200} that will draw a circle of radius $200$ centered at
+  the origin. Don't get freaked out by the \lc{.} in \lc{circle.200},
+  it's just part of the name. Show-off your work with your code and a
+  picture.
+\end{problem}
+
+\mynewpage
+
+
+\begin{problem}
+  The following code produces a simple ``house.''
+\begin{logo}
+filled 3 [ repeat 4 [ rt 90 fd 50 ] ]
+filled 4 [ rt 30 fd 50 rt 120 fd 50 ]
+\end{logo}
+Modify this code so that the house is $\approx 50$ units tall, the
+colors are randomized, and the house can be moved WITHOUT its
+orientation changing. Call this function \lc{house}. Show-off your
+work with your code and a picture.
+\end{problem}
+
+\mynewpage
+
+\begin{problem}
+  Use your command \lc{house} to make a command \lc{village} that will
+  place three small houses on a green circle. Show-off your work with
+  your code and a picture.
+\end{problem}
+
+\mynewpage
+
+\begin{problem}
+  Use your command \lc{village} to make a command \lc{country} that
+  will place $5$ villages on a green background, with the villages
+  connected by roads. Make sure that the roads don't pass through the
+  houses! Show-off your work with your code and a picture.
+\end{problem}
+
+
+\end{document}
