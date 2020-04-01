@@ -23,8 +23,8 @@
 \end{logo}
 where the character \lc{:n} represents the number of sides of the
 regular $n$-gon and \lc{:s} represents the side-length of the regular
-polygon. Both \lc{:n} and \lc{:s} are NUMBERS that you should
-FILL-IN. So for example, \lc{repeat 17 [ fd 20 rt 360/17 ]}, draws
+polygon. Both \lc{:n} and \lc{:s} are \emph{numbers} that you should
+\emph{fill-in}. So for example, \lc{repeat 17 [ fd 20 rt 360/17 ]}, draws
 \begin{logoout}
 \begin{tikzpicture}[turtle/distance=.3cm]
   \draw [thick,black,turtle={home,forward,right=21,fd,right=21,
@@ -65,9 +65,9 @@ start at. The value $1.74538$ was found by trial-and-error.
 Now that we can draw a ``circle,'' we can use \lc{seth \#} to set the
 heading of the turtle to different points on the circle. Basically
 \lc{seth \#} points the turtle at a heading of \lc{\#} degrees when
-measured from the TOP OF THE CIRCLE in a CLOCKWISE DIRECTION. This is
-especially useful if you have a shape that needs to be the same
-orientation every time. Check out this starry night. 
+measured from the \emph{top of the circle} in a \emph{clockwise
+  direction}. This is especially useful if you have a shape that needs
+to be the same orientation every time. Check out this starry night.
 
 \begin{logo}
 to star 
@@ -82,7 +82,7 @@ repeat 10 [ pu
   rt random 50 + 20 fd random 200 + 100
   pd star ]
 \end{logo}
-NOTE: The stars are all at the same orientation, all thanks to \lc{seth}.
+\emph{Note:} The stars are all at the same orientation, all thanks to \lc{seth}.
 \begin{logoout}
   \includegraphics[width=.3\textwidth]{starryNight.png}
 \end{logoout}
@@ -109,10 +109,10 @@ NOTE: The stars are all at the same orientation, all thanks to \lc{seth}.
 \mynewpage
 
 \begin{problem}
-  FIRST:  Explain in words what the \lc{circle} program is doing line-by-line.
+  \emph{First:}  Explain in words what the \lc{circle} program is doing line-by-line.
 
 
-  SECOND: Based on the \lc{circle} program above, make a new program
+  \emph{Second:} Based on the \lc{circle} program above, make a new program
   \lc{circle.200} that will draw a circle of radius $200$ centered at
   the origin. Don't get freaked out by the \lc{.} in \lc{circle.200},
   it's just part of the name. Show-off your work with your code and a
@@ -129,7 +129,7 @@ filled 3 [ repeat 4 [ rt 90 fd 50 ] ]
 filled 4 [ rt 30 fd 50 rt 120 fd 50 ]
 \end{logo}
 Modify this code so that the house is $\approx 50$ units tall, the
-colors are randomized, and the house can be moved WITHOUT its
+colors are randomized, and the house can be moved \emph{without} its
 orientation changing. Call this function \lc{house}. Show-off your
 work with your code and a picture.
 \end{problem}

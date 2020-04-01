@@ -19,16 +19,16 @@
   
 The command \lc{repeat} might seem pretty cool, but it really comes
 alive when you combine it with \lc{repcount}. On the $i$th repetition
-of a \lc{repeat} command The command \lc{repcount} produces the number
+of a \lc{repeat} command, the command \lc{repcount} produces the number
 $i$. We can use the command \lc{print} to witness this:
 \begin{logo}
 repeat 10 [ print repcount ]
 \end{logo}
-This produces a list of numbers. The command \lc{print} is used to
-figure out values in programs while you write them.  Using
+This produces a list of numbers, $1$--$10$. The command \lc{print} is
+used to figure out values in programs while you write them.  Using
 \lc{repcount} we can produce some really cool drawings, especially
-when combined with commands that \lc{\%}, that mean ``take the
-remainder.''
+when combined with the command \lc{\%}, that means ``take the
+remainder,'' like in long division.
 
 \begin{logo}
 ht setcolor 0 fill rt 17
@@ -43,8 +43,8 @@ repeat 45 [
 \end{logoout}
 
 
-Here we use \lc{repeat} and \lc{repcount} to produce a picture of the
-Sun.
+Now we will use \lc{repeat} and \lc{repcount} to produce a picture of
+the Sun.
 \begin{logo}
 ht setcolor [ 10 10 30 ] fill
 to rays
@@ -86,8 +86,9 @@ If you remember to define \lc{circle}, it makes:
 \mynewpage
 
 \begin{problem}
-  Use \lc{repcount} to help you make a command that will make
-  rainbows.  Show-off your work with your code and a picture.
+  Sometimes you want \textit{nested} repcounts.  Use \lc{repcount} to
+  help you make a command that will make rainbows.  Show-off your work
+  with your code and a picture.
 \end{problem}
 
 \mynewpage
