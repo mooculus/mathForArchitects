@@ -1,0 +1,84 @@
+%% page layout
+\usepackage[in]{fullpage}
+\raggedright
+
+
+%% fonts
+\usepackage{euler}
+
+\usepackage{FiraMono}
+\renewcommand\familydefault{\ttdefault} 
+\usepackage{mathastext}
+\usepackage[htt]{hyphenat}
+
+\usepackage[T1]{fontenc}
+\usepackage[scaled=1]{FiraSans}
+
+\usepackage{wedn}
+\usepackage[T1]{fontenc}
+
+\usepackage{scratch3}
+
+
+
+\makeatletter
+\newcommand\journalstyle{%
+  \def\activitystyle{activity-chapter}
+  \def\maketitle{%
+    \addtocounter{titlenumber}{1}%
+                {\flushleft\small\sffamily\bfseries\@pretitle\par\vspace{-1.5em}}%
+                {\flushleft\LARGE\sffamily\bfseries\thetitlenumber\hspace{1em}\@title \par }%
+                {\vskip .6em\noindent\textit\theabstract\setcounter{question}{0}\setcounter{sectiontitlenumber}{0}}%
+                    \par\vspace{2em}
+                    \phantomsection\addcontentsline{toc}{section}{\thetitlenumber\hspace{1em}\textbf{\@title}}%
+                     }}
+\makeatother
+
+
+
+\let\question\relax
+\let\endquestion\relax
+
+\newtheoremstyle{QuestionStyle}{\topsep}{\topsep}%%% space between body and thm
+		{}                      %%% Thm body font
+		{}                              %%% Indent amount (empty = no indent)
+		{\bfseries}            %%% Thm head font
+		{)}                              %%% Punctuation after thm head
+		{ }                           %%% Space after thm head
+		{\thmnumber{#2}\thmnote{ \bfseries(#3)}}%%% Thm head spec
+\theoremstyle{QuestionStyle}
+\newtheorem{question}{}
+
+\let\freeResponse\relax
+\let\endfreeResponse\relax
+
+\newtheoremstyle{ResponseStyle}{\topsep}{\topsep}%%% space between body and thm
+		{\wedn\bfseries}                      %%% Thm body font
+		{}                              %%% Indent amount (empty = no indent)
+		{\wedn\bfseries}            %%% Thm head font
+		{}                              %%% Punctuation after thm head
+		{3ex}                           %%% Space after thm head
+		{\underline{\underline{\thmname{#1}}}}%%% Thm head spec
+\theoremstyle{ResponseStyle}
+
+\ifhandout
+\NewEnviron{freeResponse}{}
+\else
+\newtheorem{freeResponse}{Response:}
+\fi
+
+\newwrite\outcomefile
+  \immediate\openout\outcomefile=\jobname.oc
+\renewcommand{\outcome}[1]{\edef\theoutcomes{\theoutcomes #1~}%
+\immediate\write\outcomefile{\unexpanded{\outcome}{#1}}}
+
+%% \newcommand{\outcomelist}{\begin{itemize}\theoutcomes\end{itemize}}
+
+
+\newcommand{\snap}{{\bfseries\itshape\textsf{Snap!}}}
+\newcommand{\flavor}{\link[\snap]{https://snap.berkeley.edu/}}
+
+
+\usepackage{tkz-euclide}
+\tikzstyle geometryDiagrams=[rounded corners=.5pt,ultra thick,color=black]
+\colorlet{penColor}{black} % Color of a curve in a plot
