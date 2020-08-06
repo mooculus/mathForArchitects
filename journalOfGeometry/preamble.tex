@@ -1,6 +1,6 @@
 %% page layout
 \usepackage[in]{fullpage}
-\raggedright
+%\raggedright
 
 
 %% fonts
@@ -17,10 +17,16 @@
 \usepackage{wedn}
 \usepackage[T1]{fontenc}
 
+%% wrap text around scripts
+\usepackage{wrapfig}
+
+\tikzset{>=stealth}
+%% snap! scripts
 \usepackage{scratch3}
 
+\usepackage{adjustbox}
 
-
+%% journal style
 \makeatletter
 \newcommand\journalstyle{%
   \def\activitystyle{activity-chapter}
@@ -36,6 +42,7 @@
 
 
 
+%% thm like environments
 \let\question\relax
 \let\endquestion\relax
 
@@ -49,23 +56,34 @@
 \theoremstyle{QuestionStyle}
 \newtheorem{question}{}
 
+
+
 \let\freeResponse\relax
 \let\endfreeResponse\relax
 
-\newtheoremstyle{ResponseStyle}{\topsep}{\topsep}%%% space between body and thm
-		{\wedn\bfseries}                      %%% Thm body font
-		{}                              %%% Indent amount (empty = no indent)
-		{\wedn\bfseries}            %%% Thm head font
-		{}                              %%% Punctuation after thm head
-		{3ex}                           %%% Space after thm head
-		{\underline{\underline{\thmname{#1}}}}%%% Thm head spec
-\theoremstyle{ResponseStyle}
+%% \newtheoremstyle{ResponseStyle}{\topsep}{\topsep}%%% space between body and thm
+%% 		{\wedn\bfseries}                      %%% Thm body font
+%% 		{}                              %%% Indent amount (empty = no indent)
+%% 		{\wedn\bfseries}            %%% Thm head font
+%% 		{}                              %%% Punctuation after thm head
+%% 		{3ex}                           %%% Space after thm head
+%% 		{\underline{\underline{\thmname{#1}}}}%%% Thm head spec
+%% \theoremstyle{ResponseStyle}
+
+\usepackage[tikz]{mdframed}
+\mdfdefinestyle{ResponseStyle}{leftmargin=1cm,linecolor=black,roundcorner=5pt,frametitlefont=\wedn\bfseries,frametitle={\underline{\underline{Response}}:}, font=\wedn\bfseries,}%\begin{mdframed}[style=mystyle]foo\end{mdframed}
+
 
 \ifhandout
 \NewEnviron{freeResponse}{}
 \else
-\newtheorem{freeResponse}{Response:}
+%\newtheorem{freeResponse}{Response:}
+\newenvironment{freeResponse}{\begin{mdframed}[style=ResponseStyle]}{\end{mdframed}}
 \fi
+
+
+
+%% attempting to automate outcomes.
 
 \newwrite\outcomefile
   \immediate\openout\outcomefile=\jobname.oc
@@ -74,6 +92,9 @@
 
 %% \newcommand{\outcomelist}{\begin{itemize}\theoutcomes\end{itemize}}
 
+
+
+%% my commands
 
 \newcommand{\snap}{{\bfseries\itshape\textsf{Snap!}}}
 \newcommand{\flavor}{\link[\snap]{https://snap.berkeley.edu/}}

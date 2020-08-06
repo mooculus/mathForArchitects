@@ -1,0 +1,60 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\title{Drawing triangles}
+\author{Bart Snapp}
+
+\begin{document}
+\begin{abstract}
+  We will use \snap\ to draw triangles.
+\end{abstract}
+\maketitle
+
+\begin{question}
+  Check out this \snap\ script:.
+  \begin{scratch}[num blocks,scale=.8]
+    \blockpen{clear}
+    \blockpen{pen up}
+    \blockmove{go to x: \ovalnum{0} y: \ovalnum{0}}
+    \blockmove{point in direction \ovalnum{0}}
+  \end{scratch}
+\end{question}
+
+
+\begin{question}
+  Here is a \snap\ script:
+
+      \begin{scratch}[num blocks,scale=.8]
+      \blockinit{when \greenflag clicked}
+      \blockpen{pen down}
+      \blockmove{move \ovalnum{50} steps}
+      \blockmove{turn \turnright{} \ovalnum{15} degrees}
+      \blockmove{move \ovalnum{60} steps}
+      \blockmove{turn \turnright{} \ovalnum{20} degrees}
+      \blockmove{move \ovalnum{70} steps}
+    \end{scratch}
+  
+\begin{freeResponse}
+  I think this is best done, this way for consider
+  \[
+  \int_2^3 x^2-e^x \, d x
+  \]
+\end{freeResponse}
+\end{question}
+
+
+\begin{question}
+ Replace the numbers in the script above so that the script will draw:
+ \begin{itemize}
+ \item An isosceles right triangle.
+ \item A triangle with side lengths: $30$, $40$, $50$.
+ \item A $30^\circ$-$60^\circ$-$90^\circ$ triangle.
+ \end{itemize}
+
+ In each case, give a screenshot of your SCRIPT and of the OUTPUT as provided from \snap.
+\end{question}
+
+
+
+\end{document}
