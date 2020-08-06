@@ -1,6 +1,7 @@
 %% page layout
-\usepackage[in]{fullpage}
-%\raggedright
+\usepackage[in,headings]{fullpage}
+\raggedright
+\setlength\headheight{13.6pt}
 
 
 %% fonts
@@ -71,7 +72,8 @@
 %% \theoremstyle{ResponseStyle}
 
 \usepackage[tikz]{mdframed}
-\mdfdefinestyle{ResponseStyle}{leftmargin=1cm,linecolor=black,roundcorner=5pt,frametitlefont=\wedn\bfseries,frametitle={\underline{\underline{Response}}:}, font=\wedn\bfseries,}%\begin{mdframed}[style=mystyle]foo\end{mdframed}
+\mdfdefinestyle{ResponseStyle}{leftmargin=1cm,linecolor=black,roundcorner=5pt,frametitlefont=\wedn\bfseries,%frametitle={\underline{\underline{Response}}:}
+, font=\wedn\bfseries,}%\begin{mdframed}[style=mystyle]foo\end{mdframed}
 
 
 \ifhandout
