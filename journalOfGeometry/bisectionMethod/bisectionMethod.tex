@@ -2,6 +2,12 @@
 
 \input{../preamble.tex}
 
+\outcome{Understand the basic idea of the bisection method.}
+\outcome{Apply the bisection method to approximate the solution of an equation.}
+\outcome{Apply the bisection method to solve a problem where no equation is given.}
+\outcome{Describe the bisection method as an algorithm.}
+
+
 \title{The bisection method}
 \author{Bart Snapp}
 
@@ -11,16 +17,39 @@
 \end{abstract}
 \maketitle
 
-\begin{question}
-  Use the INTERNET or a LIBRARY to look up the \textit{bisection
-    method}.
+\begin{listOutcomes}
+\item{Understand the basic idea of the bisection method.}
+\item{Apply the bisection method to approximate the solution of an equation.}
+\item{Apply the bisection method to solve a problem where no equation is given.}
+\item{Describe the bisection method as an algorithm.}
+\end{listOutcomes}
+\mynewpage
 
-  EXPLAIN the bisection method as you wuold like to have it
-  explained to you.  Use words, pictures, and so on, as needed/helpful
-  in your explanation.
+\begin{question} This question is about the bisection method for approximating solutions to equations.
+  \begin{enumerate}
+    \item Use the INTERNET to look up the \textbf{bisection
+      method}. EXPLAIN the bisection method as you would like to have
+      it explained to you.  Use words, pictures, and so on, as
+      needed/helpful in your explanation.
+  \item USE the bisection method to find a solution (rounded to two
+    decimal places) to
+  \[
+  x^5-x-1=0
+  \]
+  on the interval $0\le x\le 2$. Display your work with a table:
+  \[
+  \begin{array}{|c|c|c|c|}\hline
+    \text{Attempt} & \text{x} & \text{Greater or less than $0$?} \\ \hline\hline
+    1 & 0 & Less \\ \hline
+    2 & 2 & Greater  \\ \hline
+    3 & ?? & ??  \\ \hline
+    \vdots & \vdots & \vdots \\ 
+  \end{array}
+  \]
+  \end{enumerate}
   \begin{freeResponse}
-    The \underline{bisection method} helps you find where a curve
-    crosses the $x$-axis. The idea is this, if you have a curve and
+    (a) The \underline{bisection method} helps you find where a curve
+    crosses the $x$-axis. The idea is this: If you have a curve and
     you know two $x$-coordinates,
     \begin{itemize}
       \item one where the curve is above the
@@ -100,16 +129,41 @@
     \end{center}
 
 
-    Repeat this
-    process of averaging the $x$-values that are on opposides of the
-    $x$-axis. Your $x$-coordinates will get closer and closer to where
-    the curve crosses the axis.
+    Repeat this process of averaging the $x$-values that are on
+    opposite sides of the $x$-axis. Your $x$-coordinates will get closer
+    and closer to where the curve crosses the axis.
+
+
+
+    (b) To find an approximate  solution to $x^5-x-1=0$, with the solution rounded to
+    two decimal places, write:
+    \[
+    \begin{array}{|c|c|c|c|}\hline
+      \text{Attempt} & \text{x} & \text{Greater or less than $0$?} \\ \hline\hline
+      1 & 0 & \text{Less} \\ \hline
+      2 & 2 & \text{Greater}  \\ \hline
+      3 & 1 & \text{Less}  \\ \hline
+      4 & 1.5 & \text{Greater}  \\ \hline
+      5 & 1.25 & \text{Greater}  \\ \hline
+      6 & 1.125 & \text{Less}  \\ \hline
+      7 & 1.1875 & \text{Greater}  \\ \hline
+      8 & 1.15625 & \text{Less}  \\ \hline
+      9 & 1.17188 & \text{Greater} \\ \hline
+      10 & 1.16406 & \text{Less} \\ \hline
+      11 & 1.16797 & \text{Greater} \\ \hline
+  \end{array}
+  \]
+  So we see we have a root at around $x=1.16$, note
+  \[
+  1.16^5 - 1.16 -1 \approx  -0.06 \approx 0.
+  \]
   \end{freeResponse}
 \end{question}
-
+\mynewpage
 
 \begin{question}
-  Here is a \snap\ script:
+  Here is a \snap\ script that is supposed to draw a triangle, but the
+  last side length is missing:
   
   \adjustbox{valign=t}{
     \begin{tabular}{lp{.7\textwidth}}
@@ -124,7 +178,7 @@
         \blockmove{move \ovalnum{??} steps}
       \end{scratch}
       & Clearly EXPLAIN how you can use the bisection method to find
-      the final length and thus complete the \snap\ script for the
+      the FINAL LENGTH  and thus complete the \snap\ script for the
       triangle.
 
       
@@ -139,8 +193,11 @@
           \]
   \end{tabular}}
   \begin{freeResponse}
-    
-    I'll make a table illustrating this
+    So, we'll start with a guess for the side length of the triangle,
+    say $20$. It's too short. Now, I'll try to get a side length
+    long. I picked $50$, and it was too long. Now average them
+    together to get $35$. Wow! That's right.  Here is my table
+    illustrating this.
     \[
   \begin{array}{|c|c|c|c|}\hline
     \text{Attempt} & \text{Length} & \text{Too short or Too long?} \\ \hline\hline
@@ -151,26 +208,30 @@
   \]
 \end{freeResponse}
 \end{question}
-
+\mynewpage
 
 \begin{question}
-  Let's automate this process with the following \snap\ script:
+  The bisection method is an example of a basic \textit{algorithm.}
+  Give step-by-step instructions for using bisection method to find
+  the final side length of a triangle, assuming you know two sides and
+  all three angles.
+  \begin{freeResponse}
+    Given two sides of a triangle and all of the angles, we can find
+    the third side using the bisection method.  Use words, pictures,
+    and so on, as needed/helpful in your explanation.
 
-  
-  \adjustbox{valign=t}{
-    \begin{tabular}{lp{.7\textwidth}}
-  \begin{scratch}[num blocks,scale=.8]
-    \blockinit{when \greenflag clicked}
-    \blockpen{pen down}
-    \blockmove{move \ovalnum{80} steps}
-    \blockmove{turn \turnright{} \ovalnum{90} degrees}
-    \blockmove{move \ovalnum{150} steps}
-    \blockmove{turn \turnright{} \ovalnum{??} degrees}
-    \blockmove{move \ovalnum{70} steps}
-  \end{scratch}
-  & Clearly EXPLAIN what each line of the script is doing.  Use words,
-  pictures, and so on, as needed/helpful in your explanation.
-    \end{tabular}}
+    \begin{enumerate}
+      \item Find the sum of the two known sides. This is the maximum
+        length the third side could be, call it $M$.
+      \item Let $0$ be the minimum length the third side could be. Call this number $m$.
+      \item\label{I:stop} If $M=m$ or $|M-m|< small-number$ we are done, so STOP.
+      \item Now, it must be that $M>m$. Average $M$ and $m$ and call it $a$.
+      \item Is $a$ the correct length? If so, then we are done, so STOP.
+      \item If $a$ is two long, change $M$ to make it equal to $a$.
+      \item If $a$ is two short, change $m$ to make it equal to $a$.
+      \item Goto step\ref{I:stop}.
+    \end{enumerate}
+  \end{freeResponse}
 \end{question}
 
 

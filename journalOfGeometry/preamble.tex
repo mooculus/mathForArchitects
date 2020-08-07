@@ -1,5 +1,5 @@
 %% page layout
-\usepackage[in,headings]{fullpage}
+\usepackage[cm,headings]{fullpage}
 \raggedright
 \setlength\headheight{13.6pt}
 
@@ -73,7 +73,7 @@
 
 \usepackage[tikz]{mdframed}
 \mdfdefinestyle{ResponseStyle}{leftmargin=1cm,linecolor=black,roundcorner=5pt,frametitlefont=\wedn\bfseries,%frametitle={\underline{\underline{Response}}:}
-, font=\wedn\bfseries,}%\begin{mdframed}[style=mystyle]foo\end{mdframed}
+, font=\wedn\bfseries\upshape,}%\begin{mdframed}[style=mystyle]foo\end{mdframed}
 
 
 \ifhandout
@@ -94,6 +94,14 @@
 
 %% \newcommand{\outcomelist}{\begin{itemize}\theoutcomes\end{itemize}}
 
+\NewEnviron{listOutcomes}{
+After answering the following questions, students should be able to:
+\begin{itemize}
+\BODY
+\end{itemize}
+}
+
+
 
 
 %% my commands
@@ -105,3 +113,7 @@
 \usepackage{tkz-euclide}
 \tikzstyle geometryDiagrams=[rounded corners=.5pt,ultra thick,color=black]
 \colorlet{penColor}{black} % Color of a curve in a plot
+
+
+
+\ifhandout\newcommand{\mynewpage}{\newpage}\else\newcommand{\mynewpage}{}\fi

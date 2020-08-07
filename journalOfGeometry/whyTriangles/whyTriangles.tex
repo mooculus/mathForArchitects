@@ -3,6 +3,7 @@
 \input{../preamble.tex}
 
 \outcome{State a physical property of triangles.}
+\outcome{Understand what it means for triangles to be congruent.}
 \outcome{State the triangle congruence theorems.}
 \outcome{Identify situations where congruence theorems apply.}
 \outcome{Use a congruence theorem to explain why a triangle is a rigid shape.}
@@ -18,8 +19,15 @@
 \maketitle
 
 
-\theoutcomes
+\begin{listOutcomes}
+\item{State a physical property of triangles.}
+\item{Understand what it means for triangles to be congruent.}
+\item{State the triangle congruence theorems.}
+\item{Identify situations where congruence theorems apply.}
+\item{Use a congruence theorem to explain why a triangle is a rigid shape.}
+\end{listOutcomes}
 
+\mynewpage
 
 
 \begin{question}
@@ -35,30 +43,34 @@
     or wiggle in the joints.
   \end{freeResponse}
 \end{question}
+\mynewpage
 
-\begin{question}
-  Use the INTERNET or a LIBRARY to look up the \textit{triangle congruence
-  theorems: SSS, SAS, ASA, AAS.}
-
-
-  EXPLAIN the statements of these theorems as you would like to have
-  them explained to you. Use words, pictures, and so on, as
-  needed/helpful in your explanation.
-
-  Finally, give an example of a trio of either S's or A's that is NOT
-  a congruence theorem, and EXPLAIN using words, pictures, and so on,
-  WHY this is not a congruence theorem.
-
+\begin{question} This question is about congruent triangles.
+  \begin{enumerate}
+  \item Use the INTERNET to look up what it means for triangles to be
+  \textbf{congruent}.
+  \item Use the INTERNET to look up the \textbf{triangle congruence
+    theorems: SSS, SAS, ASA, AAS.} EXPLAIN the statements of these
+    theorems as you would like to have them explained to you. Use
+    words, pictures, and so on, as needed/helpful in your explanation.
+  \item Finally, EXPLAIN using words, pictures, and so on, WHY neither AAA
+  nor SSA are congruence theorems.
+  \end{enumerate}
 
   \begin{freeResponse}
-    So let's list and explain the triangle congruence theorems:
+    (a) Triangles are \underline{congruent} if we can pick one up, and
+    place it on the other with each of the sides and angles matching.
+
+
+    
+    (b) Let's list and explain the triangle congruence theorems:
     \begin{description}
     \item[\wedn\bfseries\underline{SSS}:] If I know three side lengths
       of a triangle,
       \begin{center}
       \begin{tikzpicture}[geometryDiagrams]
         \coordinate (A) at (0,0);
-        \coordinate (B) at (2,2);
+        \coordinate (B) at (5,2);
         \coordinate (C) at (7,0);
         \tkzDrawSegment (A,B)
         \tkzDrawSegment (A,C)
@@ -67,14 +79,14 @@
         \tkzLabelSegment[below](A,C){$b$}
         \tkzLabelSegment[above right](B,C){$a$}  
 
-        \tkzMarkAngle[size=0.8cm,thin,mark=](C,A,B)
-        \tkzLabelAngle[pos=.6](C,A,B){$?$}
+        \tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
+        \tkzLabelAngle[pos=1.2](C,A,B){$?$}
 
         \tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
         \tkzLabelAngle[pos=.5](A,B,C){$?$}
 
-        \tkzMarkAngle[mark=,size=1.5,thin](B,C,A)
-        \tkzLabelAngle[pos=1.2](B,C,A){$?$}
+        \tkzMarkAngle[mark=,size=.9,thin](B,C,A)
+        \tkzLabelAngle[pos=.6](B,C,A){$?$}
         
       \end{tikzpicture}
       \end{center}
@@ -84,7 +96,7 @@
       \begin{center}
       \begin{tikzpicture}[geometryDiagrams]
         \coordinate (A) at (0,0);
-        \coordinate (B) at (2,2);
+        \coordinate (B) at (5,2);
         \coordinate (C) at (7,0);
         \tkzDrawSegment (A,B)
         \tkzDrawSegment (A,C)
@@ -93,14 +105,14 @@
         \tkzLabelSegment[below](A,C){$b$}
         \tkzLabelSegment[above right](B,C){$?$}  
 
-        \tkzMarkAngle[size=0.8cm,thin,mark=](C,A,B)
-        \tkzLabelAngle[pos=.6](C,A,B){$\alpha$}
+        \tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
+        \tkzLabelAngle[pos=1.2](C,A,B){$\alpha$}
 
         \tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
         \tkzLabelAngle[pos=.5](A,B,C){$?$}
 
-        \tkzMarkAngle[mark=,size=1.5,thin](B,C,A)
-        \tkzLabelAngle[pos=1.2](B,C,A){$?$}
+        \tkzMarkAngle[mark=,size=.9,thin](B,C,A)
+        \tkzLabelAngle[pos=.6](B,C,A){$?$}
         
       \end{tikzpicture}
       \end{center}
@@ -111,7 +123,7 @@
       \begin{center}
         \begin{tikzpicture}[geometryDiagrams]
         \coordinate (A) at (0,0);
-        \coordinate (B) at (2,2);
+        \coordinate (B) at (5,2);
         \coordinate (C) at (7,0);
         \tkzDrawSegment (A,B)
         \tkzDrawSegment (A,C)
@@ -120,14 +132,14 @@
         \tkzLabelSegment[below](A,C){$b$}
         \tkzLabelSegment[above right](B,C){$?$}  
 
-        \tkzMarkAngle[size=0.8cm,thin,mark=](C,A,B)
-        \tkzLabelAngle[pos=.6](C,A,B){$\alpha$}
+        \tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
+        \tkzLabelAngle[pos=1.2](C,A,B){$\alpha$}
 
         \tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
         \tkzLabelAngle[pos=.5](A,B,C){$?$}
 
-        \tkzMarkAngle[mark=,size=1.5,thin](B,C,A)
-        \tkzLabelAngle[pos=1.2](B,C,A){$\gamma$}
+        \tkzMarkAngle[mark=,size=.9,thin](B,C,A)
+        \tkzLabelAngle[pos=.6](B,C,A){$\gamma$}
         
       \end{tikzpicture}
       \end{center}
@@ -138,7 +150,7 @@
       \begin{center}
         \begin{tikzpicture}[geometryDiagrams]
         \coordinate (A) at (0,0);
-        \coordinate (B) at (2,2);
+        \coordinate (B) at (5,2);
         \coordinate (C) at (7,0);
         \tkzDrawSegment (A,B)
         \tkzDrawSegment (A,C)
@@ -147,39 +159,125 @@
         \tkzLabelSegment[below](A,C){$?$}
         \tkzLabelSegment[above right](B,C){$a$}  
 
-        \tkzMarkAngle[size=0.8cm,thin,mark=](C,A,B)
-        \tkzLabelAngle[pos=.6](C,A,B){$\alpha$}
+        \tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
+        \tkzLabelAngle[pos=1.2](C,A,B){$\alpha$}
 
         \tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
         \tkzLabelAngle[pos=.5](A,B,C){$?$}
 
-        \tkzMarkAngle[mark=,size=1.5,thin](B,C,A)
-        \tkzLabelAngle[pos=1.2](B,C,A){$\gamma$}
+        \tkzMarkAngle[mark=,size=.9,thin](B,C,A)
+        \tkzLabelAngle[pos=.6](B,C,A){$\gamma$}
         
       \end{tikzpicture}
-      \end{center} the I can find the other two sides, and the third angle.
+      \end{center} then I can find the other two sides, and the third angle.
     \end{description}
 
 
 
-    Finally, I claim that there is no SSA congruence theorem. Behold:
+    (c) AAA is not a congruence theorem. Behold:
+\begin{center}
+      \begin{tikzpicture}[geometryDiagrams]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (4,2);
+        \coordinate (C) at (5,0);
+        \tkzDrawSegment (A,B)
+        \tkzDrawSegment (A,C)
+        \tkzDrawSegment (C,B)
+        \tkzLabelSegment[above left](A,B){$c$}
+        \tkzLabelSegment[below](A,C){$b$}
+        \tkzLabelSegment[above right](B,C){$a$}  
 
+        \tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
+        \tkzLabelAngle[pos=1.2](C,A,B){$\alpha$}
+
+        \tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
+        \tkzLabelAngle[pos=.5](A,B,C){$\beta$}
+
+        \tkzMarkAngle[mark=,size=.9,thin](B,C,A)
+        \tkzLabelAngle[pos=.6](B,C,A){$\gamma$}
+
+
+        \coordinate (A') at (6,0);
+        \coordinate (B') at (8,1);
+        \coordinate (C') at (8.5,0);
+        \tkzDrawSegment (A',B')
+        \tkzDrawSegment (A',C')
+        \tkzDrawSegment (C',B')
+        \tkzLabelSegment[above left](A',B'){$c/2$}
+        \tkzLabelSegment[below](A',C'){$b/2$}
+        \tkzLabelSegment[right](B',C'){$a/2$}  
+
+        \tkzMarkAngle[size=.8cm,thin,mark=](C',A',B')
+        \tkzLabelAngle[pos=.6](C',A',B'){\small$\alpha$}
+
+        \tkzMarkAngle[size=0.5cm,thin,mark=](A',B',C')
+        \tkzLabelAngle[pos=.3](A',B',C'){\small$\beta$}
+
+        \tkzMarkAngle[mark=,size=.5,thin](B',C',A')
+        \tkzLabelAngle[pos=.3](B',C',A'){\small$\gamma$}
+      \end{tikzpicture}
+\end{center}
+Two noncongruent triangles with the same angles.
+
+
+Also SSA is not a conrguence theorem.  Behold:
     \begin{center}
-      GIVE AN EXAMPLE!
+      \begin{tikzpicture}[geometryDiagrams]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (4,2);
+        \coordinate (C) at (5,0);
+        \tkzDrawSegment (A,B)
+        \tkzDrawSegment (A,C)
+        \tkzDrawSegment (C,B)
+        \tkzLabelSegment[above left](A,B){$c$}
+        \tkzLabelSegment[below](A,C){$?$}
+        \tkzLabelSegment[above right](B,C){$a$}  
+
+        \tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
+        \tkzLabelAngle[pos=1.2](C,A,B){$\alpha$}
+
+        \tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
+        \tkzLabelAngle[pos=.5](A,B,C){$?$}
+
+        \tkzMarkAngle[mark=,size=.9,thin](B,C,A)
+        \tkzLabelAngle[pos=.6](B,C,A){$?$}
+
+
+        \coordinate (A') at (6,0);
+        \coordinate (B') at (10,2);
+        \coordinate (C') at (9,0);
+        \tkzDrawSegment (A',B')
+        \tkzDrawSegment (A',C')
+        \tkzDrawSegment (C',B')
+        \tkzLabelSegment[above left](A',B'){$c$}
+        \tkzLabelSegment[below](A',C'){$?$}
+        \tkzLabelSegment[right](B',C'){$a$}  
+
+        \tkzMarkAngle[size=1.5cm,thin,mark=](C',A',B')
+        \tkzLabelAngle[pos=1.2](C',A',B'){$\alpha$}
+
+        \tkzMarkAngle[size=0.9cm,thin,mark=](A',B',C')
+        \tkzLabelAngle[pos=.6](A',B',C'){$?$}
+
+        \tkzMarkAngle[mark=,size=.65,thin](B',C',A')
+        \tkzLabelAngle[pos=.35](B',C',A'){$?$}
+      \end{tikzpicture}
     \end{center}
-    
+    Two different triangles with the same side, side, and angle. The
+    drawings are precisely made, you can measure the features
+    yourself.
   \end{freeResponse}
 \end{question}
-
+\mynewpage
 
 \begin{question}
   Use one of the congruence theorems to explain WHY the ``triangle is
-  the strongest shape.''  In particular, explain why a
+  the 
   quadrilateral does not make a ``strong shape.''
   \begin{freeResponse}
     We say a triangle is a strong shape because SSS
 
-    Quadrilateral would be floopy.
+    Quadrilateral would be floppy.
   \end{freeResponse}
 \end{question}
 
