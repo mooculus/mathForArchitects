@@ -1,6 +1,7 @@
 \graphicspath{  
 {./}
-{staircases/}
+{./plotter/}
+{./staircases/}
 }
 
 
@@ -15,14 +16,15 @@
 
 \usepackage{FiraMono}
 \renewcommand\familydefault{\ttdefault} 
-\usepackage{mathastext}
+\usepackage[defaultmathsizes]{mathastext}
 \usepackage[htt]{hyphenat}
 
 \usepackage[T1]{fontenc}
 \usepackage[scaled=1]{FiraSans}
 
-\usepackage{wedn}
-\usepackage[T1]{fontenc}
+%\usepackage{wedn}
+\usepackage{pbsi}
+
 
 %% wrap text around scripts
 \usepackage{wrapfig}
@@ -80,8 +82,8 @@
 %% \theoremstyle{ResponseStyle}
 
 \usepackage[tikz]{mdframed}
-\mdfdefinestyle{ResponseStyle}{leftmargin=1cm,linecolor=black,roundcorner=5pt,frametitlefont=\wedn\bfseries,%frametitle={\underline{\underline{Response}}:}
-, font=\wedn\bfseries\upshape,}%\begin{mdframed}[style=mystyle]foo\end{mdframed}
+\mdfdefinestyle{ResponseStyle}{leftmargin=1cm,linecolor=black,roundcorner=5pt,
+, font=\bsifamily,}%font=\wedn\bfseries\upshape,}
 
 
 \ifhandout
