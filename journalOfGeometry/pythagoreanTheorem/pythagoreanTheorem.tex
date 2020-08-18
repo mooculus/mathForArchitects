@@ -1,0 +1,283 @@
+\documentclass[noauthor,nooutcomes,12pt]{ximera}
+
+\input{../preamble.tex}
+
+\title{The Pythagorean theorem}
+\author{Bart Snapp}
+
+\begin{document}
+\begin{abstract}
+  We think about the most famous theorem of all.
+\end{abstract}
+\maketitle
+
+
+\begin{listOutcomes}
+\item{State the Pythagorean theorem.}
+\item{Explain why the Pythagorean theorem is true.}
+\item{Use a congruence theorm to explain why the converse of the
+  Pythagorean theorem is true.}
+\end{listOutcomes}
+\mynewpage
+
+\begin{question}
+  State the \textbf{Pythagorean theorem}. EXPLAIN the result of the theorem as
+  you would like to have it explained to you.  Use words, pictures,
+  and so on, as needed/helpful in your explanation.
+  \begin{freeResponse}
+    The \underline{Pythagorean theorem} says that given a right
+    triangle,
+    \begin{center}
+      \begin{tikzpicture}[geometryDiagrams]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (0,3);
+        \coordinate (C) at (7,0);
+        \tkzDrawSegment (A,B)
+        \tkzDrawSegment (A,C)
+        \tkzDrawSegment (C,B)
+        \tkzLabelSegment[left](A,B){$a$}
+        \tkzLabelSegment[below](A,C){$b$}
+        \tkzLabelSegment[above right](B,C){$c$}  
+
+        \tkzMarkRightAngle[thin](C,A,B)
+        %\tkzLabelAngle[pos=1.2](C,A,B){$?$}
+
+        %% \tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
+        %% \tkzLabelAngle[pos=.5](A,B,C){$?$}
+
+        %% \tkzMarkAngle[mark=,size=.9,thin](B,C,A)
+        %% \tkzLabelAngle[pos=.6](B,C,A){$?$}
+        
+      \end{tikzpicture}
+    \end{center}
+    we will always have that
+    \[
+    a^2 + b^2 = c^2.
+    \]
+  \end{freeResponse}
+\end{question}
+\mynewpage
+
+
+\begin{question}
+  Consider the following pictures:
+  \begin{center}
+    \begin{tikzpicture}
+        %% First square
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (0,4);
+        \coordinate (C) at (4,4);
+        \coordinate (D) at (4,0);
+        \coordinate (E) at (1,0);
+        \coordinate (F) at (0,3);
+        \coordinate (G) at (3,4);
+        \coordinate (H) at (4,1);
+
+        \tkzMarkRightAngle(A,B,C)
+        \tkzMarkRightAngle(B,C,D)
+        \tkzMarkRightAngle(C,D,A)
+        \tkzMarkRightAngle(D,A,B)
+
+        \tkzMarkRightAngle(E,F,G)
+        \tkzMarkRightAngle(F,G,H)
+        \tkzMarkRightAngle(G,H,E)
+        \tkzMarkRightAngle(H,E,F)
+        
+        
+        \draw (A)--(B)--(C)--(D)--cycle;
+        \draw (E)--(F)--(G)--(H)--cycle;
+        
+        
+        %% Second square
+        \coordinate (AA) at (6,0);
+        \coordinate (BB) at (6,4);
+        \coordinate (CC) at (10,4);
+        \coordinate (DD) at (10,0);
+        \coordinate (EE) at (7,0);
+        \coordinate (FF) at (6,3);
+        \coordinate (GG) at (7,4);
+        \coordinate (HH) at (10,3);
+        \coordinate (II) at (7,3);
+
+        \tkzMarkRightAngle(II,GG,CC)
+        \tkzMarkRightAngle(II,HH,CC)
+        \tkzMarkRightAngle(FF,II,EE)
+        \tkzMarkRightAngle(FF,AA,EE)
+        
+        \draw (AA)--(BB)--(CC)--(DD)--cycle;
+        \draw (EE)--(FF);
+        \draw (II)--(CC);
+        \draw (EE)--(GG);
+        \draw (FF)--(HH);
+       
+      \end{tikzpicture}
+  \end{center}
+  EXPLAIN why the Pythagorean theorem is true.  Use the pictures
+  above, words, perhaps additional pictures, and so on, as
+  needed/helpful in your explanation.
+
+  \begin{freeResponse}
+    Given a right triangle with legs $a$ and $b$, and hypotenuse $c$,
+    we can make the following squares each with side length $(a+b)$:
+    \begin{center}
+      \begin{tikzpicture}
+        %% First square
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (0,4);
+        \coordinate (C) at (4,4);
+        \coordinate (D) at (4,0);
+        \coordinate (E) at (1,0);
+        \coordinate (F) at (0,3);
+        \coordinate (G) at (3,4);
+        \coordinate (H) at (4,1);
+
+        \tkzMarkRightAngle(A,B,C)
+        \tkzMarkRightAngle(B,C,D)
+        \tkzMarkRightAngle(C,D,A)
+        \tkzMarkRightAngle(D,A,B)
+
+        \tkzMarkRightAngle(E,F,G)
+        \tkzMarkRightAngle(F,G,H)
+        \tkzMarkRightAngle(G,H,E)
+        \tkzMarkRightAngle(H,E,F)
+        
+        
+        \draw (A)--(B)--(C)--(D)--cycle;
+        \draw (E)--(F)--(G)--(H)--cycle;
+        
+        \node[right] at (.5,1.5) {$c$};
+        \node[above] at (2.5,.5) {$c$};
+        \node[left] at (3.5,2.5) {$c$};
+        \node[below] at (1.5,3.5) {$c$};
+
+        \node[left] at (0,1.5) {$b$};
+        \node[below] at (2.5,0) {$b$};
+        \node[right] at (4,2.5) {$b$};
+        \node[above] at (1.5,4) {$b$};
+
+        \node[left] at (0,3.5) {$a$};
+        \node[right] at (4,.5) {$a$};
+        \node[below] at (.5,0) {$a$};
+        \node[above] at (3.5,4) {$a$};
+
+        %% Second square
+        \coordinate (AA) at (6,0);
+        \coordinate (BB) at (6,4);
+        \coordinate (CC) at (10,4);
+        \coordinate (DD) at (10,0);
+        \coordinate (EE) at (7,0);
+        \coordinate (FF) at (6,3);
+        \coordinate (GG) at (7,4);
+        \coordinate (HH) at (10,3);
+        \coordinate (II) at (7,3);
+
+        \tkzMarkRightAngle(II,GG,CC)
+        \tkzMarkRightAngle(II,HH,CC)
+        \tkzMarkRightAngle(FF,II,EE)
+        \tkzMarkRightAngle(FF,AA,EE)
+        
+        \draw (AA)--(BB)--(CC)--(DD)--cycle;
+        \draw (EE)--(FF);
+        \draw (II)--(CC);
+        \draw (EE)--(GG);
+        \draw (FF)--(HH);
+        
+        \node[below] at (6.5,3) {$a$};
+        \node[right] at (7,3.5) {$a$};
+        \node[left] at (6,3.5) {$a$};
+        \node[above] at (6.5,4) {$a$};
+        \node[below] at (6.5,0) {$a$};
+        \node[right] at (10,3.5) {$a$};
+        
+        \node[below] at (8.5,3) {$b$};
+        \node[left] at (10,1.5) {$b$};
+        \node[right] at (7,1.5) {$b$};
+        \node[above] at (8.5,0) {$b$};
+
+        \node[left] at (6,1.5) {$b$};
+        \node[above] at (8.5,4) {$b$};
+      \end{tikzpicture}
+    \end{center}
+    Since both squares above have side length $(a+b)$, both large
+    squares have the same area. Moreover, if we remove the triangles:
+    \begin{center}
+      \begin{tikzpicture}
+        %% First square
+        \coordinate (E) at (1,0);
+        \coordinate (F) at (0,3);
+        \coordinate (G) at (3,4);
+        \coordinate (H) at (4,1);
+
+        \draw (E)--(F)--(G)--(H)--cycle;
+        
+        \node[right] at (.5,1.5) {$c$};
+        \node[above] at (2.5,.5) {$c$};
+        \node[left] at (3.5,2.5) {$c$};
+        \node[below] at (1.5,3.5) {$c$};
+
+        \tkzMarkRightAngle(E,F,G)
+        \tkzMarkRightAngle(F,G,H)
+        \tkzMarkRightAngle(G,H,E)
+        \tkzMarkRightAngle(H,E,F)
+        
+        %% Second square
+        \coordinate (BB) at (6,4);
+        \coordinate (DD) at (10,0);
+        \coordinate (EE) at (7,0);
+        \coordinate (FF) at (6,3);
+        \coordinate (GG) at (7,4);
+        \coordinate (HH) at (10,3);
+        \coordinate (II) at (7,3);
+        
+        \tkzMarkRightAngle(AA,BB,CC)
+        \tkzMarkRightAngle(CC,DD,AA)
+        \tkzMarkRightAngle(BB,FF,II)
+        \tkzMarkRightAngle(BB,GG,II)
+        \tkzMarkRightAngle(FF,II,GG)
+        \tkzMarkRightAngle(EE,II,HH)
+        \tkzMarkRightAngle(II,HH,DD)
+        \tkzMarkRightAngle(II,EE,DD)
+
+        
+        \draw (EE)--(GG)--(BB)--(FF)--(HH)--(DD)--cycle;
+
+        \node[below] at (6.5,3) {$a$};
+        \node[right] at (7,3.5) {$a$};
+        \node[left] at (6,3.5) {$a$};
+        \node[above] at (6.5,4) {$a$};
+        
+        \node[below] at (8.5,3) {$b$};
+        \node[left] at (10,1.5) {$b$};
+        \node[right] at (7,1.5) {$b$};
+        \node[above] at (8.5,0) {$b$};
+      \end{tikzpicture}
+    \end{center}
+    Both diagrams must still have the same area, since we removed an
+    equal amount from each diagram.  Hence $c^2=a^2+b^2$.
+  \end{freeResponse}
+\end{question}
+\mynewpage
+
+\begin{question}
+  Suppose that I have three numbers $a$, $b$, and $c$ such that:
+  \[
+  a^2 + b^2 = c^2
+  \]
+  Does that mean that there is a cooresponding right triangle?
+  \begin{hint}
+    Think SAS. 
+  \end{hint}
+  \begin{freeResponse}
+    Well as long as all of $a$, $b$, and $c$ are postive numbers there
+    will be such a triangle, by SAS.  One side has length $a$, the
+    other has length $b$, and the angle is the right angle between
+    them. Since there is only one such triangle, and it's a right
+    triangle, the Pythagorean theorem guarentees that the final side
+    must have length $c = \sqrt{a^2+b^2}$.
+  \end{freeResponse}
+  
+\end{question}
+
+
+
+\end{document}

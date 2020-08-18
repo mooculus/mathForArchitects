@@ -1,0 +1,176 @@
+\documentclass[noauthor,nooutcomes,12pt]{ximera}
+
+\input{../preamble.tex}
+
+\title{Staircases}
+\author{Bart Snapp}
+
+\begin{document}
+\begin{abstract}
+  We solve the staircase problem with \snap.
+\end{abstract}
+\maketitle
+
+\begin{listOutcomes}
+\item{Understand the geometric issues with designing a staircase.}
+\item{Interpret solutions for the geometric issues of designing a staircase.}
+\item{Reason through how to solve the geometric issues of designing a staircase.}
+\item{Critique and dismantle reasonable hypotheses in regard to geometry and arithmetic.}
+\end{listOutcomes}
+
+
+
+Most building codes have specific restrictions on how a staircase
+can be designed. We'll say that a staircase with $n$ stairs looks like this
+\begin{center}
+  \begin{tikzpicture}[scale = .3]
+    \draw[thick]
+    (10,0) -- (9,0) -- (9,1) -- (8,1) --
+    ( 8,2) -- (7,2) -- (7,3) -- (6,3) --
+    ( 6,4) -- (5,4) -- (5,5) -- (4,5) --
+    ( 4,6) -- (3,6) -- (3,7) -- (2,7) --
+    ( 2,8) -- (1,8) -- (1,9) -- (0,9) --
+    (0,10) -- (0,0) -- (10,0);
+    \draw [decorate,decoration={brace,amplitude=10pt,mirror},xshift=-4pt,yshift=0pt,]
+    (0,10) -- (0,0) node [black,midway,xshift=-1cm] 
+          {\footnotesize $n=10$};
+    \draw [decorate,decoration={brace,amplitude=10pt},xshift=0pt,yshift=-4pt,]
+    (10,0) -- (0,0) node [black,midway,yshift=-.8cm] 
+          {\footnotesize $n=10$};     
+\end{tikzpicture}
+\end{center}
+in the case where $n=10$. For safety and comfort, the typical
+restrictions on stairs are:
+\begin{itemize}
+\item The stair-step height can be at most $7\frac{3}{4}''$. 
+\item The stair-step depth must be at least $10''$.
+\item From step-to-step, these dimensions cannot change (in real-life there is
+an allowed variance for these dimensions).
+\end{itemize}
+
+So suppose you want to install a staircase in a space that is $15$
+feet wide and you need to connect to a floor $10$ feet above the
+ground. In this case you must have \emph{at least}
+\[
+\frac{10}{\left(31/48\right)} \ \text{stairs}
+\]
+and can have \emph{at most}
+\[
+\frac{15}{\left(5/6\right)} \ \text{stairs}.
+\]
+
+
+Of course, you must have a \emph{whole} number of stairs. We have two special functions that help out, \emph{floor} and \emph{ceiling}:
+\begin{description}
+\item[\emph{floor}:] Denoted $\lfloor x\rfloor$, this function, \emph{rounds-down}.
+\item[\emph{ceiling}:] Denoted $\lceil x\rceil$ this function, \emph{rounds-up}.
+\end{description}
+So we see
+\[
+\text{min number of stairs} = \left\lceil \frac{10}{\left(31/48\right)} \right\rceil
+\]
+and
+\[
+\text{max number of stairs} = \left\lfloor \frac{10}{\left(31/48\right)} \right\rfloor.
+\]
+Both \emph{floor} and \emph{ceiling} are common computer-science
+commands and are included in \snap\ via:
+\begin{center}
+  \includegraphics{floor-script.png}
+  \qquad
+  and
+  \qquad
+\includegraphics{ceiling-script.png}
+\end{center}
+We'll now use \snap\ to solve the staircase problem.
+
+\mynewpage
+
+
+\begin{question}
+Someone wrote the following \snap\ script to ``solve'' the staircase
+problem:
+
+\begin{center}
+\includegraphics{staircase-script.png}
+\end{center}
+
+Run this script in \snap\ for the following values of $w$ and $h$:
+\[
+w=15\text{ and } h=10, \qquad w=15\text{ and } h=11, \qquad w=15\text{ and } h=13.
+\]
+
+Use the values above to help you explain the INPUTS and the OUTPUT of
+this code as you would like to have them explained to you. Use words,
+pictures, and so on, as needed/helpful in your explanation.
+\begin{freeResponse}
+  This script has two inputs,
+  \begin{align*}
+  w &= \text{width of where staircase is needed}\\
+  h &= \text{height of where staircase is needed}.
+  \end{align*}
+  The output is a list of staircase dimensions that meet city
+  code.
+
+  When $w=15$ and $h=10$:
+  \begin{center}
+    \includegraphics{answer-15-10-script.png}
+  \end{center}
+  This means we can make three different staircases:
+  \begin{enumerate}
+  \item $16$ steps, with width $0.938$ feet, and height of $0.625$ feet.
+  \item $17$ steps, with width $0.883$ feet, and height of $0.588$ feet.
+  \item $18$ steps, with width $0.833$ feet, and height of $0.556$ feet.
+  \end{enumerate}
+
+  When $w=15$ and $h=11$:
+   \begin{center}
+    \includegraphics{answer-15-11-script.png}
+   \end{center}
+   This means we can make only one staircase:
+   \begin{enumerate}
+   \item $18$ steps, with width $0.833$ feet, and height of $0.611$ feet.
+   \end{enumerate}
+
+
+   When $w=15$ and $h=11$:
+   \begin{center}
+    \includegraphics{answer-15-13-script.png}
+  \end{center}
+   This means we cannot make any staircases that are up to city code in this space.
+\end{freeResponse}
+\end{question}
+\mynewpage
+
+\begin{question}
+  Consider again the staircase \snap\ script from the problem above.
+  
+  EXPLAIN how the script works, block-by-block as you would like to
+  have it explained to you. Use words, pictures, and so on, as
+  needed/helpful in your explanation.
+\end{question}
+\mynewpage
+
+
+
+
+\begin{question}
+  Someone once said,
+  \begin{quote}
+    The staircase problem isn't hard, if you want to
+ know if a staircase will fit in a space of $w\times h$, all you need
+ to do is see if
+ \[
+ \frac{w}{h} \ge 1.29.
+ \]
+  \end{quote}
+  \begin{enumerate}
+    \item How did this person come up with this ``rule-of-thumb?''
+    \item Is this correct?
+    \item Does it matter if we change $\ge$ to $>$?
+  \end{enumerate}
+  In each case, explain your reasoning with words, pictures, examples, and so on.
+\end{question}
+
+
+\end{document}

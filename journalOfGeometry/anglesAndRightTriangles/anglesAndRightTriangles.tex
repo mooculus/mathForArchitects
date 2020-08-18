@@ -1,0 +1,88 @@
+\documentclass[noauthor,nooutcomes,12pt]{ximera}
+
+\input{../preamble.tex}
+
+\title{Angles and right triangles}
+\author{Bart Snapp}
+
+\begin{document}
+\begin{abstract}
+  We learn about Pythagorean triples.
+\end{abstract}
+\maketitle
+
+\begin{listOutcomes}
+\item Something
+\end{listOutcomes}
+\mynewpage
+
+
+\begin{question}
+  Use the INTERNET to look up \textbf{Pythagorean triples}. EXPLAIN
+  what a Pythagorean triple is as you would like to have them
+  explained to you. In particular, as part of this explanation:
+  \begin{itemize}
+    \item Explain what a \textbf{primitive} Pythagorean triple is.
+    \item Give $3$ EXAMPLES of nonprimitive Pythagorean triples and
+      $3$ more EXAMPLES of primitive Pythagorean triples.
+    \item Someone once said, ``every Pythagorean triple is
+      \textbf{similar} to a primitive Pythagorean triple.'' EXPLAIN
+      what this means.
+  \end{itemize}
+  \begin{freeResponse}
+    A \underline{Pythagorean triple} is a list of three whole numbers
+    $(a,b,c)$ where if $c$ is the largest such number,
+    \[
+    a^2 + b^2 = c^2.
+    \]
+    This means, from our previous work, that there is a right triangle
+    with these whole number side lengths.
+  \end{freeResponse}
+\end{question}
+\mynewpage
+
+\begin{question}
+  Here are $3$ Pythagorean triples:
+  \[
+  (60,80,100), \qquad (50,120,130), \qquad (120, 209, 241).
+  \]
+  In each case:
+  \begin{enumerate}
+        \item Use the bisection method to find the angles of these
+          triangles. Display your work with a TABLE as we have done
+          before.
+        \item Make \snap\ scripts that will draw these
+          triangles. Show off your work by giving screenshots of your
+          SCRIPTS and STAGES as provided from \snap.
+  \end{enumerate}
+  \begin{freeResponse}
+    \begin{description}
+      \item[\underline{(60,80,100)}:] blahs
+    \end{description}
+  \end{freeResponse}
+\end{question}
+\mynewpage
+
+\begin{question}
+  Give an algorithm for using bisection method to find the angles of a
+  right triangle, assuming you are given the side lengths.
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item Find the sum of the two known sides. This is the maximum
+      length the third side could be, call it $M$.
+    \item Let $0$ be the minimum length the third side could be. Call this number $m$.
+    \item\label{I:stop} If $M=m$ or $|M-m|< small-number$ we are done, so STOP.
+    \item Now, it must be that $M>m$. Average $M$ and $m$ and call it $a$.
+    \item Is $a$ the correct length? If so, then we are done, so STOP.
+    \item If $a$ is too long, change $M$ to make it equal to $a$.
+    \item If $a$ is too short, change $m$ to make it equal to $a$.
+    \item Goto step~\ref{I:stop}.
+    \end{enumerate}
+  \end{freeResponse}
+\end{question}
+
+
+
+
+
+\end{document}

@@ -40,8 +40,8 @@
   \[
   \begin{array}{|c|c|c|c|}\hline
     \text{Attempt} & x & \text{Greater or less than $0$?} \\ \hline\hline
-    1 & 0 & Less \\ \hline
-    2 & 2 & Greater  \\ \hline
+    1 & 0 & less \\ \hline
+    2 & 2 & greater  \\ \hline
     3 & ?? & ??  \\ \hline
     \vdots & \vdots & \vdots \\ 
   \end{array}
@@ -140,17 +140,17 @@
     \[
     \begin{array}{|c|c|c|c|}\hline
       \text{Attempt} & \text{x} & \text{Greater or less than $0$?} \\ \hline\hline
-      1 & 0 & \text{Less} \\ \hline
-      2 & 2 & \text{Greater}  \\ \hline
-      3 & 1 & \text{Less}  \\ \hline
-      4 & 1.5 & \text{Greater}  \\ \hline
-      5 & 1.25 & \text{Greater}  \\ \hline
-      6 & 1.125 & \text{Less}  \\ \hline
-      7 & 1.1875 & \text{Greater}  \\ \hline
-      8 & 1.15625 & \text{Less}  \\ \hline
-      9 & 1.17188 & \text{Greater} \\ \hline
-      10 & 1.16406 & \text{Less} \\ \hline
-      11 & 1.16797 & \text{Greater} \\ \hline
+      1 & 0 & \text{less} \\ \hline
+      2 & 2 & \text{greater}  \\ \hline
+      3 & 1 & \text{less}  \\ \hline
+      4 & 1.5 & \text{greater}  \\ \hline
+      5 & 1.25 & \text{greater}  \\ \hline
+      6 & 1.125 & \text{less}  \\ \hline
+      7 & 1.1875 & \text{greater}  \\ \hline
+      8 & 1.15625 & \text{less}  \\ \hline
+      9 & 1.17188 & \text{greater} \\ \hline
+      10 & 1.16406 & \text{less} \\ \hline
+      11 & 1.16797 & \text{greater} \\ \hline
   \end{array}
   \]
   So we see we have a root at around $x=1.16$, note
@@ -167,16 +167,7 @@
   
   \adjustbox{valign=t}{
     \begin{tabular}{lp{.7\textwidth}}
-      \begin{scratch}[num blocks]
-        \blockinit{when \greenflag clicked}
-        \blocklook{hide}
-        \blockpen{pen down}
-        \blockmove{move \ovalnum{100} steps}
-        \blockmove{turn \turnright{} \ovalnum{163.74} degrees}
-        \blockmove{move \ovalnum{75} steps}
-        \blockmove{turn \turnright{} \ovalnum{53.13} degrees}
-        \blockmove{move \ovalnum{??} steps}
-      \end{scratch}
+ \raisebox{-\height}{\includegraphics{basicTriangle-script.png}}
       & Clearly EXPLAIN how you can use the bisection method to find
       the FINAL LENGTH  and thus complete the \snap\ script for the
       triangle.
@@ -211,14 +202,20 @@
 \mynewpage
 
 \begin{question}
-  The bisection method is an example of a basic \textit{algorithm.}
-  Give step-by-step instructions for using bisection method to find
+  The bisection method is an example of a basic \textbf{algorithm}.
+  \begin{enumerate}
+    \item Find a relevant definition of an \textbf{algorithm}, and state it in
+      your own words.
+    \item  Give step-by-step instructions for using bisection method to find
   the final side length of a triangle, assuming you know two sides and
   all three angles.
+  \end{enumerate}
   \begin{freeResponse}
-    Given two sides of a triangle and all of the angles, we can find
-    the third side using the bisection method.  Use words, pictures,
-    and so on, as needed/helpful in your explanation.
+    \begin{enumerate}
+    \item An \underline{algorithm} is a step-by-step description of how
+      to solve a problem that can be applied with minimal thought.
+    \item Given two sides of a triangle and all of the angles, we can
+      find the third side using the bisection method.
 
     \begin{enumerate}
       \item Find the sum of the two known sides. This is the maximum
@@ -230,6 +227,7 @@
       \item If $a$ is too long, change $M$ to make it equal to $a$.
       \item If $a$ is too short, change $m$ to make it equal to $a$.
       \item Goto step~\ref{I:stop}.
+    \end{enumerate}
     \end{enumerate}
   \end{freeResponse}
 \end{question}

@@ -58,12 +58,12 @@
   \end{enumerate}
 
   \begin{freeResponse}
-    (a) Triangles are \underline{congruent} if we can pick one up, and
-    place it on the other with each of the sides and angles matching.
+    \begin{enumerate}
+    \item Triangles are \underline{congruent} if we can pick one up,
+      and place it on the other with each of the sides and angles
+      matching.
 
-
-    
-    (b) Let's list and explain the triangle congruence theorems:
+    \item Let's list and explain the triangle congruence theorems:
     \begin{description}
     \item[\bsifamily\underline{SSS}:] If I know three side lengths
       of a triangle,
@@ -174,7 +174,7 @@
 
 
 
-    (c) AAA is not a congruence theorem. Behold:
+    \item AAA is not a congruence theorem. Behold:
 \begin{center}
       \begin{tikzpicture}[geometryDiagrams]
         \coordinate (A) at (0,0);
@@ -220,7 +220,7 @@
 Two noncongruent triangles with the same angles.
 
 
-Also SSA is not a conrguence theorem.  Behold:
+Also SSA is not a congruence theorem.  Behold:
     \begin{center}
       \begin{tikzpicture}[geometryDiagrams]
         \coordinate (A) at (0,0);
@@ -266,18 +266,51 @@ Also SSA is not a conrguence theorem.  Behold:
     Two different triangles with the same side, side, and angle. The
     drawings are precisely made, you can measure the features
     yourself.
+    \end{enumerate}
   \end{freeResponse}
 \end{question}
 \mynewpage
 
 \begin{question}
-  Use one of the congruence theorems to explain WHY the ``triangle is
-  the 
-  quadrilateral does not make a ``strong shape.''
-  \begin{freeResponse}
-    We say a triangle is a strong shape because SSS
+  Use the SSS congruence theorem to explain WHY the ``triangle is the
+  strongest shape.''
 
-    Quadrilateral would be floppy.
+  
+
+  In addition, explain (in the context of your previous explanation)
+  why quadrilateral does NOT make a ``strong shape.''
+  \begin{freeResponse}
+    The SSS congruence theorem ensures that the triangle will be a
+    strong shape. Given three side lengths, SSS tells us there is a
+    unique triangle with these properties. Thus even if the ``joints''
+    are lose and can turn, the triangle's shape cannot change.
+
+    On the other hand, a quadrilateral would be floppy. There is no
+    SSSS congruence theorem for quadrilaterals, as both
+
+    \begin{center}
+      \begin{tikzpicture}
+        [geometryDiagrams]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (3,0);
+        \coordinate (C) at (3,3);
+        \coordinate (D) at (0,3);
+        \tkzDrawSegment (A,B)
+        \tkzDrawSegment (B,C)
+        \tkzDrawSegment (C,D)
+        \tkzDrawSegment (D,A)
+        
+        \coordinate (A') at (6,0);
+        \coordinate (B') at (9,0);
+        \coordinate (C') at (11.12,2.12);
+        \coordinate (D') at (8.12,2.12);
+        \tkzDrawSegment (A',B')
+        \tkzDrawSegment (B',C')
+        \tkzDrawSegment (C',D')
+        \tkzDrawSegment (D',A')
+      \end{tikzpicture}
+    \end{center}
+    have the same side lengths, but are different shapes.
   \end{freeResponse}
 \end{question}
 

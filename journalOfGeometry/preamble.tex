@@ -1,5 +1,8 @@
 \graphicspath{  
 {./}
+{./drawingWithTheTurtle/}
+{./bisectionMethod/}
+{./circles/}
 {./plotter/}
 {./staircases/}
 }
@@ -23,17 +26,13 @@
 \usepackage[scaled=1]{FiraSans}
 
 %\usepackage{wedn}
-\usepackage{pbsi}
+\usepackage{pbsi} %% Answer font
 
 
-%% wrap text around scripts
-\usepackage{wrapfig}
+%% \usepackage{ulem} %% 
+%% \renewcommand{\ULthickness}{2pt}% changes underline thickness
 
 \tikzset{>=stealth}
-%% snap! scripts
-\usepackage{scratch3}
-
-\setscratch{scale=.8}
 
 \usepackage{adjustbox}
 
@@ -97,20 +96,23 @@
 
 %% attempting to automate outcomes.
 
-\newwrite\outcomefile
-  \immediate\openout\outcomefile=\jobname.oc
-\renewcommand{\outcome}[1]{\edef\theoutcomes{\theoutcomes #1~}%
-\immediate\write\outcomefile{\unexpanded{\outcome}{#1}}}
+%% \newwrite\outcomefile
+%%   \immediate\openout\outcomefile=\jobname.oc
+%% \renewcommand{\outcome}[1]{\edef\theoutcomes{\theoutcomes #1~}%
+%% \immediate\write\outcomefile{\unexpanded{\outcome}{#1}}}
 
 %% \newcommand{\outcomelist}{\begin{itemize}\theoutcomes\end{itemize}}
 
-\NewEnviron{listOutcomes}{
-After answering the following questions, students should be able to:
-\begin{itemize}
-\BODY
-\end{itemize}
-}
-
+%% \NewEnviron{listOutcomes}{\small\sffamily
+%% After answering the following questions, students should be able to:
+%% \begin{itemize}
+%% \BODY
+%% \end{itemize}
+%% }
+\usepackage[tikz]{mdframed}
+\mdfdefinestyle{OutcomeStyle}{leftmargin=2cm,rightmargin=2cm,linecolor=black,roundcorner=5pt,
+, font=\small\sffamily,}%font=\wedn\bfseries\upshape,}
+\newenvironment{listOutcomes}{\begin{mdframed}[style=OutcomeStyle]After answering the following questions, students should be able to:\begin{itemize}}{\end{itemize}\end{mdframed}}
 
 
 
