@@ -7,12 +7,16 @@
 
 \begin{document}
 \begin{abstract}
-  Sine and cosine encode information about right triangles.
+  Sine and cosine encode information about similar right triangles.
 \end{abstract}
 \maketitle
 
 \begin{listOutcomes}
-\item Something
+\item Recall the basic definitions of sine and cosine.
+\item View sine and cosine as encoding information about similar right
+  triangles.
+\item Explain basic facts about sine and cosine based on their
+  definitions.
 \end{listOutcomes}
 \mynewpage
 
@@ -20,16 +24,313 @@
 
 
 \begin{question}
-  Use the INTERNET to up the definitions of \textbf{sine} and
-  \textbf{cosine} in terms of a right triangle's hypotenuse, opposite
-  leg, and adjacent leg. EXPLAIN
-  
-  
+  Consider the following right triangle:
+  \begin{center}
+      \begin{tikzpicture}[geometryDiagrams]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (0,3);
+        \coordinate (C) at (7,0);
+        \tkzDrawSegment (A,B)
+        \tkzDrawSegment (A,C)
+        \tkzDrawSegment (C,B)
+        \tkzLabelSegment[left](A,B){$a$}
+        \tkzLabelSegment[below](A,C){$b$}
+        \tkzLabelSegment[above right](B,C){$c$}  
+
+        \tkzMarkRightAngle[thin](C,A,B)
+        %\tkzLabelAngle[pos=1.2](C,A,B){$?$}
+
+        \tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
+        \tkzLabelAngle[pos=.5](A,B,C){$\beta$}
+
+        \tkzMarkAngle[mark=,size=1.2cm,thin](B,C,A)
+        \tkzLabelAngle[pos=.9](B,C,A){$\alpha$}
+      \end{tikzpicture}
+    \end{center}
+  Use the INTERNET to look up the definitions of \textbf{sine} and
+  \textbf{cosine} of both $\alpha$ and $\beta$ in terms of this right
+  triangles hypotenuse, opposite leg, and adjacent leg. State them
+  here as you would like them stated to you.
+
+
+  In particular, EXPLAIN:
+  \begin{enumerate}
+    \item WHY $\sin(\alpha) = \cos(90^\circ-\alpha)$ and WHY
+      $\cos(\alpha) = \sin(90^\circ-\alpha)$.
+    \item If I have a triangle similar to the one above, say,
+      \begin{center}
+      \begin{tikzpicture}[geometryDiagrams]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (0,3);
+        \coordinate (C) at (7,0);
+        \tkzDrawSegment (A,B)
+        \tkzDrawSegment (A,C)
+        \tkzDrawSegment (C,B)
+        \tkzLabelSegment[left](A,B){$s\cdot a$}
+        \tkzLabelSegment[below](A,C){$s\cdot b$}
+        \tkzLabelSegment[above right](B,C){$s\cdot c$}  
+
+        \tkzMarkRightAngle[thin](C,A,B)
+        %\tkzLabelAngle[pos=1.2](C,A,B){$?$}
+
+        \tkzMarkAngle[size=1cm,thin,mark=](A,B,C)
+        \tkzLabelAngle[pos=.6](A,B,C){$\beta'$}
+
+        \tkzMarkAngle[mark=,size=1.5cm,thin](B,C,A)
+        \tkzLabelAngle[pos=1.2](B,C,A){$\alpha'$}
+      \end{tikzpicture}
+    \end{center}
+      WHY $\sin(\alpha) = \sin(\alpha')$ and $\cos(\alpha) =
+      \cos(\alpha')$. Note, you MAY NOT assume that $\alpha =
+      \alpha'$.
+  \end{enumerate}
+  Use words, pictures, and so on, as needed/helpful in your
+  explanations.
+  \begin{freeResponse}
+    Given a right triangle,
+    \begin{center}
+      \begin{tikzpicture}[geometryDiagrams]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (0,3);
+        \coordinate (C) at (7,0);
+        \tkzDrawSegment (A,B)
+        \tkzDrawSegment (A,C)
+        \tkzDrawSegment (C,B)
+        \tkzLabelSegment[left](A,B){$a$}
+        \tkzLabelSegment[below](A,C){$b$}
+        \tkzLabelSegment[above right](B,C){$c$}  
+
+        \tkzMarkRightAngle[thin](C,A,B)
+        %\tkzLabelAngle[pos=1.2](C,A,B){$?$}
+
+        \tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
+        \tkzLabelAngle[pos=.5](A,B,C){$\beta$}
+
+        \tkzMarkAngle[mark=,size=1.2cm,thin](B,C,A)
+        \tkzLabelAngle[pos=.9](B,C,A){$\alpha$}
+      \end{tikzpicture}
+    \end{center}
+    if we are working with the angle of measure $\alpha$,
+    \[
+    \sin(\alpha) = \frac{\text{opposite}}{\text{hypotenuse}} = \frac{a}{c},
+    \]
+    and
+    \[
+    \cos(\alpha) = \frac{\text{adjacent}}{\text{hypotenuse}} = \frac{b}{c}.
+    \]
+    If we are working with the angle of measure $\beta$,
+    \[
+    \sin(\beta) = \frac{\text{opposite}}{\text{hypotenuse}} = \frac{b}{c},
+    \]
+    and
+    \[
+    \cos(\beta) = \frac{\text{adjacent}}{\text{hypotenuse}} = \frac{a}{c}.
+    \]
+    From this we immediately see that
+    \[
+    \sin(\alpha) = \cos(\beta),
+    \]
+    and since $\beta = 180-90-\alpha$, we see
+    \[
+    \sin(\alpha) = \cos(90-\alpha).
+    \]
+    In an entirely similar way, we have
+    \[
+    \cos(\alpha) = \sin(90-\alpha).
+    \]
+
+    Finally, note, if a triangle with side lengths $(a,b,c)$ is
+    similar to another right triangle, then this triangle has side
+    lengths:
+          \begin{center}
+      \begin{tikzpicture}[geometryDiagrams]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (0,3);
+        \coordinate (C) at (7,0);
+        \tkzDrawSegment (A,B)
+        \tkzDrawSegment (A,C)
+        \tkzDrawSegment (C,B)
+        \tkzLabelSegment[left](A,B){$s\cdot a$}
+        \tkzLabelSegment[below](A,C){$s\cdot b$}
+        \tkzLabelSegment[above right](B,C){$s\cdot c$}  
+
+        \tkzMarkRightAngle[thin](C,A,B)
+        %\tkzLabelAngle[pos=1.2](C,A,B){$?$}
+
+        \tkzMarkAngle[size=1cm,thin,mark=](A,B,C)
+        \tkzLabelAngle[pos=.6](A,B,C){$\beta'$}
+
+        \tkzMarkAngle[mark=,size=1.5cm,thin](B,C,A)
+        \tkzLabelAngle[pos=1.2](B,C,A){$\alpha'$}
+      \end{tikzpicture}
+    \end{center}
+    for some scale factor $s$. Now with our new triangle, we see
+    \[
+    \sin(\alpha') = \frac{s\cdot a}{s\cdot c} = \frac{a}{c} =
+    \sin(\alpha),
+    \]
+    and
+    \[
+    \cos(\alpha') = \frac{s\cdot b}{s\cdot c} = \frac{b}{c} =
+    \cos(\alpha),
+    \]
+    hence sine and cosine encode information about \underline{similar} right
+    triangles.
+  \end{freeResponse}
+\end{question}
+\mynewpage
+
+\begin{question}
+  Now imagine a right triangle with a hypotenuse of length $1$. For a
+  given nonright angle of the triangle, call it $\theta$, EXPLAIN why
+  one leg of the triangle has length $\cos(\theta)$ and the other has
+  length $\sin(\theta)$.  Use words, pictures, and so on, as
+  needed/helpful in your explanation.
+  \begin{freeResponse}
+    Given a right triangle
+    \begin{center}
+      \begin{tikzpicture}[geometryDiagrams]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (0,3);
+        \coordinate (C) at (7,0);
+        \tkzDrawSegment (A,B)
+        \tkzDrawSegment (A,C)
+        \tkzDrawSegment (C,B)
+        \tkzLabelSegment[left](A,B){$a$}
+        \tkzLabelSegment[below](A,C){$b$}
+        \tkzLabelSegment[above right](B,C){$1$}  
+
+        \tkzMarkRightAngle[thin](C,A,B)
+        %\tkzLabelAngle[pos=1.2](C,A,B){$?$}
+
+        \tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
+        \tkzLabelAngle[pos=.5](A,B,C){$\beta$}
+
+        \tkzMarkAngle[mark=,size=1.2cm,thin](B,C,A)
+        \tkzLabelAngle[pos=.9](B,C,A){$\alpha$}
+      \end{tikzpicture}
+    \end{center}
+    We see
+    \[
+    \sin(\alpha) = \frac{a}{1} = a\qquad \text{and}\qquad \cos(\alpha) = \frac{b}{1} = b.
+    \]
+  \end{freeResponse}
 \end{question}
 \mynewpage
 
 
-
+\begin{question}
+  EXPLAIN in terms of a right triangle, why:
+  \begin{enumerate}
+  \item If $\theta$ is near $0^\circ$, then $\sin(\theta)$ is near $0$.
+  \item If $\theta$ is near $0^\circ$, then $\cos(\theta)$ is near $1$.
+  \item If $\theta$ is near $90^\circ$, then $\sin(\theta)$ is near $1$.
+  \item If $\theta$ is near $90^\circ$, then $\cos(\theta)$ is near $0$.
+  %% \item If $\theta$ is near $180^\circ$, then $\sin(\theta)$ is near $0$.
+  %% \item If $\theta$ is near $180^\circ$, then $\cos(\theta)$ is near $-1$.
+  %% \item The outputs of $\sin(\theta)$ and $\cos(\theta)$ are always
+  %%     between $-1$ and $1$.
+  \end{enumerate}
+  Use words, pictures, and so on, as needed/helpful in your
+  explanations.
+  %% \begin{hint}
+  %%   The last two are a bit tricky. You have to interpret what a
+  %%   negative sign means in this case. As a gesture of friendship, I
+  %%   suggest you think of our right triangle as being on the unit circle:
+  %%   \begin{center}
+  %%     \begin{tikzpicture}[geometryDiagrams]
+  %%       \coordinate (A) at (0,0);
+  %%       \coordinate (B) at (4.33,0);
+  %%       \coordinate (C) at (4.33,2.5);
+  %%       \tkzDrawSegment[line width=2pt](A,B)
+  %%       \tkzDrawSegment[line width=2pt](A,C)
+  %%       \tkzDrawSegment[line width=2pt](C,B)
+  %%       \tkzLabelSegment[above left](A,C){$1$}
+        
+  %%       \coordinate (xmin) at (-6,0);
+  %%       \coordinate (xmax) at (6,0);
+  %%       \coordinate (ymin) at (0,-6);
+  %%       \coordinate (ymax) at (0,6);
+        
+  %%       \tkzDrawSegment[->](xmin,xmax)
+  %%       \tkzDrawSegment[->](ymin,ymax)
+        
+  %%       \tkzMarkRightAngle[thin](A,B,C)
+  %%       \tkzDrawCircle[dashed](A,C)
+  %%       \tkzMarkAngle[mark=,size=1.2cm,thin](B,A,C)
+  %%       \tkzLabelAngle[pos=.9](B,A,C){$\theta$};
+  %%     \end{tikzpicture}
+  %%   \end{center}
+  %% \end{hint}
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item First we need to explain why if $\theta$ is near $0^\circ$,
+      then $\sin(\theta)$ is near $0$.  Draw this on the unit circle:
+      \begin{center}
+      \begin{tikzpicture}[geometryDiagrams] %% multiply by 5
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (4.98,0);
+        \coordinate (C) at (4.98,.44);
+        \tkzDrawSegment[line width=2pt](A,B)
+        \tkzDrawSegment[line width=2pt](A,C)
+        \tkzDrawSegment[line width=2pt](C,B)
+        \tkzLabelSegment[above left](A,C){$1$}
+        
+        %% \coordinate (xmin) at (-6,0);
+        %% \coordinate (xmax) at (6,0);
+        %% \coordinate (ymin) at (0,-6);
+        %% \coordinate (ymax) at (0,6);
+        
+        %% \tkzDrawSegment[->](xmin,xmax)
+        %% \tkzDrawSegment[->](ymin,ymax)
+        
+        %% \tkzMarkRightAngle[thin](A,B,C)
+        %% \tkzDrawCircle[dashed](A,C)
+      \end{tikzpicture}
+      \end{center}
+      Since the angle is near $0^\circ$,
+      \[
+      \sin(\theta) = \frac{\text{something near $0$}}{1} \approx 0.
+      \]
+    \item Using the same picture from before, since the angle is near $0^\circ$,
+      \[
+      \cos(\theta) = \frac{\text{something near $1$}}{1} \approx 1.
+      \]
+    \item If the angle is near $90^\circ$, then draw this picture:
+      \begin{center}
+      \begin{tikzpicture}[geometryDiagrams] %% multiply by 5
+        \coordinate (A) at (0,0);
+        \coordinate (B) at ({5*cos(85)},0);
+        \coordinate (C) at ({5*cos(85)},{5*sin(85)});
+        \tkzDrawSegment[line width=2pt](A,B)
+        \tkzDrawSegment[line width=2pt](A,C)
+        \tkzDrawSegment[line width=2pt](C,B)
+        \tkzLabelSegment[above left](A,C){$1$}
+        
+        %% \coordinate (xmin) at (-6,0);
+        %% \coordinate (xmax) at (6,0);
+        %% \coordinate (ymin) at (0,-6);
+        %% \coordinate (ymax) at (0,6);
+        
+        %% \tkzDrawSegment[->](xmin,xmax)
+        %% \tkzDrawSegment[->](ymin,ymax)
+        
+        \tkzMarkRightAngle[thin](A,B,C)
+        %\tkzDrawCircle[dashed](A,C)
+        
+      \end{tikzpicture}
+      \end{center}
+      Since the angle is near $90^\circ$,
+      \[
+      \sin(\theta) = \frac{\text{something near $1$}}{1} \approx 1.
+      \]
+     \item Using the same picture from before, since the angle is near $0^\circ$,
+      \[
+      \cos(\theta) = \frac{\text{something near $0$}}{1} \approx 0.
+      \] 
+    \end{enumerate}
+  \end{freeResponse}
+\end{question}
 
 
 
