@@ -1,4 +1,4 @@
-\documentclass[noauthor,nooutcomes,handout]{ximera}
+\documentclass[noauthor,nooutcomes]{ximera}
 
 \input{../preamble.tex}
 
@@ -59,7 +59,7 @@
 
   \begin{freeResponse}
     \begin{enumerate}
-    \item Triangles are \underline{congruent} if we can pick one up,
+    \item Two different triangles are \underline{congruent} if we can pick one up,
       and place it on the other with each of the sides and angles
       matching.
 
@@ -280,11 +280,13 @@ Also SSA is not a congruence theorem.  Behold:
   In addition, explain (in the context of your previous explanation)
   why quadrilateral does NOT make a ``strong shape.''
   \begin{freeResponse}
-    The SSS congruence theorem ensures that the triangle will be a
-    strong shape. Given three side lengths, SSS tells us there is a
-    unique triangle with these properties. Thus even if the ``joints''
-    are lose and can turn, the triangle's shape cannot change.
+    Given three side lengths, SSS tells us there is a
+    \underline{unique} triangle with these properties. Thus even if
+    the ``joints'' are lose and can turn, the triangle
+    \underline{cannot} collapse unless a side breaks or attached
+    sides disconnect.
 
+    
     On the other hand, a quadrilateral would be floppy. There is no
     SSSS congruence theorem for quadrilaterals, as both
 
@@ -310,7 +312,11 @@ Also SSA is not a congruence theorem.  Behold:
         \tkzDrawSegment (D',A')
       \end{tikzpicture}
     \end{center}
-    have the same side lengths, but are different shapes.
+    have the same side lengths, but are different shapes. Hence a
+    quadrilateral \underline{can} collapse without sides breaking or
+    attached sides disconnecting.
+
+    This makes the quadrilateral weaker than the triangle.
   \end{freeResponse}
 \end{question}
 

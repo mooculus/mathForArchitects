@@ -1,4 +1,4 @@
-\documentclass{ximera}
+\documentclass[handout,nooutcomes,noauthor]{ximera}
 
 \input{../preamble.tex}
 
@@ -170,10 +170,7 @@
  \raisebox{-\height}{\includegraphics{basicTriangle-script.png}}
       & Clearly EXPLAIN how you can use the bisection method to find
       the FINAL LENGTH  and thus complete the \snap\ script for the
-      triangle.
-
-      
-      Display your work with a table:
+      triangle. Display your work with a table:
           \[
           \begin{array}{|c|c|c|c|}\hline
             \text{Attempt} & \text{Length} & \text{Too short or Too long?} \\ \hline\hline
@@ -221,12 +218,12 @@
       \item Find the sum of the two known sides. This is the maximum
         length the third side could be, call it $M$.
       \item Let $0$ be the minimum length the third side could be. Call this number $m$.
-      \item\label{I:stop} If $M=m$ or $|M-m|< small-number$ we are done, so STOP.
+      \item\label{ABS:stop} If $M=m$ or $|M-m|< small-number$ we are done, so STOP.
       \item Now, it must be that $M>m$. Average $M$ and $m$ and call it $a$.
       \item Is $a$ the correct length? If so, then we are done, so STOP.
       \item If $a$ is too long, change $M$ to make it equal to $a$.
       \item If $a$ is too short, change $m$ to make it equal to $a$.
-      \item Goto step~\ref{I:stop}.
+      \item Goto step~\ref{ABS:stop}.
     \end{enumerate}
     \end{enumerate}
   \end{freeResponse}
