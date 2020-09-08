@@ -56,29 +56,65 @@ the \textbf{law of sines} states
         \tkzDrawSegment (A,C)
         \tkzDrawSegment (C,B)
         \tkzLabelSegment[above left](A,B){$c$}
-        \tkzLabelSegment[below](A,C){$b$}
+        %\tkzLabelSegment[below](A,C){$b$}
         \tkzLabelSegment[above right](B,C){$a$}  
 
         \tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
         \tkzLabelAngle[pos=1.2](C,A,B){$\alpha$}
+
+        %\tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
+        %\tkzLabelAngle[pos=.5](A,B,C){$\beta$}
+
+        \tkzMarkAngle[mark=,size=.9,thin](B,C,A)
+        \tkzLabelAngle[pos=.6](B,C,A){$\gamma$}
+        \tkzDrawLine[altitude](A,B,C)\tkzGetPoint{D}
+        \tkzMarkRightAngle[thin](B,D,C)
+        \tkzLabelSegment[left](D,B){$h$}  
+      \end{tikzpicture}
+  \end{center}
+  to explain why
+  \[
+  \frac{a}{\sin(\alpha)} = \frac{c}{\sin(\gamma)}.
+  \]
+
+
+  Then use this picture
+    \begin{center}
+      \begin{tikzpicture}[geometryDiagrams]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (5,2);
+        \coordinate (C) at (7,0);
+        \tkzDrawSegment (A,B)
+        \tkzDrawSegment (A,C)
+        \tkzDrawSegment (C,B)
+        \tkzLabelSegment[above left](A,B){$c$}
+        \tkzLabelSegment[below](A,C){$b$}
+        %\tkzLabelSegment[above right](B,C){$a$}  
+
+        %\tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
+        %\tkzLabelAngle[pos=1.2](C,A,B){$\alpha$}
 
         \tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
         \tkzLabelAngle[pos=.5](A,B,C){$\beta$}
 
         \tkzMarkAngle[mark=,size=.9,thin](B,C,A)
         \tkzLabelAngle[pos=.6](B,C,A){$\gamma$}
-        \tkzDrawLine[altitude](A,B,C)\tkzGetPoint{D}
+        \tkzDrawLine[altitude](C,A,B)\tkzGetPoint{D}
+        \tkzDrawSegment (D,B)
+        \tkzMarkRightAngle[thin](B,D,C)
+        \tkzLabelSegment[above left](D,A){$h$}  
       \end{tikzpicture}
   \end{center}
   to explain why
   \[
-  \frac{a}{\sin(\alpha)} = \frac{b}{\sin(\beta)} = \frac{c}{\sin(\gamma)}.
+  \frac{a}{\sin(\alpha)} = \frac{b}{\sin(\gamma)}.
   \]
 
-  
-  To prove the law of sines, one only need ot use the definition of
-  sine itself
+  NEED DASHED LINES, RIGHT ANGLES AND FACT ABOUT SIN
 
+  \[
+  \sin(180-\alpha) = \sin(\alpha) 
+  \]
   
 \end{question}
 \mynewpage
