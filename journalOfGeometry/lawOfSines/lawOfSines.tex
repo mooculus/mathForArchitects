@@ -47,7 +47,7 @@ the \textbf{law of sines} states
 
 \begin{question}
   Use this picture
-  \begin{center}
+    \begin{center}
       \begin{tikzpicture}[geometryDiagrams]
         \coordinate (A) at (0,0);
         \coordinate (B) at (5,2);
@@ -58,7 +58,7 @@ the \textbf{law of sines} states
         \tkzLabelSegment[above left](A,B){$c$}
         %\tkzLabelSegment[below](A,C){$b$}
         \tkzLabelSegment[above right](B,C){$a$}  
-
+        
         \tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
         \tkzLabelAngle[pos=1.2](C,A,B){$\alpha$}
 
@@ -71,14 +71,12 @@ the \textbf{law of sines} states
         \tkzMarkRightAngle[thin](B,D,C)
         \tkzLabelSegment[left](D,B){$h$}  
       \end{tikzpicture}
-  \end{center}
-  to explain why
-  \[
-  \frac{a}{\sin(\alpha)} = \frac{c}{\sin(\gamma)}.
-  \]
-
-
-  Then use this picture
+    \end{center}
+    to explain why
+    \[
+    \frac{a}{\sin(\alpha)} = \frac{c}{\sin(\gamma)}.
+    \]
+    Now use this picture
     \begin{center}
       \begin{tikzpicture}[geometryDiagrams]
         \coordinate (A) at (0,0);
@@ -87,7 +85,7 @@ the \textbf{law of sines} states
         \tkzDrawSegment (A,B)
         \tkzDrawSegment (A,C)
         \tkzDrawSegment (C,B)
-        \tkzLabelSegment[above left](A,B){$c$}
+        \tkzLabelSegment[below right](A,B){$c$}
         \tkzLabelSegment[below](A,C){$b$}
         %\tkzLabelSegment[above right](B,C){$a$}  
 
@@ -100,28 +98,29 @@ the \textbf{law of sines} states
         \tkzMarkAngle[mark=,size=.9,thin](B,C,A)
         \tkzLabelAngle[pos=.6](B,C,A){$\gamma$}
         \tkzDrawLine[altitude](C,A,B)\tkzGetPoint{D}
-        \tkzDrawSegment (D,B)
-        \tkzMarkRightAngle[thin](B,D,C)
+        \tkzDrawSegment[dashed](D,B)
+        \tkzMarkRightAngle[thin](C,D,A)
         \tkzLabelSegment[above left](D,A){$h$}  
       \end{tikzpicture}
   \end{center}
   to explain why
   \[
-  \frac{a}{\sin(\alpha)} = \frac{b}{\sin(\gamma)}.
+  \frac{b}{\sin(\beta)} = \frac{b}{\sin(\gamma)}.
   \]
-
-  NEED DASHED LINES, RIGHT ANGLES AND FACT ABOUT SIN
-
-  \[
-  \sin(180-\alpha) = \sin(\alpha) 
-  \]
-  
+  \begin{hint}
+    Use the fact that \sin(180-\theta) = \sin(\theta).
+  \end{hint}  
 \end{question}
 \mynewpage
 
 
 
 \begin{question}
+Create \snap\ blocks that will draw triangles based on the SAS and ASA
+conrguence theorems.
+
+
+
 \end{question}
 
 \end{document}

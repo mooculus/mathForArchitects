@@ -17,6 +17,9 @@
   triangles.
 \item Explain basic facts about sine and cosine based on their
   definitions.
+\item Extend the understanding of sine and cosine from triangles to
+  the unit circle.
+\item Interpret sine and cosine when the angle is larger than $180^\circ$.
 \end{listOutcomes}
 \mynewpage
 
@@ -226,42 +229,41 @@
   \item If $\theta$ is near $0^\circ$, then $\cos(\theta)$ is near $1$.
   \item If $\theta$ is near $90^\circ$, then $\sin(\theta)$ is near $1$.
   \item If $\theta$ is near $90^\circ$, then $\cos(\theta)$ is near $0$.
-  %% \item If $\theta$ is near $180^\circ$, then $\sin(\theta)$ is near $0$.
-  %% \item If $\theta$ is near $180^\circ$, then $\cos(\theta)$ is near $-1$.
-  %% \item The outputs of $\sin(\theta)$ and $\cos(\theta)$ are always
-  %%     between $-1$ and $1$.
+  \item $\sin(180-\theta) = \sin(\theta)$.
+  \item The outputs of $\sin(\theta)$ and $\cos(\theta)$ are always
+    between $-1$ and $1$.
   \end{enumerate}
   Use words, pictures, and so on, as needed/helpful in your
   explanations.
-  %% \begin{hint}
-  %%   The last two are a bit tricky. You have to interpret what a
-  %%   negative sign means in this case. As a gesture of friendship, I
-  %%   suggest you think of our right triangle as being on the unit circle:
-  %%   \begin{center}
-  %%     \begin{tikzpicture}[geometryDiagrams]
-  %%       \coordinate (A) at (0,0);
-  %%       \coordinate (B) at (4.33,0);
-  %%       \coordinate (C) at (4.33,2.5);
-  %%       \tkzDrawSegment[line width=2pt](A,B)
-  %%       \tkzDrawSegment[line width=2pt](A,C)
-  %%       \tkzDrawSegment[line width=2pt](C,B)
-  %%       \tkzLabelSegment[above left](A,C){$1$}
+  \begin{hint}
+    The last two are a bit tricky. You have to interpret what a
+    negative sign means in this case. As a gesture of friendship, I
+    suggest you think of our right triangle as being on the unit circle:
+    \begin{center}
+      \begin{tikzpicture}[geometryDiagrams]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (4.33,0);
+        \coordinate (C) at (4.33,2.5);
+        \tkzDrawSegment[line width=2pt](A,B)
+        \tkzDrawSegment[line width=2pt](A,C)
+        \tkzDrawSegment[line width=2pt](C,B)
+        \tkzLabelSegment[above left](A,C){$1$}
         
-  %%       \coordinate (xmin) at (-6,0);
-  %%       \coordinate (xmax) at (6,0);
-  %%       \coordinate (ymin) at (0,-6);
-  %%       \coordinate (ymax) at (0,6);
+        \coordinate (xmin) at (-6,0);
+        \coordinate (xmax) at (6,0);
+        \coordinate (ymin) at (0,-6);
+        \coordinate (ymax) at (0,6);
         
-  %%       \tkzDrawSegment[->](xmin,xmax)
-  %%       \tkzDrawSegment[->](ymin,ymax)
+        \tkzDrawSegment[->](xmin,xmax)
+        \tkzDrawSegment[->](ymin,ymax)
         
-  %%       \tkzMarkRightAngle[thin](A,B,C)
-  %%       \tkzDrawCircle[dashed](A,C)
-  %%       \tkzMarkAngle[mark=,size=1.2cm,thin](B,A,C)
-  %%       \tkzLabelAngle[pos=.9](B,A,C){$\theta$};
-  %%     \end{tikzpicture}
-  %%   \end{center}
-  %% \end{hint}
+        \tkzMarkRightAngle[thin](A,B,C)
+        \tkzDrawCircle[dashed](A,C)
+        \tkzMarkAngle[mark=,size=1.2cm,thin](B,A,C)
+        \tkzLabelAngle[pos=.9](B,A,C){$\theta$};
+      \end{tikzpicture}
+    \end{center}
+  \end{hint}
   \begin{freeResponse}
     \begin{enumerate}
     \item First we need to explain why if $\theta$ is near $0^\circ$,
@@ -327,7 +329,55 @@
      \item Using the same picture from before, since the angle is near $0^\circ$,
       \[
       \cos(\theta) = \frac{\text{something near $0$}}{1} \approx 0.
-      \] 
+      \]
+    \item To see $\sin(180-\theta)=\sin(\theta)$ check this out:
+      \begin{center}
+      \begin{tikzpicture}[geometryDiagrams]
+        \coordinate (xmin) at (-6,0);
+        \coordinate (xmax) at (6,0);
+        \coordinate (ymin) at (0,-6);
+        \coordinate (ymax) at (0,6);
+        
+        \tkzDrawSegment[->](xmin,xmax)
+        \tkzDrawSegment[->](ymin,ymax)
+
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (-4.33,0);
+        \coordinate (C) at (-4.33,2.5);
+
+        
+        \coordinate (AA) at (0,0);
+        \coordinate (BB) at (4.33,0);
+        \coordinate (CC) at (4.33,2.5);
+
+
+        \tkzDrawSegment[red,line width=2pt](A,B)
+        \tkzDrawSegment[red,line width=2pt](A,C)
+        \tkzDrawSegment[red,line width=2pt](C,B)
+        \tkzLabelSegment[red,above right](A,C){$1$}
+        
+        \tkzMarkRightAngle[red,thin](A,B,C)
+        \tkzDrawCircle[dashed](A,C)
+        \tkzMarkAngle[red,mark=,size=1.6cm,thin](BB,AA,C)
+        \tkzLabelAngle[red,pos=.9](BB,A,C){$180-\theta$};
+
+        \tkzDrawSegment[blue,line width=2pt](AA,BB)
+        \tkzDrawSegment[blue,line width=2pt](AA,CC)
+        \tkzDrawSegment[blue,line width=2pt](CC,BB)
+        \tkzLabelSegment[blue,above left](AA,CC){$1$}
+
+        \tkzLabelSegment[blue,right](BB,CC){$\sin(\theta)$}
+        \tkzLabelSegment[red,left](B,C){$\sin(180-\theta)$}
+        
+        \tkzMarkRightAngle[blue,thin](AA,BB,CC)
+        \tkzMarkAngle[blue,mark=,size=1.2cm,thin](BB,AA,CC)
+        \tkzLabelAngle[blue,pos=.9](BB,AA,CC){$\theta$};
+      \end{tikzpicture}
+      \end{center}
+      And so we see $\sin(180-\theta)=\sin(\theta)$.
+    \item Sine and cosine are literally the lengths of the legs of
+      the triangle embedded in the unit circle. Their values must be
+      between $-1$ and $1$.
     \end{enumerate}
   \end{freeResponse}
 \end{question}
