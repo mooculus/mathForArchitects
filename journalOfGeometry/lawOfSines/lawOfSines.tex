@@ -7,12 +7,17 @@
 
 \begin{document}
 \begin{abstract}
-  The law of sines....
+  The law of sines can help us draw triangles.
 \end{abstract}
 \maketitle
 
 \begin{listOutcomes}
-\item Something
+\item State the law of sines.
+\item Use the law of sines to solve a triangle.
+\item Use the law of sines to write a \snap\ block that draws triangles
+  based on the ASA congruence theorem.
+\item Use the law of sines to write a \snap\ block that draws
+  triangles based on the SAA congruence theorem.
 \end{listOutcomes}
 \mynewpage
 
@@ -108,19 +113,180 @@ the \textbf{law of sines} states
   \frac{b}{\sin(\beta)} = \frac{b}{\sin(\gamma)}.
   \]
   \begin{hint}
-    Use the fact that \sin(180-\theta) = \sin(\theta).
-  \end{hint}  
+    Use the fact that $\sin(180-\theta) = \sin(\theta)$.
+  \end{hint}
+  When you are done, CONGRATULATIONS, you've proved the law of sines!
+  \begin{freeResponse}
+    If we look at the first picture:
+    \begin{center}
+      \begin{tikzpicture}[geometryDiagrams]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (5,2);
+        \coordinate (C) at (7,0);
+        \tkzDrawSegment (A,B)
+        \tkzDrawSegment (A,C)
+        \tkzDrawSegment (C,B)
+        \tkzLabelSegment[above left](A,B){$c$}
+        %\tkzLabelSegment[below](A,C){$b$}
+        \tkzLabelSegment[above right](B,C){$a$}  
+        
+        \tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
+        \tkzLabelAngle[pos=1.2](C,A,B){$\alpha$}
+
+        %\tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
+        %\tkzLabelAngle[pos=.5](A,B,C){$\beta$}
+
+        \tkzMarkAngle[mark=,size=.9,thin](B,C,A)
+        \tkzLabelAngle[pos=.6](B,C,A){$\gamma$}
+        \tkzDrawLine[altitude](A,B,C)\tkzGetPoint{D}
+        \tkzMarkRightAngle[thin](B,D,C)
+        \tkzLabelSegment[left](D,B){$h$}  
+      \end{tikzpicture}
+    \end{center}
+    We see that
+    \begin{align*}
+      \sin(\alpha) &= \frac{h}{c},\\
+      \sin(\gamma) &= \frac{h}{a}.
+    \end{align*}
+    Now, in each equation above, solve for $h$, and set the other
+    sides of the equations equal to each other:
+    \[
+    a\cdot \sin(\gamma)=c\cdot \sin(\alpha)
+    \]
+    Finally divide both sides by $\sin(\alpha)\sin(\gamma)$ to find
+    \[
+    \frac{a}{\sin(\alpha)} = \frac{c}{\sin(\gamma)}.
+    \]
+
+    
+    For the second part, consider this picture:
+    \begin{center}
+      \begin{tikzpicture}[geometryDiagrams]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (5,2);
+        \coordinate (C) at (7,0);
+        \tkzDrawSegment (A,B)
+        \tkzDrawSegment (A,C)
+        \tkzDrawSegment (C,B)
+        \tkzLabelSegment[below right](A,B){$c$}
+        \tkzLabelSegment[below](A,C){$b$}
+        %\tkzLabelSegment[above right](B,C){$a$}  
+
+        %\tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
+        %\tkzLabelAngle[pos=1.2](C,A,B){$\alpha$}
+
+        \tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
+        \tkzLabelAngle[pos=.5](A,B,C){$\beta$}
+
+        \tkzMarkAngle[mark=,size=.9,thin](B,C,A)
+        \tkzLabelAngle[pos=.6](B,C,A){$\gamma$}
+        \tkzDrawLine[altitude](C,A,B)\tkzGetPoint{D}
+        \tkzDrawSegment[dashed](D,B)
+        \tkzMarkRightAngle[thin](C,D,A)
+        \tkzLabelSegment[above left](D,A){$h$}  
+      \end{tikzpicture}
+    \end{center}
+    From this we may write
+    \begin{align*}
+      \sin(180-\beta) &= \frac{h}{c},\\
+      \sin(\gamma) &= \frac{h}{b}.
+    \end{align*}
+    Let's solve for $h$ and set the other sides of the equations equal
+    to each other:
+    \[
+    b\cdot\sin(\gamma) = c\cdot \sin(180-\beta).
+    \]
+    Now, recalling that $\sin(180-\theta) = \sin(\theta)$, we write:
+    \begin{align*}
+      b\cdot\sin(\gamma) &= c\cdot \sin(\beta)\\
+      \frac{b}{\sin(\beta)} &= \frac{c}{\sin(\gamma)}
+    \end{align*}
+    Thus,
+    \[
+    \frac{a}{\sin(\alpha)} = \frac{b}{\sin(\beta)} = \frac{c}{\sin(\gamma)}.
+    \]
+  \end{freeResponse}
 \end{question}
 \mynewpage
 
 
 
 \begin{question}
-Create \snap\ blocks that will draw triangles based on the SAS and ASA
-conrguence theorems.
+Create a \snap\ block that will draw triangles based on the ASA
+congruence theorem.  As a gesture of friendship, I've started the
+block for you:
+\begin{center}
+  \includegraphics{asaBlockBLANK}
+\end{center}
+It's your job to USE THE LAW OF SINES to fill in the blanks. EXPLAIN
+how you used the law of sines, and show off your work by giving
+screenshots of your SCRIPTS and STAGES as provided from \snap.
+\begin{freeResponse}
+  Ok, to start, note
+  \[
+  \mathrm{angle~3} = 180 - (\mathrm{angle~1}+\mathrm{angle 2}).
+  \]
+  Now, 
+  \[
+  \frac{\mathrm{side}}{\sin(angle~3)} = \frac{\mathrm{first~blank}}{\sin(\mathrm{angle~2})}
+  \]
+  so
+  \[
+  \mathrm{first~blank} = \frac{\sin(\mathrm{angle~2})\cdot \mathrm{side}}{\sin(angle~3)}.
+  \]
+  In a similar way, 
+    \[
+    \frac{\mathrm{side}}{\sin(angle~3)} = \frac{\mathrm{second~blank}}{\sin(\mathrm{angle~1})}
+    \]
+    so,
+    \[
+    \mathrm{second~blank} = \frac{\sin(\mathrm{angle~1})\cdot \mathrm{side}}{\sin(angle~3)}.
+    \]
+    Here is my Script and my Stage:
+    \begin{center}
+      \includegraphics[width=.4\textwidth]{asaBlockCOMPLETE}   \qquad \fbox{\includegraphics[width=.4\textwidth]{asaStage.png}}
+    \end{center}
+\end{freeResponse}
+\end{question}
+\mynewpage
 
 
-
+\begin{question}
+Create a \snap\ block that will draw triangles based on the SAA
+congruence theorem.  As a gesture of friendship, I've started the
+block for you:
+\begin{center}
+  \includegraphics{saaBlockBLANK}
+\end{center}
+It's your job to USE THE LAW OF SINES to fill in the blanks. EXPLAIN
+how you used the law of sines, and show off your work by giving
+screenshots of your SCRIPTS and STAGES as provided from \snap.
+\begin{freeResponse}
+  Start like we did before:
+  \[
+  \mathrm{angle~3} = 180 - (\mathrm{angle~1}+\mathrm{angle 2}).
+  \]
+  Now, 
+  \[
+  \frac{\mathrm{side}}{\sin(angle~2)} = \frac{\mathrm{first~blank}}{\sin(\mathrm{angle~3})}
+  \]
+  so
+  \[
+  \mathrm{first~blank} = \frac{\sin(\mathrm{angle~3})\cdot \mathrm{side}}{\sin(angle~2)}.
+  \]
+  In a similar way, 
+    \[
+    \frac{\mathrm{side}}{\sin(angle~2)} = \frac{\mathrm{second~blank}}{\sin(\mathrm{angle~1})}
+    \]
+    so,
+    \[
+    \mathrm{second~blank} = \frac{\sin(\mathrm{angle~1})\cdot \mathrm{side}}{\sin(angle~2)}.
+    \]
+    Here is my Script and my Stage:
+    \begin{center}
+      \includegraphics[width=.4\textwidth]{saaBlockCOMPLETE}   \qquad \fbox{\includegraphics[width=.4\textwidth]{saaStage.png}}
+    \end{center}
+\end{freeResponse}
 \end{question}
 
 \end{document}
