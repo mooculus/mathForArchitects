@@ -1,4 +1,4 @@
-\documentclass[noauthor,nooutcomes,12pt]{ximera}
+\documentclass[handout,noauthor,nooutcomes,12pt,hints]{ximera}
 
 \input{../preamble.tex}
 
@@ -52,8 +52,8 @@
     \end{center}
   Use the INTERNET to look up the definitions of \textbf{sine} and
   \textbf{cosine} of both $\alpha$ and $\beta$ in terms of this right
-  triangles hypotenuse, opposite leg, and adjacent leg. State them
-  here as you would like them stated to you.
+  triangles hypotenuse, opposite leg, and adjacent leg. STATE THEM
+  HERE as you would like them stated to you.
 
 
   In particular, EXPLAIN:
@@ -184,13 +184,20 @@
 \mynewpage
 
 \begin{question}
-  Now imagine a right triangle with a hypotenuse of length $1$. For a
-  given nonright angle of the triangle, call it $\theta$, EXPLAIN why
-  one leg of the triangle has length $\cos(\theta)$ and the other has
-  length $\sin(\theta)$.  Use words, pictures, and so on, as
-  needed/helpful in your explanation.
+  Now imagine a right triangle with a hypotenuse of length $1$. 
+  \begin{enumerate}
+  \item For a given nonright angle of the triangle, call it $\theta$,
+    EXPLAIN why one leg of the triangle has length $\cos(\theta)$ and
+    the other has length $\sin(\theta)$.  Use words, pictures, and so
+    on, as needed/helpful in your explanation.
+  \item EXPLAIN why
+    \[
+    \cos^2(\theta) + \sin^2(\theta) = 1.
+    \]
+  \end{enumerate}
   \begin{freeResponse}
-    Given a right triangle
+    \begin{enumerate}
+    \item Given a right triangle
     \begin{center}
       \begin{tikzpicture}[geometryDiagrams]
         \coordinate (A) at (0,0);
@@ -206,17 +213,22 @@
         \tkzMarkRightAngle[thin](C,A,B)
         %\tkzLabelAngle[pos=1.2](C,A,B){$?$}
 
-        \tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
-        \tkzLabelAngle[pos=.5](A,B,C){$\beta$}
+        %\tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
+        %\tkzLabelAngle[pos=.5](A,B,C){$\beta$}
 
         \tkzMarkAngle[mark=,size=1.2cm,thin](B,C,A)
-        \tkzLabelAngle[pos=.9](B,C,A){$\alpha$}
+        \tkzLabelAngle[pos=.9](B,C,A){$\theta$}
       \end{tikzpicture}
     \end{center}
     We see
     \[
-    \sin(\alpha) = \frac{a}{1} = a\qquad \text{and}\qquad \cos(\alpha) = \frac{b}{1} = b.
+    \sin(\theta) = \frac{a}{1} = a\qquad \text{and}\qquad \cos(\theta) = \frac{b}{1} = b.
     \]
+  \item With the same right triangle above, we also see via the Pythagorean theorem:
+    \[
+    \cos^2(\theta) + \sin^2(\theta) = 1.
+    \]
+    \end{enumerate}
   \end{freeResponse}
 \end{question}
 \mynewpage

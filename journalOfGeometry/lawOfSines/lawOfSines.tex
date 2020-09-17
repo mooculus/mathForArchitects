@@ -1,4 +1,4 @@
-\documentclass[noauthor,nooutcomes,12pt]{ximera}
+\documentclass[noauthor,nooutcomes,12pt,handout,hints]{ximera}
 
 \input{../preamble.tex}
 
@@ -13,6 +13,7 @@
 
 \begin{listOutcomes}
 \item State the law of sines.
+\item Explain why the law of sines is true.
 \item Use the law of sines to solve a triangle.
 \item Use the law of sines to write a \snap\ block that draws triangles
   based on the ASA congruence theorem.
@@ -51,7 +52,9 @@ the \textbf{law of sines} states
 \]
 
 \begin{question}
-  Use this picture
+  We'll explain WHY the law of sines is true.
+  \begin{enumerate}
+  \item Use this picture
     \begin{center}
       \begin{tikzpicture}[geometryDiagrams]
         \coordinate (A) at (0,0);
@@ -81,7 +84,7 @@ the \textbf{law of sines} states
     \[
     \frac{a}{\sin(\alpha)} = \frac{c}{\sin(\gamma)}.
     \]
-    Now use this picture
+    \item Now use this picture
     \begin{center}
       \begin{tikzpicture}[geometryDiagrams]
         \coordinate (A) at (0,0);
@@ -110,15 +113,17 @@ the \textbf{law of sines} states
   \end{center}
   to explain why
   \[
-  \frac{b}{\sin(\beta)} = \frac{b}{\sin(\gamma)}.
+  \frac{b}{\sin(\beta)} = \frac{c}{\sin(\gamma)}.
   \]
   \begin{hint}
     Use the fact that $\sin(180-\theta) = \sin(\theta)$.
   \end{hint}
-  When you are done, CONGRATULATIONS, you've proved the law of sines!
+\item Finally explain how you have now proved the law of sines, CONGRATULATIONS!
+  \end{enumerate}
   \begin{freeResponse}
-    If we look at the first picture:
-    \begin{center}
+    \begin{enumerate}
+    \item If we look at the first picture:
+      \begin{center}
       \begin{tikzpicture}[geometryDiagrams]
         \coordinate (A) at (0,0);
         \coordinate (B) at (5,2);
@@ -158,8 +163,7 @@ the \textbf{law of sines} states
     \frac{a}{\sin(\alpha)} = \frac{c}{\sin(\gamma)}.
     \]
 
-    
-    For the second part, consider this picture:
+    \item For the second part, consider this picture:
     \begin{center}
       \begin{tikzpicture}[geometryDiagrams]
         \coordinate (A) at (0,0);
@@ -201,10 +205,11 @@ the \textbf{law of sines} states
       b\cdot\sin(\gamma) &= c\cdot \sin(\beta)\\
       \frac{b}{\sin(\beta)} &= \frac{c}{\sin(\gamma)}
     \end{align*}
-    Thus,
+    \item Thus,
     \[
     \frac{a}{\sin(\alpha)} = \frac{b}{\sin(\beta)} = \frac{c}{\sin(\gamma)}.
-    \]
+    \]  
+    \end{enumerate}
   \end{freeResponse}
 \end{question}
 \mynewpage

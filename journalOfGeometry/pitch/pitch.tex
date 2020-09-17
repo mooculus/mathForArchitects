@@ -12,7 +12,11 @@
 \maketitle
 
 \begin{listOutcomes}
-\item{SOME OUTCOME}
+\item Give the definitions of pitch and slope.
+\item Distinguish between pitch and slope.
+\item Solve a problem where slope is given.
+\item Deduce the slope in a given context.
+\item Use tangent to transform angles into slope and pitch.
 \end{listOutcomes}
 
 
@@ -20,85 +24,206 @@
 The steepness of a roof is called its \textit{slope} or
 \textit{pitch}. This is a fraction where the numerator is the
 \textit{rise} of the roof and the denominator is the \textit{run}. The
-denominator is usually $12$. Hence a slope of
-\[
-\frac{7}{12}
-\]
-says that the roof goes up $7''$ for every $12''$. Note there are
-several other notations for pitch. The one we are presenting here is
-not only rather common, it is also mathematically correct!
+denominator is usually $12$. Moreover, when one talks of ``pitch''
+they usually omit the denominator of $12$. Hence
+\begin{center}
+\fbox{a slope of $\frac{7}{12}$}\quad is the same as\quad \fbox{a pitch of $7$}.
+\end{center}
+This slope (or pitch) says that the roof goes up $7''$ for every
+$12''$. Note there are several other notations for pitch. The one we
+are presenting here is not only rather common, it is also
+mathematically correct!
 
 \begin{question}
-Here is a diagram of a roof:
-\[
-\includegraphics{pitch1.pdf}
-\]
-Find the area of the roof. 
+Here is a diagram of a roof that is pointed in the middle:
+\begin{center}
+  \begin{tikzpicture}[x=1.5cm,y=1.5cm]
+    \draw[ultra thick] (0,0) rectangle (4.8,3);
+    \draw[dashed] (.5,.5) rectangle (4.3,2.5);
+    \draw[ultra thick] (0,1.5) -- (4.8,1.5);
+    \draw[decoration={brace,raise=.2cm},decorate,thin] (0,0)--(0,3);
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(4.8,0);
+    \node at (-.4,1.5) {$30'$};
+    \node at (2.4,-.44) {$48'$};
+    \node[above] at (2.4,1.5) {slope of $6/12$};
+  \end{tikzpicture}
+\end{center}
+Find the area of the roof.  EXPLAIN the work in your solution.
+
+\begin{freeResponse}
+  If we look at the roof from the side, it looks like:
+  \begin{center}
+    \begin{tikzpicture}[x=1.5cm,y=1.5cm]
+    \draw[ultra thick] (0,0) -- (1.5,0)  -- (1.5, .75) -- (0,0) ;
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(1.5,0);
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (1.5,0)--(1.5,.75);
+    \node at (.75,-.4) {$15'$};
+    \node at (2.3,.375) {$15'\cdot 6/12$};
+    \end{tikzpicture}
+    
+  \end{center}
+    By the Pythagorean theorem, the length of the hypotenuse is
+    \[
+    \sqrt{15^2+ 7.5^2} \approx 16.77~\text{feet}.
+    \]
+    Thus, the area of the roof is
+    \[
+    2\cdot 16.77\cdot 48 \approx 1610~\text{square feet}.
+    \]
+\end{freeResponse}
 \end{question}
+\mynewpage
+
 
 \begin{question}
-Here is a diagram of a roof with different slopes for each side: 
-\[
-\includegraphics{pitch2.pdf}
-\]
-First find the missing slope, then find the area of the roof.
+Here is a diagram of with different slopes for each side:
+\begin{center}
+  \begin{tikzpicture}[x=1.5cm,y=1.5cm]
+    \draw[ultra thick] (0,0) rectangle (4.8,2.4);
+    \draw[dashed] (.3,.3) rectangle (4.5,2.1);
+    \draw[ultra thick] (0,1.6) -- (4.8,1.6);
+    \draw[decoration={brace,raise=.2cm},decorate,thin] (0,0)--(0,1.6);
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (4.8,1.6)--(4.8,2.4);
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(4.8,0);
+    \node at (-.4,.8) {$16'$};
+    \node at (5.2,2) {$8'$};
+    \node at (2.4,-.44) {$48'$};
+    \node at (2.4,1) {slope of $6/12$};
+  \end{tikzpicture}
+\end{center}
+First find the missing slope, then find the area of the roof. EXPLAIN
+the work in your solution.
+
+\begin{freeResponse}
+    If we look at the roof from the side, it looks like:
+  \begin{center}
+    \begin{tikzpicture}[x=1.5cm,y=1.5cm]
+    \draw[ultra thick] (0,0) -- (1.6,0)  -- (1.6, .8) -- (0,0) ;
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(1.6,0);
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (1.6,0)--(1.6,.8);
+    \node at (.8,-.4) {$16'$};
+    \node at (2.5,.4) {$16'\cdot 6/12$};
+    \end{tikzpicture}
+  \end{center}
+    By the Pythagorean theorem, the length of the hypotenuse is
+    \[
+    \sqrt{16^2+ 8^2} \approx 17.89~\text{feet}.
+    \]
+    Thus, the area of that side of the roof is
+    \[
+    17.89\cdot 48 \approx 859~\text{square feet}.
+    \]
+    For the other side, consider:
+    \begin{center}
+    \begin{tikzpicture}[x=2cm,y=2cm]
+    \draw[ultra thick] (0,0) -- (.8,0)  -- (.8, .8) -- (0,0) ;
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(.8,0);
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (.8,0)--(.8,.8);
+    \node at (.4,-.3) {$8'$};
+    \node at (1.7,.4) {$8'=16'\cdot 6/12$};
+    \end{tikzpicture}
+    \end{center}
+     By the Pythagorean theorem, the length of the hypotenuse is
+    \[
+    \sqrt{8^2 + 8^2} \approx 11.3~\text{feet}.
+    \]
+    So the area of this side of the roof is
+    \[
+    11.3\cdot 48 \approx 542~\text{square feet}.
+    \]
+    Thus the total area of the roof is approximately $1401$ square
+    feet.
+\end{freeResponse}
 \end{question}
+\mynewpage
 
-\begin{question}
-Here is a diagram of a roof: 
-\[
-\includegraphics{pitch3.pdf}
-\]
-The area of the roof is 1248 square feet. Find the slope of the
-roof.
-\end{question}
-
-\begin{question}
-Here is a diagram of a roof: 
-\[
-\includegraphics{pitch4.pdf}
-\]
-The area of the roof is 2808 square feet. Find the slope of the
-roof.
-\end{question}
-
-
-\begin{question}
-Explain how to measure the slope of a roof using two rulers and a
-level. Give examples of measurements that you could take, and say what
-the pitch would be in each case.
-\end{question}
-
-\break
 
 \begin{question}
 In Europe, it is more common to measure the steepness of a roof using
-the angle of the roof from horizontal. For example, a roof whose
-slope is $12/12$ has an angle of $45^\circ$. Complete the conversion table below:
+the angle of the roof from horizontal. Moreover what if you want to
+``think'' in angles \textbf{(easy to visualize)}, but give directions
+in terms of slope \textbf{(easier to measure)}. In this case,
+\textbf{tangent} comes to the rescue:
 \[
-{\renewcommand{\arraystretch}{1.5}
-\begin{array}{c|c}
-\text{slope} & \text{angle} \\ \hline\hline
-1/12 &  \\ \hline
-2/12 &  \\ \hline
-3/12 &  \\ \hline
-4/12 &  \\ \hline
-5/12 &  \\ \hline
-6/12 &  \\ \hline
-7/12 &  \\ \hline
-8/12 &  \\ \hline
-9/12 &  \\ \hline
-10/12 &  \\ \hline
-11/12 &  \\ \hline
-12/12 & 
-\end{array}}
+\tan(\theta) = \frac{\sin(\theta)}{\cos(\theta)} = \frac{\frac{opposite}{\cancel{hypotenuse}}}{\frac{adjacent}{\cancel{hypotenuse}}}=\frac{opposite}{adjacent}.
 \]
-Hint: You'll need to remember something from a previous course.
-\end{question}
 
-\begin{question}
-PITCH
+
+
+\begin{enumerate}
+\item If we have a line in the $(x,y)$-plane that makes an angle of
+  $\theta$ with the $x$-axis,
+  \begin{center}
+    \begin{tikzpicture}
+      \begin{axis}[
+          xmin=-2.2,
+          xmax=2.2,
+          ymin=-2.2,
+          ymax=2.2,
+          axis lines=center,
+          xlabel=$x$,
+          ticks=none,
+          ylabel=$y$,
+          every axis y label/.style={at=(current axis.above origin),anchor=south},
+          every axis x label/.style={at=(current axis.right of origin),anchor=west},disabledatascaling
+        ]
+        \addplot [ultra thick, black, smooth] {x+1};
+        \draw (-.4,0) arc (0:28:1);
+        \node[above] at (-.6,0) {$\theta$};
+        \node[right] at (.5,1.3) {$y=m\cdot x+b$};
+      \end{axis}
+    \end{tikzpicture}
+  \end{center}
+  Then $\tan(\theta) = m$. EXPLAIN using words, pictures, and so on,
+  WHY this is true.
+\item Find a whole number numerator $n$ such that a slope of
+  $\frac{n}{12}$ best corresponds to a $30^\circ$ angle. Show your
+  work.
+\item Find a pitch $p$ (a whole number) such that a pitch of $p$ best
+  corresponds to a $40^\circ$ angle. Show your work.
+\end{enumerate}
+\begin{freeResponse}
+  \begin{enumerate}
+  \item If the slope of the line is
+    \[
+    m = \frac{rise}{run}
+    \]
+    then we can draw:
+    \begin{center}
+      \begin{tikzpicture}
+        \begin{axis}[
+            xmin=-2.2,
+            xmax=2.2,
+            ymin=-2.2,
+            ymax=2.2,
+            axis lines=center,
+            xlabel=$x$,
+            ticks=none,
+            ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},disabledatascaling
+          ]
+          \addplot [ultra thick, black, smooth] {x+1};
+          \draw[line width=3,->] (.3,0)--(.3,1.3);          
+          \draw[line width=3,->] (-1,0)--(.3,0);
+          \draw (-.4,0) arc (0:28:1);
+          \node[above] at (-.6,0) {$\theta$};
+          \node[right] at (.3,.65) {$rise$};
+          \node[below] at (-.35,0) {$run$};
+        \end{axis}
+      \end{tikzpicture}
+    \end{center}
+    Thus
+    \[
+    \tan(\theta) =\frac{opposite}{adjacent} = \frac{rise}{run} = m.
+    \]
+  \item So $12\cdot \tan(30^\circ) \approx 6.93$. This means a slope
+    of $7/12$ would work best.
+
+  \item So $12\cdot \tan(40^\circ)\approx 10$. This means a pitch of
+    $10$ would be best.
+  \end{enumerate}
+  \end{freeResponse}
 \end{question}
-\mynewpage
 
 \end{document}

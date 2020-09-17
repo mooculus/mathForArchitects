@@ -7,35 +7,257 @@
 
 \begin{document}
 \begin{abstract}
-  Sine and cosine encode information about right triangles.
+   The law of cosines can help us draw triangles.
 \end{abstract}
 \maketitle
 
 \begin{listOutcomes}
-\item Something
+\item State the law of cosines.
+\item Explain why the law of cosines is true.
+\item Use the law of cosines to solve a triangle.
+\item Use the law of sines to write a \snap\ block that draws triangles
+  based on the SSS congruence theorem.
+\item Use the law of sines to write a \snap\ block that draws triangles
+  based on the SAS congruence theorem.
+\item Reduce a problem to a previously solved problem.
 \end{listOutcomes}
 \mynewpage
 
+Given a triangle
+\begin{center}
+      \begin{tikzpicture}[geometryDiagrams]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (5,2);
+        \coordinate (C) at (7,0);
+        \tkzDrawSegment (A,B)
+        \tkzDrawSegment (A,C)
+        \tkzDrawSegment (C,B)
+        \tkzLabelSegment[above left](A,B){$c$}
+        \tkzLabelSegment[below](A,C){$b$}
+        \tkzLabelSegment[above right](B,C){$a$}  
 
+        \tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
+        \tkzLabelAngle[pos=1.2](C,A,B){$\alpha$}
+
+        \tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
+        \tkzLabelAngle[pos=.5](A,B,C){$\beta$}
+
+        \tkzMarkAngle[mark=,size=.9,thin](B,C,A)
+        \tkzLabelAngle[pos=.6](B,C,A){$\gamma$}
+        
+      \end{tikzpicture}
+\end{center}
+the \textbf{law of sines} states
+\[
+c^2 = a^2 + b^2 - 2ab\cos(\gamma).
+\]
+  
 
 
 \begin{question}
-  \[
-  c^2 = a^2 + b^2 - 2ab\cos(\theta)
-  \]
+  We'll explain WHY the law of cosines is true.
+  \begin{enumerate}
+    \item Use this picture
+      \begin{center}
+        \begin{tikzpicture}[geometryDiagrams]
+          \coordinate (A) at (0,0);
+          \coordinate (B) at (5,2);
+          \coordinate (C) at (7,0);
+          \tkzDrawSegment (A,B)
+          \tkzDrawSegment (A,C)
+          \tkzDrawSegment (C,B)
+          \tkzLabelSegment[above left](A,B){$c$}
+          %\tkzLabelSegment[below](A,C){$b$}
+          \tkzLabelSegment[above right](B,C){$a$}  
+          
+          \tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
+          \tkzLabelAngle[pos=1.2](C,A,B){$\alpha$}
+          
+          %\tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
+          %\tkzLabelAngle[pos=.5](A,B,C){$\beta$}
+          
+          \tkzMarkAngle[mark=,size=.9,thin](B,C,A)
+          \tkzLabelAngle[pos=.6](B,C,A){$\gamma$}
+          \tkzDrawLine[altitude](A,B,C)\tkzGetPoint{D}
+          \tkzMarkRightAngle[thin](B,D,C)
+          \tkzLabelSegment[left](D,B){$h$}
+          \tkzLabelSegment[below](A,D){$e$}
+          \tkzLabelSegment[below](C,D){$d$}
+        \end{tikzpicture}
+      \end{center}
+      to explain why:
+      \begin{align*}
+        h &= a\cdot \sin(\gamma)\\
+        d &= a\cdot \cos(\gamma) \\
+        e &= b - a\cdot \cos(\gamma)
+      \end{align*}
+    \item Now substitute/expand
+      \[
+      c^2 = h^2 + e^2
+      \]
+      to conclude:
+      \[
+      c^2 = a^2 + b^2 - 2ab\cos(\gamma)
+      \]
+      \begin{hint}
+        Recall that $\cos^2(\theta) + \sin^2(\theta) = 1$.
+      \end{hint}
+  \end{enumerate}
+\end{question}
+\mynewpage
+
+\begin{question}
+  Create a \snap\ block that will draw triangles based on the SSS
+  congruence theorem.  As a gesture of friendship, I've started the
+  block for you:
+  \begin{center}
+    \includegraphics{sssBlockBLANK}
+  \end{center}
+  It's your job to USE THE LAW OF COSINES to fill in the
+  blanks. EXPLAIN how you used the law of cosines, and show off your
+  work by giving screenshots of your SCRIPTS and STAGES as provided
+  from \snap.
+  \begin{freeResponse}
+    Consider this triangle:
+    \begin{center}
+        \begin{tikzpicture}[geometryDiagrams]
+          \coordinate (A) at (0,0);
+          \coordinate (B) at (5,2);
+          \coordinate (C) at (7,0);
+          \tkzDrawSegment (A,B)
+          \tkzDrawSegment (A,C)
+          \tkzDrawSegment (C,B)
+          \tkzLabelSegment[above left](A,B){$side~1$}
+          \tkzLabelSegment[below](A,C){$side~3$}
+          \tkzLabelSegment[above right](B,C){$side~2$}  
+          
+          %\tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
+          %\tkzLabelAngle[pos=1.2](C,A,B){$\alpha$}
+          
+          \tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
+          \tkzLabelAngle[pos=.5](A,B,C){$\theta$}
+          
+          %% \tkzMarkAngle[mark=,size=.9,thin](B,C,A)
+          %% \tkzLabelAngle[pos=.6](B,C,A){$\gamma$}
+          
+        \end{tikzpicture}
+      \end{center}
+
+
+    
+    Note by the law of cosines:
+    \[
+    (\mathrm{side~3})^2 = (\mathrm{side~1})^2 + (\mathrm{side~2})^2 - 2\cdot (\mathrm{side~1})(\mathrm{side~2})\cos(\theta)
+    \]
+    Hence the angle between $\mathrm{side~1}$ and $\mathrm{side~2}$ is given by:
+    \[
+    \theta = \arccos\left(\frac{(\mathrm{side~1})^2 + (\mathrm{side~2})^2- (\mathrm{side~3})^2}{2\cdot (\mathrm{side~1})(\mathrm{side~2})})\right) 
+    \]
+    This is the first angle we need for our script.
+
+    Now consider this triangle:
+    \begin{center}
+        \begin{tikzpicture}[geometryDiagrams]
+          \coordinate (A) at (0,0);
+          \coordinate (B) at (5,2);
+          \coordinate (C) at (7,0);
+          \tkzDrawSegment (A,B)
+          \tkzDrawSegment (A,C)
+          \tkzDrawSegment (C,B)
+          \tkzLabelSegment[above left](A,B){$side~1$}
+          \tkzLabelSegment[below](A,C){$side~3$}
+          \tkzLabelSegment[above right](B,C){$side~2$}  
+          
+          %\tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
+          %\tkzLabelAngle[pos=1.2](C,A,B){$\alpha$}
+          
+          %\tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
+          %\tkzLabelAngle[pos=.5](A,B,C){$\theta$}
+          
+          \tkzMarkAngle[mark=,size=.9,thin](B,C,A)
+          \tkzLabelAngle[pos=.6](B,C,A){$\theta$}
+          
+        \end{tikzpicture}
+      \end{center}
+
+
+    
+    Note by the law of cosines:
+    \[
+    (\mathrm{side~1})^2 = (\mathrm{side~2})^2 + (\mathrm{side~3})^2 - 2\cdot (\mathrm{side~2})(\mathrm{side~3})\cos(\theta)
+    \]
+    Hence the angle between $\mathrm{side~1}$ and $\mathrm{side~2}$ is given by:
+    \[
+    \theta = \arccos\left(\frac{(\mathrm{side~2})^2 + (\mathrm{side~3})^2- (\mathrm{side~1})^2}{2\cdot (\mathrm{side~2})(\mathrm{side~3})})\right) 
+    \]
+    This is the the second angle we need for our script.
+
+  
+    Here is my script and my stage:
+    \begin{center}
+      \includegraphics[width=.4\textwidth]{sssBlockCOMPLETE}   \qquad \fbox{\includegraphics[width=.4\textwidth]{sssStage.png}}
+    \end{center}
+\end{freeResponse}
   
   
 \end{question}
 \mynewpage
 
+
+
 \begin{question}
-  SSS then SAS.
+  Create a \snap\ block that will draw triangles based on the SAS
+  congruence theorem.  As a gesture of friendship, I've started the
+  block for you:
+  \begin{center}
+    \includegraphics{sasBlockBLANK}
+  \end{center}
+  It's your job to USE THE LAW OF COSINES to fill in the
+  blanks. EXPLAIN how you used the law of cosines, and show off your
+  work by giving screenshots of your SCRIPTS and STAGES as provided
+  from \snap.
+  \begin{freeResponse}
+    Consider this triangle:
+    \begin{center}
+        \begin{tikzpicture}[geometryDiagrams]
+          \coordinate (A) at (0,0);
+          \coordinate (B) at (5,2);
+          \coordinate (C) at (7,0);
+          \tkzDrawSegment (A,B)
+          \tkzDrawSegment (A,C)
+          \tkzDrawSegment (C,B)
+          \tkzLabelSegment[above left](A,B){$side~1$}
+          \tkzLabelSegment[below](A,C){$side~3$}
+          \tkzLabelSegment[above right](B,C){$side~2$}  
+          
+          %\tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
+          %\tkzLabelAngle[pos=1.2](C,A,B){$\alpha$}
+          
+          \tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
+          \tkzLabelAngle[pos=.5](A,B,C){$\theta$}
+          
+          %% \tkzMarkAngle[mark=,size=.9,thin](B,C,A)
+          %% \tkzLabelAngle[pos=.6](B,C,A){$\gamma$}
+          
+        \end{tikzpicture}
+      \end{center}
+    Now we can find the third side via the law of cosines
+    \[
+    (\mathrm{side~3})^2 = (\mathrm{side~1})^2 + (\mathrm{side~2})^2 - 2\cdot (\mathrm{side~1})(\mathrm{side~2})\cos(\theta)
+    \]
+    so
+    \[
+    side~3= \sqrt{(\mathrm{side~1})^2 + (\mathrm{side~2})^2 - 2\cdot (\mathrm{side~1})(\mathrm{side~2})\cos(\theta)}.
+    \]
+    Now that we know the three sides, we can use our previous block.
+    Here is my script and my stage:
+    \begin{center}
+      \includegraphics[width=.4\textwidth]{sasBlockCOMPLETE}   \qquad \fbox{\includegraphics[width=.4\textwidth]{sasStage.png}}
+    \end{center}
+\end{freeResponse}
   
   
 \end{question}
-\mynewpage
-
-
 
 
 \end{document}
