@@ -148,6 +148,25 @@ pictures, and so on, as needed/helpful in your explanation.
   EXPLAIN how the script works, block-by-block as you would like to
   have it explained to you. Use words, pictures, and so on, as
   needed/helpful in your explanation.
+
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item We input the available width $w$ and height $h$.
+    \item Next we introduce variables for the horizontal regulation
+      $x-reg$, the vertical regulation $y-reg$, the minimum possible
+      number of steps $min-stairs$, the maximum number of steps
+      $max-stairs$, and finally $stairs$ will be our list of
+      solutions.
+    \item We set values for $x-reg$, $y-reg$, make $stairs$ a list,
+      and get values for $max-stairs$ and $min-stairs$.
+    \item\label{stairgoto} Finally, we make sure a staircase is possible by seeing if
+      \[
+      max-stairs \ge min-stairs
+      \]
+    \item If one is, we add $min-stairs$ to our list.
+    \item We now add $1$ to the minimum number of stairs, and goto step \ref{stairgoto}.
+    \end{enumerate}
+  \end{freeResponse}
 \end{question}
 \mynewpage
 
@@ -157,19 +176,44 @@ pictures, and so on, as needed/helpful in your explanation.
 \begin{question}
   Someone once said,
   \begin{quote}
-    The staircase problem isn't hard, if you want to
- know if a staircase will fit in a space of $w\times h$, all you need
- to do is see if
- \[
- \frac{w}{h} \ge 1.29.
- \]
+    The staircase problem isn't hard, you can build a staircase that
+    will fit in a space of $w\times h$, if and only if
+    \[
+    \frac{w}{h} \ge 1.29.
+    \]
   \end{quote}
   \begin{enumerate}
     \item How did this person come up with this ``rule-of-thumb?''
     \item Is this correct?
-    \item Does it matter if we change $\ge$ to $>$?
+    \item Can you build a staircase where $w=130$ $h=100$? 
   \end{enumerate}
   In each case, explain your reasoning with words, pictures, examples, and so on.
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item This person took minimum depth of $5/6'$ and divided it by
+      the maximum height of $31/48'$ to get $1.29$. They then reason that if
+      \[
+      \frac{w}{h} <1.29.
+      \]
+      then a stair case CANNOT be built, because the stairs will be
+      too narrow and tall. Moreover, they assert that if
+      \[
+      \frac{w}{h} \ge 1.29.
+      \]
+    \item They are not correct! For example you cannot build a
+      staircase when $w=13'$ and $h=10'$. Behold:
+      \begin{center}
+        \includegraphics{answer-13-10-result.png}
+      \end{center}
+
+    \item You CAN make a staircase that will fit when $w=130'$ and
+      $h=100'$. Behold:
+      \begin{center}
+        \includegraphics{answer-130-100-result.png}
+      \end{center}
+      Very interesting!
+    \end{enumerate}
+  \end{freeResponse}
 \end{question}
 
 
