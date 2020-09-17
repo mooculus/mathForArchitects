@@ -1,0 +1,160 @@
+\documentclass[noauthor,nooutcomes,12pt,handout,hints]{ximera}
+
+\input{../preamble.tex}
+
+\title{Arccosine} \author{Bart Snapp}
+
+\begin{document}
+\begin{abstract}
+  Arccosine tells us the arc covered by an angle based on the value of
+  cosine.
+\end{abstract}
+\maketitle
+
+\begin{listOutcomes}
+\item Understand that arccosine accepts a ratio of sides as input, and
+  outputs the measure of an angle.
+\item Understand that arccosine is the inverse function of cosine for
+  angles between $0$ and $180$ degrees.
+\item Recognize when arccosine and cosine undo each other, and also
+  when they do not undo each other.
+\end{listOutcomes}
+\mynewpage
+
+
+
+
+\begin{question}
+  Here is a table of cosine and arccosine values:
+  \[
+  \begin{array}{|l|l|} \hline
+    \cos(\theta)  = x     & \arccos(x) = \theta \\ \hline\hline
+    \cos(0)  = 1     & \arccos(1) = 0 \\ \hline
+    \cos(30) = 0.866 & \arccos(0.866) = 30\\ \hline
+    \cos(60) = 0.5 & \arccos(0.5) = 60\\ \hline
+    \cos(90) = 0 & \arccos(0) = 90\\ \hline
+    \cos(120) = -0.5 & \arccos(-0.5) = 120\\ \hline
+    \cos(150) = -0.866 & \arccos(-0.866) = 150\\ \hline
+    \cos(180) =-1 & \arccos(-1) = 180  \\\hline
+  \end{array}
+  \]
+  Explain what arccosine does when $0^\circ \le \theta \le 180^\circ$
+  and $-1\le x\le 1$, as based on the table above.
+  \begin{freeResponse}
+    If you have an angle between $0^\circ$ and $180^\circ$ and $-1\le
+    x\le 1$, then arccosine ``undoes'' cosine and vice versa. So if
+    $0^\circ \le \theta \le 180^\circ$ and $-1\le x\le 1$,
+    \[
+    \cos(\arccos(x)) = x\qquad\text{and}\qquad \arccos(\cos(\theta)) =
+    \theta.
+    \]
+  \end{freeResponse}
+\end{question}
+\mynewpage
+
+
+
+\begin{question}
+  Here are more values of cosine and arccosine:
+  \[
+  \begin{array}{|l|l|}
+    \hline
+    \cos(\theta) =x      & \arccos(x) = \theta\\ \hline\hline
+    \cos(180) =-1      & \arccos(-1) = 180\\ \hline
+    \cos(210) = -0.866 & \arccos(-0.866) = 150\\ \hline
+    \cos(240) = -0.5   & \arccos(-0.5) = 120\\ \hline
+    \cos(270) = 0      & \arccos(0) = 90\\ \hline
+    \cos(300) = 0.5     & \arccos(0.5) = 60\\ \hline
+    \cos(330) = 0.866   & \arccos(0.866) = 30\\ \hline
+    \cos(360)  = 1     & \arccos(1) = 0 \\    \hline
+  \end{array}
+  \]
+  Use the information from problem 1 and 2 to enhance your answer from
+  problem 1. That is EXPLAIN what arccosine does when $180^\circ \le
+  \theta \le 360^\circ$ and $-1\le x\le 1$, as based on the table
+  above.
+  \begin{freeResponse}
+    If you have an angle $\theta$ between $180^\circ$ and $360^\circ$
+    and $-1\le x\le 1$, then cosine still undoes arccosine,
+    \[
+    \cos(\arccos(x)) = x
+    \]
+    BUT arccosine no longer undoes ``cosine.'' Instead in this case
+    \[
+    \arccos(\cos(\theta)) = 360-\theta.
+    \]
+  \end{freeResponse}
+\end{question}
+\mynewpage
+
+
+
+\begin{question}
+  One of the following statements is TRUE, the other is FALSE,
+  \[
+  \cos(\arccos(x)) = x \qquad \text{or} \qquad \arccos(\cos(\theta))
+  =\theta.
+  \]
+  EXPLAIN:
+  \begin{enumerate}
+  \item WHY we use two different letters, $x$ and $\theta$. In
+    particular, explain what $x$ and $\theta$ represent.
+  \item WHY the true statement is true.
+  \item WHY the false statement is false.
+  \end{enumerate}
+  Use words, pictures, examples, and so on, as needed/helpful in your
+  explanations.
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item We use two different letters because they represent
+      different things.
+      \begin{align*}
+        \theta &= \text{an angle},\\
+        x &=\text{a number between $-1$ and $1$}.
+      \end{align*}
+    \item The TRUE statement is:
+      \[
+      \cos(\arccos(x)) = x
+      \]
+      This is always true, because:
+      \begin{center}
+        \begin{tikzpicture} 
+          \node[anchor=east,rounded corners=5pt,draw] at (0,0) {$-1\le x\le 1$};
+          \draw [->,thick] (.2,.5) to [out=30,in=150] (2.8,.5);
+          \node[anchor=west,rounded corners=5pt,draw] at (3,0) {$0^\circ\le \theta\le 180^\circ$};
+          \draw [->,thick] (2.8,-.5) to [out=-150,in=-30] (.2,-.5);
+          \node at (1.5,1.2) {$\arccos$};
+          \node at (1.5,-1.2) {$\cos$};
+        \end{tikzpicture}
+      \end{center}
+      Arccosine turns ratios between $-1$ and $1$ into angles, then
+      cosine sends these angles back to the ratios.
+    \item The FALSE statement is:
+      \[
+      \arccos(\cos(\theta)) = \theta
+      \]
+      This is false if $\theta$ is not between $0^\circ$ and
+      $180^\circ$, because:
+      \begin{center}
+        \begin{tikzpicture} 
+          \node[anchor=east,rounded corners=5pt,draw] at (0,0) {$180^\circ\le \theta\le 360^\circ$};
+          \draw [->,thick] (.2,0) to  (2.8,0);
+          \node[anchor=west,rounded corners=5pt,draw] at (3,0) {$-1\le x\le 1$};
+          \draw [->,thick] (5.65,0) to  (8.25,0);
+          \node[anchor=west,rounded corners=5pt,draw] at (8.45,0) {$0^\circ\le \theta\le 180^\circ$};
+          \node at (1.5,.5) {$\cos$};
+          \node at (6.95,.5) {$\arccos$};
+        \end{tikzpicture}
+      \end{center}
+      Cosine turns angles (even those outside the range of $0^\circ$
+      to $180^\circ$) into ratios between $-1$ and $1$. Arccosine
+      turns these into angles between $0^\circ$ and $180^\circ$. If
+      you start with an angle $\theta$ outside of this range, $\arccos(\cos(\theta)) \neq \theta$.
+      
+    \end{enumerate}
+  \end{freeResponse}
+\end{question}
+
+
+
+\end{document}
