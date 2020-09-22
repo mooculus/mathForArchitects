@@ -1,4 +1,4 @@
-\documentclass{ximera}
+\documentclass[12pt,noauthor,nooutcomes,handout,hints]{ximera}
 
 \input{../preamble.tex}
 
@@ -7,7 +7,7 @@
 
 \begin{document}
 \begin{abstract}
-  SOMETHING
+  We think about pitch and slope.
 \end{abstract}
 \maketitle
 
@@ -33,6 +33,9 @@ This slope (or pitch) says that the roof goes up $7''$ for every
 $12''$. Note there are several other notations for pitch. The one we
 are presenting here is not only rather common, it is also
 mathematically correct!
+
+\mynewpage
+
 
 \begin{question}
 Here is a diagram of a roof that is pointed in the middle:
@@ -169,7 +172,7 @@ in terms of slope \textbf{(easier to measure)}. In this case,
         ]
         \addplot [ultra thick, black, smooth] {x+1};
         \draw (-.4,0) arc (0:28:1);
-        \node[above] at (-.6,0) {$\theta$};
+        \node at (-.6,.2) {$\theta$};
         \node[right] at (.5,1.3) {$y=m\cdot x+b$};
       \end{axis}
     \end{tikzpicture}
@@ -207,7 +210,7 @@ in terms of slope \textbf{(easier to measure)}. In this case,
           \draw[line width=3,->] (.3,0)--(.3,1.3);          
           \draw[line width=3,->] (-1,0)--(.3,0);
           \draw (-.4,0) arc (0:28:1);
-          \node[above] at (-.6,0) {$\theta$};
+          \node at (-.6,.2) {$\theta$};
           \node[right] at (.3,.65) {$rise$};
           \node[below] at (-.35,0) {$run$};
         \end{axis}
