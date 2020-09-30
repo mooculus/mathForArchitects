@@ -1,4 +1,4 @@
-\documentclass[noauthor,nooutcomes,12pt,hints]{ximera}
+\documentclass[noauthor,nooutcomes,12pt,hints,handout]{ximera}
 
 \input{../preamble.tex}
 
@@ -12,7 +12,11 @@
 \maketitle
 
 \begin{listOutcomes}
-\item 
+\item Revisit problems, only to find more problems.
+\item Interpret data, produce theories, test said theories.
+\item Successfully navigate issues of scale, direction, and
+  orientation.
+\item Disseminate basic mathematical knowledge.
 \end{listOutcomes}
 
 You've been hired (for points, not hard cash) by the \mooculus\ design
@@ -22,10 +26,11 @@ that draw triangles based on the congruence theorems:
   \includegraphics{SSSblank.png} \qquad \includegraphics{SASblank.png} \\[5mm]
   \includegraphics{ASAblank.png} \qquad \includegraphics{SAAblank.png}
 \end{center}
-and a block that lists viable staircases:
+and a block that draws a viable staircase (when possible):
 \begin{center}
-  \includegraphics{staircaseBlank.png}
+  \includegraphics{drawStaircaseBlockBlank.png}
 \end{center}
+    
 
 Unfortunately the person who wrote the blocks left the
 \mooculus\ design company to pursue other options \textit{before} they
@@ -40,6 +45,76 @@ worry, as a gesture of friendship, we provide that code for you.
 
 
 \mynewpage
+
+\begin{question}%% ASA
+  Demonstrate how to use \raisebox{-.4\height}{\includegraphics{ASAblank.png}} by filling in the
+  blanks in the table below.
+  \begin{center}
+    \begin{tabular}{|c||c|}\hline
+      &  \\
+      \includegraphics{EgStageII.png} & \includegraphics{EgStageI.png} \\
+      \includegraphics{ASAstampBlank.png} & \includegraphics{ASAstampBlank.png} \\
+      \hline\hline
+      &  \\
+      \includegraphics{EgStageIII.png} & \includegraphics{EgStageIV.png} \\
+      \includegraphics{ASAstampBlank.png} & \includegraphics{ASAstampBlank.png} \\\hline
+    \end{tabular}
+  \end{center}
+  The STAMP block records where the turtle starts. As a gesture of
+  friendship, I point out that this is a $(104, 153, 185)$ right
+  triangle. As usual, you'll need to show your SCRIPTS and STAGES.
+  \begin{freeResponse}
+    Here they are:
+    \begin{center}
+    \begin{tabular}{|c||c|}\hline
+      &  \\
+      \includegraphics{stampStageII.png} & \includegraphics{stampStageI.png} \\
+      \includegraphics{ASAstampScriptII.png} & \includegraphics{ASAstampScriptI.png} \\
+      \hline\hline
+      &  \\
+      \includegraphics{stampStageIII.png} & \includegraphics{stampStageIV.png} \\
+      \includegraphics{ASAstampScriptIII.png} & \includegraphics{ASAstampScriptIV.png} \\\hline
+    \end{tabular}
+  \end{center}
+  \end{freeResponse}
+\end{question}
+\mynewpage
+
+\begin{question}%% SAA
+  Demonstrate how to use \raisebox{-.4\height}{\includegraphics{SAAblank.png}} by filling in the
+  blanks in the table below.
+  \begin{center}
+    \begin{tabular}{|c||c|}\hline
+      &  \\
+      \includegraphics{EgStageII.png} & \includegraphics{EgStageI.png} \\
+      \includegraphics{SAAstampBlank.png} & \includegraphics{SAAstampBlank.png} \\
+      \hline\hline
+      &  \\
+      \includegraphics{EgStageIII.png} & \includegraphics{EgStageIV.png} \\
+      \includegraphics{SAAstampBlank.png} & \includegraphics{SAAstampBlank.png} \\\hline
+    \end{tabular}
+  \end{center}
+  The STAMP block records where the turtle starts. As a gesture of
+  friendship, I point out that this is a $(104, 153, 185)$ right
+  triangle. As usual, you'll need to show your SCRIPTS and STAGES.
+  \begin{freeResponse}
+    Here they are:
+    \begin{center}
+    \begin{tabular}{|c||c|}\hline
+      &  \\
+      \includegraphics{stampStageII.png} & \includegraphics{stampStageI.png} \\
+      \includegraphics{SAAstampScriptII.png} & \includegraphics{SAAstampScriptI.png} \\
+      \hline\hline
+      &  \\
+      \includegraphics{stampStageIII.png} & \includegraphics{stampStageIV.png} \\
+      \includegraphics{SAAstampScriptIII.png} & \includegraphics{SAAstampScriptIV.png} \\\hline
+    \end{tabular}
+  \end{center}
+  \end{freeResponse}
+\end{question}
+\mynewpage
+
+
 
 \begin{question}%% SSS
   Demonstrate how to use \raisebox{-.4\height}{\includegraphics{SSSblank.png}} by filling in the
@@ -63,11 +138,11 @@ worry, as a gesture of friendship, we provide that code for you.
     \begin{center}
     \begin{tabular}{|c||c|}\hline
       &  \\
-      \includegraphics{SSSstampStageII.png} & \includegraphics{SSSstampStageI.png} \\
+      \includegraphics{stampStageII.png} & \includegraphics{stampStageI.png} \\
       \includegraphics{SSSstampScriptII.png} & \includegraphics{SSSstampScriptI.png} \\
       \hline\hline
       &  \\
-      \includegraphics{SSSstampStageIII.png} & \includegraphics{SSSstampStageIV.png} \\
+      \includegraphics{stampStageIII.png} & \includegraphics{stampStageIV.png} \\
       \includegraphics{SSSstampScriptIII.png} & \includegraphics{SSSstampScriptIV.png} \\\hline
     \end{tabular}
   \end{center}
@@ -76,36 +151,93 @@ worry, as a gesture of friendship, we provide that code for you.
 \mynewpage
 
 \begin{question}%% SAS
-  Demonstrate how to use \raisebox{-.4\height}{\includegraphics{SASblank.png}} by filling in the
-  blanks in the table below.
+  The block \raisebox{-.4\height}{\includegraphics{SASblank.png}} seems to have some trouble.
+  \begin{enumerate}
+  \item Identify what the current issue is with the SAS block.
+  \item Rewrite the block
+    \raisebox{-.4\height}{\includegraphics{SASblank.png}} so that
+    tables like the ones above can be made. Show your SCRIPT.
+  \item Present a table like the ones above for the new SAS block.
+  \end{enumerate}
+  As a gesture of friendship, I'll start you off with the new block:
   \begin{center}
+    \includegraphics{newSASBLANK.png}
+  \end{center}
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item The issue is that no matter how you change the numbers in
+      the SAS block, we cannot change the orientation of the right
+      triangle. This is UNACCEPTABLE.
+    \item Here is my new block:
+      \begin{center}
+        \includegraphics[width=.8\textwidth]{newSASblock.png}
+      \end{center}
+    \item Here is my table:
+      \begin{center}
     \begin{tabular}{|c||c|}\hline
       &  \\
-      \includegraphics{EgStageII.png} & \includegraphics{EgStageI.png} \\
-      \includegraphics{SASstampBlank.png} & \includegraphics{SASstampBlank.png} \\
+      \includegraphics{stampStageII.png} & \includegraphics{stampStageI.png} \\
+      \includegraphics{SASstampScriptII.png} & \includegraphics{SASstampScriptI.png} \\
       \hline\hline
       &  \\
-      \includegraphics{EgStageIII.png} & \includegraphics{EgStageIV.png} \\
-      \includegraphics{SASstampBlank.png} & \includegraphics{SASstampBlank.png} \\\hline
+      \includegraphics{stampStageIII.png} & \includegraphics{stampStageIV.png} \\
+      \includegraphics{SASstampScriptIII.png} & \includegraphics{SASstampScriptIV.png} \\\hline
     \end{tabular}
   \end{center}
-  The STAMP block records where the turtle starts. As a gesture of
-  friendship, I point out that this is a $(104, 153, 185)$ right
-  triangle. As usual, you'll need to show your SCRIPTS and STAGES.
+    \end{enumerate}
+  \end{freeResponse}
 \end{question}
 \mynewpage
 
-\begin{question}%% ASA
-\end{question}
-\mynewpage
 
-\begin{question}%% SAA
-\end{question}
-\mynewpage
 
 \begin{question}%% STAIRS
+  As it turns out the \mooculus\ design company has a fancy stairs
+  block:
+  \begin{center}
+  \includegraphics{drawStaircaseBlockBlank.png}
+  \end{center}
+  \begin{enumerate}
+    \item Suppose that $1$ foot is represent by $20$ pixels. How many
+      pixels is $5/6$ feet represented by?
+    \item Suppose that $1$ foot is represent by $20$ pixels. How many
+      pixels is $31/48$ feet represented by?
+    \item Finally, they want you to document how
+      \raisebox{-.4\height}{\includegraphics{drawStaircaseBlockBlank.png}} works
+      by producing scripts that draw these two STAGES:
+      \begin{center}
+        \begin{tabular}{|c||c|}\hline
+          \includegraphics{fwdStairStage.png} & \includegraphics{backStairStage.png} \\ \hline
+        \end{tabular}
+      \end{center}
+      \textbf{Supposing that one foot is represented by $\boldsymbol{20}$
+        pixels,} those STAGES above represent a staircase in a $w=6'$ by
+      $h=5'$ space with stairs that are within the tolerance of city
+      code.
+      
+      Your job is to describe how to produce both of those STAGES using
+      \begin{center}
+        \includegraphics{stampDrawStaircaseBlockBlank.png}
+      \end{center}
+      by finding the appropriate numbers. Show off your work by displaying
+      your SCRIPTS and STAGES.
+  \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item Well $5/6$ feet would be $20\cdot 5/6 = 50/3$ pixels.
+    \item And $31/48$ feet would be $20 \cdot 31/49=155/12$ pixels.
+    \item Here are my Stages and Scripts:
+      \begin{center}
+        \begin{tabular}{|c|}\hline
+          \includegraphics{stampStageStairsFwd.png} \\
+          \includegraphics{stampDrawStaircaseBlockFwd.png}  \\\hline\hline
+          \includegraphics{stampStageStairsRev.png} \\
+          \includegraphics{stampDrawStaircaseBlockRev.png}\\\hline
+        \end{tabular}
+      \end{center}
+    \end{enumerate}
+  \end{freeResponse}
 \end{question}
-\mynewpage
 
 
 \end{document}
