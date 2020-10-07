@@ -1,4 +1,4 @@
-\documentclass[noauthor,nooutcomes,12pt,handout,hints]{ximera}
+\documentclass[noauthor,nooutcomes,12pt,hints]{ximera}
 
 \input{../preamble.tex}
 
@@ -8,7 +8,7 @@
 
 \begin{document}
 \begin{abstract}
-  Something
+  We explore the symmetries of the regular triangle.
 \end{abstract}
 \maketitle
 
@@ -31,26 +31,70 @@
   \]
   Use \snap\ to make STAGES for each symmetry of the regular triangle,
   and display them as a function as I did above.
+  \begin{freeResponse}
+    There are SIX symmetries of the regular triangle.
+    \begin{enumerate}
+    \item $\raisebox{-.4\height}{\includegraphics[width=2in]{eTri.png}}\resizebox{.5in}{!}{$\mapsto$} \raisebox{-.4\height}{\includegraphics[width=2in]{eTri.png}}$
+    \item $\raisebox{-.4\height}{\includegraphics[width=2in]{eTri.png}}\resizebox{.5in}{!}{$\mapsto$} \raisebox{-.4\height}{\includegraphics[width=2in]{rTri.png}}$
+    \item $\raisebox{-.4\height}{\includegraphics[width=2in]{eTri.png}}\resizebox{.5in}{!}{$\mapsto$} \raisebox{-.4\height}{\includegraphics[width=2in]{r2Tri.png}}$
+    \item $\raisebox{-.4\height}{\includegraphics[width=2in]{eTri.png}}\resizebox{.5in}{!}{$\mapsto$} \raisebox{-.4\height}{\includegraphics[width=2in]{fTri.png}}$
+    \item $\raisebox{-.4\height}{\includegraphics[width=2in]{eTri.png}}\resizebox{.5in}{!}{$\mapsto$} \raisebox{-.4\height}{\includegraphics[width=2in]{rfTri.png}}$
+    \item $\raisebox{-.4\height}{\includegraphics[width=2in]{eTri.png}}\resizebox{.5in}{!}{$\mapsto$} \raisebox{-.4\height}{\includegraphics[width=2in]{r2fTri.png}}$
+    \end{enumerate}
+  \end{freeResponse}
 \end{question}
 \mynewpage
 
 \begin{question}
-  Let $r$ be a clockwise $120^\circ$ rotation about the center of the
-  triangle. Let $f$ be a flip across a vertical line down the middle
-  of the triangle. Find pictures representing:
+  Let $e$ be the do-nothing symmetry, $r$ be a clockwise $120^\circ$
+  rotation about the center of the triangle, and $f$ be a flip across
+  a vertical line down the middle of the triangle. Display the result
+  of applying the following functions (actions/transformations) to
+  your triangle:
   \begin{enumerate}
+  \item $e$
   \item $r$
   \item $r^2$
   \item $f$
-  \item $SF$
+  \item $rf$
   \item $r^2 f$.
   \end{enumerate}
   In each case, show off your work by displaying your SCRIPT and
   STAGE.
   \begin{hint}
     Note, when looking at something like $rf$, first we flip the
-    triangle, then we rotate it. 
+    triangle, then we rotate it. Just like if $f(x) = x^2$ and $g(x) =
+    2x+1$, then when we look at $(f\circ g)(x)$ we apply $g$ first,
+    and $f$ second.
   \end{hint}
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item For $e$ we have:
+      \begin{center}
+        \includegraphics[width=.3\textwidth]{eTriSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{eTri.png}}
+      \end{center}
+    \item For $r$ we have:
+      \begin{center}
+        \includegraphics[width=.3\textwidth]{rTriSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{rTri.png}}
+      \end{center}
+    \item For $r^2$ we have:
+      \begin{center}
+        \includegraphics[width=.3\textwidth]{r2TriSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{r2Tri.png}}
+      \end{center}
+    \item For $f$ we have:
+      \begin{center}
+        \includegraphics[width=.3\textwidth]{fTriSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{fTri.png}}
+      \end{center}
+    \item For $rf$ we have:
+      \begin{center}
+        \includegraphics[width=.3\textwidth]{rfTriSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{rfTri.png}}
+      \end{center}
+    \item For $r^2f$ we have:
+      \begin{center}
+        \includegraphics[width=.3\textwidth]{r2fTriSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{r2fTri.png}}
+      \end{center}
+    \end{enumerate}
+    \end{freeResponse}
 \end{question}
 \mynewpage
 
@@ -76,8 +120,15 @@
   \[
   e,\quad r,\quad r^2,\quad f,\quad rf,\quad r^2f
   \]
-  where $e$ is the ``do-nothing'' symmetry. EXPRESS each of the red
-  symmetries as one of $e,r,r^2,f,rf,r^2f$ and UPDATE the table with
-  these values.
+  where $e$ is the ``do-nothing'' symmetry.
+  \begin{enumerate}
+    \item EXPRESS each of the red symmetries as one of
+      $e,r,r^2,f,rf,r^2f$ and UPDATE the table with these values.
+    \item Use your table to express
+      \[
+      frfrfrrf
+      \]
+      as one of $e,r,r^2,f,rf,r^2f$.
+  \end{enumerate}
 \end{question}
 \end{document}
