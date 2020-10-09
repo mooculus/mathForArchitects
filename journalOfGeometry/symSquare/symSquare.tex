@@ -1,0 +1,164 @@
+\documentclass[noauthor,nooutcomes,12pt,hints]{ximera}
+
+\input{../preamble.tex}
+
+\title{Symmetries of the square}
+\author{Bart Snapp}
+
+\begin{document}
+\begin{abstract}
+  We explore the symmetries of the regular rectangle, also known as a
+  square.
+\end{abstract}
+\maketitle
+
+\begin{listOutcomes}
+\item Witness the symmetries of the square.
+\item Describe symmetries of the square.
+\item Think of the symmetries of the square as functions.
+\item Compose symmetries and use \snap\ to show the result.
+\item Use the algebra of symmetries to understand a composition of
+  symmetries.
+\end{listOutcomes}
+\mynewpage
+
+
+\begin{question}
+  The symmetries of the square are those that leave it unchanged. To
+  see these symmetries, it is helpful to color-in the sides of the
+  square. 
+
+  Use \raisebox{-.4\height}{\includegraphics{regularNGonBlockBLANK.png}} to make STAGES for each symmetry of the square,
+  and display them as a functions.
+  \begin{freeResponse}
+    There are EIGHT symmetries of the square.
+    \begin{enumerate}
+    \item $\raisebox{-.4\height}{\includegraphics[width=2in]{eSq.png}}\resizebox{.5in}{!}{$\mapsto$} \raisebox{-.4\height}{\includegraphics[width=2in]{eSq.png}}$
+    \item $\raisebox{-.4\height}{\includegraphics[width=2in]{eSq.png}}\resizebox{.5in}{!}{$\mapsto$} \raisebox{-.4\height}{\includegraphics[width=2in]{rSq.png}}$
+    \item $\raisebox{-.4\height}{\includegraphics[width=2in]{eSq.png}}\resizebox{.5in}{!}{$\mapsto$} \raisebox{-.4\height}{\includegraphics[width=2in]{r2Sq.png}}$
+    \item $\raisebox{-.4\height}{\includegraphics[width=2in]{eSq.png}}\resizebox{.5in}{!}{$\mapsto$} \raisebox{-.4\height}{\includegraphics[width=2in]{r3Sq.png}}$
+    \item $\raisebox{-.4\height}{\includegraphics[width=2in]{eSq.png}}\resizebox{.5in}{!}{$\mapsto$} \raisebox{-.4\height}{\includegraphics[width=2in]{fSq.png}}$
+    \item $\raisebox{-.4\height}{\includegraphics[width=2in]{eSq.png}}\resizebox{.5in}{!}{$\mapsto$} \raisebox{-.4\height}{\includegraphics[width=2in]{rfSq.png}}$
+    \item $\raisebox{-.4\height}{\includegraphics[width=2in]{eSq.png}}\resizebox{.5in}{!}{$\mapsto$} \raisebox{-.4\height}{\includegraphics[width=2in]{r2fSq.png}}$
+    \item $\raisebox{-.4\height}{\includegraphics[width=2in]{eSq.png}}\resizebox{.5in}{!}{$\mapsto$} \raisebox{-.4\height}{\includegraphics[width=2in]{r3fSq.png}}$
+    \end{enumerate}
+  \end{freeResponse}
+\end{question}
+\mynewpage
+
+\begin{question}
+  Let $e$ be the do-nothing symmetry, $r$ be a clockwise $120^\circ$
+  rotation about the center of the triangle, and $f$ be a flip across
+  a vertical line down the middle of the triangle. Display the result
+  of applying the following functions (actions/transformations) to
+  your triangle:
+  \begin{enumerate}
+  \item $e$
+  \item $r$
+  \item $r^2$
+  \item $r^2$
+  \item $f$
+  \item $rf$
+  \item $r^2 f$
+  \item $r^3 f$
+  \end{enumerate}
+  In each case, show off your work by displaying your SCRIPT and
+  STAGE.
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item For $e$ we have:
+      \begin{center}
+        \includegraphics[width=.3\textwidth]{eSqSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{eSq.png}}
+      \end{center}
+    \item For $r$ we have:
+      \begin{center}
+        \includegraphics[width=.3\textwidth]{rSqSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{rSq.png}}
+      \end{center}
+    \item For $r^2$ we have:
+      \begin{center}
+        \includegraphics[width=.3\textwidth]{r2SqSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{r2Sq.png}}
+      \end{center}
+    \item For $r^3$ we have:
+      \begin{center}
+        \includegraphics[width=.3\textwidth]{r3SqSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{r3Sq.png}}
+      \end{center}
+    \item For $f$ we have:
+      \begin{center}
+        \includegraphics[width=.3\textwidth]{fSqSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{fSq.png}}
+      \end{center}
+    \item For $rf$ we have:
+      \begin{center}
+        \includegraphics[width=.3\textwidth]{rfSqSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{rfSq.png}}
+      \end{center}
+    \item For $r^2f$ we have:
+      \begin{center}
+        \includegraphics[width=.3\textwidth]{r2fSqSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{r2fSq.png}}
+      \end{center}
+    \item For $r^3f$ we have:
+      \begin{center}
+        \includegraphics[width=.3\textwidth]{r3fSqSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{r3fSq.png}}
+      \end{center}
+    \end{enumerate}
+    \end{freeResponse}
+\end{question}
+\mynewpage
+
+
+\begin{question}
+  Do you remember the MULTIPLICATION TABLES? We can make a similar
+  table for symmetries of regular triangles. Here, I've started it for
+  you:
+  \[
+  \begin{array}{|c||c|c|c|c|c|c|}
+    \hline
+         & e    & r     & r^2     & r^3      & f      & rf     & r^2f      &  r^3 f\\ \hline\hline
+    e    & e    & r     & r^2     & r^3      & f      & rf     & r^2f      &  r^3 f\\ \hline
+    r    & r    & r^2   & r^3     & r^4      & rf     & r^2f   & r^3f      & r^4f\\ \hline
+    r^2  & r^2  & r^3   & r^4     & r^5      & r^2f   & r^3f   & r^4f      & r^5f\\ \hline
+    r^3  & r^3  & r^4   & r^5     & r^6      & r^3f   & r^4f   & r^5f      & r^6f\\ \hline
+    f    & f    & fr    & fr^2    & fr^3     & f^2    & frf    & fr^2f     & fr^3f\\ \hline
+    rf   & rf   & rfr   & rfr^2   & rfr^3    & rf^2   & rfrf   & rfr^2f    & rfr^3f\\ \hline
+    r^2f & r^2f & r^2fr & r^2fr^2 & r^2fr^3  & r^2f^2 & r^2frf & r^2fr^2f  & r^2fr^3f\\ \hline
+    r^3f & r^3f & r^3fr & r^3fr^2 & r^3fr^3  & r^3f^2 & r^2frf & r^3f r^2f & r^3fr^3f\\ \hline
+  \end{array}
+  \]
+  Each of the symmetries in red is actually equal to one of the
+  symmetries in top row (or left-most column)
+  \[
+  e,\quad r,\quad r^2,\quad f,\quad rf,\quad r^2f
+  \]
+  where $e$ is the ``do-nothing'' symmetry.
+  \begin{enumerate}
+    \item EXPRESS each of the red symmetries as one of
+      $e,r,r^2,f,rf,r^2f$ and UPDATE the table with these values.
+    \item Use your table to express
+      \[
+      frfrfrrf
+      \]
+      as one of $e,r,r^2,f,rf,r^2f$.
+  \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+      Here is my updated table:
+       \[
+  \begin{array}{|c||c|c|c|c|c|c|}
+    \hline
+    & e & r & r^2 & f & rf & r^2f\\ \hline\hline
+    e & e & r & r^2 & f & rf & r^2f\\ \hline
+    r & r & r^2 & e & rf & r^2f & f\\ \hline
+    r^2 & r^2 & e & r & r^2f & f &rf\\ \hline
+    f  & f & r^2f & rf & e & r^2 & r\\ \hline
+    rf & rf & f & r^2f & r & e & r^2\\ \hline
+    r^2f & r^2f & rf & f & r^2 & r & e\\ \hline
+  \end{array}
+  \]
+\item Using the table I see
+  \begin{align*}
+    fr(frfrrf) &= r^2f(frfr^2f)\\
+    &= fr^2f\\
+    &=r.
+  \end{align*}
+    \end{enumerate}
+  \end{freeResponse}
+\end{question}
+\end{document}

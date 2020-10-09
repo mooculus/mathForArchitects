@@ -16,7 +16,9 @@
 \item Witness the symmetries of the regular triangle.
 \item Describe symmetries of the regular triangle.
 \item Think of the symmetries of the regular triangle as functions.
-\item Compose these functions and use \snap\ to show the result.
+\item Compose symmetries and use \snap\ to show the result.
+\item Use the algebra of symmetries to understand a composition of
+  symmetries.
 \end{listOutcomes}
 \mynewpage
 
@@ -29,8 +31,10 @@
   \[
   \raisebox{-.4\height}{\includegraphics[width=2.5in]{eTri.png}}\resizebox{.7in}{!}{$\mapsto$} \raisebox{-.4\height}{\includegraphics[width=2.5in]{rfTri.png}}
   \]
-  Use \snap\ to make STAGES for each symmetry of the regular triangle,
-  and display them as a function as I did above.
+  Use
+  \raisebox{-.4\height}{\includegraphics{regularNGonBlockBLANK.png}}
+  to make STAGES for each symmetry of the regular triangle, and
+  display them as a function as I did above.
   \begin{freeResponse}
     There are SIX symmetries of the regular triangle.
     \begin{enumerate}
@@ -57,7 +61,7 @@
   \item $r^2$
   \item $f$
   \item $rf$
-  \item $r^2 f$.
+  \item $r^2 f$
   \end{enumerate}
   In each case, show off your work by displaying your SCRIPT and
   STAGE.
@@ -130,5 +134,28 @@
       \]
       as one of $e,r,r^2,f,rf,r^2f$.
   \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+      Here is my updated table:
+       \[
+  \begin{array}{|c||c|c|c|c|c|c|}
+    \hline
+    & e & r & r^2 & f & rf & r^2f\\ \hline\hline
+    e & e & r & r^2 & f & rf & r^2f\\ \hline
+    r & r & r^2 & e & rf & r^2f & f\\ \hline
+    r^2 & r^2 & e & r & r^2f & f &rf\\ \hline
+    f  & f & r^2f & rf & e & r^2 & r\\ \hline
+    rf & rf & f & r^2f & r & e & r^2\\ \hline
+    r^2f & r^2f & rf & f & r^2 & r & e\\ \hline
+  \end{array}
+  \]
+\item Using the table I see
+  \begin{align*}
+    fr(frfrrf) &= r^2f(frfr^2f)\\
+    &= fr^2f\\
+    &=r.
+  \end{align*}
+    \end{enumerate}
+  \end{freeResponse}
 \end{question}
 \end{document}
