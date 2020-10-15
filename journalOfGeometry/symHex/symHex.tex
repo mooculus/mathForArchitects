@@ -2,7 +2,7 @@
 
 \input{../preamble.tex}
 
-\title{Symmetries of the square}
+\title{Symmetries of the regular hexagon}
 \author{Bart Snapp}
 
 \begin{document}
@@ -13,7 +13,7 @@
 
 \begin{listOutcomes}
 \item Describe symmetries of the regular hexagon without finding them
-  all.
+  all via pictures.
 \item Think of the symmetries of the regular hexagon as functions.
 \item Compose symmetries and use \snap\ to show the result.
 \item Use the algebra of symmetries to understand a composition of
@@ -30,26 +30,32 @@
 
   
   How many symmetries are there of the regular hexagon? Just
-      EXPLAIN with words and AS FEW PICTURES AS NECESSARY.
-  
+  EXPLAIN with words and AS FEW PICTURES AS NECESSARY.
+  \begin{freeResponse}
+    To start, there's the do-nothing symmetry, $e$. Then there are
+    $5$ clockwise rotations, $r$, $r^2$, $r^3$, $r^4$, and $r^5$.
+
+    Finally, there are flips across a line perpendicular to every face
+    of the hexagon. There are $6$ of these.
+
+    Hence there are $12$ symmetries of the regular hexagon.
+  \end{freeResponse}
 \end{question}
 \mynewpage
 
 \begin{question}
-  Let $e$ be the do-nothing symmetry, $r$ be a clockwise $120^\circ$
-  rotation about the center of the triangle, and $f$ be a flip across
-  a vertical line down the middle of the triangle. Display the result
-  of applying the following functions (actions/transformations) to
-  your triangle:
+  Let $e$ be the do-nothing symmetry, $r$ be a clockwise $60^\circ$
+  rotation about the center of the hexagon, and $f$ be a flip across a
+  vertical line down the middle of the hexagon. Display the result of
+  applying the following functions (actions/transformations) to your
+  hexagon:
   \begin{enumerate}
   \item $e$
-  \item $r$
-  \item $r^2$
-  \item $r^3$
-  \item $f$
   \item $rf$
   \item $r^2 f$
   \item $r^3 f$
+  \item $r^4 f$
+  \item $r^5 f$
   \end{enumerate}
   In each case, show off your work by displaying your SCRIPT and
   STAGE.
@@ -57,35 +63,27 @@
     \begin{enumerate}
     \item For $e$ we have:
       \begin{center}
-        \includegraphics[width=.3\textwidth]{eSqSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{eSq.png}}
-      \end{center}
-    \item For $r$ we have:
-      \begin{center}
-        \includegraphics[width=.3\textwidth]{rSqSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{rSq.png}}
-      \end{center}
-    \item For $r^2$ we have:
-      \begin{center}
-        \includegraphics[width=.3\textwidth]{r2SqSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{r2Sq.png}}
-      \end{center}
-    \item For $r^3$ we have:
-      \begin{center}
-        \includegraphics[width=.3\textwidth]{r3SqSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{r3Sq.png}}
-      \end{center}
-    \item For $f$ we have:
-      \begin{center}
-        \includegraphics[width=.3\textwidth]{fSqSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{fSq.png}}
+        \includegraphics[width=.3\textwidth]{eHexSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{eHex.png}}
       \end{center}
     \item For $rf$ we have:
       \begin{center}
-        \includegraphics[width=.3\textwidth]{rfSqSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{rfSq.png}}
+        \includegraphics[width=.3\textwidth]{rfHexSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{rfHex.png}}
       \end{center}
     \item For $r^2f$ we have:
       \begin{center}
-        \includegraphics[width=.3\textwidth]{r2fSqSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{r2fSq.png}}
+        \includegraphics[width=.3\textwidth]{r2fHexSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{r2fHex.png}}
       \end{center}
     \item For $r^3f$ we have:
       \begin{center}
-        \includegraphics[width=.3\textwidth]{r3fSqSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{r3fSq.png}}
+        \includegraphics[width=.3\textwidth]{r3fHexSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{r3fHex.png}}
+      \end{center}
+    \item For $r^4f$ we have:
+      \begin{center}
+        \includegraphics[width=.3\textwidth]{r4fHexSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{r4fHex.png}}
+      \end{center}
+      \item For $r^5f$ we have:
+      \begin{center}
+        \includegraphics[width=.3\textwidth]{r5fHexSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{r5fHex.png}}
       \end{center}
     \end{enumerate}
     \end{freeResponse}
@@ -94,62 +92,32 @@
 
 
 \begin{question}
-  Do you remember the MULTIPLICATION TABLES? We can make a similar
-  table for symmetries of regular triangles. Here, I've started it for
-  you:
-  \[
-  \begin{array}{|c||c|c|c|c|c|c|c|c|}
-    \hline
-         & e    & r     & r^2     & r^3      & f      & rf     & r^2f      &  r^3 f\\ \hline\hline
-    e    & e    & r     & r^2     & r^3      & f      & rf     & r^2f      &  r^3 f\\ \hline
-    r    & r    & r^2   & r^3     & \color{red}r^4      & rf     & r^2f   & r^3f      & \color{red}r^4f\\ \hline
-    r^2  & r^2  & r^3   & \color{red}r^4     & \color{red}r^5      & r^2f   & r^3f   & \color{red}r^4f      & \color{red}r^5f\\ \hline
-    r^3  & r^3  & \color{red}r^4   & \color{red}r^5     & \color{red}r^6      & r^3f   & \color{red}r^4f   & \color{red}r^5f      & \color{red}r^6f\\ \hline
-    f    & f    & \color{red}fr    & \color{red}fr^2    & \color{red}fr^3     & \color{red}f^2    & \color{red}frf    & \color{red}fr^2f     & \color{red}fr^3f\\ \hline
-    rf   & rf   & \color{red}rfr   & \color{red}rfr^2   & \color{red}rfr^3    & \color{red}rf^2   & \color{red}rfrf   & \color{red}rfr^2f    & \color{red}rfr^3f\\ \hline
-    r^2f & r^2f & \color{red}r^2fr & \color{red}r^2fr^2 & \color{red}r^2fr^3  & \color{red}r^2f^2 & \color{red}r^2frf & \color{red}r^2fr^2f  & \color{red}r^2fr^3f\\ \hline
-    r^3f & r^3f & \color{red}r^3fr & \color{red}r^3fr^2 & \color{red}r^3fr^3  & \color{red}r^3f^2 & \color{red}r^3frf & \color{red}r^3f r^2f & \color{red}r^3fr^3f\\ \hline
-  \end{array}
-  \]
-  Each of the symmetries in red is actually equal to one of the
-  symmetries in top row (or left-most column)
-  \[
-  e,\quad r,\quad r^2,\quad r^3,\quad f,\quad rf,\quad r^2f,\quad r^3f
-  \]
-  where $e$ is the ``do-nothing'' symmetry.
-  \begin{enumerate}
-    \item EXPRESS each of the red symmetries as one of
-      $e,r,r^2,f,rf,r^2f$ and UPDATE the table with these values.
-    \item Use your table to express
-      \[
-      frfrfrrf
-      \]
-      as one of $e,r,r^2,r^3,f,rf,r^2f, r^3f$.
-  \end{enumerate}
-  \begin{freeResponse}
-    \begin{enumerate}
-      \item Here is my updated table:
-  \[
-  \begin{array}{|c||c|c|c|c|c|c|c|c|}
-    \hline
-         & e    & r     & r^2     & r^3      & f      & rf     & r^2f      &  r^3 f\\ \hline\hline
-    e    & e    & r     & r^2     & r^3      & f      & rf     & r^2f      &  r^3 f\\ \hline
-    r    & r    & r^2   & r^3     & e        & rf     & r^2f   & r^3f      & r^4f\\ \hline
-    r^2  & r^2  & r^3   & e       & r        & r^2f   & r^3f   &    f      & r  f\\ \hline
-    r^3  & r^3  & e     & r       & r^2      & r^3f   &    f   & r  f      & r^2f\\ \hline
-    f    & f    & r^3f  & r^2f    & rf       & e      & r^3    & r^2       & r    \\ \hline
-    rf   & rf   &  f    & r^3f    & r^2f     & r      & e      & r^3       & r^2   \\ \hline
-    r^2f & r^2f & r f   & f       & r^3f     & r^2    & r      & e         & r^3     \\ \hline
-    r^3f & r^3f & r^2f  & rf      & f        & r^3    & r^2    & r         & e       \\ \hline
-  \end{array}
-  \]
-\item Using the table I see
-  \begin{align*}
-    fr(frfrrf) &= r^3f(frfr^2f)\\
-    &=fr^2f\\
-    &=r^2.
-  \end{align*}
-    \end{enumerate}
-  \end{freeResponse}
+ EXPRESS each of the symmetries below as one of:
+ \[
+ e,r,r^2,r^3,r^4,r^5,f,rf,r^2f,r^3f, r^4f,r^5f.
+ \]
+
+ \begin{enumerate}
+ \item $fr$
+ \item $fr^2$
+ \item $fr^3$
+ \item $fr^4$
+ \item $fr^5$
+ \item $fr^7f^2r^9f^5r^4f^3$
+ \end{enumerate}
+ \begin{freeResponse}
+   \begin{enumerate}
+   \item $fr = r^5f$
+   \item $fr^2 = r^4f$
+   \item $fr^3 = r^3f$
+   \item $fr^4 = r^2f$
+   \item $fr^5 = r^1f$
+   \item And finally,
+     \begin{align*}
+       fr^7f^2r^9f^5r^4f^3 &= fr^4fr^4f \\
+       &= r^2f r^2\\
+       &= f.
+   \end{enumerate}
+ \end{freeResponse}
 \end{question}
 \end{document}
