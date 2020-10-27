@@ -1,0 +1,153 @@
+\documentclass[noauthor,nooutcomes,12pt,hints]{ximera}
+
+\input{../preamble.tex}
+
+\author{Jenny Sheldon \and Bart Snapp}
+
+\title{Line art}
+
+\begin{document}
+\begin{abstract}
+  We draw curves with lines.
+\end{abstract}
+\maketitle
+
+\begin{listOutcomes}
+\item Understand how to draw an envelope of tangents by hand.
+\item Understand how to draw a sequence of envelopes of tangents with
+  increasing precision.
+\end{listOutcomes}
+
+
+Get out a piece of paper, a ruler, and a writing utensil. Really, do
+it!  Seriously! Now draw two lines that come to a point:
+\[
+\includegraphics{mesh0.pdf}
+\]
+Next, take both of those lines and mark the midpoints. Connect the
+midpoints with a line:
+\[
+\includegraphics{mesh1.pdf}
+\]
+Each original line is now divided into two segments. Mark the
+midpoints of those segments and cross-connect them:
+\[
+\includegraphics{mesh2.pdf}
+\]
+If you continue this cross-connecting process, you'll get groovy pictures like these:
+\[
+\includegraphics{mesh3.pdf}
+\]
+Over 2000 years ago, Apollonius of Perga explained why the curve
+formed by these segments is a \index{parabola}parabola. Today we call
+what we just drew an \textit{envelope of tangents}\index{envelope of
+  tangents}.  If we cross-connect $n$ pairs of lines we'll call this
+an \textit{$n$-line envelope of tangents}.
+
+\begin{question}
+What does it mean for a line to be tangent to a curve?
+\end{question}
+
+
+
+\section{B\'ezier curves}
+
+While some of us like pointy drawings, others like smooth drawings. To
+make smooth drawings, we'll need the help of $\textit{Pierre
+  B\'ezier}$, pronounced ``beh-zeeayr.'' Here is the deal.  Pierre
+B\'ezier was an engineer with the Renault car company in the
+1960's. He needed a convenient way to draw curves, a way that would
+allow curves to be:
+\begin{enumerate}
+\item Easy to render---meaning easy for a computer (or person!) to
+  reproduce the curve described by the artist.
+\item Easy to transform---meaning easy to manipulate the curve with
+  geometric transformations.
+\item Easy to draft---meaning easy for an artist to shape a desired
+  curve.
+\end{enumerate}
+Given two end-points, B\'ezier devised a way to work with
+curves via a \textit{node} and two
+\textit{control points}:\index{node}\index{control-point}
+\[
+\includegraphics{bezier.pdf}
+\]
+With the end points remaining fixed, the artist can move the node and
+control points to change the way the curve looks.  But how do those
+so-called control points actually control the way the curve looks?
+Well, the end points, node, and control points define a polygonal path:
+\[
+\includegraphics{bezierPoly.pdf}
+\]
+This polygonal path in turn gives an envelope of tangents, which then gives
+the desired curve:
+\[
+\includegraphics{bezierMesh.pdf}
+\]
+While this may seem all fancy and highfalutin, it is the essence of
+B\'ezier's method for drawing curves.  It has become so popular that
+this is basically how curves are currently drafted using vector
+graphics programs such as \textit{Adobe Illustrator} and
+\textit{Inkscape}. Why are B\'ezier curves so popular? We'll see that
+they satisfy the requirements above quite well.
+
+\paragraph{Easy to render}
+A computer does not draw the parabola via an envelope of
+tangents---however, the process we use above can be done by hand. The
+key point is that one can obtain an arbitrary amount of smoothness to
+the hand-drawn curve by simply adding  more lines to the envelope of tangents.
+
+
+
+\paragraph{Easy to transform}
+Each curve is completely determined by the polygonal path from the
+first end point to first control point to the node to the other
+control point and the final end point. Hence, if I simply handed you
+five points:
+\[
+(1,4)\to (4,2)\to (6,6)\to (7,8)\to(9,4)
+\]
+you can then draw a curve and tell someone else how to draw the exact
+same curve. Moreover, you could transform the entire curve merely by
+transforming those five points.
+
+
+
+\paragraph{Easy to draft}
+Of course, as you are aware, most graphic artists don't think much
+about coordinates and yet are still able to draw B\'ezier curves with
+impunity. This is really the genius of B\'ezier's method. By fixing
+the end points, one only need to know the position of the node and the
+control points. So by using a mouse, an artist can move the
+control points and node to get a plethora of interesting curves.
+
+
+
+
+\mynewpage
+
+
+
+
+
+
+\begin{question}
+  Draw a $15$ line envelope of tangents by hand. Make it BIG, take up
+  the page!
+\end{question}
+\mynewpage
+
+
+
+
+
+\begin{question}
+  Make three arch ways with envelope of tangents. 
+\end{question}
+
+\mynewpage
+
+
+\begin{question}
+\end{question}
+\end{document}
