@@ -1,0 +1,155 @@
+\documentclass[noauthor,nooutcomes,12pt,hints]{ximera}
+
+\input{../preamble.tex}
+
+\author{Bart Snapp}
+
+\title{Line art and symmetry}
+
+\begin{document}
+\begin{abstract}
+  We use lines to draw shapes with dihedral symmetries.
+\end{abstract}
+\maketitle
+
+\begin{listOutcomes}
+\item Find equally spaced points on a circle with sine and cosine.
+\item Connect envelopes of tangents to create a shape with regular
+  dihedral symmetry.
+\item Use and understand a FOR loop.
+\end{listOutcomes}
+
+\mynewpage
+
+
+
+
+
+
+\begin{question}
+  EXPLAIN WHY if I plot the points
+  \[
+  (r\cdot\sin(i\cdot 360/17), r\cdot \cos(i\cdot 360/17))
+  \]
+  for $i=0,1,2,\dots, 16$, I'll get $17$ equally spaced points on a
+  circle of radius $r$.
+  \begin{hint}
+    Think of this picture of a triangle on a unit circle:
+    \begin{center}
+      \begin{tikzpicture}[geometryDiagrams]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (0,2.5);
+        \coordinate (C) at (4.33,2.5);
+        \tkzDrawSegment[line width=2pt](A,B)
+        \tkzDrawSegment[line width=2pt](A,C)
+        \tkzDrawSegment[line width=2pt](C,B)
+        \tkzLabelSegment[below right](A,C){$1$}
+        \tkzLabelSegment[left](A,B){$\cos(\theta)$}
+        \tkzLabelSegment[above](B,C){$\sin(\theta)$}
+        
+        \coordinate (xmin) at (-6,0);
+        \coordinate (xmax) at (6,0);
+        \coordinate (ymin) at (0,-6);
+        \coordinate (ymax) at (0,6);
+        
+        \tkzDrawSegment[->](xmin,xmax)
+        \tkzDrawSegment[->](ymin,ymax)
+        
+        \tkzMarkRightAngle[thin](A,B,C)
+        \tkzDrawCircle[dashed](A,C)
+        \tkzMarkAngle[mark=,size=1cm,thin](C,A,B)
+        \tkzLabelAngle[pos=.7](C,A,B){$\theta$};
+      \end{tikzpicture}
+    \end{center}
+  \end{hint}
+
+  
+  \begin{freeResponse}
+    This will draw $17$ equally spaced points on the circle, as if we scale the picture above by a factor of $r$, we get:
+    \begin{center}
+      \begin{tikzpicture}[geometryDiagrams]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (0,2.5);
+        \coordinate (C) at (4.33,2.5);
+        \tkzDrawSegment[line width=2pt](A,B)
+        \tkzDrawSegment[line width=2pt](A,C)
+        \tkzDrawSegment[line width=2pt](C,B)
+        \tkzLabelSegment[below right](A,C){$r$}
+       % \tkzLabelSegment[left](A,B){$\cos(\theta)$}
+       % \tkzLabelSegment[above](B,C){$\sin(\theta)$}
+        \tkzDrawPoint(C)
+        \tkzLabelPoint(C){$(r\cdot \sin(\theta),r\cdot \cos(\theta)$}
+        
+        \coordinate (xmin) at (-6,0);
+        \coordinate (xmax) at (6,0);
+        \coordinate (ymin) at (0,-6);
+        \coordinate (ymax) at (0,6);
+        
+        \tkzDrawSegment[->](xmin,xmax)
+        \tkzDrawSegment[->](ymin,ymax)
+        
+        \tkzMarkRightAngle[thin](A,B,C)
+        \tkzDrawCircle[dashed](A,C)
+        \tkzMarkAngle[mark=,size=1cm,thin](C,A,B)
+        \tkzLabelAngle[pos=.7](C,A,B){$\theta$};
+      \end{tikzpicture}
+    \end{center}
+    where $\theta = i\cdot 360/n$. So when $i=0$, we start at the top,
+    move clockwise around and end back at the top.
+  \end{freeResponse}
+\end{question}
+
+\mynewpage
+
+
+
+
+
+\begin{question}
+  Here is a STAGE from \snap\
+  \begin{center}
+    \fbox{\includegraphics[width=.3\textwidth]{triEnvStage.png}}
+  \end{center}
+  Use this SCRIPT below to produce the stage above. 
+    \begin{center}
+    \includegraphics{triEnvScriptBLANK.png}
+    \end{center}
+    YOU will need to fill in the BLANKS.  In your answer, please show
+    off your work with your SCRIPT and your STAGE.
+  \begin{freeResponse}
+    Here is my SCRIPT and my STAGE:
+    \begin{center}
+    \includegraphics[width=.3\textwidth]{triEnvScript.png}\qquad\fbox{\includegraphics[width=.3\textwidth]{triEnvStage.png}}
+  \end{center}
+  \end{freeResponse}
+\end{question}
+
+\mynewpage
+
+
+\begin{question}
+  We can automate our drawing with a FOR BLOCK:
+  \begin{center}
+    \includegraphics{forEnvTan.png}
+  \end{center}
+  \begin{enumerate}
+  \item Explain the SCRIPT above BLOCK-BY-BLOCK.
+  \item Use and MODIFY the script above, to make an ARTISTIC
+    IMAGE. Show off your work with your SCRIPT and your STAGE.
+  \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item \begin{enumerate} We start by making a variable called $n$,
+      and we set it to $6$.
+    \item Next we let $i$ run from $1$ to $n$.
+    \item For each of these numbers we plot an envelope of tangents,
+      making a little triangle in a circle of radius $r$.
+    \end{enumerate}
+    \item Here is my SCRIPT and my STAGE:
+      \begin{center}
+    \includegraphics[width=.3\textwidth]{lineArtisticScript.png}\qquad\fbox{\includegraphics[width=.3\textwidth]{lineArtisticStage.png}}
+  \end{center}
+    \end{enumerate}
+  \end{freeResponse}
+\end{question}
+\end{document}
