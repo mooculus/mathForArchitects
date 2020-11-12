@@ -1,4 +1,4 @@
-\documentclass[noauthor,nooutcomes,12pt,hints]{ximera}
+\documentclass[noauthor,nooutcomes,12pt,hints,handout]{ximera}
 
 \input{../preamble.tex}
 
@@ -16,6 +16,7 @@
 \item Understand how to draw an envelope of tangents by hand.
 \item Understand how to draw a sequence of envelopes of tangents with
   increasing precision.
+\item Find and prove a rule.
 \end{listOutcomes}
 
 
@@ -44,13 +45,10 @@ what we just drew an \textit{envelope of tangents}\index{envelope of
   tangents}.  If we cross-connect $n$ pairs of lines we'll call this
 an \textit{$n$-line envelope of tangents}.
 
-\begin{question}
-What does it mean for a line to be tangent to a curve?
-\end{question}
 
 
 
-\section{B\'ezier curves}
+\paragraph{B\'ezier curves}
 
 While some of us like pointy drawings, others like smooth drawings. To
 make smooth drawings, we'll need the help of $\textit{Pierre
@@ -132,8 +130,11 @@ control points and node to get a plethora of interesting curves.
 
 
 \begin{question}
-  Draw a $15$ line envelope of tangents by hand. Make it BIG, take up
-  the page!
+  CAREFULLY draw a $15$-line envelope of tangents BY HAND. Make it
+  BIG, take up the whole page!
+  \begin{freeResponse}
+    NOT DONE
+  \end{freeResponse}
 \end{question}
 \mynewpage
 
@@ -142,12 +143,90 @@ control points and node to get a plethora of interesting curves.
 
 
 \begin{question}
-  Make three arch ways with envelope of tangents. 
+  Suppose you have a $7$-line envelope of tangents, to EXTEND it by
+  halving all of the ``squares'' you make a $15$ line envelope of
+  tangents. Check it out:
+  \begin{center}
+    \fbox{\includegraphics[width=.3\textwidth]{7-15-lineOfTanEG.png}}
+  \end{center}
+  \begin{enumerate}
+    \item Extend an $8$-line envelope of tangents by halving all of
+      the ``squares.''  Show off your work by displaying a SCRIPT and
+      a STAGE.
+    \item Extend a $9$-line envelope of tangents by halving all of the
+      ``squares.''  Show off your work by displaying a SCRIPT and a
+      STAGE.
+    \item Give a general rule for halving all of the ``squares'' of an
+      $n$-line envelope of tangents. EXPLAIN WHY the general rule works.
+  \end{enumerate}
+  As a gesture of friendship, I offer this useful script:
+  \begin{center}
+    \includegraphics{genericExtendedEnvelopeOfTan.png}
+  \end{center}
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item Here is my SCRIPT and my STAGE:
+      \begin{center}
+        \includegraphics[width=.3\textwidth]{8-17-lineOfTanScript.png}\qquad\fbox{\includegraphics[width=.3\textwidth]{8-17-lineOfTanStage.png}}
+      \end{center}
+    \item Here is my SCRIPT and my STAGE:
+      \begin{center}
+        \includegraphics[width=.3\textwidth]{8-17-lineOfTanScript.png}\qquad\fbox{\includegraphics[width=.3\textwidth]{8-17-lineOfTanStage.png}}
+      \end{center}
+    \item To halve the ``squares'' of an $n$-line envelope of
+      tangents, draw an $(2n+1)$-line envelope of tangents. This works
+      because with $n$ lines, there are $n+1$ gaps and $n + n+1 =
+      2n+1$.
+    \end{enumerate}
+  \end{freeResponse}
 \end{question}
 
 \mynewpage
 
 
 \begin{question}
+  Let's continue doing what we did in the last problem.
+  \begin{enumerate}
+  \item Explain how to ``third'' all of the ``squares'' of an envelope
+    of tangents. Along with your EXPLANATION, show one STAGE as an
+    example.
+  \item Explain how to ``quarter'' all of the ``squares'' of an
+    envelope of tangents. Along with your EXPLANATION, show one STAGE
+    as an example.
+  \item Given an $n$-line envelope of tangents, explain how to
+    ``$i$-th'' every square. EXPLAIN why this method works.
+  \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item To ``third'' all of the ``squares'' of an $n$-line envelope
+      of tangents, draw a $(3n+2)$-line envelope of tangents.
+      \begin{center}
+        \fbox{\includegraphics[width=.3\textwidth]{5-17-lineOfTanEG.png}}
+      \end{center}
+      This works because with $n$ lines, there are $n+1$ gaps, and in
+      each of these gaps there are $2$ new lines, so
+      \[
+      n + (n+1)\cdot 2  = 3n+2.
+      \]
+    \item To ``quarter'' all of the ``squares'' of an envelope of
+      tangents, draw a $(4n+3)$-line envelope of tangents.
+      \begin{center}
+        \fbox{\includegraphics[width=.3\textwidth]{3-15-lineOfTanEG.png}}
+      \end{center}
+      This works because with $n$ lines, there are $n+1$ gaps, and in
+      each of these gaps there are $3$ new lines, so
+      \[
+      n + (n+1)\cdot 3  = 4n+3.
+      \]
+    \item To ``$i$-th'' every square of an $n$-line envelope of
+      tangents, draw a $(i\cdot n+i-1)$-line envelope of
+      tangents. This works because with $n$ lines, there are $n+1$
+      gaps, and in each of these gaps there are $(i-1)$ new lines, so
+      \[
+      n + (n+1)\cdot (i-1)  = i\cdot n+i-1.
+      \]
+      
+  \end{enumerate}
+  \end{freeResponse}
 \end{question}
 \end{document}

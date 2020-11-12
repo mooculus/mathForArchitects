@@ -1,0 +1,104 @@
+\documentclass[noauthor,nooutcomes,12pt,hints,handout]{ximera}
+
+\input{../preamble.tex}
+
+\author{Bart Snapp}
+
+\title{Reflecting on SVGs}
+
+\begin{document}
+\begin{abstract}
+  We investigate and work with images in the SVG format.
+\end{abstract}
+\maketitle
+
+\begin{listOutcomes}
+\item Describe the difference between raster and vector graphics.
+\item Understand when one would want to use raster over vector
+  graphics and vice versa
+\item Demonstrate the ability to create an SVG image.
+\item Demonstrate the ability to apply a geometric transformation to
+  an SVG image.
+\end{listOutcomes}
+
+
+
+\begin{question}
+  Use the INTERNET to look up the DIFFERENCE between \textbf{RASTER}
+  (or BITMAP) graphics AND \textbf{VECTOR} graphics.
+
+  \begin{enumerate}
+  \item EXPLAIN the DIFFERENCE between \textbf{RASTER} graphics AND
+    \textbf{VECTOR} graphics. Use words, pictures, examples, and so on
+    as needed/helpful.
+  \item Does \snap\ produce raster or vector graphics?
+  \item What is SVG format?
+  \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item Raster graphics are images that are determined by individual
+      points; a line is represented by points in a row.
+
+      Raster graphics might look great at one size, but will look
+      terrible if scaled, as the points (the pixels) will be scaled
+      too.
+      
+      On the other hand, vector graphics are abstractly defined; a line
+      is determined by its end points, and the drawing program makes
+      the line for us at an appropriate scale-factor.
+    \item \snap\ produces raster graphics.
+    \item SVG format is Scalable Vector Graphics, and is a vector
+      graphics format.
+    \end{enumerate}
+  \end{freeResponse}
+\end{question}
+\mynewpage
+
+
+\begin{question}
+  Raster graphics and vector graphics serve different purposes.
+  \begin{enumerate}
+  \item DESCRIBE and EXPLAIN some SITUATIONS where raster graphics are best.
+  \item DESCRIBE and EXPLAIN some SITUATIONS where vector graphics are best.
+  \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item If your creating an image for a screen with low resolution,
+      or developing for a screen that has exactly one scale factor,
+      then RASTER graphics usually look best.
+    \item If you want an image that can be scaled to any size and
+      always seem smooth, then vector graphics are best.
+    \end{enumerate}
+  \end{freeResponse}
+\end{question}
+\mynewpage
+
+
+
+
+\begin{question}
+  Identify a program that will allow you to create files in SVG
+  format.
+  \begin{enumerate}
+  \item STATE which program you are using.
+  \item Use your program to draw an SVG image that does not have
+    reflection symmetry across horizontal lines. DISPLAY YOUR IMAGE
+    BELOW.
+  \item Use your program to flip your image across a horizontal
+    line. DISPLAY YOUR IMAGE BELOW.
+  \end{enumerate}
+  \begin{freeResponse}
+  \item I use Inkscape.
+  \item Meet Louie Llama:
+    \begin{center}
+      \includegraphics{llama.png}
+    \end{center}
+  \item Which side of his is best?
+    \begin{center}
+      \includegraphics{rLlama.png}
+    \end{center}
+  \end{freeResponse}
+\end{question}
+\mynewpage
+
+\end{document}

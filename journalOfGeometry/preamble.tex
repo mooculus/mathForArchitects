@@ -18,6 +18,12 @@
 {./symSquare/}
 {./symHex/}
 {./stars/}
+{./substars/}
+{./lineArt/}
+{./lineArtAndSymmetry/}
+{./coloringBook/}
+{./reflectingSVG/}
+{./friezePatterns/}
 }
 
 
@@ -131,6 +137,28 @@
 \mdfdefinestyle{OutcomeStyle}{leftmargin=2cm,rightmargin=2cm,linecolor=black,roundcorner=5pt,
 , font=\small\sffamily,}%font=\wedn\bfseries\upshape,}
 \newenvironment{listOutcomes}{\begin{mdframed}[style=OutcomeStyle]After answering the following questions, students should be able to:\begin{itemize}}{\end{itemize}\end{mdframed}}
+
+
+\makeatletter
+\let\c@definition\relax
+\let\c@warning\relax
+\makeatother
+\let\definition\relax
+\let\enddefinition\relax
+
+\let\warning\relax
+\let\endwarning\relax
+
+\newtheoremstyle{Definition}{\topsep}{\topsep}%%% space between body and thm
+		{}                              %%% Thm body font
+		{}                              %%% Indent amount (empty = no indent)
+		{\bfseries}            %%% Thm head font
+		{}                              %%% Punctuation after thm head
+		{3ex}                           %%% Space after thm head
+		{\thmname{#1}}%%% Thm head spec
+\theoremstyle{Definition}
+\newtheorem{definition}{Definition}
+\newtheorem{warning}{Warning}
 
 
 
