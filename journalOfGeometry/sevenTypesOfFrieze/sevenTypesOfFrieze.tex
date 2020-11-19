@@ -1,0 +1,151 @@
+\documentclass[noauthor,nooutcomes,12pt,hints]{ximera}
+
+\input{../preamble.tex}
+
+\author{Bart Snapp}
+
+\title{Seven types of frieze patterns}
+
+\begin{document}
+\begin{abstract}
+  How many different types of frieze patterns can we have?
+\end{abstract}
+\maketitle
+
+\begin{listOutcomes}
+\item 
+\end{listOutcomes}
+
+
+
+Let's categorize our frieze patterns by the symmetries they have. Let
+\begin{itemize}
+  \item $\{T\}$ be the set of frieze patters with symmetries through
+    translations and and no others.
+  \item $\{T,G\}$ be the set of frieze patters with symmetries through
+    translations, glide-reflections, and and no others.
+  \item $\{T,R\}$ be the set of frieze patters with symmetries through
+    translations, $180^\circ$ rotations, and and no others.
+  \item $\{T,V_h\}$ be the set of frieze patters with symmetries
+    through translations, horizontal-reflections, and and no
+    others.
+  \item $\{T,G,F_v,F_h,R\}$ be the set of frieze patterns with maximal
+    symmetry.
+\end{itemize}
+Let's try to visualize the relations between the symmetries of the
+frieze patterns by drawing a diagram
+\begin{center}
+  \begin{tikzcd}
+    & \{T,G,R,F_v,F_h\} \ar[ld,-]\ar[rd,-] \ar[d,-]&       \\
+    {} &        {}        &  {} \\
+    {} &   {\resizebox{.5in}{!}{?}}                 & \\
+    {} &        {}          &  {} \\
+    \{T,G\}\ar[u,-]\ar[rd,-] & \{T,R\}\ar[d,-]\ar[u,-] & \{T,F_h\}\ar[ld,-]\ar[u,-]       \\   
+    & \{T\} &
+  \end{tikzcd}
+\end{center}
+We know what is happening at the top and bottom, but the middle is
+more mysterious. We'll figure that out NOW.
+
+
+
+
+\mynewpage
+
+
+\begin{question}
+  List all possible combinations of the TYPES of symmetries that
+  frieze patterns can have.
+  \begin{freeResponse}
+    There are a total of $16 = 2^4$ combinations of TYPES of
+    symmetries for frieze patterns. This is because EVERY frieze
+    pattern has symmetry through translations, and there are $4$ other
+    TYPES of symmetry a frieze pattern can have.  Now let's list the
+    $16$ possibilities.
+    \begin{itemize}
+    \item With one TYPE of symmetry: $\{T\}$
+    \item With two TYPES of symmetry: $\{T,G\}$, $\{T,R\}$, $\{T,F_h\}$, $\{T,F_v\}$
+    \item With three TYPES of symmetry: $\{T,G,R\}$, $\{T,G,F_h\}$, $\{T,G,F_v\}$, $\{T,R,F_h\}$, $\{T,R,F_v\}$, $\{T,F_v,F_h\}$
+    \item With four TYPES of symmetry:  $\{T,G,R,F_h\}$, $\{T,G,R,F_v\}$, $\{T,G,F_v,F_h\}$, $\{T,R,F_v,F_h\}$
+    \item With five TYPES of symmetry: $\{T,G,R,F_v,F_h\}$
+    \end{itemize}
+  \end{freeResponse}
+\end{question}
+\mynewpage
+
+\begin{question}
+  Which of the possible combinations are actually the SAME collection
+  of symmetries?
+  \begin{freeResponse}
+    From our previous work, we know:
+    \begin{enumerate}
+    \item\label{7:r1} $\{T,F_v\} = \{T,G,F_v\}$ (Types of symmetry 2b)
+    \item\label{7:r2} $\{T,G,R\} = \{T,G,R,F_h\}$ (Combinations of symmetry 2a)
+    \item\label{7:r3} $\{T,G,F_h\} = \{T,G,R,F_h\}$ (Combinations of symmetry 2b)
+    \end{enumerate}
+    But this now tells us that:
+    \begin{align*}
+      \{T,R,F_v\} &= \{T,G,R,F_v\} & &\text{from \ref{7:r1}}\\
+      &= \{T,G,R,F_v,F_h\} & &\text{from\ref{7:r2}}
+    \end{align*}
+    \begin{align*}
+      \{T,F_v,F_h\} &= \{T,G,F_v,F_h\}& &\text{from \ref{7:r1}} \\
+      &= \{T,G,R,F_v,F_h\} & &\text{from\ref{7:r3}}
+    \end{align*}
+    \begin{align*}
+      \{T,R,F_v,F_h\} &= \{T,G,R,F_v,F_h\} & &\text{from \ref{7:r1}}\\
+    \end{align*}
+    Finally, note that
+    \[
+    \{T,R,F_h\} = \{T,G,R,F_h\}
+    \]
+    Since a rotation followed by a horizontal-reflection is a
+    glide-reflection.
+  \end{freeResponse}
+\end{question}
+\mynewpage
+
+
+\begin{question}
+  Let's put this together:
+  \begin{enumerate}
+  \item Complete the diagram that we began with.
+  \item Give a representative frieze pattern for each combination of symmetry TYPES.
+  \item EXPLAIN why someone might say that there are only ``seven
+    types'' of frieze patterns.
+  \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item Here is my chart:
+      \begin{center}
+      \begin{tikzcd}[column sep=-1em]
+        & \begin{minipage}{3.5in}
+            \begin{center}
+              $\{T,G,R,F_v,F_h\}$ \tiny\\
+              $=  \{T,G,R,F_v\}=  \{T,G,F_v,F_h\}=\{T,R,F_v,F_h\}  = \{T,R,F_v\}=\{T,F_v,F_h\}$
+          \end{center}\end{minipage} \ar[ldd,-]\ar[rd,-] &       \\
+    {} &        {}           &  \begin{minipage}{1.5in}
+      \begin{center}$\{T,G,R,F_h\}$\tiny\\
+        $=\{T,G,R\} =\{T,G,F_h\}=\{T,R,F_h\}$
+      \end{center}
+    \end{minipage}
+    \\
+    \begin{minipage}{1in}
+      \begin{center}$\{T,G,F_v\}$\tiny\\
+        $= \{T,F_v\}$ 
+      \end{center}
+    \end{minipage}
+&                &  {} \\
+    \{T,G\}\ar[u,-]\ar[rd,-] \ar[rruu,-]& \{T,R\}\ar[d,-]\ar[ruu,-] & \{T,F_h\}\ar[ld,-]\ar[uu,-]       \\   
+    & \{T\} &
+  \end{tikzcd}
+      \end{center}
+    \item REPRESENTATIVES:
+    \item Since there are only $7$ types of combinations of symmetry
+      for frieze patterns, someone might say there are only seven
+      types.
+    \end{enumerate}
+  \end{freeResponse}
+\end{question}
+
+\end{document}
