@@ -1,0 +1,161 @@
+\documentclass[noauthor,nooutcomes,12pt,hints,handout]{ximera}
+
+\input{../preamble.tex}
+
+\title{Substars}
+
+
+\begin{document}
+\begin{abstract}
+  We explore stars within stars.
+\end{abstract}
+\maketitle
+
+\begin{listOutcomes}
+\item Recognize substars within stars.
+\item Identify symmetries of substars in terms of the symmetries of
+  stars.
+\item Accommodate and interpret novel images with substars in terms of
+  their symmetries..
+\end{listOutcomes}
+
+
+\mynewpage
+
+
+
+
+
+
+\begin{question} %% What are substars
+  Let's call the star $\stringstar{3}{1}$ a \textbf{substar} of the
+  star $\stringstar{12}{4}$. We can literally see it:
+  \begin{center}
+  \fbox{\includegraphics[width=.3\textwidth]{6-2-substar-12-4.png}}
+  \end{center}
+  Basically, one star is INSIDE another. Here are three stars. Find
+  their MINIMAL (star with the least points) substars. 
+  \begin{enumerate}
+  \item $\stringstar{32}{8}$
+  \item $\stringstar{60}{36}$
+  \item $\stringstar{52}{32}$
+  \end{enumerate}
+  In each case, display your STAGE.  As a gesture of friendship, I give
+  you my script:
+  \begin{center}
+    \includegraphics{substarScript.png}
+  \end{center}
+  Correctly using this script to produce a STAGE is sufficient for
+  these answers.
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item
+      \begin{center}
+        \fbox{\includegraphics[width=.3\textwidth]{4-1-substar-32-8.png}}
+      \end{center}
+    \item
+      \begin{center}
+        \fbox{\includegraphics[width=.3\textwidth]{5-3-substar-60-36.png}}
+      \end{center}
+    \item
+      \begin{center}
+        \fbox{\includegraphics[width=.3\textwidth]{13-8-substar-52-32.png}}
+      \end{center}
+    \end{enumerate}
+  \end{freeResponse}
+\end{question}
+\mynewpage
+
+
+
+
+
+\begin{question}
+  Substars have sub-symmetries.
+  \begin{enumerate}
+  \item Consider the star $\stringstar{12}{4}$ and
+    \begin{itemize}
+    \item $r$ a $30$ degree clockwise rotation with
+    \item $f$ a flip across a vertical line through the center of the
+      star.
+    \end{itemize}
+    Express the symmetries of the substar $\stringstar{3}{1}$ in the
+    form $r^n f^m$.
+  \item Consider the star $\stringstar{20}{5}$ and
+    \begin{itemize}
+    \item $r$ an $18$ degree clockwise rotation with
+    \item $f$ a flip across a vertical line through the center of
+      the star.
+    \end{itemize}
+    Express the symmetries of the substar $\stringstar{4}{1}$ in the
+    form $r^n f^m$.
+  \item Consider the star $\stringstar{21}{9}$ and
+    \begin{itemize}
+    \item $r$ a $(360/21)$ degree clockwise rotation with
+    \item $f$ a flip across a vertical line through the center of the
+      star.
+    \end{itemize}
+    Express the symmetries of the substar $\stringstar{7}{3}$ in the
+    form $r^n f^m$.
+  \end{enumerate}
+  \begin{freeResponse}
+  \item Here the symmetries are:
+    \[
+    \{e, r^4,r^8,f,r^4f,r^8f\}
+    \]
+  \item Here the symmetries are:
+    \[
+    \{e, r^5,r^{10},r^{15},f,r^5f,r^{10}f,r^{15}f\}
+    \]
+   \item Here the symmetries are:
+    \[
+    \{e, r^3,r^{6},r^{9},r^{12},r^{15},r^{18},f, r^3f,r^{6}f,r^{9}f,r^{12}f,r^{15}f,r^{18}f\}
+    \]  
+  \end{freeResponse}
+\end{question}
+
+\mynewpage
+
+
+\begin{question} %% maximal star with substar sym.
+Here's a more difficult question, and I'm asking you to think about
+it. Here is a block:
+\begin{center}
+\includegraphics{substarCoolBlock.png}
+\end{center}
+What does it do? Well it draws a $\stringstar{n}{s}$ and then, it
+draws the next $30$ stars that contain $\stringstar{n}{s}$ as a
+substar. Now, this is kind of a mess, so what we've done is made:
+\begin{itemize}
+  \item The stars with the most symmetry, the most transparent.
+  \item The stars with the least symmetry, the least transparent.
+  \item The hue of the color to change between stars.
+\end{itemize}
+\begin{enumerate}
+\item Describe the symmetry of this new figure.
+\item Find and describe ``interesting'' features. Can you EXPLAIN
+  THEM?
+\end{enumerate}
+
+\begin{freeResponse}
+  \begin{enumerate}
+  \item The symmetry of this figure is EXACTLY that of the
+    triangle. This is because all of the symmetries must preserve THIS
+    \begin{center}
+      \fbox{\includegraphics[width=.3\textwidth]{substarCoolStage.png}}
+    \end{center}
+    triangle.
+  \item For me the most interesting feature is that that three points
+    of the triangle are drastically different from the other three
+    points (that would make) a star.
+
+    This happens BECAUSE IT CAN. The symmetries do not need to be
+    preserved near the points of the six pointed star that are not
+    points of the regular triangle. Hence the picture is ``more
+    messy'' there.
+  \end{enumerate}
+\end{freeResponse}
+
+
+\end{question}
+\end{document}

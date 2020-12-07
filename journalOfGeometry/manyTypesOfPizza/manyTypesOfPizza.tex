@@ -1,0 +1,163 @@
+\documentclass[noauthor,nooutcomes,12pt,hints,handout]{ximera}
+
+\input{../preamble.tex}
+
+\author{Bart Snapp and Jenny Sheldon and Vic Ferdinand}
+
+\title{Many types of pizza}
+
+\begin{document}
+\begin{abstract}
+  How many different types of pizza can we make given some toppings?
+\end{abstract}
+\maketitle
+
+\begin{listOutcomes}
+\item Count combinations of items.
+\item Recognize Pascal's Triangle.
+\item Produce any row of Pascal's Triangle.
+\item Explain patterns in Pascal's Triangle in terms of a concrete
+  setting.
+\end{listOutcomes}
+
+
+\textit{Pascal's Pizza Shop} makes a variety of pizzas, all which come
+with cheese.  However, they do not offer double
+toppings---no ``double cheese'' and so on.
+
+
+\mynewpage
+
+
+\begin{question}
+  We'll call a cheese pizza a $0$-topping pizza. Suppose the shop also
+  has basil, garlic, and spinach toppings available.
+\begin{enumerate}
+\item How many different $0$-topping pizzas can be made?
+\item How many different $1$-topping pizzas can he made?
+\item How many different $2$-topping pizzas can he made?
+\item How many different $3$-topping pizzas can he made?
+\item In total, how many different pizzas can be made?
+\end{enumerate}
+In each case, give a brief EXPLANATION of your REASONING.
+\begin{freeResponse}
+  \begin{enumerate}
+  \item You can make $1$ $0$-topping pizza. There's only one, plain
+    cheese.
+  \item You can make $3$ $1$-topping pizzas. We can make one with each
+    of our three toppings.
+  \item You can make $3$ $2$-topping pizzas. It's a works minus one topping!
+  \item You can only make $1$ $3$-topping pizza.
+  \item In total you can make $8$ different pizzas.
+  \end{enumerate}
+\end{freeResponse}
+\end{question}
+\mynewpage
+
+\begin{question}
+  Complete the following chart by listing and counting the
+possibilities, where $n$ is the number of toppings Pascal has
+available, and $k$ is the number of toppings used.\\
+\[
+{\renewcommand{\arraystretch}{2}
+\begin{array}{|c||c|c|c|c|c|c||c|}
+    \hline
+          & k=0 & k=1 & k=2 & k=3 & k=4 & k=5 & \text{Total}\\
+    \hline\hline
+    n=0 &       &       &       &       &       &    &  \\
+    \hline
+    n=1 &       &       &       &       &       &    &  \\
+    \hline
+    n=2 &       &       &       &       &       &    &  \\
+    \hline
+    n=3 &       &       &       &       &       &    &  \\
+    \hline
+    n=4 &       &       &       &       &       &    &  \\
+    \hline
+    n=5 &       &       &       &       &       &    &  \\
+    \hline
+\end{array}}
+\]
+\begin{freeResponse}
+  Here is my table:
+  \[
+{\renewcommand{\arraystretch}{2}
+\begin{array}{|c||c|c|c|c|c|c||c|}
+    \hline
+          & k=0 & k=1 & k=2 & k=3 & k=4 & k=5 & \text{Total}\\
+    \hline\hline
+    n=0 &   1   &  0    &  0    &  0    &  0    &  0 & 1\\
+    \hline
+    n=1 &   1   &   1   &  0    &   0   &  0    &  0 & 2\\
+    \hline
+    n=2 &   1   &   2   &  1    &    0  &   0   &  0 & 4\\
+    \hline
+    n=3 &  1    &   3   &    3  &   1   &  0    &  0 & 8\\
+    \hline
+    n=4 &  1    &   4   &   6   &   4   &   1   &  0 & 16\\
+    \hline
+    n=5 &  1    &   5   &   10  &   10  &   5   &  1 & 32\\
+    \hline
+\end{array}}
+\]
+\end{freeResponse}
+\end{question}
+\mynewpage
+
+
+\begin{question}
+  Often the numbers in the table you filled in above are arranged a
+  bit differently, as below, where the top ``$1$'' counts the number
+  of $0$-topping pizzas that can be made if zero toppings are
+  available.
+  \[
+  \begin{array}{c c c c c c c}
+    &   &   & 1 &   &   &  \\
+    &   & 1 &   & 1 &   &  \\
+    & 1 &   & 2 &   & 1 &  \\
+    1 &   & 3 &   & 3 &   & 1
+  \end{array}
+  \]
+This triangle of numbers is usually called \textit{Pascal's
+  Triangle}.\index{Pascal's Triangle} There are lots of patterns in
+Pascal's Triangle.
+\begin{enumerate}
+  \item\label{PPS:s} How does someone produce the ``next'' row of Pascal's
+    Triangle? 
+  \item Complete the first $9$ rows of the triangle, above we have the
+    first $4$ rows shown.
+  \item Explain, in terms of pizza, why the numbers in the $(n+1)$th row
+    must sum to $2^n$.
+  \item Explain, in terms of pizza, why you can produce the next row
+    from the previous row as in Part \ref{PPS:s}.
+\end{enumerate}
+\begin{freeResponse}
+  \begin{enumerate}
+  \item To make the next row of Pascal's Triangle, you add
+    ``adjacent'' numbers in the previous row, and put the sum in the
+    next row, between the two previous numbers.
+  \item
+    \[%https://tex.stackexchange.com/questions/17522/pascals-triangle-in-tikz
+    \begin{tikzpicture}
+      \foreach \n in {0,...,8} {
+        \foreach \k in {0,...,\n} {
+          \node at ({1.5*(\k-\n/2)},-\n*.7) {\binomialCoefficient{\n}{\k}};
+        }
+      }
+    \end{tikzpicture}
+    \]
+  \item So the numbers in the $n$th row tell us how many of each type
+    of pizza there is. However, for each topping, it is either ``on''
+    or ``off,'' and so if you have $n$ toppings, you can make a total
+    of $2^n$ different pizzas.
+  \item Consider this, you have a bunch of pizzas with one less
+    topping on the left, and one more topping on the right. When we
+    add a NEW topping, and want to know how many we can make, we
+    simply take the pile with one less, add the new topping.  Now, the
+    two piles combined will be the entire you want.
+
+  \end{enumerate}
+\end{freeResponse}
+\end{question}
+
+\end{document}

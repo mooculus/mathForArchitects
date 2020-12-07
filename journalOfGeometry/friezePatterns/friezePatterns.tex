@@ -1,0 +1,144 @@
+\documentclass[noauthor,nooutcomes,12pt,hints,handout]{ximera}
+
+\input{../preamble.tex}
+
+\author{Bart Snapp}
+
+\title{Frieze patterns}
+
+\begin{document}
+\begin{abstract}
+  We introduce \emph{frieze patterns}.
+\end{abstract}
+\maketitle
+
+\begin{listOutcomes}
+\item Describe what a frieze pattern is.
+\item Identify minimal cells of frieze patterns.
+\item Start to think about symmetry and frieze patterns.
+\end{listOutcomes}
+
+In design and architecture, a \index{frieze pattern}\emph{frieze},
+pronounced ``freeze,'' is a horizontal band that is found near the
+ceiling or roof. It is often decorated with a repeating design. Let's
+see some examples:
+\begin{center}
+\includegraphics[width=.6\textwidth]{fpfrieze.pdf}
+\end{center}
+In each case, the pattern above can be thought of as an infinite strip
+with the pattern continuing indefinitely.  Frieze patterns often have
+symmetry in their structure. While in real-life, the symmetry would
+not be perfect, it is useful in mathematics to simplify reality by
+replacing the real patterns by idealized designs.  In this chapter, we
+will study the symmetry of frieze patterns. At this point we will
+refrain from giving a rigorous definition of a \emph{frieze
+  pattern}. Instead, this will be a result of our work in this
+chapter.
+
+\paragraph{Symmetries} Perhaps the most apparent symmetry that frieze
+patters can exhibit is symmetry through \emph{horizontal
+translations}:
+\begin{center}
+\includegraphics[width=.4\textwidth]{fptrans.pdf}
+\end{center}
+We will not only insist that a frieze pattern always have
+translational symmetry, but we will also insist that such a
+translation is \emph{discrete}, meaning that it occurs in distinct
+``hops'' of some minimal distance. So, for example, the while the
+following patterns have minimal discrete translations, 
+\begin{center}
+\includegraphics[width=.4\textwidth]{fptransDis.pdf}
+\end{center}
+this pattern
+\begin{center}
+\includegraphics[width=.4\textwidth]{fptransNot.pdf}
+\end{center}
+does not, and hence will not technically be considered a frieze
+pattern. To be completely explicit: 
+\begin{center}
+\textbf{All frieze patterns have symmetry through a minimal discrete
+  horizontal translation.}
+\end{center}
+\begin{definition}\index{minimal cell}
+A \textbf{minimal cell} is the smallest slice of a frieze
+pattern that will produce the entire frieze pattern through horizontal
+translations.
+\end{definition}
+
+\begin{warning}
+The minimal cell of a frieze pattern is not unique! Consider
+\begin{center}
+\includegraphics[width=.4\textwidth]{fptransMinEG.pdf}
+\end{center}
+both
+\begin{center}
+  \[
+  \vcenter{\hbox{\includegraphics[width=.08\textwidth]{fptransMinEGCell.pdf}}} \qquad\text{and}\qquad  \vcenter{\hbox{\includegraphics[width=.08\textwidth]{fptransMinEGCell2.pdf}}}
+  \]
+\end{center}
+are minimal cells.
+\end{warning} 
+
+
+\mynewpage
+
+
+
+\begin{question} 
+For each frieze pattern below, identify a MINIMAL CELL:
+\[
+\includegraphics[width=.6\textwidth]{fpfriezeHoriz.pdf}
+\]
+\begin{freeResponse}
+    I've boxed the minimal cells below:
+    \begin{center}
+      \includegraphics[width=.6\textwidth]{fpfriezeHorizMINCELL.png}
+    \end{center}
+\end{freeResponse}
+\end{question}
+\mynewpage
+
+
+\begin{question}
+  Find THREE examples of frieze patterns on the INTERNET.
+  Display them below.
+
+  In EACH CASE, identify a minimal cell.
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item \begin{center}
+      \includegraphics[width=.6\textwidth]{frieze1.png}
+    \end{center}
+    \item
+      \begin{center}
+      \includegraphics[width=.6\textwidth]{frieze2.png}
+      \end{center}
+    \item
+      \begin{center}
+        \includegraphics[width=.6\textwidth]{frieze3.png}
+      \end{center}
+    \end{enumerate}
+  \end{freeResponse}
+\end{question}
+\mynewpage
+
+
+
+\begin{question}
+  LOOK at the frieze patterns above. DESCRIBE THREE different types of
+  symmetry that some of these patterns have.
+  \begin{freeResponse}
+    Above I see that every frieze pattern has symmetry through
+    translations.  Moreover, some frieze patterns have symmetry
+    through
+    \begin{enumerate}
+    \item reflections over vertical lines,
+    \item $180^\circ$ rotations, and
+    \item reflections over horizontal
+      lines.
+    \end{enumerate}
+  \end{freeResponse}
+\end{question}
+
+
+\end{document}
