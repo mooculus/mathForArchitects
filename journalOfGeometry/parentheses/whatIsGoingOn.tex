@@ -1,0 +1,122 @@
+\documentclass{ximera}
+
+
+\input{../preamble.tex}
+
+\author{Bart Snapp}
+ 
+\title{What is going on?}
+
+
+
+\begin{document}
+\begin{abstract}
+  Let me explain. 
+\end{abstract}
+\maketitle
+
+At this point, we need to rethink
+\begin{itemize}
+\item what is teaching,
+\item what is assessment, and
+\item what it means to learn.
+\end{itemize}
+Our typical notions of the items in the list often go something like
+this:
+\begin{itemize}
+\item A teacher is someone standing at the front of the room talking
+  and writing on a backboard,
+\item Assessment is an in-class exam, where students work without the
+  aid of peers or resources such as books or (gasp!) the internet.
+\item Learning is the process of copying down whatever is written on
+  the blackboard and then reproducing similar work on the in-class
+  exam.
+\end{itemize}
+
+Of course this is all BOGUS. We all know we learn best by doing.
+So as a TEACHER, I'm going to try an make you DO THINGS.
+
+In the real-world, you are basically assessed on two things:
+\begin{itemize}
+\item Can you immediately tell when something is BOGUS?
+\item If given time and resources, can you complete a project.
+\end{itemize}
+
+So our assessments will be just that. Quick easy questions (not
+actually \textit{easy}!) and projects.
+
+Finally, we wish to cultivate a sense of ``life-long learning.''  I
+this class, you will develop skills for acquiring new knowledge, when
+it is needed.
+
+
+
+So where does this leave me? I'm the curator of knowledge and your
+guide through this journey. I have gathered the
+
+
+
+\begin{center}
+\scalebox{.5}{
+\begin{tikzpicture}
+\coordinate (A) at (-4.5,1) {};
+\coordinate (B) at ( 4.5,1) {};
+\coordinate (C) at (0,5) {};
+\draw[name path=AC,ultra thick] (A) -- (C);
+\draw[name path=BC,ultra thick] (B) -- (C);
+
+\path[name path=horiz] (A|-0,1) -- (B|-0,1);
+\path[name path=horizTop] (A|-0,2) -- (B|-0,2);
+\draw[ultra thick, black,
+  name intersections={of=AC and horiz,by=P},
+  name intersections={of=BC and horiz,by=Q},
+  name intersections={of=AC and horizTop,by=S},
+  name intersections={of=BC and horizTop,by=R},
+  fill=purple!50!blue!50!white]
+(P) -- (Q) -- (R) -- (S) --(P) -- (Q)
+node[midway,above] {\textbf{Remember/Describe}};
+
+\path[name path=horiz] (A|-0,2) -- (B|-0,2);
+\path[name path=horizTop] (A|-0,3) -- (B|-0,3);
+\draw[ultra thick, black,
+  name intersections={of=AC and horiz,by=P},
+  name intersections={of=BC and horiz,by=Q},
+  name intersections={of=AC and horizTop,by=S},
+  name intersections={of=BC and horizTop,by=R},fill=blue!30!green!50!white]
+(P) -- (Q) -- (R) -- (S) --(P) -- (Q)
+node[midway,above] {\textbf{Analyze/Apply}};
+
+
+\path[name path=horiz] (A|-0,3) -- (B|-0,3);
+\draw[ultra thick, black,
+  name intersections={of=AC and horiz,by=P},
+  name intersections={of=BC and horiz,by=Q},
+  fill=yellow!50!red!50!white]
+(P) -- (Q) -- (0,5) --(P) -- (Q)
+node[midway,above,black] {\textbf{Evaluate/Create}};
+\end{tikzpicture}}
+\end{center}
+
+
+
+
+
+
+Why is this ``teaching?'' And if it is teaching, why can we not
+simply replace the ``teacher'' with a television?
+
+and the skip the whole copying process, and simply give the students a
+pre-written book?
+
+
+, we've been trying to replace teachers with televisions
+for at least the last 50 years.
+
+In the past, teaching was the only method of content delivery, 
+
+Blooms taxonomy
+
+
+
+
+\end{document}
