@@ -1,0 +1,99 @@
+\documentclass[handout,nooutcomes,noauthor]{ximera}
+
+\input{../preamble.tex}
+\title{Area of triangles}
+
+\author{Jenny Sheldon \and Bart Snapp}
+
+\begin{document}
+\begin{abstract}
+  Derive the formula for the area of a triangle!
+\end{abstract}
+\maketitle
+
+
+\begin{listOutcomes}
+\item Give the standard formula for the area of a triangle.
+\item Explain Cavalieri's principle.
+\item Explain why the formula for the area of a triangle is true.
+\item Explain how shapes of the same area can have a arbitrarily large
+  perimeters.
+\end{listOutcomes}
+
+
+\mynewpage
+
+
+
+\begin{question} 
+  Explain how the following picture ``proves'' that the area of a RIGHT
+  triangle is one half of the base times the height.
+  \begin{center}
+  \includegraphics{pbpAreaRight.pdf}
+  \end{center}
+  \begin{freeResponse}
+    We know that the area of a rectangle of height $h$ and width $b$
+    has area $h\cdot b$. However, we can also see that every right
+    triangle can be placed in such a rectangle, while occupying
+    exactly half the area. Hence the area of a RIGHT triangle is:
+    \[
+    \text{Area of right triangle} = \frac{bh}{2}
+    \]
+  \end{freeResponse}
+\end{question}
+\mynewpage
+
+
+\begin{question}
+  ``Shearing'' is a process where you take a shape, cut it into thin strips, 
+  then push the strips around in one direction to make a new shape.  
+  Cavalieri's principle states:\index{Cavalieri's principle}
+  \begin{quote}
+    Shearing parallel to a fixed direction does not change the
+    $n$-dimensional measure of an object.
+  \end{quote}
+  EXPLAIN how the first problem, combined with the following
+  picture ``proves'' (via Cavalieri's principle) that the area of ANY
+  triangle is one half of the base times the height.
+  \begin{center}
+  \includegraphics{pbpShearTri.pdf}
+  \end{center}
+  \begin{freeResponse}
+    If we want to know the area of any triangle, simply shear it to be a right triangle:
+    \[
+    \text{MISSING PICTURE}
+    \]
+    Since shearing doesn't change the area, by Cavalieri's principle,
+    we see this right triangle has the same area as our original
+    triangle. Thus the area of the original triangle is:
+    \[
+    \text{Area of any triangle} = \frac{bh}{2}
+    \]
+  \end{freeResponse}
+\end{question}
+\mynewpage
+
+
+\begin{question} Finally:
+  \begin{enumerate}
+  \item Give an intuitive argument explaining why Cavalieri's
+    principle is true.
+  \item Explain how to use a picture to ``prove'' that a triangle of a
+    given (fixed) area could have an ARBITRARILY LARGE perimeter.
+  \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item Imagine our triangle as being a cross section of stacked
+      papers. Moving these papers around doesn't change the area of
+      each of the slices, hence, shearing doesn't change the area.
+    \item Consider this picture:
+      \[
+      \text{MISSING PICTURE}
+      \]
+      From this we can make a triangle with an arbitrarily large
+      perimeter with a fixed area.
+    \end{enumerate}
+  \end{freeResponse}
+\end{question}
+
+\end{document}
