@@ -68,12 +68,13 @@
 
 \usepackage{adjustbox}
 
-\setcounter{titlenumber}{-1}
+\setcounter{sectiontitlenumber}{-1}
 
 %% journal style
+%% \frontstyle
 \makeatletter
 \newcommand\journalstyle{%
-  \def\activitystyle{activity-chapter}
+  \def\activitystyle{activity-section}
   \def\maketitle{%
     \addtocounter{titlenumber}{1}%
                 {\flushleft\small\sffamily\bfseries\@pretitle\par\vspace{-1.5em}}%
@@ -82,6 +83,24 @@
                     \par\vspace{2em}
                     \phantomsection\addcontentsline{toc}{section}{\thetitlenumber\hspace{1em}\textbf{\@title}}%
                      }}
+
+%% no number for refs
+\newcommand\partstyle{%
+  \def\activitystyle{activity-chapter}
+  \def\maketitle{%
+                {\flushleft\small\sffamily\bfseries\@pretitle\par\vspace{-1.5em}}%
+                {\flushleft\Huge\sffamily\bfseries\@title \par }%3
+                {\vskip .6em\noindent\textit\theabstract}%
+                    \par\vspace{2em}
+                    \phantomsection\addcontentsline{toc}{section}{\Large\textbf{\@title}}%
+                     }}
+
+
+\makeatother
+
+
+
+
 \makeatother
 
 
@@ -128,21 +147,6 @@
 
 
 
-%% attempting to automate outcomes.
-
-%% \newwrite\outcomefile
-%%   \immediate\openout\outcomefile=\jobname.oc
-%% \renewcommand{\outcome}[1]{\edef\theoutcomes{\theoutcomes #1~}%
-%% \immediate\write\outcomefile{\unexpanded{\outcome}{#1}}}
-
-%% \newcommand{\outcomelist}{\begin{itemize}\theoutcomes\end{itemize}}
-
-%% \NewEnviron{listOutcomes}{\small\sffamily
-%% After answering the following questions, students should be able to:
-%% \begin{itemize}
-%% \BODY
-%% \end{itemize}
-%% }
 \usepackage[tikz]{mdframed}
 \mdfdefinestyle{OutcomeStyle}{leftmargin=2cm,rightmargin=2cm,linecolor=black,roundcorner=5pt,
 , font=\small\sffamily,}%font=\wedn\bfseries\upshape,}
