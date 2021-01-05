@@ -1,4 +1,4 @@
-\documentclass[handout,nooutcomes,noauthor]{ximera}
+\documentclass[nooutcomes,noauthor,handout]{ximera}
 
 \input{../preamble.tex}
 \title{Area of triangles}
@@ -29,13 +29,42 @@
   Explain how the following picture ``proves'' that the area of a RIGHT
   triangle is one half of the base times the height.
   \begin{center}
-  \includegraphics{pbpAreaRight.pdf}
+    \begin{tikzpicture}[geometryDiagrams]
+      \coordinate (A) at (0,0);
+      \coordinate (B) at (2,0);
+      \coordinate (C) at (2,3);
+      \coordinate (D) at (0,3);
+      \tkzDrawSegment (A,B)
+      \tkzDrawSegment (D,B)
+      \tkzDrawSegment[dashed](B,C)
+      \tkzDrawSegment[dashed](C,D)
+      \tkzDrawSegment (D,A)
+            
+      \tkzMarkRightAngle[thin](B,A,D)
+    \end{tikzpicture}
   \end{center}
   \begin{freeResponse}
     We know that the area of a rectangle of height $h$ and width $b$
     has area $h\cdot b$. However, we can also see that every right
     triangle can be placed in such a rectangle, while occupying
-    exactly half the area. Hence the area of a RIGHT triangle is:
+    exactly half the area.
+    \begin{center}
+      \begin{tikzpicture}[geometryDiagrams]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (2,0);
+        \coordinate (C) at (2,3);
+        \coordinate (D) at (0,3);
+        \tkzDrawSegment (A,B)
+        \tkzDrawSegment (D,B)
+        \tkzDrawSegment[dashed](B,C)
+        \tkzDrawSegment[dashed](C,D)
+        \tkzDrawSegment (D,A)
+        \tkzLabelSegment[left](A,D){$h$}
+        \tkzLabelSegment[below](A,B){$b$}    
+        \tkzMarkRightAngle[thin](B,A,D)
+      \end{tikzpicture}
+    \end{center}
+    Hence the area of a RIGHT triangle is:
     \[
     \text{Area of right triangle} = \frac{bh}{2}
     \]
@@ -56,16 +85,45 @@
   picture ``proves'' (via Cavalieri's principle) that the area of ANY
   triangle is one half of the base times the height.
   \begin{center}
-  \includegraphics{pbpShearTri.pdf}
+    \begin{tikzpicture}[geometryDiagrams]
+      \coordinate (A) at (0,0);
+      \coordinate (B) at (2,0);
+      \coordinate (C) at (.5,3);
+      \draw[pattern=horizontal lines] (A)--(B)--(C)--cycle;
+      
+      \draw[line width=5pt, ->] (2,1.5)--(4,1.5);
+      
+      \coordinate (AA) at (4,0);
+      \coordinate (BB) at (6,0);
+      \coordinate (CC) at (6,3);
+      \draw[pattern=horizontal lines] (AA)--(BB)--(CC)--cycle;
+      
+      \end{tikzpicture}
   \end{center}
   \begin{freeResponse}
     If we want to know the area of any triangle, simply shear it to be a right triangle:
-    \[
-    \text{MISSING PICTURE}
-    \]
-    Since shearing doesn't change the area, by Cavalieri's principle,
-    we see this right triangle has the same area as our original
-    triangle. Thus the area of the original triangle is:
+      \begin{center}
+        \begin{tikzpicture}[geometryDiagrams]
+          \coordinate (A) at (0,0);
+          \coordinate (B) at (2,0);
+          \coordinate (C) at (.5,3);
+          \draw[pattern=horizontal lines] (A)--(B)--(C)--cycle;
+          
+          \draw[line width=5pt, ->] (2,1.5)--(4,1.5);
+          
+          \coordinate (AA) at (4,0);
+          \coordinate (BB) at (6,0);
+          \coordinate (CC) at (6,3);
+          \draw[pattern=horizontal lines] (AA)--(BB)--(CC)--cycle;
+          \tkzLabelSegment[right](BB,CC){$h$}
+          \tkzLabelSegment[below](BB,AA){$b$}
+          \tkzLabelSegment[below](B,A){$b$} 
+        \end{tikzpicture}
+      \end{center}
+    Since shearing doesn't change the area or the height of the
+    triangle $h$, by Cavalieri's principle, we see this right triangle
+    has the same area as our original triangle. Thus the area of the
+    original triangle is:
     \[
     \text{Area of any triangle} = \frac{bh}{2}
     \]
@@ -87,11 +145,29 @@
       papers. Moving these papers around doesn't change the area of
       each of the slices, hence, shearing doesn't change the area.
     \item Consider this picture:
-      \[
-      \text{MISSING PICTURE}
-      \]
-      From this we can make a triangle with an arbitrarily large
-      perimeter with a fixed area.
+            \begin{center}
+        \begin{tikzpicture}[geometryDiagrams]
+          \coordinate (A) at (0,0);
+          \coordinate (B) at (2,0);
+          \coordinate (C) at (.5,3);
+          \draw[pattern=horizontal lines] (A)--(B)--(C)--cycle;
+          
+          \draw[line width=5pt, ->] (2,1.5)--(4,1.5);
+          
+          \coordinate (AA) at (4,0);
+          \coordinate (BB) at (6,0);
+          \coordinate (CC) at (11,3);
+          \draw[pattern=horizontal lines] (AA)--(BB)--(CC)--cycle;
+          %% \tkzLabelSegment[right](BB,CC){$h$}
+          %% \tkzLabelSegment[below](BB,AA){$b$}
+          %% \tkzLabelSegment[below](B,A){$b$} 
+        \end{tikzpicture}
+            \end{center}
+           The triangle on the right has the same area as the triangle
+           on the left. However, the perimeter of the triangle on the
+           right is MUCH greater.  To obtain an arbitrarily large
+           perimeter, simply shear the triangle more---by Cavalieri's
+           principle the area will be unchanged.
     \end{enumerate}
   \end{freeResponse}
 \end{question}

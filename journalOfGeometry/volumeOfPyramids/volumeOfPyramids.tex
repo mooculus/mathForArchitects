@@ -1,4 +1,4 @@
-\documentclass[handout,nooutcomes,noauthor]{ximera}
+\documentclass[nooutcomes,noauthor,handout]{ximera}
 
 \input{../preamble.tex}
 \title{Volume of pyramids}
@@ -15,6 +15,7 @@
 \begin{listOutcomes}
 \item Dissect a cube into three right pyramids.
 \item Use reason to find the volume of right pyramid.
+\item State Cavalieri's principle in three dimensions.
 \item Apply Cavalieri's principle to derive the volume of ANY pyramid
   of height $s$ over an $s\times s$ square base.
 \end{listOutcomes}
@@ -28,10 +29,57 @@
   three equal square-based pyramids.
   \begin{freeResponse}
     Here they are:
-    \[
-    \text{MISSING PICTURE}
-    \]
-  \end{freeResponse}
+    \begin{center}
+    \begin{tikzpicture}
+      \coordinate (A) at (0,0,0);
+      \coordinate (B) at (4,0,0);
+      \coordinate (C) at (4,4,0);
+      \coordinate (D) at (0,4,0);
+      \coordinate (A') at (0,0,4);
+      \coordinate (B') at (4,0,4);
+      \coordinate (C') at (4,4,4);
+      \coordinate (D') at (0,4,4);
+      
+      
+      
+      %\draw[fill=red,opacity=0.3] (A)--(B)--(C)--(D)--cycle; % base
+      %\draw[fill=blue,opacity=0.3] (A')--(B')--(C')--(D')--cycle; % base
+      %% \draw[fill=orange,opacity=0.3] (B1)--(B2)--(peak);
+      %% \draw[fill=yellow,opacity=0.3] (B2)--(B3)--(peak);
+      %% \draw[fill=green,opacity=0.3] (B3)--(B4)--(peak);
+      %% \draw[fill=blue,opacity=0.3] (B4)--(B5)--(peak);
+      %% \draw[fill=purple,opacity=0.3] (B5)--(B1)--(peak);
+
+      
+      \draw (A)--(B)--(C)--(D)--cycle;
+      \draw (A)--(A');
+      \draw (B)--(B');
+      \draw (C)--(C');
+      \draw (D)--(D');
+      \draw (A')--(B')--(C')--(D')--cycle;
+      
+      \draw[line width=3.5pt,red] (A)--(A');
+      \draw[line width=3.5pt,red] (A')--(B');
+      \draw[line width=3.5pt,red] (B)--(B');
+      \draw[line width=3.5pt,red] (B)--(A);
+      \draw[line width=3.5pt,red] (A')--(D);
+      \draw[line width=3.5pt,red] (B)--(D);
+      \draw[line width=3.5pt, red] (B')--(D);
+      \draw[line width=3.5pt, red] (A)--(D);
+
+      \draw[line width=2pt,blue] (C')--(C);
+      \draw[line width=2pt,blue] (C')--(D);
+      \draw[line width=2pt,blue] (C)--(D);
+      \draw[line width=2pt,blue] (B)--(D);
+      \draw[line width=2pt,blue] (B')--(D); %% diagonal
+      \draw[line width=2pt,blue] (B')--(B);
+      \draw[line width=2pt, blue] (B')--(C');
+      \draw[line width=2pt, blue] (B)--(C);
+
+      
+    \end{tikzpicture}
+  \end{center}
+\end{freeResponse}
 \end{question}
 \mynewpage
 
@@ -51,8 +99,24 @@
 \mynewpage
 
 \begin{question}
-  Use Cavalieri's principle to give a formula for ANY pyramid of
-  height $s$ over an $s\times s$ square base.
+  Let us work analogusly to how we worked in a previous journal
+  entrie.
+  \begin{enumerate}
+  \item State Cavalieri's principle in three dimensions.
+  \item Give a formula for ANY pyramid of height $s$ over an $s\times
+    s$ square base.
+  \end{enumerate}
+    \begin{freeResponse}
+      \begin{enumerate}
+      \item In three dimensions, Cavalieri's priniciple states:
+        \begin{quote}
+          Shearing parallel to a fixed direction does not change the
+          volume of a three dimensional object.
+        \end{quote}
+      \item Easy, just shear the pyramid! By Cavalieri it must have
+        the same volume as a right pyramid. Hence it is still $s^3/3$.
+      \end{enumerate}
+    \end{freeResponse}
 \end{question}
 
 

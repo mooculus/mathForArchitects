@@ -68,7 +68,7 @@
 
 \usepackage{adjustbox}
 
-\setcounter{sectiontitlenumber}{-1}
+\setcounter{titlenumber}{-1}
 
 %% journal style
 %% \frontstyle
@@ -93,7 +93,7 @@
                 {\vskip .6em\noindent\textit\theabstract}%
                     \par\vspace{2em}
                     \phantomsection\addcontentsline{toc}{section}{\Large\textbf{\@title}}%
-                     }}
+                     }\thispagestyle{empty}}
 
 
 \makeatother
@@ -151,6 +151,7 @@
 \mdfdefinestyle{OutcomeStyle}{leftmargin=2cm,rightmargin=2cm,linecolor=black,roundcorner=5pt,
 , font=\small\sffamily,}%font=\wedn\bfseries\upshape,}
 \newenvironment{listOutcomes}{\begin{mdframed}[style=OutcomeStyle]After answering the following questions, students should be able to:\begin{itemize}}{\end{itemize}\end{mdframed}}
+\newenvironment{listSectionOutcomes}{\begin{mdframed}[style=OutcomeStyle]After completing the following journal entries, students should be able to:\begin{itemize}}{\end{itemize}\end{mdframed}}
 
 
 \makeatletter
