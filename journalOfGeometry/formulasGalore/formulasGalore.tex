@@ -13,7 +13,13 @@
 
 
 \begin{listOutcomes}
-\item 
+\item Apply formulas to compute the surface areas and volumes of
+  solids.
+\item Acknowledge that even with a formula, difficult work still needs
+  to be done.
+\item Identify answers that are incorrect by an order of magnitude or
+  more.
+\item Estimate surface area and volume up to an order of magnitude.
 \end{listOutcomes}
 
 
@@ -22,71 +28,114 @@ Here are a bunch of formulas I found on the INTERNET at this site
   \textit{https://sites.google.com/site/standardbasicengineering/home/useful-formula-for-finding-area-volume-of-solid-figures}
 \end{center}
 \begin{center}
-  \includegraphics[width=.4\textwidth]{photoFormula1.jpg} \qquad \includegraphics[width=.4\textwidth]{photoFormula2.jpg}
+  \includegraphics[width=.3\textwidth]{photoFormula1.jpg} \qquad \includegraphics[width=.3\textwidth]{photoFormula2.jpg}
 \end{center}
 
-Below, let's think about some questions.
-
+Below, let's think about some questions. 
 
 
 \mynewpage
 
 
 
-\begin{question}
-\end{question}
 
+
+\begin{question}
+  Consider the \link[\textit{Ericsson Globe}]{https://en.wikipedia.org/wiki/Ericsson_Globe}:
+   \begin{center}
+    \includegraphics[width=.4\textwidth]{dome.png} %https://www.researchgate.net/figure/Example-of-a-hemispherical-dome-in-modern-civil-engineering-Stockholm-Globe-Arena-by_fig2_308655043
+   \end{center}
+   Assuming that this building has a diameter of $110$ meters and a
+   height of $85$ meters.
+   \begin{enumerate}
+   \item Use the formulas above to find the surface area (including
+     the bottom!) and the volume of the \textit{Ericsson Globe}.
+   \item Now, find the surface area and volume of a box that is
+     $100''\times 100'' \times 80''$.
+     \item Compare/contrast your answers from this part with your
+       answers from the first part.
+   \end{enumerate}
+   \begin{freeResponse}
+     \begin{enumerate}
+     \item Using the formulas above I found:
+       \[
+       SA = 2\pi 55\cdot 85 \approx 29374 \text{ square meters}
+       \]
+       and
+       \[
+       V = \pi85^2 \left(55-\frac{85}{3}\right)\approx  605280 \text{ cubic meters}.
+       \]
+     \item For a box that is  $100''\times 100'' \times 80''$, I find
+       \[
+       SA = 2(100\cdot 100 + 100\cdot 80 + 100\cdot 80) = 52000 \text{ square inches}
+       \]
+       and
+       \[
+       V = 100\cdot 100\cdot 80 \approx 800000 \text{ cubic inches}.
+       \]
+     \end{enumerate}
+     \item While our answers have different numbers, they have the same number of DIGITS.
+   \end{freeResponse}
+\end{question}
+\mynewpage
+
+\begin{question}
+  Consider the \link[\textit{Luxor Las Vegas}]{https://en.wikipedia.org/wiki/Luxor_Las_Vegas}:
+  \begin{center}
+    \includegraphics[width=.4\textwidth]{pyramid.jpg} 
+  \end{center}
+ Assuming that the (square) base of this building has a side length of
+ $646$ feet and that the pyramid is $350$ feet tall,
+  \begin{enumerate}
+  \item Which is EASIER to compute:
+    \begin{itemize}
+    \item the surface area (including the bottom!) OR
+    \item the volume
+    \end{itemize}
+    of the \textit{Luxor Las Vegas}? EXPLAIN WHY one computation is
+    HARDER, and compute the EASIER one.
+  \item You ask four friends what the surface area of the
+    \textit{Luxor Las Vegas} is. They give you four wrong answers, but
+    you love them anyway, because they are your friends. Here are
+    their answers:
+    \begin{enumerate}
+    \item $1500$ square feet
+    \item $15000$ square feet
+    \item $150000$ square feet
+    \item $1500000$ square feet
+    \end{enumerate}
+    Which answer above is \textbf{closest} to the correct answer? EXPLAIN your reasoning.
+  \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+      \item The volume is MUCH EASIER to compute than the surface
+        area. To compute the surface area, you have to compute the
+        area of each face of the pyramid, this requires GEOMETRY.
+
+        The volume is
+        \[
+        V = \frac{646\cdot 646\cdot 350}{3} \approx = 48686867 \text{ cubic feet}.
+        \]
+      \item Answer $(iii)$ is correct, here's how I know. The pyramid
+        has a base, and four more sides. The biggest the surface area could be is
+        \[
+        646\cdot 646+ 4\cdot 85\cdot 323 = 869516.
+        \]
+        But honestly it is even easier:
+        \[
+        (\text{3-digit number}) \cdot (\text{3-digit number}) + 4\cdot
+        (\text{3-digit number}) = (\text{6-digit number}).
+        \]
+    \end{enumerate}
+  \end{freeResponse}
+\end{question}
 \mynewpage
 
 
 \begin{question}
+  Let's reflect on our work above.  In mathematics, it is USEFUL to
+  know when a given answer is INCORRECT. There is a notion of 
 \end{question}
-
-\mynewpage
-
-
-\begin{question}
-\end{question}
-
-
-
-%% \begin{question} %% BY VOL
-%%   Your client wants to know how the filled-weight will change if the
-%%   radius is reduced by $10\%$.
-%%   \begin{enumerate}
-%%   \item What additional information (if any!) do you need/would like
-%%     to answer this question?
-%%   \item \textbf{Without working hard, or looking anything up,} what's
-%%     your BEST GUESS as to what the answer is?
-%%   \item How does your answer above change if we instead INCREASE the
-%%     radius by $10\%$?
-%%   \end{enumerate}
-%% \end{question}
-
-
-%% \begin{question} %% BY SA
-%%   Your client wants to know how the empty-weight will change if the
-%%   radius is reduced by $10\%$.
-%%   \begin{enumerate}
-%%   \item What additional information (if any!) do you need/would like
-%%     to answer this question?
-%%   \item \textbf{Without working hard, or looking anything up,} what's
-%%     your BEST GUESS as to what the answer is?
-%%   \item How does your answer above change if we instead INCREASE the
-%%     radius by $10\%$?
-%%   \end{enumerate}
-%% \end{question}
-
-%% \begin{question}
-%%   What's another DIFFERENT question a client could ask about your
-%%   spherical water tank?
-%% \end{question}
-
-
-%% FOLLOWUPS!
-%% MAXIMIZE?
-
-
 
 
 \end{document}
