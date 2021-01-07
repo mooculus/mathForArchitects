@@ -1,4 +1,4 @@
-\documentclass[handout,nooutcomes,noauthor]{ximera}
+\documentclass[nooutcomes,noauthor]{ximera}
 
 \input{../preamble.tex}
 \title{Formulas galore}
@@ -19,7 +19,10 @@
   to be done.
 \item Identify answers that are incorrect by an order of magnitude or
   more.
+\item Use basic number sense to find a reasonable estimate for the
+  value of an expression.
 \item Estimate surface area and volume up to an order of magnitude.
+\item Evaluate estimates as either too large or too small.
 \end{listOutcomes}
 
 
@@ -50,10 +53,15 @@ Below, let's think about some questions.
    \begin{enumerate}
    \item Use the formulas above to find the surface area (including
      the bottom!) and the volume of the \textit{Ericsson Globe}.
-   \item Now, find the surface area and volume of a box that is
-     $100''\times 100'' \times 80''$.
-     \item Compare/contrast your answers from this part with your
-       answers from the first part.
+   \item Estimate the values above by finding the surface area and
+     volume of a box that is:
+     \begin{enumerate}
+     \item $100\times 100 \times 80$
+     \item $100\times 80 \times 80$
+     \end{enumerate}
+   Note: While these answers are NOT EQUAL to your answers from
+   part \label{FG1:1}, these answers \textbf{HAVE THE SAME NUMBER OF
+     DIGITS} as your answers from part \label{FG1:1}.
    \end{enumerate}
    \begin{freeResponse}
      \begin{enumerate}
@@ -65,16 +73,27 @@ Below, let's think about some questions.
        \[
        V = \pi85^2 \left(55-\frac{85}{3}\right)\approx  605280 \text{ cubic meters}.
        \]
-     \item For a box that is  $100''\times 100'' \times 80''$, I find
-       \[
-       SA = 2(100\cdot 100 + 100\cdot 80 + 100\cdot 80) = 52000 \text{ square inches}
-       \]
-       and
-       \[
-       V = 100\cdot 100\cdot 80 \approx 800000 \text{ cubic inches}.
-       \]
+     \item We have two computations.
+       \begin{enumerate}
+       \item For a box that is  $100\times 100 \times 80$, I find
+         \[
+         SA = 2(100\cdot 100 + 100\cdot 80 + 100\cdot 80) = 52000 
+         \]
+         and
+         \[
+         V = 100\cdot 100\cdot 80 =  800000 
+         \]
+       \item For a box that is  $100\times 80 \times 80$, I find
+         \[
+         SA = 2(100\cdot 80 + 80\cdot 80 + 100\cdot 80) = 44800
+         \]
+         and
+         \[
+         V = 100\cdot 80\cdot 80 = 640000
+         \] 
+       \end{enumerate}
+       Yup, these answers have the same number of digits as our answers from the first part.       
      \end{enumerate}
-     \item While our answers have different numbers, they have the same number of DIGITS.
    \end{freeResponse}
 \end{question}
 \mynewpage
@@ -133,9 +152,70 @@ Below, let's think about some questions.
 
 
 \begin{question}
-  Let's reflect on our work above.  In mathematics, it is USEFUL to
-  know when a given answer is INCORRECT. There is a notion of 
+  Let's put this together. To estimate a value, by knowing the number
+  of digits that the answer has, is called \textbf{estimating up to an
+    order of magnitude}, because then you know the range of the
+  answer.
+  \begin{enumerate}
+  \item EXPLAIN why 
+    \[
+    (\text{$m$-digit number}) + (\text{$n$-digit number}) =
+    \begin{cases}
+      (\text{$\max(m,n)$-digit number}) & \text{or}\\
+      (\text{$(1+\max(m,n))$-digit number}),
+    \end{cases}
+    \]
+    and why
+    \[
+    (\text{$m$-digit number}) \cdot (\text{$n$-digit number}) = \begin{cases}
+      (\text{$(m+n)$-digit number}) & \text{or}\\
+      (\text{$(m+n-1)$-digit number}).
+    \end{cases}
+    \]
+  \item Using ideas from this activity, explain how to estimate the
+    volume (in cubic feet) and surface area (in square feet) of the \link[Tower at Geisel
+      Library]{https://en.wikipedia.org/wiki/Geisel_Library} up to an
+    order of magnitude.
+
+  \begin{center}
+    \includegraphics[width=.4\textwidth]{geisel.jpg} 
+  \end{center}
+
+    EXPLAIN your reasoning and EXPLAIN if you
+    think your estimates are \textbf{too large} or \textbf{too small}
+    in each case.
+  \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item So the first statement is true, because if you write our
+      numbers in scientific notation:
+      \[
+      \underbrace{a\cdot 10^m}_{\text{$m$-digit number}} + \underbrace{b\cdot 10^n}_{\text{$n$-digit number}}
+      \]
+      where $a$ and $b$ are both between $0$ and $1$, will be a
+      $\max(m,n)$-digit number, unless $m=n$ and $a+b>1$, in which case it will be a $(1+\max(m,n))$-digit number.
+
+      For the second statement, if you write our numbers in scientific
+      notation:
+      \[
+      \underbrace{a\cdot 10^m}_{\text{$m$-digit number}} \cdot \underbrace{b\cdot 10^n}_{\text{$n$-digit number}} = ab\cdot 10^{m+n}
+      \]
+      and this is a $(m+n)$-digit number unless $a\cdot b<0.1$, in which
+      case it will be a $(m+n-1)$-digit number.
+    \item From the Wikipedia page, we see that the tower has a height
+      of $110$ feet and a diameter of $200$ feet. Since the tower is so lumpy, I'll estimate the volume as
+      \[
+      V = 110\cdot 110\cdot 110 = 1331000 \text{ cubic feet}.
+      \]
+      I believe this estimate is TOO LARGE.
+
+      For the surface area I'll estimate
+      \[
+      SA = 6(200\cdot 200) = 240000\text{ square feet}.
+      \]
+      I believe this estimate is TOO SMALL, since the build is so very
+      lumpy.
+    \end{enumerate}
+  \end{freeResponse}
 \end{question}
-
-
 \end{document}
