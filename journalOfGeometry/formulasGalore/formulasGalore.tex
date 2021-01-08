@@ -1,4 +1,4 @@
-\documentclass[nooutcomes,noauthor]{ximera}
+\documentclass[nooutcomes,noauthor,handout,hints]{ximera}
 
 \input{../preamble.tex}
 \title{Formulas galore}
@@ -51,17 +51,18 @@ Below, let's think about some questions.
    Assuming that this building has a diameter of $110$ meters and a
    height of $85$ meters.
    \begin{enumerate}
-   \item Use the formulas above to find the surface area (including
-     the bottom!) and the volume of the \textit{Ericsson Globe}.
+   \item \label{FG1:1} Use the formulas above to find the surface area
+     (including the bottom!) and the volume of the \textit{Ericsson
+     Globe}.
    \item Estimate the values above by finding the surface area and
-     volume of a box that is:
+     volume of:
      \begin{enumerate}
-     \item $100\times 100 \times 80$
-     \item $100\times 80 \times 80$
+     \item A box with dimensions $100\times 100 \times 80$.
+     \item A box with dimensions $100\times 80 \times 80$.
      \end{enumerate}
    Note: While these answers are NOT EQUAL to your answers from
-   part \label{FG1:1}, these answers \textbf{HAVE THE SAME NUMBER OF
-     DIGITS} as your answers from part \label{FG1:1}.
+   part \ref{FG1:1}, these answers \textbf{HAVE THE SAME NUMBER OF
+     DIGITS} as your answers from part \ref{FG1:1}.
    \end{enumerate}
    \begin{freeResponse}
      \begin{enumerate}
@@ -172,6 +173,10 @@ Below, let's think about some questions.
       (\text{$(m+n-1)$-digit number}).
     \end{cases}
     \]
+    \begin{hint}
+    Note, every whole number can be written as the product of a number
+    between zero and one and a power of ten. For example $253 = .253\cdot 10^3$.
+  \end{hint}
   \item Using ideas from this activity, explain how to estimate the
     volume (in cubic feet) and surface area (in square feet) of the \link[Tower at Geisel
       Library]{https://en.wikipedia.org/wiki/Geisel_Library} up to an
@@ -185,18 +190,20 @@ Below, let's think about some questions.
     think your estimates are \textbf{too large} or \textbf{too small}
     in each case.
   \end{enumerate}
+  
   \begin{freeResponse}
     \begin{enumerate}
     \item So the first statement is true, because if you write our
-      numbers in scientific notation:
+      numbers as the product of a number between zero and one
+      and a power of ten:
       \[
       \underbrace{a\cdot 10^m}_{\text{$m$-digit number}} + \underbrace{b\cdot 10^n}_{\text{$n$-digit number}}
       \]
       where $a$ and $b$ are both between $0$ and $1$, will be a
       $\max(m,n)$-digit number, unless $m=n$ and $a+b>1$, in which case it will be a $(1+\max(m,n))$-digit number.
 
-      For the second statement, if you write our numbers in scientific
-      notation:
+      For the second statement, if you write our numbers as the
+      product of a number between zero and one and a power of ten:
       \[
       \underbrace{a\cdot 10^m}_{\text{$m$-digit number}} \cdot \underbrace{b\cdot 10^n}_{\text{$n$-digit number}} = ab\cdot 10^{m+n}
       \]
