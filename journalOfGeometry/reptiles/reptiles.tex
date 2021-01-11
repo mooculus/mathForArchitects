@@ -1,4 +1,4 @@
-\documentclass[handout,nooutcomes,noauthor,hints]{ximera}
+\documentclass[nooutcomes,noauthor,hints]{ximera}
 
 \input{../preamble.tex}
 \title{Rep-tiles}
@@ -14,17 +14,27 @@
 
 
 \begin{listOutcomes}
+\item Explain geometric properties ``scaling'' preserves.
 \item Explain what a rep-tile is.
-\item Give basic examples of rep-n-tiles.
+\item Give basic examples of rep-$n$-tiles.
 \end{listOutcomes}
 
-
+When an object is SCALED:
+\begin{itemize}
+\item Its angles are unchanged.
+\item The relative proportions of its linear measurements are
+  unchanged.
+\end{itemize}
 A \textbf{rep-tile}\index{rep-tile} is a polygon where several copies
 of a given rep-tile fit together to make a larger, similar (MEANING
-SCALED), version of itself. If $2$ copies are used, we call it a
-\textit{rep-2-tile}, if $3$ copies are used, we call it a
-\textit{rep-3-tile}, and if $n$ copies are used, we call it a
-\textit{rep-n-tile}.
+SCALED), version of itself. 
+
+
+
+If $2$ copies are used, we call it a
+\textit{rep-$2$-tile}, if $3$ copies are used, we call it a
+\textit{rep-$3$-tile}, and if $n$ copies are used, we call it a
+\textit{rep-$n$-tile}.
 
 \mynewpage
 
@@ -32,41 +42,200 @@ SCALED), version of itself. If $2$ copies are used, we call it a
 EXPLAIN why using words, pictures, computations, and so on, as
 needed/helpful:
 \begin{enumerate}
-\item An isosceles right triangle whose sides have lengths $1''$,
-  $1''$, and $\sqrt{2}''$ is a rep-2-tile.
-\item A rectangle whose sides have lengths $1''$ and $\sqrt{2}''$ is a
-  rep-2-tile.
+\item A rectangle whose sides have lengths $1$ and $\sqrt{2}$ is a
+  rep-$2$-tile.
+\item An isosceles right triangle whose sides have lengths $1$,
+  $1$, and $\sqrt{2}$ is a rep-$2$-tile.
 \item \textit{Geometry Giorgio} suggests that a rectangle whose sides
-  have lengths $1''$ and $4''$ is also a rep-2-tile. Is he correct?
-  \item Search the internet for other examples of rep-2-tiles, you
-    might find a surprise. DISPLAY one of the other rep-2-tiles below.
-    \begin{hint}
-      You might want to include the word ``dragon'' in your
-      search.
-    \end{hint}
+  have lengths $1$ and $4$ is also a rep-$2$-tile. Is he correct?
 \end{enumerate}
+In each case, if you want to convince me that you have a rep-tile, you
+must EXPLAIN why the angles are unchanged, and why the proportions of
+the linear measurements are unchanged.
 \begin{freeResponse}
   \begin{enumerate}
   \item Behold:
+    \begin{center}
+      \begin{tikzpicture}[geometryDiagrams]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (1,0);
+        \coordinate (C) at (1,1.414);
+        \coordinate (D) at (0,1.414);
+        \coordinate (E) at (2,0);
+        \coordinate (F) at (2,1.414);
+        \tkzDrawSegment (A,B)
+        \tkzDrawSegment (B,C)
+        \tkzDrawSegment (C,D)
+        \tkzDrawSegment (D,A)
+        \tkzDrawSegment (B,E)
+        \tkzDrawSegment (F,E)
+        \tkzDrawSegment (F,C)
+
+        \tkzLabelSegment[left](A,D){$\sqrt{2}$}
+        \tkzLabelSegment[below](A,B){$1$}
+        \tkzLabelSegment[below](B,E){$1$}
+      \end{tikzpicture}
+    \end{center}
+    All the angles are clearly the same, $90^\circ$. To see the two
+    small rectangles have the same linear proportions as the large
+    rectangle, consider
+    \[
+    \frac{\text{long side}}{\text{short side}} = \frac{\sqrt{2}}{1} = \frac{2}{\sqrt{2}}.
+    \]
   \item Behold:
-  \item NO WAY!
-  \item Here is a DRAGON rep-2-tile.
+    \begin{center}
+      \begin{tikzpicture}[geometryDiagrams]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (2,0);
+        \coordinate (C) at (2,2);
+        \coordinate (D) at (4,0);
+        \tkzDrawSegment (A,B)
+        \tkzDrawSegment (C,B)
+        \tkzDrawSegment (C,A)
+        \tkzDrawSegment (D,B)
+        \tkzDrawSegment (D,C)
+                
+        \tkzMarkRightAngle[thin](A,B,C)
+        \tkzMarkRightAngle[thin](C,B,D)
+
+        \tkzLabelSegment[above left](A,C){$\sqrt{2}$}
+        \tkzLabelSegment[above right](C,D){$\sqrt{2}$}
+        \tkzLabelSegment[below](A,B){$1$}
+        \tkzLabelSegment[below](D,B){$1$}
+        \tkzLabelSegment[left](C,B){$1$}
+        
+      \end{tikzpicture}
+    \end{center}  
+    Here we have two isosceles triangles whose sides have lengths $1$,
+    $1$, and $\sqrt{2}$, making a larger isosceles triangle with
+    sides, $\sqrt{2}$, $\sqrt{2}$, $2$. Since two $45^\circ$ angles
+    form a right angle, the top angle is a right angle, and the angles
+    of the smaller two triangles are the same as the angles of the
+    larger triangle. On the other hand, the sides have maintained
+    their proportions as
+    \[
+    \frac{\text{long side}}{\text{short side}} = \frac{\sqrt{2}}{1} = \frac{2}{\sqrt{2}}.
+    \]
+    Thus this is a rep-$2$-tile.
+  
+  \item NO WAY! While we can put the rectangles together to get a new
+    rectangle, the proportions are no longer preserved. If we put the two short sides together we find
+    \[
+    \frac{\text{long side}}{\text{short side}} = \frac{4}{1} \ne
+    \frac{8}{1}.
+    \]
+    If we put the two long sides together we find
+    \[
+    \frac{\text{long side}}{\text{short side}} = \frac{4}{1} \ne
+    \frac{4}{2}.
+    \]
+    This is not a rep-$2$-tile.
   \end{enumerate}
 \end{freeResponse}
 \end{question}
 \mynewpage
+
+
+
+
 
 
 \begin{question}
 EXPLAIN why using words, pictures, and so on, as needed/helpful:
 \begin{enumerate}
-\item A rectangle whose sides have lengths $1''$ and $\sqrt{3}''$, is a rep-3-tile.
-\item A 30-60-90 right triangle whose shortest side has length $1''$, is a rep-3-tile.
+\item A rectangle whose sides have lengths $1$ and $\sqrt{3}$, is a rep-$3$-tile.
+\item A $30$-$60$-$90$ right triangle whose shortest side has length $1$, is a rep-$3$-tile.
 \end{enumerate}
+In each case, if you want to convince me that you have a rep-tile, you
+must EXPLAIN why the angles are unchanged, and why the proportions of
+the linear measurements are unchanged.
 \begin{freeResponse}
   \begin{enumerate}
   \item Behold:
+    \begin{center}
+      \begin{tikzpicture}[geometryDiagrams]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (1,0);
+        \coordinate (C) at (1,1.732);
+        \coordinate (D) at (0,1.732);
+        \coordinate (E) at (2,0);
+        \coordinate (F) at (2,1.732);
+        \coordinate (G) at (3,0);
+        \coordinate (H) at (3,1.732);
+        \tkzDrawSegment (A,B)
+        \tkzDrawSegment (B,C)
+        \tkzDrawSegment (C,D)
+        \tkzDrawSegment (D,A)
+        \tkzDrawSegment (B,E)
+        \tkzDrawSegment (F,E)
+        \tkzDrawSegment (F,C)
+
+        \tkzDrawSegment (G,E)
+        \tkzDrawSegment (G,H)
+        \tkzDrawSegment (H,F)
+
+        \tkzLabelSegment[left](A,D){$\sqrt{3}$}
+        \tkzLabelSegment[below](A,B){$1$}
+        \tkzLabelSegment[below](B,E){$1$}
+        \tkzLabelSegment[below](G,E){$1$}
+      \end{tikzpicture}
+    \end{center}
+    All the angles are clearly the same, $90^\circ$. To see the three
+    small rectangles have the same linear proportions as the large
+    rectangle, consider
+    \[
+    \frac{\text{long side}}{\text{short side}} = \frac{\sqrt{3}}{1} = \frac{3}{\sqrt{3}}.
+    \]
   \item Behold:
+    \begin{center}
+      \begin{tikzpicture}[geometryDiagrams]%,scale=3]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (3,0);
+        \coordinate (C) at (0,{3*1.732});
+        \coordinate (D) at (9,0);
+        \tkzDefMidPoint(C,D) \tkzGetPoint{E}
+        
+        \tkzDrawSegment (A,D)
+        \tkzDrawSegment (A,C)
+        \tkzDrawSegment (B,C)
+        \tkzDrawSegment (C,D)
+        \tkzDrawSegment (E,B)
+        
+        \tkzLabelSegment[left](A,C){$\sqrt{3}$}
+        \tkzLabelSegment[below](A,B){$1$}
+        \tkzLabelSegment[below](B,D){$2$}
+        \tkzLabelSegment[above right](D,E){$\sqrt{3}$}
+        \tkzLabelSegment[above right](C,E){$\sqrt{3}$}
+        \tkzLabelSegment[above right](C,B){$2$}
+        \tkzLabelSegment[below right](E,B){$1$}
+        
+        \tkzMarkRightAngle[thin](B,A,C)
+        \tkzMarkRightAngle[thin](B,E,C)
+        \tkzMarkRightAngle[thin](D,E,B)
+
+        \tkzMarkAngle[arc=ll,size=.7cm,thin,mark=none](C,B,A)
+        \tkzLabelAngle(C,B,A){$60^\circ$}
+        \tkzMarkAngle[arc=ll,size=.5cm,thin,mark=none](D,B,E)
+        \tkzLabelAngle(D,B,E){$60^\circ$}
+        \tkzMarkAngle[arc=ll,size=.6cm,thin,mark=none](E,B,C)
+        \tkzLabelAngle(E,B,C){$60^\circ$}
+
+        \tkzMarkAngle[size=.6cm,thin,mark=none](C,D,A)
+        \tkzLabelAngle(C,D,A){$30^\circ$}
+        \tkzMarkAngle[size=.8cm,thin,mark=none](A,C,B)
+        \tkzLabelAngle[pos=1.2](A,C,B){$30^\circ$}
+
+        \tkzMarkAngle[size=.6cm,thin,mark=none](B,C,D)
+        \tkzLabelAngle[pos=1.2](B,C,D){$30^\circ$}
+      \end{tikzpicture}
+    \end{center}
+    We see that all the angles of the larger figure are the same as
+    our starting $30$-$60$-$90$ right triangle. Also we see
+    \begin{align*}
+      \frac{\text{long leg}}{\text{short leg}} &= \frac{\sqrt{3}}{1} = \frac{3}{\sqrt{3}},\\
+      \frac{\text{hypotenuse}}{\text{short leg}} &= \frac{2}{1} = \frac{2\sqrt{3}}{\sqrt{3}},\\
+      \frac{\text{hypotenuse}}{\text{long leg}} &= \frac{2}{\sqrt{3}} = \frac{2\sqrt{3}}{3}.\\
+    \end{align*}
   \end{enumerate}
 \end{freeResponse}
 \end{question}
@@ -74,8 +243,11 @@ EXPLAIN why using words, pictures, and so on, as needed/helpful:
 
 
 
-\begin{question}
-EXPLAIN why EVERY triangle and EVERY parallelogram is a rep-4-tile.
+\begin{question} %% give a specific triangle. put them on grid paper.
+  %% obtuse scalane tri
+  %% convex quad
+  %% concave quad
+EXPLAIN why EVERY triangle and EVERY parallelogram is a rep-$4$-tile.
 DISPLAY a representative example of each.
 \begin{freeResponse}
   \begin{enumerate}
