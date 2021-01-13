@@ -16,27 +16,61 @@
 \item Demonstrate given shapes are rep-n-tiles.
 \item Understand a relationship between scaling, perimeter, and area.
 \end{listOutcomes}
+
+
+
+Figureing out \textbf{how} shapes are rep-tiles can be difficult if
+you don't actually have phyical copies of the rep-tiles to play with.
+I suggest you have someone help you write a \snap\ script using the block:
+\begin{center}
+  \includegraphics{BLOCKreptile.png}
+\end{center}
+I'll explain the arguments (blanks in the BLOCK) for completness sake.
+Working right-to-left, the first TURTLE BLANK is for a costume, the
+second TURTLE BLANK is for a horizontal reflection of the costume, the
+blank labled $r:$ is the size of the rotation in degrees, and the
+blank labeled $w:$ is the desired width of the rep-tile.
+\begin{itemize}
+\item The ARROW keys will move the rep-tile around.
+\item Pressing $r$ will rotate the rep-tile clockwise the specified
+  number of degrees.
+\item Pressing $f$ will flip the turtle horizontally across a line
+  perpendicular to its base.
+\end{itemize}
+
+
 \mynewpage
 
 \begin{question}
 Consider the following polygons:
 \[
-\includegraphics[width=.2\textwidth]{rhomb.png} \qquad \includegraphics[width=.15\textwidth]{P.png}
+\includegraphics[width=.2\textwidth]{rhomb.png} \qquad
+\includegraphics[width=.15\textwidth]{P.png}\qquad
+\includegraphics[width=.2\textwidth]{wedge.png} 
 \]
-\[
-\includegraphics[width=.2\textwidth]{wedge.png} \qquad \includegraphics[width=.2\textwidth]{sphinx.png}
-\]
-Show that each of these polygons is a rep-4-tile.
+Use the REPTILE BLOCK to show that each of these polygons is a
+rep-$4$-tile. A SCREENSHOT of the \snap\ STAGE is sufficent.
 \end{question}
 
 \mynewpage
 
 
 \begin{question}
-  Show that a $(1,2,\sqrt{5})$ right triangle is a rep-$5$-tile.
-  \begin{hint}
-    I suggest you rotate $90^\circ$.
-  \end{hint}
+  Now we'll investigate a rep-$4$-tile and a rep-$5$-tile.
+  \begin{enumerate}
+  \item Show that the following polygon is a rep-$4$-tile:
+    \begin{center}
+      \includegraphics[width=.2\textwidth]{sphinx.png}
+    \end{center}
+  \item Show that a $(1,2,\sqrt{5})$ right triangle is a
+    rep-$5$-tile.
+    \begin{hint}
+      I suggest you rotate $90^\circ$.
+    \end{hint}
+  \end{enumerate}
+  In each case, if you want to convince me that you have a rep-tile,
+  you must EXPLAIN why the angles are unchanged, and why the
+  proportions of the linear measurements are unchanged.
 \end{question}
 
 \mynewpage

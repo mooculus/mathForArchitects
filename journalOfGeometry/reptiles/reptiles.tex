@@ -14,9 +14,13 @@
 
 
 \begin{listOutcomes}
-\item Explain geometric properties ``scaling'' preserves.
+\item Describe geometric properties that ``scaling'' preserves.
 \item Explain what a rep-tile is.
 \item Give basic examples of rep-$n$-tiles.
+\item Critique and dismantle reasonable hypotheses in regard to
+  geometry and arithmetic.
+\item Witness the fact that the sum of the interior angles of a
+  triangle sum to $180^\circ$.
 \end{listOutcomes}
 
 When an object is SCALED:
@@ -244,15 +248,128 @@ the linear measurements are unchanged.
 
 
 \begin{question} %% give a specific triangle. put them on grid paper.
-  %% obtuse scalane tri
-  %% convex quad
-  %% concave quad
-EXPLAIN why EVERY triangle and EVERY parallelogram is a rep-$4$-tile.
-DISPLAY a representative example of each.
-\begin{freeResponse}
+  Consider the following ``generic'' triangle:
+  \begin{center}
+    \begin{tikzpicture}[geometryDiagrams]
+      \coordinate (A) at (0,0);
+      \coordinate (B) at (5,2);
+      \coordinate (C) at (7,0);
+      \tkzDrawSegment (A,B)
+      \tkzDrawSegment (A,C)
+      \tkzDrawSegment (C,B)
+      \tkzLabelSegment[above left](A,B){$c$}
+      \tkzLabelSegment[below](A,C){$b$}
+      \tkzLabelSegment[above right](B,C){$a$}  
+      
+      \tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
+      \tkzLabelAngle[pos=1.2](C,A,B){$\alpha$}
+      
+      \tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
+      \tkzLabelAngle[pos=.5](A,B,C){$\beta$}
+      
+      \tkzMarkAngle[mark=,size=.9,thin](B,C,A)
+      \tkzLabelAngle[pos=.6](B,C,A){$\gamma$}
+      
+    \end{tikzpicture}
+  \end{center}
+  \begin{enumerate}
+  \item EXPLAIN using words, pictures, computations, and so on, as
+    needed/helpful WHY every triangle is a rep-$4$-tile.
+  \item Use your work from the part above to explain HOW someone can
+    directly WITNESS the fact that the sum of the interior angles of a
+    triangle is $180^\circ$.
+  \end{enumerate}
+    \begin{freeResponse}
   \begin{enumerate}
   \item Behold:
-  \item Behold:
+    \begin{center}
+      \begin{tikzpicture}[geometryDiagrams]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (5,2);
+        \coordinate (C) at (7,0);
+        \coordinate (BB) at (12,2);
+        \coordinate (CC) at (14,0);
+        \coordinate (BBB) at (10,4);
+        
+        \tkzDrawSegment (A,B)
+        \tkzDrawSegment (A,C)
+        \tkzDrawSegment (C,B)
+        \tkzLabelSegment[above left](A,B){$c$}
+        \tkzLabelSegment[below](A,C){$b$}
+        \tkzLabelSegment[above right](B,C){$a$}  
+      
+        \tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
+        \tkzLabelAngle[pos=1.2](C,A,B){$\alpha$}
+        
+        \tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
+        \tkzLabelAngle[pos=.5](A,B,C){$\beta$}
+        
+        \tkzMarkAngle[mark=,size=.9,thin](B,C,A)
+        \tkzLabelAngle[pos=.6](B,C,A){$\gamma$}
+
+
+        \tkzDrawSegment (C,BB)
+        \tkzDrawSegment (BB,CC)
+        \tkzDrawSegment (CC,C)
+        \tkzLabelSegment[above left](C,BB){$c$}
+        \tkzLabelSegment[below](C,CC){$b$}
+        \tkzLabelSegment[above right](BB,CC){$a$}  
+
+        \tkzMarkAngle[size=1.5cm,thin,mark=](CC,C,BB)
+        \tkzLabelAngle[pos=1.2](CC,C,BB){$\alpha$}
+        
+        \tkzMarkAngle[size=0.8cm,thin,mark=](C,BB,CC)
+        \tkzLabelAngle[pos=.5](C,BB,CC){$\beta$}
+        
+        \tkzMarkAngle[mark=,size=.9,thin](BB,CC,C)
+        \tkzLabelAngle[pos=.6](BB,CC,C){$\gamma$}
+
+
+
+
+        \tkzDrawSegment (BBB,B)
+        \tkzDrawSegment (BBB,BB)
+        \tkzDrawSegment (B,BB)
+        \tkzLabelSegment[above left](B,BBB){$c$}
+        \tkzLabelSegment[below](B,BB){$b$}
+        \tkzLabelSegment[above right](BB,BBB){$a$}  
+
+        \tkzMarkAngle[size=1.5cm,thin,mark=](BB,B,BBB)
+        \tkzLabelAngle[pos=1.2](BB,B,BBB){$\alpha$}
+        
+        \tkzMarkAngle[size=0.8cm,thin,mark=](B,BBB,BB)
+        \tkzLabelAngle[pos=.5](B,BBB,BB){$\beta$}
+        
+        \tkzMarkAngle[mark=,size=.9,thin](BBB,BB,B)
+        \tkzLabelAngle[pos=.6](BBB,BB,B){$\gamma$}
+
+
+
+        \tkzMarkAngle[size=1.5cm,thin,mark=](B,BB,C)
+        \tkzLabelAngle[pos=1.2](B,BB,C){$\alpha$}
+        
+        \tkzMarkAngle[size=0.8cm,thin,mark=](BB,C,B)
+        \tkzLabelAngle[pos=.5](BB,C,B){$\beta$}
+        
+        \tkzMarkAngle[mark=,size=.9,thin](C,B,BB)
+        \tkzLabelAngle[pos=.6](C,B,BB){$\gamma$}
+      \end{tikzpicture}
+    \end{center}
+    We see that all the angles of the larger figure are the same as
+    our starting ``generic'' triangle. Also we see
+    \begin{align*}
+      \frac{a+a}{b+b} = \frac{a}{b},\\
+      \frac{b+b}{c+c} = \frac{b}{c},\\
+      \frac{c+c}{a+a} = \frac{c}{a}.\\
+    \end{align*}
+    Thus the ratios of the sides are the same. So we see every
+    triangle is a rep-$4$-tile.
+  \item Above we see that if we place the angles $\alpha$, $\beta$,
+    and $\gamma$ next to each other, they form a straight line. Hence
+    we can directly witness that
+    \[
+    \alpha + \beta + \gamma = 180^\circ.
+    \]
   \end{enumerate}
 \end{freeResponse}
 \end{question}
