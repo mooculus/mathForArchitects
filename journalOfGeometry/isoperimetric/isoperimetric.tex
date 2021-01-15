@@ -1,0 +1,156 @@
+\documentclass[nooutcomes,noauthor,handout]{ximera}
+
+\input{../preamble.tex}
+\title{An isoperimetric inequality of your own}
+
+\author{Bart Snapp}
+
+\begin{document}
+\begin{abstract}
+  We think about the isoperimetric inequality.
+\end{abstract}
+\maketitle
+
+
+\begin{listOutcomes}
+\item Understand the statement of the isoperimetric inequality.
+\item Specialize the isoperimetric inequality to dimensions $2$ and
+  $3$.
+\item Use basic number sense to find a reasonable estimate for the
+  value of an expression.
+\end{listOutcomes}
+
+The \textit{isoperimetric inequality} relates an objects
+$n$-dimensional ``perimeter'' to its $n$-dimensional ``volume.'' Here
+if
+\begin{itemize}
+\item $V$ is the $n$-dimensional ``volume'' of a shape and 
+\item $P$ is the $n$-dimensional ``perimeter'' of a shape,
+\end{itemize}
+then:
+\[
+n^n \cdot  (\text{``volume'' of $n$-dimensional unit sphere})\cdot  V^{(n-1)} \le P^n 
+\]
+
+
+
+\mynewpage
+
+
+\begin{question}
+  Tell me:
+  \begin{enumerate}
+  \item What do we usually call $2$-dimensional ``volume?''
+  \item What do we usually call $2$-dimensional ``perimeter?''
+  \item State the isoperimetric inequality in TWO dimensions.
+  \item Confirm that equality holds when the shape in question is a
+    circle.
+  \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item $2$-dimensional ``volume'' is usually called \underline{area}.
+    \item $2$-dimensional ``perimeter'' is usually called \underline{perimeter}.
+    \item In two dimensions, the isoperimetric inequality states
+      \[
+      4 \pi A \le P^2
+      \]
+      where $A$ is the area and $P$ is the perimeter.
+    \item If the shape is a circle, then $A = \pi r^2$. Write with me:
+      \begin{align*}
+        4 \pi A &= 4 \pi \cdot \pi r^2 \\
+        &= 2^2 \pi^2 r^2.
+      \end{align*}
+      But the perimeter is $A = 2\pi r$ and
+      \[
+      P^2 = 2^2 \pi^2 r^2.
+      \]
+    \end{enumerate}
+  \end{freeResponse}
+\end{question}
+\mynewpage
+
+
+\begin{question}
+  Tell me:
+  \begin{enumerate}
+  \item What do we usually call $3$-dimensional ``volume?''
+  \item What do we usually call $3$-dimensional ``perimeter?''
+  \item State the isoperimetric inequality in THREE dimensions.
+  \item Confirm that equality holds when the shape in question is a
+    sphere.
+  \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item $3$-dimensional ``volume'' is usually called \underline{volume}.
+    \item $3$-dimensional ``perimeter'' is usually called
+      \underline{surface area}.
+    \item In three dimensions, the isoperimetric inequality states
+      \[
+      36 \pi V^2 \le A^3
+      \]
+      where $V$ is the volume and $A$ is the surface area.
+    \end{enumerate}
+  \item If the shape is a sphere, then $V= \left(\frac{4}{3}\right)\pi
+    r^3$. Write with me:
+    \begin{align*}
+      36 \pi V^2 &= 36 \pi \left(\frac{4}{3}\right)^2\pi^2
+      r^5\\
+      &= 4^3 \pi^3 r^5.
+    \end{align*}
+    But the surface area is $A = 4\pi r^2$ and
+    \[
+    A^3 = 4^3 \pi^3 r^5.
+    \]
+  \end{freeResponse}
+\end{question}
+\mynewpage
+
+\begin{question}
+  The isoperimetric inequality can be found by assuming that the
+  $n$-dimensional sphere IS the shape that for a given $n$-dimensional
+  volume, has the least $n$-dimensional perimeter. Here's how you do
+  it:
+  \begin{enumerate}
+    \item Take the given volume and assume it is from the shape of
+      least perimeter.
+    \item Use formulas to compute the perimeter of the assumed shape.
+    \item Any other shape must have greater perimeter.
+  \end{enumerate}
+  Let's think about this. What happens if we WRONGLY assume that the
+  the $n$-dimensional CUBE IS the shape that for a given
+  $n$-dimensional volume, has the least $n$-dimensional perimeter?
+  \begin{enumerate}
+  \item Follow the algorithm above to develop a $2$-dimensional
+    CUBICAL isoperimetric inequality.
+  \item Follow the algorithm above to develop a $3$-dimensional
+    CUBICAL isoperimetric inequality.
+  \item Compare contrast the (WRONG) cubical isopermetric inequality
+    to the standard isoperimetric inequality.
+  \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item Suppose I have a square of area $A$. In this case its side length is $\sqrt{A}$. So the perimeter is
+      \[
+      4\sqrt{A} = P.
+      \]
+      Thus our $2$-dimensional CUBICAL isopermetric inequality is
+      \[
+      4A \le P^2.
+      \]
+    \item Suppose I have a cube of volume $V$. In this case its side
+      length is $\sqrt[3]{V}$. So the surface area is
+      \[
+      6\left(\sqrt[3]{V}\right)^2 = A.
+      \]
+      Thus our $3$-dimensional CUBICAL isopermetric inequality is
+      \[
+      216 V^2 \le A^3.
+      \]
+    \end{enumerate}
+  \item In the cubical isopermetric inequality, we are comparing to a
+    cube, which is WRONG, but may be good for a rule-of-thumb.
+  \end{freeResponse}
+\end{question}
+
+
+\end{document}
