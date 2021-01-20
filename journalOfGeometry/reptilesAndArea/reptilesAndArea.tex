@@ -1,4 +1,4 @@
-\documentclass[handout,nooutcomes,noauthor]{ximera}
+\documentclass[nooutcomes,noauthor]{ximera}
 
 \input{../preamble.tex}
 \title{Rep-tiles and area}
@@ -13,29 +13,35 @@
 
 
 \begin{listOutcomes}
-\item Demonstrate given shapes are rep-n-tiles.
+\item Demonstrate given shapes are rep-$n$-tiles.
 \item Understand a relationship between scaling, perimeter, and area.
 \end{listOutcomes}
 
 
 
-Figureing out \textbf{how} shapes are rep-tiles can be difficult if
-you don't actually have phyical copies of the rep-tiles to play with.
+Figuring out \textbf{how} shapes are rep-tiles can be difficult if
+you don't actually have physical copies of the rep-tiles to play with.
 I suggest you have someone help you write a \snap\ script using the block:
 \begin{center}
   \includegraphics{BLOCKreptile.png}
 \end{center}
-I'll explain the arguments (blanks in the BLOCK) for completness sake.
-Working right-to-left, the first TURTLE BLANK is for a costume, the
-second TURTLE BLANK is for a horizontal reflection of the costume, the
-blank labled $r:$ is the size of the rotation in degrees, and the
-blank labeled $w:$ is the desired width of the rep-tile.
+I'll explain the arguments (blanks in the BLOCK) for completeness sake.
+Working \textbf{right-to-left,}
 \begin{itemize}
-\item The ARROW keys will move the rep-tile around.
+\item the first TURTLE BLANK is for a costume,
+\item the second TURTLE BLANK is for a horizontal reflection of the
+  costume,
+\item the blank labeled $r:$ is the size of the rotation in degrees, and
+\item the blank labeled $w:$ is the desired width of the rep-tile.
+\end{itemize}
+To show a shape is a rep-tile, we have some keyboard commands.
+\begin{itemize}
+\item The ARROW keys will move the rep-tile around,
 \item Pressing $r$ will rotate the rep-tile clockwise the specified
-  number of degrees.
+  number of degrees,
 \item Pressing $f$ will flip the turtle horizontally across a line
-  perpendicular to its base.
+  perpendicular to its base, and 
+\item Pressing the SPACE-BAR will STAMP the rep-tile on the STAGE.
 \end{itemize}
 
 
@@ -49,7 +55,23 @@ Consider the following polygons:
 \includegraphics[width=.2\textwidth]{wedge.png} 
 \]
 Use the REPTILE BLOCK to show that each of these polygons is a
-rep-$4$-tile. A SCREENSHOT of the \snap\ STAGE is sufficent.
+rep-$4$-tile. A SCREENSHOT of the \snap\ STAGE is sufficient.
+\begin{freeResponse}
+  \begin{itemize}
+  \item Behold:
+    \begin{center}
+      \includegraphics[width=.4\textwidth]{STAGErhomb.png}
+    \end{center}
+  \item Behold:
+    \begin{center}
+      \includegraphics[width=.3\textwidth]{STAGEp.png}
+    \end{center}
+  \item Behold:
+    \begin{center}
+      \includegraphics[width=.4\textwidth]{STAGEwedge.png}
+    \end{center}
+  \end{itemize}
+\end{freeResponse}
 \end{question}
 
 \mynewpage
@@ -71,6 +93,118 @@ rep-$4$-tile. A SCREENSHOT of the \snap\ STAGE is sufficent.
   In each case, if you want to convince me that you have a rep-tile,
   you must EXPLAIN why the angles are unchanged, and why the
   proportions of the linear measurements are unchanged.
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item Behold:
+      \begin{center}
+        \includegraphics[width=.4\textwidth]{STAGEsphinx.png}
+      \end{center}
+      Let's call this polygon the ``sphinx.'' The sphinx has $3$ short
+      sides say of length $1$, a longer side of length $2$, and a
+      longest side of length $3$. The LARGER sphinx has short sides of
+      length $2$, longer sides of length $4$, and longest sides of
+      length $6$. We see that all the angles and proportions are the
+      same.
+    \item Behold:
+      \begin{center}
+        \begin{tikzpicture}[geometryDiagrams]
+          \coordinate (A) at (0,0);
+          \coordinate (B) at (4,2);
+          \coordinate (C) at (4,0);
+          \coordinate (BB) at (8,2);
+          \coordinate (CC) at (8,0);
+          \coordinate (BBB) at (8,4);
+          \coordinate (D) at (10,0);
+          
+          \tkzDrawSegment (A,B)
+          \tkzDrawSegment (A,C)
+          \tkzDrawSegment (C,B)
+          \tkzLabelSegment[above left](A,B){$\sqrt{5}$}
+          \tkzLabelSegment[below](A,C){$2$}
+          \tkzLabelSegment[right](B,C){$1$}  
+          
+          \tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
+          \tkzLabelAngle[pos=1.2](C,A,B){$\alpha$}
+          
+          \tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
+          \tkzLabelAngle[pos=.5](A,B,C){$\beta$}
+          
+          
+          \tkzMarkRightAngle[thin](B,C,A)
+          
+          
+          \tkzDrawSegment (C,BB)
+          \tkzDrawSegment (BB,CC)
+          \tkzDrawSegment (CC,C)
+          \tkzLabelSegment[above left](C,BB){$\sqrt{5}$}
+          \tkzLabelSegment[below](C,CC){$2$}
+          \tkzLabelSegment[right](BB,CC){$1$}  
+          
+          \tkzMarkAngle[size=1.5cm,thin,mark=](CC,C,BB)
+          \tkzLabelAngle[pos=1.2](CC,C,BB){$\alpha$}
+          
+          \tkzMarkAngle[size=0.8cm,thin,mark=](C,BB,CC)
+          \tkzLabelAngle[pos=.5](C,BB,CC){$\beta$}
+          
+          
+          \tkzMarkRightAngle[thin](BB,CC,C)
+          
+
+          
+          
+          \tkzDrawSegment (BBB,B)
+          \tkzDrawSegment (BBB,BB)
+          \tkzDrawSegment (B,BB)
+          \tkzLabelSegment[above left](B,BBB){$\sqrt{5}$}
+          \tkzLabelSegment[below](B,BB){$2$}
+          \tkzLabelSegment[left](BB,BBB){$1$}  
+          
+          \tkzMarkAngle[size=1.5cm,thin,mark=](BB,B,BBB)
+          \tkzLabelAngle[pos=1.2](BB,B,BBB){$\alpha$}
+          
+          \tkzMarkAngle[size=0.8cm,thin,mark=](B,BBB,BB)
+          \tkzLabelAngle[pos=.5](B,BBB,BB){$\beta$}
+          
+          \tkzMarkRightAngle[thin](BBB,BB,B)
+          
+
+
+
+          \tkzMarkAngle[size=1.5cm,thin,mark=](B,BB,C)
+          \tkzLabelAngle[pos=1.2](B,BB,C){$\alpha$}
+          
+          \tkzMarkAngle[size=0.8cm,thin,mark=](BB,C,B)
+          \tkzLabelAngle[pos=.5](BB,C,B){$\beta$}
+         
+          \tkzMarkRightAngle[thin](C,B,BB)
+
+
+
+          \tkzDrawSegment (D,CC)
+          \tkzDrawSegment (D,BBB)
+          \tkzLabelSegment[right](D,BBB){$\sqrt{5}$}
+          \tkzLabelSegment[below](D,CC){$1$}  
+          
+          \tkzMarkAngle[size=1.5cm,thin,mark=](CC,BBB,D)
+          \tkzLabelAngle[pos=1.2](CC,BBB,D){$\alpha$}
+          
+          \tkzMarkAngle[size=0.8cm,thin,mark=](BBB,D,CC)
+          \tkzLabelAngle[pos=.5](BBB,D,CC){$\beta$}
+          
+          
+          \tkzMarkRightAngle[thin](D,CC,BBB)
+        \end{tikzpicture}
+      \end{center}
+      Since $\alpha+\beta+90^\circ = 180^\circ$, We see that all the angles of the
+      larger figure are the same as our starting $(1,2,\sqrt{5})$
+      right triangle. Also we see
+      \begin{align*}
+        \frac{\text{long leg}}{\text{short leg}} &= \frac{2}{1} = \frac{\sqrt{5}+\sqrt{5}}{\sqrt{5}},\\
+        \frac{\text{hypotenuse}}{\text{short leg}} &= \frac{\sqrt{5}}{1} = \frac{5}{\sqrt{5}},\\
+        \frac{\text{hypotenuse}}{\text{long leg}} &= \frac{\sqrt{5}}{2} = \frac{5}{2\sqrt{5}}.\\
+      \end{align*}
+    \end{enumerate}
+  \end{freeResponse}
 \end{question}
 
 \mynewpage
@@ -78,32 +212,63 @@ rep-$4$-tile. A SCREENSHOT of the \snap\ STAGE is sufficent.
 \begin{question}
   Now we'll connect rep-tiles to SCALING area.
   \begin{enumerate}
-    \item EXPLAIN why given ANY rep-2-tile,
-      \[
-      \frac{\text{new perimeter}}{\text{old perimeter}}\qquad\text{and}\qquad \frac{\text{new area}}{\text{old area}}
-      \]
-      will be constants that are invariant, regardless of the shape of
-      the given rep-2-tile.
-    \item EXPLAIN why given ANY rep-$n$-tile,
-      \[
-      \frac{\text{new perimeter}}{\text{old perimeter}}\qquad\text{and}\qquad \frac{\text{new area}}{\text{old area}}
-      \]
-      will be constants that are invariant, regardless of the shape of
-      the given rep-$n$-tile.
-    \item
-      Start make a table like the one below:
-      \begin{center}
-        \begin{tabular}{c|c|c}
-          rep-$n$-tile & $\frac{\text{new perimeter}}{\text{old perimeter}}$ & $\frac{\text{new area}}{\text{old area}}$  \\
+  \item Fill-in the table:
+    \[
+    \renewcommand{\arraystretch}{3}
+    \begin{array}{|c|c|}
+      \hline
+          \text{rep-$n$-tile} &  \frac{\text{new area}}{\text{old area}}  \\
           \hline\hline
-          2 & $\vdots$  &  $\vdots$  \\ 
-          3 & $\vdots$  &  $\vdots$  \\ 
-        \end{tabular}
-      \end{center}
-      COMPLETE the table up to $n= 10$.
+          2 &     \\  \hline
+          3 &      \\ \hline
+          4 &      \\ \hline
+          5 &      \\\hline 
+        \end{array}
+    \]
+    \item Based ON OUR PREVIOUS EXAMPLES, make your BEST GUESSES to
+      complete the table below:
+        \[
+    \renewcommand{\arraystretch}{3}
+    \begin{array}{|c|c|}
+      \hline
+          \text{rep-$n$-tile} &  \frac{\text{new perimeter}}{\text{old perimeter}}  \\
+          \hline\hline
+          2 &     \\  \hline
+          3 &     \\ \hline
+          4 &      \\ \hline
+          5 &      \\\hline 
+        \end{array}
+    \]
   \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item Behold:
+      \[
+      \renewcommand{\arraystretch}{3}
+      \begin{array}{|c|c|}
+        \hline
+        \text{rep-$n$-tile} &  \frac{\text{new area}}{\text{old area}}  \\
+        \hline\hline
+        2 &  2  \\  \hline
+        3 &  3   \\ \hline
+        4 &  4   \\ \hline
+        5 &  5   \\\hline 
+      \end{array}
+      \]
+    \item Behold:
+      \[
+      \renewcommand{\arraystretch}{3}
+      \begin{array}{|c|c|}
+      \hline
+      \text{rep-$n$-tile} &  \frac{\text{new perimeter}}{\text{old perimeter}}  \\
+      \hline\hline
+      2 & \sqrt{2}  \\  \hline
+      3 & \sqrt{3}  \\ \hline
+      4 & 2         \\ \hline
+      5 &  \sqrt{5} \\\hline 
+      \end{array}
+      \]
+    \end{enumerate}
+  \end{freeResponse}
 \end{question}
-
-
-
 \end{document}
