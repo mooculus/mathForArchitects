@@ -1,4 +1,4 @@
-\documentclass[nooutcomes,noauthor,handout,hints]{ximera}
+\documentclass[nooutcomes,noauthor,hints]{ximera}
 
 \input{../preamble.tex}
 \title{Formulas galore}
@@ -157,12 +157,12 @@ Below, let's think about some questions.
     order of magnitude}, because then you know the range of the
   answer.
   \begin{enumerate}
-  \item EXPLAIN why 
+  \item EXPLAIN why if $m\ge n$
     \[
     (\text{$m$-digit number}) + (\text{$n$-digit number}) =
     \begin{cases}
-      (\text{$\max(m,n)$-digit number}) & \text{or}\\
-      (\text{$(1+\max(m,n))$-digit number}),
+      (\text{$m$-digit number}) & \text{or}\\
+      (\text{$(1+m)$-digit number}),
     \end{cases}
     \]
     and why
@@ -174,7 +174,8 @@ Below, let's think about some questions.
     \]
     \begin{hint}
     Note, every whole number can be written as the product of a number
-    between zero and one and a power of ten. For example $253 = .253\cdot 10^3$.
+    between $0.1$ and $1$ and a power of ten. For example $253 =
+    .253\cdot 10^3$.
   \end{hint}
   \item Using ideas from this activity, explain how to estimate the
     volume (in cubic feet) and surface area (in square feet) of the \link[Tower at Geisel
@@ -192,22 +193,35 @@ Below, let's think about some questions.
   
   \begin{freeResponse}
     \begin{enumerate}
-    \item So the first statement is true, because if you write our
-      numbers as the product of a number between zero and one
-      and a power of ten:
+    \item For the first statement, let's write our numbers as the
+      product of a number between zero and one and a power of ten. So
+      letting $a$ and $b$ be between $.1$ and $1$ we can write.
       \[
-      \underbrace{a\cdot 10^m}_{\text{$m$-digit number}} + \underbrace{b\cdot 10^n}_{\text{$n$-digit number}}
+      \underbrace{a\cdot 10^m}_{\text{$m$-digit number}} + \underbrace{b\cdot 10^n}_{\text{$n$-digit number}}.
       \]
-      where $a$ and $b$ are both between $0$ and $1$, will be a
-      $\max(m,n)$-digit number, unless $m=n$ and $a+b>1$, in which case it will be a $(1+\max(m,n))$-digit number.
+      Now write
+      \begin{align*}
+        a\cdot 10^m + \frac{b}\cdot 10^n &= a\cdot 10^m + \frac{b}{10^{m-n}}\cdot 10^m \\
+        &= 10^m \left(a +\frac{b}{10^{m-n}}\right).
+      \end{align*}
+      This will be a $m$-digit number, unless $a+\frac{b}{10^{m-n}}\ge 1$, in
+      which case it will be a $(1+m)$-digit number.
 
-      For the second statement, if you write our numbers as the
-      product of a number between zero and one and a power of ten:
+
+      For the second statement, we start the same way
       \[
       \underbrace{a\cdot 10^m}_{\text{$m$-digit number}} \cdot \underbrace{b\cdot 10^n}_{\text{$n$-digit number}} = ab\cdot 10^{m+n}
       \]
-      and this is a $(m+n)$-digit number unless $a\cdot b<0.1$, in which
-      case it will be a $(m+n-1)$-digit number.
+      Now assume that $m\ge n$ and write
+      \begin{align*}
+        \left(a\cdot 10^m\right) \left(b\cdot 10^n\right)  &= (ab)10^m+n\\
+      \end{align*}
+      Note $ab<1$, and the smallest it can be is
+      \[
+      0.1\cdot 0.1 = .01.
+      \]
+      Hence our product will be a $(m+n)$-digit number unless $ab <
+      0.1$. In that case it will be a $(m+n-1)$-digit number.
     \item From the Wikipedia page, we see that the tower has a height
       of $110$ feet and a diameter of $200$ feet. Since the tower is so lumpy, I'll estimate the volume as
       \[
