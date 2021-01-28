@@ -1,4 +1,4 @@
-\documentclass[handout,nooutcomes,noauthor]{ximera}
+\documentclass[nooutcomes,noauthor]{ximera}
 
 \input{../preamble.tex}
 \title{Quick questions}
@@ -13,11 +13,91 @@
 
 
 \begin{listOutcomes}
-\item 
+\item Work with percent increase and percent decrease.
+\item Apply the relation between linear scaling and area scaling.
+\item Apply the relation between linear scaling and volume scaling.
+\item Connect scaling of length, area, and volume to real-world
+  attributes of objects.
 \end{listOutcomes}
-
+  %Toybox, cereal box, Lego box? Estimate a discrete unit? 
 
 \mynewpage
+
+
+\begin{question}
+  You are planning a building with a square parking lot.
+  \begin{enumerate}
+  \item You realize that if you re-arrange your design, you can make
+    the square parking lot $13\%$ bigger on each side. How many more
+    cars can park in this new lot? Explain your reasoning.
+  \item Upon further inspection, you realize that with just a little
+    more re-arrangement, you can turn your original square parking lot
+    into a rectangle that is $9\%$ larger on one side, and $22\%$
+    larger on the other. How many more cars can park in this new lot?
+    Explain your reasoning.
+  \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item Well, if the side length is $13\%$ bigger, then the area is
+      \[
+      1.13\cdot 1.13 = \text{$28$ percent larger}
+      \]
+      so, we could park $28\%$ more cars.
+    \item So if we make a rectangle parking lot that is $9\%$ larger on
+      one side, and $22\%$ larger on the other, then the area is
+      \[
+      1.09\cdot 1.22 = \text{$33$ percent larger}
+      \]
+      so, we could park $33\%$ more cars.
+    \end{enumerate}
+  \end{freeResponse}
+\end{question}
+\mynewpage
+
+\begin{question}
+  You decide to buy an inflatable pool that is $10$ feet wide and $4$
+  feet deep:
+  \begin{center}
+    \includegraphics[width=.4\textwidth]{tenFtPool.jpg}
+  \end{center}
+  \begin{enumerate}
+    \item Suppose you have a coupon for $10\%$ off the price of the
+      pool above. At the checkout counter, the cashier asks you, ``Do
+      you want me to compute the discount before or after the tax?''
+      \textbf{To save the most money, should you compute the discount
+        before or after tax?} Explain your reasoning.
+    \item Now that you have the pool, you plan to have a pool party at
+      $4$pm the next day. Given that you can fill a bowl that is $5$
+      inches wide and $2$ inches deep with water in just $2$ seconds,
+      \textbf{when should you start filling your pool to ensure it is ready by
+      $\boldsymbol 4$pm?}  Explain your reasoning.
+  \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item Well, it doesn't matter, because multiplication is commutative.
+      \[
+      0.9 \cdot (\text{tax}) \cdot (\text{cost of pool})= (\text{tax})\cdot
+      0.9\cdot (\text{cost of pool}).
+      \]
+    \item So, the pool has
+      \[
+      12^3 \cdot 2^3 = 13824
+      \]
+      times as much volume as the bowl of water. Hence it will take
+      \[
+      2\cdot 13824~\text{seconds}
+      \]
+      or
+      \[
+      \frac{27648}{60\cdot 60} = 7.68~\text{hours}.
+      \]
+      We should start filling the pool at $8$am to be ready by $4$pm.
+    \end{enumerate}
+  \end{freeResponse}
+\end{question}
+\mynewpage
+
+
 
 
 \begin{question} 
@@ -26,38 +106,59 @@
   \includegraphics[width=.4\textwidth]{tank.png}  
 \end{center}
 \begin{enumerate}
-\item Your client wants to know how the cost of the raw materials will
-  change if the radius is reduced by $10\%$.
-\item Your client wants to know how the capacity will change if the
-  radius is reduced by $10\%$.
-\item Your boss wants to know how the filled-weight will change if the
-  radius is increased by $10\%$.
-\item Your boss wants to know how the empty-weight will change if the
-  radius is increased by $10\%$.
+\item How does the cost of the raw materials will change if the radius
+  is reduced by $10\%$?
+\item How does the capacity will change if the radius is reduced by
+  $10\%$?
+\item How does the filled-weight will change if the radius is
+  increased by $10\%$?
+\item How does the empty-weight will change if the radius is increased
+  by $10\%$.
+\item How does the filled-weight will change if the empty-weight is
+  increased by $10\%$.
 \end{enumerate}
+\textbf{IN EACH CASE, EXPLAIN YOUR REASONING.}
+\begin{freeResponse}
+  \begin{enumerate}
+  \item Well, the amount of raw materials (and hence the cost) scales
+    like the surface area. So if the radius is reduced by $10\%$, the
+    cost of the raw materials is reduced by
+    \[
+    0.9\cdot 0.9 = 0.81
+    \]
+    and hence is reduced by $19\%$.
+  \item The capacity scales like the volume.  So if the radius is
+    reduced by $10\%$, the capacity is reduced by
+    \[
+    0.9\cdot 0.9\cdot 0.9 = 0.729
+    \]
+    and hence is reduced by $27\%$.
+  \item The filled-weight scales like the volume, so if the radius is
+    increased by $10\%$ we find
+    \[
+    1.10^3 \approx 1.33
+    \]
+    and this is a $33\%$ increase.
+  \item The empty-weight scales like surface area, so if the radius is
+    increased by $10\%$ we find
+    \[
+    1.10^2 \approx 1.21
+    \]
+    and this is a $21\%$ increase in the empty-weight
+  \item Well, if the empty-weight is increased by $10\%$, then the
+    radius is increased
+    \[
+    \sqrt{1.1} \approx 1.05
+    \]
+    and hence is increased by $5\%$. But filled-weight corresponds to
+    a
+    \[
+    1.05^3 \approx 1.16
+    \]
+    scaling of the volume, and this is a $16\%$ increase in filled-weight.
+  \end{enumerate}
+\end{freeResponse}
+
 \end{question}
-
-\mynewpage
-
-
-%% COULD WE THINK OF THESE AS PROMPTS FOR IN THE WILD? IF SO,
-%% IF SO WE SHOULD GIVE RELEVANT PLOTS
-%% THE RIGHT THINK TO PLOT IS THE SCALED/OLD?
-
-%% YOU GOTTA FIGURE THIS OUT.
-
-\begin{question}
-  DOG HOUSE DESIGN?
-  %Plywood: 3/4'' thick, 4'x8' $36
-\end{question}
-
-\mynewpage
-
-
-\begin{question}
-  %Toybox, cereal box, Lego box? Estimate a discrete unit? 
-\end{question}
-%% FOLLOWUPS!
-%% MAXIMIZE?
 
 \end{document}
