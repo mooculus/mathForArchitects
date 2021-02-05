@@ -1,4 +1,4 @@
-\documentclass[handout,nooutcomes,noauthor]{ximera}
+\documentclass[nooutcomes,noauthor]{ximera}
 
 \input{../preamble.tex}
 \title{Louie Llama and the triangle}
@@ -13,8 +13,13 @@
 
 
 \begin{listOutcomes}
-\item Work with interior angles and exterior angles.
-\item 
+\item Measure lengths with rulers. 
+\item Measure angles with protractors.
+\item Use \snap\ to verify hypotheses.
+\item Work with interior angles.
+\item Work with exterior angles.
+\item Derive simple formulas for interior/exterior angles (and their
+  sum) of basic shapes.
 \end{listOutcomes}
 
 We are going to investigate why the interior angles of a triangle sum
@@ -24,8 +29,8 @@ Meet Louie Llama:\index{Louie Llama}
 \includegraphics[height=1in]{llama.pdf}
 \]
 
-Louie Llama is rather radical for a llama and doesn't mind being
-rotated one bit.
+Louie Llama is rather radical for a llama---he doesn't mind being
+ROTATED one bit.
 
 \mynewpage
 
@@ -34,49 +39,114 @@ rotated one bit.
 \begin{question}
   Let's take Louie Llama for a walk.
   \begin{enumerate}
-  \item Draw an obtuse, non-right, scalene triangle. LABEL
-    side-lengths and angles.
+  \item Draw an obtuse, non-right, scalene triangle. Use a RULER and a
+    PROTRACTOR to measure sides and the angles. LABEL side-lengths and
+    angle measures.
   \item Now, use your imagination (and artistic skills) to visualize
-    Louie Llama walking around the triangle, ALWAYS keeping his FEET
-    facing the sides. At EACH VERTEX of the triangle, LABEL the angle
-    through which Louie Llama turns.
+    Louie Llama starting at the middle of one side and walking around
+    the triangle, ALWAYS keeping his FEET facing the sides. At EACH
+    VERTEX of the triangle, LABEL the angle through which Louie Llama
+    turns.
   \item Write a \snap\ SCRIPT that demonstrates that your answers from
     part (b) are correct. Show off your work by giving screenshots of
     your SCRIPT and your STAGE.
-  \end{enumerate}  
+  \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item Here it is:
+      \begin{center}
+        \includegraphics[width=.4\textwidth]{specificTri.jpg}
+      \end{center}
+    \item Here it is:
+      \begin{center}
+        \includegraphics[width=.4\textwidth]{llamaAndSpecificTri.jpg}
+      \end{center}
+    \item Here is my script and stage for the pentagon:
+      \begin{center}
+        \raisebox{-.2\height}{\includegraphics{SCRIPTllamaWalk.png}}
+        \qquad
+        \fbox{\includegraphics[width=.4\textwidth]{STAGEllamaWalk.png}}
+      \end{center}
+      
+    \end{enumerate}
+  \end{freeResponse}
 \end{question}
 
 \mynewpage
 
 
 \begin{question}
-  Let's take Louie Llama for a more general walk. 
-
-  
-  Write an equation where the right-hand side is Louie Llama's total
-  rotation and the left-hand side is the sum of each rotation around
-  the angle. Can you solve for $a+b+c$?
+  Let's take Louie Llama for a more general walk.
+  \begin{enumerate}
+  \item Draw some non-right scalene triangle, but this time label the
+    angles $\alpha$, $\beta$, and $\gamma$. Again, imagine Louie Llama
+    starting at the middle of one side and walking around the
+    triangle, ALWAYS keeping his FEET facing the sides. At EACH VERTEX
+    of the triangle, LABEL the angle through which Louie Llama turns.
+  \item In TOTAL, how much did Louie Llama turn? Give a very brief and quick explanation.
+  \item Write an equation where the right-hand side is Louie Llama's
+    total rotation and the left-hand side is the sum of each rotation
+    around the angle. SOLVE for $\alpha+\beta+\gamma$.
+  \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item Here it is:
+      \begin{center}
+        \includegraphics[width=.4\textwidth]{generalTriAndLlama.jpg}
+      \end{center}
+    \item I can SEE he turned $360^\circ$!
+    \item Write
+      \[
+      \underbrace{360}_{\text{whole turn}} = \underbrace{180-\alpha}_{\text{first turn}} + \underbrace{180-\beta}_{\text{second turn}} + \underbrace{180-\gamma}_{\text{third turn}}
+      \]
+      Solving for $\alpha + \beta + \gamma$, we have
+      \[
+      \alpha + \beta + \gamma = 180.
+      \]
+    \end{enumerate}
+  \end{freeResponse}
 \end{question}
 
 \mynewpage
 
 
 \begin{question}
-  Can you walk Louie Llama around other shapes and figure out what the
-  sum of their interior angles are? Let's do this with a table:
+  Let's walk Louie Llama around other shapes and figure stuff
+  out. Fill in the rest of the table below. As a gesture of
+  friendship, I've filled in the top row. SIMPLIFY the bottom row.
   \[
-    {\renewcommand{\arraystretch}{1.5}
-      \begin{tabular}{|c|c|c|}\hline
-        $n$-gon & sum of interior angles & interior angle of a regular $n$-gon\\\hline\hline
-        3 & & \\\hline
-        4 & & \\\hline
-        5 & & \\\hline
-        6 & & \\\hline
-        7 & & \\\hline
-        8 & & \\\hline
-        $n$ & & \\\hline
-    \end{tabular}}
-    \]
+  \renewcommand{\arraystretch}{3}
+  \begin{array}{|c||c|c|c|}\hline
+    \text{$n$-gon} & \begin{minipage}{1.3in}\center sum of \\ interior angles \end{minipage} &
+    \begin{minipage}{1.5in}\center interior angles \\ of a regular $n$-gon\end{minipage} &
+      \begin{minipage}{1.5in}\center exterior angles \\ of a regular $n$-gon\end{minipage} \\\hline\hline
+        3 & 180^\circ & 60^\circ  & 120^\circ \\\hline
+        4 & & & \\\hline
+        5 & & & \\\hline
+        6 & & & \\\hline
+        7 & & & \\\hline
+        8 & & & \\\hline\hline
+        n & & & \\\hline
+  \end{array}
+  \]
+  \begin{freeResponse}
+    Here's my table:
+    \[
+  \renewcommand{\arraystretch}{3}
+  \begin{array}{|c||c|c|c|}\hline
+    \text{$n$-gon} & \begin{minipage}{1.3in}\center sum of \\ interior angles \end{minipage} &
+    \begin{minipage}{1.5in}\center interior angles \\ of a regular $n$-gon\end{minipage} &
+      \begin{minipage}{1.5in}\center exterior angles \\ of a regular $n$-gon\end{minipage} \\\hline\hline
+        3 & 180^\circ & 60^\circ  & 120^\circ \\\hline
+        4 & 360^\circ & 90^\circ & 90^\circ \\\hline
+        5 & 540^\circ & 108^\circ & 72^\circ \\\hline
+        6 & 720^\circ & 120^\circ & 60^\circ\\\hline
+        7 & 900^\circ & 128.6^\circ& 51.4^\circ\\\hline
+        8 & 1080^\circ& 135^\circ& 45^\circ \\\hline\hline
+        n & (n-2)180^\circ  & \frac{(n-2)180^\circ}{n} & \frac{360^\circ}{n}\\\hline
+  \end{array}
+  \]
+  \end{freeResponse}
 \end{question}
 
 \end{document}
