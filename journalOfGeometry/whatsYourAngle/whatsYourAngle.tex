@@ -1,4 +1,4 @@
-\documentclass[handout,nooutcomes,noauthor,hints]{ximera}
+\documentclass[nooutcomes,noauthor,hints]{ximera}
 
 \input{../preamble.tex}
 \title{What's your angle}
@@ -61,7 +61,7 @@
         \draw (A)--(B)--(C)--(E)--(D)--cycle;
         
         \tkzMarkAngle[size=0.7cm,thin](B,D,A)
-        \tkzLabelAngle[pos = -0.4](B,D,A){$\alpha$}
+        \tkzLabelAngle[pos = 0.4](B,D,A){$\alpha$}
         
         \tkzMarkAngle[arc=ll,size=0.5cm,thin](E,D,B)
         \tkzLabelAngle[pos = 0.25](E,D,B){$\beta$}
@@ -131,8 +131,11 @@ BDA$ and triangle $\triangle CDE$ are congruent.
       \end{tikzpicture}
   \end{center}
   \begin{enumerate}
-  \item Using a protractor, measure the interior angles of the shape
-    above and use this table to record your findings:
+  \item Using a protractor, or an online tool like
+    \link[\textsl{Geogebra}]{https://www.geogebra.org/classic},
+    measure the interior angles of the shape above (to the nearest
+    degree) and use this table to record your findings, along with the
+    SUM of YOUR MEASUREMENTS:
   \[
     {\renewcommand{\arraystretch}{1.5}
       \begin{array}{|c|c|c|c|c|c|c|c|c||c|}\hline
@@ -140,16 +143,94 @@ BDA$ and triangle $\triangle CDE$ are congruent.
         \rule[7mm]{10mm}{0mm}  & \rule[7mm]{10mm}{0mm}    & \rule[7mm]{10mm}{0mm}   & \rule[7mm]{10mm}{0mm}   &  \rule[7mm]{10mm}{0mm}   & \rule[7mm]{10mm}{0mm}    & \rule[7mm]{10mm}{0mm}   & \rule[7mm]{10mm}{0mm}   & \rule[7mm]{10mm}{0mm} & \rule[7mm]{10mm}{0mm} \\ \hline
     \end{array}}
     \]
+  \item Use Louie Llama to help you find the sum of the interior
+    angles WITHOUT appealing to your measurements above. SHOW YOUR
+    WORK, and/or EXPLAIN your reasoning.
+  \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+      \item Here is my table:
+      \[
+        {\renewcommand{\arraystretch}{1.5}
+          \begin{array}{|c|c|c|c|c|c|c|c|c||c|}\hline
+            \alpha & \beta & \gamma & \delta & \varepsilon & \zeta & \eta & \theta & \iota & SUM\\\hline\hline
+            48^\circ & 283^\circ & 12^\circ & 327^\circ & 41^\circ & 96^\circ & 52^\circ & 270^\circ & 131^\circ & 1260^\circ\\ \hline
+        \end{array}}
+        \]
+      \item Walking Louie Llama around this shape will spin him $360^\circ$. Each, time he goes around an angle, he rotates
+        \[
+        180 - (\text{interior angle}) ~\text{degrees}.
+        \]
+        So we may write:
+        \[
+        (180 - \alpha) + (180 - \beta) + (180 - \gamma)+ (180 - \delta)+ (180 - \varepsilon) + (180 - \zeta) + (180 - \eta) + (180 - \theta) + (180 - \iota) = 360
+        \]
+        Solving, we find
+        \[
+        \alpha + \beta + \gamma + \delta + \varepsilon + \zeta + \eta + \theta + \iota = 1260.
+        \]
+    \end{enumerate}
+  \end{freeResponse}
 \end{question}
 
 \mynewpage
 
 
 \begin{question}
-
-  POLYGON TRIANGULATION? 
-
-  MORE LLAMA ESK QUESTIONS OR PROTRACTOR LLAMA QUESTIONS
+  In mathematics, we like multiple explanations for the same
+  facts. Another way to understand the sum of the interior angles of a
+  polygon, is to ``triangulate'' the polygon. 
+  \begin{enumerate}
+  \item Explain what it means to ``triangulate'' a polygon
+    \textbf{without} extra vertices.
+  \item Triangulate a quadrilateral to find the sum of the measures of
+    the interior angles. 
+  \item Triangulate a pentagon to find the sum of the measures of
+    the interior angles. 
+  \item Triangulate this crazy shape
+    \begin{center}
+      \begin{tikzpicture}[geometryDiagrams]
+        \coordinate (A) at (0,4.5);
+        \coordinate (B) at (2.5,2.5);
+        \coordinate (C) at (0,.5);
+        \coordinate (D) at (4,2.5);
+        \coordinate (E) at (2.5,0);
+        \coordinate (F) at (10,2.5);
+        \coordinate (G) at (9.5,5);
+        \coordinate (H) at (7,2);
+        \coordinate (I) at (3.5,5);
+        
+        \draw (A)--(B)--(C)--(D)--(E)--(F)--(G)--(H)--(I)--cycle;
+        
+        %% \tkzMarkAngle[size=0.7cm,thin](B,D,A)
+        %% \tkzLabelAngle[pos = -0.5](I,A,B){$\alpha$}
+        
+        %% \tkzLabelAngle[pos = -0.2](A,B,C){$\beta$}
+        
+        %% \tkzLabelAngle[pos = -1.9](B,C,D){$\gamma$}
+        
+        %% \tkzLabelAngle[pos = -0.2](C,D,E){$\delta$}
+        
+        %% \tkzLabelAngle[pos = -0.5](D,E,F){$\varepsilon$}
+        
+        %% \tkzLabelAngle[pos = -0.3](E,F,G){$\zeta$}
+        
+        %% \tkzLabelAngle[pos = -0.5](F,G,H){$\eta$}
+        
+        %% \tkzLabelAngle[pos = -0.2](G,H,I){$\theta$}
+        
+        %% \tkzLabelAngle[pos = -0.3](H,I,A){$\iota$}
+        
+        %\draw[step=.5cm,thin,gray] (0,0) grid (10,5);
+      \end{tikzpicture}
+    \end{center}
+    to find the sum of the measures of the interior angles.
+  \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+      \item 
+    \end{enumerate}
+  \end{freeResponse}
 \end{question}
 
 
