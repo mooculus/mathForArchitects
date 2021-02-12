@@ -1,12 +1,29 @@
 %% semester watermark
+\newcommand{\semester}{%
+  \ifcase\month
+  \or SP %1
+  \or SP %2
+  \or SP %3
+  \or SP %4
+  \or M  %5
+  \or SU %6
+  \or SU %7
+  \or AU %8
+  \or AU %9
+  \or AU %10
+  \or AU %11
+  \or AU %12
+  \fi
+}
+
 \usepackage{draftwatermark}
 \SetWatermarkText{\normalfont 
-SP 2021}
+\semester \the\year}
 \SetWatermarkScale{1}
 \SetWatermarkLightness{.98}
 
 
-
+%% where to find images
 \graphicspath{  
 {./}
 {./whoAreYou/}
@@ -45,6 +62,7 @@ SP 2021}
 {./identifyingSymmetry/}
 {./inTheWild/}
 {./quickQuestions/}
+{./lifeOnACone/}
 }
 
 
@@ -195,6 +213,7 @@ SP 2021}
 \newcommand{\mooculus}{\textsf{\textbf{MOOC}\textnormal{\textsf{ULUS}}}}
 \newcommand{\stringstar}[2]{\left\{\frac{#1}{#2}\right\}}
 \renewcommand{\l}{\ell}
+\renewcommand{\bar}{\overline}
 
 
 \usepackage{tkz-euclide}
