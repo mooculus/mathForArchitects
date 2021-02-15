@@ -11,7 +11,14 @@
 
 
 \begin{listOutcomes}
-\item 
+\item Find various loci of points.
+\item Use facts about the foci of ellipses to solve problems.
+\item State the definition of a circle.
+\item State the definition of an ellipse.
+\item{Critique and dismantle reasonable hypotheses in regard to geometry and arithmetic.}
+\item State the definition of the circumcenter of a triangle.
+\item State the definition of the circumcircle of a triangle.
+\item Recognize that circles are determined by three points.
 \end{listOutcomes}
 
 
@@ -28,6 +35,10 @@
     \item Now suppose you have two points. USE the distance formula to
       find the set of points that are EQUIDISTANT from the two given
       points.
+    \item A \textbf{circle} is the set of points equidistant from a
+      given point. DERIVE (you may use the INTERNET to help you) the
+      \textbf{standard equation of a circle} of radius $r$ centered at
+      the origin.  
   \end{enumerate}
   \begin{freeResponse}
   \end{freeResponse}
@@ -36,16 +47,89 @@
 
 
 \begin{question}
-  Circle and ellipse -- verify with DESMOS
+  Ellipses are also directly related to the distance formula.  Given
+  two points
+  \[
+  (-c,0) \qquad\text{and} \qquad (c,0)
+  \]
+  that we will call \textbf{foci}, an \textbf{ellipse} is the set
+  of points such that the sum of the distances from any point on
+  the ellipse to the foci is constant.
+  \begin{enumerate}      
+  \item Consider an ellipse with foci:
+    \[
+    (-3,0) \qquad \text{and}\qquad (3,0)
+    \]%\frac{x^{2}}{5^{2}}+\frac{y^{2}}{4^{2}}=1
+    Which of the following points belong on the ellipse where the sum
+    of the distances from any point on the ellipse to the foci is
+    $10$?
+    \begin{enumerate}
+    \item $(3,3.2)$
+    \item $(-4,2.8)$
+    \item $(4.8,0.7)$
+    \item $(2,-3.6666\dots)$
+    \end{enumerate}
+    \item Consider this drawing of an ellipse:
+      \begin{center}
+        \begin{tikzpicture}[geometryDiagrams,scale=.8]
+          \draw (0,0) ellipse (2in and 1in);
+          \draw[->,thin] (0in,-1.5in) -- (0in,1.5in);
+          \draw[->,thin] (-2.5in,0in) -- (2.5in,0in);
+          \filldraw[black] (2in,0) circle (2pt) node[above right] {(a,0)};
+          \filldraw[black] (0,1in) circle (2pt) node[above right] {(0,b)};
+
+          \filldraw[black] (1.73in,0in) circle (2pt) node[below left] {(c,0)};
+          \filldraw[black] (-1.73in,0in) circle (2pt) node[below right] {(-c,0)};
+
+          \draw[dashed,thin] (-1.73in,0in) -- (.9in,.89in);
+          \draw[dashed,thin] (1.73in,0in) -- (.9in,.89in);
+
+          \node at (-.75in,.5in) {$X$};
+          \node at (1.2in,.35in) {$Y$};
+          
+          \filldraw[black] (.9in,.89in) circle (2pt);
+        \end{tikzpicture}
+      \end{center}
+      Express $X+Y$ (as simply as you can!) in terms of $a$ and/or $b$
+      and/or $c$.
+    \item \textit{Geometry Giorgio} suggests that the foci of this ellipse
+      \begin{center}
+        \begin{tikzpicture}[geometryDiagrams,scale=.8]
+          \draw (0,0) ellipse (2in and 1in);
+          \draw[->,thin] (0in,-1.5in) -- (0in,1.5in);
+          \draw[->,thin] (-2.5in,0in) -- (2.5in,0in);
+
+          
+          \filldraw[black] (2in,0) circle (2pt) node[above right] {(2,0)};
+          \filldraw[black] (0,1in) circle (2pt) node[above right] {(0,1)};
+
+          \filldraw[black] (1in,0in) circle (2pt) node[below] {(1,0)};
+          \filldraw[black] (-1in,0in) circle (2pt) node[below] {(-1,0)};
+        \end{tikzpicture}
+      \end{center}
+      are at $(-1,0)$ and $(1,0)$. Prove him RIGHT or prove him WRONG.
+  \end{enumerate}
 \end{question}
 \mynewpage
 
 
 \begin{question}
+  Imagine you have three points on a plane and the points are NOT in a
+  line.
   \begin{enumerate}
-  \item  EQUIDISTANT from 3 points.
-
-
+  \item How many points are EQUIDISTANT to each of your three points?
+  \item Explain why your locus is the center of a circle containing those three points.
+  \item Connect your three points with lines. Now imagine a
+    triangle. If you want a point equidistant from the vertices of the
+    triangle, should you:
+    \begin{itemize}
+    \item Intersect the angle bisectors?
+    \item Intersect the perpendicular bisectors of the sides?
+    \item Something else entirely?
+    \end{itemize}
+    Explain your reasoning.
+  \item Cool folks say that ``A circle is determined by three points.'' What does this mean?
+  \end{enumerate}
 \end{question}
 
 \end{document}
