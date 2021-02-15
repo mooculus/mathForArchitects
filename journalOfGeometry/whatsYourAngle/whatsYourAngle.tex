@@ -3,11 +3,12 @@
 \input{../preamble.tex}
 \title{What's your angle}
 
-\author{Bart Snapp}
+\author{Herb Clemens \and Brad Findell \and Jenny Sheldon \and Bart Snapp}
+
 
 \begin{document}
 \begin{abstract}
-  Let's put our knowledge of angles to work. 
+  Let's put our knowledge to work. 
 \end{abstract}
 \maketitle
 
@@ -15,7 +16,11 @@
 \begin{listOutcomes}
 \item Apply basic facts to solve for angles.
 \item Apply triangle congruence theorems.
-\item 
+\item Measure angles with a protractor.
+\item Work with interior angles.
+\item Work with exterior angles.
+\item Derive simple formulas for interior/exterior angles (and their
+  sum) of basic shapes.
 \end{listOutcomes}
 
 \mynewpage
@@ -175,63 +180,145 @@ BDA$ and triangle $\triangle CDE$ are congruent.
 
 \mynewpage
 
-
 \begin{question}
-  In mathematics, we like multiple explanations for the same
-  facts. Another way to understand the sum of the interior angles of a
-  polygon, is to ``triangulate'' the polygon. 
+  Let's go for a few more walks with the ever insightful Louie Llama.
   \begin{enumerate}
-  \item Explain what it means to ``triangulate'' a polygon
-    \textbf{without} extra vertices.
-  \item Triangulate a quadrilateral to find the sum of the measures of
-    the interior angles. 
-  \item Triangulate a pentagon to find the sum of the measures of
-    the interior angles. 
-  \item Triangulate this crazy shape
+  \item Here's a regular five pointed star:
     \begin{center}
-      \begin{tikzpicture}[geometryDiagrams]
-        \coordinate (A) at (0,4.5);
-        \coordinate (B) at (2.5,2.5);
-        \coordinate (C) at (0,.5);
-        \coordinate (D) at (4,2.5);
-        \coordinate (E) at (2.5,0);
-        \coordinate (F) at (10,2.5);
-        \coordinate (G) at (9.5,5);
-        \coordinate (H) at (7,2);
-        \coordinate (I) at (3.5,5);
-        
-        \draw (A)--(B)--(C)--(D)--(E)--(F)--(G)--(H)--(I)--cycle;
-        
-        %% \tkzMarkAngle[size=0.7cm,thin](B,D,A)
-        %% \tkzLabelAngle[pos = -0.5](I,A,B){$\alpha$}
-        
-        %% \tkzLabelAngle[pos = -0.2](A,B,C){$\beta$}
-        
-        %% \tkzLabelAngle[pos = -1.9](B,C,D){$\gamma$}
-        
-        %% \tkzLabelAngle[pos = -0.2](C,D,E){$\delta$}
-        
-        %% \tkzLabelAngle[pos = -0.5](D,E,F){$\varepsilon$}
-        
-        %% \tkzLabelAngle[pos = -0.3](E,F,G){$\zeta$}
-        
-        %% \tkzLabelAngle[pos = -0.5](F,G,H){$\eta$}
-        
-        %% \tkzLabelAngle[pos = -0.2](G,H,I){$\theta$}
-        
-        %% \tkzLabelAngle[pos = -0.3](H,I,A){$\iota$}
-        
-        %\draw[step=.5cm,thin,gray] (0,0) grid (10,5);
+      \begin{tikzpicture}
+        \foreach \i in {1,...,5}
+                 {
+                   \draw ({2*sin(\i *360/5)},{2*cos(\i * 360/5)}) -- ({2*sin((\i+2)*360/(5))},{2*cos((\i+2)*360/(5))});
+                   \node (1) at ({1.5*sin(\i *360/5)},{1.5*cos(\i *360/5)}) {$\alpha$};
+                 }
+                 
       \end{tikzpicture}
     \end{center}
-    to find the sum of the measures of the interior angles.
+    Use Louie Llama to find the measure of one of the angles labeled
+    $\alpha$. EXPLAIN how you arrived at your conclusion using words,
+    pictures, llamas, and so on as needed/helpful.
+  \item Here's regular seven pointed star:
+    \begin{center}
+      \begin{tikzpicture}
+        \foreach \i in {1,...,7}
+                 {
+                   \draw ({2*sin(\i *360/7)},{2*cos(\i * 360/7)}) -- ({2*sin((\i+3)*360/(7))},{2*cos((\i+3)*360/(7))});
+                   \node (1) at ({1.3*sin(\i *360/7)},{1.3*cos(\i *360/7)}) {$\beta$};
+                 }
+                 
+      \end{tikzpicture}
+    \end{center}
+    Use Louie Llama to find the measure of one of the angles labeled
+    $\beta$. EXPLAIN how you arrived at your conclusion using words,
+    pictures, llamas, and so on as needed/helpful.  
+  \item Here's ANOTHER regular seven pointed star:
+    \begin{center}
+      \begin{tikzpicture}
+        \foreach \i in {1,...,7}
+                 {
+                   \draw ({2*sin(\i *360/7)},{2*cos(\i * 360/7)}) -- ({2*sin((\i+2)*360/(7))},{2*cos((\i+2)*360/(7))});
+                   \node (1) at ({1.7*sin(\i *360/7)},{1.7*cos(\i *360/7)}) {$\gamma$};
+                 }
+                 
+      \end{tikzpicture}
+    \end{center}
+    Use Louie Llama to find the measure of one of the angles labeled
+    $\gamma$. EXPLAIN how you arrived at your conclusion using words,
+    pictures, llamas, and so on as needed/helpful.
   \end{enumerate}
   \begin{freeResponse}
     \begin{enumerate}
-      \item 
+    \item Here, Louie makes $5$ turns of $180-\alpha$ each. In
+      the process, he makes TWO complete rotations. This means
+      \[
+      5\cdot (180-\alpha) = 2\cdot 360
+      \]
+      and so
+      \[
+      \alpha= 36^\circ.
+      \]
+    \item Here, Louie makes $7$ turns of $180-\beta$ each. In
+      the process, he makes THREE complete rotations. This means
+      \[
+      7\cdot (180-\beta) = 3\cdot 360
+      \]
+      and so
+      \[
+      \beta\approx 25.7^\circ.
+      \]
+    \item Here, Louie makes $7$ turns of $180-\gamma$ each. In
+      the process, he makes TWO complete rotations. This means
+      \[
+      7\cdot (180-\gamma) = 2\cdot 360
+      \]
+      and so
+      \[
+      \gamma\approx 77.1^\circ.
+      \]
     \end{enumerate}
   \end{freeResponse}
 \end{question}
+
+
+
+%% Question about triangulation of a polygon.
+%%
+%% \begin{question}
+%%   In mathematics, we like multiple explanations for the same
+%%   facts. Another way to understand the sum of the interior angles of a
+%%   polygon, is to ``triangulate'' the polygon. 
+%%   \begin{enumerate}
+%%   \item Explain what it means to ``triangulate'' a polygon
+%%     \textbf{without} extra vertices.
+%%   \item Triangulate a quadrilateral to find the sum of the measures of
+%%     the interior angles. 
+%%   \item Triangulate a pentagon to find the sum of the measures of
+%%     the interior angles. 
+%%   \item Triangulate this crazy shape
+%%     \begin{center}
+%%       \begin{tikzpicture}[geometryDiagrams]
+%%         \coordinate (A) at (0,4.5);
+%%         \coordinate (B) at (2.5,2.5);
+%%         \coordinate (C) at (0,.5);
+%%         \coordinate (D) at (4,2.5);
+%%         \coordinate (E) at (2.5,0);
+%%         \coordinate (F) at (10,2.5);
+%%         \coordinate (G) at (9.5,5);
+%%         \coordinate (H) at (7,2);
+%%         \coordinate (I) at (3.5,5);
+        
+%%         \draw (A)--(B)--(C)--(D)--(E)--(F)--(G)--(H)--(I)--cycle;
+        
+%%         %% \tkzMarkAngle[size=0.7cm,thin](B,D,A)
+%%         %% \tkzLabelAngle[pos = -0.5](I,A,B){$\alpha$}
+        
+%%         %% \tkzLabelAngle[pos = -0.2](A,B,C){$\beta$}
+        
+%%         %% \tkzLabelAngle[pos = -1.9](B,C,D){$\gamma$}
+        
+%%         %% \tkzLabelAngle[pos = -0.2](C,D,E){$\delta$}
+        
+%%         %% \tkzLabelAngle[pos = -0.5](D,E,F){$\varepsilon$}
+        
+%%         %% \tkzLabelAngle[pos = -0.3](E,F,G){$\zeta$}
+        
+%%         %% \tkzLabelAngle[pos = -0.5](F,G,H){$\eta$}
+        
+%%         %% \tkzLabelAngle[pos = -0.2](G,H,I){$\theta$}
+        
+%%         %% \tkzLabelAngle[pos = -0.3](H,I,A){$\iota$}
+        
+%%         %\draw[step=.5cm,thin,gray] (0,0) grid (10,5);
+%%       \end{tikzpicture}
+%%     \end{center}
+%%     to find the sum of the measures of the interior angles.
+%%   \end{enumerate}
+%%   \begin{freeResponse}
+%%     \begin{enumerate}
+%%       \item 
+%%     \end{enumerate}
+%%   \end{freeResponse}
+%% \end{question}
 
 
 
