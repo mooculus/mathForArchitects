@@ -1,4 +1,4 @@
-\documentclass[nooutcomes,noauthor,handout]{ximera}
+\documentclass[nooutcomes,noauthor]{ximera}
 
 \input{../preamble.tex}
 \title{The distance formula}
@@ -30,20 +30,106 @@
   Use the INTERNET to look up the distance formula. 
   \begin{enumerate}
     \item STATE the distance formula. 
-    \item EXPLAIN how the distance formula follows from the
-      Pythagorean theorem.
+    \item EXPLAIN (perhaps with the help of a picture) how the
+      distance formula follows from the Pythagorean theorem.
     \item Now suppose you have two points. USE the distance formula to
-      find the set of points that are EQUIDISTANT from the two given
-      points.
+      find the set of points that are each simultaneously EQUIDISTANT
+      from the two given points.
     \item A \textbf{circle} is the set of points equidistant from a
       given point. DERIVE (you may use the INTERNET to help you) the
       \textbf{standard equation of a circle} of radius $r$ centered at
       the origin.  
   \end{enumerate}
   \begin{freeResponse}
+    \begin{enumerate}
+    \item The \underline{distance formula} says that the distance between two points $(x,y)$ and $(a,b)$ is
+      \[
+      \text{distance} = \sqrt{(x-a)^2 + (y-b)^2}.
+      \]
+    \item This is basically the Pythagorean theorem. Plot the points
+      $(a,b)$ and $(x,y)$:
+    \begin{center}
+      \begin{tikzpicture}[geometryDiagrams]
+	\begin{axis}[
+            xmin=0, xmax=5,ymin=0,ymax=5,
+            axis lines =left, 
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            xtick={1,3}, xticklabels={$a$,$x$},
+            ytick={2,3}, yticklabels={$b$,$y$},
+            axis on top,
+          ]       
+          \addplot[,dashed] plot coordinates {(1,0) (1,2)};
+          \addplot[,dashed] plot coordinates {(0,2) (1,2)};
+          \addplot[,dashed] plot coordinates {(3,0) (3,3)};
+          \addplot[,dashed] plot coordinates {(0,3) (3,3)};
+          \addplot[,only marks,mark=*] coordinates{(1,2)};  %% closed hole          
+          \addplot[,only marks,mark=*] coordinates{(3,3)};  %% closed hole          
+        \end{axis}
+      \end{tikzpicture}
+    \end{center}
+    We may now construct a right triangle with horizontal side length
+    $(x-a)$ and vertical side length
+    $(y-b)$ whose hypotenuse is the shortest path
+    between the two points:
+    \begin{center}
+      \begin{tikzpicture}[geometryDiagrams]
+        \begin{axis}[
+            xmin=0, xmax=5,ymin=0,ymax=5,
+            axis lines =left, 
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            xtick={1,3}, xticklabels={$a$,$x$},
+            ytick={2,3}, yticklabels={$b$,$y$},
+            axis on top,
+          ]       
+          \node at (axis cs:2,1.75) {$(x-a)$}; 
+          \node at (axis cs:3.5,2.5) {$(y-b)$}; 
+          \addplot[dashed] plot coordinates {(1,2) (3,3)};
+          \addplot[] plot coordinates {(1,2) (3,2)};
+          \addplot[] plot coordinates {(3,2) (3,3)};
+          \addplot[] plot coordinates {(2.83,2) (2.83,2.2) (3,2.2)};
+          \addplot[,only marks,mark=*] coordinates{(1,2)};  %% closed hole          
+          \addplot[only marks,mark=*] coordinates{(3,3)};  %% closed hole          
+        \end{axis}
+      \end{tikzpicture}
+    \end{center}
+    By the Pythagorean theorem, the length of this path is given by 
+    \[
+    \text{distance}=\sqrt{(x-a)^{2}+(y-b)^{2}}.
+    \]
+    \item Let $(a_x,a_y)$ and $(b_x,b_y)$ be the two points. We want
+      all $(x,y)$ such that
+      \begin{align*}
+        \sqrt{(x-a_x)^2+(y-a_y)^2} &= \sqrt{(x-b_x)^2+(x-b_y)^2}\\
+        (x-a_x)^2+(y-a_y)^2 &= (x-b_x)^2+(x-b_y)^2\\
+        x^2-2xa_x + a_x^2+y^2-2ya_y + a_y^2 &= x^2-2xb_x + b_x^2+y^2-2yb_y + b_y^2\\
+        -2xa_x + a_x^2-2ya_y + a_y^2 &= -2xb_x + b_x^2-2yb_y + b_y^2\\
+        2(a_x -b_x)x+2(a_y -b_y)y  &=b_y^2-a_y^2.
+      \end{align*}
+      This is the standard equation of a line.
+    \item Well, write
+      \begin{align*}
+        r &= \sqrt{x^2 + y^2}\\
+        r^2 &= x^2 + y^2.
+      \end{align*}
+      This is the standard equaion of a circle of radius $r$ centered
+      at the origin.
+    \end{enumerate}
   \end{freeResponse}
 \end{question}
 \mynewpage
+
+
+
+
+
+
+
+
+
+
+
 
 
 \begin{question}
@@ -109,8 +195,30 @@
       \end{center}
       are at $(-1,0)$ and $(1,0)$. Prove him RIGHT or prove him WRONG.
   \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item Let's see, of these
+      \begin{itemize}
+      \item
+      \item
+      \item
+      \item
+      \end{itemize}
+    \item 
+    \end{enumerate}
+  \end{freeResponse}
 \end{question}
 \mynewpage
+
+
+
+
+
+
+
+
+
+
 
 
 \begin{question}
