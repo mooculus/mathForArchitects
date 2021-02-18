@@ -3,6 +3,8 @@
 \input{../preamble.tex}
 \title{The distance formula}
 
+\author{Bart Snapp}
+
 \begin{document}
 \begin{abstract}
   Let's think of consequences of the Pythagorean theorem.
@@ -32,9 +34,6 @@
     \item STATE the distance formula. 
     \item EXPLAIN (perhaps with the help of a picture) how the
       distance formula follows from the Pythagorean theorem.
-    \item Now suppose you have two points. USE the distance formula to
-      find the set of points that are each simultaneously EQUIDISTANT
-      from the two given points.
     \item A \textbf{circle} is the set of points equidistant from a
       given point. DERIVE (you may use the INTERNET to help you) the
       \textbf{standard equation of a circle} of radius $r$ centered at
@@ -98,17 +97,7 @@
     \[
     \text{distance}=\sqrt{(x-a)^{2}+(y-b)^{2}}.
     \]
-    \item Let $(a_x,a_y)$ and $(b_x,b_y)$ be the two points. We want
-      all $(x,y)$ such that
-      \begin{align*}
-        \sqrt{(x-a_x)^2+(y-a_y)^2} &= \sqrt{(x-b_x)^2+(x-b_y)^2}\\
-        (x-a_x)^2+(y-a_y)^2 &= (x-b_x)^2+(x-b_y)^2\\
-        x^2-2xa_x + a_x^2+y^2-2ya_y + a_y^2 &= x^2-2xb_x + b_x^2+y^2-2yb_y + b_y^2\\
-        -2xa_x + a_x^2-2ya_y + a_y^2 &= -2xb_x + b_x^2-2yb_y + b_y^2\\
-        2(a_x -b_x)x+2(a_y -b_y)y  &=b_y^2-a_y^2.
-      \end{align*}
-      This is the standard equation of a line.
-    \item Well, write
+  \item Well, write
       \begin{align*}
         r &= \sqrt{x^2 + y^2}\\
         r^2 &= x^2 + y^2.
@@ -150,10 +139,10 @@
     of the distances from any point on the ellipse to the foci is
     $10$?
     \begin{enumerate}
-    \item $(3,3.2)$
-    \item $(-4,2.8)$
-    \item $(4.8,0.7)$
-    \item $(2,-3.6666\dots)$
+    \item $(3,3.2)$ % yes = 10
+    \item $(-4,2.8)$ % no = 10.5124...
+    \item $(4.8,0.7)$ % no = 9.76267,,
+    \item $(2,-3.6666\dots)$ % yes = 10.
     \end{enumerate}
     \item Consider this drawing of an ellipse:
       \begin{center}
@@ -199,12 +188,21 @@
     \begin{enumerate}
     \item Let's see, of these
       \begin{itemize}
-      \item
-      \item
-      \item
-      \item
+      \item $\sqrt{(3-3)^2+3.2^2} + \sqrt{(3+3)^2 + 3.2^2} = 10$, so this point is on the ellipse.
+      \item $\sqrt{(-4-3)^2+2.8^2} + \sqrt{(-4+3)^2 + 2.8^2} \approx 10.5$, so this point is NOT on the ellipse.
+      \item $\sqrt{(4.8-3)^2+0.7^2} + \sqrt{(4.8+3)^2 + 0.7^2} \approx 9.8$, so this point is NOT on the ellipse.
+      \item $\sqrt{(2-3)^2+(-3.\bar{6})^2} + \sqrt{(2+3)^2 + (-3.\bar{6})^2} = 10$, so this point is on the ellipse.
       \end{itemize}
-    \item 
+    \item Well $X+Y=2a$, as if we look at the distance from the points to $(a,0)$ we find
+      \[
+      2c + (a-c) + (a-c) = 2a.
+      \]
+    \item NO Geometry Giorgio is WRONG. The sum of the distances from
+      the foci to the point $(0,1)$ should be $4$, but instead they
+      are
+      \[
+      \sqrt{2} + \sqrt{2} = 2\sqrt{2} \ne 4.
+      \]
     \end{enumerate}
   \end{freeResponse}
 \end{question}
@@ -222,11 +220,15 @@
 
 
 \begin{question}
-  Imagine you have three points on a plane and the points are NOT in a
-  line.
+  Now we're going to touch on something that will come up later.
   \begin{enumerate}
-  \item How many points are EQUIDISTANT to each of your three points?
-  \item Explain why your locus is the center of a circle containing those three points.
+  \item Suppose you have two points. SKETCH the set of points that are
+    each simultaneously EQUIDISTANT from the two given points.
+  \item Now suppose you have THREE points, not in a line. How many
+    points are EQUIDISTANT to each of your three points?
+  \item Explain why the locus of points equidistant from the point
+    found in the previous part is the center of a circle containing
+    those three points from the previous part.
   \item Connect your three points with lines. Now imagine a
     triangle. If you want a point equidistant from the vertices of the
     triangle, should you:
@@ -238,6 +240,21 @@
     Explain your reasoning.
   \item Cool folks say that ``A circle is determined by three points.'' What does this mean?
   \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item Given two points, the set of points that is simultaneously
+      equidistant from both is a line:
+      \begin{center}
+        \begin{tikzpicture}[geometryDiagrams]
+          \filldraw[black] (.5in,.5in) circle (2pt) ;
+          \filldraw[black] (-.5in,-.5in) circle (2pt) ;
+          \draw[<->,dashed] (-2,2) -- (2,-2);
+        \end{tikzpicture}
+      \end{center}
+    \item This is going to be a single point!
+    \item
+    \end{enumerate}
+  \end{freeResponse}
 \end{question}
 
 \end{document}
