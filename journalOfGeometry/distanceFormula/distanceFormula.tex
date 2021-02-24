@@ -14,7 +14,6 @@
 
 \begin{listOutcomes}
 \item Find various loci of points.
-\item Use facts about the foci of ellipses to solve problems.
 \item State the definition of a circle.
 \item State the definition of an ellipse.
 \item{Critique and dismantle reasonable hypotheses in regard to geometry and arithmetic.}
@@ -102,7 +101,7 @@
         r &= \sqrt{x^2 + y^2}\\
         r^2 &= x^2 + y^2.
       \end{align*}
-      This is the standard equaion of a circle of radius $r$ centered
+      This is the standard equation of a circle of radius $r$ centered
       at the origin.
     \end{enumerate}
   \end{freeResponse}
@@ -223,13 +222,12 @@
   Now we're going to touch on something that will come up later.
   \begin{enumerate}
   \item Suppose you have two points. SKETCH the set of points that are
-    each simultaneously EQUIDISTANT from the two given points.
+    each simultaneously EQUIDISTANT from the two given points. Use a
+    CONGRUENCE THEOREM to explain why your claim is correct.
   \item Now suppose you have THREE points, not in a line. How many
-    points are EQUIDISTANT to each of your three points?
-  \item Explain why the locus of points equidistant from the point
-    found in the previous part is the center of a circle containing
-    those three points from the previous part.
-  \item Connect your three points with lines. Now imagine a
+    points are EQUIDISTANT to each of your three points? EXPLAIN your
+    reasoning.
+  \item Connect three points, not all in a line, with lines to make a
     triangle. If you want a point equidistant from the vertices of the
     triangle, should you:
     \begin{itemize}
@@ -238,7 +236,8 @@
     \item Something else entirely?
     \end{itemize}
     Explain your reasoning.
-  \item Cool folks say that ``A circle is determined by three points.'' What does this mean?
+  \item Cool folks say that ``A circle is determined by three
+    points.'' What does this mean?
   \end{enumerate}
   \begin{freeResponse}
     \begin{enumerate}
@@ -246,20 +245,57 @@
       equidistant from both is a line:
       \begin{center}
         \begin{tikzpicture}[geometryDiagrams]
-          \filldraw[black] (.5in,.5in) circle (2pt) ;
-          \filldraw[black] (-.5in,-.5in) circle (2pt) ;
-          \draw[<->,dashed] (-2,2) -- (2,-2);
+          \filldraw[black] (1in,1in) circle (2pt) ;
+          \filldraw[black] (0in,0in) circle (2pt) ;
+          \draw[<->,dashed] (1.5in,-.5in) -- (-.5in,1.5in);
         \end{tikzpicture}
       \end{center}
-    \item This is going to be a single point! Behold:
+      This line is the perpendicular bisector of the line connecting
+      the points. We can now form two triangles, behold:
       \begin{center}
         \begin{tikzpicture}[geometryDiagrams]
-          \filldraw[black] (.5in,.5in) circle (2pt) ;
-          \filldraw[black] (-.5in,-.5in) circle (2pt) ;
-          \draw[<->,dashed] (-2,2) -- (2,-2);
+          \filldraw[black] (1in,1in) circle (2pt) ;
+          \filldraw[black] (0in,0in) circle (2pt) ;
+          \filldraw[black] (0in,1in) circle (2pt) ;
+          \draw[<->,dashed] (1.5in,-.5in) -- (-.5in,1.5in);
+
+          \tkzDefPoint(0,0){A}
+          \tkzDefPoint(1.27,1.27){M}
+          \tkzDefPoint(2.54,2.54){B}
+          \tkzDefPoint(0,2.54){L}
+          \tkzMarkSegments[mark=|](A,M B,M)
+          \tkzDrawSegment[thin](A,B)
+          \tkzDrawSegment[thin](M,L)
+          \tkzDrawSegments[thin](A,L B,L)
+          \tkzMarkRightAngle(A,M,L)
+          \tkzLabelSegment(A,L){$a$}
+          \tkzLabelSegment(B,L){$b$}
         \end{tikzpicture}
       \end{center}
-    \item
+      By the SAS congruence theorem, with the side connecting the
+      points to the midpoint, the right angle and the point on the
+      line, we see that $a=b$. Hence the perpendicular bisector is the
+      set of points that are equidistant from each of the two points.
+    \item This is going to be a single point, as two lines intersect
+      at a point! Behold:
+      \begin{center}
+        \begin{tikzpicture}[geometryDiagrams]
+          \filldraw[black] (1in,1in) circle (2pt) ;
+          \filldraw[black] (0in,0in) circle (2pt) ;
+          \filldraw[black] (-1in,1in) circle (2pt) ;
+          \draw[<->,dashed] (1in,0in) -- (-1in,2in);
+          \draw[<->,dashed] (-1in,0in) -- (1in,2in);
+        \end{tikzpicture}
+      \end{center}
+      The point where the dashed lines intersect is equidistant from
+      each of the three points.
+    \item We want to find the perpendicular bisectors of the sides and
+      intersect them. This is because the set of points equidistant
+      from two points lie on the perpendicular bisector, and the
+      intersection of these lines will be equidistant from both.
+    \item Since a circle is the set of points equidistant from a given
+      point, and the point we found above is equidistant from the
+      three given points, those three points lie on a circle.
     \end{enumerate}
   \end{freeResponse}
 \end{question}
