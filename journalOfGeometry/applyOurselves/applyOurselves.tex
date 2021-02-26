@@ -1,0 +1,281 @@
+\documentclass[nooutcomes,noauthor,hints,handout]{ximera}
+
+\input{../preamble.tex}
+\title{Let's apply ourselves}
+
+\author{Bart Snapp}
+
+\begin{document}
+\begin{abstract}
+  Let's apply what we know to solve problems!
+\end{abstract}
+\maketitle
+
+
+\begin{listOutcomes}
+\item Explain how shapes of the same area can have drastically
+  different perimeters.
+\item Apply concepts related to loci of points.
+\item Use facts about the foci of ellipses to solve problems.    
+\item Recognize that circles are determined by three points.
+\item Translate classroom mathematics into real world mathematics. 
+\item Critique and dismantle reasonable hypotheses in regard to geometry and arithmetic.
+\end{listOutcomes}
+
+
+\mynewpage
+
+
+
+\begin{question}
+  Recall that from some previous life you learned that a triangle of a
+  given (fixed) area could have an ARBITRARILY LARGE perimeter.
+  \begin{enumerate}
+  \item Reproduce an argument that a triangle of a given (fixed) area
+    could have an ARBITRARILY LARGE perimeter.
+  \item \textit{Geometry Giorgio} claims it is obvious that of all the
+    triangles with a fixed area and fixed height, an isosceles triangle
+    has least perimeter, \textbf{since we can produce a triangle of the same height
+      of arbitrarily large perimeter.} Is he correct?
+  \item Imagine a triangle with two points that are fixed, and a third
+    that can MOVE, provided that the PERIMETER of the triangle is
+    fixed. \textbf{What is the locus of points determined by the the third
+    point?} USE the shape of this locus to EXPLAIN WHY of all the
+    triangles with a fixed area and fixed height, an isosceles triangle
+    has least perimeter.
+  \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item Consider this picture:
+      \begin{center}
+        \begin{tikzpicture}[geometryDiagrams]
+          \coordinate (A) at (0,0);
+          \coordinate (B) at (2,0);
+          \coordinate (C) at (.5,3);
+          \draw[pattern=horizontal lines] (A)--(B)--(C)--cycle;
+          
+          \draw[line width=5pt, ->] (2,1.5)--(4,1.5);
+          
+          \coordinate (AA) at (4,0);
+          \coordinate (BB) at (6,0);
+          \coordinate (CC) at (11,3);
+          \draw[pattern=horizontal lines] (AA)--(BB)--(CC)--cycle;
+          %% \tkzLabelSegment[right](BB,CC){$h$}
+          %% \tkzLabelSegment[below](BB,AA){$b$}
+          %% \tkzLabelSegment[below](B,A){$b$}
+
+
+          \draw[thin,dashed] (-1,0)--(12,0);
+          \draw[thin,dashed] (-1,3)--(12,3);
+        \end{tikzpicture}
+      \end{center}
+      The triangle on the right has the same area as the triangle on
+      the left. However, the perimeter of the triangle on the right is
+      MUCH greater.  To obtain an arbitrarily large perimeter, simply
+      shear the triangle more---by Cavalieri's principle the area will
+      be unchanged.
+    \item \textit{Geometry Giorgio's} conclusion may be correct, but his
+      reasoning is not. 
+      \begin{center}
+        \begin{tikzpicture}[geometryDiagrams]
+          \coordinate (A) at (0,0);
+          \coordinate (B) at (2,0);
+          \coordinate (C) at (1,3);
+          \draw[pattern=horizontal lines] (A)--(B)--(C)--cycle;
+          
+          \draw[line width=5pt, ->] (3,1.5)--(5,1.5);
+          
+          \coordinate (AA) at (6,0);
+          \coordinate (BB) at (8,0);
+          \coordinate (CC) at (8,3);
+          \draw[pattern=horizontal lines] (AA)--(BB)--(CC)--cycle;
+          %% \tkzLabelSegment[right](BB,CC){$h$}
+          %% \tkzLabelSegment[below](BB,AA){$b$}
+          %% \tkzLabelSegment[below](B,A){$b$}
+
+
+          \draw[thin,dashed] (-1,0)--(9,0);
+          \draw[thin,dashed] (-1,3)--(9,3);
+        \end{tikzpicture}
+      \end{center}
+      Shearing as above, we see that while one side gets longer, the
+      other side gets shorter. We CANNOT directly SEE that the
+      isosceles triangle has the least perimeter for a given area.
+    \item So let's think about this. Given two points, if we want to
+      make a triangle with a fixed perimeter, we need to think about
+      all points so that the distance from the point to our given two
+      points is constant. WAIT A SECOND---THAT'S AN ELLIPSE! 
+    \end{enumerate}
+  \end{freeResponse}
+  \end{question}
+\mynewpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{question}
+  In 1973, FedEx was a small company. They had a very clever idea:
+  Find a city equidistant (by plane) from the cities they want to
+  deliver to.  Make this ``central'' city a ``hub'' and ship
+  everything there.  You don't have to take my word for it though,
+  check out \link[what FedEx has to say about
+    this]{https://www.fedex.com/en-us/about/policy/aviation/why-memphis.html}.
+  The idea was very successful, and and now a standard practice in the
+  industry.
+
+  In general, solving a problem like this depends on a lot of
+  factors. For us, it is enough to solve a much simpler problem. If we
+  have three points forming a triangle, the point equidistant from the
+  vertices is called the \textbf{circumcenter}. The circle that these
+  points lie on is called the \textbf{circumcircle}.
+  \begin{enumerate}
+  \item Find the circumcenter for the triangle below, and draw the
+    circumcircle. 
+    \begin{center}
+      \begin{tikzpicture}[geometryDiagrams]
+        \draw (1in,0in) -- (-1in,0in) -- (0in,2in) -- (1in,0in) -- (-1in,0in);
+        \filldraw[black] (1in,0in) circle (2pt) ;
+        \filldraw[black] (-1in,0) circle (2pt) ;
+        \filldraw[black] (0in,2in) circle (2pt) ;
+      \end{tikzpicture}
+    \end{center}
+  \item Find the circumcenter for the triangle below, and draw the
+    circumcircle. 
+    \begin{center}
+      \begin{tikzpicture}[geometryDiagrams]
+        \draw (2in,0in) -- (-2in,0in) -- (0in,1in) -- (2in,0in) -- (-2in,0in);
+        \filldraw[black] (2in,0in) circle (2pt) ;
+        \filldraw[black] (-2in,0) circle (2pt) ;
+        \filldraw[black] (0in,1in) circle (2pt) ;
+      \end{tikzpicture} 
+    \end{center}
+  \item Find the circumcenter for the triangle below, and draw the
+    circumcircle. 
+    \begin{center}
+      \begin{tikzpicture}[geometryDiagrams]
+        \draw (4in,0in) -- (0in,0in) -- (2.56in,1.92in) -- (4in,0in) -- (0in,0in);
+        \filldraw[black] (0in,0in) circle (2pt) ;
+        \filldraw[black] (2.56in,1.92in) circle (2pt) ;
+        \filldraw[black] (4in,0in) circle (2pt) ;
+      \end{tikzpicture} 
+    \end{center}
+  \end{enumerate}
+\end{question}
+\mynewpage
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{question}
+  On a cold morning in January of 1986, the Space Shuttle
+  \textit{Challenger}'s solid rocket boosters suffered a malfunction,
+  causing the primary fuel tank to explode shortly after lift-off.
+  This resulted in the deaths of seven astronauts. 
+
+
+  The \textit{Rogers Commission} was created to investigate the cause
+  of the accident.  You can read (for yourself) a VERY ENLIGHTENING
+  first hand account of this from Richard Feynman's book, \textit{What
+    Do You Care What Other People Think?} In this book, we learn a lot
+  about how NASA worked during the time of the Space Shuttle.
+
+  \begin{enumerate}
+  \item Find a picture of the Space Shuttle with its solid rocket
+    boosters. Clearly identify the solid rocket boosters on the photo.
+  \item In a typical launch, the solid rocket boosters fire for around
+    $2$ minutes. Then they fall into the ocean and are recovered. Next
+    they are shipped on large trucks back to the assembly
+    building at NASA. What do you think happens to the ``circular
+    cross-section'' of the rocket boosters when all this happens?
+  \item NASA needed a way to detect if the solid rocket boosters were
+    not round any more. Apparently \textit{Geometry Giorgio} worked at
+    NASA. He suggested the following method to determine how
+    ``circular'' the cross sections of the solid rocket booster
+    were. Each rocket booster section has $180$ pins spaced evenly
+    around the perimeter, where it connects to the next section.
+    \begin{quote}
+      \textbf{\textit{Geometry Giorgio} says that to determine if the cross
+        section is circular:}
+      \begin{itemize}
+      \item Define a DIAMETER to be the distance from one pin to a pin
+        that is directly opposite the starting pin.
+      \item Measure three diameters, separated by $60^\circ$.
+      \item If these diameters agree, then the cross section is
+        circular.
+      \end{itemize}
+    \end{quote}
+    Try \textit{Geometry Giorgio}'s method on these THREE cross
+    sections. Note, in real life you'd have $180$ pins to count. Here,
+    I've only drawn $24$, this makes things easier to deal with.
+    \begin{enumerate}
+    \item 
+      \begin{center}
+         \raisebox{-.4\height}{\begin{tikzpicture}[geometryDiagrams,scale=6]
+          \draw [line cap=round,domain=0:360,black, line width=20pt,smooth] plot ({cos(\x)}, {sin(\x)} );
+          \draw [line cap=round,domain=0:360,white, line width=18pt,smooth] plot ({cos(\x)}, {sin(\x)} );
+          
+          \foreach \x in {0,15,...,360}
+                   {
+                     \filldraw[black] ({cos(\x)}, {sin(\x)} ) circle (.2pt) ;
+                   }
+        \end{tikzpicture}}
+      \end{center}
+\item \begin{center}
+   \raisebox{-.4\height}{\begin{tikzpicture}[geometryDiagrams,scale=6]
+    \draw [line cap=round,domain=0:360,black, line width=20pt,smooth] plot ({(1+0.1*sin(\x))*sin(\x/2)}, {(1+0.1*sin(\x))*cos(\x/2)} );
+    \draw [line cap=round,domain=0:360,black, line width=20pt,smooth] plot ({(1+0.1*sin(\x))*sin(\x/2+180)}, {(1+0.1*sin(\x))*cos(\x/2+180)} );
+    
+    \draw [line cap=round,domain=0:360,white, line width=18pt,smooth] plot ({(1+0.1*sin(\x))*sin(\x/2)}, {(1+0.1*sin(\x))*cos(\x/2)} );
+    \draw [line cap=round,domain=0:360,white, line width=18pt,smooth] plot ({(1+0.1*sin(\x))*sin(\x/2+180)}, {(1+0.1*sin(\x))*cos(\x/2+180)} );
+    
+    \foreach \x in {0,30,...,360}
+             {
+               \filldraw[black] ({(1+0.1*sin(\x))*sin(\x/2)}, {(1+0.1*sin(\x))*cos(\x/2)} ) circle (.2pt) ;
+               \filldraw[black] ({(1+0.1*sin(\x))*sin(\x/2+180)}, {(1+0.1*sin(\x))*cos(\x/2+180)} ) circle (.2pt) ;
+             }
+  \end{tikzpicture}}
+\end{center}    
+\item \begin{center}
+   \raisebox{-.4\height}{\begin{tikzpicture}[geometryDiagrams,scale=6]
+    \draw [line cap=round,domain=0:360,black, line width=20pt,smooth] plot ({(1+0.1*sin(\x))*sin(\x/2)}, {(1+0.1*sin(\x))*cos(\x/2)} );
+    \draw [line cap=round,domain=0:360,black, line width=20pt,smooth] plot ({(1-0.1*sin(\x))*sin(\x/2+180)}, {(1-0.1*sin(\x))*cos(\x/2+180)} );
+    
+    \draw [line cap=round,domain=0:360,white, line width=18pt,smooth] plot ({(1+0.1*sin(\x))*sin(\x/2)}, {(1+0.1*sin(\x))*cos(\x/2)} );
+    \draw [line cap=round,domain=0:360,white, line width=18pt,smooth] plot ({(1-0.1*sin(\x))*sin(\x/2+180)}, {(1-0.1*sin(\x))*cos(\x/2+180)} );
+    
+    \foreach \x in {0,30,...,360}
+             {
+               \filldraw[black] ({(1+0.1*sin(\x))*sin(\x/2)}, {(1+0.1*sin(\x))*cos(\x/2)} ) circle (.2pt) ;
+               \filldraw[black] ({(1-0.1*sin(\x))*sin(\x/2+180)}, {(1-0.1*sin(\x))*cos(\x/2+180)} ) circle (.2pt) ;
+             }
+  \end{tikzpicture}}
+\end{center}
+    \end{enumerate}
+Is \textit{Geometry Giorgio's} claim correct?
+
+\item PROPOSE an alternate method for detecting how ``circular'' the
+  cross section of the solid rocket booster is. Try your method on the THREE
+  pictures above.
+  \end{enumerate}
+  The cause of the Challenger explosion was directly related to the
+  construction and tolerances of the solid rocket boosters. 
+\end{question}
+
+\end{document}
