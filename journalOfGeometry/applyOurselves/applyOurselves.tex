@@ -2,6 +2,7 @@
 
 \input{../preamble.tex}
 \title{Let's apply ourselves}
+%\SetWatermarkLightness{1}
 
 \author{Bart Snapp}
 
@@ -104,7 +105,29 @@
     \item So let's think about this. Given two points, if we want to
       make a triangle with a fixed perimeter, we need to think about
       all points so that the distance from the point to our given two
-      points is constant. WAIT A SECOND---THAT'S AN ELLIPSE! 
+      points is constant. WAIT A SECOND---THAT'S AN ELLIPSE!
+      \begin{center}
+        \begin{tikzpicture}[geometryDiagrams]
+          \coordinate (A) at (0,0);
+          \coordinate (B) at (2,0);
+          \coordinate (C) at (1,3);
+          \draw[pattern=horizontal lines] (A)--(B)--(C)--cycle;
+          
+          \filldraw[black] (0,0) circle (2pt);
+          \filldraw[black] (2,0) circle (2pt);
+          \begin{scope}
+            \clip (-2.2,-.5) rectangle (4.2,3.2);
+            \draw (1,0) ellipse (3.16 and 3);
+          \end{scope}
+
+          \draw[thin,dashed] (-4,0)--(6,0);
+          \draw[thin,dashed] (-4,3)--(6,3);
+        \end{tikzpicture}
+      \end{center}
+      If the vertex of a triangle is on this ellipse, then the
+      perimeter is as small as possible.  If we shear the triangle at
+      all, the vertex will leave the ellipse, and hence the triangle
+      will have a greater perimeter.
     \end{enumerate}
   \end{freeResponse}
   \end{question}
@@ -138,37 +161,67 @@
   vertices is called the \textbf{circumcenter}. The circle that these
   points lie on is called the \textbf{circumcircle}.
   \begin{enumerate}
-  \item Find the circumcenter for the triangle below, and draw the
-    circumcircle. 
-    \begin{center}
-      \begin{tikzpicture}[geometryDiagrams]
-        \draw (1in,0in) -- (-1in,0in) -- (0in,2in) -- (1in,0in) -- (-1in,0in);
-        \filldraw[black] (1in,0in) circle (2pt) ;
-        \filldraw[black] (-1in,0) circle (2pt) ;
-        \filldraw[black] (0in,2in) circle (2pt) ;
-      \end{tikzpicture}
-    \end{center}
-  \item Find the circumcenter for the triangle below, and draw the
-    circumcircle. 
-    \begin{center}
-      \begin{tikzpicture}[geometryDiagrams]
-        \draw (2in,0in) -- (-2in,0in) -- (0in,1in) -- (2in,0in) -- (-2in,0in);
-        \filldraw[black] (2in,0in) circle (2pt) ;
-        \filldraw[black] (-2in,0) circle (2pt) ;
-        \filldraw[black] (0in,1in) circle (2pt) ;
-      \end{tikzpicture} 
-    \end{center}
-  \item Find the circumcenter for the triangle below, and draw the
-    circumcircle. 
-    \begin{center}
-      \begin{tikzpicture}[geometryDiagrams]
-        \draw (4in,0in) -- (0in,0in) -- (2.56in,1.92in) -- (4in,0in) -- (0in,0in);
-        \filldraw[black] (0in,0in) circle (2pt) ;
-        \filldraw[black] (2.56in,1.92in) circle (2pt) ;
-        \filldraw[black] (4in,0in) circle (2pt) ;
-      \end{tikzpicture} 
-    \end{center}
+  \item EXPLAIN (in broad strokes) how to use a protractor, ruler, and
+    compass to find the \textbf{circumcenter} and
+    \textbf{circumcircle} of a triangle.
+  \item For each of the following triangles , use a protractor, ruler,
+    and compass (or an online tool like
+    \link[\textsl{Geogebra}]{https://www.geogebra.org/classic}) to
+    find the \textbf{circumcenter} and \textbf{circumcircle}.
+    \begin{description}
+    \item[This acute triangle:] \begin{center}
+      \raisebox{-.4\height}{\begin{tikzpicture}[geometryDiagrams]
+          \draw[white] (-2in,0in) -- (2in,0in);
+          \draw (1in,0in) -- (-1in,0in) -- (0in,2in) -- (1in,0in) -- (-1in,0in);
+          \filldraw[black] (1in,0in) circle (2pt) ;
+          \filldraw[black] (-1in,0) circle (2pt) ;
+          \filldraw[black] (0in,2in) circle (2pt) ;
+        \end{tikzpicture}}
+      \end{center}
+        \item[This obtuse triangle:]
+          \begin{center}
+      \raisebox{-.4\height}{
+        \begin{tikzpicture}[geometryDiagrams]
+          \draw (2in,0in) -- (-2in,0in) -- (0in,1in) -- (2in,0in) -- (-2in,0in);
+          \filldraw[black] (2in,0in) circle (2pt) ;
+          \filldraw[black] (-2in,0) circle (2pt) ;
+          \filldraw[black] (0in,1in) circle (2pt) ;
+        \end{tikzpicture}} 
+      \end{center}
+        \item[This right triangle:]
+          \begin{center}
+            \raisebox{-.4\height}{
+              \begin{tikzpicture}[geometryDiagrams]
+                \draw (4in,0in) -- (0in,0in) -- (2.56in,1.92in) -- (4in,0in) -- (0in,0in);
+                \filldraw[black] (0in,0in) circle (2pt) ;
+                \filldraw[black] (2.56in,1.92in) circle (2pt) ;
+                \filldraw[black] (4in,0in) circle (2pt) ;
+            \end{tikzpicture}} 
+          \end{center}
+    \end{description}
   \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+      \item To find the circumcenter of a triangle. You intersect the
+        perpendicular bisectors of the sides of the triangle.
+
+        To find the perpendicular bisectors, Use the ruler to find the
+        midpoint of a side. Then use the protractor to make a right
+        angle. Draw this line, it will be the perpendicular bisector
+        of the side.
+
+
+        Once you have the circumcenter, use a compass to draw a circle
+        with that as its center, and any vertex of the triangle as a
+        point on the circle.
+      \item Behold! My answers:
+        \begin{description}
+          \item[This acute triangle:] \raisebox{-.4\height}{\includegraphics[width=.4\textwidth]{acuteCCSoln.png}}
+          \item[This obtuse triangle:] \raisebox{-.4\height}{\includegraphics[width=.4\textwidth]{obtuseCCSoln.png}}
+          \item[This right triangle:] \raisebox{-.4\height}{\includegraphics[width=.4\textwidth]{rightCCSoln.png}}
+          \end{description}
+    \end{enumerate}
+  \end{freeResponse}
 \end{question}
 \mynewpage
 
@@ -198,18 +251,22 @@
 
   \begin{enumerate}
   \item Find a picture of the Space Shuttle with its solid rocket
-    boosters. Clearly identify the solid rocket boosters on the photo.
+    boosters. \textbf{Clearly identify the solid rocket boosters on the photo.}
   \item In a typical launch, the solid rocket boosters fire for around
     $2$ minutes. Then they fall into the ocean and are recovered. Next
     they are shipped on large trucks back to the assembly
-    building at NASA. What do you think happens to the ``circular
-    cross-section'' of the rocket boosters when all this happens?
+    building at NASA. \textbf{What do you think happens to the ``circular
+    cross-section'' of the rocket boosters when all this happens?}
   \item NASA needed a way to detect if the solid rocket boosters were
     not round any more. Apparently \textit{Geometry Giorgio} worked at
     NASA. He suggested the following method to determine how
     ``circular'' the cross sections of the solid rocket booster
     were. Each rocket booster section has $180$ pins spaced evenly
-    around the perimeter, where it connects to the next section.
+    around the perimeter, where it connects to the next
+    section. Here's a actual photo:
+    \begin{center}%https://en.wikipedia.org/wiki/Space_Shuttle_Solid_Rocket_Booster#/media/File:STS-134_solid_rocket_booster_segment_stacking.jpg
+      \includegraphics[width=.6\textwidth]{srbSections.jpg}
+    \end{center}
     \begin{quote}
       \textbf{\textit{Geometry Giorgio} says that to determine if the cross
         section is circular:}
@@ -227,7 +284,7 @@
     \begin{enumerate}
     \item 
       \begin{center}
-         \raisebox{-.4\height}{\begin{tikzpicture}[geometryDiagrams,scale=6]
+         \raisebox{-.4\height}{\begin{tikzpicture}[geometryDiagrams,scale=5]
           \draw [line cap=round,domain=0:360,black, line width=20pt,smooth] plot ({cos(\x)}, {sin(\x)} );
           \draw [line cap=round,domain=0:360,white, line width=18pt,smooth] plot ({cos(\x)}, {sin(\x)} );
           
@@ -238,7 +295,7 @@
         \end{tikzpicture}}
       \end{center}
 \item \begin{center}
-   \raisebox{-.4\height}{\begin{tikzpicture}[geometryDiagrams,scale=6]
+   \raisebox{-.4\height}{\begin{tikzpicture}[geometryDiagrams,scale=5]
     \draw [line cap=round,domain=0:360,black, line width=20pt,smooth] plot ({(1+0.1*sin(\x))*sin(\x/2)}, {(1+0.1*sin(\x))*cos(\x/2)} );
     \draw [line cap=round,domain=0:360,black, line width=20pt,smooth] plot ({(1+0.1*sin(\x))*sin(\x/2+180)}, {(1+0.1*sin(\x))*cos(\x/2+180)} );
     
@@ -253,7 +310,7 @@
   \end{tikzpicture}}
 \end{center}    
 \item \begin{center}
-   \raisebox{-.4\height}{\begin{tikzpicture}[geometryDiagrams,scale=6]
+   \raisebox{-.4\height}{\begin{tikzpicture}[geometryDiagrams,scale=5]
     \draw [line cap=round,domain=0:360,black, line width=20pt,smooth] plot ({(1+0.1*sin(\x))*sin(\x/2)}, {(1+0.1*sin(\x))*cos(\x/2)} );
     \draw [line cap=round,domain=0:360,black, line width=20pt,smooth] plot ({(1-0.1*sin(\x))*sin(\x/2+180)}, {(1-0.1*sin(\x))*cos(\x/2+180)} );
     
@@ -268,14 +325,92 @@
   \end{tikzpicture}}
 \end{center}
     \end{enumerate}
-Is \textit{Geometry Giorgio's} claim correct?
+\textbf{Is \textit{Geometry Giorgio's} claim correct? EXPLAIN how you
+  arrived at your conclusion.}
 
 \item PROPOSE an alternate method for detecting how ``circular'' the
-  cross section of the solid rocket booster is. Try your method on the THREE
-  pictures above.
+  cross section of the solid rocket booster is. \textbf{Try your method on the THREE
+    pictures above and discuss the results.}
+
+  
   \end{enumerate}
-  The cause of the Challenger explosion was directly related to the
-  construction and tolerances of the solid rocket boosters. 
+  The cause of the \textit{Challenger's} explosion was directly
+  related to the construction and tolerances of the solid rocket
+  boosters. Eventually, two rubber O-rings that created the ``seal''
+  between sections of the solid rocket booster were found to be the
+  cause.
+
+
+  This author finds it interesting that in the aftermath of the
+  \textit{Challenger} disaster, the solid rocket boosters were
+  redesigned to fit together better, a third O-ring was added, and
+  cold-weather launches were aborted.
+
+
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item Here is a picture of the Space Shuttle with its solid rocket boosters:
+      \begin{center}
+        \includegraphics[width=.4\textwidth]{shuttleWithSRB.jpg}
+      \end{center}
+      The solid rocket boosters are the white rockets that are currently firing.
+    \item With all this happening to the solid rocket boosters, they
+      are surely do not have a circular cross section after all of
+      this.
+    \item Geometry Georigio's technique sounds good. Let's put it to the test!
+      \begin{enumerate}
+      \item For this one, it looks like a circle and I found three
+        diameters, separated by $60^\circ$
+        \begin{center}
+          \includegraphics[width=.4\textwidth]{circleGGMeasured.png}
+        \end{center}
+        of measurements
+        \[
+        8.76,\quad 8.74,\quad 8.74.
+        \]
+        These are all about $8.75$, so this looks good.
+
+      \item For this one, it looks like an oval and I found three
+        diameters, separated by $60^\circ$
+        \begin{center}
+          \includegraphics[width=.4\textwidth]{ovalGGMeasured.png}
+        \end{center}
+        of measurements
+        \[
+        8.74,\quad 9.52,\quad 8.02.
+        \]
+        These are all different, and this is not a circle, so this
+        looks good too.
+
+      \item For this one, it looks like a heart and I found three
+        diameters, separated by $60^\circ$
+        \begin{center}
+          \includegraphics[width=.4\textwidth]{heartGGMeasured.png}
+        \end{center}
+        of measurements
+        \[
+        8.76,\quad 8.75,\quad 8.74.
+        \]
+        These are all nearly the same as a circle, BUT this is not a
+        circle, so \textit{Geometry Giorgio} is WRONG.
+
+      \item Answers may vary. A fine solution is to simply measure the
+        radius, but then you need to define a ``center'' of the
+        cross-section.
+
+        Another solution, would be to think of the circular
+        cross-section as being the circumcircle for a given (known)
+        triangle.
+
+        Both of these methods are better than \textit{Geometry
+          Giorgio's} because they correctly identify (iii) above as
+        NOT a circle.
+        
+      \end{enumerate}
+
+      %% note initial screenshot at 48.2%
+    \end{enumerate}
+  \end{freeResponse}
 \end{question}
 
 \end{document}
