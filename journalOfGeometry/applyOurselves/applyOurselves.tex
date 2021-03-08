@@ -281,8 +281,8 @@
     Try \textit{Geometry Giorgio}'s method on these THREE cross
     sections. Note, in real life you'd have $180$ pins to count. Here,
     I've only drawn $24$, this makes things easier to deal with.
-    \begin{enumerate}
-    \item 
+    \begin{description}
+    \item[This circle:] 
       \begin{center}
          \raisebox{-.4\height}{\begin{tikzpicture}[geometryDiagrams,scale=5]
           \draw [line cap=round,domain=0:360,black, line width=20pt,smooth] plot ({cos(\x)}, {sin(\x)} );
@@ -294,7 +294,7 @@
                    }
         \end{tikzpicture}}
       \end{center}
-\item \begin{center}
+\item[This oval:] \begin{center}
    \raisebox{-.4\height}{\begin{tikzpicture}[geometryDiagrams,scale=5]
     \draw [line cap=round,domain=0:360,black, line width=20pt,smooth] plot ({(1+0.1*sin(\x))*sin(\x/2)}, {(1+0.1*sin(\x))*cos(\x/2)} );
     \draw [line cap=round,domain=0:360,black, line width=20pt,smooth] plot ({(1+0.1*sin(\x))*sin(\x/2+180)}, {(1+0.1*sin(\x))*cos(\x/2+180)} );
@@ -309,7 +309,7 @@
              }
   \end{tikzpicture}}
 \end{center}    
-\item \begin{center}
+\item[This heart-shape:] \begin{center}
    \raisebox{-.4\height}{\begin{tikzpicture}[geometryDiagrams,scale=5]
     \draw [line cap=round,domain=0:360,black, line width=20pt,smooth] plot ({(1+0.1*sin(\x))*sin(\x/2)}, {(1+0.1*sin(\x))*cos(\x/2)} );
     \draw [line cap=round,domain=0:360,black, line width=20pt,smooth] plot ({(1-0.1*sin(\x))*sin(\x/2+180)}, {(1-0.1*sin(\x))*cos(\x/2+180)} );
@@ -324,7 +324,7 @@
              }
   \end{tikzpicture}}
 \end{center}
-    \end{enumerate}
+    \end{description}
 \textbf{Is \textit{Geometry Giorgio's} claim correct? EXPLAIN how you
   arrived at your conclusion.}
 
