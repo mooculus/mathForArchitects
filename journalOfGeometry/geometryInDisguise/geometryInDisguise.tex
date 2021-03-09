@@ -42,7 +42,7 @@ and
   Let $(a,b,c)$ be a point in three-dimensional space.
   \begin{enumerate}
   \item In three dimensions, what is the distance of the point
-    $(a,b,c)$ from the origin $(0,0,0)$?
+    $(a,b,c)$ as measured from the origin $(0,0,0)$?
   \item EXPLAIN, using words, pictures, and so on, how one could find
     the distance from the point $(a,b,c)$ to the origin using the
     Pythagorean theorem.
@@ -62,9 +62,9 @@ and
             width=5in,
             height=2.5in,
           ]          
-          \addplot [->,textColor] plot coordinates {(0,0) (-2,-4)}; %% x axis
-          \addplot [->,textColor] plot coordinates {(0,0) (4,0)}; %% y axis
-          \addplot [->,textColor] plot coordinates {(0,0) (0,6)}; %% z axis
+          \addplot [->,black] plot coordinates {(0,0) (-2,-4)}; %% x axis
+          \addplot [->,black] plot coordinates {(0,0) (4,0)}; %% y axis
+          \addplot [->,black] plot coordinates {(0,0) (0,6)}; %% z axis
                    
           
           \addplot [dashed] plot coordinates {(-1.3,-2.6) (2.6,-2.6)}; %%bottom dashed line
