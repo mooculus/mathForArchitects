@@ -1,4 +1,4 @@
-\documentclass[handout,noauthor,nooutcomes,12pt,hints]{ximera}
+\documentclass[noauthor,nooutcomes,hints,handout]{ximera}
 
 \input{../preamble.tex}
 
@@ -7,7 +7,8 @@
 
 \begin{document}
 \begin{abstract}
-  Sine and cosine encode information about similar right triangles.
+  Sine and cosine encode information about similar right triangles and
+  have a connection to circles.
 \end{abstract}
 \maketitle
 
@@ -17,9 +18,9 @@
   triangles.
 \item Explain basic facts about sine and cosine based on their
   definitions.
+\item Interpret sine and cosine when the angle is larger than $180^\circ$.
 \item Extend the understanding of sine and cosine from triangles to
   the unit circle.
-\item Interpret sine and cosine when the angle is larger than $180^\circ$.
 \end{listOutcomes}
 \mynewpage
 
@@ -50,75 +51,121 @@
         \tkzLabelAngle[pos=.9](B,C,A){$\alpha$}
       \end{tikzpicture}
     \end{center}
-  Use the INTERNET to look up the definitions of \textbf{sine} and
-  \textbf{cosine} of both $\alpha$ and $\beta$ in terms of this right
-  triangle's hypotenuse, opposite leg, and adjacent leg. STATE THEM
-  HERE as you would like them stated to you.
-
-
-  In particular, as PART of your discussion:
   \begin{enumerate}
-    \item EXPLAIN WHY $\sin(\alpha) = \cos(90^\circ-\alpha)$ and WHY
-      $\cos(\alpha) = \sin(90^\circ-\alpha)$.
-    \item If I have a triangle whose sides are scalar multiples of
-      the one above, say,
+  \item Use the INTERNET to look up the definitions of \textbf{sine}
+    and \textbf{cosine} of both $\alpha$ and $\beta$ in terms of this
+    right triangle's hypotenuse, opposite leg, and adjacent leg. STATE
+    THEM HERE as you would like them stated to you.  In particular, as
+    PART of your discussion EXPLAIN WHY $\sin(\alpha) =
+    \cos(90^\circ-\alpha)$ and WHY $\cos(\alpha) =
+    \sin(90^\circ-\alpha)$.
+    \item We can extend the definition of sine to ANY triangle if we
+      interpret it as follows: Given any triangle
       \begin{center}
-      \begin{tikzpicture}[geometryDiagrams]
-        \coordinate (A) at (0,0);
-        \coordinate (B) at (0,3);
-        \coordinate (C) at (7,0);
-        \tkzDrawSegment (A,B)
-        \tkzDrawSegment (A,C)
-        \tkzDrawSegment (C,B)
-        \tkzLabelSegment[left](A,B){$s\cdot a$}
-        \tkzLabelSegment[below](A,C){$s\cdot b$}
-        \tkzLabelSegment[above right](B,C){$s\cdot c$}  
-
-        \tkzMarkRightAngle[thin](C,A,B)
-        %\tkzLabelAngle[pos=1.2](C,A,B){$?$}
-
-        \tkzMarkAngle[size=1cm,thin,mark=](A,B,C)
-        \tkzLabelAngle[pos=.6](A,B,C){$\beta'$}
-
-        \tkzMarkAngle[mark=,size=1.5cm,thin](B,C,A)
-        \tkzLabelAngle[pos=1.2](B,C,A){$\alpha'$}
-      \end{tikzpicture}
-    \end{center}
-      EXPLAIN WHY $\sin(\alpha) = \sin(\alpha')$ and $\cos(\alpha) =
-      \cos(\alpha')$. Note, you MAY NOT assume that $\alpha =
-      \alpha'$.
+        \begin{tikzpicture}[geometryDiagrams]
+          \coordinate (A) at (0,0);
+          \coordinate (B) at (5,2);
+          \coordinate (C) at (7,0);
+          \tkzDrawSegment (A,B)
+          \tkzDrawSegment (A,C)
+          \tkzDrawSegment (C,B)
+          \tkzLabelSegment[above left](A,B){$c$}
+          \tkzLabelSegment[below](A,C){$b$}
+          \tkzLabelSegment[above right](B,C){$a$}  
+          
+          \tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
+          \tkzLabelAngle[pos=1.2](C,A,B){$\theta$}
+          
+          %\tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
+          %\tkzLabelAngle[pos=.5](A,B,C){$\beta$}
+          
+          %% \tkzMarkAngle[mark=,size=.9,thin](B,C,A)
+          %% \tkzLabelAngle[pos=.6](B,C,A){$\gamma$}
+          \tkzDrawLine[altitude,dashed](A,B,C)\tkzGetPoint{D}
+          \tkzMarkRightAngle[thin](B,D,C)
+          \tkzLabelSegment[left](D,B){$h$}  
+        \end{tikzpicture}
+      \end{center}
+      find a height $h$ relative to side $b$ (or side $c$). In this case
+      \[
+      \sin(\theta) = \frac{h}{c}.
+      \]
+      EXPLAIN why in this definition of sine, \textbf{it doesn't matter which
+        height we choose.} That is, if we additionally consider this picture:
+      \begin{center}
+        \begin{tikzpicture}[geometryDiagrams]
+          \coordinate (A) at (0,0);
+          \coordinate (B) at (5,2);
+          \coordinate (C) at (7,0);
+          \tkzDrawSegment (A,B)
+          \tkzDrawSegment (A,C)
+          \tkzDrawSegment (C,B)
+          
+          \tkzLabelSegment[above left](A,B){$c$}
+          \tkzLabelSegment[below](A,C){$b$}
+          \tkzLabelSegment[below left](B,C){$a$}  
+          
+          \tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
+          \tkzLabelAngle[pos=1.2](C,A,B){$\theta$}
+          
+          %\tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
+          %\tkzLabelAngle[pos=.5](A,B,C){$\beta$}
+          
+          %% \tkzMarkAngle[mark=,size=.9,thin](B,C,A)
+          %% \tkzLabelAngle[pos=.6](B,C,A){$\gamma$}
+          \tkzDrawLine[altitude,dashed](B,C,A)\tkzGetPoint{D}
+          \tkzMarkRightAngle[thin](B,D,C)
+          \tkzLabelSegment[right](D,C){$h'$}
+          \tkzDrawSegment[dashed](D,B)
+        \end{tikzpicture}
+      \end{center}
+      EXPLAIN why
+      \[
+      \frac{h}{c} = \frac{h'}{b}.
+      \]
+      \begin{hint}
+        Draw pictures and think ``scaling.''
+      \end{hint}
+    \item Use these ideas to EXPLAIN why
+      \[
+      \sin(180-\theta) = \sin(\theta).
+      \]
+      \begin{hint}
+        Draw a right triangle with angle $\theta$ and another triangle
+        with an angle of $180-\theta$, label the sides, and show that
+        the sine of these angles is the same using your ideas above.
+      \end{hint}
   \end{enumerate}
-  Use words, pictures, and so on, as needed/helpful in your
-  explanations.
   \begin{freeResponse}
-    Given a right triangle,
-    \begin{center}
-      \begin{tikzpicture}[geometryDiagrams]
-        \coordinate (A) at (0,0);
-        \coordinate (B) at (0,3);
-        \coordinate (C) at (7,0);
-        \tkzDrawSegment (A,B)
-        \tkzDrawSegment (A,C)
-        \tkzDrawSegment (C,B)
-        \tkzLabelSegment[left](A,B){$a$}
-        \tkzLabelSegment[below](A,C){$b$}
-        \tkzLabelSegment[above right](B,C){$c$}  
-
-        \tkzMarkRightAngle[thin](C,A,B)
-        %\tkzLabelAngle[pos=1.2](C,A,B){$?$}
-
-        \tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
-        \tkzLabelAngle[pos=.5](A,B,C){$\beta$}
-
-        \tkzMarkAngle[mark=,size=1.2cm,thin](B,C,A)
-        \tkzLabelAngle[pos=.9](B,C,A){$\alpha$}
-      \end{tikzpicture}
-    \end{center}
-    if we are working with the angle of measure $\alpha$,
-    \[
-    \sin(\alpha) = \frac{\text{opposite}}{\text{hypotenuse}} = \frac{a}{c},
-    \]
-    and
+    \begin{enumerate}
+    \item Given a right triangle,
+      \begin{center}
+        \begin{tikzpicture}[geometryDiagrams]
+          \coordinate (A) at (0,0);
+          \coordinate (B) at (0,3);
+          \coordinate (C) at (7,0);
+          \tkzDrawSegment (A,B)
+          \tkzDrawSegment (A,C)
+          \tkzDrawSegment (C,B)
+          \tkzLabelSegment[left](A,B){$a$}
+          \tkzLabelSegment[below](A,C){$b$}
+          \tkzLabelSegment[above right](B,C){$c$}  
+          
+          \tkzMarkRightAngle[thin](C,A,B)
+          %\tkzLabelAngle[pos=1.2](C,A,B){$?$}
+          
+          \tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
+          \tkzLabelAngle[pos=.5](A,B,C){$\beta$}
+          
+          \tkzMarkAngle[mark=,size=1.2cm,thin](B,C,A)
+          \tkzLabelAngle[pos=.9](B,C,A){$\alpha$}
+        \end{tikzpicture}
+      \end{center}
+      if we are working with the angle of measure $\alpha$,
+      \[
+      \sin(\alpha) = \frac{\text{opposite}}{\text{hypotenuse}} = \frac{a}{c},
+      \]
+      and
     \[
     \cos(\alpha) = \frac{\text{adjacent}}{\text{hypotenuse}} = \frac{b}{c}.
     \]
@@ -143,44 +190,58 @@
     \cos(\alpha) = \sin(90-\alpha).
     \]
 
-    Finally, note, if a triangle with side lengths $(a,b,c)$ is
-    similar to another right triangle, then this triangle has side
-    lengths:
-          \begin{center}
+  \item Note that the triangle with hypotenuse $c$ and ``short'' leg
+    $h$ is a scaled copy of the triangle with hypotenuse $b$ and
+    ``short'' leg $h'$.
+    Thus
+    \[
+    c = s\cdot b\qquad{and}h = s\cdot h'
+    \]
+    Now we see
+    \[
+    \sin(\theta) = \frac{h}{c} = \frac{s\cdot b}{s\cdot h'} = \frac{b}{h'}.
+    \]
+    \item To see $\sin(180-\theta)=\sin(\theta)$ check this out:
+      \begin{center}
       \begin{tikzpicture}[geometryDiagrams]
         \coordinate (A) at (0,0);
-        \coordinate (B) at (0,3);
-        \coordinate (C) at (7,0);
-        \tkzDrawSegment (A,B)
-        \tkzDrawSegment (A,C)
-        \tkzDrawSegment (C,B)
-        \tkzLabelSegment[left](A,B){$s\cdot a$}
-        \tkzLabelSegment[below](A,C){$s\cdot b$}
-        \tkzLabelSegment[above right](B,C){$s\cdot c$}  
+        \coordinate (B) at (4.33,0);
+        \coordinate (C) at (-4.33,2.5);
+        \coordinate (D) at (-4.33,0);
+        
+        \coordinate (AA) at (0,0);
+        \coordinate (BB) at (4.33,0);
+        \coordinate (CC) at (4.33,2.5);
 
-        \tkzMarkRightAngle[thin](C,A,B)
-        %\tkzLabelAngle[pos=1.2](C,A,B){$?$}
+        \tkzDrawSegment[red,dashed](C,D)
+        \tkzDrawSegment[red,line width=2pt](A,B)
+        \tkzDrawSegment[red,line width=2pt](A,C)
+        \tkzDrawSegment[red,line width=2pt](C,B)
+        \tkzLabelSegment[red,below left](A,C){$c$}
+        
+        \tkzMarkRightAngle[red,thin](A,B,C)
+        \tkzMarkAngle[red,mark=,size=1.6cm,thin](BB,AA,C)
+        \tkzLabelAngle[red,pos=.9](BB,A,C){$180-\theta$};
 
-        \tkzMarkAngle[size=1cm,thin,mark=](A,B,C)
-        \tkzLabelAngle[pos=.6](A,B,C){$\beta'$}
+        \tkzDrawSegment[blue,line width=2pt](AA,BB)
+        \tkzDrawSegment[blue,line width=2pt](AA,CC)
+        \tkzDrawSegment[blue,line width=2pt](CC,BB)
+        \tkzLabelSegment[blue,above left](AA,CC){$c$}
 
-        \tkzMarkAngle[mark=,size=1.5cm,thin](B,C,A)
-        \tkzLabelAngle[pos=1.2](B,C,A){$\alpha'$}
+        \tkzLabelSegment[blue,right](BB,CC){$h$}
+        \tkzLabelSegment[red,left](C,D){$h$}
+        
+        \tkzMarkRightAngle[blue,thin](AA,BB,CC)
+        \tkzMarkAngle[blue,mark=,size=1.2cm,thin](BB,AA,CC)
+        \tkzLabelAngle[blue,pos=.9](BB,AA,CC){$\theta$};
       \end{tikzpicture}
-    \end{center}
-    for some scale factor $s$. Now with our new triangle, we see
-    \[
-    \sin(\alpha') = \frac{s\cdot a}{s\cdot c} = \frac{a}{c} =
-    \sin(\alpha),
-    \]
-    and
-    \[
-    \cos(\alpha') = \frac{s\cdot b}{s\cdot c} = \frac{b}{c} =
-    \cos(\alpha),
-    \]
-    hence sine and cosine encode information about \underline{similar} right
-    triangles.
-  \end{freeResponse}
+      \end{center}
+      And so we see
+      \[
+      \sin(180-\theta)=\frac{h}{c}=\sin(\theta).
+      \]
+    \end{enumerate}
+    \end{freeResponse}
 \end{question}
 \mynewpage
 
@@ -195,6 +256,12 @@
     \[
     \cos^2(\theta) + \sin^2(\theta) = 1.
     \]
+  \item Use your work above to EXPLAIN why
+    \[
+    (x,y) = (\sin(\theta),\cos(\theta))
+    \]
+    will always lie on a unit circle centered at the origin for any
+    angle $\theta$.
   \end{enumerate}
   \begin{freeResponse}
     \begin{enumerate}
@@ -229,6 +296,16 @@
     \[
     \cos^2(\theta) + \sin^2(\theta) = 1.
     \]
+  \item Since
+    \[
+    x^2+y^2=1
+    \]
+    is the set of points making a unit circle and
+    \[
+    \sin^2(\theta) + \cos^2(\theta) = 1
+    \]
+    we see that $x=\sin(\theta)$ and $y=\cos(\theta)$ will always be
+    on the circle.
     \end{enumerate}
   \end{freeResponse}
 \end{question}
@@ -236,164 +313,214 @@
 
 
 \begin{question}
-  EXPLAIN in terms of a right triangle, why:
+  Let's think about our previous work a little more.
   \begin{enumerate}
-  \item If $\theta$ is near $0^\circ$, then $\sin(\theta)$ is near $0$.
-  \item If $\theta$ is near $0^\circ$, then $\cos(\theta)$ is near $1$.
-  \item If $\theta$ is near $90^\circ$, then $\sin(\theta)$ is near $1$.
-  \item If $\theta$ is near $90^\circ$, then $\cos(\theta)$ is near $0$.
-  \item $\sin(180-\theta) = \sin(\theta)$.
-  \item The outputs of $\sin(\theta)$ and $\cos(\theta)$ are always
-    between $-1$ and $1$.
-  \end{enumerate}
-  Use words, pictures, and so on, as needed/helpful in your
-  explanations.
-  \begin{hint}
-    The last two are a bit tricky. You have to interpret what a
-    negative sign means in this case. As a gesture of friendship, I
-    suggest you think of our right triangle as being on the unit circle:
+  \item Consider the following \snap\ block \raisebox{-.4\height}{\includegraphics{circleBlank.png}}. Here is the script for that block:
     \begin{center}
-      \begin{tikzpicture}[geometryDiagrams]
-        \coordinate (A) at (0,0);
-        \coordinate (B) at (4.33,0);
-        \coordinate (C) at (4.33,2.5);
-        \tkzDrawSegment[line width=2pt](A,B)
-        \tkzDrawSegment[line width=2pt](A,C)
-        \tkzDrawSegment[line width=2pt](C,B)
-        \tkzLabelSegment[above left](A,C){$1$}
-        
-        \coordinate (xmin) at (-6,0);
-        \coordinate (xmax) at (6,0);
-        \coordinate (ymin) at (0,-6);
-        \coordinate (ymax) at (0,6);
-        
-        \tkzDrawSegment[->](xmin,xmax)
-        \tkzDrawSegment[->](ymin,ymax)
-        
-        \tkzMarkRightAngle[thin](A,B,C)
-        \tkzDrawCircle[dashed](A,C)
-        \tkzMarkAngle[mark=,size=1.2cm,thin](B,A,C)
-        \tkzLabelAngle[pos=.9](B,A,C){$\theta$};
-      \end{tikzpicture}
+      \includegraphics{circleScript.png}
     \end{center}
-  \end{hint}
+    EXPLAIN how the script works, block-by-block as you would like to
+    have it explained to you. Use words, pictures, and so on, as
+    needed/helpful in your explanation.
+  %% \item It's a fact:
+  %%   \[
+  %%   \cos(180-\theta) = \cos(\theta) \qquad\text{and}\qquad  \sin(180-\theta) = \sin(\theta)
+  %%   \]
+  %%   EXPLAIN how one can directly WITNESS this fact with the block  \raisebox{-.4\height}{\includegraphics{circleBlank.png}}.
+  \item Some folks like to plot circles with:
+    \[
+    (x,y) = (\cos(\theta),\sin(\theta)) \qquad\text{others with}\qquad  (x,y) = (\sin(\theta),\cos(\theta))
+    \]
+    How does the command \raisebox{-.4\height}{\includegraphics{circleBlank.png}} change if you change how it plots circles?
+  \item Find REAL WORLD circumstances where it might be better to use $(x,y) = (\sin(\theta),\cos(\theta))$. EXPLAIN your reasoning.
+  \item Find REAL WORLD circumstances where it might be better to use $(x,y) = (\cos(\theta),\sin(\theta))$. EXPLAIN your reasoning.
+  
+  \end{enumerate}
   \begin{freeResponse}
     \begin{enumerate}
-    \item First we need to explain why if $\theta$ is near $0^\circ$,
-      then $\sin(\theta)$ is near $0$.  Draw this on the unit circle:
-      \begin{center}
-      \begin{tikzpicture}[geometryDiagrams] %% multiply by 5
-        \coordinate (A) at (0,0);
-        \coordinate (B) at (4.98,0);
-        \coordinate (C) at (4.98,.44);
-        \tkzDrawSegment[line width=2pt](A,B)
-        \tkzDrawSegment[line width=2pt](A,C)
-        \tkzDrawSegment[line width=2pt](C,B)
-        \tkzLabelSegment[above left](A,C){$1$}
-        
-        %% \coordinate (xmin) at (-6,0);
-        %% \coordinate (xmax) at (6,0);
-        %% \coordinate (ymin) at (0,-6);
-        %% \coordinate (ymax) at (0,6);
-        
-        %% \tkzDrawSegment[->](xmin,xmax)
-        %% \tkzDrawSegment[->](ymin,ymax)
-        
-        %% \tkzMarkRightAngle[thin](A,B,C)
-        %% \tkzDrawCircle[dashed](A,C)
-      \end{tikzpicture}
-      \end{center}
-      Since the angle is near $0^\circ$,
-      \[
-      \sin(\theta) = \frac{\text{something near $0$}}{1} \approx 0.
-      \]
-    \item Using the same picture from before, since the angle is near $0^\circ$,
-      \[
-      \cos(\theta) = \frac{\text{something near $1$}}{1} \approx 1.
-      \]
-    \item If the angle is near $90^\circ$, then draw this picture:
-      \begin{center}
-      \begin{tikzpicture}[geometryDiagrams] %% multiply by 5
-        \coordinate (A) at (0,0);
-        \coordinate (B) at ({5*cos(85)},0);
-        \coordinate (C) at ({5*cos(85)},{5*sin(85)});
-        \tkzDrawSegment[line width=2pt](A,B)
-        \tkzDrawSegment[line width=2pt](A,C)
-        \tkzDrawSegment[line width=2pt](C,B)
-        \tkzLabelSegment[above left](A,C){$1$}
-        
-        %% \coordinate (xmin) at (-6,0);
-        %% \coordinate (xmax) at (6,0);
-        %% \coordinate (ymin) at (0,-6);
-        %% \coordinate (ymax) at (0,6);
-        
-        %% \tkzDrawSegment[->](xmin,xmax)
-        %% \tkzDrawSegment[->](ymin,ymax)
-        
-        \tkzMarkRightAngle[thin](A,B,C)
-        %\tkzDrawCircle[dashed](A,C)
-        
-      \end{tikzpicture}
-      \end{center}
-      Since the angle is near $90^\circ$,
-      \[
-      \sin(\theta) = \frac{\text{something near $1$}}{1} \approx 1.
-      \]
-     \item Using the same picture from before, since the angle is near $0^\circ$,
-      \[
-      \cos(\theta) = \frac{\text{something near $0$}}{1} \approx 0.
-      \]
-    \item To see $\sin(180-\theta)=\sin(\theta)$ check this out:
-      \begin{center}
-      \begin{tikzpicture}[geometryDiagrams]
-        \coordinate (xmin) at (-6,0);
-        \coordinate (xmax) at (6,0);
-        \coordinate (ymin) at (0,-6);
-        \coordinate (ymax) at (0,6);
-        
-        \tkzDrawSegment[->](xmin,xmax)
-        \tkzDrawSegment[->](ymin,ymax)
-
-        \coordinate (A) at (0,0);
-        \coordinate (B) at (-4.33,0);
-        \coordinate (C) at (-4.33,2.5);
-
-        
-        \coordinate (AA) at (0,0);
-        \coordinate (BB) at (4.33,0);
-        \coordinate (CC) at (4.33,2.5);
-
-
-        \tkzDrawSegment[red,line width=2pt](A,B)
-        \tkzDrawSegment[red,line width=2pt](A,C)
-        \tkzDrawSegment[red,line width=2pt](C,B)
-        \tkzLabelSegment[red,above right](A,C){$1$}
-        
-        \tkzMarkRightAngle[red,thin](A,B,C)
-        \tkzDrawCircle[dashed](A,C)
-        \tkzMarkAngle[red,mark=,size=1.6cm,thin](BB,AA,C)
-        \tkzLabelAngle[red,pos=.9](BB,A,C){$180-\theta$};
-
-        \tkzDrawSegment[blue,line width=2pt](AA,BB)
-        \tkzDrawSegment[blue,line width=2pt](AA,CC)
-        \tkzDrawSegment[blue,line width=2pt](CC,BB)
-        \tkzLabelSegment[blue,above left](AA,CC){$1$}
-
-        \tkzLabelSegment[blue,right](BB,CC){$\sin(\theta)$}
-        \tkzLabelSegment[red,left](B,C){$\sin(180-\theta)$}
-        
-        \tkzMarkRightAngle[blue,thin](AA,BB,CC)
-        \tkzMarkAngle[blue,mark=,size=1.2cm,thin](BB,AA,CC)
-        \tkzLabelAngle[blue,pos=.9](BB,AA,CC){$\theta$};
-      \end{tikzpicture}
-      \end{center}
-      And so we see $\sin(180-\theta)=\sin(\theta)$.
-    \item Sine and cosine are literally the lengths of the legs of
-      the triangle embedded in the unit circle. Their values must be
-      between $-1$ and $1$.
+    \item Here we go:
+      \begin{enumerate}
+      \item The user tells us the radius $r$.
+      \item We have variables \texttt{x-start} and \texttt{y-start}
+        and we set them to the current position of the turtle.
+      \item Next we pick up the pen and move to the first point on the circle.
+      \item Now for each degree, we move to another point on the circle, $x= \texttt{x-start} + \sin(\theta)$. $y= \texttt{y-start} + \cos(\theta)$. 
+      \item Finally, we pick up the pen and return to where we started.
+      \end{enumerate}
+    \item As written, the command starts drawing the circle at the top
+      and travels in a clockwise direction. If we swap sine and
+      cosine, then it will start at the right and travel in a
+      counterclockwise direction.
+    \item So it would be better to use $(x,y) =
+      (\sin(\theta),\cos(\theta))$ when modeling a clock, as a clock starts at the top and travels clockwise.
+    \item It would be better to use $(x,y) =
+      (\cos(\theta),\sin(\theta))$ when modeling latitude, as the
+      equator is at zero degrees, then we travel up to the pole at
+      $90$ degrees.
     \end{enumerate}
   \end{freeResponse}
 \end{question}
+
+
+%% \begin{question}
+%%   EXPLAIN in terms of a right triangle, why:
+%%   \begin{enumerate}
+%%   \item If $\theta$ is near $0^\circ$, then $\sin(\theta)$ is near $0$.
+%%   \item If $\theta$ is near $0^\circ$, then $\cos(\theta)$ is near $1$.
+%%   \item If $\theta$ is near $90^\circ$, then $\sin(\theta)$ is near $1$.
+%%   \item If $\theta$ is near $90^\circ$, then $\cos(\theta)$ is near $0$.
+%%   \item $\sin(180-\theta) = \sin(\theta)$.
+%%   \item The outputs of $\sin(\theta)$ and $\cos(\theta)$ are always
+%%     between $-1$ and $1$.
+%%   \end{enumerate}
+%%   Use words, pictures, and so on, as needed/helpful in your
+%%   explanations.
+%%   \begin{hint}
+%%     The last two are a bit tricky. You have to interpret what a
+%%     negative sign means in this case. As a gesture of friendship, I
+%%     suggest you think of our right triangle as being on the unit circle:
+%%     \begin{center}
+%%       \begin{tikzpicture}[geometryDiagrams]
+%%         \coordinate (A) at (0,0);
+%%         \coordinate (B) at (4.33,0);
+%%         \coordinate (C) at (4.33,2.5);
+%%         \tkzDrawSegment[line width=2pt](A,B)
+%%         \tkzDrawSegment[line width=2pt](A,C)
+%%         \tkzDrawSegment[line width=2pt](C,B)
+%%         \tkzLabelSegment[above left](A,C){$1$}
+        
+%%         \coordinate (xmin) at (-6,0);
+%%         \coordinate (xmax) at (6,0);
+%%         \coordinate (ymin) at (0,-6);
+%%         \coordinate (ymax) at (0,6);
+        
+%%         \tkzDrawSegment[->](xmin,xmax)
+%%         \tkzDrawSegment[->](ymin,ymax)
+        
+%%         \tkzMarkRightAngle[thin](A,B,C)
+%%         \tkzDrawCircle[dashed](A,C)
+%%         \tkzMarkAngle[mark=,size=1.2cm,thin](B,A,C)
+%%         \tkzLabelAngle[pos=.9](B,A,C){$\theta$};
+%%       \end{tikzpicture}
+%%     \end{center}
+%%   \end{hint}
+%%   \begin{freeResponse}
+%%     \begin{enumerate}
+%%     \item First we need to explain why if $\theta$ is near $0^\circ$,
+%%       then $\sin(\theta)$ is near $0$.  Draw this on the unit circle:
+%%       \begin{center}
+%%       \begin{tikzpicture}[geometryDiagrams] %% multiply by 5
+%%         \coordinate (A) at (0,0);
+%%         \coordinate (B) at (4.98,0);
+%%         \coordinate (C) at (4.98,.44);
+%%         \tkzDrawSegment[line width=2pt](A,B)
+%%         \tkzDrawSegment[line width=2pt](A,C)
+%%         \tkzDrawSegment[line width=2pt](C,B)
+%%         \tkzLabelSegment[above left](A,C){$1$}
+        
+%%         %% \coordinate (xmin) at (-6,0);
+%%         %% \coordinate (xmax) at (6,0);
+%%         %% \coordinate (ymin) at (0,-6);
+%%         %% \coordinate (ymax) at (0,6);
+        
+%%         %% \tkzDrawSegment[->](xmin,xmax)
+%%         %% \tkzDrawSegment[->](ymin,ymax)
+        
+%%         %% \tkzMarkRightAngle[thin](A,B,C)
+%%         %% \tkzDrawCircle[dashed](A,C)
+%%       \end{tikzpicture}
+%%       \end{center}
+%%       Since the angle is near $0^\circ$,
+%%       \[
+%%       \sin(\theta) = \frac{\text{something near $0$}}{1} \approx 0.
+%%       \]
+%%     \item Using the same picture from before, since the angle is near $0^\circ$,
+%%       \[
+%%       \cos(\theta) = \frac{\text{something near $1$}}{1} \approx 1.
+%%       \]
+%%     \item If the angle is near $90^\circ$, then draw this picture:
+%%       \begin{center}
+%%       \begin{tikzpicture}[geometryDiagrams] %% multiply by 5
+%%         \coordinate (A) at (0,0);
+%%         \coordinate (B) at ({5*cos(85)},0);
+%%         \coordinate (C) at ({5*cos(85)},{5*sin(85)});
+%%         \tkzDrawSegment[line width=2pt](A,B)
+%%         \tkzDrawSegment[line width=2pt](A,C)
+%%         \tkzDrawSegment[line width=2pt](C,B)
+%%         \tkzLabelSegment[above left](A,C){$1$}
+        
+%%         %% \coordinate (xmin) at (-6,0);
+%%         %% \coordinate (xmax) at (6,0);
+%%         %% \coordinate (ymin) at (0,-6);
+%%         %% \coordinate (ymax) at (0,6);
+        
+%%         %% \tkzDrawSegment[->](xmin,xmax)
+%%         %% \tkzDrawSegment[->](ymin,ymax)
+        
+%%         \tkzMarkRightAngle[thin](A,B,C)
+%%         %\tkzDrawCircle[dashed](A,C)
+        
+%%       \end{tikzpicture}
+%%       \end{center}
+%%       Since the angle is near $90^\circ$,
+%%       \[
+%%       \sin(\theta) = \frac{\text{something near $1$}}{1} \approx 1.
+%%       \]
+%%      \item Using the same picture from before, since the angle is near $0^\circ$,
+%%       \[
+%%       \cos(\theta) = \frac{\text{something near $0$}}{1} \approx 0.
+%%       \]
+%%     \item To see $\sin(180-\theta)=\sin(\theta)$ check this out:
+%%       \begin{center}
+%%       \begin{tikzpicture}[geometryDiagrams]
+%%         \coordinate (xmin) at (-6,0);
+%%         \coordinate (xmax) at (6,0);
+%%         \coordinate (ymin) at (0,-6);
+%%         \coordinate (ymax) at (0,6);
+        
+%%         \tkzDrawSegment[->](xmin,xmax)
+%%         \tkzDrawSegment[->](ymin,ymax)
+
+%%         \coordinate (A) at (0,0);
+%%         \coordinate (B) at (-4.33,0);
+%%         \coordinate (C) at (-4.33,2.5);
+
+        
+%%         \coordinate (AA) at (0,0);
+%%         \coordinate (BB) at (4.33,0);
+%%         \coordinate (CC) at (4.33,2.5);
+
+
+%%         \tkzDrawSegment[red,line width=2pt](A,B)
+%%         \tkzDrawSegment[red,line width=2pt](A,C)
+%%         \tkzDrawSegment[red,line width=2pt](C,B)
+%%         \tkzLabelSegment[red,above right](A,C){$1$}
+        
+%%         \tkzMarkRightAngle[red,thin](A,B,C)
+%%         \tkzDrawCircle[dashed](A,C)
+%%         \tkzMarkAngle[red,mark=,size=1.6cm,thin](BB,AA,C)
+%%         \tkzLabelAngle[red,pos=.9](BB,A,C){$180-\theta$};
+
+%%         \tkzDrawSegment[blue,line width=2pt](AA,BB)
+%%         \tkzDrawSegment[blue,line width=2pt](AA,CC)
+%%         \tkzDrawSegment[blue,line width=2pt](CC,BB)
+%%         \tkzLabelSegment[blue,above left](AA,CC){$1$}
+
+%%         \tkzLabelSegment[blue,right](BB,CC){$\sin(\theta)$}
+%%         \tkzLabelSegment[red,left](B,C){$\sin(180-\theta)$}
+        
+%%         \tkzMarkRightAngle[blue,thin](AA,BB,CC)
+%%         \tkzMarkAngle[blue,mark=,size=1.2cm,thin](BB,AA,CC)
+%%         \tkzLabelAngle[blue,pos=.9](BB,AA,CC){$\theta$};
+%%       \end{tikzpicture}
+%%       \end{center}
+%%       And so we see $\sin(180-\theta)=\sin(\theta)$.
+%%     \item Sine and cosine are literally the lengths of the legs of
+%%       the triangle embedded in the unit circle. Their values must be
+%%       between $-1$ and $1$.
+%%     \end{enumerate}
+%%   \end{freeResponse}
+%% \end{question}
 
 
 
