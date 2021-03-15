@@ -1,4 +1,4 @@
-\documentclass[12pt,noauthor,nooutcomes,handout,hints]{ximera}
+\documentclass[noauthor,nooutcomes,hints,handout]{ximera}
 
 \input{../preamble.tex}
 
@@ -17,6 +17,7 @@
 \item Solve a problem where slope is given.
 \item Deduce the slope in a given context.
 \item Use tangent to transform angles into slope and pitch.
+\item Critique and dismantle reasonable hypotheses in regard to geometry and arithmetic.
 \end{listOutcomes}
 
 
@@ -38,17 +39,23 @@ mathematically correct!
 
 
 \begin{question}
-Here is a diagram of a roof that is pointed in the middle:
+  Here is a roof that is pointed in the middle:
+  \begin{center}
+    \includegraphics[width=.6\textwidth]{symRoof.jpg}
+  \end{center}
+Below is a diagram of the roof as seen from the top:
 \begin{center}
-  \begin{tikzpicture}[x=1.5cm,y=1.5cm]
-    \draw[ultra thick] (0,0) rectangle (4.8,3);
-    \draw[dashed] (.5,.5) rectangle (4.3,2.5);
-    \draw[ultra thick] (0,1.5) -- (4.8,1.5);
-    \draw[decoration={brace,raise=.2cm},decorate,thin] (0,0)--(0,3);
-    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(4.8,0);
-    \node at (-.4,1.5) {$30'$};
-    \node at (2.4,-.44) {$48'$};
-    \node[above] at (2.4,1.5) {slope of $6/12$};
+  \begin{tikzpicture}[x=2cm,y=2cm]
+    \draw[ultra thick] (0,0) rectangle (3,2.4);
+    %\draw[dashed] (.5,.5) rectangle (4.3,2.5);
+    \draw[ultra thick] (0,1.2) -- (3,1.2);
+    \draw[decoration={brace,raise=.2cm},decorate,thin] (0,0)--(0,2.4);
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(3,0);
+    \node at (-.4,1.2) {$24'$};
+    \node at (1.5,-.44) {$30'$};
+    \node at (1.5,2.1) {slope of $9/12$};
+    \node[above] at (1.5,1.2) {main ridge};
+    \node at (1.5,.3) {slope of $9/12$};
   \end{tikzpicture}
 \end{center}
 Find the area of the roof.  EXPLAIN the work in your solution.
@@ -56,22 +63,22 @@ Find the area of the roof.  EXPLAIN the work in your solution.
 \begin{freeResponse}
   If we look at the roof from the side, it looks like:
   \begin{center}
-    \begin{tikzpicture}[x=1.5cm,y=1.5cm]
-    \draw[ultra thick] (0,0) -- (1.5,0)  -- (1.5, .75) -- (0,0) ;
-    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(1.5,0);
-    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (1.5,0)--(1.5,.75);
-    \node at (.75,-.4) {$15'$};
-    \node at (2.4,.375) {$15'\cdot 6/12$};
+    \begin{tikzpicture}[x=2cm,y=2cm]
+    \draw[ultra thick] (0,0) -- (1.2,0)  -- (1.2, .9) -- (0,0) ;
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(1.2,0);
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (1.2,0)--(1.2,.9);
+    \node at (.6,-.25) {$12'$};
+    \node[anchor=west] at (1.3,.45) {$12'\cdot 9/12$};
     \end{tikzpicture}
     
   \end{center}
     By the Pythagorean theorem, the length of the hypotenuse is
     \[
-    \sqrt{15^2+ 7.5^2} \approx 16.77~\text{feet}.
+    \sqrt{12^2+ 9^2} = 15~\text{feet}.
     \]
     Thus, the area of the roof is
     \[
-    2\cdot 16.77\cdot 48 \approx 1610~\text{square feet}.
+    2\cdot 15\cdot 30 = 900~\text{square feet}.
     \]
 \end{freeResponse}
 \end{question}
@@ -79,19 +86,26 @@ Find the area of the roof.  EXPLAIN the work in your solution.
 
 
 \begin{question}
-Here is a diagram of with different slopes for each side:
+  Here is a roof with different pitches on each side of the main
+  ridge:
+  \begin{center}
+    \includegraphics[width=.6\textwidth]{skewRoof.jpg}
+  \end{center}
+Below is a diagram of the roof as seen from the top:
 \begin{center}
   \begin{tikzpicture}[x=1.5cm,y=1.5cm]
-    \draw[ultra thick] (0,0) rectangle (4.8,2.4);
-    \draw[dashed] (.3,.3) rectangle (4.5,2.1);
-    \draw[ultra thick] (0,1.6) -- (4.8,1.6);
-    \draw[decoration={brace,raise=.2cm},decorate,thin] (0,0)--(0,1.6);
-    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (4.8,1.6)--(4.8,2.4);
-    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(4.8,0);
-    \node at (-.5,.8) {$16'$};
-    \node at (5.2,2) {$8'$};
-    \node at (2.4,-.44) {$48'$};
-    \node at (2.4,1) {slope of $6/12$};
+    \draw[ultra thick] (0,0) rectangle (5,3.6);
+    %\draw[dashed] (.3,.3) rectangle (4.5,2.1);
+    \draw[ultra thick] (0,3) -- (5,3);
+    \draw[decoration={brace,raise=.2cm},decorate,thin] (0,0)--(0,3);
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (5,3.1)--(5,3.6);
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(5,0);
+    \node at (-.5,1.5) {$30'$};
+    \node at (5.4,3.3) {$6'$};
+    \node at (2.5,-.44) {$50'$};
+    \node at (2.5,1) {slope of $4/12$};
+    \node at (2.5,3.3) {slope of ??};
+    \node[below] at (2.5,3) {main ridge};
   \end{tikzpicture}
 \end{center}
 First find the missing slope, then find the area of the roof. EXPLAIN
@@ -101,40 +115,40 @@ the work in your solution.
     If we look at the roof from the side, it looks like:
   \begin{center}
     \begin{tikzpicture}[x=1.5cm,y=1.5cm]
-    \draw[ultra thick] (0,0) -- (1.6,0)  -- (1.6, .8) -- (0,0) ;
-    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(1.6,0);
-    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (1.6,0)--(1.6,.8);
-    \node at (.8,-.4) {$16'$};
-    \node at (2.5,.4) {$16'\cdot 6/12$};
+    \draw[ultra thick] (0,0) -- (3,0)  -- (3, 1) -- (0,0) ;
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(3,0);
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (3,0)--(3,1);
+    \node at (1.5,-.4) {$15'$};
+    \node[anchor=west] at (3.2,.5) {$30'\cdot 4/12=10'$};
     \end{tikzpicture}
   \end{center}
     By the Pythagorean theorem, the length of the hypotenuse is
     \[
-    \sqrt{16^2+ 8^2} \approx 17.89~\text{feet}.
+    \sqrt{30^2+ 10^2} \approx 32~\text{feet}.
     \]
     Thus, the area of that side of the roof is
     \[
-    17.89\cdot 48 \approx 859~\text{square feet}.
+    32\cdot 50 \approx 1600~\text{square feet}.
     \]
     For the other side, consider:
     \begin{center}
     \begin{tikzpicture}[x=2cm,y=2cm]
-    \draw[ultra thick] (0,0) -- (.8,0)  -- (.8, .8) -- (0,0) ;
-    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(.8,0);
-    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (.8,0)--(.8,.8);
-    \node at (.4,-.3) {$8'$};
-    \node at (1.7,.4) {$8'=16'\cdot 6/12$};
+    \draw[ultra thick] (0,0) -- (.6,0)  -- (.6, 1) -- (0,0) ;
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(.6,0);
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (.6,0)--(.6,1);
+    \node at (.4,-.3) {$6'$};
+    \node at (1.5,.5) {$10'=30'\cdot 4/12$};
     \end{tikzpicture}
     \end{center}
      By the Pythagorean theorem, the length of the hypotenuse is
     \[
-    \sqrt{8^2 + 8^2} \approx 11.3~\text{feet}.
+    \sqrt{6^2 + 10^2} \approx 12~\text{feet}.
     \]
-    So the area of this side of the roof is
+    So the area of this side of the roof is around
     \[
-    11.3\cdot 48 \approx 542~\text{square feet}.
+    12\cdot 50 =600 ~\text{square feet}.
     \]
-    Thus the total area of the roof is approximately $1401$ square
+    Thus the total area of the roof is approximately $2400$ square
     feet.
 \end{freeResponse}
 \end{question}
@@ -184,6 +198,20 @@ in terms of slope \textbf{(easier to measure)}. In this case,
   work.
 \item Find a pitch $p$ (a whole number) such that a pitch of $p$ best
   corresponds to a $40^\circ$ angle. Show your work.
+
+\item \textit{Geometry Giorgio} is working with you converting angles
+  to slope.
+  \begin{quote} \textbf{\textit{Geometry Giorgio} solved
+      each of these problems the exact same way:}
+        \begin{enumerate}
+        \item $\tan(44.77) \approx 1$, so I conclude a slope of $12/12$.
+        \item $\tan(60.01) \approx 1/3$, so I conclude a slope of $4/12$.
+        \item $\tan(10.01) \approx 2/3$, so I conclude a slope of $8/12$.
+        \end{enumerate}
+  \end{quote}
+  Is \textit{Geometry Giorgio} correct? If not, EXPLAIN what mistake
+  he is making AND explain HOW \textit{Geometry Giorgio} could have
+  figured this out by THINKING about his numbers.
 \end{enumerate}
 \begin{freeResponse}
   \begin{enumerate}
@@ -225,6 +253,12 @@ in terms of slope \textbf{(easier to measure)}. In this case,
 
   \item So $12\cdot \tan(40^\circ)\approx 10$. This means a pitch of
     $10$ would be best.
+  \item Geometry Giorgio is working in radians, not degrees.
+    He got lucky with $44.77$ degrees.
+
+    Also, he should know that $60$ degrees CANNOT correspond to a
+    slope of $4/12$! And  that $10$ degrees CANNOT correspond to a
+    slope of $8/12$!
   \end{enumerate}
   \end{freeResponse}
 \end{question}
