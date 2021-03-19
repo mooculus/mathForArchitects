@@ -3,6 +3,7 @@
 \input{../preamble.tex}
 \title{Not so quick questions}
 
+
 \author{Bart Snapp}
 
 \begin{document}
@@ -17,53 +18,37 @@
 \end{listOutcomes}
 
 
-\mynewpage
+Imagine a house where the roof where two slopes meet. This will either
+form a ``hip'' or a ``valley''.
+\begin{center}
+  \includegraphics[width=.8\textwidth]{house.jpg}
+\end{center}
+We'd like to know the slope (or pitch) of the hip or valley. 
+Let's use this:
+\begin{quote}
+  \textbf{Algorithm for computing the slope of a hip or valley:}
 
-%% IDENTIFY OBIVIOUSLY CORRECT AND INCORRECT ANSWERS
-%% AGAIN WITH THE AREA/VOL
-%% solve a complex diagram
-%% Give several quick questions and ask how they were supposed to figure them out.
+  Suppose the slopes are $\frac{s}{12}$ and $\frac{\l}{12}$ with
+$s\le \l$.
 
-
-CHANGE TITLE?
-
-Find the surface area of a pyramid.
-Prove Archimedies hat box theorem.
-%https://www2.strongtie.com/webapps/SlopeSkew/?source=app
-
-%% EASY COMBINED PITCH
-%% HARDER COMBINED PITCH
-%% computer combined pitch
-%% QUIZ: COULD IT JUST BE IS THIS A VALLEY OR A RIDGE?
-
-
-\begin{question}
-  
-\end{question}
-
-\mynewpage
-
-
-\begin{question}
-  Imagine a house
-  Here is a procedure that will compute the slope:
-  \begin{enumerate}
-  \item Draw a point $O$ sitting at the intersection of a horizontal
-    and vertical line.
-  \item Draw a vertical line segment $\bar{OS}$ where $S$ is directly
-    above $O$ and $|OS|$ is equal to the smaller pitch.
-  \item Starting from $S$, draw a line with the larger slope and call
-    the intersection of this line with the horizontal line point $X$.
+\begin{enumerate}
+\item Draw a point $O$ sitting at the intersection of a horizontal
+  and vertical line.
+\item Draw a vertical line segment $\bar{OS}$ where $S$ is directly
+  above $O$ and $|OS| = s$.
+  \item Starting from $S$, draw a line with the larger slope
+    $\frac{\l}{12}$ and call the intersection of this line with the
+    horizontal line point $X$.
   \item Starting at point $O$, extend the line segment $\bar{OS}$ by
-    drawing downward $12$ units, and call the lowest point of this
-    segment $L$.
+    drawing downward $12$ units, and call the bottom of this segment
+    $B$.
   \item The slope you seek is:
     \[
-    \frac{|OS|}{|LX|}\qquad \text{with a pitch of} \qquad \frac{12\cdot |OS|}{|LX|}
+    \frac{|OS|}{|BX|}\qquad \text{with a pitch of} \qquad \frac{12\cdot |OS|}{|BX|}
     \]  
-  \end{enumerate}
+\end{enumerate}
         \begin{center}
-        \begin{tikzpicture}[geometryDiagrams,scale=.3]
+        \begin{tikzpicture}[geometryDiagrams,scale=.2]
           %% \filldraw[black] (1in,1in) circle (2pt) ;
           %% \filldraw[black] (0in,0in) circle (2pt) ;
           %% \filldraw[black] (0in,1in) circle (2pt) ;
@@ -77,34 +62,125 @@ Prove Archimedies hat box theorem.
           
           \tkzDefPoint(0,6){S}
           \tkzDefPoint(-9,0){X}
-          \tkzDefPoint(-12,-2){LS}
-          \tkzDefPoint(0,-12){L}
+          \tkzDefPoint(-12,-2){BS}
+          \tkzDefPoint(0,-12){B}
 
           \tkzDrawPoint[](O)
           \tkzDrawPoint[](S)
           \tkzDrawPoint[](X)
-          \tkzDrawPoint[](L)
+          \tkzDrawPoint[](B)
           \tkzDrawLine[ultra thin](II,nII)
           \tkzDrawLine[ultra thin](I,nI)
-          \tkzDrawLine(S,LS)
-          \tkzDrawSegment(O,L)
-          \tkzDrawSegment[ultra thick](L,X)
+          \tkzDrawLine(S,BS)
+          \tkzDrawSegment(O,B)
+          \tkzDrawSegment[ultra thick](B,X)
           \tkzDrawSegment(O,S)
 
           \tkzLabelPoint(O){$O$}
           \tkzLabelPoint[](S){$S$}
           \tkzLabelPoint[above left](X){$X$}
-          \tkzLabelPoint(L){$L$}
+          \tkzLabelPoint(B){$B$}
+
+          \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (S)--(X);
           
+          \node[anchor=south east] at (-5,4) {slope of $\frac{\l}{12}$};
         \end{tikzpicture}
       \end{center}
+\end{quote}
+
+
+\mynewpage
+
+%% IDENTIFY OBIVIOUSLY CORRECT AND INCORRECT ANSWERS
+%% AGAIN WITH THE AREA/VOL
+%% solve a complex diagram
+%% Give several quick questions and ask how they were supposed to figure them out.
+
+
+%https://www2.strongtie.com/webapps/SlopeSkew/?source=app
+
+%% EASY COMBINED PITCH
+%% HARDER COMBINED PITCH
+%% computer combined pitch
+%% QUIZ: COULD IT JUST BE IS THIS A VALLEY OR A RIDGE?
+
+
+\begin{question}
+  Let's see if we can USE the algorithm above.
+  \begin{enumerate}
+  \item Someone used this drawing to compute the slope of a hip.
+    \begin{center}
+        \begin{tikzpicture}[geometryDiagrams,scale=.2]
+          %% \filldraw[black] (1in,1in) circle (2pt) ;
+          %% \filldraw[black] (0in,0in) circle (2pt) ;
+          %% \filldraw[black] (0in,1in) circle (2pt) ;
+          %% \draw[<->,dashed] (1.5in,-.5in) -- (-.5in,1.5in);
+
+          \tkzDefPoint(0,0){O}
+          \tkzDefPoint(-13,0){I}
+          \tkzDefPoint(1,0){nI}
+          \tkzDefPoint(0,7){II}
+          \tkzDefPoint(0,-13){nII}
+          
+          \tkzDefPoint(0,6){S}
+          \tkzDefPoint(-9,0){X}
+          \tkzDefPoint(-12,-2){BS}
+          \tkzDefPoint(0,-12){B}
+
+          \tkzDrawPoint[](O)
+          \tkzDrawPoint[](S)
+          \tkzDrawPoint[](X)
+          \tkzDrawPoint[](B)
+          \tkzDrawLine[ultra thin](II,nII)
+          \tkzDrawLine[ultra thin](I,nI)
+          \tkzDrawLine(S,BS)
+          \tkzDrawSegment(O,B)
+          \tkzDrawSegment[ultra thick](B,X)
+          \tkzDrawSegment(O,S)
+
+
+          \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (O)--(S);
+          \node[anchor=west] at (1.5,3) {$6$};
+
+
+          \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (B)--(O);
+          \node[anchor=west] at (1.5,-6) {$12$};
+
+          \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (S)--(X);
+          \node[anchor=south east] at (-5,4) {slope of $\frac{8}{12}$};
+
+          \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (X)--(B);
+          \node[anchor=north east] at (-5,-6.5) {$15$};
+        \end{tikzpicture}
+    \end{center}
+    Find the slopes of the main-roof, the hip-end, and the hip. Show
+    all work and explain your reasoning.
+  \item Suppose you have a main-roof with a slope of $\frac{4}{12}$
+    and a hip-end with a slope of $\frac{7}{12}$. \textbf{Find the
+      slope of the hip.}  Show all work and explain your reasoning and
+    check your work with an online calculator.
+  \end{enumerate}
+\end{question}
+
+
+
+
+\mynewpage
+
+
+\begin{question}
+  Now make them explain it.
 \end{question}
 
 \mynewpage
 
 
 \begin{question}
-  
+  FINALLY -- compute two SA
+
+  1) Pyramid los
+
+  2) roof with hips etc
 \end{question}
 
 
