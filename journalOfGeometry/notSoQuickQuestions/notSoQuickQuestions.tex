@@ -45,23 +45,59 @@ Prove Archimedies hat box theorem.
 
 
 \begin{question}
+  Imagine a house
+  Here is a procedure that will compute the slope:
   \begin{enumerate}
   \item Draw a point $O$ sitting at the intersection of a horizontal
     and vertical line.
   \item Draw a vertical line segment $\bar{OS}$ where $S$ is directly
     above $O$ and $|OS|$ is equal to the smaller pitch.
-  \item Starting from $S$, draw a line with the larger pitch in a
-    downward direction, call the intersection of this line with the
-    horizontal line point $X$.
+  \item Starting from $S$, draw a line with the larger slope and call
+    the intersection of this line with the horizontal line point $X$.
   \item Starting at point $O$, extend the line segment $\bar{OS}$ by
     drawing downward $12$ units, and call the lowest point of this
     segment $L$.
   \item The slope you seek is:
     \[
     \frac{|OS|}{|LX|}\qquad \text{with a pitch of} \qquad \frac{12\cdot |OS|}{|LX|}
-    \]
-    
+    \]  
   \end{enumerate}
+        \begin{center}
+        \begin{tikzpicture}[geometryDiagrams,scale=.3]
+          %% \filldraw[black] (1in,1in) circle (2pt) ;
+          %% \filldraw[black] (0in,0in) circle (2pt) ;
+          %% \filldraw[black] (0in,1in) circle (2pt) ;
+          %% \draw[<->,dashed] (1.5in,-.5in) -- (-.5in,1.5in);
+
+          \tkzDefPoint(0,0){O}
+          \tkzDefPoint(-13,0){I}
+          \tkzDefPoint(1,0){nI}
+          \tkzDefPoint(0,7){II}
+          \tkzDefPoint(0,-13){nII}
+          
+          \tkzDefPoint(0,6){S}
+          \tkzDefPoint(-9,0){X}
+          \tkzDefPoint(-12,-2){LS}
+          \tkzDefPoint(0,-12){L}
+
+          \tkzDrawPoint[](O)
+          \tkzDrawPoint[](S)
+          \tkzDrawPoint[](X)
+          \tkzDrawPoint[](L)
+          \tkzDrawLine[ultra thin](II,nII)
+          \tkzDrawLine[ultra thin](I,nI)
+          \tkzDrawLine(S,LS)
+          \tkzDrawSegment(O,L)
+          \tkzDrawSegment[ultra thick](L,X)
+          \tkzDrawSegment(O,S)
+
+          \tkzLabelPoint(O){$O$}
+          \tkzLabelPoint[](S){$S$}
+          \tkzLabelPoint[above left](X){$X$}
+          \tkzLabelPoint(L){$L$}
+          
+        \end{tikzpicture}
+      \end{center}
 \end{question}
 
 \mynewpage

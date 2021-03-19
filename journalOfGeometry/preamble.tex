@@ -106,6 +106,7 @@
 \setcounter{titlenumber}{-1}
 
 %% journal style
+%% skip journal style
 %% \frontstyle
 \makeatletter
 \newcommand\journalstyle{%
@@ -118,6 +119,19 @@
                     \par\vspace{2em}
                     \phantomsection\addcontentsline{toc}{section}{\thetitlenumber\hspace{1em}\textbf{\@title}}%
                      }}
+
+\newcommand\skipjournalstyle{%
+  \def\activitystyle{activity-section}
+  \def\maketitle{%
+    \addtocounter{titlenumber}{1}%
+                {\flushleft\small\sffamily\bfseries\@pretitle\par\vspace{-1.5em}}%
+                {\flushleft\LARGE\sffamily\bfseries\thetitlenumber\hspace{1em}\@title$^\star$ \par }%
+                {\vskip .6em\noindent\textit\theabstract\setcounter{question}{0}\setcounter{sectiontitlenumber}{0}}%
+                    \par\vspace{2em}
+                    \phantomsection\addcontentsline{toc}{section}{\thetitlenumber\hspace{1em}\textbf{\@title$^\star$}}%
+                     }}
+
+
 
 %% no number for refs
 \newcommand\partstyle{%
