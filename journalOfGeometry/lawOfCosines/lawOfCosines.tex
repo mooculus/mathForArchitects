@@ -20,8 +20,10 @@
 \item Use the law of cosines to write a \snap\ block that draws triangles
   based on the SAS congruence theorem.
 \item Reduce a problem to a previously solved problem.
+\item Explain why the converse to the Pythagorean theorem is true.
+\item Describe why the converse to the Pythagorean theorem is
+  important.
 \end{listOutcomes}
-\mynewpage
 
 Given a triangle
 \begin{center}
@@ -51,7 +53,8 @@ the \textbf{law of cosines} states
 \[
 c^2 = a^2 + b^2 - 2ab\cos(\gamma).
 \]
-  
+\mynewpage
+
 
 
 \begin{question}
@@ -107,117 +110,104 @@ c^2 = a^2 + b^2 - 2ab\cos(\gamma).
 \mynewpage
 
 \begin{question}
-  Create a \snap\ block that will draw triangles based on the SSS
-  congruence theorem.  As a gesture of friendship, I've started the
-  block for you:
-  \begin{center}
-    \includegraphics{sssBlockBLANK}
-  \end{center}
-  It's your job to USE THE LAW OF COSINES to fill in the
-  blanks. EXPLAIN how you used the law of cosines, and show off your
-  work by giving screenshots of your SCRIPT and STAGE as provided
-  from \snap.
-  \begin{freeResponse}
-    Consider this triangle:
+  Let's build some \snap\ blocks!
+  \begin{enumerate}
+  \item Create a \snap\ block that will draw triangles based on the
+    SSS congruence theorem.  As a gesture of friendship, I've started
+    the block for you:
     \begin{center}
-        \begin{tikzpicture}[geometryDiagrams]
-          \coordinate (A) at (0,0);
-          \coordinate (B) at (5,2);
-          \coordinate (C) at (7,0);
-          \tkzDrawSegment (A,B)
-          \tkzDrawSegment (A,C)
-          \tkzDrawSegment (C,B)
-          \tkzLabelSegment[above left](A,B){$side~1$}
-          \tkzLabelSegment[below](A,C){$side~3$}
-          \tkzLabelSegment[above right](B,C){$side~2$}  
-          
-          %\tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
-          %\tkzLabelAngle[pos=1.2](C,A,B){$\alpha$}
-          
-          \tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
-          \tkzLabelAngle[pos=.5](A,B,C){$\theta$}
-          
-          %% \tkzMarkAngle[mark=,size=.9,thin](B,C,A)
-          %% \tkzLabelAngle[pos=.6](B,C,A){$\gamma$}
-          
-        \end{tikzpicture}
-      \end{center}
-
-
-    
-    Note by the law of cosines:
-    \[
-    (\mathrm{side~3})^2 = (\mathrm{side~1})^2 + (\mathrm{side~2})^2 - 2\cdot (\mathrm{side~1})(\mathrm{side~2})\cos(\theta)
-    \]
-    Hence the angle between $\mathrm{side~1}$ and $\mathrm{side~2}$ is given by:
-    \[
-    \theta = \arccos\left(\frac{(\mathrm{side~1})^2 + (\mathrm{side~2})^2- (\mathrm{side~3})^2}{2\cdot (\mathrm{side~1})(\mathrm{side~2})})\right) 
-    \]
-    This is the first angle we need for our script.
-
-    Now consider this triangle:
-    \begin{center}
-        \begin{tikzpicture}[geometryDiagrams]
-          \coordinate (A) at (0,0);
-          \coordinate (B) at (5,2);
-          \coordinate (C) at (7,0);
-          \tkzDrawSegment (A,B)
-          \tkzDrawSegment (A,C)
-          \tkzDrawSegment (C,B)
-          \tkzLabelSegment[above left](A,B){$side~1$}
-          \tkzLabelSegment[below](A,C){$side~3$}
-          \tkzLabelSegment[above right](B,C){$side~2$}  
-          
-          %\tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
-          %\tkzLabelAngle[pos=1.2](C,A,B){$\alpha$}
-          
-          %\tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
-          %\tkzLabelAngle[pos=.5](A,B,C){$\theta$}
-          
-          \tkzMarkAngle[mark=,size=.9,thin](B,C,A)
-          \tkzLabelAngle[pos=.6](B,C,A){$\theta$}
-          
-        \end{tikzpicture}
-      \end{center}
-
-
-    
-    Note by the law of cosines:
-    \[
-    (\mathrm{side~1})^2 = (\mathrm{side~2})^2 + (\mathrm{side~3})^2 - 2\cdot (\mathrm{side~2})(\mathrm{side~3})\cos(\theta)
-    \]
-    Hence the angle between $\mathrm{side~1}$ and $\mathrm{side~2}$ is given by:
-    \[
-    \theta = \arccos\left(\frac{(\mathrm{side~2})^2 + (\mathrm{side~3})^2- (\mathrm{side~1})^2}{2\cdot (\mathrm{side~2})(\mathrm{side~3})})\right) 
-    \]
-    This is the the second angle we need for our script.
-
-  
-    Here is my script and my stage:
-    \begin{center}
-      \includegraphics[width=.4\textwidth]{sssBlockCOMPLETE}   \qquad \fbox{\includegraphics[width=.4\textwidth]{sssStage.png}}
+      \includegraphics{sssBlockBLANK}
     \end{center}
-\end{freeResponse}
-  
-  
-\end{question}
-\mynewpage
-
-
-
-\begin{question}
-  Create a \snap\ block that will draw triangles based on the SAS
-  congruence theorem.  As a gesture of friendship, I've started the
-  block for you:
-  \begin{center}
-    \includegraphics{sasBlockBLANK}
-  \end{center}
-  It's your job to USE THE LAW OF COSINES to fill in the
-  blank. EXPLAIN how you used the law of cosines, and show off your
-  work by giving screenshots of your SCRIPT and STAGE as provided
-  from \snap.
-  \begin{freeResponse}
-    Consider this triangle:
+    It's your job to USE THE LAW OF COSINES to fill in the
+    blanks. EXPLAIN how you used the law of cosines, and show off your
+    work by giving screenshots of your SCRIPT and STAGE as provided
+    from \snap.
+  \item Use your work from the previous part to create a \snap\ block
+    that will draw triangles based on the SAS congruence theorem.  As
+    a gesture of friendship, I've started the block for you:
+    \begin{center}
+      \includegraphics{sasBlockBLANK}
+    \end{center}
+    It's your job to USE THE LAW OF COSINES to fill in the
+    blank.
+  \end{enumerate}
+    In EACH case above, EXPLAIN how you used the law of cosines, and
+    show off your work by giving screenshots of your SCRIPT and STAGE
+    as provided from \snap.
+    \begin{freeResponse}
+      \begin{enumerate}
+      \item Consider this triangle:
+        \begin{center}
+          \begin{tikzpicture}[geometryDiagrams]
+            \coordinate (A) at (0,0);
+            \coordinate (B) at (5,2);
+            \coordinate (C) at (7,0);
+            \tkzDrawSegment (A,B)
+            \tkzDrawSegment (A,C)
+            \tkzDrawSegment (C,B)
+            \tkzLabelSegment[above left](A,B){$side~1$}
+            \tkzLabelSegment[below](A,C){$side~3$}
+            \tkzLabelSegment[above right](B,C){$side~2$}  
+          
+            %\tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
+            %\tkzLabelAngle[pos=1.2](C,A,B){$\alpha$}
+          
+            \tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
+            \tkzLabelAngle[pos=.5](A,B,C){$\theta$}
+            
+          %% \tkzMarkAngle[mark=,size=.9,thin](B,C,A)
+            %% \tkzLabelAngle[pos=.6](B,C,A){$\gamma$}
+            
+          \end{tikzpicture}
+        \end{center}
+        Note by the law of cosines:
+        \[
+        (\mathrm{side~3})^2 = (\mathrm{side~1})^2 + (\mathrm{side~2})^2 - 2\cdot (\mathrm{side~1})(\mathrm{side~2})\cos(\theta)
+        \]
+        Hence the angle between $\mathrm{side~1}$ and $\mathrm{side~2}$ is given by:
+        \[
+        \theta = \arccos\left(\frac{(\mathrm{side~1})^2 + (\mathrm{side~2})^2- (\mathrm{side~3})^2}{2\cdot (\mathrm{side~1})(\mathrm{side~2})})\right) 
+        \]
+        This is the first angle we need for our script.
+        
+        Now consider this triangle:
+        \begin{center}
+          \begin{tikzpicture}[geometryDiagrams]
+            \coordinate (A) at (0,0);
+            \coordinate (B) at (5,2);
+            \coordinate (C) at (7,0);
+            \tkzDrawSegment (A,B)
+            \tkzDrawSegment (A,C)
+            \tkzDrawSegment (C,B)
+            \tkzLabelSegment[above left](A,B){$side~1$}
+            \tkzLabelSegment[below](A,C){$side~3$}
+            \tkzLabelSegment[above right](B,C){$side~2$}  
+            
+            %\tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
+            %\tkzLabelAngle[pos=1.2](C,A,B){$\alpha$}
+          
+            %\tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
+            %\tkzLabelAngle[pos=.5](A,B,C){$\theta$}
+            
+            \tkzMarkAngle[mark=,size=.9,thin](B,C,A)
+            \tkzLabelAngle[pos=.6](B,C,A){$\theta$}
+            
+        \end{tikzpicture}
+        \end{center}
+        Note by the law of cosines:
+        \[
+        (\mathrm{side~1})^2 = (\mathrm{side~2})^2 + (\mathrm{side~3})^2 - 2\cdot (\mathrm{side~2})(\mathrm{side~3})\cos(\theta)
+        \]
+        Hence the angle between $\mathrm{side~1}$ and $\mathrm{side~2}$ is given by:
+        \[
+        \theta = \arccos\left(\frac{(\mathrm{side~2})^2 + (\mathrm{side~3})^2- (\mathrm{side~1})^2}{2\cdot (\mathrm{side~2})(\mathrm{side~3})})\right) 
+        \]
+        This is the the second angle we need for our script.
+        Here is my script and my stage:
+        \begin{center}
+          \includegraphics[width=.4\textwidth]{sssBlockCOMPLETE}   \qquad \fbox{\includegraphics[width=.4\textwidth]{sssStage.png}}
+        \end{center}
+      \item Consider this triangle:
     \begin{center}
         \begin{tikzpicture}[geometryDiagrams]
           \coordinate (A) at (0,0);
@@ -254,8 +244,47 @@ c^2 = a^2 + b^2 - 2ab\cos(\gamma).
     \begin{center}
       \includegraphics[width=.4\textwidth]{sasBlockCOMPLETE}   \qquad \fbox{\includegraphics[width=.4\textwidth]{sasStage.png}}
     \end{center}
+      \end{enumerate}
 \end{freeResponse}
-  
+\end{question}
+\mynewpage
+
+
+
+\begin{question}
+  Perhaps, more important than the Pythagorean theorem is the:
+  \begin{quote}
+    \textbf{Converse to the Pythagorean theorem}:
+    Suppose that I have three positive numbers $a$, $b$, and $c$ such that:
+    \[
+    a^2 + b^2 = c^2
+    \]
+    In this case, there exists a right triangle with legs $a$ and $b$
+    and hypotenuse $c$.
+  \end{quote}
+  \begin{enumerate}
+  \item Explain WHY the converse to the Pythagorean theorem is true.
+    \begin{hint}
+      Think SAS. 
+    \end{hint}
+  \item Explain WHY someone might think that the CONVERSE to the
+    Pythagorean theorem is MORE IMPORTANT than the Pythagorean
+    theorem.
+  \end{enumerate}
+    \begin{freeResponse}
+      \begin{enumerate}
+      \item Well as long as all of $a$, $b$, and $c$ are positive numbers there
+        will be such a triangle, by SAS.  One side has length $a$, the
+        other has length $b$, and the angle is the right angle between
+        them. Since there is only one such triangle, and it's a right
+        triangle, the Pythagorean theorem guarantees that the final side
+        must have length $c = \sqrt{a^2+b^2}$.
+      \item The CONVERSE to the Pythagorean theorem is MORE IMPORTANT
+        than the Pythagorean theorem because it gives us an easy way
+        to identify if an angle is right angle, simply by measuring
+        sides.
+      \end{enumerate}
+      \end{freeResponse}
   
 \end{question}
 
