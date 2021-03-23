@@ -23,8 +23,94 @@ form a ``hip'' or a ``valley''.
 \begin{center}
   \includegraphics[width=.8\textwidth]{house.jpg}
 \end{center}
-We'd like to know the slope (or pitch) of the hip or valley. 
-Let's use this:
+There are two basic questions we'd like to answer about shapes like these:
+\begin{itemize}
+\item Given the dimensions (as seen from the top) of the roof, What is the AREA of the roof?
+\item Given the SLOPE of the roofs that meet, What the slope (or
+  pitch) of the hip or valley?
+\end{itemize}
+
+
+\mynewpage
+
+%% IDENTIFY OBIVIOUSLY CORRECT AND INCORRECT ANSWERS
+%% AGAIN WITH THE AREA/VOL
+%% solve a complex diagram
+%% Give several quick questions and ask how they were supposed to figure them out.
+
+
+%https://www2.strongtie.com/webapps/SlopeSkew/?source=app
+
+%% EASY COMBINED PITCH
+%% HARDER COMBINED PITCH
+%% computer combined pitch
+%% QUIZ: COULD IT JUST BE IS THIS A VALLEY OR A RIDGE?
+
+\begin{question}
+\begin{enumerate}
+\item Consider the \link[\textit{Luxor Las
+    Vegas}]{https://en.wikipedia.org/wiki/Luxor_Las_Vegas}:
+  \begin{center}
+    \includegraphics[width=.4\textwidth]{pyramid.jpg} 
+  \end{center}
+ Assuming that the (square) base of this building has a side length of
+ $646$ feet and that the pyramid is $350$ feet tall, compute the
+ SURFACE AREA in square feet, NOT including the bottom. 
+ 
+\item Here are plans for a $1$-car garage that I got from \link[\textit{Garage Plans by Behm Design}]{https://behmdesign.com/shop/}:
+   \begin{center}
+     \includegraphics[width=.6\textwidth]{oneCarGarage.jpg}
+   \end{center}
+   Assuming that the hip-end has a slope of $\frac{6}{12}$, and that
+   the roof has an overhang of $2$ feet on all sides, find the AREA of
+   the roof of the garage in square feet.
+ \item Considering the $1$-car garage from the previous part, now
+   suppose that the hip-end has a slope of $\frac{8}{12}$ with an
+   overhange of $3$ feet. Again find the AREA of the roof of the
+   garage in square feet.
+\end{enumerate}
+In ALL cases above, SHOW and EXPLAIN your work.
+\begin{freeResponse}
+  \begin{enumerate}
+    \item We must compute the height of one face of the pyramid. By
+      the Pythagorean theorem, we have
+      \[
+      323^2 + 350^2 = h^2
+      \]
+      so
+      \[
+      h \approx 476.
+      \]
+      This means the top of the pyramid has a surface area of
+      \[
+      \text{Area} = 4\cdot \frac{646\cdot 476}{2} = 614992~\text{square feet}.
+      \]
+    \item Since there is an overhang of $2$ feet per side, 
+    
+  \end{enumerate}
+\end{freeResponse}
+
+
+\end{question}
+\mynewpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{question}
+  Now let's think about the SLOPE of a hip or valley. Below we see a
+  sneaky way to compute these numbers.
 \begin{quote}
   \textbf{Algorithm for computing the slope of a hip or valley:}
 
@@ -42,12 +128,7 @@ $s\le \l$.
   \item Starting at point $O$, extend the line segment $\bar{OS}$ by
     drawing downward $12$ units, and call the bottom of this segment
     $B$.
-  \item The slope you seek is:
-    \[
-    \frac{|OS|}{|BX|}\qquad \text{with a pitch of} \qquad \frac{12\cdot |OS|}{|BX|}
-    \]  
-\end{enumerate}
-        \begin{center}
+     \begin{center}
         \begin{tikzpicture}[geometryDiagrams,scale=.2]
           %% \filldraw[black] (1in,1in) circle (2pt) ;
           %% \filldraw[black] (0in,0in) circle (2pt) ;
@@ -86,26 +167,13 @@ $s\le \l$.
           \node[anchor=south east] at (-5,4) {slope of $\frac{\l}{12}$};
         \end{tikzpicture}
       \end{center}
+  \item The slope you seek is:
+    \[
+    \frac{|OS|}{|BX|}\qquad \text{with a pitch of} \qquad \frac{12\cdot |OS|}{|BX|}
+    \]  
+\end{enumerate}
 \end{quote}
 
-
-\mynewpage
-
-%% IDENTIFY OBIVIOUSLY CORRECT AND INCORRECT ANSWERS
-%% AGAIN WITH THE AREA/VOL
-%% solve a complex diagram
-%% Give several quick questions and ask how they were supposed to figure them out.
-
-
-%https://www2.strongtie.com/webapps/SlopeSkew/?source=app
-
-%% EASY COMBINED PITCH
-%% HARDER COMBINED PITCH
-%% computer combined pitch
-%% QUIZ: COULD IT JUST BE IS THIS A VALLEY OR A RIDGE?
-
-
-\begin{question}
   Let's see if we can USE the algorithm above.
   \begin{enumerate}
   \item Someone used this drawing to compute the slope of a hip.
@@ -157,8 +225,11 @@ $s\le \l$.
     all work and explain your reasoning.
   \item Suppose you have a main-roof with a slope of $\frac{4}{12}$
     and a hip-end with a slope of $\frac{7}{12}$. \textbf{Find the
-      slope of the hip.}  Show all work and explain your reasoning and
-    check your work with an online calculator.
+      slope of the hip.}  Show all work, explain your reasoning, and
+    check your work with an \link[online calculator]{https://www2.strongtie.com/webapps/SlopeSkew/?source=app}.
+  \item If the slope of the main roof is the same as the slope of the
+    hip-end, say they are both $\frac{s}{12}$, what is the slope of
+    the hip? Show all work and explain your reasoning.
   \end{enumerate}
 \end{question}
 
@@ -169,19 +240,8 @@ $s\le \l$.
 
 
 \begin{question}
-  Now make them explain it.
+  Now you should EXPLAIN why the method given above works to find the
+  slope of a hip or a valley. 
 \end{question}
-
-\mynewpage
-
-
-\begin{question}
-  FINALLY -- compute two SA
-
-  1) Pyramid los
-
-  2) roof with hips etc
-\end{question}
-
 
 \end{document}
