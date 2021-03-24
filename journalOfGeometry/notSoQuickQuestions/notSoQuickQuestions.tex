@@ -8,15 +8,18 @@
 
 \begin{document}
 \begin{abstract}
-  Let's apply our knowledge.
+  We solve difficult problems and revisit old ideas.
 \end{abstract}
 \maketitle
 
 
 \begin{listOutcomes}
-\item follow algoritm
-\item translate school math real world math
-\item 
+\item Apply the Pythagorean theorem to solve problems.
+\item Extend ideas from two-dimensions to three-dimensions.
+\item Follow steps in an algorithm to solve a problem.
+\item Translate classroom mathematics into real world mathematics.
+\item Recognize the difference between reasoning through formulas and
+  reasoning through scaling.
 \end{listOutcomes}
 
 
@@ -35,7 +38,7 @@ There are two basic questions we'd like to answer about shapes like these:
 
 \mynewpage
 
-\begin{question}
+\begin{question} We'll start by computing some areas.
 \begin{enumerate}
 \item Consider the \link[\textit{Luxor Las
     Vegas}]{https://en.wikipedia.org/wiki/Luxor_Las_Vegas}:
@@ -328,7 +331,7 @@ $s\le \l$.
           \node[anchor=south east] at (-5,4) {slope of $\frac{s}{12}$};
 
           \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (X)--(B);
-          \node[anchor=north east] at (-5,-6.5) {$\sqrt{12^2+12^2}$};
+          \node[anchor=north east] at (-6,-6.5) {$\sqrt{12^2+12^2}$};
         \end{tikzpicture}
       \end{center}
       So the slope we see seek is
@@ -351,10 +354,27 @@ $s\le \l$.
     \item EXPLAIN using words, pictures, and so on, as needed/helpful,
       WHY computing the \textbf{slope of a hip} is the SAME as computing the
       \textbf{slope of a valley}.
-    \item If all the slopes of a roof are the same, there is an even
-      easier method of finding the area of the roof using
-      SCALING. Discover this method.
+    \item If all the slopes of a roof are the same say $s/12$, there
+      is an even easier method of finding the area of the roof using
+      SCALING. Discover this method, and demonstrate that it is
+      correct by using it to give a NEW SOLUTION to Problem $1$, part
+      $(b)$ above.
   \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+  \item A hip is just an ``upside-down'' valley, and the slopes are
+    the same.
+  \item If the slope is $\frac{s}{12}$, we multiply by
+    \[
+    \frac{\sqrt{s^2+12^2}}{12}.
+    \]
+    check it out:
+    \[
+    16\cdot 28 = 448,\qquad\text{and}\qquad  16\cdot 28 \frac{\sqrt{s^2+12^2}}{12} \approx 500.
+    \]
+    This is different from our previous answers due to rounding.
+    \end{enumerate}
+  \end{freeResponse}
 \end{question}
 
 \end{document}
