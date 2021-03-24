@@ -1,4 +1,4 @@
-\documentclass[handout,nooutcomes,noauthor]{ximera}
+\documentclass[hints,nooutcomes,noauthor]{ximera}
 
 \input{../preamble.tex}
 \title{Not so quick questions}
@@ -14,6 +14,8 @@
 
 
 \begin{listOutcomes}
+\item follow algoritm
+\item translate school math real world math
 \item 
 \end{listOutcomes}
 
@@ -32,19 +34,6 @@ There are two basic questions we'd like to answer about shapes like these:
 
 
 \mynewpage
-
-%% IDENTIFY OBIVIOUSLY CORRECT AND INCORRECT ANSWERS
-%% AGAIN WITH THE AREA/VOL
-%% solve a complex diagram
-%% Give several quick questions and ask how they were supposed to figure them out.
-
-
-%https://www2.strongtie.com/webapps/SlopeSkew/?source=app
-
-%% EASY COMBINED PITCH
-%% HARDER COMBINED PITCH
-%% computer combined pitch
-%% QUIZ: COULD IT JUST BE IS THIS A VALLEY OR A RIDGE?
 
 \begin{question}
 \begin{enumerate}
@@ -66,7 +55,7 @@ There are two basic questions we'd like to answer about shapes like these:
    the roof of the garage in square feet.
  \item Considering the $1$-car garage from the previous part, now
    suppose that the hip-end has a slope of $\frac{8}{12}$ with an
-   overhange of $3$ feet. Again find the AREA of the roof of the
+   overhang of $2$ feet. Again find the AREA of the roof of the
    garage in square feet.
 \end{enumerate}
 In ALL cases above, SHOW and EXPLAIN your work.
@@ -85,8 +74,55 @@ In ALL cases above, SHOW and EXPLAIN your work.
       \[
       \text{Area} = 4\cdot \frac{646\cdot 476}{2} = 614992~\text{square feet}.
       \]
-    \item Since there is an overhang of $2$ feet per side, 
-    
+    \item Since there is an overhang of $2$ feet per side, the
+      perimeter of the roof is a $16\times 28$ rectangle. If the main
+      roof has a slope of $\frac{6}{12}$, it raises by
+      \[
+      8'\cdot \frac{6}{12}  = 4'
+      \]
+      This means that the height of both the main roof is $9'$ as
+      measured along the roof. Moreover, we must move $8'$ in from the
+      hip-end to achieve this height. Hence the main ridge is
+      \[
+      28-8-8 = 12~\text{feet}.
+      \]
+      Thus the area of the roof is
+      \[
+      2\cdot \underbrace{\frac{16\cdot 9}{2}}_{\text{hip-end}} +
+      2\left(\underbrace{2\cdot \frac{8\cdot 9}{2} + 12\cdot
+        9}_{\text{main roof}}\right) = 504 \text{square feet}.
+      \]
+    \item Since there is an overhang of $2$ feet per side, the
+      perimeter of the roof is a $16\times 28$ rectangle. If the main
+      roof has a slope of $\frac{6}{12}$, it raises by
+      \[
+      8'\cdot \frac{6}{12}  = 4'
+      \]
+      Again, the height of the main roof is
+      \[
+      \sqrt{8^2+4^2} = \sqrt{80}\approx 9'.
+      \]
+      Since the slope of the hip-end is $\frac{8}{12}$, and
+      \begin{align*}
+        x\cdot \frac{8}{12} &= 4\\
+        x = \frac{12\cdot 4}{8}\\
+        x = 6,
+      \end{align*}
+      thus must move $6'$ in from the hip-end to achieve this height.
+      So the height of the hip-end (as measured along the roof) is
+      \[
+      \sqrt{6^2+4^2} = \sqrt{40} \approx 6.3'
+      \]
+      Finally, note that the length of the main ridge is
+      \[
+      28-6-6 = 16~\text{feet}.
+      \]
+      Thus the area of the roof is
+      \[
+      2\cdot \underbrace{\frac{16\cdot 6.3}{2}}_{\text{hip-end}} +
+      2\left(\underbrace{2\cdot \frac{6\cdot 9}{2} + 16\cdot
+        9}_{\text{main roof}}\right) = 496.8 \text{square feet}.
+      \]
   \end{enumerate}
 \end{freeResponse}
 
@@ -111,6 +147,7 @@ In ALL cases above, SHOW and EXPLAIN your work.
 \begin{question}
   Now let's think about the SLOPE of a hip or valley. Below we see a
   sneaky way to compute these numbers.
+  \begin{mdframed}[style=OutcomeStyle]
 \begin{quote}
   \textbf{Algorithm for computing the slope of a hip or valley:}
 
@@ -173,7 +210,7 @@ $s\le \l$.
     \]  
 \end{enumerate}
 \end{quote}
-
+  \end{mdframed}
   Let's see if we can USE the algorithm above.
   \begin{enumerate}
   \item Someone used this drawing to compute the slope of a hip.
@@ -221,16 +258,85 @@ $s\le \l$.
           \node[anchor=north east] at (-5,-6.5) {$15$};
         \end{tikzpicture}
     \end{center}
-    Find the slopes of the main-roof, the hip-end, and the hip. Show
-    all work and explain your reasoning.
+    Assuming that the slope of the main roof is LARGER than the slope
+    of the hip-end, FIND the slopes (as a fraction over $12$) of the main-roof, the hip-end, and
+    the hip. 
   \item Suppose you have a main-roof with a slope of $\frac{4}{12}$
-    and a hip-end with a slope of $\frac{7}{12}$. \textbf{Find the
-      slope of the hip.}  Show all work, explain your reasoning, and
-    check your work with an \link[online calculator]{https://www2.strongtie.com/webapps/SlopeSkew/?source=app}.
+    and a hip-end with a slope of $\frac{7}{12}$. Either draw a
+    careful picture OR use
+    \link[\textit{GeoGebra}]{https://www.geogebra.org/classic} to
+    \textbf{find the slope of the hip.}  Show all work, explain your
+    reasoning, and check your work with an \link[online
+      calculator]{https://www2.strongtie.com/webapps/SlopeSkew/?source=app}.
   \item If the slope of the main roof is the same as the slope of the
     hip-end, say they are both $\frac{s}{12}$, what is the slope of
     the hip? Show all work and explain your reasoning.
   \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item The slope of the main roof is $\frac{6}{12}$. The slope of
+      the hip-end is $\frac{8}{12}$. The slope of the hip is
+      \[
+      \frac{6}{15} \approx \frac{4.8}{12}.
+      \]
+    \item Using \textit{GeoGebra} we find:
+      \begin{center}
+        \includegraphics[width=.3\textwidth]{workUnEqSlope.png}
+      \end{center}
+      Hence the slope is
+      \[
+      \frac{4}{13.82} \approx \frac{3.5}{12}.
+      \]
+    \item If both slopes are the same, then our picture looks like
+      this:
+      \begin{center}
+        \begin{tikzpicture}[geometryDiagrams,scale=.2]
+          %% \filldraw[black] (1in,1in) circle (2pt) ;
+          %% \filldraw[black] (0in,0in) circle (2pt) ;
+          %% \filldraw[black] (0in,1in) circle (2pt) ;
+          %% \draw[<->,dashed] (1.5in,-.5in) -- (-.5in,1.5in);
+
+          \tkzDefPoint(0,0){O}
+          \tkzDefPoint(-13,0){I}
+          \tkzDefPoint(1,0){nI}
+          \tkzDefPoint(0,7){II}
+          \tkzDefPoint(0,-13){nII}
+          
+          \tkzDefPoint(0,6){S}
+          \tkzDefPoint(-12,0){X}
+          \tkzDefPoint(-12,0){BS}
+          \tkzDefPoint(0,-12){B}
+
+          \tkzDrawPoint[](O)
+          \tkzDrawPoint[](S)
+          \tkzDrawPoint[](X)
+          \tkzDrawPoint[](B)
+          \tkzDrawLine[ultra thin](II,nII)
+          \tkzDrawLine[ultra thin](I,nI)
+          \tkzDrawLine(S,BS)
+          \tkzDrawSegment(O,B)
+          \tkzDrawSegment[ultra thick](B,X)
+          \tkzDrawSegment(O,S)
+
+          \tkzLabelPoint(O){$O$}
+          \tkzLabelPoint[](S){$S$}
+          \tkzLabelPoint[above left](X){$X$}
+          \tkzLabelPoint(B){$B$}
+
+          \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (S)--(X);
+          
+          \node[anchor=south east] at (-5,4) {slope of $\frac{s}{12}$};
+
+          \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (X)--(B);
+          \node[anchor=north east] at (-5,-6.5) {$\sqrt{12^2+12^2}$};
+        \end{tikzpicture}
+      \end{center}
+      So the slope we see seek is
+      \[
+      \frac{s}{\sqrt{12^2+12^2}} =  \frac{s}{12\sqrt{2}} = \frac{s/\sqrt{2}}{12}.
+      \]
+    \end{enumerate}
+  \end{freeResponse}
 \end{question}
 
 
@@ -240,8 +346,15 @@ $s\le \l$.
 
 
 \begin{question}
-  Now you should EXPLAIN why the method given above works to find the
-  slope of a hip or a valley. 
+  Now let's reflect on the content above a bit.
+  \begin{enumerate}
+    \item EXPLAIN using words, pictures, and so on, as needed/helpful,
+      WHY computing the \textbf{slope of a hip} is the SAME as computing the
+      \textbf{slope of a valley}.
+    \item If all the slopes of a roof are the same, there is an even
+      easier method of finding the area of the roof using
+      SCALING. Discover this method.
+  \end{enumerate}
 \end{question}
 
 \end{document}
