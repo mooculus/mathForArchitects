@@ -130,8 +130,8 @@ control points and node to get a plethora of interesting curves.
 
 
 \begin{question}
-  CAREFULLY draw a $15$-line envelope of tangents BY HAND. Make it
-  BIG, take up the whole page!
+  CAREFULLY draw a $15$-line envelope of tangents BY HAND. Use a
+  RULER. Make it BIG, take up the whole page!
   \begin{freeResponse}
     NOT DONE
   \end{freeResponse}
@@ -143,40 +143,81 @@ control points and node to get a plethora of interesting curves.
 
 
 \begin{question}
-  Suppose you are helping someone build an archway for their home.
-
+  Suppose you are helping someone build an archway for their home from
+  a board that is $12''\times 42''$:
   \begin{center}
-    PICTURE
-  \end{center}
+    \begin{tikzpicture}[geometryDiagrams,scale=.8]
+      \begin{scope}
+        \clip(-2.2in,0) rectangle (2.2in,1.3in);
+        \draw[dashed,thin] (0,0) ellipse (1.9in and 1in);
+      \end{scope}
+      \draw (-1.9in,0in) -- (-2.1in,0in) -- (-2.1in,1.2in) -- (2.1in,1.2in) -- (2.1in,0in) -- (1.9in,0in);
+      \draw[dashed, thin] (-1.9in,0in) -- (1.9in,0in);
+      \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (2.1in,0in)--(2.1in,1.2in);
+      \draw[decoration={brace,raise=.2cm},decorate,thin] (-2.1in,1.2in)--(2.1in,1.2in);
+      \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (-1.9in,0in)--(1.9in,0in);
+      \draw[|-|,thin] (0in,.05in)--(0in,.95in);
+      \node[below] at (0,-.1in) {$38''$};
+      \node[above] at (0,1.3in) {$42''$};
+      \node[right] at (2.2in,.6in) {$12''$};
+      \node[right] at (0in,.5in) {$10''$};
+        \end{tikzpicture}
+    \end{center}
   \begin{enumerate}
   \item STRING:
     Use the fact that 
     \[
-    \mathrm{distance}(f_1,m) + mathrm{distance}(f_2,m) =
-    \mathrm{distance}(f_1,M) + mathrm{distance}(f_2,M)
+    \mathrm{distance}(f_1,m) + \mathrm{distance}(f_2,m) =
+    \mathrm{distance}(f_1,M) + \mathrm{distance}(f_2,M)
     \]
     to deduce \textbf{one} of the following:
     \[
-    a^2 = b^2 + c^2 \qquad b^2 = a^2+c^2 \qquad c^2 = a^2 + b^2
+    a^2 = b^2 + c^2 \qquad\text{or}\qquad
+    b^2 = a^2+c^2 \qquad\text{or}\qquad c^2 = a^2 + b^2
     \]
-    Reproduce the drawing above including the corroce measurements for $c$.
+    REPRODUCE the drawing above including the CORRECT MEASUREMENTS for
+    $c$. Show all work and explain your reasoning.
 
 
-  \item Laser cutter with \snap!
+  \item It turns out that your friend has Laser cutter that can be
+    controlled by \snap\ blocks. To draw an ellipse in \snap\ like
+    this one:
+    \begin{center}
+        \begin{tikzpicture}[geometryDiagrams,scale=.8]
+          \draw (0,0) ellipse (2in and 1in);
+          \draw[->,thin] (0in,-1.5in) -- (0in,1.5in);
+          \draw[->,thin] (-2.5in,0in) -- (2.5in,0in);
+          \filldraw[black] (2in,0) circle (2pt) node[above right] {(a,0)};
+          \filldraw[black] (0,1in) circle (2pt) node[above right] {(0,b)};
+
+          \filldraw[black] (1.73in,0in) circle (2pt) node[below left] {(c,0)};
+          \filldraw[black] (-1.73in,0in) circle (2pt) node[below right] {(-c,0)};
+
+          \draw[dashed,thin] (-1.73in,0in) -- (.9in,.89in);
+          \draw[dashed,thin] (1.73in,0in) -- (.9in,.89in);
+
+          \node at (-.75in,.5in) {$X$};
+          \node at (1.2in,.35in) {$Y$};
+          
+          \filldraw[black] (.9in,.89in) circle (2pt);
+        \end{tikzpicture}
+      \end{center}
+    use
     \[
     x = a\sin(\theta) \qquad\text{and} \qquad y= b\cos(\theta)
     \]
-
+    Using the DEFINITION of an ellipse, explain WHY the equations
+    above DRAW an ellipse and not some other oval.
     \begin{hint}
       This will help you on the way.
       \begin{itemize}
-      \item Write the sum of distances between the foci and $(x,y)$.
+      \item Write the sum of distances between the foci and $(x,y)= (a\sin(\theta),b\cos(\theta))$.
       \item Recall that $\cos^2(\theta) = 1-\sin^2(\theta)$.
       \item Use the fact from the previous part.
       \end{itemize}
-
+    \end{hint}  
     \item Use an envelope of tangents to draw this arch.
-    \end{hint}
+    
   \end{enumerate}
 
 \end{question}
