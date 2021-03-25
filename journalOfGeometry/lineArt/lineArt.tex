@@ -1,4 +1,4 @@
-\documentclass[noauthor,nooutcomes,hints,handout]{ximera}
+\documentclass[noauthor,nooutcomes,hints]{ximera}
 
 \input{../preamble.tex}
 
@@ -162,24 +162,58 @@ control points and node to get a plethora of interesting curves.
       \node[right] at (2.2in,.6in) {$12''$};
       \node[right] at (0in,.5in) {$10''$};
         \end{tikzpicture}
-    \end{center}
+  \end{center}
+  You want to cut out some ``oval'' for the arch with the basic
+  dimensions above. Let's think about different ways to do this.
   \begin{enumerate}
-  \item STRING:
-    Use the fact that 
+  \item One way is to think of the curve above as being an
+    \textbf{ellipse}. This means it would have two foci
     \[
-    \mathrm{distance}(f_1,m) + \mathrm{distance}(f_2,m) =
-    \mathrm{distance}(f_1,M) + \mathrm{distance}(f_2,M)
+    f_1 = (-c,0) \qquad \text{and} \qquad f_2 = (c,0)
     \]
-    to deduce \textbf{one} of the following:
+    Find where $f_1$ and $f_2$  be to the foci of an ellipse
+    that would satisfy the measurements above.
+
+    REPRODUCE the drawing above for the archway including the CORRECT
+    MEASUREMENTS for $c$, assuming that $f_1$ and $f_2$ are the foci
+    of an ellipse that draws the desired curve. Show all work and
+    explain your reasoning AND EXPLAIN how someone could PHYSICALLY
+    DRAW the required ellipse using a \textbf{pencil}, \textbf{two nails},
+    and a \textbf{string}.
+    \begin{hint}
+      Consider a generic ellipse
+      \begin{center}
+        \begin{tikzpicture}[geometryDiagrams,scale=.8]
+          \draw (0,0) ellipse (2in and 1in);
+          \draw[->,thin] (0in,-1.5in) -- (0in,1.5in);
+          \draw[->,thin] (-2.5in,0in) -- (2.5in,0in);
+          \filldraw[black] (2in,0) circle (2pt) node[above right] {(a,0)};
+          \filldraw[black] (0,1in) circle (2pt) node[above right] {(0,b)};
+
+          \filldraw[black] (1.73in,0in) circle (2pt) node[below left] {(c,0)};
+          \filldraw[black] (-1.73in,0in) circle (2pt) node[below right] {(-c,0)};
+
+          \draw[dashed,thin] (-1.73in,0in) -- (.9in,.89in);
+          \draw[dashed,thin] (1.73in,0in) -- (.9in,.89in);
+
+          \node at (-.75in,.5in) {$X$};
+          \node at (1.2in,.35in) {$Y$};
+          
+          \filldraw[black] (.9in,.89in) circle (2pt);
+        \end{tikzpicture}
+      \end{center}
+    and use the fact that $X+Y$ is constant (no matter which point you
+    measure to on the ellipse) to deduce \textbf{one} of the
+    following:
     \[
     a^2 = b^2 + c^2 \qquad\text{or}\qquad
     b^2 = a^2+c^2 \qquad\text{or}\qquad c^2 = a^2 + b^2
     \]
-    REPRODUCE the drawing above including the CORRECT MEASUREMENTS for
-    $c$. Show all work and explain your reasoning.
+    Then you will be able to find $c$.
+    \end{hint}
 
 
-  \item It turns out that your friend has Laser cutter that can be
+  \item It turns out that your friend has a LASER cutter that can be
     controlled by \snap\ blocks. To draw an ellipse in \snap\ like
     this one:
     \begin{center}
@@ -206,20 +240,57 @@ control points and node to get a plethora of interesting curves.
     \[
     x = a\sin(\theta) \qquad\text{and} \qquad y= b\cos(\theta)
     \]
-    Using the DEFINITION of an ellipse, explain WHY the equations
-    above DRAW an ellipse and not some other oval.
-    \begin{hint}
-      This will help you on the way.
-      \begin{itemize}
-      \item Write the sum of distances between the foci and $(x,y)= (a\sin(\theta),b\cos(\theta))$.
-      \item Recall that $\cos^2(\theta) = 1-\sin^2(\theta)$.
-      \item Use the fact from the previous part.
-      \end{itemize}
-    \end{hint}  
-    \item Use an envelope of tangents to draw this arch.
-    
+    REPRODUCE the drawing above for the archway above in \snap\ using
+    the scale of $5~\text{steps} = 1~\text{inch}$. show off your
+    work by giving screenshots of your SCRIPTS and your STAGE.
+  \item Use an envelope of tangents to draw this archway.
   \end{enumerate}
-
+  \begin{freeResponse}
+    \begin{enumerate}
+  \item Considering the generic ellipse above, we see that the
+    sum of the distance from the foci to $(a,0)$ is $2a$ and the sum of the distance from
+    the foci to $(0,b)$ is $2\sqrt{b^2+c^2}$.
+    Hence
+    \begin{align*}
+      2a &= 2\sqrt{b^2+c^2}\\
+      a^2 &= b^2 + c^2.
+    \end{align*}
+    For our archway, $a= 19$ and $b = 10$, so then
+    \[
+    c \approx 16~\text{inches.}
+    \]
+    \begin{center}
+    \begin{tikzpicture}[geometryDiagrams,scale=.8]
+      \begin{scope}
+        \clip(-2.2in,0) rectangle (2.2in,1.3in);
+        \draw[dashed,thin] (0,0) ellipse (1.9in and 1in);
+      \end{scope}
+      \draw (-1.9in,0in) -- (-2.1in,0in) -- (-2.1in,1.2in) -- (2.1in,1.2in) -- (2.1in,0in) -- (1.9in,0in);
+      \draw[dashed, thin] (-1.9in,0in) -- (1.9in,0in);
+      \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (2.1in,0in)--(2.1in,1.2in);
+      \draw[decoration={brace,raise=.2cm},decorate,thin] (-2.1in,1.2in)--(2.1in,1.2in);
+      \draw[decoration={brace,raise=.8cm,mirror},decorate,thin] (-1.9in,0in)--(1.9in,0in);
+      \draw[|-|,thin] (0in,.05in)--(0in,.95in);
+      \node[below] at (0,-.4in) {$38''$};
+      \node[above] at (0,1.3in) {$42''$};
+      \node[right] at (2.2in,.6in) {$12''$};
+      \node[right] at (0in,.5in) {$10''$};
+      \filldraw[black] (1.6in,0in) circle (2pt);
+      \filldraw[black] (-1.6in,0in) circle (2pt);
+      \draw[decoration={brace,raise=.2cm},decorate,thin] (-1.6in,0in)--(0in,0in);
+      \draw[decoration={brace,raise=.2cm},decorate,thin] (0in,0in)--(1.6in,0in);
+      \node[above] at (.8in,.1in) {$16''$};
+      \node[above] at (-.8in,.1in) {$16''$};
+      \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (-2.1in,0)--(-1.6in,0in);
+      \node[below] at (-1.85in,-.1in) {$5''$};
+      \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (1.6in,0)--(2.1in,0in);
+      \node[below] at (1.85in,-.1in) {$5''$};
+      
+        \end{tikzpicture}
+    \end{center}
+  \item
+    \end{enumerate}
+  \end{freeResponse}
 \end{question}
 \mynewpage
 
