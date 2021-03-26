@@ -14,9 +14,11 @@
 
 \begin{listOutcomes}
 \item Understand how to draw an envelope of tangents by hand.
+\item Translate classroom mathematics into real world mathematics.
+\item Compare/contrast various solutions to a given real world
+  problem.
 \item Understand how to draw a sequence of envelopes of tangents with
   increasing precision.
-\item Find and prove a rule.
 \end{listOutcomes}
 
 
@@ -164,23 +166,21 @@ control points and node to get a plethora of interesting curves.
         \end{tikzpicture}
   \end{center}
   You want to cut out some ``oval'' for the arch with the basic
-  dimensions above. Let's think about different ways to do this.
+  dimensions above. Let's think about \textbf{different ways} to do
+  this.
   \begin{enumerate}
-  \item One way is to think of the curve above as being an
-    \textbf{ellipse}. This means it would have two foci
+  \item One way to solve this problem is to think of the curve above
+    as being an \textbf{ellipse}. To draw an ellipse (by hand) we must
+    find the foci:
     \[
     f_1 = (-c,0) \qquad \text{and} \qquad f_2 = (c,0)
     \]
-    Find where $f_1$ and $f_2$  be to the foci of an ellipse
-    that would satisfy the measurements above.
-
-    REPRODUCE the drawing above for the archway including the CORRECT
-    MEASUREMENTS for $c$, assuming that $f_1$ and $f_2$ are the foci
-    of an ellipse that draws the desired curve. Show all work and
-    explain your reasoning AND EXPLAIN how someone could PHYSICALLY
-    DRAW the required ellipse using a \textbf{pencil}, \textbf{two nails},
-    and a \textbf{string}.
-    \begin{hint}
+    \begin{itemize}
+    \item REPRODUCE the drawing above for the archway including the
+      CORRECT MEASUREMENTS for $c$, assuming that $f_1$ and $f_2$ are
+      the foci of an ellipse that draws the desired curve. Show all
+      work and explain your reasoning.
+      \begin{hint}
       Consider a generic ellipse
       \begin{center}
         \begin{tikzpicture}[geometryDiagrams,scale=.8]
@@ -211,8 +211,11 @@ control points and node to get a plethora of interesting curves.
     \]
     Then you will be able to find $c$.
     \end{hint}
-
-
+    \item EXPLAIN how someone could PHYSICALLY DRAW the required
+      ellipse using a \textbf{pencil}, \textbf{two nails}, and a
+      \textbf{string}.
+    \end{itemize}
+    
   \item It turns out that your friend has a LASER cutter that can be
     controlled by \snap\ blocks. To draw an ellipse in \snap\ like
     this one:
@@ -240,10 +243,21 @@ control points and node to get a plethora of interesting curves.
     \[
     x = a\sin(\theta) \qquad\text{and} \qquad y= b\cos(\theta)
     \]
-    REPRODUCE the drawing above for the archway above in \snap\ using
-    the scale of $5~\text{steps} = 1~\text{inch}$. show off your
-    work by giving screenshots of your SCRIPTS and your STAGE.
-  \item Use an envelope of tangents to draw this archway.
+    REPRODUCE the drawing above for the archway above in \snap\ by
+    modifying the block
+    \raisebox{-.4\height}{\includegraphics{circleBlank.png}} and using
+    the scale of $5~\text{steps} = 1~\text{inch}$.  Show off your work
+    by giving screenshots of your SCRIPTS and your STAGE.  As a
+    gesture of friendship, I provide the block
+    \raisebox{-.4\height}{\includegraphics{board.png}} to draw a scale copy of the board for
+    you.
+ 
+  \item Use an envelope of tangents to draw this archway. You may do
+    this either by hand or in \snap.  As a gesture of friendship, I provide:
+    \begin{center}
+    \includegraphics{envelopeOfTangentsBlank.png} 
+    \end{center}
+    Show off your work with a CAREFULLY DRAWN picture OR a \snap\ STAGE.
   \end{enumerate}
   \begin{freeResponse}
     \begin{enumerate}
@@ -288,7 +302,18 @@ control points and node to get a plethora of interesting curves.
       
         \end{tikzpicture}
     \end{center}
-  \item
+  \item From our work above, we know that $a=19$ and $b=10$. So we can make an ellipse script:
+    \begin{center}
+      \includegraphics{ellipseSCRIPT.png}
+    \end{center}
+    Putting this together with the  \raisebox{-.4\height}{\includegraphics{board.png}} block, we have
+    \begin{center}
+      \includegraphics[width=.3\textwidth]{laserSCRIPT.png}   \qquad \fbox{\includegraphics[width=.5\textwidth]{laserSTAGE.png}}
+    \end{center}
+  \item Finally, here is my picture:
+    \begin{center}
+      \includegraphics{envARCHWAY.png}
+    \end{center}
     \end{enumerate}
   \end{freeResponse}
 \end{question}
