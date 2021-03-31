@@ -1,4 +1,4 @@
-\documentclass[noauthor,nooutcomes,hints,handout]{ximera}
+\documentclass[noauthor,nooutcomes,hints]{ximera}
 
 \input{../preamble.tex}
 
@@ -20,23 +20,53 @@
 \item Use the algebra of symmetries to understand a composition of
   symmetries.
 \end{listOutcomes}
+
+
+A \textbf{regular} $n$-gon is a $n$-sided shape where all the side
+lengths are the same and all the angles are the same. As a gesture of
+friendship, I present you with the \snap\ block
+\raisebox{-.4\height}{\includegraphics{regularNGonBlockBLANK.png}}. To
+use this block, input a number of sides, $n$, for the first blank and
+an angle $r$ for the second. When you do this,
+\raisebox{-.4\height}{\includegraphics{regularNGonBlockBLANK.png}}
+draws a regular $n$-gon where pressing:
+\begin{itemize}
+\item \textbf{SPACE-BAR} toggles the colors of the $n$-gon.
+\item \textbf{R} rotates the $n$-gon $r$ degrees.
+\item \textbf{F} flips the $n$-gon across a central vertical line.
+\end{itemize}
+
+
+
 \mynewpage
 
 
 \begin{question}
-  The symmetries of the regular triangle are those that leave it
-  unchanged. To see these symmetries, it is helpful to color-in the
-  sides of the triangle. For example, here is a symmetry of the
-  regular triangle:
+  The \textbf{symmetries} of the regular triangle are those that
+  \textbf{leave it unchanged}. So for example, here is a symmetry of
+  the regular triangle:
+  \[
+  \raisebox{-.4\height}{\includegraphics[width=2.5in]{blackSymTri.png}}\resizebox{.7in}{!}{$\mapsto$} \raisebox{-.4\height}{\includegraphics[width=2.5in]{blackSymTri.png}}
+  \]
+  You may think nothing happened above, because the triangle is
+  unchanged, but you would be wrong.  To WITNESS symmetries, we must
+  color-in the sides of the triangle. For example once I color in the
+  sides, we see that the symmetry above is acutally:
   \[
   \raisebox{-.4\height}{\includegraphics[width=2.5in]{eTri.png}}\resizebox{.7in}{!}{$\mapsto$} \raisebox{-.4\height}{\includegraphics[width=2.5in]{rfTri.png}}
   \]
-  While the colors change, the ACTUAL TRIANGLE is \textbf{unchanged}.  Use
-  \raisebox{-.4\height}{\includegraphics{regularNGonBlockBLANK.png}}
-  to make STAGES for each symmetry of the regular triangle, and
-  display them as a function as I did above.
+  While the colors change, the ACTUAL TRIANGLE is \textbf{unchanged}.
+  \begin{enumerate}
+  \item How MANY symmetries does the equilateral triangle have?
+  \item Use
+    \raisebox{-.4\height}{\includegraphics{regularNGonBlockBLANK.png}}
+    to make STAGES for (the output of) each symmetry of the regular
+    triangle.
+  \end{enumerate}
   \begin{freeResponse}
-    There are SIX symmetries of the regular triangle.
+    \begin{enumerate}
+    \item There are SIX symmetries of the regular triangle.
+    \item Here they are:
     \begin{enumerate}
     \item $\raisebox{-.4\height}{\includegraphics[width=2in]{eTri.png}}\resizebox{.5in}{!}{$\mapsto$} \raisebox{-.4\height}{\includegraphics[width=2in]{eTri.png}}$
     \item $\raisebox{-.4\height}{\includegraphics[width=2in]{eTri.png}}\resizebox{.5in}{!}{$\mapsto$} \raisebox{-.4\height}{\includegraphics[width=2in]{rTri.png}}$
@@ -45,6 +75,7 @@
     \item $\raisebox{-.4\height}{\includegraphics[width=2in]{eTri.png}}\resizebox{.5in}{!}{$\mapsto$} \raisebox{-.4\height}{\includegraphics[width=2in]{rfTri.png}}$
     \item $\raisebox{-.4\height}{\includegraphics[width=2in]{eTri.png}}\resizebox{.5in}{!}{$\mapsto$} \raisebox{-.4\height}{\includegraphics[width=2in]{r2fTri.png}}$
     \end{enumerate}
+    \end{enumerate}
   \end{freeResponse}
 \end{question}
 \mynewpage
@@ -52,17 +83,20 @@
 \begin{question}
   Let $e$ be the do-nothing symmetry, $r$ be a clockwise $120^\circ$
   rotation about the center of the triangle, and $f$ be a flip across
-  a vertical line down the middle of the triangle. Display the result
-  of applying the following functions (actions/transformations) to
-  your triangle:
+  a vertical line down the middle of the triangle. When $e$ is
+  applied, the triangle looks like this:
+  \[
+  \raisebox{-.4\height}{\includegraphics[width=2.5in]{eTri.png}}\resizebox{.7in}{!}{$\overset{\scriptscriptstyle e}{\mapsto}$} \raisebox{-.4\height}{\includegraphics[width=2.5in]{eTri.png}}
+  \]
+  Display the result of applying the following functions
+  (actions/transformations) to your triangle:
   \begin{enumerate}
   \item $rf$
   \item $fr$
   \item $r^2 f$
   \item $f r^2$
   \end{enumerate}
-  In each case, show off your work by displaying your SCRIPT and
-  STAGE.
+  In each case, show off your work by displaying your STAGE.
   \begin{hint}
     Note, when looking at something like $rf$, first we flip the
     triangle, then we rotate it. Just like if $f(x) = x^2$ and $g(x) =
@@ -71,30 +105,22 @@
   \end{hint}
   \begin{freeResponse}
     \begin{enumerate}
-    \item For $e$ we have:
-      \begin{center}
-        \includegraphics[width=.3\textwidth]{eTriSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{eTri.png}}
-      \end{center}
-    \item For $r$ we have:
-      \begin{center}
-        \includegraphics[width=.3\textwidth]{rTriSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{rTri.png}}
-      \end{center}
-    \item For $r^2$ we have:
-      \begin{center}
-        \includegraphics[width=.3\textwidth]{r2TriSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{r2Tri.png}}
-      \end{center}
-    \item For $f$ we have:
-      \begin{center}
-        \includegraphics[width=.3\textwidth]{fTriSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{fTri.png}}
-      \end{center}
-    \item For $rf$ we have:
-      \begin{center}
-        \includegraphics[width=.3\textwidth]{rfTriSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{rfTri.png}}
-      \end{center}
-    \item For $r^2f$ we have:
-      \begin{center}
-        \includegraphics[width=.3\textwidth]{r2fTriSCRIPT.png}   \qquad \fbox{\includegraphics[width=.3\textwidth]{r2fTri.png}}
-      \end{center}
+    \item For $rf$ I have
+      \[
+      \raisebox{-.4\height}{\includegraphics[width=2.5in]{eTri.png}}\resizebox{.7in}{!}{$\overset{\scriptscriptstyle rf}{\mapsto}$} \raisebox{-.4\height}{\includegraphics[width=2.5in]{rfTri.png}}
+      \]
+    \item For $fr$ I have
+      \[
+      \raisebox{-.4\height}{\includegraphics[width=2.5in]{eTri.png}}\resizebox{.7in}{!}{$\overset{\scriptscriptstyle fr}{\mapsto}$} \raisebox{-.4\height}{\includegraphics[width=2.5in]{r2fTri.png}}
+      \]
+    \item For $r^2f$ I have
+      \[
+      \raisebox{-.4\height}{\includegraphics[width=2.5in]{eTri.png}}\resizebox{.7in}{!}{$\overset{\scriptscriptstyle r^2f}{\mapsto}$} \raisebox{-.4\height}{\includegraphics[width=2.5in]{r2fTri.png}}
+      \]
+    \item For $fr^2$ I have
+      \[
+      \raisebox{-.4\height}{\includegraphics[width=2.5in]{eTri.png}}\resizebox{.7in}{!}{$\overset{\scriptscriptstyle  fr^2}{\mapsto}$} \raisebox{-.4\height}{\includegraphics[width=2.5in]{rfTri.png}}
+      \]
     \end{enumerate}
     \end{freeResponse}
 \end{question}
