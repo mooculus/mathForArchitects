@@ -192,6 +192,93 @@ Seven types of frieze
 
 
 
+\begin{tikzpicture}
+\tikzset{% This is the style settings for nodes
+    dep/.style={circle,minimum size=1cm,fill=orange!20,draw=orange,
+                general shadow={fill=gray!60,shadow xshift=1pt,shadow yshift=-1pt}},
+    cli/.style={circle,minimum size=1cm,fill=white,draw,
+                general shadow={fill=gray!60,shadow xshift=1pt,shadow yshift=-1pt}},
+    spl/.style={cli,append after command={
+                  node[circle,draw,dotted,
+                       minimum size=1.5cm] at (\tikzlastnode.center) {}}},
+    c1/.style={-stealth,very thick,red!80!black},
+    v2/.style={-stealth,very thick,yellow!65!black},
+    v4/.style={-stealth,very thick,purple!70!black}}
+\node[dep] (0) at (0,0) {0};
+\node[cli] (7) at (-1,-2) {7};
+\node[spl] (8) at (2,-2) {8};
+\draw[c1] (0) to[bend right] (7);
+\draw[v2] (7) -- (8);
+\draw[v4] (8) -- (2,-1) -- (0);
+\end{tikzpicture}
+
+
+
+WE COULD HAVE A STYLE FOR ESSENTIAL ACTIVITIES, and  A COLOR FOR REAL WORLD EG
+
+NODES IN A SEQUENCE SHOULD BE DIRECTLY ABOVE EACH OTHER.
+
+
+2,3,4,5 deal with understanding formulas for area and volume, with an
+emphasis on estimation, and the relationships between perimeter/area
+and surface-area/volume.
+
+
+6 we use formulas and or pictures to solve a real world problem, and
+start to understand scaling
+
+7-8 we give model for scaling through rep-tiles. 
+
+
+
+\begin{tikzpicture}[x=1cm,y=2cm]
+  \tikzset{% This is the style settings for nodes
+    every node/.style={font=\bfseries},
+    every path/.style={-stealth,very thick},
+    %essential/.style={circle,minimum size=.5cm,fill=orange!20,draw=orange,
+         %       general shadow={fill=gray!60,shadow xshift=1pt,shadow yshift=-1pt}},
+    essential/.style={circle,minimum size=.5cm,fill=white,draw,
+      general shadow={fill=gray!60,shadow xshift=1pt,shadow yshift=-1pt}},
+    enrich/.style={circle,minimum size=.5cm,fill=white,draw,dashed,
+      general shadow={fill=gray!60,shadow xshift=1pt,shadow yshift=-1pt}},
+    goal/.style={essential,append after command={
+                  node[circle,draw,
+                       minimum size=1cm] at (\tikzlastnode.center) {}}},
+    c1/.style={-stealth,very thick,red!80!black},
+    v2/.style={-stealth,very thick,yellow!65!black},
+    v4/.style={-stealth,very thick,purple!70!black}}
+\node[essential] (0) at (0,0) {0};
+\node[essential] (1) at (1,0) {1};
+\node[essential] (2) at (2,1) {2};
+\node[enrich] (3) at (1,1.5) {3};
+\node[essential] (4) at (2,2) {4};
+\node[essential] (5) at (3,3) {5};
+\node[goal] (6) at (3,4) {6};
+\node[essential] (7) at (4,3) {7};
+\node[essential] (8) at (4,4) {8};
+\node[essential] (9) at (5,5) {9};
+\node[goal] (10) at (5,6) {10};
+\node[enrich] (11) at (6,6) {11};
+\node[enrich] (12) at (7,6) {12};
+
+\draw (1) -- (2);
+\draw (2) -- (4);
+\draw (4) -- (5);
+\draw (5) -- (6);
+\draw (6) -- (7);
+\draw (7) -- (8);
+\draw (8) -- (9);
+\draw (9) -- (10);
+
+
+\node[essential] (13) at (5,0) {13};
+\node[enrich] (14) at (5,.5) {14};
+\node[essential] (15) at (6,1) {15};
+\node[essential] (16) at (6,2) {16};
+\node[essential] (17) at (6,3) {17};
+
+
+\end{tikzpicture}
 
 This ``geometry journal'' was created by Dr.\ Jenny Sheldon and
 Dr.\ Bart Snapp at The Ohio State University. Additional content was
