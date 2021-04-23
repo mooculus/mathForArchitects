@@ -18,6 +18,75 @@
   translations, rotations, and vertical-reflections.
 \item Display a frieze pattern with maximal symmetry.
 \end{listOutcomes}
+
+
+With the symmetries of any regular $n$-gon, say a SQUARE, we have two TYPES of symmetries:
+\[
+\underbrace{e,r,r^2,r^3}_{\text{rotations}} \qquad\text{and}\qquad \underbrace{f, rf,r^2f,r^3f}_{\text{flips}}
+\]
+Let $R$ be some rotation and $F$ be some reflection. What happens when
+we COMBINE these TYPES? Note,
+\begin{itemize}
+\item A rotation combined with a rotation is always a rotation, so we'll write $R \circ R = R$.
+\item A flip combined with a rotation is always a flip, so we'll write
+  $R\circ F = F \circ R = F$.
+\item A flip combined with a flip is always a rotation, so we'll
+  write $F\circ F = R$.
+\end{itemize}
+With this information, we can forget the symmetries themselves, and
+just think about the TYPES. In particular, we can make this rather
+simple TYPE-multiplication table for ANY regular $n$-gon:
+\[
+\begin{array}{|c||c|c|}
+    \hline
+       & R    & F    \\ \hline\hline
+    R  & R    & F    \\ \hline
+    F  & F    & R    \\ \hline
+\end{array}
+\]
+With frieze patterns we have different TYPES of symmetries. So far we
+know frieze patterns can have symmetry through:
+\begin{itemize}
+\item Translations; let's call a generic translation (perhaps by $0$ units of distance) $T$.
+\item Glide-reflection; let's call a generic glide-reflection (perhaps by $0$ units of distance) $G$.
+\item Vertical-reflections; let's call a generic vertical-reflection $F_v$.
+\item $180^\circ$ rotations; let's call a generic $180^\circ$
+  rotation $R$.
+\end{itemize}
+
+Immediately we see:
+\begin{itemize}
+\item A translation combined with a translation is always a
+  translation, so we'll write $T\circ T = T$.
+\item A translation combined with a glide-reflection is always a
+  glide-reflection, so we'll write $T\circ G = G \circ T = T$.
+\item A glide-reflection combined with a glide-reflection is always a
+  translation, so we'll write $G\circ G = T$.
+\item A translation combined with a vertical-reflection is always a
+  glide-reflection, so we'll write $T\circ F_v = F_v \circ T = G$.
+\item A $180^\circ$ rotation combined with a $180^\circ$ rotation is a
+  translation, so we'll write $R\circ R = T$.
+\item A vertical-reflection combined with a vertical-reflection
+  rotation is a translation (by $0$ units of distance), so we'll write
+  $F_v\circ F_v = T$.
+\end{itemize}
+
+Now we are left with several questions:
+
+\begin{itemize}
+  \item What is a vertical-reflection combined with a $180^\circ$
+    rotation?
+  \item What is a glide-reflection combined with a $180^\circ$
+    rotation?
+  \item 
+\end{itemize}
+
+In the questions below, we begin to explore answers to some of these
+questions.
+
+
+
+
 \mynewpage
 
 \begin{question}
@@ -51,8 +120,7 @@
 
 
 \begin{question}
-  Let's see what happens when we combine horizontal-reflections with
-  other symmetries.
+  Sometimes, frieze patterns with horizontal-reflections are unavoidable.
   \begin{enumerate}
   \item Can you find a frieze pattern that has symmetry through
     glide-reflections and $180^\circ$ rotations but not through
@@ -97,9 +165,10 @@
 \mynewpage
 
 
-
+%% BAD BAD THIS IS THE SUMMARY QUESTION... JUST CONNECT TO BEGINNING
 \begin{question}
-  DISPLAY a SINGLE frieze pattern that has symmetry through
+  DISPLAY a SINGLE frieze pattern that has simultaneously has symmetry
+  through 
   \begin{itemize}
   \item translations,
   \item glide-reflections,
