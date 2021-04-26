@@ -1,4 +1,4 @@
-\documentclass[noauthor,nooutcomes,hints,handout]{ximera}
+\documentclass[noauthor,nooutcomes,hints        ]{ximera}
 
 \input{../preamble.tex}
 
@@ -63,10 +63,10 @@ Immediately we see:
   translation, so we'll write $T\circ T = T$.
 \item A translation combined with a glide-reflection is always a
   glide-reflection, so we'll write $T\circ G = G \circ T = T$.
-\item A glide-reflection combined with a glide-reflection is always a
-  translation, so we'll write $G\circ G = T$.
 \item A translation combined with a vertical-reflection is always a
   glide-reflection, so we'll write $T\circ F_v = F_v \circ T = G$.
+\item A glide-reflection combined with a glide-reflection is always a
+  translation, so we'll write $G\circ G = T$.
 \item A $180^\circ$ rotation combined with a $180^\circ$ rotation is a
   translation, so we'll write $R\circ R = T$.
 \item A vertical-reflection combined with a vertical-reflection
@@ -74,18 +74,27 @@ Immediately we see:
   $F_v\circ F_v = T$.
 \end{itemize}
 
-Now we are left with several questions:
 
-\begin{itemize}
-  \item What is a vertical-reflection combined with a $180^\circ$
-    rotation?
-  \item What is a glide-reflection combined with a $180^\circ$
-    rotation?
-  \item 
-\end{itemize}
+We will further explore combinations (compositions!) of these symmetries below.
 
-In the questions below, we begin to explore answers to some of these
-questions.
+
+
+
+
+
+
+%% Now we are left with several questions:
+
+%% \begin{itemize}
+%% \item What is a $180^\circ$ rotation combined with a
+%%   vertical-reflection?
+%% \item What is a $180^\circ$ rotation combined with a glide-reflection?
+%% \item What is a glide-reflection combined with a $180^\circ$ rotation?
+%% \item What is a translation combined with a $180^\circ$ rotation?
+%% \end{itemize}
+
+%% In the questions below, we begin to explore answers to some of these
+%% questions.
 
 
 
@@ -104,6 +113,15 @@ questions.
     FRIEZE-EXPLORER-BLOCK?
   \item DISPLAY a frieze pattern with symmetry through translations
     and horizontal-reflections but no others.
+  \item   From your work above, FILL-IN the blanks below:
+  \begin{itemize}
+  \item A $180^\circ$ rotation combined with a vertical-reflection
+    is a always a \fbox{\phantom{horizontal-reflection}}, so we'll
+    write $R\circ F_v = F_v \circ R = \fbox{\phantom{$F_h$}}$.
+  \item A $180^\circ$ rotation combined with a glide-reflection
+    is a always a \fbox{\phantom{horizontal-reflection}}, so we'll
+    write $R\circ G = G \circ R = \fbox{\phantom{$F_h$}}$.
+  \end{itemize}
   \end{enumerate}
   \begin{freeResponse}
     \begin{enumerate}
@@ -115,6 +133,15 @@ questions.
       \begin{center}
         \includegraphics[width=.6\textwidth]{ansFv.png}
       \end{center}
+    \item For the blanks:
+      \begin{itemize}
+      \item  A $180^\circ$ rotation combined with a vertical-reflection
+        is a always a \fbox{horizontal-reflection}, so we'll
+        write $R\circ F_v = F_v \circ R = \fbox{$F_h$}$.
+      \item A $180^\circ$ rotation combined with a glide-reflection
+        is a always a \fbox{horizontal-reflection}, so we'll
+        write $R\circ G = G \circ R = \fbox{$F_h$}$.
+      \end{itemize}
     \end{enumerate}
   \end{freeResponse}
 \end{question}
@@ -122,68 +149,107 @@ questions.
 
 
 
+
+
+
+
+
 \begin{question}
-  Sometimes, frieze patterns with horizontal-reflections are unavoidable.
+  Sometimes, frieze patterns with symmetry through
+  horizontal-reflections are unavoidable.
   \begin{enumerate}
+  \item Can you find a frieze pattern that has symmetry through
+    vertical-reflections and $180^\circ$ rotations but not through
+    horizontal-reflections? If YES, show me such a frieze pattern. If
+    NO, explain why not.    
   \item Can you find a frieze pattern that has symmetry through
     glide-reflections and $180^\circ$ rotations but not through
     horizontal-reflections? If YES, show me such a frieze pattern. If
     NO, explain why not.
-  \item Can you find a frieze pattern that has symmetry through
-    glide-reflections and horizontal-reflections but not through
-    $180^\circ$ rotations? If YES, show me such a frieze pattern. If
-    NO, explain why not.
   \end{enumerate}
-    
   \begin{freeResponse}
     \begin{enumerate}
-    \item NO, this cannot be done.
-      \begin{itemize}
-      \item First think about the $180^\circ$ rotation. This means
-        that the lower-half and top-half of the frieze pattern look
-        the same, but they may be in opposite directions/orientations.
-      \item Next think about symmetry through glide-reflections. This
-        means that the orientations of the top-half and lower-half
-        must be the same (though possibly shifted).
-      \end{itemize}
-      Since the direction/orientation of both the top-half and the
-      lower-half of the frieze pattern is the same, we must also have
-      symmetry through horizontal-reflections.
-    \item NO, this cannot be done.
-      \begin{itemize}
-      \item First think about the horizontal-reflection. This means
-        that the frieze pattern is its own mirror image across a
-        vertical line. 
-      \item Next think about symmetry through glide-reflections. This
-        means that the orientations of the top-half and lower-half
-        must be the same (though possibly shifted).
-      \end{itemize}
-      Putting this together, we see that the lower-half and top-half
-      of the frieze pattern look the same, and have no orientation
-      other than a shift. Hence the frieze pattern must also have
-      symmetry through $180^\circ$ rotations.
+    \item NO, this cannot be done. If a frieze pattern has symmetry
+      through vertical-reflections and $180^\circ$ rotations, then it
+      will also have symmetry through the COMPOSITION of these
+      functions. Since we know that
+      \[
+      R\circ F_v = F_v \circ R = F_h
+      \]
+      We see that such a frieze pattern must also have symmetry
+      through horizontal-reflections.
+    \item NO, this cannot be done.  If a frieze pattern has symmetry
+      through vertical-reflections and $180^\circ$ rotations, then it
+      will also have symmetry through the COMPOSITION of these
+      functions. Since we know that
+      \[
+      R\circ F_v = F_v \circ R = F_h
+      \]
+      We see that such a frieze pattern must also have symmetry
+      through horizontal-reflections.
     \end{enumerate}
   \end{freeResponse}
 \end{question}
-\mynewpage
 
 
-%% BAD BAD THIS IS THE SUMMARY QUESTION... JUST CONNECT TO BEGINNING
+
 \begin{question}
-  DISPLAY a SINGLE frieze pattern that has simultaneously has symmetry
-  through 
-  \begin{itemize}
-  \item translations,
-  \item glide-reflections,
-  \item vertical-reflections,
-  \item $180^\circ$ rotations, and
-  \item horizontal-reflections.
-  \end{itemize}
+  Sometimes, frieze patterns with symmetry through $180^\circ$
+  rotations are unavoidable.
+  \begin{enumerate}
+  \item Can you find a frieze pattern that has symmetry through
+    horizontal-reflections and vertical-reflections but not through
+    $180^\circ$ rotations? If YES, show me such a frieze pattern. If
+    NO, explain why not.
+  \item Can you find a frieze pattern that has symmetry through
+    horizontal-reflections and glide-reflections but not through
+    $180^\circ$ rotations? If YES, show me such a frieze pattern. If
+    NO, explain why not.
+  \end{enumerate}
+  \begin{hint}
+    Maybe start by figuring out:
+    \[
+    F_h \circ F_v = ? \qquad\text{and}\qquad F_h \circ G = ?
+    \]
+  \end{hint}
   \begin{freeResponse}
-    Here it is:
-    \begin{center}
-      \includegraphics[width=.6\textwidth]{ansTGV8H.png}
-    \end{center}
+    Working as we did before, let us first note that
+    \[
+    F_h \circ F_v = F_h \circ F_v= R
+    \]
+    We could see this from our work on the symmetry of the square as in that case
+    \[
+    F_h = f, \qquad F_v = r^2 f, \qquad R = r^2
+    \]
+    and we know that the reflections commute and 
+    \begin{align*}
+      F_h \circ F_v &= f \circ r^2 f \\
+      &= r^2\\
+      &= R.
+    \end{align*}
+    Moreover, in an entirely similar way, $F_h \circ G = G\circ F_h =
+    R$. Putting this together, we find:
+    \begin{enumerate}
+    \item NO, this cannot be done. If a frieze pattern has symmetry
+      through horizontal-reflections and vertical-reflections, then it
+      will also have symmetry through the COMPOSITION of these
+      functions. Since we know that
+      \[
+      F_h \circ F_v = F_h \circ F_v= R
+      \]
+      We see that such a frieze pattern must also have symmetry
+      through $180^\circ$ rotations.
+    \item NO, this cannot be done.  If a frieze pattern has symmetry
+      through horizontal-reflections and glide-reflections, then it
+      will also have symmetry through the COMPOSITION of these
+      functions. Since we know that
+      \[
+      F_h \circ G = G\circ F_h =
+      R
+      \]
+      We see that such a frieze pattern must also have symmetry
+      through $180^\circ$ rotations.
+    \end{enumerate}
   \end{freeResponse}
 \end{question}
 
