@@ -126,10 +126,10 @@ Pascal's Triangle.
     Triangle? 
   \item Complete the first $9$ rows of the triangle, above we have the
     first $4$ rows shown.
-  \item Explain, in terms of pizza, why the numbers in the $(n+1)$th row
-    must sum to $2^n$.
   \item Explain, in terms of pizza, why you can produce the next row
     from the previous row as in Part \ref{PPS:s}.
+  \item Explain, in terms of pizza, why the numbers in the $(n+1)$th row
+    must sum to $2^n$.
 \end{enumerate}
 \begin{freeResponse}
   \begin{enumerate}
@@ -146,16 +146,15 @@ Pascal's Triangle.
       }
     \end{tikzpicture}
     \]
-  \item So the numbers in the $n$th row tell us how many of each type
-    of pizza there is. However, for each topping, it is either ``on''
-    or ``off,'' and so if you have $n$ toppings, you can make a total
-    of $2^n$ different pizzas.
   \item Consider this, you have a bunch of pizzas with one less
     topping on the left, and one more topping on the right. When we
     add a NEW topping, and want to know how many we can make, we
     simply take the pile with one less, add the new topping.  Now, the
     two piles combined will be the entire you want.
-
+  \item So the numbers in the $n$th row tell us how many of each type
+    of pizza there is. However, for each topping, it is either ``on''
+    or ``off,'' and so if you have $n$ toppings, you can make a total
+    of $2^n$ different pizzas.
   \end{enumerate}
 \end{freeResponse}
 \end{question}

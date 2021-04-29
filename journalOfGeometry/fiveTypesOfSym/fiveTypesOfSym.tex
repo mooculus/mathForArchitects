@@ -27,59 +27,107 @@ Continuing to think about TYPES of symmetries, let:
   \item $F_v$ be a generic vertical-reflection.
   \item $F_h$ be a horizontal-reflection. 
 \end{itemize}
-From what we know already, we can fill in the following
-TYPE-multiplication table for frieze patterns:
-\[
-\begin{array}{|c||c|c|c|c|c|}
+\begin{center}
+  Are these ALL possible symmetries? \\
+  OR do we get new TYPES of
+symmetries when we combine these?
+\end{center}
+In our work below, we seek the answer to this question.
+
+
+
+
+\mynewpage
+
+
+\begin{question}
+  Fill in the BLANKS (not the X) in the TYPE-multiplication table for
+  frieze patterns:
+  \[\renewcommand{\arraystretch}{2}
+  \begin{array}{|c||c|c|c|c|c|}      
     \hline
         & T    & R    & F_h   & F_v & G     \\ \hline\hline
-    T   & T    & ??   & ??    & G   & G     \\ \hline
-    R   & ??   & T    & ??    & F_h & F_h   \\ \hline
-    F_h & ??   & F_v  & T     & R   & R   \\ \hline
-    F_v & G    & F_h  & R     & T   & T   \\ \hline
-    G   & G    & F_h  & R     & T   & T   \\ \hline
+    T   & \phantom{XXX}   & X    & X    &  \phantom{XXX}   &   \phantom{XXX}    \\ \hline
+    R   & X    & \phantom{XXX}     & X    &     &       \\ \hline
+    F_h & X    & X    &    X   &     &     \\ \hline
+    F_v &      &      &       &     &     \\ \hline
+    G   &      &      &  \phantom{XXX}     &     &     \\ \hline
 \end{array}
-\]
-%% MAYBE COLOR IN SO WE CAN EXPLICITY SEE WHERE EVERYTHIHG COMES FROM?
-
-
-
-
+  \]
+  Each of those blanks has been solved already in ``Combinations of
+  symmetry.'' For each relation \textbf{identify} if it came from the
+  INTRODUCTION, QUESTION 1, QUESTION 2, or QUESTION 3.
+  \begin{freeResponse}
+    From the INTRODUCTION of ``Combinations of symmetry,'' we find
+    that:
+    \begin{itemize}
+    \item $T\circ T = T$
+    \item $T\circ G = G \circ T = G$
+    \item $T\circ F_v = F_v \circ T = G$
+    \item $G\circ G = T$
+    \item $R\circ R = T$
+    \item $F_v\circ F_v = T$
+    \item $F_v\circ G = G \circ F_v = T$
+    \end{itemize}
+    From QUESTION 1, we have:
+    \begin{itemize}
+    \item $R\circ F_v = F_v \circ R = F_h$
+    \item $R\circ G = G \circ R = F_h$
+    \end{itemize}
+    From QUESTION 3, we have:
+    \begin{itemize}
+    \item $F_h \circ F_v = F_v\circ F_h = R$
+    \item $F_h\circ G = G \circ F_h = R$
+    \end{itemize}
+    Behold:
+    \[\renewcommand{\arraystretch}{2}
+  \begin{array}{|c||c|c|c|c|c|}      
+    \hline
+        & T    & R    & F_h   & F_v & G     \\ \hline\hline
+    T   & T    & X    & X    &  G   &  G   \\ \hline
+    R   & X    & T     & X    & F_h    & F_h      \\ \hline
+    F_h & X    & X    &   X    &   R  &  R   \\ \hline
+    F_v & G    &  F_h    &   R    &  T   & T    \\ \hline
+    G   & G     & F_h     &  R    &  T  & T    \\ \hline
+\end{array}
+  \]
+  \end{freeResponse}
+\end{question}
 \mynewpage
 
 
+
+
 \begin{question}
-  Why don't we worry about symmetries through
-  glide-horizontal-reflections?
+  Fill in the BLANKS (not the X) in the TYPE-multiplication table for
+  frieze patterns:
+  \[\renewcommand{\arraystretch}{2}
+  \begin{array}{|c||c|c|c|}      
+    \hline
+        & T    & R    & F_h\\ \hline   
+    T   & X   & \phantom{XXX}    & \phantom{XXX}    \\ \hline
+    R   & \phantom{XXX}    & X     & X  \\ \hline
+    F_h & \phantom{XXX}    & X    &   X  \\ \hline
+  \end{array}
+  \]
+  DRAW PICTURES and/or EXPLAIN your reasoning to demonstrate that you are
+  correct.
   \begin{freeResponse}
-    Having symmetry through so called ``glide-horizontal-reflections''
-    is IDENTICAL to having symmetry through
-    horizontal-reflections. Behold,
-    \begin{center}
-      \includegraphics[width=.3\textwidth]{llamaGHF.png}
-    \end{center}
+    First note that a rotation comined with a translation (or vice
+    versa) is just a rotation, just around a different point. To see
+    this it is helpful to imagaine a frieze with minimal symmetry. If
+    we translate it, it looks the same, then if we rotate it, we get a
+    rotation.
+
+    Second note t
   \end{freeResponse}
 \end{question}
 \mynewpage
 
 \begin{question}
-  Why don't we worry about symmetries through glide-$180^\circ$
-  rotations?
-  \begin{freeResponse}
-    Having symmetry through so called ``glide-$180^\circ$ rotations''
-    is IDENTICAL to having symmetry through
-    $180^\circ$ rotations. Behold,
-    \begin{center}
-      \includegraphics[width=.3\textwidth]{llamaGR.png}
-    \end{center}
-  \end{freeResponse}
-\end{question}
-\mynewpage
-
-
-\begin{question}
-  Explain WHY the TYPES of symmetries for frieze patterns are
-  exactly:
+  Finally, \textbf{make a complete TYPE-multiplication table} for frieze
+  patterns and use this to EXPLAIN WHY the TYPES of symmetries for frieze patterns
+  are exactly:
   \begin{itemize}
   \item translations,
   \item glide-reflections,
@@ -87,49 +135,38 @@ TYPE-multiplication table for frieze patterns:
   \item $180^\circ$ rotations, and
   \item horizontal-reflections.
   \end{itemize}
+  
+  
   \begin{freeResponse}
-    Well, the only symmetries of regular $n$-gons are reflections and
-    rotations. The only reflections that a frieze pattern could have
-    symmetry through are vertical-reflections and
-    horizontal-reflections. Moreover, the only rotations we could
-    possibly use are $180^\circ$ rotations, because a frieze is an
-    ``infinite'' strip.
-
-    If you combine a translation with a vertical-reflection, you get a
-    glide-reflection.
-
-    Moreover, from our work above, we see we don't get any more
-    symmetries by combining translations with either
-    horizontal-reflections or $180^\circ$ rotations.
-
-    Thus the only possible symmetries for a frieze pattern are:
-    \begin{itemize}
-    \item translations,
-    \item glide-reflections,
-    \item vertical-reflections,
-    \item $180^\circ$ rotations, and
-    \item horizontal-reflections.
-    \end{itemize}
-  \end{freeResponse}
-
-
-\[
+ \[\renewcommand{\arraystretch}{2}
 \begin{array}{|c||c|c|c|c|c|}
     \hline
         & T    & R    & F_h   & F_v & G     \\ \hline\hline
-    T   & T    & R    & F_h   & G   & G     \\ \hline
-    R   & R    & T    & F_v   & F_h & F_h   \\ \hline
-    F_h & F_h  & F_v  & T     & R   & R   \\ \hline
+    T   & T    & R   & F_h    & G   & G     \\ \hline
+    R   & R   & T    & G    & F_h & F_h   \\ \hline
+    F_h & F_h   & G   & T     & R   & R   \\ \hline
     F_v & G    & F_h  & R     & T   & T   \\ \hline
     G   & G    & F_h  & R     & T   & T   \\ \hline
 \end{array}
 \]
 
-  
+Well, the only symmetries of regular $n$-gons are reflections and
+rotations. The only reflections that a frieze pattern could have
+symmetry through are vertical-reflections and
+horizontal-reflections. Moreover, the only rotations we could
+possibly use are $180^\circ$ rotations, because a frieze is an
+``infinite'' strip.
+
+From our table, we see that no matter how we combine the symmetries,
+we just find one of the five below:
+\begin{itemize}
+\item translations,
+\item glide-reflections,
+\item vertical-reflections,
+\item $180^\circ$ rotations, and
+\item horizontal-reflections.
+\end{itemize}
+Thus the symmetries above are the only possible symmetries for a frieze patterns.
+\end{freeResponse}  
 \end{question}
-
-
-
-
-
 \end{document}
