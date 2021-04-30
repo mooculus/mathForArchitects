@@ -122,7 +122,7 @@ Below, let's think about some questions.
   \item %% FOR THIS: ESTIMATE BY BASE AREA, ESTIMATE WITH 4 upright tri and place the correct value. 
 
     You ask six friends what the surface area of the top part of the
-    \textit{Luxor Las Vegas} is. They give you four wrong answers, but
+    \textit{Luxor Las Vegas} is. They give you six wrong answers, but
     you love them anyway, because they are your friends. Here are
     their answers:
     \begin{enumerate}
@@ -163,112 +163,93 @@ Below, let's think about some questions.
 
 
 
-
-
-%%% THIRD QUESTION IS ABOUT ROOFS AND LOWER BOUNDS
-%% GIVE INTERESTING BASE SHAPES.
-
-
-%% SA CONE. 
-
-
-
-
-
-
-
-
-
-%%% THIS SHOULD BE IT'S OWN ACTIVITY
-%% Let's talk about numbers.
-
-
-
 \begin{question}
-  Let's put this together. Estimating a value by knowing the number
-  of digits that the answer has, is called \textbf{estimating up to an
-    order of magnitude}, because then you know the range of the
-  answer.
+  Formulas can be hard to use, sometimes a good guess is best.
   \begin{enumerate}
-  \item EXPLAIN why if $m\ge n$
-    \[
-    (\text{$m$-digit number}) + (\text{$n$-digit number}) =
-    \begin{cases}
-      (\text{$m$-digit number}) & \text{or}\\
-      (\text{$(1+m)$-digit number}),
-    \end{cases}
-    \]
-    and why
-    \[
-    (\text{$m$-digit number}) \cdot (\text{$n$-digit number}) = \begin{cases}
-      (\text{$(m+n)$-digit number}) & \text{or}\\
-      (\text{$(m+n-1)$-digit number}).
-    \end{cases}
-    \]
-    \begin{hint}
-    Note, every whole number can be written as the product of a number
-    between $0.1$ and $1$ and a power of ten. For example $253 =
-    .253\cdot 10^3$.
-  \end{hint}
-  \item Using ideas from this activity, explain how to estimate the
-    volume (in cubic feet) and surface area (in square feet) of the \link[Tower at Geisel
-      Library]{https://en.wikipedia.org/wiki/Geisel_Library} up to an
-    order of magnitude.
-
+  \item Here is a roof that is pointed in the middle:
   \begin{center}
-    \includegraphics[width=.4\textwidth]{geisel.jpg} 
+    \includegraphics[width=.6\textwidth]{symRoof.jpg}
   \end{center}
-
-    EXPLAIN your reasoning and EXPLAIN if you
-    think your estimates are \textbf{too large} or \textbf{too small}
-    in each case.
+  Below is a diagram of the roof as seen from the top:
+  \begin{center}
+    \begin{tikzpicture}[x=2cm,y=2cm]
+      \draw[ultra thick] (0,0) rectangle (3,2.4);
+      %\draw[dashed] (.5,.5) rectangle (4.3,2.5);
+    \draw[ultra thick] (0,1.2) -- (3,1.2);
+    \draw[decoration={brace,raise=.2cm},decorate,thin] (0,0)--(0,2.4);
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(3,0);
+    \node at (-.4,1.2) {$24'$};
+    \node at (1.5,-.44) {$30'$};
+    \node[above] at (1.5,1.2) {main ridge};
+    \end{tikzpicture}
+  \end{center}
+  You ask four friends what the surface area of the root is. They give
+  you for wrong answers. Here are their answers:
+    \begin{enumerate}
+    \item $9$ square feet
+    \item $90$ square feet
+    \item $900$ square feet
+    \item $9000$ square feet
+    \end{enumerate}
+    Which answer above is \textbf{closest} to the correct answer? EXPLAIN your reasoning.
+  \item Here is a roof with an asymmetric roof:
+  \begin{center}
+    \includegraphics[width=.6\textwidth]{skewRoof.jpg}
+  \end{center}
+  Below is a diagram of the roof as seen from the top:
+\begin{center}
+  \begin{tikzpicture}[x=1.5cm,y=1.5cm]
+    \draw[ultra thick] (0,0) rectangle (5,3.6);
+    %\draw[dashed] (.3,.3) rectangle (4.5,2.1);
+    \draw[ultra thick] (0,3) -- (5,3);
+    \draw[decoration={brace,raise=.2cm},decorate,thin] (0,0)--(0,3);
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (5,3.1)--(5,3.6);
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(5,0);
+    \node at (-.5,1.5) {$30'$};
+    \node at (5.4,3.3) {$6'$};
+    \node at (2.5,-.44) {$50'$};
+    \node[below] at (2.5,3) {main ridge};
+  \end{tikzpicture}
+\end{center}
+  You ask four friends what the surface area of the root is. They give
+  you for wrong answers. Here are their answers:
+    \begin{enumerate}
+    \item $20$ square feet
+    \item $200$ square feet
+    \item $2000$ square feet
+    \item $20000$ square feet
+    \end{enumerate}
+    Which answer above is \textbf{closest} to the correct answer? EXPLAIN your reasoning.
   \end{enumerate}
-  
   \begin{freeResponse}
     \begin{enumerate}
-    \item For the first statement, let's write our numbers as the
-      product of a number between zero and one and a power of ten. So
-      letting $a$ and $b$ be between $.1$ and $1$ we can write.
+    \item Answer $(iii)$ is correct. The SMALLEST that the area of the
+      roof could be is
       \[
-      \underbrace{a\cdot 10^m}_{\text{$m$-digit number}} + \underbrace{b\cdot 10^n}_{\text{$n$-digit number}}.
+      24\cdot 30 = 720.
       \]
-      Now write
-      \begin{align*}
-        a\cdot 10^m + b\cdot 10^n &= a\cdot 10^m + \frac{b}{10^{m-n}}\cdot 10^m \\
-        &= 10^m \left(a +\frac{b}{10^{m-n}}\right).
-      \end{align*}
-      This will be a $m$-digit number, unless $a+\frac{b}{10^{m-n}}\ge 1$, in
-      which case it will be a $(1+m)$-digit number.
-
-
-      For the second statement, we start the same way
+      It is clear that the length of a side is around $12$ feet (half the width), so
+      the LARGEST the are of the roof could be is
       \[
-      \underbrace{a\cdot 10^m}_{\text{$m$-digit number}} \cdot \underbrace{b\cdot 10^n}_{\text{$n$-digit number}} = ab\cdot 10^{m+n}
+      \underbrace{720}_{\text{area of base}} + 2\cdot 12\cdot 30 = 1440.
       \]
-      Now assume that $m\ge n$ and write
-      \begin{align*}
-        \left(a\cdot 10^m\right) \left(b\cdot 10^n\right)  &= (ab)10^m+n\\
-      \end{align*}
-      Note $ab<1$, and the smallest $ab$ can be is
+      Note, $720 < 900 < 1440$.
+    \item Answer $(iv)$ is correct.  The SMALLEST that the area of the
+      roof could be is
       \[
-      0.1\cdot 0.1 = .01.
+      36\cdot 50 = 1800.
       \]
-      Hence our product will be a $(m+n)$-digit number unless $ab <
-      0.1$. In that case it will be a $(m+n-1)$-digit number.
-    \item From the Wikipedia page, we see that the tower has a height
-      of $110$ feet and a diameter of $200$ feet. Since the tower is so lumpy, I'll estimate the volume as
+      The average of each side of the roof is a little greater than
+      have of the width, so the LARGEST the are of the roof could be
+      is
       \[
-      V = 110\cdot 110\cdot 110 = 1331000 \text{ cubic feet}.
+      \underbrace{1800}_{\text{area of base}} + 2\cdot 18\cdot 50 = 3600.
       \]
-      I believe this estimate is TOO LARGE.
-
-      For the surface area I'll estimate
-      \[
-      SA = 6(200\cdot 200) = 240000\text{ square feet}.
-      \]
-      I believe this estimate is TOO SMALL, since the building is so very
-      lumpy.
+      Note, $1800 < 2000 < 3600$.
     \end{enumerate}
   \end{freeResponse}
 \end{question}
+\mynewpage
+
+
 \end{document}
