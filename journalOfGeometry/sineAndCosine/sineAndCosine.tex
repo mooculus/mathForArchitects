@@ -219,10 +219,12 @@
         \tkzDrawSegment[red,line width=2pt](A,C)
         \tkzDrawSegment[red,line width=2pt](C,B)
         \tkzLabelSegment[red,below left](A,C){$c$}
+
+        \tkzDrawSegment[red,dashed](A,D)
         
-        \tkzMarkRightAngle[red,thin](A,B,C)
-        \tkzMarkAngle[red,mark=,size=1.6cm,thin](BB,AA,C)
-        \tkzLabelAngle[red,pos=.9](BB,A,C){$180-\theta$};
+        \tkzMarkRightAngle[red,thin](A,D,C)
+        \tkzMarkAngle[red,mark=,size=1.4cm,thin](BB,AA,C)
+        \tkzLabelAngle[red,pos=.7](BB,A,C){$180-\theta$};
 
         \tkzDrawSegment[blue,line width=2pt](AA,BB)
         \tkzDrawSegment[blue,line width=2pt](AA,CC)
@@ -323,11 +325,6 @@
     EXPLAIN how the script works, block-by-block as you would like to
     have it explained to you. Use words, pictures, and so on, as
     needed/helpful in your explanation.
-  %% \item It's a fact:
-  %%   \[
-  %%   \cos(180-\theta) = \cos(\theta) \qquad\text{and}\qquad  \sin(180-\theta) = \sin(\theta)
-  %%   \]
-  %%   EXPLAIN how one can directly WITNESS this fact with the block  \raisebox{-.4\height}{\includegraphics{circleBlank.png}}.
   \item Some folks like to plot circles with:
     \[
     (x,y) = (\cos(\theta),\sin(\theta)) \qquad\text{others with}\qquad  (x,y) = (\sin(\theta),\cos(\theta))
@@ -361,168 +358,6 @@
     \end{enumerate}
   \end{freeResponse}
 \end{question}
-
-
-%% \begin{question}
-%%   EXPLAIN in terms of a right triangle, why:
-%%   \begin{enumerate}
-%%   \item If $\theta$ is near $0^\circ$, then $\sin(\theta)$ is near $0$.
-%%   \item If $\theta$ is near $0^\circ$, then $\cos(\theta)$ is near $1$.
-%%   \item If $\theta$ is near $90^\circ$, then $\sin(\theta)$ is near $1$.
-%%   \item If $\theta$ is near $90^\circ$, then $\cos(\theta)$ is near $0$.
-%%   \item $\sin(180-\theta) = \sin(\theta)$.
-%%   \item The outputs of $\sin(\theta)$ and $\cos(\theta)$ are always
-%%     between $-1$ and $1$.
-%%   \end{enumerate}
-%%   Use words, pictures, and so on, as needed/helpful in your
-%%   explanations.
-%%   \begin{hint}
-%%     The last two are a bit tricky. You have to interpret what a
-%%     negative sign means in this case. As a gesture of friendship, I
-%%     suggest you think of our right triangle as being on the unit circle:
-%%     \begin{center}
-%%       \begin{tikzpicture}[geometryDiagrams]
-%%         \coordinate (A) at (0,0);
-%%         \coordinate (B) at (4.33,0);
-%%         \coordinate (C) at (4.33,2.5);
-%%         \tkzDrawSegment[line width=2pt](A,B)
-%%         \tkzDrawSegment[line width=2pt](A,C)
-%%         \tkzDrawSegment[line width=2pt](C,B)
-%%         \tkzLabelSegment[above left](A,C){$1$}
-        
-%%         \coordinate (xmin) at (-6,0);
-%%         \coordinate (xmax) at (6,0);
-%%         \coordinate (ymin) at (0,-6);
-%%         \coordinate (ymax) at (0,6);
-        
-%%         \tkzDrawSegment[->](xmin,xmax)
-%%         \tkzDrawSegment[->](ymin,ymax)
-        
-%%         \tkzMarkRightAngle[thin](A,B,C)
-%%         \tkzDrawCircle[dashed](A,C)
-%%         \tkzMarkAngle[mark=,size=1.2cm,thin](B,A,C)
-%%         \tkzLabelAngle[pos=.9](B,A,C){$\theta$};
-%%       \end{tikzpicture}
-%%     \end{center}
-%%   \end{hint}
-%%   \begin{freeResponse}
-%%     \begin{enumerate}
-%%     \item First we need to explain why if $\theta$ is near $0^\circ$,
-%%       then $\sin(\theta)$ is near $0$.  Draw this on the unit circle:
-%%       \begin{center}
-%%       \begin{tikzpicture}[geometryDiagrams] %% multiply by 5
-%%         \coordinate (A) at (0,0);
-%%         \coordinate (B) at (4.98,0);
-%%         \coordinate (C) at (4.98,.44);
-%%         \tkzDrawSegment[line width=2pt](A,B)
-%%         \tkzDrawSegment[line width=2pt](A,C)
-%%         \tkzDrawSegment[line width=2pt](C,B)
-%%         \tkzLabelSegment[above left](A,C){$1$}
-        
-%%         %% \coordinate (xmin) at (-6,0);
-%%         %% \coordinate (xmax) at (6,0);
-%%         %% \coordinate (ymin) at (0,-6);
-%%         %% \coordinate (ymax) at (0,6);
-        
-%%         %% \tkzDrawSegment[->](xmin,xmax)
-%%         %% \tkzDrawSegment[->](ymin,ymax)
-        
-%%         %% \tkzMarkRightAngle[thin](A,B,C)
-%%         %% \tkzDrawCircle[dashed](A,C)
-%%       \end{tikzpicture}
-%%       \end{center}
-%%       Since the angle is near $0^\circ$,
-%%       \[
-%%       \sin(\theta) = \frac{\text{something near $0$}}{1} \approx 0.
-%%       \]
-%%     \item Using the same picture from before, since the angle is near $0^\circ$,
-%%       \[
-%%       \cos(\theta) = \frac{\text{something near $1$}}{1} \approx 1.
-%%       \]
-%%     \item If the angle is near $90^\circ$, then draw this picture:
-%%       \begin{center}
-%%       \begin{tikzpicture}[geometryDiagrams] %% multiply by 5
-%%         \coordinate (A) at (0,0);
-%%         \coordinate (B) at ({5*cos(85)},0);
-%%         \coordinate (C) at ({5*cos(85)},{5*sin(85)});
-%%         \tkzDrawSegment[line width=2pt](A,B)
-%%         \tkzDrawSegment[line width=2pt](A,C)
-%%         \tkzDrawSegment[line width=2pt](C,B)
-%%         \tkzLabelSegment[above left](A,C){$1$}
-        
-%%         %% \coordinate (xmin) at (-6,0);
-%%         %% \coordinate (xmax) at (6,0);
-%%         %% \coordinate (ymin) at (0,-6);
-%%         %% \coordinate (ymax) at (0,6);
-        
-%%         %% \tkzDrawSegment[->](xmin,xmax)
-%%         %% \tkzDrawSegment[->](ymin,ymax)
-        
-%%         \tkzMarkRightAngle[thin](A,B,C)
-%%         %\tkzDrawCircle[dashed](A,C)
-        
-%%       \end{tikzpicture}
-%%       \end{center}
-%%       Since the angle is near $90^\circ$,
-%%       \[
-%%       \sin(\theta) = \frac{\text{something near $1$}}{1} \approx 1.
-%%       \]
-%%      \item Using the same picture from before, since the angle is near $0^\circ$,
-%%       \[
-%%       \cos(\theta) = \frac{\text{something near $0$}}{1} \approx 0.
-%%       \]
-%%     \item To see $\sin(180-\theta)=\sin(\theta)$ check this out:
-%%       \begin{center}
-%%       \begin{tikzpicture}[geometryDiagrams]
-%%         \coordinate (xmin) at (-6,0);
-%%         \coordinate (xmax) at (6,0);
-%%         \coordinate (ymin) at (0,-6);
-%%         \coordinate (ymax) at (0,6);
-        
-%%         \tkzDrawSegment[->](xmin,xmax)
-%%         \tkzDrawSegment[->](ymin,ymax)
-
-%%         \coordinate (A) at (0,0);
-%%         \coordinate (B) at (-4.33,0);
-%%         \coordinate (C) at (-4.33,2.5);
-
-        
-%%         \coordinate (AA) at (0,0);
-%%         \coordinate (BB) at (4.33,0);
-%%         \coordinate (CC) at (4.33,2.5);
-
-
-%%         \tkzDrawSegment[red,line width=2pt](A,B)
-%%         \tkzDrawSegment[red,line width=2pt](A,C)
-%%         \tkzDrawSegment[red,line width=2pt](C,B)
-%%         \tkzLabelSegment[red,above right](A,C){$1$}
-        
-%%         \tkzMarkRightAngle[red,thin](A,B,C)
-%%         \tkzDrawCircle[dashed](A,C)
-%%         \tkzMarkAngle[red,mark=,size=1.6cm,thin](BB,AA,C)
-%%         \tkzLabelAngle[red,pos=.9](BB,A,C){$180-\theta$};
-
-%%         \tkzDrawSegment[blue,line width=2pt](AA,BB)
-%%         \tkzDrawSegment[blue,line width=2pt](AA,CC)
-%%         \tkzDrawSegment[blue,line width=2pt](CC,BB)
-%%         \tkzLabelSegment[blue,above left](AA,CC){$1$}
-
-%%         \tkzLabelSegment[blue,right](BB,CC){$\sin(\theta)$}
-%%         \tkzLabelSegment[red,left](B,C){$\sin(180-\theta)$}
-        
-%%         \tkzMarkRightAngle[blue,thin](AA,BB,CC)
-%%         \tkzMarkAngle[blue,mark=,size=1.2cm,thin](BB,AA,CC)
-%%         \tkzLabelAngle[blue,pos=.9](BB,AA,CC){$\theta$};
-%%       \end{tikzpicture}
-%%       \end{center}
-%%       And so we see $\sin(180-\theta)=\sin(\theta)$.
-%%     \item Sine and cosine are literally the lengths of the legs of
-%%       the triangle embedded in the unit circle. Their values must be
-%%       between $-1$ and $1$.
-%%     \end{enumerate}
-%%   \end{freeResponse}
-%% \end{question}
-
 
 
 \end{document}

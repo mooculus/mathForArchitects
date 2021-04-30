@@ -80,32 +80,32 @@ more mysterious. We'll figure that out NOW.
   Which of the possible combinations are actually the SAME collection
   of symmetries?
   \begin{freeResponse}
-    From our previous work, we know:
-    \begin{enumerate}
-    \item\label{7:r1} $\{T,F_v\} = \{T,G,F_v\}$ (Types of symmetry 2b)
-    \item\label{7:r2} $\{T,G,R\} = \{T,G,R,F_h\}$ (Combinations of symmetry 2a)
-    \item\label{7:r3} $\{T,G,F_h\} = \{T,G,R,F_h\}$ (Combinations of symmetry 2b)
-    \end{enumerate}
-    But this now tells us that:
-    \begin{align*}
-      \{T,R,F_v\} &= \{T,G,R,F_v\} & &\text{from \ref{7:r1}}\\
-      &= \{T,G,R,F_v,F_h\} & &\text{from\ref{7:r2}}
-    \end{align*}
-    and
-    \begin{align*}
-      \{T,F_v,F_h\} &= \{T,G,F_v,F_h\}& &\text{from \ref{7:r1}} \\
-      &= \{T,G,R,F_v,F_h\} & &\text{from\ref{7:r3}}
-    \end{align*}
-    and
-    \begin{align*}
-      \{T,R,F_v,F_h\} &= \{T,G,R,F_v,F_h\} & &\text{from \ref{7:r1}}\\
-    \end{align*}
-    Finally, note that
-    \[
-    \{T,R,F_h\} = \{T,G,R,F_h\}
+    From our previous work, we have the following TYPE-multiplication table:
+    \[\renewcommand{\arraystretch}{2}
+    \begin{array}{|c||c|c|c|c|c|}
+      \hline
+      & T    & R    & F_h   & F_v & G     \\ \hline\hline
+      T   & T    & R   & F_h    & G   & G     \\ \hline
+      R   & R   & T    & G    & F_h & F_h   \\ \hline
+      F_h & F_h   & G   & T     & R   & R   \\ \hline
+      F_v & G    & F_h  & R     & T   & T   \\ \hline
+      G   & G    & F_h  & R     & T   & T   \\ \hline
+    \end{array}
     \]
-    Since a rotation followed by a horizontal-reflection is a
-    glide-reflection.
+    From the table we can see that:
+    \begin{itemize}
+      \item Frieze patterns with symmetries through one of 
+        \[
+        \{T,G,R,F_v\}, \quad  \{T,G,F_v,F_h\}, \quad \{T,R,F_v,F_h\}, \quad \{T,R,F_v\}, \quad \{T,F_v,F_h\}
+        \]
+        must have symmetries through $\{T,G,R,F_v,F_h\}$.
+      \item Frieze patterns with symmetries through one of
+        \[
+        \{T,G,R\}, \quad \{T,G,F_h\}, \quad \{T,R,F_h\}
+        \]
+        must have symmetries through $\{T,G,R,F_h\}$.
+      \item Frieze patterns with symmetries through $\{T,F_v\}$ must have symmetries through $ \{T,G,F_v\}$.
+    \end{itemize}
   \end{freeResponse}
 \end{question}
 \mynewpage
