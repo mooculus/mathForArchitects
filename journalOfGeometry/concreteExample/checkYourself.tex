@@ -2,6 +2,9 @@
 
 \input{../preamble}
 
+\usepackage{multicol}
+
+
 \author{Bart Snapp}
 
 \checkYourselfAbstract
@@ -10,10 +13,10 @@
 \maketitle
 
 
-\begin{exercise}
-  True or False: Concrete is measured in units of area.
-\end{exercise}
-\vfill
+%% begin{exercise}
+%%   True or False: Concrete is measured in units of area.
+%% \end{exercise}
+%% \vfill
 
 \begin{exercise}
   True or False: The dimensions of $3$ foot $2\times 4$ are $36\times
@@ -26,46 +29,69 @@
  \end{exercise}
 \vfill
 
-
-\begin{exercise}
-  A space craft is designed that has a volume of $29,100$ cubic feet.
-  A ping-pong ball is a ball that is about $1$ inch in diameter.
-  What's the most reasonable estimate for the number of ping-pong
-  balls that would fit in this space craft?
-  \begin{enumerate}
-  \item $5,000$ ping-pong balls
-  \item $50,000$ ping-pong balls
-  \item $500,000$ ping-pong balls
-  \item $5,000,000$ ping-pong balls
-  \item $50,000,000$ ping-pong balls
-  \end{enumerate}
-
-\end{exercise}
-\vfill
-
-
 \begin{exercise}
   You've been hired by the LEGO corporation to make a concrete statue
-  of a LEGO minifigure.
+  of a LEGO minifigure:
   \begin{center}
-    \includegraphics[width=.5in]{minifigure.png}
+    \includegraphics[width=1.5cm]{minifigure.png}
   \end{center}
   If the minifigure statue is around $7$' tall, around $3$' wide, and
   around $2$' deep, what's the most reasonable estimate for how many
   cubic yards of concrete are needed for the statue?
-  \begin{enumerate}
+  \begin{enumerate}\begin{multicols}{2}
   \item around $2$ cubic yards
   \item around $4$ cubic yards
-  \item around $8$ cubic yards
   \item around $16$ cubic yards
   \item around $32$ cubic yards
+    \end{multicols}
   \end{enumerate}
 \end{exercise}
-\vfill
+
+
+
+\begin{exercise}
+Stella and Tireale have identical LEGO minifigures. LEGO minifigures
+are around $3.5$ centimeters tall, $1.5$ centimeters wide, and $1$
+centimeter deep. Stella and Tireale both correctly measure their LEGO
+minifigures.
+\begin{multicols}{2}
+  \begin{itemize}
+\item Stella uses meters as units.
+\item Tireale uses millimeters as units.
+  \end{itemize}
+\end{multicols}
+Stella and Tireale both correctly compute the volume (V) and surface
+area (SA) of their LEGO figures.  Which of the following could be
+true? (SELECT ALL CORRECT ANSWERS)
+\begin{multicols}{2}
+\begin{enumerate}
+\item Stella finds $SA > V$
+\item Stella finds $SA < V$
+\item Tireale finds $SA > V$
+\item Tireale finds $SA < V$
+\end{enumerate}
+\end{multicols}
+\end{exercise}
+
+
+
+\begin{exercise}
+  The MOOCulus Pizza Shop sells mini-pizzas that are $2$ inches in
+  diameter. Assuming that the pizza shop uses the same crust for all
+  of their pizzas, $9$ of these mini-pizzas is the same amount of food
+  as\dots
+  \begin{enumerate}
+    \begin{multicols}{2}
+    \item a pizza $6$'' in diameter
+    \item a pizza $10$'' in diameter
+    \item a pizza $14$'' in diameter
+    \item a pizza $18$'' in diameter
+    \end{multicols}
+  \end{enumerate}
+\end{exercise}
 
 
 
 
-
-\answerlistbox{False}{False}{False}{(e)}{(a)}
+\answerlistbox{False}{False}{(a)}{(a) and (d)}{(a)}
 \end{document}
