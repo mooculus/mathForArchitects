@@ -146,10 +146,16 @@
                      }\thispagestyle{empty}}
 
 
-\makeatother
-
-
-
+%% no number for refs
+\newcommand\checkstyle{%
+  \def\activitystyle{activity-section}
+  \def\maketitle{%
+                {\flushleft\small\sffamily\bfseries\@pretitle\par\vspace{-1.5em}}%
+                {\flushleft\large\sffamily\bfseries Check yourself\par }%
+                {\vskip .6em\noindent\textit\theabstract\setcounter{exercise}{0}}%
+                    \par\vspace{2em}
+                    %\phantomsection\addcontentsline{toc}{section}{\Large\textbf{\@title}}%
+                     }}
 
 \makeatother
 
@@ -170,6 +176,35 @@
 \newtheorem{question}{}
 
 
+
+\let\exercise\relax
+\let\endexercise\relax
+
+\newtheoremstyle{ExerciseStyle}{\topsep}{6em}%%% space between body and thm
+		{}                      %%% Thm body font
+		{}                              %%% Indent amount (empty = no indent)
+		{\bfseries}            %%% Thm head font
+		{}                              %%% Punctuation after thm head
+		{3em}                           %%% Space after thm head
+		{Check~\thmnumber{#2}\thmnote{ \bfseries(#3)}}%%% Thm head spec
+\theoremstyle{ExerciseStyle}
+\newtheorem{exercise}{}
+
+
+
+\newcommand{\answerlistbox}[5]{\vfill
+\hfill \fbox{\tiny\begin{minipage}{.6in}
+  \flushleft
+  Answers:
+  \flushright\rotatebox{180}{\begin{minipage}{.5in}\tiny
+    C1: #1\\
+    C2: #2\\
+    C3: #3\\
+    C4: #4\\
+    C5: #5
+  \end{minipage}}
+  \end{minipage}}
+}
 
 \let\freeResponse\relax
 \let\endfreeResponse\relax
@@ -270,7 +305,10 @@
 
 
 
-
+\newcommand{\checkYourselfAbstract}{\begin{abstract} Set a timer and
+    check your understanding by seeing if you can answer five questions in
+    five minutes.
+\end{abstract}}
 
 
 
