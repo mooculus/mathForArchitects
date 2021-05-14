@@ -20,26 +20,27 @@ Again, literally repeating ourselves for probably a third time: It is
 difficult to grasp the size of large numbers without a context that
 seems real to us. We'll use the context of ``cold, hard, cash'' and
 the ``cruel curse of time'' to help us understand the magnitude of
-numbers.  Dream this daydream with me:
-\begin{enumerate}
-\item[DAYDREAM 1]
-\begin{quote}
-   Suppose you were paid the secondly wage of $\$1$, meaning you are
+numbers. Moreover, we have TWO daydreams to help us:
+
+\begin{mdframed}[style=OutcomeStyle]
+  \begin{quote}
+    \textbf{Dollar-a-second Daydream:}\\
+  Suppose you were paid the secondly wage of $\$1$, meaning you are
   paid a dollar \text{every second} of every minute, of every hour, of
   every day, and so on.
 \end{quote}
-\item[DAYDREAM 2]
+\end{mdframed}
+
+
+
+\begin{mdframed}[style=OutcomeStyle]
   \begin{quote}
-     Suppose you were paid the following way: Just a penny on your first
+  \textbf{Pennies-a-day Daydream:}\\
+  Suppose you were paid the following way: Just a penny on your first
   day, double that (two pennies) the next, double that (four pennies)
   the next, and so on, each day doubling the payment amount.
-  \end{quote}
-\end{enumerate}
-
-
-
-
-Let's think about this seemingly impossible situation.
+\end{quote}
+\end{mdframed}
 
 
 
@@ -47,105 +48,21 @@ Let's think about this seemingly impossible situation.
 
 
 \begin{question}
-  Assume you are collecting money through the impossible situation
-  above.
-  \begin{enumerate}
-  \item How much money would you collect in the first week? Show your
-    work.
-  \item \textit{Geometry Giorgio} suggest that in two weeks you would
-    collect
-    \[
-    (\text{amount from first week}) + 2\cdot (\text{amount from first
-      week})
-    \]
-    Is he correct? If he is correct, explain why. If he is not
-    correct, explain why and give a correct analysis.
-  \end{enumerate}
-  \begin{freeResponse}
-    \begin{enumerate}
-    \item In one week, I'd collect
-      \[
-      0.01+0.02+0.04+0.08+0.16+0.32+0.64 = 1.27
-      \]
-      dollars.
-    \end{enumerate}
-  \end{freeResponse}
+ Which is better
 \end{question}
 \mynewpage
 
 
 
-
-%% TABLE
-%% formula?
-%% dfn of exponential growth.
-
-
-
 \begin{question}
-  One way to conceptualize data is with a table. Fill in the table
-  below:
-\[
-\renewcommand{\arraystretch}{3}
-\begin{array}{|c||c|c|c|c|c|c|c|c|c|c|}
-  \hline
-  \text{Day}       & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\ \hline\hline
-  \text{Collected} & \phantom{1023} & \phantom{1023}  & \phantom{1023}  & \phantom{1023}  & \phantom{1023}  & \phantom{1023}  & \phantom{1023}  & \phantom{1023}  & \phantom{1023}  & \phantom{1023}   \\ \hline
-  \text{Total}     &   &   &   &   &   &   &   &   &   &    \\ \hline
-\end{array}
-\]
-\begin{freeResponse}
-  Here is my table:
-  \[
-\renewcommand{\arraystretch}{3}
-\begin{array}{|c||c|c|c|c|c|c|c|c|c|c|}
-  \hline
-  \text{Day}       & 1  & 2  & 3  & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\ \hline\hline
-  \text{Collected} & 0.01  & 0.02  & 0.04  & 0.08 & 0.16& 0.32& 0.64& 1.28 & 2.56  & 5.12   \\ \hline
-  \text{Total}     & 0.01  & 0.03  & 0.07  & 0.15  & 0.31  & 0.63  & 1.27  & 2.55  & 5.11  & 10.23   \\ \hline
-\end{array}
-\]
-\end{freeResponse}
+What is exponential growth?
 
-  
 \end{question}
 \mynewpage
 
 
 \begin{question}
-  Now we need to REFLECT on our work.
-  \begin{enumerate}
-    \item Use your table above to guess a for the total amount
-      collected from day $1$ to day $n$. Explain how you found your
-      guess USING THE TABLE.
-    \item Use ALGEBRAIC REASONING to EXPLAIN WHY your formula is true.
-  \end{enumerate}
-  \begin{freeResponse}
-    \begin{enumerate}
-      \item From the table, it looks like the amount collected from
-        day $1$ to day $n$ is equal to how much you'll collect on the
-        next day minus one. Since on day $n$ we collect $.01\cdot
-        2^n$, we guess:
-        \[
-        \mathrm{Total}(n) = 0.01\cdot 2^{n+1} -0.01
-        \]
-      \item To see why this is true with algebra, write
-        \begin{align*}
-        \mathrm{Total}(n) &= 0.01 +0.01\cdot 2+0.01\cdot 2^2 +0.01 \cdot 2^3 + \dots + 0.01 \cdot 2^n\\
-        &= 0.01 + 2 ( 0.01 +0.01\cdot 2+0.01\cdot 2^2 +0.01 \cdot 2^3 + \dots + 0.01 \cdot 2^{n-1})\\
-        &= 0.01 + 2 ( \mathrm{Total}(n) - 0.01\cdot 2^n)\\
-        &= 0.01 + 2\cdot\mathrm{Total}(n) - 0.01\cdot 2^{n+1}
-        \end{align*}
-    Now we have:
-    \[
-    \mathrm{Total}(n)= 0.01 + 2\cdot\mathrm{Total}(n) - 0.01\cdot 2^{n+1}
-    \]
-    Solving for $\mathrm{Total}(n)$ we find
-    \[
-    \mathrm{Total}(n) = 0.01\cdot 2^{n+1} -0.01.
-    \]
-    \end{enumerate}
-  \end{freeResponse}
+  Find examples of exponential growth.
 \end{question}
 
 
