@@ -17,6 +17,7 @@
   geometry and arithmetic.
 \item Reason from a table to induce a formula.
 \item Use algebra to show a formula is true.
+\item Use insight to approximate computations.
 \end{listOutcomes}
 
 
@@ -68,14 +69,6 @@ Let's think about this seemingly impossible situation.
 \mynewpage
 
 
-
-
-%% TABLE
-%% formula?
-%% dfn of exponential growth.
-
-
-
 \begin{question}
   One way to conceptualize data is with a table. Fill in the table
   below:
@@ -113,6 +106,15 @@ Let's think about this seemingly impossible situation.
       collected from day $1$ to day $n$. Explain how you found your
       guess USING THE TABLE.
     \item Use ALGEBRAIC REASONING to EXPLAIN WHY your formula is true.
+    \item Use the fact that after $10$ days, you have approximately
+      $\$10$ to EXPLAIN how to MENTALLY approximate, how much was
+      collected in the first $20$ days WITHOUT a calculator.
+      \begin{hint}
+        Consider the fact that $2^10 \approx 1000$ and :
+        \[
+        2^{20} = \left(2^10\right)^2
+        \]
+      \end{hint}
   \end{enumerate}
   \begin{freeResponse}
     \begin{enumerate}
@@ -121,23 +123,30 @@ Let's think about this seemingly impossible situation.
         next day minus one. Since on day $n$ we collect $.01\cdot
         2^n$, we guess:
         \[
-        \mathrm{Total}(n) = 0.01\cdot 2^{n+1} -0.01
+        \mathrm{Total}(n) = 0.01\cdot 2^{n} -0.01
         \]
       \item To see why this is true with algebra, write
         \begin{align*}
-        \mathrm{Total}(n) &= 0.01 +0.01\cdot 2+0.01\cdot 2^2 +0.01 \cdot 2^3 + \dots + 0.01 \cdot 2^n\\
-        &= 0.01 + 2 ( 0.01 +0.01\cdot 2+0.01\cdot 2^2 +0.01 \cdot 2^3 + \dots + 0.01 \cdot 2^{n-1})\\
-        &= 0.01 + 2 ( \mathrm{Total}(n) - 0.01\cdot 2^n)\\
-        &= 0.01 + 2\cdot\mathrm{Total}(n) - 0.01\cdot 2^{n+1}
+        \mathrm{Total}(n) &= 0.01 +0.01\cdot 2+0.01\cdot 2^2 +0.01 \cdot 2^3 + \dots + 0.01 \cdot 2^{n-1}\\
+        &= 0.01 + 2 ( 0.01 +0.01\cdot 2+0.01\cdot 2^2 +0.01 \cdot 2^3 + \dots + 0.01 \cdot 2^{n-2})\\
+        &= 0.01 + 2 ( \mathrm{Total}(n) - 0.01\cdot 2^{n-1})\\
+        &= 0.01 + 2\cdot\mathrm{Total}(n) - 0.01\cdot 2^{n}
         \end{align*}
-    Now we have:
-    \[
-    \mathrm{Total}(n)= 0.01 + 2\cdot\mathrm{Total}(n) - 0.01\cdot 2^{n+1}
-    \]
+        Now we have:
+        \[
+        \mathrm{Total}(n)= 0.01 + 2\cdot\mathrm{Total}(n) - 0.01\cdot 2^{n}
+        \]
     Solving for $\mathrm{Total}(n)$ we find
     \[
-    \mathrm{Total}(n) = 0.01\cdot 2^{n+1} -0.01.
+    \mathrm{Total}(n) = 0.01\cdot 2^{n} -0.01.
     \]
+  \item Well the first $2$ weeks is $14$ days. So we've collected 
+    \begin{align*}
+      \mathrm{Total}(n) &= .01\cdot 2^20 - .01\\
+        &\approx .01 \left(2^10\right)^2 \\
+        &\approx .01 1000^2 \\
+        &= 10000~\text{dollars} 
+    \end{align*}
     \end{enumerate}
   \end{freeResponse}
 \end{question}
