@@ -1,0 +1,181 @@
+ \documentclass[handout,nooutcomes,noauthor,hints]{ximera}
+
+\input{../preamble.tex}
+
+\title{Roof Shape Estimates}
+
+\author{Bart Snapp and Claire Merriman}
+
+\begin{document}
+\begin{abstract}
+  Formulas can be hard to use, sometimes a good guess is best.
+\end{abstract}
+\maketitle
+
+\begin{listObjectives}
+ \item Determine a reasonable estimate before preforming a calculation,
+
+\end{listObjectives}
+
+
+\begin{question}
+
+
+ Here is a roof that is pointed in the middle:
+  \begin{center}
+    \includegraphics[width=.5\textwidth]{../formulasGalore/symRoof.jpg}
+  \end{center}
+  Below is a diagram of the roof as seen from the top:
+  \begin{center}
+    \begin{tikzpicture}[x=1.5cm,y=1.5cm]
+      \draw[ultra thick] (0,0) rectangle (3,2.4);
+      %\draw[dashed] (.5,.5) rectangle (4.3,2.5);
+    \draw[ultra thick] (0,1.2) -- (3,1.2);
+    \draw[decoration={brace,raise=.2cm},decorate,thin] (0,0)--(0,2.4);
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(3,0);
+    \node at (-.4,1.2) {$24'$};
+    \node at (1.5,-.44) {$30'$};
+    \node[above] at (1.5,1.2) {main ridge};
+    \end{tikzpicture}
+  \end{center}
+  You ask four friends what the surface area of the roof is. They give
+  you four different answers. Here are their answers:
+    \begin{enumerate}
+    \item $9$ square feet
+    \item $90$ square feet
+    \item $900$ square feet
+    \item $9000$ square feet
+    \end{enumerate}
+    \begin{enumerate}
+  \item[ \emph{Think:}] Without looking anything up, which answer above is \textbf{closest} to the correct answer? 
+
+There is another \emph{Think} question on the next page:
+\mynewpage
+Here is a house with an asymmetric roof:
+  \begin{center}
+    \includegraphics[width=.5\textwidth]{../formulasGalore/skewRoof.jpg}
+  \end{center}
+  Below is a diagram of the roof as seen from the top:
+\begin{center}
+  \begin{tikzpicture}[x=1.5cm,y=1.5cm]
+    \draw[ultra thick] (0,0) rectangle (5,3.6);
+    %\draw[dashed] (.3,.3) rectangle (4.5,2.1);
+    \draw[ultra thick] (0,3) -- (5,3);
+    \draw[decoration={brace,raise=.2cm},decorate,thin] (0,0)--(0,3);
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (5,3.1)--(5,3.6);
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(5,0);
+    \node at (-.5,1.5) {$30'$};
+    \node at (5.4,3.3) {$6'$};
+    \node at (2.5,-.44) {$50'$};
+    \node[below] at (2.5,3) {main ridge};
+  \end{tikzpicture}
+\end{center}
+  You ask four friends what the surface area of the roof is. They give
+  you four different answers. Here are their answers:
+    \begin{enumerate}
+    \item $20$ square feet
+    \item $200$ square feet
+    \item $2000$ square feet
+    \item $20000$ square feet
+    \end{enumerate}
+  \item[ \emph{Think:}] Without looking anything up, which answer above is \textbf{closest} to the correct answer? 
+  \item[\emph{Group:}] Explain your reasoning, using only the information provided in this problem.  
+      \item[\emph{Share:}] Based on the whole class discussion, do your answer to the previous two questions change?  If so, explain how.
+  \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item Answer $(iii)$ is correct. The SMALLEST that the area of the
+      roof could be is
+      \[
+      24\cdot 30 = 720.
+      \]
+      It is clear that the length of a side is around $12$ feet (half the width), so
+      the LARGEST the are of the roof could be is
+      \[
+      \underbrace{720}_{\text{area of base}} + 2\cdot 12\cdot 30 = 1440.
+      \]
+      Note, $720 < 900 < 1440$.
+    \item Answer $(iv)$ is correct.  The SMALLEST that the area of the
+      roof could be is
+      \[
+      36\cdot 50 = 1800.
+      \]
+      The average of each side of the roof is a little greater than
+      have of the width, so the LARGEST the are of the roof could be
+      is
+      \[
+      \underbrace{1800}_{\text{area of base}} + 2\cdot 18\cdot 50 = 3600.
+      \]
+      Note, $1800 < 2000 < 3600$.
+    \end{enumerate}
+  \end{freeResponse}
+\end{question}
+\mynewpage
+
+\begin{question}
+ What additional information would you need to find the \textbf{actual} area of the roofs in the previous problem?
+\end{question}
+\mynewpage
+
+\begin{question}
+ Dr. Merriman has provided an outline of the house with the symmetrical roof with some measurements. Not all of these measurements are needed to find the area of the roof. You also need one additional measurement that was given in Problem 1.
+ 
+ Calculate the surface area of the roof. How close is it to the estimate from Problem 1?
+ 
+ \begin{center}
+  \begin{tikzpicture}[x=5cm,y=5cm]
+    \draw[ultra thick] (0,0) -- (2.4,0);
+    \draw[ultra thick] (0,0) -- (0,1);
+    \draw[ultra thick] (2.4,0) -- (2.4,1);
+    \draw[ultra thick] (1.2,1.9) -- (0,1);
+    \draw[ultra thick] (1.2,1.9) -- (2.4,1);
+    \draw[decoration={brace,raise=.2cm},decorate,thin] (0,0)--(0,1);
+   \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (2.4,0)--(2.4,1.9);
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (1.15,1)--(1.15,1.9);
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(1.2,0);
+    \draw[decoration={brace,raise=.2cm},decorate,thin] (2.4,0)--(1.2,0);
+%    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (1.2,1.9) -- (0,1);
+%    \draw[decoration={brace,raise=.2cm},decorate,thin] (1.2,1.9) -- (2.4,1);
+    \node at (-.25,.55) {$10'$};
+    \node at (1.8,-.15) {$12'$};
+    \node at (.6,-.15) {$12'$};
+%    \node at (.5,1.6) {$15'$};
+%    \node at (1.9,1.6) {$15'$};
+    \node at (2.55,.95) {$19'$};
+    \node at (1.3,1.45) {$9'$};
+  \end{tikzpicture}
+\end{center}
+\end{question}
+
+\mynewpage
+
+\begin{question}
+ Dr. Merriman has provided an outline of the house with the asymmetrical roof with some measurements. Not all of these measurements are needed to find the area of the roof. You also need one additional measurement that was given in Problem 1.
+ 
+ Calculate the surface area of the roof. How close is it to the estimate from Problem 1?
+ 
+ \vspace{-1in}
+ \begin{center}
+  \begin{tikzpicture}[x=3.5cm,y=3.5cm]
+    \draw[ultra thick] (0,0) -- (3.6,0);
+    \draw[ultra thick] (0,0) -- (0,1.125);
+    \draw[ultra thick] (3.6,0) -- (3.6,1.125);
+    \draw[ultra thick] (3,2.5) -- (0,1.125);
+    \draw[ultra thick] (3,2.5) -- (3.6,1.125);
+    \draw[decoration={brace,raise=.2cm},decorate,thin] (0,0)--(0,1.125);
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (3.6,0)--(3.6,2.5);
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(3,0);
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (3,0)--(3.6,0);
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (3,2.5) -- (0,1.125);
+    \draw[decoration={brace,raise=.2cm},decorate,thin] (3,2.5) -- (3.6,1.125);
+    \node at (-.25,.55) {$11.25'$};
+    \node at (5.4,3.3) {$6'$};
+    \node at (1.5,-.15) {$30'$};
+    \node at (1.45,2) {$33'$};
+    \node at (3.3,-.15) {$6'$};
+    \node at (3.5,1.85) {$15'$};
+    \node at (3.8,1.3) {$25'$};
+  \end{tikzpicture}
+\end{center}
+\end{question}
+\end{document}
