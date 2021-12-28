@@ -1,6 +1,10 @@
-\documentclass[numbers,nooutcomes,hints]{../xourse}
+\documentclass[handout,numbers,nooutcomes]{../xourse}
 
 \input{preamble.tex}
+
+\renewcommand{\mynewpage}{}
+\renewcommand{\vfill}{}
+
 
 \title{\textsf{Geometry Journal}}
 
@@ -18,7 +22,7 @@
 
 
 \partstyle
-\activity{sectionHeads/introduction.tex}
+\activity{sectionHeads/introductionAU21.tex}
 
 \journalstyle
 \activity{whoAreYou/whoAreYou.tex} %% DONE
@@ -28,64 +32,64 @@
 %%
 %%
 
-\partstyle
-\activity{sectionHeads/sizeAndGrowthOfNumbers.tex}
-\journalstyle
-%% THINK ABOUT NUMBERS
-
-%% payed a dollar every day, how long to make 100k?
-%% Use that to figure out lifetime, week month.
-%% Weathlest person in the world, how long?
-
-\activity{dollarASecond/dollarASecond.tex}
-
-
-
-%% penniesADay
-\activity{penniesADay/penniesADay.tex}
-%% Exponential growth
-%%%%% penny a day, two next, how much made in 1st day? 2nd day? 1st year? 2nd year? 
-%%%%% Use Snap?
-%%% Richter scale. 
-%% Feynman quote -- why so hard to understand?
-%% STUDENTS FIND EXAMPLES 
-
-
-%%% Abstracting away
-
-%% which is better
-%% summing? 1+ 2 + 4 +... + 2^n and pbp?
-%% then graphing
-
-
-
-%% COMPARING GROWTH
-
-\activity{comparingGrowth/comparingGrowth.tex}
-
-%% What is this speedy growth??? When the amount is proportial to the
-%% rate that it is growing.  EXPLAIN in CONTEXT OF BEING PAID.
-
-%R = A-1
-
-
-
-%% EXPLAIN VIRUS
-%% EPXLAIN ... 
-
-
-
-%% Find examples. 
-
-
-
-%% How long with exponetnial growth weathest person?
-%% adding numbers?
-%% multiplying numbers
+%\partstyle
+%\activity{sectionHeads/sizeAndGrowthOfNumbers.tex}
+%\journalstyle
+%%% THINK ABOUT NUMBERS
+%
+%%% payed a dollar every day, how long to make 100k?
+%%% Use that to figure out lifetime, week month.
+%%% Weathlest person in the world, how long?
+%
+%\activity{dollarASecond/dollarASecond.tex}
+%
+%
+%
+%%% penniesADay
+%\activity{penniesADay/penniesADay.tex}
+%%% Exponential growth
+%%%%%% penny a day, two next, how much made in 1st day? 2nd day? 1st year? 2nd year? 
+%%%%%% Use Snap?
+%%%% Richter scale. 
+%%% Feynman quote -- why so hard to understand?
+%%% STUDENTS FIND EXAMPLES 
+%
+%
+%%%% Abstracting away
+%
+%%% which is better
+%%% summing? 1+ 2 + 4 +... + 2^n and pbp?
+%%% then graphing
+%
+%
+%
+%%% COMPARING GROWTH
+%
+%\activity{comparingGrowth/comparingGrowth.tex}
+%
+%%% What is this speedy growth??? When the amount is proportial to the
+%%% rate that it is growing.  EXPLAIN in CONTEXT OF BEING PAID.
+%
+%%R = A-1
+%
+%
+%
+%%% EXPLAIN VIRUS
+%%% EPXLAIN ... 
+%
+%
+%
+%%% Find examples. 
+%
+%
+%
+%%% How long with exponetnial growth weathest person?
+%%% adding numbers?
+%%% multiplying numbers
 
 
 \partstyle \activity{sectionHeads/scalingLengthAreaVolume} %% needs
-outcomes \journalstyle
+ \journalstyle
 \activity{whatDoYaWannaKnow/whatDoYaWannaKnow.tex} % REQUIRED
 \activity{areaOfTriangles/areaOfTriangles.tex} %% DONE REQUIRED
 \checkstyle \activity{areaOfTriangles/checkYourself.tex}
@@ -102,6 +106,9 @@ outcomes \journalstyle
 \checkstyle
 \activity{formulasGalore/checkYourself.tex} %% DON
 \journalstyle
+\activity{problemSolving/problemSolving}
+\journalstyle
+\activity{roofEstimates/roofEstimates}
 %% TALK ABOUT NUMBERS.
 %% 1) Think about size of numbers
 %% 2) small* small is small, large* large  is large
@@ -119,41 +126,46 @@ outcomes \journalstyle
 \activity{concreteExample/checkyourself.tex} %% DONE
 \journalstyle
 \activity{hipToBeSquare/hipToBeSquare.tex}
-\activity{rainRain/rainRain.tex}
+%\activity{rainRain/rainRain.tex}
 
-\activity{reptiles/reptiles.tex} %% DONE REQUIRED
-\checkstyle
-\activity{reptiles/checkyourself.tex} %% DONE
-\journalstyle
-\activity{reptilesAndArea/reptilesAndArea.tex}  %% DONE REQUIRED
-\checkstyle
-\activity{reptilesAndArea/checkyourself.tex} %% DONE
-\journalstyle
-\activity{supersizeMe/supersizeMe.tex} %% DONE REQUIRED
+%\activity{reptiles/reptiles.tex} %% DONE REQUIRED
+%\checkstyle
+%\activity{reptiles/checkyourself.tex} %% DONE
+%\journalstyle
+%\activity{reptilesAndArea/reptilesAndArea.tex}  %% DONE REQUIRED
+%\checkstyle
+%\activity{reptilesAndArea/checkyourself.tex} %% DONE
+%\journalstyle
+%\activity{supersizeMe/supersizeMe.tex} %% DONE REQUIRED
+\activity{miniMe/miniMe.tex}
 \checkstyle
 \activity{supersizeMe/checkyourself.tex} %% DONE
 \journalstyle
-\activity{quickQuestions/quickQuestions.tex} %% DONE REQUIRED
-\checkstyle
-\activity{quickQuestions/checkyourself.tex}
+%\activity{quickQuestions/quickQuestions.tex} %% DONE REQUIRED
+%\checkstyle
+%\activity{quickQuestions/checkyourself.tex}
 \journalstyle
 \activity{inTheWild/inTheWild.tex} %% DONE REQUIRED
+\activity{measureStairs/measureStairs.tex} %% DONE  REQUIRED
 \activity{staircases/staircases.tex} %% DONE  REQUIRED
-
-
-
-
-
-
+\activity{togetherStairs/togetherStairs.tex}
+%
+\checkstyle
+\activity{measureStairs/checkYourself.tex}
+%
+%
+%
+%
+%
 %%% REMOVED \activity{reflectingSVG/reflectingSVG.tex} %% OK IS THIS NEEDED?
 
 \partstyle
-\activity{sectionHeads/anglesAndTriangles.tex}
+\activity{sectionHeads/anglesAndTriangles.tex} %%%update
 \journalstyle
-\activity{whyTriangles/whyTriangles.tex} %% DONE REQUIRED
+%\activity{whyTriangles/whyTriangles.tex} %% DONE REQUIRED
 \activity{drawingWithTheTurtle/drawingWithTheTurtle.tex} %% DONE REQUIRED
 \activity{llamaAndTheTriangle/llamaAndTheTriangle.tex} %% DONE REQUIRED
-
+\activity{tilings/tilings.tex}%%%Requires tiles
 \skipjournalstyle
 \activity{lifeOnACone/lifeOnACone.tex} %% DONE
 \journalstyle
@@ -162,35 +174,36 @@ outcomes \journalstyle
 
 %\activity{windFarm/windFarm.tex} %% DONE -- WRONG PLACE!!!!
 
-\activity{bisectionMethod/bisectionMethod.tex} %% DONE -- though maybe more table work should be added.
+%\activity{bisectionMethod/bisectionMethod.tex} %% DONE -- though maybe more table work should be added.
 \activity{pythagoreanTheorem/pythagoreanTheorem.tex} %% DONE REQUIRED
 
 
 \activity{distanceFormula/distanceFormula.tex} %% DONE REQUIRED 
-\activity{applyOurselves/applyOurselves.tex}  %% DONE EXCEPT FOR PROPOSED SOLN  REQUIRED
+%\activity{applyOurselves/applyOurselves.tex}  %% DONE EXCEPT FOR PROPOSED SOLN  REQUIRED
 
-\skipjournalstyle
-\activity{geometryInDisguise/geometryInDisguise.tex} %% DRAFTED -- CHECK SOLNS
+%\skipjournalstyle
+%\activity{geometryInDisguise/geometryInDisguise.tex} %% DRAFTED -- CHECK SOLNS
+\activity{moreTriangles/moreTriangles.tex}%% Added due to removing questions about vertical angles. Set up for earth
 \activity{earth/earth.tex}  %% DRAFTED -- CHECK SOLNS SEE NOTES!!!!    REQUIRED
-\journalstyle
-
+\checkstyle
+\activity{earth/checkYourself.tex}
 
 \partstyle
 \activity{sectionHeads/trigonometry.tex} %% 
 \journalstyle
-
-
-
-
-
-\activity{anglesAndRightTriangles/anglesAndRightTriangles.tex} %% DONE  REQUIRED     THIS SHOULD FOCUS ON RATIOS MORE!!!!!!
-
 
 \activity{sineAndCosine/sineAndCosine.tex}  %%
 \checkstyle
 \activity{sineAndCosine/checkYourself.tex}  %% 
 \journalstyle
 %% STRING ART COULD GO HERE.
+
+
+
+\activity{anglesAndRightTriangles/anglesAndRightTrianglesAU21.tex} %% DONE  REQUIRED     THIS SHOULD FOCUS ON RATIOS MORE!!!!!!
+
+
+
 
 
 
@@ -203,9 +216,10 @@ outcomes \journalstyle
 
 %%BADBAD SAS
 
-\activity{lawOfCosines/lawOfCosines.tex} %% %% SAS ORDER OF SSS VARIBLES
+%\activity{lawOfCosines/lawOfCosines.tex} %% %% SAS ORDER OF SSS VARIBLES
+\activity{tangent/tangent.tex} %%Added by Claire, solar angle, windows, shadows
 \activity{pitch/pitch.tex} %%  DONE
-
+\activity{pitch/morePitch.tex} %%% Added by Claire, ramps and road grade
 % FANCY PITCH???  YES!
 %% this needs to go after pitch
 \activity{notSoQuickQuestions/notSoQuickQuestions.tex} %% RENAME? NOT SO QUICK QUESTIONS?   REQUIRED  %% COULD TIE EVERTHING TOGETHER
@@ -248,7 +262,11 @@ outcomes \journalstyle
 \activity{symSquare/symSquare.tex} %% DONE 
 \skipjournalstyle
 \activity{symHex/symHex.tex}  %%  DONE
-\activity{dihedralSymmetry/dihedralSymmetry.tex}  %% DDONE
+\checkstyle
+\activity{symTriangle/checkYourself.tex}  %% 
+\journalstyle
+
+%\activity{dihedralSymmetry/dihedralSymmetry.tex}  %% DDONE
 \journalstyle
 %\activity{stars/stars.tex} %% 
 
@@ -272,9 +290,9 @@ outcomes \journalstyle
 \activity{combinationsOfSym/combinationsOfSym.tex} %%  DONE
 \activity{fiveTypesOfSym/fiveTypesOfSym.tex}  %% DONE
 \skipjournalstyle
-\activity{manyTypesOfPizza/manyTypesOfPizza.tex} %% DONE
+%\activity{manyTypesOfPizza/manyTypesOfPizza.tex} %% DONE
 \journalstyle
-\activity{sevenTypesOfFrieze/sevenTypesOfFrieze.tex}  %% DONE
+\activity{sevenTypesOfFrieze/sevenTypesOfFriezeAU21.tex}  %% DONE
 %\activity{identifyingSymmetry/identifyingSymmetry.tex}  SHOULD BE INFORMED BY QUIZZES
 
 
