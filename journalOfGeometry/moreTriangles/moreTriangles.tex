@@ -1,0 +1,129 @@
+\documentclass[noauthor,nooutcomes,handout]{../ximera}
+
+\input{../preamble.tex}
+
+\title{A few more triangles}
+\author{Claire Merriman}
+
+%% ONLY REQUIRES WHAT's YOUR ANGLE...
+
+
+
+\begin{document}
+\begin{abstract}
+We'll explore some more properties of angles and triangles.\end{abstract}
+\maketitle
+
+\begin{listOutcomes}
+\item Explain the relationship between vertical and supplementary angles,
+\item State and triangle congruence,
+\item Use radians to find the length of a circle segment,
+\item Use formulas to so word problems.
+\end{listOutcomes}
+
+\begin{listObjectives}
+\item Learn and apply basic geometric formulas,
+\item Explain why presented concepts and formulas are true,
+\end{listObjectives}
+\mynewpage
+
+
+
+
+In the following diagram, the lines $\bar{AB}$ and $\bar{CF}$ are parallel and perpendicular to $\bar{AC}$. Suppose that $\left\vert AE\right\vert =\left\vert
+EB\right\vert $ and $\left\vert CE\right\vert =\left\vert
+ED\right\vert $.
+
+This diagram is used for two questions.
+\begin{center}
+\begin{tikzpicture}[rotate=15]
+  \coordinate (A) at (-2,0);
+  \coordinate (B) at (6,0);
+  \coordinate (C) at (-2,-4);
+  \coordinate (D) at (6,4);
+  \coordinate (E) at (2,0);
+  \coordinate (F) at (8,-4);
+  \coordinate (G) at (-4,0);
+  \coordinate (H) at (8,0);
+  \coordinate (I) at (-4,-4);
+  \draw (G)--(H);
+  \draw (I)--(F);
+  \draw (B)--(D)--(C)--(A);
+  \tkzLabelPoints[above](D,A,E)
+  \tkzLabelPoints[below](B,C,F)
+  \tkzMarkSegments[mark=|](A,E E,B)
+  \tkzMarkSegments[mark=||](C,E E,D)
+  \tkzMarkAngle[size=0.75cm,mark=](B,E,D)
+  \tkzMarkAngle[size=0.5cm,mark=](D,E,A)
+  \tkzMarkAngle[size=0.75cm,mark=](A,E,C)
+  \tkzMarkAngle[size=0.5cm,mark=](C,E,B)
+  \tkzMarkAngle[size=0.75,mark=](F,C,D)
+  \tkzLabelAngle[pos = -1](A,E,C){$\alpha$}
+  \tkzLabelAngle[pos = 1](C,E,B){$\beta$}
+  \tkzLabelAngle[pos = 1](D,E,A){$\gamma$}
+  \tkzLabelAngle[pos = -1](C,E,A){$\delta$}
+  \tkzLabelAngle[pos = 1](F,C,D){$\epsilon$}
+\end{tikzpicture}
+\end{center}
+\begin{question}
+\begin{enumerate}
+    \item Find $\beta,\gamma,\delta$ and $\epsilon$ in terms of $\alpha$. Explain your reasoning. 
+    \item Look up triangle congruence theorems and cite your sources. Explain why $\left\vert AC\right\vert =\left\vert
+BD\right\vert $.
+    \item Explain why $\left\vert AC\right\vert =\left\vert
+BD\right\vert $ does not require $\bar{AB}$ and $\bar{AC}$ to be perpendicular.
+\end{enumerate}
+\end{question}
+\mynewpage
+
+\begin{question}
+\textit{Radians} are another way to measure angles. $1 \ radian$ is the angle made when we take the radius
+and wrap it round the circle. On a circle with radius $1\ unit$, the length of the blue arc is also $1\ unit$, so the marked angle has measure $1 \ radian$.
+
+
+\begin{center}
+\begin{tikzpicture}[geometryDiagrams]
+  \tkzDefPoint(0,0){O}
+  \tkzDefPoint(4,0){A}
+  \tkzDefPoint(4*cos(1),4*sin(1)){B}
+  \tkzDrawArc[blue,thick](O,A)(B)
+  \tkzDrawArc[thick](O,B)(A)
+  \tkzDrawLines[add = 0 and .5](O,A O,B)
+ % \tkzLablSegments[mark=|](O,A)
+  \tkzDrawPoints(O,A,B)
+  \tkzMarkAngle[size=0.75cm,mark=](A,O,B)
+   \tkzLabelAngle[pos = 1.5](A,O,B){$\theta=1\ rad$}
+ \end{tikzpicture}
+ 
+\end{center}
+
+The ever insightful Louie Llama is here to help!
+
+\begin{enumerate}
+    \item Louie Llama walks all the way around the  the circle. When he gets back to where he started, he has turn $2\pi \ rad$. Explain why in your own words. 
+    \item What is the length of blue segment if $\theta=\pi \ rad$? Why?
+    \item What is the length of the blue segment if $\theta=1 \ rad$ and the radius is $r$? Explain your reasoning.
+\end{enumerate}
+\end{question}
+\mynewpage
+
+\begin{question}
+  Here a problem that is at least $300$ years old, so let's call it an  ``oldie, but a goodie!''
+  \begin{quote}
+    Imagine a chain, pulled tight around the Earth's equator. Suppose
+   you add an extra $10'$ to the chain. The chain is then raised up
+    uniformly, all around the Earth, as high as possible. How high is    that?
+  \end{quote}
+  Supposing that
+  \begin{itemize}
+  \item There are $5280$ feet in a mile, and
+  \item the radius of the Earth is $4000$ miles,
+  \end{itemize}
+  it is now time for you to try you hand at this classic.
+  \begin{enumerate}
+  \item Give a solution in feet. Show all work.
+  \item Is the answer surprising? Explain why you say yes or no.
+  \end{enumerate}
+\end{question}
+
+\end{document}
