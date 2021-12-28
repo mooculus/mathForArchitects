@@ -1,9 +1,9 @@
-\documentclass[nooutcomes,noauthor,handout]{../ximera}
+\documentclass[nooutcomes,noauthor,handout]{ximera}
 
 \input{../preamble.tex}
 \title{The distance formula}
 
-\author{Bart Snapp and Claire Merriman}
+\author{Bart Snapp}
 
 \begin{document}
 \begin{abstract}
@@ -26,87 +26,87 @@
 \mynewpage
 
 
-%%%%%%%Moved to the previous assignment  by Claire AU21
-%\begin{question}
-%  Use the INTERNET to look up the distance formula. 
-%  \begin{enumerate}
-%    \item State the distance formula and where you found it. 
-%    \item Explain (perhaps with the help of a picture) how the
-%      distance formula follows from the Pythagorean theorem.
-%    \item A \textbf{circle} is the set of points equidistant from a
-%      given point. Use the distance formula to find the
-%      \textbf{standard equation of a circle} of radius $r$ centered at
-%      the origin. Explain how you used the distance formula to find this equation. 
-%  \end{enumerate}
-%  \begin{freeResponse}
-%    \begin{enumerate}
-%    \item The \underline{distance formula} says that the distance between two points $(x,y)$ and $(a,b)$ is
-%      \[
-%      \text{distance} = \sqrt{(x-a)^2 + (y-b)^2}.
-%      \]
-%    \item This is basically the Pythagorean theorem. Plot the points
-%      $(a,b)$ and $(x,y)$:
-%    \begin{center}
-%      \begin{tikzpicture}[geometryDiagrams]
-%	\begin{axis}[
-%            xmin=0, xmax=5,ymin=0,ymax=5,
-%            axis lines =left, 
-%            every axis y label/.style={at=(current axis.above origin),anchor=south},
-%            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-%            xtick={1,3}, xticklabels={$a$,$x$},
-%            ytick={2,3}, yticklabels={$b$,$y$},
-%            axis on top,
-%          ]       
-%          \addplot[,dashed] plot coordinates {(1,0) (1,2)};
-%          \addplot[,dashed] plot coordinates {(0,2) (1,2)};
-%          \addplot[,dashed] plot coordinates {(3,0) (3,3)};
-%          \addplot[,dashed] plot coordinates {(0,3) (3,3)};
-%          \addplot[,only marks,mark=*] coordinates{(1,2)};  %% closed hole          
-%          \addplot[,only marks,mark=*] coordinates{(3,3)};  %% closed hole          
-%        \end{axis}
-%      \end{tikzpicture}
-%    \end{center}
-%    We may now construct a right triangle with horizontal side length
-%    $(x-a)$ and vertical side length
-%    $(y-b)$ whose hypotenuse is the shortest path
-%    between the two points:
-%    \begin{center}
-%      \begin{tikzpicture}[geometryDiagrams]
-%        \begin{axis}[
-%            xmin=0, xmax=5,ymin=0,ymax=5,
-%            axis lines =left, 
-%            every axis y label/.style={at=(current axis.above origin),anchor=south},
-%            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-%            xtick={1,3}, xticklabels={$a$,$x$},
-%            ytick={2,3}, yticklabels={$b$,$y$},
-%            axis on top,
-%          ]       
-%          \node at (axis cs:2,1.75) {$(x-a)$}; 
-%          \node at (axis cs:3.5,2.5) {$(y-b)$}; 
-%          \addplot[dashed] plot coordinates {(1,2) (3,3)};
-%          \addplot[] plot coordinates {(1,2) (3,2)};
-%          \addplot[] plot coordinates {(3,2) (3,3)};
-%          \addplot[] plot coordinates {(2.83,2) (2.83,2.2) (3,2.2)};
-%          \addplot[,only marks,mark=*] coordinates{(1,2)};  %% closed hole          
-%          \addplot[only marks,mark=*] coordinates{(3,3)};  %% closed hole          
-%        \end{axis}
-%      \end{tikzpicture}
-%    \end{center}
-%    By the Pythagorean theorem, the length of this path is given by 
-%    \[
-%    \text{distance}=\sqrt{(x-a)^{2}+(y-b)^{2}}.
-%    \]
-%  \item Well, write
-%      \begin{align*}
-%        r &= \sqrt{x^2 + y^2}\\
-%        r^2 &= x^2 + y^2.
-%      \end{align*}
-%      This is the standard equation of a circle of radius $r$ centered
-%      at the origin.
-%    \end{enumerate}
-%  \end{freeResponse}
-%\end{question}
-%\mynewpage
+
+\begin{question}
+  Use the INTERNET to look up the distance formula. 
+  \begin{enumerate}
+    \item STATE the distance formula. 
+    \item EXPLAIN (perhaps with the help of a picture) how the
+      distance formula follows from the Pythagorean theorem.
+    \item A \textbf{circle} is the set of points equidistant from a
+      given point. DERIVE (you may use the INTERNET to help you) the
+      \textbf{standard equation of a circle} of radius $r$ centered at
+      the origin.  
+  \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item The \underline{distance formula} says that the distance between two points $(x,y)$ and $(a,b)$ is
+      \[
+      \text{distance} = \sqrt{(x-a)^2 + (y-b)^2}.
+      \]
+    \item This is basically the Pythagorean theorem. Plot the points
+      $(a,b)$ and $(x,y)$:
+    \begin{center}
+      \begin{tikzpicture}[geometryDiagrams]
+	\begin{axis}[
+            xmin=0, xmax=5,ymin=0,ymax=5,
+            axis lines =left, 
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            xtick={1,3}, xticklabels={$a$,$x$},
+            ytick={2,3}, yticklabels={$b$,$y$},
+            axis on top,
+          ]       
+          \addplot[,dashed] plot coordinates {(1,0) (1,2)};
+          \addplot[,dashed] plot coordinates {(0,2) (1,2)};
+          \addplot[,dashed] plot coordinates {(3,0) (3,3)};
+          \addplot[,dashed] plot coordinates {(0,3) (3,3)};
+          \addplot[,only marks,mark=*] coordinates{(1,2)};  %% closed hole          
+          \addplot[,only marks,mark=*] coordinates{(3,3)};  %% closed hole          
+        \end{axis}
+      \end{tikzpicture}
+    \end{center}
+    We may now construct a right triangle with horizontal side length
+    $(x-a)$ and vertical side length
+    $(y-b)$ whose hypotenuse is the shortest path
+    between the two points:
+    \begin{center}
+      \begin{tikzpicture}[geometryDiagrams]
+        \begin{axis}[
+            xmin=0, xmax=5,ymin=0,ymax=5,
+            axis lines =left, 
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            xtick={1,3}, xticklabels={$a$,$x$},
+            ytick={2,3}, yticklabels={$b$,$y$},
+            axis on top,
+          ]       
+          \node at (axis cs:2,1.75) {$(x-a)$}; 
+          \node at (axis cs:3.5,2.5) {$(y-b)$}; 
+          \addplot[dashed] plot coordinates {(1,2) (3,3)};
+          \addplot[] plot coordinates {(1,2) (3,2)};
+          \addplot[] plot coordinates {(3,2) (3,3)};
+          \addplot[] plot coordinates {(2.83,2) (2.83,2.2) (3,2.2)};
+          \addplot[,only marks,mark=*] coordinates{(1,2)};  %% closed hole          
+          \addplot[only marks,mark=*] coordinates{(3,3)};  %% closed hole          
+        \end{axis}
+      \end{tikzpicture}
+    \end{center}
+    By the Pythagorean theorem, the length of this path is given by 
+    \[
+    \text{distance}=\sqrt{(x-a)^{2}+(y-b)^{2}}.
+    \]
+  \item Well, write
+      \begin{align*}
+        r &= \sqrt{x^2 + y^2}\\
+        r^2 &= x^2 + y^2.
+      \end{align*}
+      This is the standard equation of a circle of radius $r$ centered
+      at the origin.
+    \end{enumerate}
+  \end{freeResponse}
+\end{question}
+\mynewpage
 
 
 
@@ -129,7 +129,8 @@
   that we will call \textbf{foci}, an \textbf{ellipse} is the set
   of points such that the sum of the distances from any point on
   the ellipse to the foci is constant.
- Consider an ellipse with foci:
+  \begin{enumerate}      
+  \item Consider an ellipse with foci:
     \[
     (-3,0) \qquad \text{and}\qquad (3,0)
     \]%\frac{x^{2}}{5^{2}}+\frac{y^{2}}{4^{2}}=1
@@ -142,24 +143,7 @@
     \item $(4.8,0.7)$ % no = 9.76267,,
     \item $(2,-3.6666\dots)$ % yes = 10.
     \end{enumerate}
-   \end{question}
-\mynewpage
-
-
-
-
-
-
-
-
-
-
-
-
-
-\begin{question}
-  \begin{enumerate}      
-  \item Consider this drawing of an ellipse:
+    \item Consider this drawing of an ellipse:
       \begin{center}
         \begin{tikzpicture}[geometryDiagrams,scale=.8]
           \draw (0,0) ellipse (2in and 1in);
@@ -181,8 +165,7 @@
         \end{tikzpicture}
       \end{center}
       Express $X+Y$ (as simply as you can!) in terms of $a$.
-
-\item \textit{Geometry Giorgio} suggests that the foci of this ellipse
+    \item \textit{Geometry Giorgio} suggests that the foci of this ellipse
       \begin{center}
         \begin{tikzpicture}[geometryDiagrams,scale=.8]
           \draw (0,0) ellipse (2in and 1in);
@@ -197,9 +180,8 @@
           \filldraw[black] (-1in,0in) circle (2pt) node[below] {(-1,0)};
         \end{tikzpicture}
       \end{center}
-      are at $(-1,0)$ and $(1,0)$. Prove him right or prove him wrong.
-         \end{enumerate}
-
+      are at $(-1,0)$ and $(1,0)$. Prove him RIGHT or prove him WRONG.
+  \end{enumerate}
   \begin{freeResponse}
     \begin{enumerate}
     \item Let's see, of these
@@ -224,33 +206,8 @@
 \end{question}
 \mynewpage
 
-\begin{question} %%%Added by Claire AU21
- All you need to draw an ellipse is two points, some string, and something to draw with. Pick two points below and measure the distance between them. Then, measure the string.
- 
-\begin{enumerate}
- \item Draw an ellipse uses those points and a string. You will either need someone to put their fingers on the points, or to get some cardboard and two push pins.
-\item Ellipses scale really well! Let's figure out how to draw the same ellipse, but scale the distance between the focii by 20. Explain how to draw this new ellipse.
-\end{enumerate}
-  
- 
-\end{question}
-\mynewpage
 
-\begin{question}%%%Added by Claire AU21
- The Oval is not an ellipse (it's not really an oval, either, a chunk is missing). However, we can use an ellipse to estimate the area of the Oval. The formula for the area of an ellipse is:
- \[\pi(\textnormal{length of major axis})(\textnormal{length of minor axis}).\] 
- 
-\begin{enumerate}
- \item 
- Use Google maps \url{https://support.google.com/maps/answer/1628031}\footnote{Unfortunately, this feature only works in the app on touchscreens. Apple Maps does not have this feature.} to find the length of the major axis by finding the length from one side, west of Thompson library to the other end of the ``long walk." Then find the minor axis by measuring sidewalk that runs roughly north/south through the center.
- 
-  \item Approximate the area of The Oval using the area of an ellipse.
-  \item You probably found the area of The Oval is square feet. Use that $43560\ sq \ ft= 1\ acre$ to find the area in acres. Or use an online converting calculator and provide a screenshot.
-  \item The University says that The Oval is 11.5 acres. Explain the difference between this answer and your answer above.
- \end{enumerate}
-\end{question}
 
-\end{document}
 
 
 
@@ -342,4 +299,4 @@
   \end{freeResponse}
 \end{question}
 
-
+\end{document}
