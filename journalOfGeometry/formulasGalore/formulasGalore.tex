@@ -1,6 +1,7 @@
-\documentclass[nooutcomes,noauthor,hints]{ximera}
+\documentclass[handout,nooutcomes,noauthor,hints]{ximera}
 
 \input{../preamble.tex}
+
 \title{Formulas galore}
 
 \author{Bart Snapp}
@@ -20,8 +21,14 @@
 \item Evaluate estimates as either too large or too small.
 \end{listOutcomes}
 
+\begin{listObjectives}
+\item Determine a reasonable estimate before preforming a calculation,
 
-Here are a bunch of formulas I found on the INTERNET at this site
+\item Learn and apply basic geometric formulas.
+
+\end{listObjectives}
+
+Here are a bunch of formulas Dr. Snapp found on the internet at this site
 \begin{center}
   \textit{https://sites.google.com/site/standardbasicengineering/home/useful-formula-for-finding-area-volume-of-solid-figures}
 \end{center}
@@ -29,7 +36,7 @@ Here are a bunch of formulas I found on the INTERNET at this site
   \includegraphics[width=.3\textwidth]{photoFormula1.jpg} \qquad \includegraphics[width=.3\textwidth]{photoFormula2.jpg}
 \end{center}
 
-Below, let's think about some questions. 
+Let's think about some questions. 
 
 
 \mynewpage
@@ -37,100 +44,71 @@ Below, let's think about some questions.
 
 
 
-\begin{question}
+\begin{question} \label{FG1:1}
   Consider the \link[\textit{Ericsson Globe}]{https://en.wikipedia.org/wiki/Ericsson_Globe}:
    \begin{center}
     \includegraphics[width=.4\textwidth]{dome.png} %https://www.researchgate.net/figure/Example-of-a-hemispherical-dome-in-modern-civil-engineering-Stockholm-Globe-Arena-by_fig2_308655043
    \end{center}
    Assuming that this building has a diameter of $110$ meters and a
    height of $85$ meters.
-   \begin{enumerate}
-   \item \label{FG1:1} Use the formulas above to find the surface area
+   
+   Use the formulas above to find the surface area
      and the volume of the \textit{Ericsson Globe}.
-   \item Estimate the values above by finding the surface area and
-     volume of:
-     \begin{enumerate}
-     \item A box with dimensions $100\times 100 \times 80$.
-     \item A box with dimensions $100\times 80 \times 80$.
-     \end{enumerate}
-   Note: While these answers are NOT EQUAL to your answers from
-   part \ref{FG1:1}, these answers \textbf{HAVE THE SAME NUMBER OF
-     DIGITS} as your answers from part \ref{FG1:1}.
-   \end{enumerate}
-   \begin{freeResponse}
-     \begin{enumerate}
-     \item Using the formulas above I found:
-       \[
-       SA = 2\pi 55\cdot 85 \approx 29374 \text{ square meters}
-       \]
-       and
-       \[
-       V = \pi85^2 \left(55-\frac{85}{3}\right)\approx  605280 \text{ cubic meters}.
-       \]
-     \item We have two computations.
-       \begin{enumerate}
-       \item For a box that is  $100\times 100 \times 80$, I find
-         \[
-         SA = 2(100\cdot 100 + 100\cdot 80 + 100\cdot 80) = 52000 
-         \]
-         and
-         \[
-         V = 100\cdot 100\cdot 80 =  800000 
-         \]
-       \item For a box that is  $100\times 80 \times 80$, I find
-         \[
-         SA = 2(100\cdot 80 + 80\cdot 80 + 100\cdot 80) = 44800
-         \]
-         and
-         \[
-         V = 100\cdot 80\cdot 80 = 640000
-         \] 
-       \end{enumerate}
-       Yup, these answers have the same number of digits as our answers from the first part.       
-     \end{enumerate}
-   \end{freeResponse}
-\end{question}
+   \begin{enumerate}
+   
+   \item Which formulas do you need? 
+   
+   \item What are the values of each of the variables in the formulas?
+   
+   \item Calculate the volume and area.
+      \end{enumerate}
+      \end{question}
 \mynewpage
 
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%% COULD BE IT's OWN ACTIVITY
-%%% UPPER AND LOWER BOUNDS
+\begin{question}        
+\begin{enumerate}
+\item Estimate the values in the Problem \ref{FG1:1} by finding the surface area and
+     volume of:
 
-\begin{question}
-  Consider the \link[\textit{Luxor Las Vegas}]{https://en.wikipedia.org/wiki/Luxor_Las_Vegas}:
+     \begin{enumerate}
+     \item A box with dimensions $100\times 100 \times 80$.
+     \item A box with dimensions $100\times 80 \times 80$.
+  
+     \end{enumerate}
+\item Why are these good estimates for the values in Problem \ref{FG1:1}?
+   \end{enumerate}
+   \end{question}
+\mynewpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% COULD BE IT's OWN ACTIVITY
+%%%% UPPER AND LOWER BOUNDS
+
+
+ \begin{question}   Consider the \link[\textit{Luxor Las Vegas}]{https://en.wikipedia.org/wiki/Luxor_Las_Vegas}.  Assume that the (square) base of this building has a side length of
+ $646$ feet and that the pyramid is $350$ feet tall:
   \begin{center}
     \includegraphics[width=.4\textwidth]{pyramid.jpg} 
   \end{center}
- Assuming that the (square) base of this building has a side length of
- $646$ feet and that the pyramid is $350$ feet tall,
+
   \begin{enumerate}
-  \item Which is EASIER to compute:
+  \item[ \emph{Think:}] Which is \textbf{easier} to compute:
     \begin{itemize}
-    \item the surface area (NOT including the bottom!) OR
+    \item the surface area (not including the bottom!) OR
     \item the volume
     \end{itemize}
-    of the \textit{Luxor Las Vegas}? EXPLAIN WHY one computation is
-    HARDER, and compute the EASIER one.
-  \item %% FOR THIS: ESTIMATE BY BASE AREA, ESTIMATE WITH 4 upright tri and place the correct value. 
+    of the \textit{Luxor Las Vegas}?
+    
+    \item[\emph{Group:}] Explain why one computation is
+    harder, and compute the easier one.
+    \item[\emph{Share:}] Based on the whole class discussion, do your answer to the previous two questions change?  If so, explain how.
+        \end{enumerate}
 
-    You ask six friends what the surface area of the top part of the
-    \textit{Luxor Las Vegas} is. They give you six wrong answers, but
-    you love them anyway, because they are your friends. Here are
-    their answers:
-    \begin{enumerate}
-    \item $650$ square feet
-    \item $6500$ square feet
-    \item $65000$ square feet
-    \item $650000$ square feet
-    \item $6500000$ square feet
-    \item $65000000$ square feet
-    \end{enumerate}
-    Which answer above is \textbf{closest} to the correct answer? EXPLAIN your reasoning.
-  \end{enumerate}
-  \begin{freeResponse}
+   \begin{freeResponse}
     \begin{enumerate}
       \item The volume is MUCH EASIER to compute than the surface
         area. To compute the surface area, you have to compute the
@@ -154,97 +132,34 @@ Below, let's think about some questions.
     \end{enumerate}
   \end{freeResponse}
 \end{question}
+
+\mynewpage
+
+ \begin{question} %% FOR THIS: ESTIMATE BY BASE AREA, ESTIMATE WITH 4 upright tri and place the correct value. 
+%
+    You ask six friends what the surface area of the top part of the
+    \textit{Luxor Las Vegas} is. They give you six wrong answers, but
+    you love them anyway, because they are your friends. Here are
+    their answers:
+    \begin{enumerate}
+    \item $650$ square feet
+    \item $6500$ square feet
+    \item $65000$ square feet
+    \item $650000$ square feet
+    \item $6500000$ square feet
+    \item $65000000$ square feet
+    \end{enumerate}
+      \begin{enumerate}
+  \item[ \emph{Think:}] Which answer above is \textbf{closest} to the correct answer? 
+  \item[\emph{Group:}]Explain your reasoning.
+      \item[\emph{Share:}] Based on the whole class discussion, do your answer to the previous two questions change?  If so, explain how.
+        \end{enumerate}
+
+  \end{question}
+
 \mynewpage
 
 
-
-\begin{question}
-  Formulas can be hard to use, sometimes a good guess is best.
-  \begin{enumerate}
-  \item Here is a roof that is pointed in the middle:
-  \begin{center}
-    \includegraphics[width=.6\textwidth]{symRoof.jpg}
-  \end{center}
-  Below is a diagram of the roof as seen from the top:
-  \begin{center}
-    \begin{tikzpicture}[x=2cm,y=2cm]
-      \draw[ultra thick] (0,0) rectangle (3,2.4);
-      %\draw[dashed] (.5,.5) rectangle (4.3,2.5);
-    \draw[ultra thick] (0,1.2) -- (3,1.2);
-    \draw[decoration={brace,raise=.2cm},decorate,thin] (0,0)--(0,2.4);
-    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(3,0);
-    \node at (-.4,1.2) {$24'$};
-    \node at (1.5,-.44) {$30'$};
-    \node[above] at (1.5,1.2) {main ridge};
-    \end{tikzpicture}
-  \end{center}
-  You ask four friends what the surface area of the root is. They give
-  you for wrong answers. Here are their answers:
-    \begin{enumerate}
-    \item $9$ square feet
-    \item $90$ square feet
-    \item $900$ square feet
-    \item $9000$ square feet
-    \end{enumerate}
-    Which answer above is \textbf{closest} to the correct answer? EXPLAIN your reasoning.
-  \item Here is a roof with an asymmetric roof:
-  \begin{center}
-    \includegraphics[width=.6\textwidth]{skewRoof.jpg}
-  \end{center}
-  Below is a diagram of the roof as seen from the top:
-\begin{center}
-  \begin{tikzpicture}[x=1.5cm,y=1.5cm]
-    \draw[ultra thick] (0,0) rectangle (5,3.6);
-    %\draw[dashed] (.3,.3) rectangle (4.5,2.1);
-    \draw[ultra thick] (0,3) -- (5,3);
-    \draw[decoration={brace,raise=.2cm},decorate,thin] (0,0)--(0,3);
-    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (5,3.1)--(5,3.6);
-    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(5,0);
-    \node at (-.5,1.5) {$30'$};
-    \node at (5.4,3.3) {$6'$};
-    \node at (2.5,-.44) {$50'$};
-    \node[below] at (2.5,3) {main ridge};
-  \end{tikzpicture}
-\end{center}
-  You ask four friends what the surface area of the root is. They give
-  you for wrong answers. Here are their answers:
-    \begin{enumerate}
-    \item $20$ square feet
-    \item $200$ square feet
-    \item $2000$ square feet
-    \item $20000$ square feet
-    \end{enumerate}
-    Which answer above is \textbf{closest} to the correct answer? EXPLAIN your reasoning.
-  \end{enumerate}
-  \begin{freeResponse}
-    \begin{enumerate}
-    \item Answer $(iii)$ is correct. The SMALLEST that the area of the
-      roof could be is
-      \[
-      24\cdot 30 = 720.
-      \]
-      It is clear that the length of a side is around $12$ feet (half the width), so
-      the LARGEST the are of the roof could be is
-      \[
-      \underbrace{720}_{\text{area of base}} + 2\cdot 12\cdot 30 = 1440.
-      \]
-      Note, $720 < 900 < 1440$.
-    \item Answer $(iv)$ is correct.  The SMALLEST that the area of the
-      roof could be is
-      \[
-      36\cdot 50 = 1800.
-      \]
-      The average of each side of the roof is a little greater than
-      have of the width, so the LARGEST the are of the roof could be
-      is
-      \[
-      \underbrace{1800}_{\text{area of base}} + 2\cdot 18\cdot 50 = 3600.
-      \]
-      Note, $1800 < 2000 < 3600$.
-    \end{enumerate}
-  \end{freeResponse}
-\end{question}
-\mynewpage
 
 
 \end{document}
