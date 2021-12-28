@@ -1,0 +1,93 @@
+\documentclass[noauthor,nooutcomes,handout]{../ximera}
+%\usepackage{subcaption}
+
+\input{../preamble.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%This activity is based on the Tiling of the Plane activity written 
+%%by Melinda Lanius, Claire Merriman, and Simone Sisneros-Thiry 
+%%for the Illinois Geometry Lab to be used by IGL graduate and 
+%%undergraduate volunteers at outreach events serving local 
+%%students in the Champaign-Urbana area. Funding for the IGL 
+%%activity creation was provided by the National Science 
+%%Foundation Mathways Grant.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Tilings of the Plane}
+\author{Claire Merriman}
+
+\begin{document}
+\begin{abstract}
+Determine which regular polygons can tiles.
+\end{abstract}
+\maketitle
+
+\begin{listOutcomes}
+ \item Give informal definitions of tessellation, polygon, and symmetry.
+\item Prove and disprove tilings of the plane by regular polygons using manipulatives.
+\item Pose questions about tilings of the plane with irregular polygons, or using multiple regular polygons.
+\end{listOutcomes}
+
+\begin{listObjectives}
+ \item Learn and apply basic geometric formulas,
+\item Explain why presented concepts and formulas are true,
+\item Determine if a shape can be used as a tile for tessellations.
+\end{listObjectives}
+
+ We want to determine which regular polygons (ie, a polygon where all sides have equal length and all angles have equal measure) can be used as a tile.
+ 
+ These questions can be extended to non-regular polygons, like rectangles, or uses more than one polygon at once. But for today, we want to only use one shape.
+
+\begin{question}
+We call mathematical tilings ‘tessellations.’ Today we are going to talk about tessellation of a flat surface.
+\begin{itemize}
+ \item[\emph{Think:}] What would be a reasonable definition of a tessellation with one shape? Here are two examples that are not tessellations, and one that is. Use these to help come up with a definition of a tessellation.
+ 
+ \begin{figure}[h]
+\centering
+\begin{subfigure}[h]{0.3\textwidth}
+	\includegraphics[width=\textwidth]{hearts} 
+	%\caption{Not valid because of gaps}
+\end{subfigure}
+\begin{subfigure}[h]{0.3\textwidth}
+	\includegraphics[width=\textwidth]{pentagons}
+	%\caption{Not valid because of overlap}
+\end{subfigure}
+\begin{subfigure}[h]{0.3\textwidth}
+	\includegraphics[width=\textwidth]{crosses}
+	%\caption{Valid}
+\end{subfigure}
+\end{figure}
+\item[\emph{Group:}] Discuss your definition with your group. What changes do you need to make so that your definition makes sense to others?
+\item[\emph{Share:}] Are there any additional changes you need to make based on the class discussion?
+\end{itemize}
+\end{question}
+\mynewpage
+
+\begin{question}
+ Now we are going to use these shapes to try to create a tiling. Work with your groups to fill out the following table. 
+If you cannot create a tessellation with a given polygon, leave the ``number around a vertex" box blank.
+
+The last column is also one of the columns in the \emph{Louie Llama and the Triangle} assignment.
+\[
+  \renewcommand{\arraystretch}{3}
+\begin{tabular}{|c|c|c|p{1.5cm}|p{2.5cm}|}\hline
+Shape & Number of Sides & Number around vertex & Tile? & Interior Angle Measure \\ \hline
+Triangle & 3 &  &  & \\ \hline
+Square & 4 &  &  & \\ \hline
+Pentagon & 5  &  &  & \\ \hline
+Hexagon & 6 &  &  & \\ \hline
+Heptagon & 7 &  &  & \\ \hline
+Octagon & 8 &  &  & \\ \hline
+n-gon & n &  &  & \\ \hline
+\end{tabular}
+\]
+\end{question}
+\mynewpage
+
+\begin{question}
+ Are these the only possible tessellations with regular polygons? If not, explain which ones are missing.
+ 
+ Once you have a complete list, explain how you know that there are no other options.
+\end{question}
+
+\end{document}
