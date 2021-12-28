@@ -1,0 +1,60 @@
+\documentclass{../ximera}
+
+\input{../preamble}
+
+\author{Claire Merriman}
+
+\checkYourselfAbstract
+
+\begin{document}
+\maketitle
+
+\begin{exercise}
+ The sum of the exterior angles of any polygon on a flat surface is $360^\circ$
+\end{exercise}
+
+\begin{exercise}
+ Consider the following equation: $(80-\alpha)+(80-\beta)+(80-\gamma)=40$. Solve for $\alpha+\beta+\gamma$.
+\end{exercise}
+
+\begin{exercise}
+ When walking all the way around the following shape, identify the angles through which Louie Llama or the \snap\ turtle turns 
+     \begin{center}
+      \begin{tikzpicture}
+        \foreach \i in {1,...,9}
+                 {
+                   \draw ({2*sin(\i *360/9)},{2*cos(\i * 360/9)}) -- ({2*sin((\i+2)*360/(9))},{2*cos((\i+2)*360/(9))});
+                   \node (1) at ({1.75*sin(\i *360/9)},{1.75*cos(\i *360/9)}) {$\beta$};
+                 }
+                 
+      \end{tikzpicture}
+    \end{center}
+\end{exercise}
+
+\begin{exercise}
+ The angle measure of $\beta$ in the previous question is:
+ 
+  \begin{enumerate}\begin{multicols}{2}
+  \item $40^\circ$
+  \item $80^\circ$
+  \item $100^\circ$
+  \item $60^\circ$
+    \end{multicols}
+  \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+ You draw an angle with the vertex is in the center of the paper, and whose sides extend to the edges of the paper. You then cut one of the sides and make a cone. A triangle drawn on the cone, around the vertex will have:
+ 
+\begin{enumerate}
+\begin{multicols}{3}
+ \item Angle sum less than $180^\circ$
+ \item Angle sum equal to $180^\circ$
+   \item Angle sum more than $180^\circ$
+\end{multicols}
+ 
+\end{enumerate}
+\end{exercise}
+
+\answerlistbox{True}{$\alpha+\beta+\gamma=200$}{Exterior Angles}{(c)}{(c)}
+\end{document}
