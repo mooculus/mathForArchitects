@@ -1,4 +1,4 @@
-\documentclass[noauthor,nooutcomes,hints,handout]{ximera}
+\documentclass[noauthor,nooutcomes,hints,handout]{../ximera}
 
 \input{../preamble.tex}
 
@@ -21,23 +21,23 @@
 
 
 Get out a piece of paper, a ruler, and a writing utensil. Really, do
-it!  Seriously! Now draw two lines that come to a point:
+it!  Seriously! Now draw two lines that come to a point.
 \[
-\includegraphics{mesh0.pdf}
+%\includegraphics{mesh0.pdf}
 \]
 Next, take both of those lines and mark the midpoints. Connect the
-midpoints with a line:
+midpoints with a line.
 \[
-\includegraphics{mesh1.pdf}
+%\includegraphics{mesh1.pdf}
 \]
 Each original line is now divided into two segments. Mark the
-midpoints of those segments and cross-connect them:
+midpoints of those segments and cross-connect them.
 \[
-\includegraphics{mesh2.pdf}
+%\includegraphics{mesh2.pdf}
 \]
 If you continue this cross-connecting process, you'll get groovy pictures like these:
 \[
-\includegraphics{mesh3.pdf}
+\includegraphics{mesh3}
 \]
 Over 2000 years ago, Apollonius of Perga explained why the curve
 formed by these segments is a \index{parabola}parabola. Today we call
@@ -45,6 +45,51 @@ what we just drew an \textit{envelope of tangents}\index{envelope of
   tangents}.  If we cross-connect $n$ pairs of lines we'll call this
 an \textit{$n$-line envelope of tangents}.
 
+
+
+
+
+
+\mynewpage
+
+
+
+
+
+
+\begin{question}
+  Carefully draw a $15$-line envelope of tangents, preferably by hand. Use a ruler or the folding method to find a midpoint. Make it big, take up the whole page!
+  \begin{freeResponse}
+    NOT DONE
+  \end{freeResponse}
+\end{question}
+\mynewpage
+
+
+
+
+
+
+This video \url{https://www.youtube.com/watch?v=Jjh_ZRhfnDY} and a lot of similar ones called ``How to Draw an Elliptical Curve Without Math or String!" actually uses a lot of math! And not just the calculations. It is basically using an envelope of tangents to approximate an ellipse with parabolas.
+    
+    To use the method, draw a horizontal and a vertical line of length $a+b$, then mark line in the diagram below: 
+    
+    
+\begin{center}
+\begin{tikzpicture}[geometryDiagrams,scale=.2]
+ \draw (-19, -19)--(-19,10)--(10,10);
+ \node at (0,10) {$|$};
+ \node at (-19,0) {$--$};
+  \node at (-10,11) {$a$};
+ \node at (-20,5) {$b$};
+         \draw[dashed,thin] (0,0) ellipse (19 and 10);
+\end{tikzpicture}
+\end{center}
+    
+The pen will then follow the top left quarter of the ellipse. 
+
+
+Other jig methods draw from the center.
 
 
 
@@ -66,23 +111,20 @@ allow curves to be:
 \end{enumerate}
 Given two end-points, B\'ezier devised a way to work with
 curves via a \textit{node} and two
-\textit{control points}:\index{node}\index{control-point}
-\[
-\includegraphics{bezier.pdf}
-\]
-With the end points remaining fixed, the artist can move the node and
+\textit{control points}:With the end points remaining fixed, the artist can move the node and
 control points to change the way the curve looks.  But how do those
 so-called control points actually control the way the curve looks?
 Well, the end points, node, and control points define a polygonal path:
+
 \[
-\includegraphics{bezierPoly.pdf}
+\includegraphics[width=.3\textwidth]{bezier.pdf}
 \]
 This polygonal path in turn gives an envelope of tangents, which then gives
 the desired curve:
 \[
-\includegraphics{bezierMesh.pdf}
+\includegraphics[width=.5\textwidth]{bezierMesh.pdf}
 \]
-While this may seem all fancy and highfalutin, it is the essence of
+This is the essence of
 B\'ezier's method for drawing curves.  It has become so popular that
 this is basically how curves are currently drafted using vector
 graphics programs such as \textit{Adobe Illustrator} and
@@ -118,232 +160,6 @@ impunity. This is really the genius of B\'ezier's method. By fixing
 the end points, one only need to know the position of the node and the
 control points. So by using a mouse, an artist can move the
 control points and node to get a plethora of interesting curves.
-
-
-
-
-\mynewpage
-
-
-
-
-
-
-\begin{question}
-  CAREFULLY draw a $15$-line envelope of tangents, preferably BY
-  HAND. Use a RULER. Make it BIG, take up the whole page!
-  \begin{freeResponse}
-    NOT DONE
-  \end{freeResponse}
-\end{question}
-\mynewpage
-
-
-
-
-
-\begin{question}
-  Suppose you are helping someone build an archway for their home from
-  a board that is $12''\times 42''$:
-  \begin{center}
-    \begin{tikzpicture}[geometryDiagrams,scale=.8]
-      \begin{scope}
-        \clip(-2.2in,0) rectangle (2.2in,1.3in);
-        \draw[dashed,thin] (0,0) ellipse (1.9in and 1in);
-      \end{scope}
-      \draw (-1.9in,0in) -- (-2.1in,0in) -- (-2.1in,1.2in) -- (2.1in,1.2in) -- (2.1in,0in) -- (1.9in,0in);
-      \draw[dashed, thin] (-1.9in,0in) -- (1.9in,0in);
-      \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (2.1in,0in)--(2.1in,1.2in);
-      \draw[decoration={brace,raise=.2cm},decorate,thin] (-2.1in,1.2in)--(2.1in,1.2in);
-      \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (-1.9in,0in)--(1.9in,0in);
-      \draw[|-|,thin] (0in,.05in)--(0in,.95in);
-      \node[below] at (0,-.1in) {$38''$};
-      \node[above] at (0,1.3in) {$42''$};
-      \node[right] at (2.2in,.6in) {$12''$};
-      \node[right] at (0in,.5in) {$10''$};
-        \end{tikzpicture}
-  \end{center}
-  You want to cut out some ``oval'' for the arch with the basic
-  dimensions above. Let's think about \textbf{different ways} to do
-  this.
-  \begin{enumerate}
-  \item One way to solve this problem is to think of the curve above
-    as being an \textbf{ellipse}. To draw an ellipse (by hand) we must
-    find the foci:
-    \[
-    f_1 = (-c,0) \qquad \text{and} \qquad f_2 = (c,0)
-    \]
-    \begin{itemize}
-    \item REPRODUCE the drawing above for the archway including the
-      CORRECT MEASUREMENTS for $c$, assuming that $f_1$ and $f_2$ are
-      the foci of an ellipse that draws the desired curve. Show all
-      work and explain your reasoning.
-      \begin{hint}
-      Consider a generic ellipse
-      \begin{center}
-        \begin{tikzpicture}[geometryDiagrams,scale=.8]
-          \draw (0,0) ellipse (2in and 1in);
-          \draw[->,thin] (0in,-1.5in) -- (0in,1.5in);
-          \draw[->,thin] (-2.5in,0in) -- (2.5in,0in);
-          \filldraw[black] (2in,0) circle (2pt) node[above right] {(a,0)};
-          \filldraw[black] (0,1in) circle (2pt) node[above right] {(0,b)};
-
-          \filldraw[black] (1.73in,0in) circle (2pt) node[below left] {(c,0)};
-          \filldraw[black] (-1.73in,0in) circle (2pt) node[below right] {(-c,0)};
-
-          \draw[dashed,thin] (-1.73in,0in) -- (.9in,.89in);
-          \draw[dashed,thin] (1.73in,0in) -- (.9in,.89in);
-
-          \node at (-.75in,.5in) {$X$};
-          \node at (1.2in,.35in) {$Y$};
-          
-          \filldraw[black] (.9in,.89in) circle (2pt);
-        \end{tikzpicture}
-      \end{center}
-    and use the fact that $X+Y$ is constant (no matter which point you
-    measure to on the ellipse) to deduce \textbf{one} of the
-    following:
-    \[
-    a^2 = b^2 + c^2 \qquad\text{or}\qquad
-    b^2 = a^2+c^2 \qquad\text{or}\qquad c^2 = a^2 + b^2
-    \]
-    Then you will be able to find $c$.
-    \end{hint}
-    \item EXPLAIN how someone could PHYSICALLY DRAW the required
-      ellipse using a \textbf{pencil}, \textbf{two nails}, and a
-      \textbf{string}.
-    \end{itemize}
-    
-  \item It turns out that your friend has a LASER cutter that can be
-    controlled by \snap\ blocks. To draw an ellipse in \snap\ like
-    this one:
-    \begin{center}
-        \begin{tikzpicture}[geometryDiagrams,scale=.8]
-          \draw (0,0) ellipse (2in and 1in);
-          \draw[->,thin] (0in,-1.5in) -- (0in,1.5in);
-          \draw[->,thin] (-2.5in,0in) -- (2.5in,0in);
-          \filldraw[black] (2in,0) circle (2pt) node[above right] {(a,0)};
-          \filldraw[black] (0,1in) circle (2pt) node[above right] {(0,b)};
-
-          \filldraw[black] (1.73in,0in) circle (2pt) node[below left] {(c,0)};
-          \filldraw[black] (-1.73in,0in) circle (2pt) node[below right] {(-c,0)};
-
-          \draw[dashed,thin] (-1.73in,0in) -- (.9in,.89in);
-          \draw[dashed,thin] (1.73in,0in) -- (.9in,.89in);
-
-          \node at (-.75in,.5in) {$X$};
-          \node at (1.2in,.35in) {$Y$};
-          
-          \filldraw[black] (.9in,.89in) circle (2pt);
-        \end{tikzpicture}
-      \end{center}
-    use
-    \[
-    x = a\sin(\theta) \qquad\text{and} \qquad y= b\cos(\theta)
-    \]
-    REPRODUCE the drawing above for the archway above in \snap\ by
-    modifying the block
-    \raisebox{-.4\height}{\includegraphics{circleBlank.png}} and using
-    the scale of $5~\text{steps} = 1~\text{inch}$.  Show off your work
-    by giving screenshots of your SCRIPTS and your STAGE.  As a
-    gesture of friendship, I provide the block
-    \raisebox{-.4\height}{\includegraphics{board.png}} to draw a scale copy of the board for
-    you.
- 
-  \item Use an envelope of tangents to draw this archway. You may do
-    this either by hand or in \snap.  As a gesture of friendship, I provide:
-    \begin{center}
-    \includegraphics{envelopeOfTangentsBlank.png} 
-    \end{center}
-    Show off your work with a CAREFULLY DRAWN picture OR a \snap\ STAGE.
-    \begin{hint}
-      I suggest you actually use TWO envelops of tangents.
-    \end{hint}
-  \end{enumerate}
-  \begin{freeResponse}
-    \begin{enumerate}
-  \item Considering the generic ellipse above, we see that the
-    sum of the distance from the foci to $(a,0)$ is $2a$ and the sum of the distance from
-    the foci to $(0,b)$ is $2\sqrt{b^2+c^2}$.
-    Hence
-    \begin{align*}
-      2a &= 2\sqrt{b^2+c^2}\\
-      a^2 &= b^2 + c^2.
-    \end{align*}
-    For our archway, $a= 19$ and $b = 10$, so then
-    \[
-    c \approx 16~\text{inches.}
-    \]
-    \begin{center}
-    \begin{tikzpicture}[geometryDiagrams,scale=.8]
-      \begin{scope}
-        \clip(-2.2in,0) rectangle (2.2in,1.3in);
-        \draw[dashed,thin] (0,0) ellipse (1.9in and 1in);
-      \end{scope}
-      \draw (-1.9in,0in) -- (-2.1in,0in) -- (-2.1in,1.2in) -- (2.1in,1.2in) -- (2.1in,0in) -- (1.9in,0in);
-      \draw[dashed, thin] (-1.9in,0in) -- (1.9in,0in);
-      \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (2.1in,0in)--(2.1in,1.2in);
-      \draw[decoration={brace,raise=.2cm},decorate,thin] (-2.1in,1.2in)--(2.1in,1.2in);
-      \draw[decoration={brace,raise=.8cm,mirror},decorate,thin] (-1.9in,0in)--(1.9in,0in);
-      \draw[|-|,thin] (0in,.05in)--(0in,.95in);
-      \node[below] at (0,-.4in) {$38''$};
-      \node[above] at (0,1.3in) {$42''$};
-      \node[right] at (2.2in,.6in) {$12''$};
-      \node[right] at (0in,.5in) {$10''$};
-      \filldraw[black] (1.6in,0in) circle (2pt);
-      \filldraw[black] (-1.6in,0in) circle (2pt);
-      \draw[decoration={brace,raise=.2cm},decorate,thin] (-1.6in,0in)--(0in,0in);
-      \draw[decoration={brace,raise=.2cm},decorate,thin] (0in,0in)--(1.6in,0in);
-      \node[above] at (.8in,.1in) {$16''$};
-      \node[above] at (-.8in,.1in) {$16''$};
-      \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (-2.1in,0)--(-1.6in,0in);
-      \node[below] at (-1.85in,-.1in) {$5''$};
-      \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (1.6in,0)--(2.1in,0in);
-      \node[below] at (1.85in,-.1in) {$5''$};
-      
-        \end{tikzpicture}
-    \end{center}
-  \item From our work above, we know that $a=19$ and $b=10$. So we can make an ellipse script:
-    \begin{center}
-      \includegraphics{ellipseSCRIPT.png}
-    \end{center}
-    Putting this together with the  \raisebox{-.4\height}{\includegraphics{board.png}} block, we have
-    \begin{center}
-      \includegraphics[width=.3\textwidth]{laserSCRIPT.png}   \qquad \fbox{\includegraphics[width=.5\textwidth]{laserSTAGE.png}}
-    \end{center}
-  \item Finally, here is my picture:
-    \begin{center}
-      \includegraphics{envARCHWAY.png}
-    \end{center}
-    \end{enumerate}
-  \end{freeResponse}
-\end{question}
-\mynewpage
-
-
-
-
-\begin{question}
-  It turns out that when you consider the curve by drawing an envelope
-  of tangents, you are thinking about a \textbf{parabola}. Parabolas
-  have a very special ``reflective'' property:
-  \begin{quote}
-    Parallel light rays coming into a parabolic mirror are focused at
-    a point called ``the focus.''
-  \end{quote}
-  \begin{enumerate}
-  \item Figure out what the sentence above means, and explain it with
-    the aid of a picture.
-  \item Explain what the reflective property of parabolas has to do
-    with car headlights.
-  \item Explain what the reflective property of parabolas has to do
-    with parabolic microphones.
-  \item Explain what the reflective property of parabolas has to do
-    with a solar oven.
-  \end{enumerate}
-\end{question}
-
-
 
 %% BADBAD REWRITE IN TERMS OF SMOOTHING
 %% \begin{question}
@@ -436,4 +252,206 @@ control points and node to get a plethora of interesting curves.
 %%   \end{enumerate}
 %%   \end{freeResponse}
 %% \end{question}
+
+\begin{question}
+  Suppose you are helping someone build an archway for their home from
+  a board that is $12''\times 42''$:
+  \begin{center}
+    \begin{tikzpicture}[geometryDiagrams,scale=.8]
+      \begin{scope}
+        \clip(-2.2in,0) rectangle (2.2in,1.3in);
+        \draw[dashed,thin] (0,0) ellipse (1.9in and 1in);
+      \end{scope}
+      \draw (-1.9in,0in) -- (-2.1in,0in) -- (-2.1in,1.2in) -- (2.1in,1.2in) -- (2.1in,0in) -- (1.9in,0in);
+      \draw[dashed, thin] (-1.9in,0in) -- (1.9in,0in);
+      \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (2.1in,0in)--(2.1in,1.2in);
+      \draw[decoration={brace,raise=.2cm},decorate,thin] (-2.1in,1.2in)--(2.1in,1.2in);
+      \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (-1.9in,0in)--(1.9in,0in);
+      \draw[|-|,thin] (0in,.05in)--(0in,.95in);
+      \node[below] at (0,-.1in) {$38''$};
+      \node[above] at (0,1.3in) {$42''$};
+      \node[right] at (2.2in,.6in) {$12''$};
+      \node[right] at (0in,.5in) {$10''$};
+        \end{tikzpicture}
+  \end{center}
+  You want to cut out some ``oval'' for the arch with the basic
+  dimensions above. Let's think about \textbf{different ways} to do
+  this.
+  \begin{enumerate}
+  \item One way to solve this problem is to think of the curve above
+    as being an \textbf{ellipse}. To draw an ellipse (by hand) we must
+    find the foci:
+    \[
+    f_1 = (-c,0) \qquad \text{and} \qquad f_2 = (c,0)
+    \]
+    \begin{enumerate}
+    \item Reproduce the drawing above for the archway including the
+     correct measurements for $c$, assuming that $f_1$ and $f_2$ are
+      the foci of an ellipse that draws the desired curve. Show all
+      work and explain your reasoning.
+         \item Explain how someone could physically draw the required
+      ellipse using a \textbf{pencil}, \textbf{two nails}, and a
+      \textbf{string}.
+    \end{enumerate}
+
+     
+      \begin{hint}
+      Consider a generic ellipse
+      \begin{center}
+        \begin{tikzpicture}[geometryDiagrams,scale=.8]
+          \draw (0,0) ellipse (2in and 1in);
+          \draw[->,thin] (0in,-1.5in) -- (0in,1.5in);
+          \draw[->,thin] (-2.5in,0in) -- (2.5in,0in);
+          \filldraw[black] (2in,0) circle (2pt) node[above right] {(a,0)};
+          \filldraw[black] (0,1in) circle (2pt) node[above right] {(0,b)};
+
+          \filldraw[black] (1.73in,0in) circle (2pt) node[below left] {(c,0)};
+          \filldraw[black] (-1.73in,0in) circle (2pt) node[below right] {(-c,0)};
+
+          \draw[dashed,thin] (-1.73in,0in) -- (.9in,.89in);
+          \draw[dashed,thin] (1.73in,0in) -- (.9in,.89in);
+
+          \node at (-.75in,.5in) {$X$};
+          \node at (1.2in,.35in) {$Y$};
+          
+          \filldraw[black] (.9in,.89in) circle (2pt);
+        \end{tikzpicture}
+      \end{center}
+    and use the fact that $X+Y$ is constant (no matter which point you
+    measure to on the ellipse) to deduce \textbf{one} of the
+    following:
+    \[
+    a^2 = b^2 + c^2 \qquad\text{or}\qquad
+    b^2 = a^2+c^2 \qquad\text{or}\qquad c^2 = a^2 + b^2
+    \]
+    Then you will be able to find $c$.
+    \end{hint}
+    
+%  \item It turns out that your friend has a LASER cutter that can be
+%    controlled by \snap\ blocks. To draw an ellipse in \snap\ like
+%    this one:
+%    \begin{center}
+%        \begin{tikzpicture}[geometryDiagrams,scale=.8]
+%          \draw (0,0) ellipse (2in and 1in);
+%          \draw[->,thin] (0in,-1.5in) -- (0in,1.5in);
+%          \draw[->,thin] (-2.5in,0in) -- (2.5in,0in);
+%          \filldraw[black] (2in,0) circle (2pt) node[above right] {(a,0)};
+%          \filldraw[black] (0,1in) circle (2pt) node[above right] {(0,b)};
+%
+%          \filldraw[black] (1.73in,0in) circle (2pt) node[below left] {(c,0)};
+%          \filldraw[black] (-1.73in,0in) circle (2pt) node[below right] {(-c,0)};
+%
+%          \draw[dashed,thin] (-1.73in,0in) -- (.9in,.89in);
+%          \draw[dashed,thin] (1.73in,0in) -- (.9in,.89in);
+%
+%          \node at (-.75in,.5in) {$X$};
+%          \node at (1.2in,.35in) {$Y$};
+%          
+%          \filldraw[black] (.9in,.89in) circle (2pt);
+%        \end{tikzpicture}
+%      \end{center}
+%    use
+%    \[
+%    x = a\sin(\theta) \qquad\text{and} \qquad y= b\cos(\theta)
+%    \]
+%    REPRODUCE the drawing above for the archway above in \snap\ by
+%    modifying the block
+%    \raisebox{-.4\height}{\includegraphics{circleBlank.png}} and using
+%    the scale of $5~\text{steps} = 1~\text{inch}$.  Show off your work
+%    by giving screenshots of your SCRIPTS and your STAGE.  As a
+%    gesture of friendship, I provide the block
+%    \raisebox{-.4\height}{\includegraphics{board.png}} to draw a scale copy of the board for
+%    you.
+% 
+  \item Use an envelope of tangents to draw this archway. You may do
+    this either by hand or in \snap.  As a gesture of friendship, I provide:
+    \begin{center}
+    \includegraphics{envelopeOfTangentsBlank.png} 
+    \end{center}
+    Show off your work with a carefully picture or a \snap\ stage.
+    \begin{hint}
+      I suggest you actually use two envelops of tangents.
+    \end{hint}
+  \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+  \item Considering the generic ellipse above, we see that the
+    sum of the distance from the foci to $(a,0)$ is $2a$ and the sum of the distance from
+    the foci to $(0,b)$ is $2\sqrt{b^2+c^2}$.
+    Hence
+    \begin{align*}
+      2a &= 2\sqrt{b^2+c^2}\\
+      a^2 &= b^2 + c^2.
+    \end{align*}
+    For our archway, $a= 19$ and $b = 10$, so then
+    \[
+    c \approx 16~\text{inches.}
+    \]
+    \begin{center}
+    \begin{tikzpicture}[geometryDiagrams,scale=.8]
+      \begin{scope}
+        \clip(-2.2in,0) rectangle (2.2in,1.3in);
+        \draw[dashed,thin] (0,0) ellipse (1.9in and 1in);
+      \end{scope}
+      \draw (-1.9in,0in) -- (-2.1in,0in) -- (-2.1in,1.2in) -- (2.1in,1.2in) -- (2.1in,0in) -- (1.9in,0in);
+      \draw[dashed, thin] (-1.9in,0in) -- (1.9in,0in);
+      \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (2.1in,0in)--(2.1in,1.2in);
+      \draw[decoration={brace,raise=.2cm},decorate,thin] (-2.1in,1.2in)--(2.1in,1.2in);
+      \draw[decoration={brace,raise=.8cm,mirror},decorate,thin] (-1.9in,0in)--(1.9in,0in);
+      \draw[|-|,thin] (0in,.05in)--(0in,.95in);
+      \node[below] at (0,-.4in) {$38''$};
+      \node[above] at (0,1.3in) {$42''$};
+      \node[right] at (2.2in,.6in) {$12''$};
+      \node[right] at (0in,.5in) {$10''$};
+      \filldraw[black] (1.6in,0in) circle (2pt);
+      \filldraw[black] (-1.6in,0in) circle (2pt);
+      \draw[decoration={brace,raise=.2cm},decorate,thin] (-1.6in,0in)--(0in,0in);
+      \draw[decoration={brace,raise=.2cm},decorate,thin] (0in,0in)--(1.6in,0in);
+      \node[above] at (.8in,.1in) {$16''$};
+      \node[above] at (-.8in,.1in) {$16''$};
+      \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (-2.1in,0)--(-1.6in,0in);
+      \node[below] at (-1.85in,-.1in) {$5''$};
+      \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (1.6in,0)--(2.1in,0in);
+      \node[below] at (1.85in,-.1in) {$5''$};
+      
+        \end{tikzpicture}
+    \end{center}
+  \item From our work above, we know that $a=19$ and $b=10$. So we can make an ellipse script:
+    \begin{center}
+      \includegraphics{ellipseSCRIPT.png}
+    \end{center}
+    Putting this together with the  \raisebox{-.4\height}{\includegraphics{board.png}} block, we have
+    \begin{center}
+      \includegraphics[width=.3\textwidth]{laserSCRIPT.png}   \qquad \fbox{\includegraphics[width=.5\textwidth]{laserSTAGE.png}}
+    \end{center}
+  \item Finally, here is my picture:
+    \begin{center}
+      \includegraphics{envARCHWAY.png}
+    \end{center}
+    \end{enumerate}
+  \end{freeResponse}
+\end{question}
+\mynewpage
+
+
+
+
+\begin{question}
+  It turns out that when you consider the curve by drawing an envelope
+  of tangents, you are thinking about a \textbf{parabola}. Parabolas
+  have a very special ``reflective'' property:
+  \begin{quote}
+    Parallel light rays coming into a parabolic mirror are focused at
+    a point called ``the focus.''
+  \end{quote}
+  \begin{enumerate}
+  \item Figure out what the sentence above means, and explain it with
+    the aid of a picture.
+  \item Read about the skyscraper that melted cars \url{https://www.bbc.com/news/magazine-23944679}. Explain how this is related to parabolas and the focus.
+    \end{enumerate}
+\end{question}
+
+
+
+
 \end{document}
