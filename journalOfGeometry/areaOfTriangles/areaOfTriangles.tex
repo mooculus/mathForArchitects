@@ -1,4 +1,4 @@
-\documentclass[nooutcomes,noauthor,handout]{ximera}
+\documentclass[nooutcomes,noauthor,handout]{../ximera}
 
 \input{../preamble.tex}
 \title{Area of triangles}
@@ -20,13 +20,19 @@
   different perimeters.
 \end{listOutcomes}
 
+\begin{listObjectives}
+ \item Explain why presented concepts and formulas are true,
+ \item Increase student confidence in their ability to solve difficult math problems by using previous results, trying different methods, asking questions, and working with others,
+ \item Improve student’s mathematical communication skills.
+
+\end{listObjectives}
 
 \mynewpage
 
 
 
 \begin{question} 
-  Explain how the following picture ``proves'' that the area of a RIGHT
+  Explain how the following picture ``proves'' that the area of a right
   triangle is one half of the base times the height.
   \begin{center}
     \begin{tikzpicture}[geometryDiagrams]
@@ -74,15 +80,16 @@
 
 
 \begin{question}
-  ``Shearing'' is a process where you take a shape, cut it into thin strips, 
+  \emph{Shearing} is a process where you take a shape, cut it into thin strips, 
   then push the strips around in one direction to make a new shape.  
-  Cavalieri's principle states:\index{Cavalieri's principle}
+  Cavalieri's principle, or ``the shearing principle," states:\index{Cavalieri's principle}
   \begin{quote}
     Shearing parallel to a fixed direction does not change the
     $n$-dimensional measure of an object.
   \end{quote}
-  EXPLAIN how the first problem, combined with the following
-  picture ``proves'' (via Cavalieri's principle) that the area of ANY
+ \begin{enumerate}
+  \item Explain how the first problem, combined with the following
+  picture ``proves'' (via Cavalieri's principle) that the area of \emph{any}
   triangle is one half of the base times the height.
   \begin{center}
     \begin{tikzpicture}[geometryDiagrams]
@@ -100,6 +107,12 @@
       
       \end{tikzpicture}
   \end{center}
+  \vfill 
+  \item Explain how to use a picture to prove that a triangle of a
+    given (fixed) area could have an arbitrarily large perimeter.
+    \vfill \vfill
+  \end{enumerate}
+  
   \begin{freeResponse}
     If we want to know the area of any triangle, simply shear it to be a right triangle:
       \begin{center}
@@ -133,12 +146,9 @@
 
 
 \begin{question} Finally:
-  \begin{enumerate}
-  \item Give an intuitive argument explaining why Cavalieri's
+   Give an intuitive argument explaining why the shearing
     principle is true.
-  \item Explain how to use a picture to ``prove'' that a triangle of a
-    given (fixed) area could have an ARBITRARILY LARGE perimeter.
-  \end{enumerate}
+  
   \begin{freeResponse}
     \begin{enumerate}
     \item Imagine our triangle as being a cross section of stacked
