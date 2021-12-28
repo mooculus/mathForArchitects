@@ -19,14 +19,15 @@
 \usepackage{draftwatermark}
 \SetWatermarkText{\normalfont 
 \semester \the\year}
-\SetWatermarkScale{1}
-\SetWatermarkLightness{.98}
+\SetWatermarkScale{4}
+\SetWatermarkLightness{.95}
 
 
+ \usepackage{amsmath,amsthm}
 
 \usepackage{multicol}
 
-
+\usepackage{subcaption}
 
 
 %% where to find images
@@ -37,11 +38,14 @@
 {./areaOfTriangles/}
 {./formulasGalore/}
 {./concreteExample/}
+{./hipToBeSquare/}
+{./miniMe/}
 {./drawingWithTheTurtle/}
 {./bisectionMethod/}
 %{./circles/}
 {./anglesAndRightTriangles/}
 {./llamaAndTheTriangle/}
+{./tilings/}
 {./lawOfSines/}
 {./lawOfCosines/}
 {./staircases/}
@@ -64,6 +68,7 @@
 {./combinationsOfSym/}
 {./fiveTypesOfSym/}
 {./sevenTypesOfFrieze/}
+{./togetherStairs/}
 {./reptilesAndArea/}
 {./supersizeMe/}
 {./identifyingSymmetry/}
@@ -89,14 +94,14 @@
 %% fonts
 \usepackage{euler}
 
-\usepackage{FiraMono}
-\renewcommand\familydefault{\ttdefault} 
-\usepackage[defaultmathsizes]{mathastext}
-\usepackage[htt]{hyphenat}
-
-\usepackage[T1]{fontenc}
-\usepackage[scaled=1]{FiraSans}
-
+%\usepackage{FiraMono}
+%\renewcommand\familydefault{\ttdefault} 
+%\usepackage[defaultmathsizes]{mathastext}
+%\usepackage[htt]{hyphenat}
+%
+%\usepackage[T1]{fontenc}
+%\usepackage[scaled=1]{FiraSans}
+%
 %\usepackage{wedn}
 \usepackage{pbsi} %% Answer font
 
@@ -106,6 +111,7 @@
 
 %% \usepackage{ulem} %% 
 %% \renewcommand{\ULthickness}{2pt}% changes underline thickness
+\usepackage{tikz}
 
 \tikzset{>=stealth}
 
@@ -184,6 +190,7 @@
 
 
 
+
 \let\exercise\relax
 \let\endexercise\relax
 
@@ -246,6 +253,13 @@
 \newenvironment{listSectionOutcomes}{\begin{mdframed}[style=OutcomeStyle]After completing the following journal entries, students should be able to:\begin{itemize}}{\end{itemize}\end{mdframed}}
 
 
+\usepackage[tikz]{mdframed}
+\mdfdefinestyle{ObjectivesStyle}{backgroundcolor=none,leftmargin=2cm,rightmargin=2cm,linecolor=black,roundcorner=5pt,
+, font=\small\sffamily,}%font=\wedn\bfseries\upshape,}
+\newenvironment{listObjectives}{\begin{mdframed}[style=OutcomeStyle]The following questions addresses these semester-long Learning Goals:\begin{itemize}}{\end{itemize}\end{mdframed}}
+\newenvironment{listSectionObjectives}{\begin{mdframed}[style=OutcomeStyle]After completing the following journal entries, students should be able to:\begin{itemize}}{\end{itemize}\end{mdframed}}
+
+
 \makeatletter
 \let\c@definition\relax
 \let\c@warning\relax
@@ -280,6 +294,7 @@
 
 
 \usepackage{tkz-euclide}
+%\usetkzobj{all}
 \tikzstyle geometryDiagrams=[rounded corners=.5pt,ultra thick,color=black]
 \colorlet{penColor}{black} % Color of a curve in a plot
 
@@ -314,8 +329,9 @@
 
 \newcommand{\checkYourselfAbstract}{\begin{abstract} Set a timer and
     check your understanding by seeing if you can answer five questions in
-    five minutes.
+    twenty minutes. Make sure you can explain why each is true or false.
 \end{abstract}}
+
 
 
 
