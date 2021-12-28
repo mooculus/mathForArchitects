@@ -1,4 +1,4 @@
-\documentclass[noauthor,nooutcomes,handout,hints]{ximera}
+\documentclass[noauthor,nooutcomes,handout,hints]{../ximera}
 
 \input{../preamble.tex}
 
@@ -121,8 +121,17 @@ the \textbf{law of sines} states
   \begin{hint}
     Use the fact that $\sin(180-\theta) = \sin(\theta)$.
   \end{hint}
-\item Finally explain how you have now proved the law of sines, CONGRATULATIONS!
-  \end{enumerate}
+    \end{enumerate}
+    
+\begin{question}
+\begin{enumerate}
+ \item Explain how the previous problem proves the law of sines.
+ \item Restate the Law of Sines in your own words. Use sentences and nonmath language as much as possible.
+\end{enumerate}
+
+
+\end{question}
+
   \begin{freeResponse}
     \begin{enumerate}
     \item If we look at the first picture:
@@ -220,15 +229,15 @@ the \textbf{law of sines} states
 
 
 \begin{question}
-Create a \snap\ block that will draw triangles based on the ASA
+Create a \snap\ block that will draw triangles based on the angle-side-angle
 congruence theorem.  As a gesture of friendship, I've started the
 block for you:
 \begin{center}
   \includegraphics{asaBlockBLANK}
 \end{center}
-It's your job to USE THE LAW OF SINES to fill in the blanks. EXPLAIN
+It's your job to use the law of  sines to fill in the blanks. Explain
 how you used the law of sines, and show off your work by giving
-screenshots of your SCRIPTS and STAGES as provided from \snap.
+screenshots of your scripts and stages as provided from \snap.
 \begin{freeResponse}
   Ok, to start, note
   \[
@@ -257,44 +266,5 @@ screenshots of your SCRIPTS and STAGES as provided from \snap.
 \end{freeResponse}
 \end{question}
 \mynewpage
-
-
-\begin{question}
-Create a \snap\ block that will draw triangles based on the SAA
-congruence theorem.  As a gesture of friendship, I've started the
-block for you:
-\begin{center}
-  \includegraphics{saaBlockBLANK}
-\end{center}
-It's your job to USE THE LAW OF SINES to fill in the blanks. EXPLAIN
-how you used the law of sines, and show off your work by giving
-screenshots of your SCRIPTS and STAGES as provided from \snap.
-\begin{freeResponse}
-  Start like we did before:
-  \[
-  \mathrm{angle~3} = 180 - (\mathrm{angle~1}+\mathrm{angle 2}).
-  \]
-  Now, 
-  \[
-  \frac{\mathrm{side}}{\sin(angle~2)} = \frac{\mathrm{first~blank}}{\sin(\mathrm{angle~3})}
-  \]
-  so
-  \[
-  \mathrm{first~blank} = \frac{\sin(\mathrm{angle~3})\cdot \mathrm{side}}{\sin(angle~2)}.
-  \]
-  In a similar way, 
-    \[
-    \frac{\mathrm{side}}{\sin(angle~2)} = \frac{\mathrm{second~blank}}{\sin(\mathrm{angle~1})}
-    \]
-    so,
-    \[
-    \mathrm{second~blank} = \frac{\sin(\mathrm{angle~1})\cdot \mathrm{side}}{\sin(angle~2)}.
-    \]
-    Here is my Script and my Stage:
-    \begin{center}
-      \includegraphics[width=.4\textwidth]{saaBlockCOMPLETE}   \qquad \fbox{\includegraphics[width=.4\textwidth]{saaStage.png}}
-    \end{center}
-\end{freeResponse}
-\end{question}
 
 \end{document}
