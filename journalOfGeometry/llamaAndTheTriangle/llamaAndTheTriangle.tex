@@ -1,4 +1,4 @@
-\documentclass[nooutcomes,noauthor,handout]{ximera}
+\documentclass[nooutcomes,noauthor,handout]{../ximera}
 
 \input{../preamble.tex}
 \title{Louie Llama and the triangle}
@@ -23,14 +23,17 @@
 \end{listOutcomes}
 
 We are going to investigate why the interior angles of a triangle sum
-to $180^\circ$. We won't be alone on this journey; we'll have help.
-Meet Louie Llama:\index{Louie Llama}
+to $180^\circ$. We won't be alone on this journey; we'll have help from  Louie Llama:\index{Louie Llama}
 \begin{center}
 \includegraphics[height=1in]{llama.pdf}
 \end{center}
 
 Louie Llama is rather radical for a llama---he doesn't mind being
-ROTATED one bit.
+rotated one bit.
+
+However, before we rotate Louie, we can try this out for ourselves!
+
+Either in the classroom or right outside the building (depending on the weather), we will make a large triangle with painters tape. 
 
 \mynewpage
 
@@ -39,20 +42,22 @@ ROTATED one bit.
 \begin{question}
   Let's take Louie Llama for a walk.
   \begin{enumerate}
-  \item Draw an obtuse, non-right, scalene triangle whose sides are
-    between $50$ and $300$ millimeters in length. Use a RULER and a
-    PROTRACTOR to measure sides and the angles. LABEL side-lengths and
-    angle measures.
-  \item Now, use your imagination (and artistic skills) to visualize
-    Louie Llama starting at the middle of one side and walking around
-    the triangle, ALWAYS keeping his FEET facing the sides. At EACH
-    VERTEX of the triangle, LABEL the angle through which Louie Llama
-    turns.
-  \item Write a \snap\ SCRIPT that demonstrates that your answers from
-    part (b) are correct. \textbf{You should start Louie Llama out in the
-    MIDDLE of a side.}  Show off your work by giving screenshots of
-    your SCRIPT and your STAGE.
-  \end{enumerate}
+  \item Draw a copy of the triangle from class. Label the side lengths and the angle measure. 
+  
+  \item The volunteer walked around the triangle, starting in the middle of a side, keeping the inside of the triangle on their right. At each vertex of the triangle, label and draw the angle through which the volunteer turns.
+  
+  \item Use this activity to explain why the angles in the \snap\ code from last class are different from what you might have expected (ie, the code for the equilateral triangle says \texttt{turn 120 degrees}, not 60 degrees).  
+ 
+ \end{enumerate}
+ \end{question}
+
+\mynewpage
+
+
+\begin{question}
+   Write a \snap\ script that repeats this process with Louie. \textbf{You should start Louie Llama out in the
+    \emph{middle} of a side.}  Show off your work by giving screenshots of
+    your SCRIPT and your STAGE. You may edit the file labeled \texttt{llama.xml}. 
   \begin{freeResponse}
     \begin{enumerate}
     \item Here it is:
@@ -81,11 +86,11 @@ ROTATED one bit.
   Let's take Louie Llama for a more general walk.
   \begin{enumerate}
   \item Draw some non-right scalene triangle, but this time label the
-    angles $\alpha$, $\beta$, and $\gamma$. Again, imagine Louie Llama
+    angles $\alpha$, $\beta$, and $\gamma$. Again, imagine Louie Llama or yourself 
     starting at the middle of one side and walking around the
-    triangle, ALWAYS keeping his FEET facing the sides. At EACH VERTEX
-    of the triangle, LABEL the angle through which Louie Llama turns.
-  \item In TOTAL, how much did Louie Llama turn? Give a very brief and quick explanation.
+    triangle, like before. At each
+    of the triangle, label the angle through which Louie Llama turns.
+  \item In \emph{total}, how much did Louie Llama turn? Give a very brief and quick explanation.
   \item Write an equation where the right-hand side is Louie Llama's
     total rotation and the left-hand side is the sum of each rotation
     around the angle. SOLVE for $\alpha+\beta+\gamma$.
@@ -112,10 +117,8 @@ ROTATED one bit.
 \mynewpage
 
 
-\begin{question}
   Let's walk Louie Llama around other shapes and figure stuff
-  out. Fill in the rest of the table below. As a gesture of
-  friendship, I've filled in the top row. SIMPLIFY the bottom row.
+  out. Fill in the rest of the table below. I've filled in the top row. \textbf{Simplify} the bottom row.
   \[
   \renewcommand{\arraystretch}{3}
   \begin{array}{|c||c|c|c|}\hline
@@ -131,6 +134,39 @@ ROTATED one bit.
         n & & & \\\hline
   \end{array}
   \]
+  This table will be graded as 2 problems. You must explain your reasoning for both. 
+    \begin{question}
+    
+\begin{enumerate}
+ \item     For the exterior angles of a regular $n$-gon, try using a \emph{repeat} loop in \snap\ The exterior angle is the angle in this code.
+
+ \item There are two ways to find the sum of interior angles and interior angles. Use one of them:
+\begin{itemize}
+\item  The interior angle and exterior angle always add to $180^\circ$. Once you know the size of the individual angles, you can determine the sum of all interior angles.
+\item Each regular $n-$gon can be divided into triangles like this:
+\begin{center}
+    \begin{tikzpicture}[geometryDiagrams]
+      \coordinate (A) at (0,0);
+      \coordinate (B) at (2,0);
+      \coordinate (C) at (2,2);
+      \coordinate (D) at (0,2);
+      \tkzDrawSegment (A,B)
+      \tkzDrawSegment (D,B)
+      \tkzDrawSegment[dashed](B,C)
+      \tkzDrawSegment[dashed](C,D)
+      \tkzDrawSegment (D,A)
+    \end{tikzpicture}
+  \end{center}
+
+Once you know the sum of all interior angles, you can determine the size of the individual angles. 
+\end{itemize}
+\end{enumerate}
+\end{question}
+
+\begin{question}
+Complete the last row of the table and explain your reasoning.
+\end{question}
+
   \begin{freeResponse}
     Here's my table:
     \[
@@ -149,6 +185,6 @@ ROTATED one bit.
   \end{array}
   \]
   \end{freeResponse}
-\end{question}
+
 
 \end{document}

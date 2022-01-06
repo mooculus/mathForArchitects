@@ -23,167 +23,166 @@
   sum) of basic shapes.
 \end{listOutcomes}
 
-\mynewpage
+%\mynewpage
 
 
+
+%\begin{question}
+%  In the diagram below, we see the intersection of $\bar{BC}$ and
+%  $\bar{AE}$. Suppose that $\left\vert BD\right\vert =\left\vert
+%  CD\right\vert $ and $\left\vert AD\right\vert =\left\vert
+%  ED\right\vert $.
+%  \begin{center}
+%    \begin{tikzpicture}[geometryDiagrams]
+%      \coordinate (A) at (0,2);
+%      \coordinate (B) at (2,5);
+%      \coordinate (C) at (6.5,.5);
+%      \coordinate (E) at (8,4);
+%      \coordinate (D) at (4,3);
+%      \draw (A)--(B)--(C)--(E)--(D)--cycle;
+%      \tkzMarkSegments[mark=|](B,D D,C)
+%      \tkzMarkSegments[mark=||](A,D D,E)
+%      \tkzLabelPoints[above](B,D,E)
+%      \tkzLabelPoints[below](A,C)
+%      %\draw[step=.5cm] (0,0) grid (10,5);
+%    \end{tikzpicture}
+%  \end{center}
+%  Show that triangle $\triangle BDA$ and triangle $\triangle CDE$ are
+%  congruent.
+%  
+%  \begin{hint}
+%    First you should explain why $\angle BDA = \angle CDE$.
+%  \end{hint}
+%  \begin{freeResponse}
+%    To start, we claim that $\angle BDA = \angle CDE$. Labeling our
+%    diagram above,
+%    \begin{center}
+%      \begin{tikzpicture}[geometryDiagrams]
+%        \coordinate (A) at (0,2);
+%        \coordinate (B) at (2,5);
+%        \coordinate (C) at (6.5,.5);
+%        \coordinate (E) at (8,4);
+%        \coordinate (D) at (4,3);
+%        \draw (A)--(B)--(C)--(E)--(D)--cycle;
+%        
+%        \tkzMarkAngle[size=0.7cm,thin](B,D,A)
+%        \tkzLabelAngle[pos = 0.4](B,D,A){$\alpha$}
+%        
+%        \tkzMarkAngle[arc=ll,size=0.5cm,thin](E,D,B)
+%        \tkzLabelAngle[pos = 0.25](E,D,B){$\beta$}
+%        
+%        \tkzMarkAngle[size=0.7cm,thin](C,D,E)
+%        \tkzLabelAngle[pos = 0.4](C,D,E){$\gamma$}
+%        
+%        \tkzMarkAngle[arc=ll,size=0.5cm,thin](A,D,C)
+%        \tkzLabelAngle[pos = 0.25](A,D,C){$\delta$}
+%        
+%        %\draw[step=.5cm] (0,0) grid (10,5);
+%      \end{tikzpicture}
+%    \end{center}
+%    we see that 
+%    \begin{align*}
+%      \alpha+\beta &= 180^\circ\\
+%      \beta + \gamma &= 180^\circ.
+%\end{align*}
+%Subtracting the equations above we find that $\alpha=\gamma = 0$.
+%This means that $\alpha = \gamma$ and hence $\angle BDA = \angle
+%CDE$. Since we know that $\left\vert BD\right\vert =\left\vert
+%CD\right\vert $ and $\left\vert AD\right\vert =\left\vert
+%ED\right\vert $ we may now apply SAS to prove that triangle $\triangle
+%BDA$ and triangle $\triangle CDE$ are congruent.
+%\end{freeResponse}
+%\end{question}
+%
+%\mynewpage
+%
+%
+%\begin{question}
+%  Consider the crazy shape below:
+%  \begin{center}
+%    \begin{tikzpicture}[geometryDiagrams]
+%      \coordinate (A) at (0,4.5);
+%      \coordinate (B) at (2.5,2.5);
+%      \coordinate (C) at (0,.5);
+%      \coordinate (D) at (4,2.5);
+%      \coordinate (E) at (2.5,0);
+%      \coordinate (F) at (10,2.5);
+%      \coordinate (G) at (9.5,5);
+%      \coordinate (H) at (7,2);
+%      \coordinate (I) at (3.5,5);
+%
+%      \draw (A)--(B)--(C)--(D)--(E)--(F)--(G)--(H)--(I)--cycle;
+%      
+%      %% \tkzMarkAngle[size=0.7cm,thin](B,D,A)
+%      \tkzLabelAngle[pos = -0.5](I,A,B){$\alpha$}
+%
+%      \tkzLabelAngle[pos = -0.2](A,B,C){$\beta$}
+%
+%      \tkzLabelAngle[pos = -1.9](B,C,D){$\gamma$}
+%      
+%      \tkzLabelAngle[pos = -0.2](C,D,E){$\delta$}
+%
+%      \tkzLabelAngle[pos = -0.5](D,E,F){$\varepsilon$}
+%
+%      \tkzLabelAngle[pos = -0.3](E,F,G){$\zeta$}
+%
+%      \tkzLabelAngle[pos = -0.5](F,G,H){$\eta$}
+%
+%      \tkzLabelAngle[pos = -0.2](G,H,I){$\theta$}
+%
+%      \tkzLabelAngle[pos = -0.3](H,I,A){$\iota$}
+%
+%      %\draw[step=.5cm,thin,gray] (0,0) grid (10,5);
+%      \end{tikzpicture}
+%  \end{center}
+%  \begin{enumerate}
+%  \item Using a protractor, or an online tool like
+%    \link[\textsl{Geogebra}]{https://www.geogebra.org/classic},
+%    measure the interior angles of the shape above (to the nearest
+%    degree) and use this table to record your findings, along with the
+%    SUM of YOUR MEASUREMENTS:
+%  \[
+%    {\renewcommand{\arraystretch}{1.5}
+%      \begin{array}{|c|c|c|c|c|c|c|c|c||c|}\hline
+%        \alpha & \beta & \gamma & \delta & \varepsilon & \zeta & \eta & \theta & \iota & SUM\\\hline\hline
+%        \rule[7mm]{10mm}{0mm}  & \rule[7mm]{10mm}{0mm}    & \rule[7mm]{10mm}{0mm}   & \rule[7mm]{10mm}{0mm}   &  \rule[7mm]{10mm}{0mm}   & \rule[7mm]{10mm}{0mm}    & \rule[7mm]{10mm}{0mm}   & \rule[7mm]{10mm}{0mm}   & \rule[7mm]{10mm}{0mm} & \rule[7mm]{10mm}{0mm} \\ \hline
+%    \end{array}}
+%    \]
+%  \item Use Louie Llama to help you find the sum of the interior
+%    angles WITHOUT appealing to your measurements above. SHOW YOUR
+%    WORK, and/or EXPLAIN your reasoning.
+%  \end{enumerate}
+%  \begin{freeResponse}
+%    \begin{enumerate}
+%      \item Here is my table:
+%      \[
+%        {\renewcommand{\arraystretch}{1.5}
+%          \begin{array}{|c|c|c|c|c|c|c|c|c||c|}\hline
+%            \alpha & \beta & \gamma & \delta & \varepsilon & \zeta & \eta & \theta & \iota & SUM\\\hline\hline
+%            48^\circ & 283^\circ & 12^\circ & 327^\circ & 41^\circ & 96^\circ & 52^\circ & 270^\circ & 131^\circ & 1260^\circ\\ \hline
+%        \end{array}}
+%        \]
+%      \item Walking Louie Llama around this shape will spin him $360^\circ$. Each, time he goes around an angle, he rotates
+%        \[
+%        180 - (\text{interior angle}) ~\text{degrees}.
+%        \]
+%        So we may write:
+%        \[
+%        (180 - \alpha) + (180 - \beta) + (180 - \gamma)+ (180 - \delta)+ (180 - \varepsilon) + (180 - \zeta) + (180 - \eta) + (180 - \theta) + (180 - \iota) = 360
+%        \]
+%        Solving, we find
+%        \[
+%        \alpha + \beta + \gamma + \delta + \varepsilon + \zeta + \eta + \theta + \iota = 1260.
+%        \]
+%    \end{enumerate}
+%  \end{freeResponse}
+%\end{question}
+%
+%\mynewpage
+  Let's go for a few more walks with the ever insightful Louie Llama. For these problems, it would probably help to try physically moving around the shape.
 
 \begin{question}
-  In the diagram below, we see the intersection of $\bar{BC}$ and
-  $\bar{AE}$. Suppose that $\left\vert BD\right\vert =\left\vert
-  CD\right\vert $ and $\left\vert AD\right\vert =\left\vert
-  ED\right\vert $.
-  \begin{center}
-    \begin{tikzpicture}[geometryDiagrams]
-      \coordinate (A) at (0,2);
-      \coordinate (B) at (2,5);
-      \coordinate (C) at (6.5,.5);
-      \coordinate (E) at (8,4);
-      \coordinate (D) at (4,3);
-      \draw (A)--(B)--(C)--(E)--(D)--cycle;
-      \tkzMarkSegments[mark=|](B,D D,C)
-      \tkzMarkSegments[mark=||](A,D D,E)
-      \tkzLabelPoints[above](B,D,E)
-      \tkzLabelPoints[below](A,C)
-      %\draw[step=.5cm] (0,0) grid (10,5);
-    \end{tikzpicture}
-  \end{center}
-  Show that triangle $\triangle BDA$ and triangle $\triangle CDE$ are
-  congruent.
-  
-  \begin{hint}
-    First you should explain why $\angle BDA = \angle CDE$.
-  \end{hint}
-  \begin{freeResponse}
-    To start, we claim that $\angle BDA = \angle CDE$. Labeling our
-    diagram above,
-    \begin{center}
-      \begin{tikzpicture}[geometryDiagrams]
-        \coordinate (A) at (0,2);
-        \coordinate (B) at (2,5);
-        \coordinate (C) at (6.5,.5);
-        \coordinate (E) at (8,4);
-        \coordinate (D) at (4,3);
-        \draw (A)--(B)--(C)--(E)--(D)--cycle;
-        
-        \tkzMarkAngle[size=0.7cm,thin](B,D,A)
-        \tkzLabelAngle[pos = 0.4](B,D,A){$\alpha$}
-        
-        \tkzMarkAngle[arc=ll,size=0.5cm,thin](E,D,B)
-        \tkzLabelAngle[pos = 0.25](E,D,B){$\beta$}
-        
-        \tkzMarkAngle[size=0.7cm,thin](C,D,E)
-        \tkzLabelAngle[pos = 0.4](C,D,E){$\gamma$}
-        
-        \tkzMarkAngle[arc=ll,size=0.5cm,thin](A,D,C)
-        \tkzLabelAngle[pos = 0.25](A,D,C){$\delta$}
-        
-        %\draw[step=.5cm] (0,0) grid (10,5);
-      \end{tikzpicture}
-    \end{center}
-    we see that 
-    \begin{align*}
-      \alpha+\beta &= 180^\circ\\
-      \beta + \gamma &= 180^\circ.
-\end{align*}
-Subtracting the equations above we find that $\alpha=\gamma = 0$.
-This means that $\alpha = \gamma$ and hence $\angle BDA = \angle
-CDE$. Since we know that $\left\vert BD\right\vert =\left\vert
-CD\right\vert $ and $\left\vert AD\right\vert =\left\vert
-ED\right\vert $ we may now apply SAS to prove that triangle $\triangle
-BDA$ and triangle $\triangle CDE$ are congruent.
-\end{freeResponse}
-\end{question}
-
-\mynewpage
-
-
-\begin{question}
-  Consider the crazy shape below:
-  \begin{center}
-    \begin{tikzpicture}[geometryDiagrams]
-      \coordinate (A) at (0,4.5);
-      \coordinate (B) at (2.5,2.5);
-      \coordinate (C) at (0,.5);
-      \coordinate (D) at (4,2.5);
-      \coordinate (E) at (2.5,0);
-      \coordinate (F) at (10,2.5);
-      \coordinate (G) at (9.5,5);
-      \coordinate (H) at (7,2);
-      \coordinate (I) at (3.5,5);
-
-      \draw (A)--(B)--(C)--(D)--(E)--(F)--(G)--(H)--(I)--cycle;
-      
-      %% \tkzMarkAngle[size=0.7cm,thin](B,D,A)
-      \tkzLabelAngle[pos = -0.5](I,A,B){$\alpha$}
-
-      \tkzLabelAngle[pos = -0.2](A,B,C){$\beta$}
-
-      \tkzLabelAngle[pos = -1.9](B,C,D){$\gamma$}
-      
-      \tkzLabelAngle[pos = -0.2](C,D,E){$\delta$}
-
-      \tkzLabelAngle[pos = -0.5](D,E,F){$\varepsilon$}
-
-      \tkzLabelAngle[pos = -0.3](E,F,G){$\zeta$}
-
-      \tkzLabelAngle[pos = -0.5](F,G,H){$\eta$}
-
-      \tkzLabelAngle[pos = -0.2](G,H,I){$\theta$}
-
-      \tkzLabelAngle[pos = -0.3](H,I,A){$\iota$}
-
-      %\draw[step=.5cm,thin,gray] (0,0) grid (10,5);
-      \end{tikzpicture}
-  \end{center}
-  \begin{enumerate}
-  \item Using a protractor, or an online tool like
-    \link[\textsl{Geogebra}]{https://www.geogebra.org/classic},
-    measure the interior angles of the shape above (to the nearest
-    degree) and use this table to record your findings, along with the
-    SUM of YOUR MEASUREMENTS:
-  \[
-    {\renewcommand{\arraystretch}{1.5}
-      \begin{array}{|c|c|c|c|c|c|c|c|c||c|}\hline
-        \alpha & \beta & \gamma & \delta & \varepsilon & \zeta & \eta & \theta & \iota & SUM\\\hline\hline
-        \rule[7mm]{10mm}{0mm}  & \rule[7mm]{10mm}{0mm}    & \rule[7mm]{10mm}{0mm}   & \rule[7mm]{10mm}{0mm}   &  \rule[7mm]{10mm}{0mm}   & \rule[7mm]{10mm}{0mm}    & \rule[7mm]{10mm}{0mm}   & \rule[7mm]{10mm}{0mm}   & \rule[7mm]{10mm}{0mm} & \rule[7mm]{10mm}{0mm} \\ \hline
-    \end{array}}
-    \]
-  \item Use Louie Llama to help you find the sum of the interior
-    angles WITHOUT appealing to your measurements above. SHOW YOUR
-    WORK, and/or EXPLAIN your reasoning.
-  \end{enumerate}
-  \begin{freeResponse}
-    \begin{enumerate}
-      \item Here is my table:
-      \[
-        {\renewcommand{\arraystretch}{1.5}
-          \begin{array}{|c|c|c|c|c|c|c|c|c||c|}\hline
-            \alpha & \beta & \gamma & \delta & \varepsilon & \zeta & \eta & \theta & \iota & SUM\\\hline\hline
-            48^\circ & 283^\circ & 12^\circ & 327^\circ & 41^\circ & 96^\circ & 52^\circ & 270^\circ & 131^\circ & 1260^\circ\\ \hline
-        \end{array}}
-        \]
-      \item Walking Louie Llama around this shape will spin him $360^\circ$. Each, time he goes around an angle, he rotates
-        \[
-        180 - (\text{interior angle}) ~\text{degrees}.
-        \]
-        So we may write:
-        \[
-        (180 - \alpha) + (180 - \beta) + (180 - \gamma)+ (180 - \delta)+ (180 - \varepsilon) + (180 - \zeta) + (180 - \eta) + (180 - \theta) + (180 - \iota) = 360
-        \]
-        Solving, we find
-        \[
-        \alpha + \beta + \gamma + \delta + \varepsilon + \zeta + \eta + \theta + \iota = 1260.
-        \]
-    \end{enumerate}
-  \end{freeResponse}
-\end{question}
-
-\mynewpage
-
-\begin{question}
-  Let's go for a few more walks with the ever insightful Louie Llama.
-  \begin{enumerate}
-  \item Here's a regular five pointed star:
+  Here's a regular five pointed star:
     \begin{center}
       \begin{tikzpicture}
         \foreach \i in {1,...,5}
@@ -195,9 +194,15 @@ BDA$ and triangle $\triangle CDE$ are congruent.
       \end{tikzpicture}
     \end{center}
     Use Louie Llama to find the measure of one of the angles labeled
-    $\alpha$. EXPLAIN how you arrived at your conclusion using words,
+    $\alpha$. Explain how you arrived at your conclusion using words,
     pictures, llamas, and so on as needed/helpful.
-  \item Here's regular seven pointed star:
+\end{question}
+
+\mynewpage
+
+
+\begin{question}
+Here's regular seven pointed star:
     \begin{center}
       \begin{tikzpicture}
         \foreach \i in {1,...,7}
@@ -211,7 +216,13 @@ BDA$ and triangle $\triangle CDE$ are congruent.
     Use Louie Llama to find the measure of one of the angles labeled
     $\beta$. EXPLAIN how you arrived at your conclusion using words,
     pictures, llamas, and so on as needed/helpful.  
-  \item Here's ANOTHER regular seven pointed star:
+\end{question}
+
+\mynewpage
+
+
+\begin{question}
+ Here's another regular seven pointed star:
     \begin{center}
       \begin{tikzpicture}
         \foreach \i in {1,...,7}
@@ -223,9 +234,8 @@ BDA$ and triangle $\triangle CDE$ are congruent.
       \end{tikzpicture}
     \end{center}
     Use Louie Llama to find the measure of one of the angles labeled
-    $\gamma$. EXPLAIN how you arrived at your conclusion using words,
+    $\gamma$. Explain how you arrived at your conclusion using words,
     pictures, llamas, and so on as needed/helpful.
-  \end{enumerate}
   \begin{freeResponse}
     \begin{enumerate}
     \item Here, Louie makes $5$ turns of $180-\alpha$ each. In

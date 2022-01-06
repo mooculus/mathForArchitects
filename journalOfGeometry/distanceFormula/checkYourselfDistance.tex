@@ -1,0 +1,72 @@
+\documentclass{../ximera}
+
+\input{../preamble}
+
+\author{Claire Merriman}
+
+\checkYourselfAbstract
+
+\begin{document}
+\maketitle
+
+\begin{exercise}True or false:
+ There is a right triangle whose legs have lengths 1 and 2, and whose hypotenuse has length 3.
+\end{exercise}
+
+\begin{exercise}True or false:
+ The Pythagorean theorem allows you to find the missing side length of \emph{any} triangle where you know the length of two sides.
+\end{exercise}
+
+\begin{exercise}True or false:
+ For all $x$ and $y$, $x^2+y^2=(x+y)^2$.
+\end{exercise}
+
+\begin{exercise}
+The distance between the points
+$(1,2)$ and $(4,6)$ is
+\begin{enumerate}
+\begin{multicols}{2}
+ \item $5$
+ \item $7$
+ \item $\sqrt{29}$
+ \item $25$
+\end{multicols}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+   \item Consider this drawing of an ellipse:
+      \begin{center}
+        \begin{tikzpicture}[geometryDiagrams,scale=.3]
+          \draw (0,0) ellipse (5in and 3in);
+          \draw[->,thin] (0in,-3.2in) -- (0in,3.2in);
+          \draw[->,thin] (-5.5in,0in) -- (5.5in,0in);
+          \filldraw[black] (5in,0) circle (2pt) node[above right] {(5,0)};
+          \filldraw[black] (0,3in) circle (2pt) node[above right] {(0,3)};
+
+          \filldraw[black] (4in,0in) circle (2pt) node[below left] {(4,0)};
+          \filldraw[black] (-4in,0in) circle (2pt) node[below right] {(-4,0)};
+
+          \draw[dashed,thin] (-4in,0in) -- (4.5in,-1.30767in);
+          \draw[dashed,thin] (4in,0in) -- (4.5in,-1.30767in);
+
+          \node at (2.5in,-1.5in) {$X$};
+          \node at (4.5in,-.5in) {$Y$};
+          
+          \filldraw[black] (4.5in,-1.30767in) circle (2pt);
+        \end{tikzpicture}
+      \end{center}
+The sum of the lengths of dotted lines $X+Y$ is:
+\begin{enumerate}
+\begin{multicols}{2}
+ \item $6$
+ \item $8$
+ \item $10$
+ \item $12$
+\end{multicols}
+ 
+\end{enumerate}
+\end{exercise}
+
+\answerlistbox{False}{False}{False}{(a)}{(c)}
+\end{document}
