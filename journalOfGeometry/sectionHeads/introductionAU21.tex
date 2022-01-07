@@ -1,0 +1,269 @@
+\documentclass[handout,numbers,nooutcomes,hints]{../ximera}
+\input{../preamble.tex}
+\title{Introduction}
+
+\author{Bart Snapp edited by Claire Merriman}
+
+\begin{document}
+\begin{abstract}
+  Let's get started.
+\end{abstract}
+\maketitle
+
+\begin{mdframed}[style=OutcomeStyle]
+
+
+{\large The main goals of the course are to:}
+\begin{itemize}
+\item determine a reasonable estimate before preforming a calculation,
+\item explain the relationship between scaling lengths and scaling areas and volumes,
+\item learn and apply basic geometric formulas,
+\item explain why presented concepts and formulas are true,
+\item determine if a shape can be used as a tile for tessellations,
+\item use trigonometry to solve common problems,
+\item use mathematical language to describe symmetries
+\end{itemize}
+
+{\large The goals of this course format and homework grading are to:}
+\begin{itemize}
+\item take a solution to a problem in a given context, and applying that same solution to another problem,
+\item increase student confidence in their ability to solve difficult math problems by using previous results, trying different methods, asking questions, and working with others
+\item increase student confidence in their ability to judge when a solution is  'done'
+\item improve student's mathematical communication skills.
+\end{itemize}
+\end{mdframed}
+
+
+
+
+
+
+\section*{For students}
+
+
+
+
+By completing these notes, we hope to enlighten our view of
+our own knowledge.  Often in this course you will be required to
+EXPLAIN a mathematical concept.
+
+\subsection*{Standard of explanation}
+\begin{itemize}
+  \item The audience for your explanation should be a ``student in our
+    class.'' That is, you are writing so that a student in our class
+    can understand. 
+  \item It is your job to \textbf{convince me} that you \text{understand what you are
+    talking about.} You do this by being specific, and not pushing the
+    intellectual load onto the reader.
+\end{itemize}
+
+
+When you finish a calculation, take a break. Then come back to your
+work.  Re-read the problem. Did you answer everything that was asked?
+Re-read your solution, be critical, do the numbers make sense? Is
+there a "quick approximation" you can do to see if your work is close?
+Is there another way that you can check your work?
+
+I understand that you might not be used to doing this, but this
+process of reflection, is sort of the key idea. (Right? I ask you to
+do this almost every activity) Throughout the course, I attempt to get
+student to think about answers, which are reasonable, which are not.
+
+And perhaps, you do notice an answer is wrong, but are unsure what to
+do.
+
+In this case, you should ask for help. You should say, I computed this
+this way, and I got this answer, and this makes sense to me, BUT I
+know it cannot be right because X,Y,Z.
+
+Chances are, you are making a reasonable mistake, one that others will
+make too, and identifying this mistake, understanding it, really is a
+valuable learning experience for all of us.
+
+
+
+
+%Novice mathematicians are overconfident of their knowledge of theorems
+%and formulas. It is common for them to confuse the formula for the
+%area of a triangle with the Pythagorean theorem. Moreover, even
+%stating the Pythagorean theorem is problematic for novices. Novice
+%mathematicians are quick to make mistakes that ``simplify'' their
+%work. Finally, novice mathematicians seldom \textbf{reflect} on their
+%work when it is completed. This results in them often having answers
+%that are \textbf{obviously wrong}.
+
+%\subsection*{List of common mistakes}
+%\begin{enumerate}
+%\item{Novice mathematicians have trouble making ``general''
+%  pictures. For example, if asked to draw a triangle, most novice
+%  mathematicians will draw an \textbf{equilateral} triangle. This is a
+%  very \textbf{special triangle} and using this as a tool for
+%  reasoning about triangles in general is difficult.
+%\item{Novice mathematicians have trouble stating the Pythagorean
+%  theorem. Usually when asked to state the theorem, they reply
+%  \[
+%  a^2+b^2=c^2.
+%  \]
+%  \textbf{This is wrong.} The Pythagorean theorem is a theorem
+%  about \textbf{triangles}. 
+%\item{Novice mathematicians are quick to find a ``formula'' to solve
+%  the problem, yet often unable to use the formula correctly. Consider
+%  the formula for the surface area of a pyramid:
+%  \[
+%  here
+%  \]
+%  STILL HARD
+%\item{When presented with
+%  \[
+%  d^2 = a^2 + b^2
+%  \]
+%  and asked to simplify, novice mathematicians will often write
+%  \[
+%  d = a +b
+%  \]
+%  \textbf{This is wrong.} If it were correct, then the
+%  conclusion of the Pythagorean theorem would be silly!
+%\item{ When presented with
+%  \[
+%  \frac{a + b}{a}
+%  \]
+%  and asked to simplify, novice mathematicians will often write
+%  \[
+%  1+b
+%  \]
+%  \textbf{This is wrong.}
+%\item{Novice mathematicians do not reflect on their work. For example
+%  novice mathematicians have written
+%  \[
+%  \frac{10}{2\pi} \approx  15.7\qquad\textbf{this is wrong!}
+%  \]
+%  Moreover, it is \textbf{obviously wrong} since $2\pi\approx 6$ and
+%  $1<\frac{10}{6} <2$. I'll leave it as an exercise for the reader to
+%  think about HOW such an error was made.
+%\end{enumerate}
+%
+%
+%\subsection*{How to avoid the common mistakes}
+
+
+
+
+%\section*{Structure of the course}
+%
+%
+%
+%
+%
+%Identify KEY journal entries, and identifying the supporting ones. 
+%
+%
+%These are the goals: 
+%
+%Quick questions
+%
+%Let's apply ourselves
+%
+%Not so quick questions
+%
+%Seven types of frieze
+%
+%
+%
+%
+%
+%\begin{tikzpicture}
+%\tikzset{% This is the style settings for nodes
+%    dep/.style={circle,minimum size=1cm,fill=orange!20,draw=orange},
+%    cli/.style={circle,minimum size=1cm,fill=white,draw},
+%    spl/.style={cli,append after command={
+%                  node[circle,draw,dotted,
+%                       minimum size=1.5cm] at (\tikzlastnode.center) {}}},
+%    c1/.style={-stealth,very thick,red!80!black},
+%    v2/.style={-stealth,very thick,yellow!65!black},
+%    v4/.style={-stealth,very thick,purple!70!black}}
+%\node[dep] (0) at (0,0) {0};
+%\node[cli] (7) at (-1,-2) {7};
+%\node[spl] (8) at (2,-2) {8};
+%\draw[c1] (0) to[bend right] (7);
+%\draw[v2] (7) -- (8);
+%\draw[v4] (8) -- (2,-1) -- (0);
+%\end{tikzpicture}
+%
+%
+%
+%WE COULD HAVE A STYLE FOR ESSENTIAL ACTIVITIES, and  A COLOR FOR REAL WORLD EG
+%
+%NODES IN A SEQUENCE SHOULD BE DIRECTLY ABOVE EACH OTHER.
+%
+%
+%2,3,4,5 deal with understanding formulas for area and volume, with an
+%emphasis on estimation, and the relationships between perimeter/area
+%and surface-area/volume.
+%
+%
+%6 we use formulas and or pictures to solve a real world problem, and
+%start to understand scaling
+%
+%7-8 we give model for scaling through rep-tiles. 
+%
+%
+%
+%\begin{tikzpicture}[x=1cm,y=2cm]
+%  \tikzset{% This is the style settings for nodes
+%    every node/.style={font=\bfseries},
+%    every path/.style={-stealth,very thick},
+%    %essential/.style={circle,minimum size=.5cm,fill=orange!20,draw=orange,
+%         %       general shadow={fill=gray!60,shadow xshift=1pt,shadow yshift=-1pt}},
+%    essential/.style={circle,minimum size=.5cm,fill=white,draw},
+%    enrich/.style={circle,minimum size=.5cm,fill=white,draw,dashed},
+%    goal/.style={essential,append after command={
+%                  node[circle,draw,
+%                       minimum size=1cm] at (\tikzlastnode.center) {}}},
+%    c1/.style={-stealth,very thick,red!80!black},
+%    v2/.style={-stealth,very thick,yellow!65!black},
+%    v4/.style={-stealth,very thick,purple!70!black}}
+%\node[essential] (0) at (0,0) {0};
+%\node[essential] (1) at (1,0) {1};
+%\node[essential] (2) at (2,1) {2};
+%\node[enrich] (3) at (1,1.5) {3};
+%\node[essential] (4) at (2,2) {4};
+%\node[essential] (5) at (3,3) {5};
+%\node[goal] (6) at (3,4) {6};
+%\node[essential] (7) at (4,3) {7};
+%\node[essential] (8) at (4,4) {8};
+%\node[essential] (9) at (5,5) {9};
+%\node[goal] (10) at (5,6) {10};
+%\node[enrich] (11) at (6,6) {11};
+%\node[enrich] (12) at (7,6) {12};
+%
+%\draw (1) -- (2);
+%\draw (2) -- (4);
+%\draw (4) -- (5);
+%\draw (5) -- (6);
+%\draw (6) -- (7);
+%\draw (7) -- (8);
+%\draw (8) -- (9);
+%\draw (9) -- (10);
+%
+%
+%\node[essential] (13) at (6,0) {13};
+%\node[enrich] (14) at (5,.5) {14};
+%\node[essential] (15) at (6,1) {15};
+%\node[enrich] (16) at (6,2) {16};
+%\node[essential] (17) at (6,3) {17};
+%
+%
+%\end{tikzpicture}
+
+
+
+
+
+
+This ``geometry journal'' was created by Dr.\ Bart Snapp and
+Dr.\ Jenny Sheldon at The Ohio State University. Additional content
+was developed by developed by Dr.\ Betsy McNeal, Dr.\ Vic Ferdinand,
+Dr.\ Bradford Findell, and Dr.\ Herbert Clemens.  And of course, there
+is \textbf{one more content creator} in this Journal, \textbf{YOU!}
+
+\end{document}
