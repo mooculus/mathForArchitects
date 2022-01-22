@@ -1,0 +1,146 @@
+\documentclass[noauthor,nooutcomes]{ximera}
+
+\input{../preamble}
+
+\author{Bart Snapp}
+
+\checkYourselfAbstract
+
+\begin{document}
+\maketitle
+
+
+\begin{exercise}
+  Here is a diagram of a symmetrical roof as seen from the top:
+   \begin{center}
+    \begin{tikzpicture}[x=1.5cm,y=1.5cm]
+      \draw[ultra thick] (0,0) rectangle (3,2.4);
+      %\draw[dashed] (.5,.5) rectangle (4.3,2.5);
+    \draw[ultra thick] (0,1.2) -- (3,1.2);
+    \draw[decoration={brace,raise=.2cm},decorate,thin] (0,0)--(0,2.4);
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(3,0);
+    \node at (-.4,1.2) {$25'$};
+    \node at (1.5,-.44) {$40'$};
+    \node[above] at (1.5,1.2) {main ridge};
+    \end{tikzpicture}
+   \end{center}
+   Of the choices below, reasonably, what's the SMALLEST possible area of this roof?
+   \begin{enumerate}\begin{multicols}{2}
+     \item $800$ square feet
+     \item $900$ square feet
+     \item $1000$ square feet
+     \item $1100$ square feet %(d) correct
+    \end{multicols}
+  \end{enumerate}
+\end{exercise}
+
+
+
+
+\begin{exercise}
+  Here is a diagram of a symmetrical roof as seen from the top:
+   \begin{center}
+    \begin{tikzpicture}[x=1.5cm,y=1.5cm]
+      \draw[ultra thick] (0,0) rectangle (3,2.4);
+      %\draw[dashed] (.5,.5) rectangle (4.3,2.5);
+    \draw[ultra thick] (0,1.2) -- (3,1.2);
+    \draw[decoration={brace,raise=.2cm},decorate,thin] (0,0)--(0,2.4);
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(3,0);
+    \node at (-.4,1.2) {$25'$};
+    \node at (1.5,-.44) {$40'$};
+    \node[above] at (1.5,1.2) {main ridge};
+    \end{tikzpicture}
+   \end{center}
+   Of the choices below, reasonably, what's the LARGEST possible area of this roof?
+   \begin{enumerate}\begin{multicols}{2}
+     \item $1000$ square feet
+     \item $2000$ square feet % (b) correct
+     \item $4000$ square feet
+     \item $8000$ square feet
+     \end{multicols}
+  \end{enumerate}
+\end{exercise}
+
+
+
+\begin{exercise}
+  Considering again the house with the symmetrical roof, now seen from the side:
+ \begin{center}
+  \begin{tikzpicture}[x=2.5cm,y=2.5cm]
+    \draw[ultra thick] (0,0) -- (2.4,0);
+    \draw[ultra thick] (0,0) -- (0,1);
+    \draw[ultra thick] (2.4,0) -- (2.4,1);
+    \draw[ultra thick] (1.2,1.9) -- (0,1);
+    \draw[ultra thick] (1.2,1.9) -- (2.4,1);
+    \draw[decoration={brace,raise=.2cm},decorate,thin] (0,0)--(0,1);
+   \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (2.4,0)--(2.4,1.9);
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (1.15,1)--(1.15,1.9);
+    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(1.2,0);
+    \draw[decoration={brace,raise=.2cm},decorate,thin] (2.4,0)--(1.2,0);
+%    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (1.2,1.9) -- (0,1);
+%    \draw[decoration={brace,raise=.2cm},decorate,thin] (1.2,1.9) -- (2.4,1);
+    \node at (-.25,.55) {$b$};
+    \node at (1.8,-.2) {$d$};
+    \node at (.6,-.2) {$c$};
+    \node at (.5,1.6) {$a$};
+%    \node at (1.9,1.6) {$15'$};
+    \node at (2.65,.95) {$e$};
+    \node at (1.4,1.45) {$f$};
+  \end{tikzpicture}
+ \end{center}
+  What SINGLE ADDITIONAL piece of information will allow you to
+  compute the area of the roof?
+\end{exercise}
+
+
+
+
+
+
+
+
+
+
+
+\begin{exercise}
+  What's the most reasonable estimate for the area of the roof of this
+  house:
+  \begin{center}
+    \includegraphics[width=3in]{mapsHouse.png}
+  \end{center}
+  as seen on \textit{Google Maps}?
+  \begin{enumerate}\begin{multicols}{2}
+    \item around $40$ square feet
+    \item around $160$ square feet
+    \item around $400$ square feet
+    \item around $1,600$ square feet %d correct
+    \item around $4,000$ square feet
+    \item around $16,000$ square feet
+    \end{multicols}
+  \end{enumerate}
+\end{exercise}
+
+
+
+
+\begin{exercise}
+  Consider again the house from \textit{Google Maps}:
+  \begin{center}
+    \includegraphics[width=3in]{mapsHouse.png}
+  \end{center}
+  Of the choices below, reasonably, what's the largest possible area of this roof?
+  \begin{enumerate}\begin{multicols}{2}
+    \item $500$ square feet
+    \item $1500$ square feet
+    \item $5000$ square feet
+    \item $15000$ square feet 
+    \end{multicols}
+  \end{enumerate}
+\end{exercise}
+
+
+
+
+
+\answerlistbox{(c)}{(b)}{(a)}{(d)}{(c)}
+\end{document}
