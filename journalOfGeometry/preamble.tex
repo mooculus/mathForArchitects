@@ -39,7 +39,7 @@
 {./formulasGalore/}
 {./concreteExample/}
 {./hipToBeSquare/}
-{./miniMe/}
+{./minifigsAndSuperfigs/}
 {./drawingWithTheTurtle/}
 {./bisectionMethod/}
 %{./circles/}
@@ -206,8 +206,9 @@
 
 
 
-\newcommand{\answerlistbox}[5]{\vfill
-\hfill \fbox{\tiny\begin{minipage}{.6in}
+\newcommand{\answerlistbox}[5]{
+  \vfill
+  \hfill \fbox{\tiny\begin{minipage}{.6in}
   \flushleft
   Answers:
   \flushright\rotatebox{180}{\begin{minipage}{.5in}\tiny
@@ -256,7 +257,7 @@
 \usepackage[tikz]{mdframed}
 \mdfdefinestyle{ObjectivesStyle}{backgroundcolor=none,leftmargin=2cm,rightmargin=2cm,linecolor=black,roundcorner=5pt,
 , font=\small\sffamily,}%font=\wedn\bfseries\upshape,}
-\newenvironment{listObjectives}{\begin{mdframed}[style=OutcomeStyle]The following questions address these semester-long Learning Goals:\begin{itemize}}{\end{itemize}\end{mdframed}}
+\newenvironment{listObjectives}{\begin{mdframed}[style=OutcomeStyle]\color{red}The following questions address these semester-long Learning Goals:\begin{itemize}}{\end{itemize}\end{mdframed}}
 \newenvironment{listSectionObjectives}{\begin{mdframed}[style=OutcomeStyle]After completing the following journal entries, students should be able to:\begin{itemize}}{\end{itemize}\end{mdframed}}
 
 
