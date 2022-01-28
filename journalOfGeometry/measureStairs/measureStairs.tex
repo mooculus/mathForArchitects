@@ -1,4 +1,4 @@
-\documentclass[handout,nooutcomes,noauthor,hints]{../ximera}
+\documentclass[handout,nooutcomes,noauthor,hints]{ximera}
 
 \input{../preamble.tex}
 
@@ -14,80 +14,64 @@
 
 
 \begin{listOutcomes}
-\item Apply formulas to compute the length and width of a staircase.
-\item Determine the maximum number of stairs that can fit in a given area.
+\item Measure lengths with a ruler.
+\item Witness reasonable measurements for common structures.
+\item Determine a reasonable estimate before preforming a calculation.
+\item Organize and accommodate data.
 \end{listOutcomes}
 
-\begin{listObjectives}
-\item Determine a reasonable estimate before preforming a calculation,
+%% \begin{listObjectives}
+%% \item Determine a reasonable estimate before preforming a calculation,
 
-\item Learn and apply basic geometric formulas.
+%% \item Learn and apply basic geometric formulas.
 
-\end{listObjectives}
+%% \end{listObjectives}
 
 
 \begin{question}
- According to this  \emph{ArchDaily} article, \footnote{https://www.archdaily.com/892647/how-to-make-calculations-for-staircase-designs}  the ideal tread length with for a staircase with $18\ cm$ risers is $27-29\ cm$.
- 
+Read this \link[\textit{ArchDaily}
+  article]{https://www.archdaily.com/892647/how-to-make-calculations-for-staircase-designs},
+and define the terms:
+\begin{enumerate}
+\item \textbf{steps}
+\item \textbf{tread}
+\item \textbf{riser}
+\item \textbf{nosing}
+\item \textbf{steep and low-transit staircase}
+\item \textbf{optimal staircase}
+\item \textbf{loose staircase}
+\end{enumerate}
+Use words and pictures in your definitions as needed/helpful.
+
+\end{question}
+
+
+\mynewpage
+
+\begin{question}
+  What is the \textit{Blondel formula}? In particular explain:
+  \begin{enumerate}
+  \item Who is/was \textit{Blondel}?
+  \item What is the formula?
+  \item How is it used?
+  \item Connect the formula to ``steep,'' ``optimal,'' and ``loose''
+    staircases.
+  \end{enumerate}
+\end{question}
+
+\mynewpage
+
+\begin{question}
+ Now let's have some fun and gather some real world data. Find a
+ staircase near the classroom to measure. 
  \begin{center}
-  \begin{tikzpicture}[scale = .3]
-    \draw[thick]
-    (10,0) -- (9,0) -- (9,1) -- (8,1) --
-    ( 8,2) -- (7,2) -- (7,3) -- (6,3) --
-    ( 6,4) -- (5,4) -- (5,5) -- (4,5) --
-    ( 4,6) -- (3,6) -- (3,7) -- (2,7) --
-    ( 2,8) -- (1,8) -- (1,9) -- (0,9) --
-    (0,10) -- (0,0) -- (10,0);
-    \draw [decorate,decoration={brace,amplitude=10pt,mirror},xshift=-4pt,yshift=0pt,]
-    (0,10) -- (0,0) node [black,midway,xshift=-1cm] 
-          {\footnotesize $10\ stairs$};
-    \draw [decorate,decoration={brace,amplitude=10pt},xshift=0pt,yshift=-4pt,]
-    (10,0) -- (0,0) node [black,midway,yshift=-.8cm] 
-          {\footnotesize $10\ stairs$};     
-\end{tikzpicture}
+ \renewcommand{\arraystretch}{3}
+ \begin{tabular}{|c|c|c|c|c|c|}
+   \hline
+  Riser & Tread  & Blondel  & Number of Stairs & Total Height & Total Width \\\hline
+        &        &          &                  &              &             \\\hline 
+\end{tabular}
 \end{center}
 
-You are trying to determine how much space you need for a staircase that is $180\ cm$ tall.  
-
-\begin{itemize}
- \item[\emph{Think:}] What is the minimum length of the staircase, using $18\ cm$ risers and the ideal tread length? What is the maximum?
- \item[\emph{Pair:}] Why?
- \item[\emph{Share:}] How do your answers change after the group discussion?
-\end{itemize}
-\end{question}
-
-\mynewpage
-
-\begin{question}
- You want to build a staircase that is $310\ cm$ (roughly $10'$) tall. Considering an ideal riser of $18\ cm$, the height of the space is divided by the height of each step. The result should always be rounded up.
- 
-\begin{enumerate}
- \item How many stairs would you need? Why?
- \item How tall are the risers? Why?
- \item Using the same ideal tread length of $27-29\ cm$,  what is the minimum length of the staircase? What is the maximum? Why?
-\end{enumerate}
-\end{question}
-
-\mynewpage
-
-\begin{question}
- Now we are going to gather some real world data. In you groups, you will find a staircase near the classroom to measure. We will start by doing an example staircase as a class.
- 
-Make sure to return to class by $1:25pm$, so that we have enough time to go over the data as a class.
- 
- \textbf{Upload a photos of your group measuring the staircase. The ruler should be legible for both height and width.} You may either include the photo in homework file, or submit it as a group to the ``Photo For September 20" assignment. 
- 
- \resizebox{\textwidth}{!}{%
- {\renewcommand{\arraystretch}{4}
-\begin{tabular}{|r|r|r|r|r|r|r|r|r|}\hline
- &Example&Group 1& Group 2& Group 3& Group 4 & Group 5& Group 6& Group 7\\\hline
- Riser Height & &&&&&&&\\\hline
- Tread width & &&&&&&&\\\hline
-Number of Stairs& &&&&&&&\\\hline
- Staircase Height & &&&&&&&\\\hline
-Staircase Width& &&&&&&&\\\hline
-\end{tabular}
-}
-}
 \end{question}
 \end{document}
