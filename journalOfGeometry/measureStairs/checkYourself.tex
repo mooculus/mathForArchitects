@@ -1,46 +1,67 @@
-\documentclass{../ximera}
+\documentclass{ximera}
 
 \input{../preamble}
 
-\author{Bart Snapp}
+\author{Claire Merriman}
 
 \checkYourselfAbstract
 
 \begin{document}
 \maketitle
 
+%% Staircases
+%% Whole number of stairs, staircase must fit in the space. 
+
 
 \begin{exercise}
-  Here is some data your classmates collected. However, one entry is
-  WRONG. Which entry is in error?
-  
-  \begin{enumerate}\begin{multicols}{2}
-    \item The length of a bag of gravel.
-    \item The area of a bag of gravel.
-    \item The volume of a bag of grave.
-    \item None of these.
-    \end{multicols}
-  \end{enumerate}
+  True or False: It is always possible to build a staircase of length $w$ and height $h$ that is to code. 
 \end{exercise}
- \resizebox{\textwidth}{!}{%
- {\renewcommand{\arraystretch}{4}
-\begin{tabular}{|r|r|r|r|r|r|r|r|r|}\hline
- &Example&Group 1& Group 2& Group 3& Group 4 & Group 5& Group 6& Group 7\\\hline
- Riser Height & &&&&&&&\\\hline
- Tread width & &&&&&&&\\\hline
-Number of Stairs& &&&&&&&\\\hline
- Staircase Height & &&&&&&&\\\hline
-Staircase Width& &&&&&&&\\\hline
+\vfill
+
+\begin{exercise}
+   True or False: \textbf{All} of the steps of determining the dimensions of a staircase are:
+   
+\begin{enumerate}
+ \item Divide the total staircase height by the desired riser height, which give the total number of stairs,
+ \item Divide the total staircase length by the total number of stairs, which will give the tread width,
+ \item Using the desired riser height to construct the staircase
+\end{enumerate}
+\end{exercise}
+
+
+\begin{exercise} True or False: 
+ For a staircase of height $300\ cm$, we would like to have risers that as close as possible to $18\ cm$. We should then have $17\ stairs$.
+\end{exercise}
+
+\begin{exercise} True or False: 
+ For a staircase of height $300\ cm$ with $17\ stairs$, the risers will be exactly $18\ cm$ height.
+\end{exercise}
+
+\begin{exercise}
+ You would like to construct a staircase of height $5\ feet$ and length $10\ feet$ where the risers must be at most $7\frac{3}{4}^{\prime\prime}$ and the treads must be at least $10^{\prime\prime}$. 
+ 
+ 
+\begin{itemize}
+ \item When using the \snap\ code, you type in \texttt{w: \rule{2cm}{0.4pt} h:\rule{2cm}{0.4pt}}.
+ \item The value for \texttt{x-reg} should be \rule{2cm}{0.4pt}. The value for \texttt{y-reg} should be \rule{2cm}{0.4pt}.
+\end{itemize}
+
+ 
+When using the \snap\ code, you then get this table:
+
+\begin{tabular}{|c|c|c|}\hline
+8&1.25& 0.65\\\hline
+9& 1.111111& 0.555555 \\\hline
+10 & 1 & 0.5\\\hline
+11 & 0.909090 & 0.454545\\\hline
+12&0.833333&0.416666\\\hline
 \end{tabular}
-}
 
-
-
-
-
-
-
-
-
-\answerlistbox{(b)}{(c)}{(e)}{(c)}{(b)}
+\begin{itemize}
+ \item This table means that you can build a staircase with \rule{2cm}{0.4pt} stairs.
+ \item For a staircase with $11\ stairs$, the risers would \rule{2cm}{0.4pt} and treads would be \rule{2cm}{0.4pt}.
+\end{itemize}
+\end{exercise}
+\vfill
+\answerlistbox{False}{False}{True}{False}{10, 5, 5/6, 31/48,8 to 12, 0.42 feet, 0.91 feet}
 \end{document}
