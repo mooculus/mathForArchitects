@@ -7,7 +7,7 @@
 
 \begin{document}
 \begin{abstract}
-  We use \snap\ to solve the staircase problem.
+  We solve the staircase problem.
 \end{abstract}
 \maketitle
 
@@ -77,99 +77,37 @@ and
 \[
 \text{max number of stairs} = \left\lfloor \frac{15}{\left(5/6\right)} \right\rfloor.
 \]
-Both \emph{floor} and \emph{ceiling} are common computer-science
-commands and are included in \snap\ via:
-\begin{center}
-  \includegraphics{floor-script.png}
-  \qquad
-  and
-  \qquad
-\includegraphics{ceiling-script.png}
-\end{center}
-We'll now use \snap\ to solve the staircase problem.
+
 
 \mynewpage
 
 
 \begin{question}
-Someone wrote the following \snap\ script to ``solve'' the staircase
-problem:
-
-\begin{center}
-\includegraphics{staircase-script.png}
-\end{center}
-
-Run this script in \snap\ for the following values of $w$ and $h$:
-\[
-w=15\text{ and } h=10, \qquad w=15\text{ and } h=11, \qquad w=15\text{ and } h=13.
-\]
-
-Use the values above to help you explain the INPUTS and the OUTPUT of
-this code as you would like to have them explained to you. Use words,
-pictures, and so on, as needed/helpful in your explanation.
-\begin{freeResponse}
-  This script has two inputs,
-  \begin{align*}
-  w &= \text{width of where staircase is needed}\\
-  h &= \text{height of where staircase is needed}.
-  \end{align*}
-  The output is a list of staircase dimensions that meet city
-  code.
-
+  Find all valid staircases that will fit in a total width of $15$
+  feet and total height of $10$ feet. Show all work and explain your
+  reasoning.
+  \begin{freeResponse}
   When $w=15$ and $h=10$:
-  \begin{center}
-    \includegraphics{answer-15-10-script.png}
-  \end{center}
+  
   This means we can make three different staircases:
   \begin{enumerate}
   \item $16$ steps, with width $0.938$ feet, and height of $0.625$ feet.
   \item $17$ steps, with width $0.883$ feet, and height of $0.588$ feet.
   \item $18$ steps, with width $0.833$ feet, and height of $0.556$ feet.
   \end{enumerate}
-
-  When $w=15$ and $h=11$:
-   \begin{center}
-    \includegraphics{answer-15-11-script.png}
-   \end{center}
-   This means we can make only one staircase:
-   \begin{enumerate}
-   \item $18$ steps, with width $0.833$ feet, and height of $0.611$ feet.
-   \end{enumerate}
-
-
-   When $w=15$ and $h=11$:
-   \begin{center}
-    \includegraphics{answer-15-13-script.png}
-  \end{center}
-   This means we cannot make any staircases that are up to city code in this space.
-\end{freeResponse}
+  \end{freeResponse}
 \end{question}
+
+
 \mynewpage
 
 \begin{question}
-  Consider again the staircase \snap\ script from the problem above.
-  
-  EXPLAIN how the script works, block-by-block as you would like to
-  have it explained to you. Use words, pictures, and so on, as
-  needed/helpful in your explanation.
+  Use an \link[online stair calculator]{https://www.calculator.net/stair-calculator.html} to
+  find all valid staircases that will fit in a total width of $20$
+  feet and total height of $13$ feet. Show all work and explain your
+  reasoning.
 
   \begin{freeResponse}
-    \begin{enumerate}
-    \item We input the available width $w$ and height $h$.
-    \item Next we introduce variables for the horizontal regulation
-      $x-reg$, the vertical regulation $y-reg$, the minimum possible
-      number of steps $min-stairs$, the maximum number of steps
-      $max-stairs$, and finally $stairs$ will be our list of
-      solutions.
-    \item We set values for $x-reg$, $y-reg$, make $stairs$ a list,
-      and get values for $max-stairs$ and $min-stairs$.
-    \item\label{stairgoto} Finally, we make sure a staircase is possible by seeing if
-      \[
-      max-stairs \ge min-stairs
-      \]
-    \item If one is, we add $min-stairs$ to our list.
-    \item We now add $1$ to the minimum number of stairs, and goto step \ref{stairgoto}.
-    \end{enumerate}
   \end{freeResponse}
 \end{question}
 \mynewpage
@@ -205,17 +143,20 @@ pictures, and so on, as needed/helpful in your explanation.
       \frac{w}{h} \ge 1.29.
       \]
     \item They are not correct! For example you cannot build a
-      staircase when $w=13'$ and $h=10'$. Behold:
-      \begin{center}
-        \includegraphics{answer-13-10-result.png}
-      \end{center}
-
+      staircase when $w=13'$ and $h=10'$ as
+      \[
+      \text{min number of stairs} = \left\lceil
+      \frac{10}{\left(31/48\right)} \right\rceil=16
+      \]
+      and
+      \[
+      \text{max number of stairs} = \left\lfloor
+      \frac{13}{\left(5/6\right)} \right\rfloor=15.
+      \]
+      But the max number of stairs cannot be less than the min number of stairs!
     \item You CAN make a staircase that will fit when $w=130'$ and
-      $h=100'$. Behold:
-      \begin{center}
-        \includegraphics{answer-130-100-result.png}
-      \end{center}
-      Very interesting!
+      $h=100'$. Use $155$ steps with a tread of $0.84$ feet ($10.8$
+      inches) and a riser of $0.65$ feet ($7.8$ inches). Very interesting!
     \end{enumerate}
   \end{freeResponse}
 \end{question}
