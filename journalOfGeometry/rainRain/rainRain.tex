@@ -1,4 +1,4 @@
-\documentclass[nooutcomes,noauthor,hints,handout]{ximera}
+\documentclass[nooutcomes,noauthor,hints]{ximera}
 
 \input{../preamble.tex}
 \title{Rain, rain\dots}
@@ -44,42 +44,74 @@ We'll think about this conversation.
 
 \begin{question}
   Both the soup-pot and the kiddie-pool are approximately cylinders.
-  After chatting for sometime, Devyn and Riley decide that height of
-  the WATER-LEVEL in the cylinder is either
-  \begin{itemize}
-  \item proportional to the diameter of the cylinder, or
-  \item proportional to the area of the base of the cylinder.
-  \end{itemize}
   \begin{enumerate}
-  \item Which of the guesses above is correct? EXPLAIN your reasoning.
-  \item Suppose Devyn and Riley sloppily measure the water level. Could
-    even a ``sloppy'' measurement deduce which guess above is correct?
-    EXPLAIN your reasoning.
-  \end{enumerate}
-  As a gesture of friendship, I'll remind you that a value $x$ is \textbf{proportional} to a value $y$ if
+  \item Compute the VOLUME of rain-water of the soup-pot and
+    kiddie-pool respectively with respect to the HEIGHT of the
+    water-level in inches.
+  \item Use your previous answer to explain why:
+    \begin{quote}
+      the \textbf{volume} of water in a cylinder filled to a height $h$ \\ \quad is
+      \textbf{proportional} to \\
+      \quad\quad the \textbf{area of the base} of the cylinder.
+    \end{quote}
+    As a gesture of friendship, I'll remind you that a value $x$ is
+    \textbf{proportional} to a value $y$ if
   \[
   x = k y
   \]
-  where $k$ is a constant.
+  where $k$ is a constant and does not change when $x$ and $y$ change.
+  \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+      \item For a given height of rain water in either container, say
+        $h$ inches, find the volume of rain water in each container.
+        \[
+        V_{soup-pot} = 3 \pi 6^2
+        \]
+        and
+        \[
+        V_{kiddie-pool} = 3 \pi 36^2 
+        \]
+      \item The VOLUME of water in each cylinder is proportional to
+        the AREA of the base. We know this because the formula for the
+        VOLUME of a cylinder is
+        \begin{align*}
+          \text{volume} &= h \cdot \pi r^2\\
+          &= h \cdot A.
+        \end{align*}
+        Thus $V = h\cdot A$.
+    \end{enumerate}
+  \end{freeResponse}
 \end{question}
 \mynewpage
 
 
 
 \begin{question}
-  You find this random math work scribbled somewhere:
-  \begin{align}
-    A \cdot h &= \text{volume of rain in cylinder}\\
-    A \cdot k &= \text{amount of rain in cylinder}\\
-    A\cdot h &= A\cdot k\\
-    h &= k
-  \end{align}
+  Now let's think about rain. When it rains, assume that the amount of
+  water is distributed across the ground evenly.
   \begin{enumerate}
-  \item EXPLAIN and JUSTIFY each line above, and EXPLAIN how it solves
-    the question of ``which water level is higher.''
-  \item Remind us what $h$ and $k$ represent. Is it strange that
-    $h=k$? EXPLAIN why or why not?
+  \item Explain why the VOLUME of rain collected in the cylinders is
+    proportional to the area of the base.
+  \item What's the constant of this proportion? Think about its UNITS.
+  \item Use your answers to all questions above to RESOLVE Devyn and
+    Riley's question of which water level is higher.
   \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item Since the rain is coming down the same way in every
+      location, the only variable of how much rain is collected is the
+      area of the base. So
+      \[
+      V= k A.
+      \]
+    \item The constant of proportionality has units of inches, because
+      the left-hand side of the equation has units of inches cubed,
+      and area has units of inches squared. Hence it must be the height
+      of the water.
+    \item The height in either cylinder will be the SAME. 
+    \end{enumerate}
+  \end{freeResponse}
 \end{question}
 \mynewpage
 
@@ -95,6 +127,13 @@ We'll think about this conversation.
   \end{quote}
   \textbf{Is Geometry Giorgio’s claim correct?  If so, EXPLAIN why. If
     not, explain why not and give a correct solution.}
+  \begin{freeResponse}
+    Geometry Giorgio’s claim is not correct. He is scaling by the
+    diameter, not the area of the base. The correct answer is
+    \[
+    10\cdot 36=360~\text{pounds}.
+    \]
+  \end{freeResponse}
 \end{question}
 
 
