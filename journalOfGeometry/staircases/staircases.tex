@@ -85,8 +85,11 @@ and
 
 \begin{question}
   Find all valid \mooculus~prefab staircases that will fit in a total
-  width of $15$ feet and total height of $10$ feet. Show all work and
-  explain your reasoning.
+  width of $15$ feet and total height of $10$ feet. In each case,
+  \begin{itemize}
+  \item give the \textbf{number of stairs}, the \textbf{tread width},
+    and the \textbf{riser height}.
+  \end{itemize}
   \begin{freeResponse}
   When $w=15$ and $h=10$:
   
@@ -105,11 +108,33 @@ and
 \begin{question}
   Use an \link[online stair
     calculator]{https://www.calculator.net/stair-calculator.html} to
-  find all valid \mooculus~prefab staircases that will fit in a total
-  width of $20$ feet and total height of $13$ feet. Show all work and
-  explain your reasoning.
+  find \textbf{all} valid \mooculus~prefab staircases that will fit in
+  a total width of $20$ feet and total height of $13$ feet.
+
+ After \textbf{listing all valid staircases}, \textbf{choose the most optimal one,
+ according to Blondel's formula.}
 
   \begin{freeResponse}
+    From the calculator, I see we can make four different staircases:
+    \begin{enumerate}
+    \item $21$ steps, with width $11.43$ inches, and height of $7.43$ inches.
+    \item $22$ steps, with width $10.91$ inches, and height of $7.09$ inches.
+    \item $23$ steps, with width $10.43$ inches, and height of $6.78$ inches.
+    \item $24$ steps, with width $10$ inches, and height of $6.5$ inches.
+    \end{enumerate}
+    Blondel's formula (in inches) is:
+    \[
+    2\cdot h + w \approx 25
+    \]
+    Now, we have
+    \begin{align*}
+      2\cdot 7.43 + 11.43 \approx 26.3
+      2\cdot 7.09 + 10.91 \approx 25
+      2\cdot 6.78 + 10.43 \approx 24
+      2\cdot 6.5 + 10 &= 23
+    \end{align*}
+    Hence a staircase of $22$ steps, with width $10.91$ inches, and
+    height of $7.09$ inches is optimal by Blondel's formula.
   \end{freeResponse}
 \end{question}
 \mynewpage
@@ -129,7 +154,7 @@ and
   \begin{enumerate}
     \item How did \textit{Geometry Giorgio} come up with this ``rule-of-thumb?''
     \item Is \textit{Geometry Giorgio} correct?
-    \item Can you build a staircase where $w=130$ $h=100$? 
+    \item Can you build a staircase where $w=130$ $h=100$? Why is this question relevant?
   \end{enumerate}
   In each case, explain your reasoning with words, pictures, examples, and so on.
   \begin{freeResponse}
@@ -159,6 +184,11 @@ and
     \item You CAN make a staircase that will fit when $w=130'$ and
       $h=100'$. Use $155$ steps with a tread of $0.84$ feet ($10.8$
       inches) and a riser of $0.65$ feet ($7.8$ inches). Very interesting!
+
+
+      
+      Since this staircase is just a scaling of a $13$ by $10$
+      staircase, we see scaling CANNOT solve the staircase problem.
     \end{enumerate}
   \end{freeResponse}
 \end{question}
