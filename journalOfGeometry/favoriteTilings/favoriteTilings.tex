@@ -1,0 +1,112 @@
+\documentclass[noauthor,nooutcomes,handout,hints]{ximera}
+\input{../preamble.tex}
+
+\title{These are a few of my favorite tilings}
+\author{Bart Snapp}
+
+\begin{document}
+\begin{abstract}
+These are actually three of my favorite questions about tilings.
+\end{abstract}
+\maketitle
+
+\begin{listOutcomes}
+\item Tile the plane with an arbitrary quadrilateral. 
+\item Demonstrate tilings of $n$-gons where $n$ is arbitrary.
+\item State the Pythagorean theorem.
+\item Explain why the Pythagorean theorem is true.
+\end{listOutcomes}
+
+\mynewpage
+
+
+\begin{question}
+  Did you know that you can tile ANY quadrilateral? Here's how:
+  \[
+  \includegraphics{quadtess.pdf}
+  \]
+  Now you tessellate the quadrilateral below:
+  \[
+  \includegraphics{109exam1_tess.pdf}
+  \]
+  \textbf{Draw enough so that we can see that your pattern actually
+    tessellates the plane.}
+\end{question}
+\mynewpage
+
+\begin{question}
+  Demonstrate how to tile the plane with a 9-gon, now a 10-gon!
+
+  \begin{hint}
+    Think about the shape of a comb.
+  \end{hint}  
+\end{question}
+\mynewpage
+
+
+
+\begin{question}
+  Do you recall, the \textit{most famous theorem of all?}
+    \begin{mdframed}[style=OutcomeStyle]\begin{quote}
+    The \underline{Pythagorean theorem} says that given a right
+    triangle,
+    \begin{center}
+      \begin{tikzpicture}[geometryDiagrams]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (0,3);
+        \coordinate (C) at (7,0);
+        \tkzDrawSegment (A,B)
+        \tkzDrawSegment (A,C)
+        \tkzDrawSegment (C,B)
+        \tkzLabelSegment[left](A,B){$a$}
+        \tkzLabelSegment[below](A,C){$b$}
+        \tkzLabelSegment[above right](B,C){$c$}  
+
+        \tkzMarkRightAngle[thin](C,A,B)
+        %\tkzLabelAngle[pos=1.2](C,A,B){$?$}
+
+        %% \tkzMarkAngle[size=0.8cm,thin,mark=](A,B,C)
+        %% \tkzLabelAngle[pos=.5](A,B,C){$?$}
+
+        %% \tkzMarkAngle[mark=,size=.9,thin](B,C,A)
+        %% \tkzLabelAngle[pos=.6](B,C,A){$?$}
+        
+      \end{tikzpicture}
+    \end{center}
+    we will always have that
+    \[
+    a^2 + b^2 = c^2.
+    \]
+   \end{quote}
+    \end{mdframed}
+    EXPLAIN (using words, pictures, and so on) how the picture
+    below``proves'' the Pythagorean Theorem:
+    \[
+    \includegraphics{pbppyth2.pdf}
+    \]
+    \begin{freeResponse}
+      The white triangle is our right triangle. The area of the middle
+      overlaid square is $c^2$, the area of the small dark squares is $a^2$,
+      and the area of the medium lighter square is $b^2$. Now label all the
+      ``parts'' of the large overlaid square:
+      \[
+      \includegraphics{pbppyth2a.pdf}
+      \]
+      From the picture we see that
+      \begin{align*}
+        a^2 &= \{\text{3 and 4}\}\\
+        b^2 &= \{\text{1, 2, and 5}\}\\
+        c^2 &= \{\text{1, 2, 3, 4, and 5}\}
+      \end{align*}
+      Hence
+      \[
+      c^2 = a^2 + b^2
+      \]
+      Since we can always put two squares together in this pattern, this
+      proof will work for any right triangle.
+    \end{freeResponse}
+\end{question}
+
+
+
+\end{document}
