@@ -1,8 +1,8 @@
-\documentclass{../ximera}
+\documentclass[noauthor,nooutcomes]{ximera}
 
 \input{../preamble}
 
-\author{Claire Merriman}
+\author{Claire Merriman and Bart Snapp}
 
 \checkYourselfAbstract
 
@@ -10,51 +10,58 @@
 \maketitle
 
 \begin{exercise}
- The sum of the exterior angles of any polygon on a flat surface is $360^\circ$
+  True or False:
+ The sum of the exterior angles of any polygon on a flat surface is $360^\circ$.
 \end{exercise}
+
+\begin{exercise}
+  True or False: If you walk Louie Llama around an $n$-gon, he will
+  rotate $n\cdot 180$ degrees.
+\end{exercise}
+
+
+
 
 \begin{exercise}
  Consider the following equation: $(80-\alpha)+(80-\beta)+(80-\gamma)=40$. Solve for $\alpha+\beta+\gamma$.
 \end{exercise}
 
-\begin{exercise}
- When walking all the way around the following shape, identify the angles through which Louie Llama or the \snap\ turtle turns 
-     \begin{center}
-      \begin{tikzpicture}
-        \foreach \i in {1,...,9}
-                 {
-                   \draw ({2*sin(\i *360/9)},{2*cos(\i * 360/9)}) -- ({2*sin((\i+2)*360/(9))},{2*cos((\i+2)*360/(9))});
-                   \node (1) at ({1.75*sin(\i *360/9)},{1.75*cos(\i *360/9)}) {$\beta$};
-                 }
-                 
-      \end{tikzpicture}
-    \end{center}
-\end{exercise}
+
 
 \begin{exercise}
- The angle measure of $\beta$ in the previous question is:
- 
-  \begin{enumerate}\begin{multicols}{2}
-  \item $40^\circ$
-  \item $80^\circ$
-  \item $100^\circ$
-  \item $60^\circ$
-    \end{multicols}
-  \end{enumerate}
+ Consider the following equation: $(30-\alpha)+(40-\beta)+(60-\gamma)=10$. Solve for $\alpha+\beta+\gamma$.
 \end{exercise}
 
+
 \begin{exercise}
- You draw an angle with the vertex is in the center of the paper, and whose sides extend to the edges of the paper. You then cut one of the sides and make a cone. A triangle drawn on the cone, around the vertex will have:
+The \MOOCulus~Design company wants to hire a mathematical
+designer. Knowing that you once took a mathematics class, they ask you
+to sit in on the interviews.
+
+
+You don't remember much--but you do recall that when drawing shapes
+one needs to be careful with interior and exterior angles.
+
  
+
+Which question below would be best to ask if you want to know if the
+job candidate knows the difference between interior and exterior
+angles?
+
 \begin{enumerate}
-\begin{multicols}{3}
- \item Angle sum less than $180^\circ$
- \item Angle sum equal to $180^\circ$
-   \item Angle sum more than $180^\circ$
-\end{multicols}
- 
+\item You ask them about interior/exterior angles of any
+  triangle.
+\item You ask them about interior/exterior angles of a square.
+\item You ask them about interior/exterior angles of a circle.
+\item Any shape will work for this sort of question.
 \end{enumerate}
+
 \end{exercise}
 
-\answerlistbox{True}{$\alpha+\beta+\gamma=200$}{Exterior Angles}{(c)}{(c)}
+
+
+
+
+
+\answerlistbox{True}{False}{$\alpha+\beta+\gamma=200$}{$\alpha+\beta+\gamma=120$}{(a)}
 \end{document}
