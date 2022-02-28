@@ -209,10 +209,10 @@
 
 \newcommand{\answerlistbox}[5]{
   \vfill
-  \hfill \fbox{\tiny\begin{minipage}{.6in}
+  \hfill \fbox{\tiny\begin{minipage}{1in}
   \flushleft
   Answers:
-  \flushright\rotatebox{180}{\begin{minipage}{.5in}\tiny
+  \flushright\rotatebox{180}{\begin{minipage}{.8in}\tiny
     C1: #1\\
     C2: #2\\
     C3: #3\\
@@ -333,6 +333,31 @@
     check your understanding by seeing if you can answer five questions in
     ten minutes. Make sure you can explain why each of your answers is correct.
 \end{abstract}}
+
+
+%% STAR POLYGON DRAWER
+\usetikzlibrary{math}
+
+\newcommand{\starpoly}[2]{\begin{center}\begin{tikzpicture}[scale=.5, transform shape]\pic {tikzngon={#1}{#2}};\end{tikzpicture}\end{center}}
+%% N-GON code
+\tikzset{
+    pics/tikzngon/.style n args={2}{
+        code={
+        \tikzmath{\n = #1;\s = #2;\rr=6;\m=\n-1;\dd=.4;}
+        \foreach \i in {0,1,...,\m}
+          {
+            \draw[ultra thick,rounded corners=.05mm]
+            ({\rr*sin(\i *360/\n)},{\rr*cos(\i *360/\n)}) --
+            ({\rr*sin((\i+\s)*360/\n)},{\rr*cos((\i+\s)*360/\n)});
+          }
+          \foreach \i in {0,1,...,\m}
+            {\pgfmathtruncatemacro{\xy}{\i+1}
+             \node[circle,fill=black,inner sep=0pt, minimum size=35pt,text=white]
+             at ({(\rr)*sin((mod(\i*\s,\n))*360/(\n))},{(\rr)*cos((mod(\i*\s,\n))*360/\n)}) {\normalfont\Huge\bfseries\sffamily{\xy}};
+           }
+        }}}
+%% END STAR POLYGON DRAWER
+
 
 
 
