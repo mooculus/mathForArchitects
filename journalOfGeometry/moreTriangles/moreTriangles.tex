@@ -1,8 +1,8 @@
-\documentclass[noauthor,nooutcomes,handout]{../ximera}
+\documentclass[noauthor,nooutcomes,handout]{ximera}
 
 \input{../preamble.tex}
 
-\title{A few more triangles}
+\title{A few more (tri)angles}
 \author{Claire Merriman}
 
 %% ONLY REQUIRES WHAT's YOUR ANGLE...
@@ -11,21 +11,22 @@
 
 \begin{document}
 \begin{abstract}
-We'll explore some more properties of angles and triangles.\end{abstract}
+  We'll explore some more properties of angles and triangles.
+\end{abstract}
 \maketitle
 
 \begin{listOutcomes}
-\item Explain the relationship between vertical and supplementary angles,
-\item State and triangle congruence,
-\item Use radians to find the length of a circle segment,
-\item Use formulas to so word problems.
+\item Explain the relationship between vertical and supplementary angles.
+\item Use triangle congruence theorems.
+\item Use radians to find the length of a circle segment.
+\item Use formulas to solve word problems.
 \end{listOutcomes}
 
-\begin{listObjectives}
-\item Learn and apply basic geometric formulas,
-\item Explain why presented concepts and formulas are true,
-\end{listObjectives}
-\mynewpage
+%% \begin{listObjectives}
+%% \item Learn and apply basic geometric formulas,
+%% \item Explain why presented concepts and formulas are true,
+%% \end{listObjectives}
+
 
 
 
@@ -59,12 +60,18 @@ This diagram is used for two questions.
   \tkzMarkAngle[size=0.5cm,mark=](C,E,B)
   \tkzMarkAngle[size=0.75,mark=](F,C,D)
   \tkzLabelAngle[pos = -1](A,E,C){$\alpha$}
-  \tkzLabelAngle[pos = 1](C,E,B){$\beta$}
-  \tkzLabelAngle[pos = 1](D,E,A){$\gamma$}
+  \tkzLabelAngle[pos = .7](C,E,B){$\beta$}
+  \tkzLabelAngle[pos = .7](D,E,A){$\gamma$}
   \tkzLabelAngle[pos = -1](C,E,A){$\delta$}
   \tkzLabelAngle[pos = 1](F,C,D){$\epsilon$}
 \end{tikzpicture}
 \end{center}
+
+
+\mynewpage
+
+
+
 \begin{question}
 \begin{enumerate}
     \item Find $\beta,\gamma,\delta$ and $\epsilon$ in terms of $\alpha$. Explain your reasoning. 
@@ -75,6 +82,9 @@ BD\right\vert $ does not require $\bar{AB}$ and $\bar{AC}$ to be perpendicular.
 \end{enumerate}
 \end{question}
 \mynewpage
+
+
+
 
 \begin{question}
 \textit{Radians} are another way to measure angles. $1 \ radian$ is the angle made when we take the radius
@@ -92,7 +102,7 @@ and wrap it round the circle. On a circle with radius $1\ unit$, the length of t
  % \tkzLablSegments[mark=|](O,A)
   \tkzDrawPoints(O,A,B)
   \tkzMarkAngle[size=0.75cm,mark=](A,O,B)
-   \tkzLabelAngle[pos = 1.5](A,O,B){$\theta=1\ rad$}
+   \tkzLabelAngle[pos = .8,right](A,O,B){$\theta=1\ rad$}
  \end{tikzpicture}
  
 \end{center}

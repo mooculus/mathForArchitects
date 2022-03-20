@@ -2,27 +2,27 @@
 
 \input{../preamble.tex}
 
-\title{Angles and right triangles}
-\author{Bart Snapp}
+\title{Right triangles and circles}
+\author{Bart Snapp and Claire Merriman}
 
 \begin{document}
 \begin{abstract}
-  We learn about Pythagorean triples.
+  We again see the connection between right triangles and circles. 
 \end{abstract}
 \maketitle
 
+
+
+
 \begin{listOutcomes}
-\item{Understand what Pythagorean triples are.}
-\item{Know how to identify Pythagorean triples.}
-\item{Use \snap\ to draw right triangles, given a Pythagorean triple.}
-\item{Apply the bisection method to solve a problem where no equation is given.}
-\item{Describe the bisection method as an algorithm.}
+\item Interpret sine and cosine when the angle is larger than $180^\circ$.
+\item Extend understanding of sine and cosine from interpretations
+  involving right triangles to the unit circle.
 \end{listOutcomes}
-\begin{listObjectives}
- \item Learn and apply basic geometric formulas,
-\item Explain why presented concepts and formulas are true,
-\item Use trigonometry to solve common problems.
-\end{listObjectives}
+
+
+\mynewpage
+
 
 \begin{question}
  Using what you know about sine, cosine, and right triangles, draw and label a right triangle where $\cos(\theta)=\frac{3}{5}$, then find $\sin(\theta)$.
@@ -97,23 +97,12 @@
 
 \begin{question}
   Let's think about our previous work a little more.
-  \begin{enumerate}
-  \item Consider the following \snap\ block \raisebox{-.4\height}{\includegraphics{../sineAndCosine/circleBlank.png}}. Here is the script for that block:
-    \begin{center}
-      \includegraphics{../sineAndCosine/circleScript.png}
-    \end{center}
-    Explain how the script works, block-by-block as you would like to
-    have it explained to you. Use words, pictures, and so on, as
-    needed/helpful in your explanation.
-  \item Some folks like to plot circles with:
+  Some folks like to plot circles with:
     \[
     (x,y) = (\cos(\theta),\sin(\theta)) \qquad\text{others with}\qquad  (x,y) = (\sin(\theta),\cos(\theta))
     \]
-    How does the command \raisebox{-.4\height}{\includegraphics{../sineAndCosine/circleBlank.png}} change if you change how it plots circles?
-%  \item Find real world circumstances where it might be better to use $(x,y) = (\sin(\theta),\cos(\theta))$. Explain your reasoning.
-%  \item Find real world circumstances where it might be better to use $(x,y) = (\cos(\theta),\sin(\theta))$. Explain your reasoning.
-  
-  \end{enumerate}
+    What's the difference between these two methods of plotting circles?
+      
   \begin{freeResponse}
     \begin{enumerate}
     \item Here we go:
