@@ -28,14 +28,13 @@
 %% \end{listObjectives}
 
 
+\mynewpage
 
-
-
+\begin{question}
 In the following diagram, the lines $\bar{AB}$ and $\bar{CF}$ are parallel and perpendicular to $\bar{AC}$. Suppose that $\left\vert AE\right\vert =\left\vert
 EB\right\vert $ and $\left\vert CE\right\vert =\left\vert
 ED\right\vert $.
 
-This diagram is used for two questions.
 \begin{center}
 \begin{tikzpicture}[rotate=15]
   \coordinate (A) at (-2,0);
@@ -47,6 +46,7 @@ This diagram is used for two questions.
   \coordinate (G) at (-4,0);
   \coordinate (H) at (8,0);
   \coordinate (I) at (-4,-4);
+  \tkzDrawPoints(A,B,C,D,E,F);
   \draw (G)--(H);
   \draw (I)--(F);
   \draw (B)--(D)--(C)--(A);
@@ -67,12 +67,6 @@ This diagram is used for two questions.
 \end{tikzpicture}
 \end{center}
 
-
-\mynewpage
-
-
-
-\begin{question}
 \begin{enumerate}
     \item Find $\beta,\gamma,\delta$ and $\epsilon$ in terms of $\alpha$. Explain your reasoning. 
     \item Look up triangle congruence theorems and cite your sources. Explain why $\left\vert AC\right\vert =\left\vert
@@ -87,8 +81,10 @@ BD\right\vert $ does not require $\bar{AB}$ and $\bar{AC}$ to be perpendicular.
 
 
 \begin{question}
-\textit{Radians} are another way to measure angles. $1 \ radian$ is the angle made when we take the radius
-and wrap it round the circle. On a circle with radius $1\ unit$, the length of the blue arc is also $1\ unit$, so the marked angle has measure $1 \ radian$.
+\textbf{Radians} are another way to measure angles. $1 \ radian$ is
+the \textbf{angle made} when we take \textbf{one radius wrapped around the
+circle.} On a circle with radius $1\ unit$, the length of the thick arc
+is also $1\ unit$, so the marked angle has measure $1 \ radian$.
 
 
 \begin{center}
@@ -96,8 +92,8 @@ and wrap it round the circle. On a circle with radius $1\ unit$, the length of t
   \tkzDefPoint(0,0){O}
   \tkzDefPoint(4,0){A}
   \tkzDefPoint(4*cos(1),4*sin(1)){B}
-  \tkzDrawArc[blue,thick](O,A)(B)
-  \tkzDrawArc[thick](O,B)(A)
+  \tkzDrawArc[ultra thick,black](O,A)(B)
+  \tkzDrawArc[](O,B)(A)
   \tkzDrawLines[add = 0 and .5](O,A O,B)
  % \tkzLablSegments[mark=|](O,A)
   \tkzDrawPoints(O,A,B)
@@ -110,8 +106,8 @@ and wrap it round the circle. On a circle with radius $1\ unit$, the length of t
 The ever insightful Louie Llama is here to help!
 
 \begin{enumerate}
-    \item Louie Llama walks all the way around the  the circle. When he gets back to where he started, he has turn $2\pi \ rad$. Explain why in your own words. 
-    \item What is the length of blue segment if $\theta=\pi \ rad$? Why?
+    \item Louie Llama walks all the way around the  the circle. When he gets back to where he started, he has turned $2\pi \ rad$. Explain why in your own words. 
+    \item What is the length of thick segment if $\theta=\pi \ rad$? Why?
     \item What is the length of the blue segment if $\theta=1 \ rad$ and the radius is $r$? Explain your reasoning.
 \end{enumerate}
 \end{question}
