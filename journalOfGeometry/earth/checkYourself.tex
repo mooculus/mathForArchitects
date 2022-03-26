@@ -1,25 +1,8 @@
-\documentclass{../ximera}
+\documentclass{ximera}
 
 \input{../preamble}
 
-\author{Bart Snapp}
-
-%% The Sun's rays are parallel because
-%% Sun is far
-%% Sun doesn't move
-%% Tropics
-%% Noon
-%% All of the above
-
-
-%% Erathostesnes estimate is too large because
-%% The pace is imprecise
-%% The angle was wrong
-%% Aswan is not directly south of Alexandria
-%% The Earth is not a sphere
-%% All of the above
-
-
+\author{Bart Snapp and Claire Merriman}
 
 \checkYourselfAbstract
 
@@ -27,96 +10,45 @@
 \maketitle
 
 
-
-\begin{center}
-\begin{tikzpicture}[x=.5cm, y=.5cm]
-  \coordinate (A) at (-2,0);
-  \coordinate (B) at (6,0);
-  \coordinate (C) at (-2,-4);
-  \coordinate (D) at (6,4);
-  \coordinate (E) at (2,0);
-  \coordinate (F) at (8,-4);
-  \coordinate (G) at (-4,0);
-  \coordinate (H) at (8,0);
-  \coordinate (I) at (-4,-4);
-  \draw (G)--(H);
-  \draw (I)--(F);
-  \draw (B)--(D)--(C)--(A);
-  \tkzLabelPoints[above](D,A,E)
-  \tkzLabelPoints[below](B,C,F)
-  \tkzMarkSegments[mark=|](A,E E,B)
-  \tkzMarkSegments[mark=||](C,E E,D)
-  \tkzMarkAngle[size=0.75cm,mark=](B,E,D)
-  \tkzMarkAngle[size=0.5cm,mark=](D,E,A)
-  \tkzMarkAngle[size=0.75cm,mark=](A,E,C)
-  \tkzMarkAngle[size=0.5cm,mark=](C,E,B)
-  \tkzMarkAngle[size=0.75,mark=](F,C,D)
-  \tkzLabelAngle[pos = -1](A,E,C){$\alpha$}
-  \tkzLabelAngle[pos = 1](C,E,B){$\beta$}
-  \tkzLabelAngle[pos = 1](D,E,A){$\gamma$}
-  \tkzLabelAngle[pos = -1](C,E,A){$\delta$}
-  \tkzLabelAngle[pos = 1](F,C,D){$\epsilon$}
-\end{tikzpicture}
-\end{center}
-
 \begin{exercise}
- The formula for $\beta$ in terms of $\alpha$ is:
- 
-\begin{enumerate}
-\begin{multicols}{2}
- \item $180^\circ-\alpha$
- \item $90^\circ-\beta$
- \item $\alpha$
- \item $360-\alpha$
-\end{multicols}
-\end{enumerate}
+  The Sun's rays are ``parallel'' because:
+  \begin{enumerate}
+  \item It was at solar noon.
+  \item The Sun is very far from the Earth.
+  \item Alexandria and Aswan are in the Tropics.
+  \item The Sun doesn't move with respect to the Earth.
+  \item All of the above.
+  \end{enumerate}
 \end{exercise}
 
 \begin{exercise}
- The formula for $\gamma$ in terms of $\alpha$ is:
- 
-\begin{enumerate}
-\begin{multicols}{2}
- \item $180^\circ-\alpha$
- \item $90^\circ-\beta$
- \item $\alpha$
- \item $360-\alpha$
-\end{multicols}
-\end{enumerate}
+  Eratosthenes' estimate is too large because:
+  \begin{enumerate}
+  \item The pace was imprecise.
+  \item The angle was wrong.
+  \item Aswan is not directly South of Alexandria. 
+  \item The Earth is not a sphere.
+  \item All of the above.
+  \end{enumerate}
 \end{exercise}
 
-\begin{exercise}
- The formula for $\delta$ in terms of $\alpha$ is:
- 
-\begin{enumerate}
-\begin{multicols}{2}
- \item $180^\circ-\alpha$
- \item $90^\circ-\beta$
- \item $\alpha$
- \item $360-\alpha$
-\end{multicols}
-\end{enumerate}
-\end{exercise}
+
+
 
 \begin{exercise}
- The formula for $\epsilon$ in terms of $\alpha$ is:
- 
-\begin{enumerate}
-\begin{multicols}{2}
- \item $180^\circ-\alpha$
- \item $90^\circ-\beta$
- \item $\alpha$
- \item $360-\alpha$
-\end{multicols}
-\end{enumerate}
+  True or False:
+
+  
+  ``If you are standing on the equator of the Earth, you are actually traveling at around $1000$ miles per hour.''
 \end{exercise}
+
 
 \begin{exercise}
  You find yourself on a planet like Earth, but the size is very different. 
  
  On the longest day of summer the Sun is directly above your city, there are no shadows and light reaches the bottom of even the deepest open wells.
 
-Your friend lives in a city 500 miles directly North of you. Here is a schematic diagram of a stick and a shadow in your friend's city:
+Your friend lives in a city $500$ miles directly North of you. Here is a schematic diagram of a stick and a shadow in your friend's city:
   \begin{center}
       \begin{tikzpicture}[x=.5cm, y=.5cm]
         \coordinate (A) at (0,0);
@@ -127,20 +59,39 @@ Your friend lives in a city 500 miles directly North of you. Here is a schematic
         \tkzDrawSegment (C,B)
 
         \tkzMarkAngle[mark=,size=1.2cm,thin](A,B,C)
-        \tkzLabelAngle[pos=3](A,B,C){$12^\circ$}
+        \tkzLabelAngle[left, pos=2](A,B,C){$\theta^\circ$}
       \end{tikzpicture}
     \end{center}
-    
-What is the approximate circumference of the planet?
+    On this planet, the angle $\theta^\circ$ is \textbf{much smaller}  than it would otherwise be on Earth.
+     
+The circumference of the planet is:
 \begin{enumerate}
 \begin{multicols}{2}
- \item about 20000 miles
- \item about 10000 miles
- \item about 5000 miles
- \item about 15000 miles
+\item Larger than the Earth.
+\item Smaller than the Earth.
 \end{multicols}
  \end{enumerate}
 \end{exercise}
+
+\begin{exercise}
+ You find yourself on a planet like Earth, but the size is very different. 
+ 
+ On the longest day of summer the Sun is directly above your city, there are no shadows and light reaches the bottom of even the deepest open wells.
+
+ Your friend lives in a city $500$ miles directly North of you. On this planet, the stick makes a \textbf{much longer shadow} than it would otherwise be on Earth.
+     
+The circumference of the planet is:
+\begin{enumerate}
+\begin{multicols}{2}
+\item Larger than the Earth.
+\item Smaller than the Earth.
+\end{multicols}
+ \end{enumerate}
+\end{exercise}
+
+
+
+
 
 \answerlistbox{(a)}{(a)}{(c)}{(c)}{(d)}
 \end{document}
