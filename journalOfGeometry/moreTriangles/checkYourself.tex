@@ -1,0 +1,105 @@
+\documentclass{../ximera}
+
+\input{../preamble}
+
+\author{Bart Snapp}
+
+\checkYourselfAbstract
+
+\begin{document}
+\maketitle
+
+
+
+\begin{center}
+\begin{tikzpicture}[x=.5cm, y=.5cm]
+  \coordinate (A) at (-2,0);
+  \coordinate (B) at (6,0);
+  \coordinate (C) at (-2,-4);
+  \coordinate (D) at (6,4);
+  \coordinate (E) at (2,0);
+  \coordinate (F) at (8,-4);
+  \coordinate (G) at (-4,0);
+  \coordinate (H) at (8,0);
+  \coordinate (I) at (-4,-4);
+  \draw (G)--(H);
+  \draw (I)--(F);
+  \draw (B)--(D)--(C)--(A);
+  \tkzLabelPoints[above](D,A,E)
+  \tkzLabelPoints[below](B,C,F)
+  \tkzMarkSegments[mark=|](A,E E,B)
+  \tkzMarkSegments[mark=||](C,E E,D)
+  \tkzMarkAngle[size=0.75cm,mark=](B,E,D)
+  \tkzMarkAngle[size=0.5cm,mark=](D,E,A)
+  \tkzMarkAngle[size=0.75cm,mark=](A,E,C)
+  \tkzMarkAngle[size=0.5cm,mark=](C,E,B)
+  \tkzMarkAngle[size=0.75,mark=](F,C,D)
+  \tkzLabelAngle[pos = -1](A,E,C){$\alpha$}
+  \tkzLabelAngle[pos = 1](C,E,B){$\beta$}
+  \tkzLabelAngle[pos = 1](D,E,A){$\gamma$}
+  \tkzLabelAngle[pos = -1](C,E,A){$\delta$}
+  \tkzLabelAngle[pos = 1](F,C,D){$\epsilon$}
+\end{tikzpicture}
+\end{center}
+
+\begin{exercise}
+ The formula for $\beta$ in terms of $\alpha$ is:
+ 
+\begin{enumerate}
+\begin{multicols}{2}
+ \item $180^\circ-\alpha$
+ \item $90^\circ-\beta$
+ \item $\alpha$
+ \item $360-\alpha$
+\end{multicols}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+ The formula for $\gamma$ in terms of $\alpha$ is:
+ 
+\begin{enumerate}
+\begin{multicols}{2}
+ \item $180^\circ-\alpha$
+ \item $90^\circ-\beta$
+ \item $\alpha$
+ \item $360-\alpha$
+\end{multicols}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+ The formula for $\delta$ in terms of $\alpha$ is:
+ 
+\begin{enumerate}
+\begin{multicols}{2}
+ \item $180^\circ-\alpha$
+ \item $90^\circ-\beta$
+ \item $\alpha$
+ \item $360-\alpha$
+\end{multicols}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+ The formula for $\epsilon$ in terms of $\alpha$ is:
+ 
+\begin{enumerate}
+\begin{multicols}{2}
+ \item $180^\circ-\alpha$
+ \item $90^\circ-\beta$
+ \item $\alpha$
+ \item $360-\alpha$
+\end{multicols}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+  True or False:
+
+  ``A radian is just the angle made by the arc of a circle whose
+  length equals the raidus.''
+\end{exercise}
+
+\answerlistbox{(a)}{(a)}{(c)}{(c)}{True}
+\end{document}
