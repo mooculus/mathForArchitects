@@ -1,8 +1,8 @@
-\documentclass{../ximera}
+\documentclass{ximera}
 
 \input{../preamble}
 
-\author{Bart Snapp}
+\author{Bart Snapp and Claire Merriman}
 
 \checkYourselfAbstract
 
@@ -10,9 +10,9 @@
 \maketitle
 
 
-
+For Checks 1 through 4 below, consider this diagram:
 \begin{center}
-\begin{tikzpicture}[x=.5cm, y=.5cm]
+\begin{tikzpicture}[rotate=15, scale=1]
   \coordinate (A) at (-2,0);
   \coordinate (B) at (6,0);
   \coordinate (C) at (-2,-4);
@@ -22,6 +22,7 @@
   \coordinate (G) at (-4,0);
   \coordinate (H) at (8,0);
   \coordinate (I) at (-4,-4);
+  \tkzDrawPoints(A,B,C,D,E,F);
   \draw (G)--(H);
   \draw (I)--(F);
   \draw (B)--(D)--(C)--(A);
@@ -35,8 +36,8 @@
   \tkzMarkAngle[size=0.5cm,mark=](C,E,B)
   \tkzMarkAngle[size=0.75,mark=](F,C,D)
   \tkzLabelAngle[pos = -1](A,E,C){$\alpha$}
-  \tkzLabelAngle[pos = 1](C,E,B){$\beta$}
-  \tkzLabelAngle[pos = 1](D,E,A){$\gamma$}
+  \tkzLabelAngle[pos = .7](C,E,B){$\beta$}
+  \tkzLabelAngle[pos = .7](D,E,A){$\gamma$}
   \tkzLabelAngle[pos = -1](C,E,A){$\delta$}
   \tkzLabelAngle[pos = 1](F,C,D){$\epsilon$}
 \end{tikzpicture}
@@ -50,7 +51,7 @@
  \item $180^\circ-\alpha$
  \item $90^\circ-\beta$
  \item $\alpha$
- \item $360-\alpha$
+ \item $360^\circ-\alpha$
 \end{multicols}
 \end{enumerate}
 \end{exercise}
@@ -63,7 +64,7 @@
  \item $180^\circ-\alpha$
  \item $90^\circ-\beta$
  \item $\alpha$
- \item $360-\alpha$
+ \item $360^\circ-\alpha$
 \end{multicols}
 \end{enumerate}
 \end{exercise}
@@ -76,7 +77,7 @@
  \item $180^\circ-\alpha$
  \item $90^\circ-\beta$
  \item $\alpha$
- \item $360-\alpha$
+ \item $360^\circ-\alpha$
 \end{multicols}
 \end{enumerate}
 \end{exercise}
@@ -89,7 +90,7 @@
  \item $180^\circ-\alpha$
  \item $90^\circ-\beta$
  \item $\alpha$
- \item $360-\alpha$
+ \item $360^\circ-\alpha$
 \end{multicols}
 \end{enumerate}
 \end{exercise}
