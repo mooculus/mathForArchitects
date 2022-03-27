@@ -1,0 +1,115 @@
+\documentclass[noauthor,nooutcomes,hints,handout]{ximera}
+
+%% Note, this is connected to Simpson's paradox and Arrow's Impossibility theorem.
+%% See paper An Impossibility Theorem for Gerrymandering, by Alexeev and Mixon
+
+%https://redistricting.ohio.gov/maps
+%%https://www.lsc.ohio.gov/documents/reference/current/membersonlybriefs/134%20Redistricting%20in%20Ohio.pdf
+
+%https://districtr.org/ohio
+
+%https://projects.fivethirtyeight.com/redistricting-2022-maps/ohio/democratic_amendments/
+%https://districtr.org/plan/120904
+
+%https://districtr.org/plan/121411
+
+
+%https://districtr.org/oh/congress
+
+\input{../preamble.tex}
+
+\title{Pack, crack, efficiency gap}
+\author{Bart Snapp}
+
+\begin{document}
+\begin{abstract}
+  We think about strategies and measurements of gerrymandering.
+\end{abstract}
+\maketitle
+
+\begin{listOutcomes}
+\item Describe what gerrymandering is.
+\item Understand what ``packing'' is in reference to gerrymandering.
+\item Understand what ``cracking'' is in reference to gerrymandering.
+\item Understand what ``efficiency gap'' is in reference to
+  districting.
+\end{listOutcomes}
+
+
+
+
+
+\mynewpage
+
+
+
+
+
+
+\begin{question}
+  Let's talk about ``packing.'' Consider the following array of squares and circles
+   \[
+  \renewcommand{\arraystretch}{1.5}\huge
+  \begin{array}{|c|c|c|c|c|c|}\hline
+   \quad \bigcirc\quad\quad & \quad \blacksquare\quad\quad & \quad \blacksquare\quad\quad & \quad \blacksquare\quad\quad & \quad \bigcirc\quad\quad & \quad \blacksquare\quad\quad \\\hline
+    \blacksquare & \bigcirc & \bigcirc & \blacksquare & \bigcirc & \blacksquare \\\hline
+    \bigcirc & \bigcirc & \blacksquare & \bigcirc & \blacksquare & \bigcirc \\\hline
+    \blacksquare & \blacksquare & \blacksquare & \bigcirc & \bigcirc & \bigcirc \\\hline
+    \blacksquare & \bigcirc & \bigcirc & \blacksquare & \bigcirc & \blacksquare \\\hline
+    \bigcirc & \bigcirc & \blacksquare & \blacksquare & \blacksquare & \bigcirc \\\hline
+  \end{array}
+  \]
+  \begin{enumerate}
+  \item Gerrymander the array above into $12$ districts ($3$ in each
+    district) so that the squares win.
+  \item Look up ``packing'' in reference to gerrymandering. Explain it
+    here, and give examples where you ``packed'' above.
+  \end{enumerate}
+\end{question}
+
+
+\mynewpage
+
+\begin{question}
+Let's talk about ``cracking.'' Consider the following array of squares and
+circles
+   \[
+  \renewcommand{\arraystretch}{1.5}\huge
+  \begin{array}{|c|c|c|c|c|c|}\hline
+   \quad \bigcirc\quad\quad & \quad \blacksquare\quad\quad & \quad \blacksquare\quad\quad & \quad \blacksquare\quad\quad & \quad \bigcirc\quad\quad & \quad \blacksquare\quad\quad \\\hline
+    \blacksquare & \bigcirc & \bigcirc & \blacksquare & \bigcirc & \blacksquare \\\hline
+    \bigcirc & \bigcirc & \blacksquare & \bigcirc & \blacksquare & \bigcirc \\\hline
+    \blacksquare & \blacksquare & \blacksquare & \bigcirc & \bigcirc & \bigcirc \\\hline
+    \blacksquare & \bigcirc & \bigcirc & \blacksquare & \bigcirc & \blacksquare \\\hline
+    \bigcirc & \bigcirc & \blacksquare & \blacksquare & \blacksquare & \bigcirc \\\hline
+  \end{array}
+  \]
+  \begin{enumerate}
+  \item Gerrymander the array above into $12$ districts ($3$ in each
+    district) so that the circles win.
+  \item Look up ``cracking'' in reference to gerrymandering. Explain it
+    here, and give examples where you ``cracked'' above.
+  \end{enumerate}
+\end{question}
+
+\mynewpage
+
+
+\begin{question}
+  The ``efficiency gap'' of a district map is
+  \[
+  \frac{\left|\right(\text{wasted votes for }\blacksquare\left) - \right(\text{wasted votes for }\bigcirc\left)\right|}{\text{total number of votes}}
+  \]
+  \begin{enumerate}
+    \item How many votes are needed to ``win'' a majority, if there
+      are $36$ total votes?
+    \item What's your efficiency gap for Question 1? Show work and
+      explain your reasoning.
+    \item What's your efficiency gap for Question 2? Show work and
+        explain your reasoning.
+  \end{enumerate}
+\end{question}
+
+
+
+\end{document}
