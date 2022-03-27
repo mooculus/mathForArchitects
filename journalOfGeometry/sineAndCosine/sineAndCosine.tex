@@ -85,13 +85,9 @@ We can extend the definition of sine to any triangle if we
           \coordinate (B) at (5,2);
           \coordinate (C) at (7,0);
          \draw(0,0)--(5,2)--(7,0)--(0,0);
-	\draw (0,0)--(5,2) node [midway,yshift=.2cm] 
-          {$c$};
-          
-          \draw [decorate,decoration={brace,amplitude=10pt,mirror}](0,0)--(7,0) node [midway,yshift=-1cm] 
-          {$b$};
-          \draw (7,0)--(5,2) node [midway,yshift=.2cm] 
-          {$a$};
+	 \draw (0,0)--(5,2) node [midway,yshift=.3cm] {$c$};
+         \draw [decorate,decoration={brace,amplitude=10pt,mirror},thin](0,0)--(7,0) node [midway,yshift=-.6cm] {$b$};
+          \draw (7,0)--(5,2) node [midway,yshift=.3cm] {$a$};
           \tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
           \tkzLabelAngle[pos=1.2](C,A,B){$\theta$}
 
@@ -107,13 +103,10 @@ We can extend the definition of sine to any triangle if we
           \coordinate (B) at (5,2);
           \coordinate (C) at (7,0);
 	\draw(0,0)--(5,2)--(7,0)--(0,0);
-	\draw (0,0)--(5,2) node [midway,yshift=.2cm] 
-          {$c$};
-          
-          \draw (0,0)--(7,0) node [midway,yshift=-1cm] 
-          {$b$};
-          \draw (7,0)--(5,2) node [midway,yshift=.2cm] 
-          {$a$};
+	\draw (0,0)--(5,2) node [midway,yshift=.3cm] {$c$};
+         \draw (0,0)--(7,0) node [midway,yshift=-.3cm] {$b$};
+          \draw (7,0)--(5,2) node [midway,yshift=.3cm] {$a$};
+          \tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
           \tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
           \tkzLabelAngle[pos=1.2](C,A,B){$\theta$}
 
@@ -129,7 +122,11 @@ We can extend the definition of sine to any triangle if we
       
      \item       
        Explain why in this definition of sine, \textbf{it doesn't matter which
-        height we choose, the value of $\boldsymbol{\sin(\theta)}$ will be the same.}  Find $\sin(\theta)$ in the diagram above.
+         height we choose, the value of $\boldsymbol{\sin(\theta)}$ will be the same.}
+
+     \item Confirm that $\frac{h}{c} = \frac{h'}{b}$ in the diagrams
+       above by measuring, and hence directly computing
+       $\sin(\theta)$.
         \end{enumerate}
 \end{question}
 
