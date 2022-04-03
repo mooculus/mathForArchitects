@@ -85,74 +85,74 @@ Find the area of the roof.  Explain the work in your solution.
 \mynewpage
 
 
-\begin{question}
-  Here is a roof with different pitches on each side of the main
-  ridge:
-  \begin{center}
-    \includegraphics[width=.6\textwidth]{skewRoof.jpg}
-  \end{center}
-Below is a diagram of the roof as seen from the top:
-\begin{center}
-  \begin{tikzpicture}[x=1.5cm,y=1.5cm]
-    \draw[ultra thick] (0,0) rectangle (5,3.6);
-    %\draw[dashed] (.3,.3) rectangle (4.5,2.1);
-    \draw[ultra thick] (0,3) -- (5,3);
-    \draw[decoration={brace,raise=.2cm},decorate,thin] (0,0)--(0,3);
-    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (5,3.1)--(5,3.6);
-    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(5,0);
-    \node at (-.5,1.5) {$30'$};
-    \node at (5.4,3.3) {$6'$};
-    \node at (2.5,-.44) {$50'$};
-    \node at (2.5,1) {slope of $4/12$};
-    \node at (2.5,3.3) {slope of ??};
-    \node[below] at (2.5,3) {main ridge};
-  \end{tikzpicture}
-\end{center}
-First find the missing slope, then find the area of the roof. Explain
-the work in your solution.
+%% \begin{question}
+%%   Here is a roof with different pitches on each side of the main
+%%   ridge:
+%%   \begin{center}
+%%     \includegraphics[width=.6\textwidth]{skewRoof.jpg}
+%%   \end{center}
+%% Below is a diagram of the roof as seen from the top:
+%% \begin{center}
+%%   \begin{tikzpicture}[x=1.5cm,y=1.5cm]
+%%     \draw[ultra thick] (0,0) rectangle (5,3.6);
+%%     %\draw[dashed] (.3,.3) rectangle (4.5,2.1);
+%%     \draw[ultra thick] (0,3) -- (5,3);
+%%     \draw[decoration={brace,raise=.2cm},decorate,thin] (0,0)--(0,3);
+%%     \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (5,3.1)--(5,3.6);
+%%     \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(5,0);
+%%     \node at (-.5,1.5) {$30'$};
+%%     \node at (5.4,3.3) {$6'$};
+%%     \node at (2.5,-.44) {$50'$};
+%%     \node at (2.5,1) {slope of $4/12$};
+%%     \node at (2.5,3.3) {slope of ??};
+%%     \node[below] at (2.5,3) {main ridge};
+%%   \end{tikzpicture}
+%% \end{center}
+%% First find the missing slope, then find the area of the roof. Explain
+%% the work in your solution.
 
-\begin{freeResponse}
-    If we look at the roof from the side, it looks like:
-  \begin{center}
-    \begin{tikzpicture}[x=1.5cm,y=1.5cm]
-    \draw[ultra thick] (0,0) -- (3,0)  -- (3, 1) -- (0,0) ;
-    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(3,0);
-    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (3,0)--(3,1);
-    \node at (1.5,-.4) {$30'$};
-    \node[anchor=west] at (3.2,.5) {$30'\cdot 4/12=10'$};
-    \end{tikzpicture}
-  \end{center}
-    By the Pythagorean theorem, the length of the hypotenuse is
-    \[
-    \sqrt{30^2+ 10^2} \approx 32~\text{feet}.
-    \]
-    Thus, the area of that side of the roof is
-    \[
-    32\cdot 50 \approx 1600~\text{square feet}.
-    \]
-    For the other side, consider:
-    \begin{center}
-    \begin{tikzpicture}[x=2cm,y=2cm]
-    \draw[ultra thick] (0,0) -- (.6,0)  -- (.6, 1) -- (0,0) ;
-    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(.6,0);
-    \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (.6,0)--(.6,1);
-    \node at (.4,-.3) {$6'$};
-    \node at (1.5,.5) {$10'=30'\cdot 4/12$};
-    \end{tikzpicture}
-    \end{center}
-     By the Pythagorean theorem, the length of the hypotenuse is
-    \[
-    \sqrt{6^2 + 10^2} \approx 12~\text{feet}.
-    \]
-    So the area of this side of the roof is around
-    \[
-    12\cdot 50 =600 ~\text{square feet}.
-    \]
-    Thus the total area of the roof is approximately $2200$ square
-    feet.
-\end{freeResponse}
-\end{question}
-\mynewpage
+%% \begin{freeResponse}
+%%     If we look at the roof from the side, it looks like:
+%%   \begin{center}
+%%     \begin{tikzpicture}[x=1.5cm,y=1.5cm]
+%%     \draw[ultra thick] (0,0) -- (3,0)  -- (3, 1) -- (0,0) ;
+%%     \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(3,0);
+%%     \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (3,0)--(3,1);
+%%     \node at (1.5,-.4) {$30'$};
+%%     \node[anchor=west] at (3.2,.5) {$30'\cdot 4/12=10'$};
+%%     \end{tikzpicture}
+%%   \end{center}
+%%     By the Pythagorean theorem, the length of the hypotenuse is
+%%     \[
+%%     \sqrt{30^2+ 10^2} \approx 32~\text{feet}.
+%%     \]
+%%     Thus, the area of that side of the roof is
+%%     \[
+%%     32\cdot 50 \approx 1600~\text{square feet}.
+%%     \]
+%%     For the other side, consider:
+%%     \begin{center}
+%%     \begin{tikzpicture}[x=2cm,y=2cm]
+%%     \draw[ultra thick] (0,0) -- (.6,0)  -- (.6, 1) -- (0,0) ;
+%%     \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (0,0)--(.6,0);
+%%     \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (.6,0)--(.6,1);
+%%     \node at (.4,-.3) {$6'$};
+%%     \node at (1.5,.5) {$10'=30'\cdot 4/12$};
+%%     \end{tikzpicture}
+%%     \end{center}
+%%      By the Pythagorean theorem, the length of the hypotenuse is
+%%     \[
+%%     \sqrt{6^2 + 10^2} \approx 12~\text{feet}.
+%%     \]
+%%     So the area of this side of the roof is around
+%%     \[
+%%     12\cdot 50 =600 ~\text{square feet}.
+%%     \]
+%%     Thus the total area of the roof is approximately $2200$ square
+%%     feet.
+%% \end{freeResponse}
+%% \end{question}
+%% \mynewpage
 
 
 \begin{question}
