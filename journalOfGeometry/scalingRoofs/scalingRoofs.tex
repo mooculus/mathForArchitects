@@ -47,23 +47,17 @@ There are two basic questions we'd like to answer about shapes like these:
   \end{center}
  Assuming that the (square) base of this building has a side length of
  $646$ feet and that the pyramid is $350$ feet tall, compute the
-surface in square feet, not including the bottom. 
- 
-\item Here is a roof of a building that is $24\ feet$ by $12\ feet$. The slope of the hip end and the main roof are $\tfrac{6}{12}$. 
-  \begin{center}
-    \includegraphics[width=.8\textwidth]{RoofShape} 
-  \end{center}
-  
-Use this information to find:
-\begin{enumerate}
- \item the length of the dotted line ``height,"
- \item the lengths of the two solid black lines,
- \item the length of the top of the roof,
- \item area of the whole roof
+ surface in square feet, not including the bottom. Explain your
+ reasoning and show your work.
+\item Now imagine a different building with a square base of side
+  length $646$, whose roof is a single plane at a slope of
+  $\tfrac{350}{323}$. SKETCH a possible picture of this situation and
+  find the AREA of this roof. Explain your reasoning and show your
+  work.
+
+\item Compare/contrast your answers from the parts above and discuss. 
 \end{enumerate}
-A 3D model is available at \url{https://www.geogebra.org/m/zu5zsvx6}
- \end{enumerate}
- \end{question}
+\end{question}
  
  \mynewpage
  
@@ -76,13 +70,18 @@ A 3D model is available at \url{https://www.geogebra.org/m/zu5zsvx6}
    \end{center}
    Assuming that the hip-end has a slope of $\tfrac{6}{12}$, and that
    the roof has an overhang of $2$ feet on all sides, find the area of
-   the roof of the garage in square feet. A 3D model is available at \url{https://www.geogebra.org/m/zu5zsvx6}
- \item Considering the $1$-car garage from the previous part, now
-   suppose that the hip-end has a slope of $\tfrac{8}{12}$ with an
-   overhang of $2$ feet. Assume that the main roof still has a slope of $\tfrac{6}{12}$. Again find the area of the roof of the
-   garage in square feet.
+   the roof of the garage in square feet.  Explain your reasoning and
+   show your work. As a gesture of friendship, a 3D model is available
+   at: \url{https://www.geogebra.org/m/zu5zsvx6}
+ \item Now suppose the building has a roof that is a single plane,
+   covering a $16'$ foot by $28'$ rectangle that is at a slope of
+   $\tfrac{6}{12}$. SKETCH a possible picture of this situation and
+   find the AREA of the roof in this case. Explain your reasoning and
+   show your work.
+\item Compare/contrast your answers from the parts above and discuss. 
+   
 \end{enumerate}
-In all cases above, show and explain your work.
+
 \begin{freeResponse}
   \begin{enumerate}
     \item We must compute the height of one face of the pyramid. By
@@ -168,231 +167,18 @@ In all cases above, show and explain your work.
 
 
 
-
-
-
-
-
-\begin{question}
-  Now let's think about the SLOPE of a hip or valley. Below we see a
-  sneaky way to compute these numbers.
-  \begin{mdframed}[style=OutcomeStyle]
-\begin{quote}
-  \textbf{Algorithm for computing the slope of a hip or valley:}
-
-  Suppose the slopes are $\frac{s}{12}$ and $\frac{\l}{12}$ with
-$s\le \l$.
-
-\begin{enumerate}
-\item Draw a point $O$ sitting at the intersection of a horizontal
-  and vertical line.
-\item Draw a vertical line segment $\bar{OS}$ where $S$ is directly
-  above $O$ and $|OS| = s$.
-  \item Starting from $S$, draw a line with the larger slope
-    $\frac{\l}{12}$ and call the intersection of this line with the
-    horizontal line point $X$.
-  \item Starting at point $O$, extend the line segment $\bar{OS}$ by
-    drawing downward $12$ units, and call the bottom of this segment
-    $B$.
-     \begin{center}
-        \begin{tikzpicture}[geometryDiagrams,scale=.2]
-          %% \filldraw[black] (1in,1in) circle (2pt) ;
-          %% \filldraw[black] (0in,0in) circle (2pt) ;
-          %% \filldraw[black] (0in,1in) circle (2pt) ;
-          %% \draw[<->,dashed] (1.5in,-.5in) -- (-.5in,1.5in);
-
-          \tkzDefPoint(0,0){O}
-          \tkzDefPoint(-13,0){I}
-          \tkzDefPoint(1,0){nI}
-          \tkzDefPoint(0,7){II}
-          \tkzDefPoint(0,-13){nII}
-          
-          \tkzDefPoint(0,6){S}
-          \tkzDefPoint(-9,0){X}
-          \tkzDefPoint(-12,-2){BS}
-          \tkzDefPoint(0,-12){B}
-
-          \tkzDrawPoint[](O)
-          \tkzDrawPoint[](S)
-          \tkzDrawPoint[](X)
-          \tkzDrawPoint[](B)
-          \tkzDrawLine[ultra thin](II,nII)
-          \tkzDrawLine[ultra thin](I,nI)
-          \tkzDrawLine(S,BS)
-          \tkzDrawSegment(O,B)
-          \tkzDrawSegment[ultra thick](B,X)
-          \tkzDrawSegment(O,S)
-
-          \tkzLabelPoint(O){$O$}
-          \tkzLabelPoint[](S){$S$}
-          \tkzLabelPoint[above left](X){$X$}
-          \tkzLabelPoint(B){$B$}
-
-          \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (S)--(X);
-          
-          \node[anchor=south east] at (-5,4) {slope of $\frac{\l}{12}$};
-        \end{tikzpicture}
-      \end{center}
-  \item The slope you seek is:
-    \[
-    \frac{|OS|}{|BX|}\qquad \text{with a pitch of} \qquad \frac{12\cdot |OS|}{|BX|}
-    \]  
-\end{enumerate}
-\end{quote}
-  \end{mdframed}
-  Let's see if we can USE the algorithm above.
-  \begin{enumerate}
-  \item Someone used this drawing to compute the slope of a hip.
-    \begin{center}
-        \begin{tikzpicture}[geometryDiagrams,scale=.2]
-          %% \filldraw[black] (1in,1in) circle (2pt) ;
-          %% \filldraw[black] (0in,0in) circle (2pt) ;
-          %% \filldraw[black] (0in,1in) circle (2pt) ;
-          %% \draw[<->,dashed] (1.5in,-.5in) -- (-.5in,1.5in);
-
-          \tkzDefPoint(0,0){O}
-          \tkzDefPoint(-13,0){I}
-          \tkzDefPoint(1,0){nI}
-          \tkzDefPoint(0,7){II}
-          \tkzDefPoint(0,-13){nII}
-          
-          \tkzDefPoint(0,6){S}
-          \tkzDefPoint(-9,0){X}
-          \tkzDefPoint(-12,-2){BS}
-          \tkzDefPoint(0,-12){B}
-
-          \tkzDrawPoint[](O)
-          \tkzDrawPoint[](S)
-          \tkzDrawPoint[](X)
-          \tkzDrawPoint[](B)
-          \tkzDrawLine[ultra thin](II,nII)
-          \tkzDrawLine[ultra thin](I,nI)
-          \tkzDrawLine(S,BS)
-          \tkzDrawSegment(O,B)
-          \tkzDrawSegment[ultra thick](B,X)
-          \tkzDrawSegment(O,S)
-
-
-          \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (O)--(S);
-          \node[anchor=west] at (1.5,3) {$6$};
-
-
-          \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (B)--(O);
-          \node[anchor=west] at (1.5,-6) {$12$};
-
-          \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (S)--(X);
-          \node[anchor=south east] at (-5,4) {slope of $\frac{8}{12}$};
-
-          \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (X)--(B);
-          \node[anchor=north east] at (-5,-6.5) {$15$};
-        \end{tikzpicture}
-    \end{center}
-    Assuming that the slope of the main roof is larger than the slope
-    of the hip-end, find the slopes (as a fraction over $12$) of the main roof, the hip-end, and
-    the hip. 
-  \item Suppose you have a main-roof with a slope of $\frac{4}{12}$
-    and a hip-end with a slope of $\frac{7}{12}$. Either draw a
-    careful picture or use
-    \link[\textit{GeoGebra}]{https://www.geogebra.org/classic} to
-    \textbf{find the slope of the hip.}  Show all work, explain your
-    reasoning, and check your work with an \link[online
-      calculator]{https://www2.strongtie.com/webapps/SlopeSkew/?source=app}.
-
-  \end{enumerate}
-  \begin{freeResponse}
-    \begin{enumerate}
-    \item The slope of the main roof is $\frac{6}{12}$. The slope of
-      the hip-end is $\frac{8}{12}$. The slope of the hip is
-      \[
-      \frac{6}{15} \approx \frac{4.8}{12}.
-      \]
-    \item Using \textit{GeoGebra} we find:
-      \begin{center}
-        \includegraphics[width=.3\textwidth]{workUnEqSlope.png}
-      \end{center}
-      Hence the slope is
-      \[
-      \frac{4}{13.82} \approx \frac{3.5}{12}.
-      \]
-    \item If both slopes are the same, then our picture looks like
-      this:
-      \begin{center}
-        \begin{tikzpicture}[geometryDiagrams,scale=.2]
-          %% \filldraw[black] (1in,1in) circle (2pt) ;
-          %% \filldraw[black] (0in,0in) circle (2pt) ;
-          %% \filldraw[black] (0in,1in) circle (2pt) ;
-          %% \draw[<->,dashed] (1.5in,-.5in) -- (-.5in,1.5in);
-
-          \tkzDefPoint(0,0){O}
-          \tkzDefPoint(-13,0){I}
-          \tkzDefPoint(1,0){nI}
-          \tkzDefPoint(0,7){II}
-          \tkzDefPoint(0,-13){nII}
-          
-          \tkzDefPoint(0,6){S}
-          \tkzDefPoint(-12,0){X}
-          \tkzDefPoint(-12,0){BS}
-          \tkzDefPoint(0,-12){B}
-
-          \tkzDrawPoint[](O)
-          \tkzDrawPoint[](S)
-          \tkzDrawPoint[](X)
-          \tkzDrawPoint[](B)
-          \tkzDrawLine[ultra thin](II,nII)
-          \tkzDrawLine[ultra thin](I,nI)
-          \tkzDrawLine(S,BS)
-          \tkzDrawSegment(O,B)
-          \tkzDrawSegment[ultra thick](B,X)
-          \tkzDrawSegment(O,S)
-
-          \tkzLabelPoint(O){$O$}
-          \tkzLabelPoint[](S){$S$}
-          \tkzLabelPoint[above left](X){$X$}
-          \tkzLabelPoint(B){$B$}
-
-          \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (S)--(X);
-          
-          \node[anchor=south east] at (-5,4) {slope of $\frac{p}{12}$};
-
-          \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (X)--(B);
-          \node[anchor=north east] at (-6,-6.5) {$\sqrt{12^2+12^2}$};
-        \end{tikzpicture}
-      \end{center}
-      So the slope we see seek is
-      \[
-      \frac{p}{\sqrt{12^2+12^2}} =  \frac{p}{12\sqrt{2}} = \frac{p/\sqrt{2}}{12}.
-      \]
-    \end{enumerate}
-  \end{freeResponse}
-\end{question}
-
-
-
-
 \mynewpage
 
 
 \begin{question}
-  Now let's reflect on the content above a bit.
-  \begin{enumerate}
-    \item Explain using words, pictures, and so on, as needed/helpful,
-      why the process of computing the \textbf{slope of a hip} is the same as the process of computing the
-      \textbf{slope of a valley}.
-    \item If the slope of the main roof is the same as the slope of the
-    hip-end, say they are both $\frac{p}{12}$, what is the slope of
-    the hip? Show all work and explain your reasoning.
-%    \item If all the slopes of a roof are the same, say $p/12$, there
-%      is an even easier method of finding the area of the roof using
-%      SCALING. Discover this method, and demonstrate that it is
-%      correct by using it to give a NEW SOLUTION to Problem $2$, part
-%      $(a)$ above.
-  \end{enumerate}
+  Now let's reflect on the content above a bit. If all the slopes of a
+  roof are the same, say $p/12$, there is an ``easy'' method of
+  finding the area of the roof using SCALING. Discover this method,
+  and demonstrate that it is correct by using it to give to solve
+  Problem $2$, part $(a)$ above.
   \begin{freeResponse}
-    \begin{enumerate}
-  \item A hip is just an ``upside-down'' valley, and the slopes are
-    the same.
-  \item If the slope is $\frac{p}{12}$, we multiply the area of the
-    roof (as seen from above) by setting $p = 6$ and writing
+  If the slope is $\frac{p}{12}$, we multiply the area of the roof (as
+  seen from above) by setting $p = 6$ and writing
     \[
     \frac{\sqrt{6^2+12^2}}{12} \approx 13.5.
     \]
@@ -401,7 +187,6 @@ $s\le \l$.
     16\cdot 28 \frac{\sqrt{6^2+12^2}}{12} \approx 16\cdot 28 \frac{13.5}{12} = 504.
     \]
     Mic drop.
-    \end{enumerate}
   \end{freeResponse}
 \end{question}
 
