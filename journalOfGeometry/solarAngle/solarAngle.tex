@@ -1,0 +1,100 @@
+\documentclass[noauthor,nooutcomes,handout,hints]{ximera}
+
+\input{../preamble.tex}
+
+\title{Solar angle} \author{Claire Merriman}
+
+\begin{document}
+\begin{abstract}
+Tangent allows us to calculate the ratio of the legs of a right triangle.
+\end{abstract}
+\maketitle
+
+\begin{listOutcomes}
+\item  Recall the basic definitions of tangent.
+\item Explore the differences in Sunlight throughout the year.
+\item Use tangent to determine the length of shades.
+\item Translate classroom mathematics into real world mathematics.
+\end{listOutcomes}
+
+%% \begin{listObjectives}
+%%  \item Learn and apply basic geometric formulas,
+%% \item Use trigonometry to solve common problems.
+%% \end{listObjectives}
+
+\mynewpage
+
+
+\begin{definition}
+ In a right triangle, \textbf{tangent} of an angle is the ratio of the length of the side opposite the angle to the length of the side adjacent to the angle. 
+\end{definition}
+We will use this to explore some ideas around shade and shadows.  The
+path of the Sun in the sky changes throughout the year. The Sun
+reaches its highest point for any given day at \textbf{solar noon;} in
+the Northern Hemisphere this occurs when the Sun is due south. The Sun
+reaches its highest point for the year on the \textbf{summer solstice.}
+
+\begin{center}
+ 
+\begin{tikzpicture}[x=.75cm,y=.75cm]
+ \draw[thick] (0.2,0)--(3.2,0)--(3.2,-1.6);
+ \draw[dashed] (-2.5,1.5)--(3.2,-1.6)--(3.2,-6.6)--(-2,4.97);
+ \draw[thick] (3.2,-6.6)--(3.2,-9.6);
+ \filldraw[color=yellow, fill=yellow, very thick](-2,4.97) circle (.5);
+ \filldraw[color=yellow, fill=yellow, very thick](-2.5,1.5) circle (.5);
+ \node at (1.5,.5) {overhang};
+ \node[anchor=west] at (3.5, -.8) {gap between window and ceiling};
+ \node[anchor=west] at (3.5, -4) {window};
+ \node[anchor=west] at (3.5, -8) {height of the window from the floor};
+\end{tikzpicture}
+\end{center}
+
+\mynewpage
+
+
+\begin{question}
+ One practice for designing south facing windows is to build an
+ overhang so that
+ \begin{itemize}
+ \item The Sun fills the window at noon on the winter solstice.
+ \item The window is completely in the shade at noon on the summer
+   solstice.
+ \end{itemize}
+\begin{enumerate}
+\item Draw a triangle that relates the angle of the Sun, the length of
+  the horizontal overhang, and the length of the vertical shadow as a
+  function of the solar angle and length of the overhang.
+\item The maximum possible overhang length in this scenario is the one
+  where the bottom of the shadow at noon on the winter solstice is at
+  the top of the window. Look up the solar angle for Columbus, cite
+  your source, and then find a formula relating the shadow and length
+  of the overhang.
+\item The minimum possible overhang length in this scenario is the one
+  where the bottom of the shadow at noon on the summer solstice is at
+  the bottom of the window. Look up the solar angle for Columbus, cite
+  your source, and then find a formula relating the shadow and length
+  of the overhang.
+\end{enumerate}
+\end{question}
+\mynewpage
+
+
+\begin{question}
+ A common ceiling height is $8\ feet$, with an $16"$ gap between the top of window and the ceiling. 
+ 
+\begin{enumerate}
+ \item Find the maximum overhang length, assuming the overhang is at the top of the ceiling.
+ \item Find two standard window sizes, then find the minimum overhang length and height of the window from the floor in both cases.
+\end{enumerate}
+\end{question}
+\mynewpage
+
+\begin{question}
+ We can also use tangent to find the length of shadows from a building. For a $52\ foot$ tall building in Columbus, find:
+ 
+\begin{enumerate}
+ \item The length of the area on the on the south of the building that is in shade year round.
+ \item The difference in the length of the shadow on the summer solstice and the winter solstice.
+\end{enumerate}
+\end{question}
+\end{document}
