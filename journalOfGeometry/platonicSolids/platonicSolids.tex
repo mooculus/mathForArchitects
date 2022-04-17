@@ -1,0 +1,166 @@
+\documentclass[noauthor,nooutcomes,hints,handout]{ximera}
+
+\input{../preamble.tex}
+
+\title{Dihedral symmetry}
+\author{Bart Snapp}
+
+\begin{document}
+\begin{abstract}
+  We explore the symmetries of two dimensional shapes.
+\end{abstract}
+\maketitle
+
+\begin{listOutcomes}
+\item Explain what is meant by a ``dihedral'' symmetry.
+\item Describe the dihedral symmetries of the regular $n$-gon.
+\item Describe the dihedral symmetries of a nonregular shape.
+\item Explain how two different shapes have the same dihedral
+  symmetry.
+\end{listOutcomes}
+\begin{mdframed}[style=OutcomeStyle]
+\begin{quote}
+  $\textbf{di}\bullet\textbf{he}\bullet\textbf{dral}$ (d$\bar{\text{\i}}$-h$\bar{\text{e}}'$dr{\rotatebox[origin=c]{180}{e}}l)
+  \\
+  
+  \textit{adjective}\\
+
+  
+\quad contained by two planes. 
+\end{quote}
+\end{mdframed}
+
+We've been studying the symmetries of two-dimensional shapes. These
+types of symmetries are called \textbf{dihedral} symmetries. Let's use
+our enormous brains to think about dihedral symmetry a little bit
+more.
+
+
+
+
+\mynewpage
+
+
+
+
+
+
+\begin{question}
+  Let's generalize our understanding of the dihedral symmetries of the
+  regular $n$-gon.
+  \begin{enumerate}
+  \item Concerning an arbitrary regular $n$-gon, how many dihedral symmetries
+    are there?
+  \item Can you always describe the symmetries of the regular $n$-gon
+    in the form $r^xf$ for some number $x$? EXPLAIN using words,
+    pictures, and so on, why or why not.
+  \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item A regular $n$-gon has $2\cdot n$ symmetries:
+      \begin{itemize}
+      \item A do-nothing symmetry, $e$.
+      \item $n-1$ honest rotations of representing counterclockwise rotations incremented by $360/n$.
+      \item $n$ Flips across lines perpendicular to each side AND
+        lines through opposite vertices (when $n$ is even).
+      \end{itemize}
+    \item Of course! Ask yourself, is did the symmetry change the
+      orientation? If so do the flip! Now if you're not where you
+      want to be, just rotate until you are! Done!
+    \end{enumerate}
+  \end{freeResponse}
+\end{question}
+\mynewpage
+
+\begin{question}
+  Consider this rhombus:
+  \[ 
+  \begin{tikzpicture}
+    \draw[ultra thick,rounded corners=.05mm] (0,0) -- (2,-1) -- (4,0) -- (2,1)-- cycle;
+    %% \draw[fill] (0,0) circle (1mm) node[below left] {$1$};
+    %% \draw[fill] (2,-1) circle (1mm) node[below left] {$2$};
+    %% \draw[fill] (4,0) circle (1mm) node[below right] {$3$};
+    %% \draw[fill] (2,1) circle (1mm) node[above left] {$4$};
+  \end{tikzpicture}
+  \]
+  \begin{enumerate}
+  \item List ALL the symmetries in of this rhombus in terms of:
+    \begin{itemize}
+    \item $e$: the do-nothing symmetry.
+    \item $r$: the rotate $180^\circ$ symmetry.
+    \item $f$: the flip across a vertical line through the center of the rhombus.
+    \end{itemize}
+  \item Make a MULTIPLICATION table (as we did before) for the
+    symmetries of this rhombus.
+  \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item $e, r,f,rf$.
+    \item Here is my table:
+             \[
+  \begin{array}{|c||c|c|c|c|c|c|}
+    \hline
+       & e  & r  & f  & rf \\ \hline\hline
+    e  & e  & r  & f  & rf \\ \hline
+    r  & r  & e  & rf & f \\ \hline
+    f  & f  & rf & e  & r \\ \hline
+    rf & rf & f  & r  & e \\ \hline
+  \end{array}
+  \]
+    \end{enumerate}
+  \end{freeResponse}
+\end{question}
+
+\mynewpage
+
+
+\begin{question}
+  Consider this nonsquare rectangle:
+  \[
+  \begin{tikzpicture}
+    \draw[ultra thick,rounded corners=.05mm] (0,0) -- (4,0) -- (4,2) -- (0,2)-- cycle;
+    %% \draw[fill] (0,0) circle (1mm) node[below left] {$1$};
+    %% \draw[fill] (4,0) circle (1mm) node[below right] {$2$};
+    %% \draw[fill] (4,2) circle (1mm) node[above right] {$3$};
+    %% \draw[fill] (0,2) circle (1mm) node[above left] {$4$};
+  \end{tikzpicture}
+  \]
+  \begin{enumerate}
+  \item List ALL the symmetries in of this rectangle in terms of:
+    \begin{itemize}
+    \item $e$: the do-nothing symmetry.
+    \item $r$: the rotate $180^\circ$ symmetry.
+    \item $f$: the flip across a vertical line through the center of the rectangle.
+    \end{itemize}
+  \item Make a MULTIPLICATION table (as we did before) for the
+    symmetries of this rectangle.
+  \item This multiplication table for this rectangle is the SAME as
+    the one for the rhombus. Explain WHY this happens.
+  \end{enumerate}
+  \begin{freeResponse}
+    \begin{enumerate}
+    \item $e, r,f,rf$.
+    \item Here is my table:
+      \[
+      \begin{array}{|c||c|c|c|c|c|c|}
+    \hline
+    & e  & r  & f  & rf \\ \hline\hline
+    e  & e  & r  & f  & rf \\ \hline
+    r  & r  & e  & rf & f \\ \hline
+    f  & f  & rf & e  & r \\ \hline
+    rf & rf & f  & r  & e \\ \hline
+      \end{array}
+      \]
+      \item The tables are the same because you can draw both the
+        pictures on top of each other, and the symmetries are
+        preserved. We can see this with the following picture:
+     \[
+  \begin{tikzpicture}
+    \draw[ultra thick,rounded corners=.05mm] (0,0) -- (4,0) -- (4,2) -- (0,2)-- cycle; %% rect
+    \draw[ultra thick,rounded corners=.05mm] (0,1) -- (2,0) -- (4,1) -- (2,2)-- cycle; %% rhomb   
+  \end{tikzpicture}
+  \]    
+    \end{enumerate}
+  \end{freeResponse}
+\end{question}
+\end{document}
