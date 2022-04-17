@@ -2,38 +2,87 @@
 
 \input{../preamble.tex}
 
-\title{Dihedral symmetry}
-\author{Bart Snapp}
+\title{Platonic solids}
+\author{Bart Snapp and Jenny Sheldon}
 
 \begin{document}
 \begin{abstract}
-  We explore the symmetries of two dimensional shapes.
+  We study solids, and learn facts whose origins are both old and new.
 \end{abstract}
 \maketitle
 
 \begin{listOutcomes}
-\item Explain what is meant by a ``dihedral'' symmetry.
-\item Describe the dihedral symmetries of the regular $n$-gon.
-\item Describe the dihedral symmetries of a nonregular shape.
-\item Explain how two different shapes have the same dihedral
-  symmetry.
+\item Explain what a Platonic solid is.
+\item Identify Platonic solids.
+\item Explain why there are only five Platonic solids.
+\item Discover basic facts about Platonic solids.
 \end{listOutcomes}
-\begin{mdframed}[style=OutcomeStyle]
-\begin{quote}
-  $\textbf{di}\bullet\textbf{he}\bullet\textbf{dral}$ (d$\bar{\text{\i}}$-h$\bar{\text{e}}'$dr{\rotatebox[origin=c]{180}{e}}l)
-  \\
-  
-  \textit{adjective}\\
 
-  
-\quad contained by two planes. 
-\end{quote}
-\end{mdframed}
 
-We've been studying the symmetries of two-dimensional shapes. These
-types of symmetries are called \textbf{dihedral} symmetries. Let's use
-our enormous brains to think about dihedral symmetry a little bit
-more.
+Around $2400$ years ago, there was a group of mystics---today we might
+call it a cult---who called themselves the
+\textit{Pythagoreans}.\index{Pythagoreans@The Pythagoreans} Being
+mystics, the Pythagoreans had some strange ideas, but on the other
+hand they were an enlightened group of people because they believed
+that they could better understand the universe around them by studying
+mathematics. As part of the Pythagoreans' numerological religion, they
+thought that some polyhedra had special powers. The Pythagoreans
+associated the following polyhedra to elements of nature:
+\begin{center}\index{convex polyhedra!regular}\index{polyhedra!convex regular}
+\begin{tabular}{|c|c|}
+\hline
+Fire: Tetrahedron & Air: Octahedron \\
+\includegraphics{tetrahedron.pdf} 
+& \includegraphics{octahedron.pdf} 
+\\
+\hline 
+ Earth: Cube & Water: Icosahedron \\
+\includegraphics{cube.pdf} 
+& \includegraphics{icosahedron.pdf}  
+\\
+\hline
+\end{tabular}
+\end{center}
+While the idea that these polyhedra are somehow connected to ``arcane
+elements of nature'' is complete nonsense, there is actually something
+special about the solids above. They are \textit{regular convex
+  polyhedra}. Let's dissect those last words:
+
+\begin{definition}\index{polyhedron} 
+A \textbf{polyhedron} is a three dimensional solid that is bounded by
+a finite number of polygons.
+\end{definition}
+
+\begin{definition}\index{convex} 
+An object is \textbf{convex} if given any two points inside the object,
+the segment connecting those two points is also contained inside the
+object.
+\end{definition}
+
+\begin{definition}\index{regular!polyhedron} 
+A polyhedron is \textbf{regular} if all its faces are the same regular
+polygon and if the same number of polygons meet at every vertex.
+\end{definition}
+
+Apparently the Pythagoreans discovered the above four regular convex
+polyhedra first. Only later did they discover a fifth, the
+dodecahedron:
+\begin{center}
+\begin{tabular}{|c|}
+\hline
+\AE ther: Dodecahedron\\
+\includegraphics{dodecahedron.pdf} 
+\\
+\hline
+\end{tabular}
+\end{center}
+Since the first four regular convex solids had elements associated to
+them, the Pythagoreans reasoned that this fifth solid must also be
+associated to an element. However, all the elements were accounted
+for. So the Pythagoreans associated the dodecahedron to what we might
+call the \index{aether@\ae ther}\ae ther, a mysterious non-earthly
+substance.
+
 
 
 
@@ -46,121 +95,61 @@ more.
 
 
 \begin{question}
-  Let's generalize our understanding of the dihedral symmetries of the
-  regular $n$-gon.
-  \begin{enumerate}
-  \item Concerning an arbitrary regular $n$-gon, how many dihedral symmetries
-    are there?
-  \item Can you always describe the symmetries of the regular $n$-gon
-    in the form $r^xf$ for some number $x$? EXPLAIN using words,
-    pictures, and so on, why or why not.
-  \end{enumerate}
-  \begin{freeResponse}
-    \begin{enumerate}
-    \item A regular $n$-gon has $2\cdot n$ symmetries:
-      \begin{itemize}
-      \item A do-nothing symmetry, $e$.
-      \item $n-1$ honest rotations of representing counterclockwise rotations incremented by $360/n$.
-      \item $n$ Flips across lines perpendicular to each side AND
-        lines through opposite vertices (when $n$ is even).
-      \end{itemize}
-    \item Of course! Ask yourself, is did the symmetry change the
-      orientation? If so do the flip! Now if you're not where you
-      want to be, just rotate until you are! Done!
-    \end{enumerate}
-  \end{freeResponse}
-\end{question}
-\mynewpage
-
-\begin{question}
-  Consider this rhombus:
-  \[ 
-  \begin{tikzpicture}
-    \draw[ultra thick,rounded corners=.05mm] (0,0) -- (2,-1) -- (4,0) -- (2,1)-- cycle;
-    %% \draw[fill] (0,0) circle (1mm) node[below left] {$1$};
-    %% \draw[fill] (2,-1) circle (1mm) node[below left] {$2$};
-    %% \draw[fill] (4,0) circle (1mm) node[below right] {$3$};
-    %% \draw[fill] (2,1) circle (1mm) node[above left] {$4$};
-  \end{tikzpicture}
-  \]
-  \begin{enumerate}
-  \item List ALL the symmetries in of this rhombus in terms of:
-    \begin{itemize}
-    \item $e$: the do-nothing symmetry.
-    \item $r$: the rotate $180^\circ$ symmetry.
-    \item $f$: the flip across a vertical line through the center of the rhombus.
-    \end{itemize}
-  \item Make a MULTIPLICATION table (as we did before) for the
-    symmetries of this rhombus.
-  \end{enumerate}
-  \begin{freeResponse}
-    \begin{enumerate}
-    \item $e, r,f,rf$.
-    \item Here is my table:
-             \[
-  \begin{array}{|c||c|c|c|c|c|c|}
-    \hline
-       & e  & r  & f  & rf \\ \hline\hline
-    e  & e  & r  & f  & rf \\ \hline
-    r  & r  & e  & rf & f \\ \hline
-    f  & f  & rf & e  & r \\ \hline
-    rf & rf & f  & r  & e \\ \hline
-  \end{array}
-  \]
-    \end{enumerate}
-  \end{freeResponse}
-\end{question}
-
-\mynewpage
-
-
-\begin{question}
-  Consider this nonsquare rectangle:
+  Consider the \index{triangular dipyramid}\textbf{triangular
+    dipyramid}, the solid where two tetrahedrons are joined at a face:
   \[
-  \begin{tikzpicture}
-    \draw[ultra thick,rounded corners=.05mm] (0,0) -- (4,0) -- (4,2) -- (0,2)-- cycle;
-    %% \draw[fill] (0,0) circle (1mm) node[below left] {$1$};
-    %% \draw[fill] (4,0) circle (1mm) node[below right] {$2$};
-    %% \draw[fill] (4,2) circle (1mm) node[above right] {$3$};
-    %% \draw[fill] (0,2) circle (1mm) node[above left] {$4$};
-  \end{tikzpicture}
+  \includegraphics{triangulardipyramid.pdf}
   \]
-  \begin{enumerate}
-  \item List ALL the symmetries in of this rectangle in terms of:
-    \begin{itemize}
-    \item $e$: the do-nothing symmetry.
-    \item $r$: the rotate $180^\circ$ symmetry.
-    \item $f$: the flip across a vertical line through the center of the rectangle.
-    \end{itemize}
-  \item Make a MULTIPLICATION table (as we did before) for the
-    symmetries of this rectangle.
-  \item This multiplication table for this rectangle is the SAME as
-    the one for the rhombus. Explain WHY this happens.
-  \end{enumerate}
-  \begin{freeResponse}
-    \begin{enumerate}
-    \item $e, r,f,rf$.
-    \item Here is my table:
-      \[
-      \begin{array}{|c||c|c|c|c|c|c|}
-    \hline
-    & e  & r  & f  & rf \\ \hline\hline
-    e  & e  & r  & f  & rf \\ \hline
-    r  & r  & e  & rf & f \\ \hline
-    f  & f  & rf & e  & r \\ \hline
-    rf & rf & f  & r  & e \\ \hline
-      \end{array}
-      \]
-      \item The tables are the same because you can draw both the
-        pictures on top of each other, and the symmetries are
-        preserved. We can see this with the following picture:
-     \[
-  \begin{tikzpicture}
-    \draw[ultra thick,rounded corners=.05mm] (0,0) -- (4,0) -- (4,2) -- (0,2)-- cycle; %% rect
-    \draw[ultra thick,rounded corners=.05mm] (0,1) -- (2,0) -- (4,1) -- (2,2)-- cycle; %% rhomb   
-  \end{tikzpicture}
-  \]    
-    \end{enumerate}
-  \end{freeResponse}
+  Is this a regular convex polyhedron? Explain your reasoning.
 \end{question}
+
+\mynewpage
+
+\begin{question}
+  There are at most five regular convex polyhedra. Let's (meaning you)
+  explain why! I'll talk you through it.
+  \begin{enumerate}
+    \item Imagine a ``corner'' of a three-dimensional object made of
+      polygons. What's the \textbf{minimum} number of faces required to make a corner? Is there a \textbf{maximum}?
+    \item Start with a equilateral triangle. How many different
+      ``corners'' can you make with it? (A $3$-faced corner? A
+      $4$-faced corner? Keep going!)
+    \item Now move on the square.  How many different ``corners'' can
+      you make with it?
+    \item Now move on the pentagon.  How many different ``corners'' can
+      you make with it?
+    \item Now move on the hexagon.  How many different ``corners'' can
+      you make with it?
+    \item What about other regular $n$-gons, how many different
+      ``corners'' can you make with them?
+    \item Explain why can be at most five regular convex polyhedra.
+  \end{enumerate}
+  
+\end{question}
+
+\mynewpage
+
+\begin{question}
+  The five regular convex polyhedra came to be known as the
+  \index{Platonic Solids}\textbf{Platonic Solids} over 2000 years ago
+  when Plato discussed them in his work \textit{Timaeus}. Here is an
+  empty table of facts about the Platonic Solids---could you be so kind
+  and fill it in?\index{Platonic Solids}
+  \begin{center}
+    {
+      \renewcommand{\arraystretch}{3}
+      \begin{tabular}{|l||c|c|c|c|}\hline
+        Solid & Vertices & Edges & Faces & $V - E + F$\\
+        \hline\hline
+        Tetrahedron &  &   &  &   \\ \hline
+        Octahedron &   &  &  &  \\ \hline
+        Cube &  &   &  & \\ \hline
+        Icosahedron &  &  &  & \\ \hline
+        Dodecahedron &  &  &  & \\ \hline
+\end{tabular}}
+\end{center}
+\end{question}
+
+
+
 \end{document}
