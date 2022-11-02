@@ -1,4 +1,4 @@
-\documentclass[nooutcomes,noauthor,hints]{ximera}
+\documentclass[nooutcomes,noauthor,hints,handout]{ximera}
 
 \input{../preamble.tex}
 \title{Voting schemes}
@@ -13,48 +13,107 @@
 \maketitle
 
 \begin{listOutcomes}
+\item Organize and accommodate data.
 \item Critically analyze data.
+\item Translate classroom mathematics into real world mathematics.
 \end{listOutcomes}
 
 
-Suppose you are voting for a possible type of pet to live in your
-appartment building. Of the $38$ residents that live in your building:
-
+The \mooculus~apartment building is holding an `election' among
+their $38$ residents to see if they should allow dogs, or cats, or no
+pets at all. Of the residents:
 \begin{itemize}
 \item $16$ residents prefer dogs, better than cats, better than no pets at all.
-\item $4$ residents prefer cats, better than dog,s better than no pets at all.
+\item $4$ residents prefer cats, better than dogs, better than no pets at all.
 \item $18$ residents prefer no pets at all, better than cats, better
   than dogs.
 \end{itemize}
 
-If we can only allow one of the options: dogs, cats, no pets at all;
-how shall we decide?
+
+
+If there are three or more choices, then we have options as to how
+exactly we vote. 
+\begin{description}
+\item[Plurality Voting:] The option with the most
+  votes wins.
+\item[Borda Count:] Voters enumerate their preferences as $2,1,0$
+  with $2$ meaning `most preferred' and $0$ meaning `least preferred.'
+  The option with the largest sum from this ranked-vote wins.
+\item[Instant Run-Off Voting:] Voters list their preferences from `most
+  preferred' to `least preferred.' A plurality vote is taken among the
+  most preferred. All votes for losers, are transferred to remaining
+  options based on the order. This process is repeated until there is
+  one winner. This is also known as \textbf{Ranked Choice Voting}.
+\end{description}
+
+
+
+
 
 
 
 \mynewpage
+
+
+
+%% MAybe do all 3 then analyze?
+%1) count
+%2) analyze
+%3) Borda blues?
+
+\begin{question}
+  Compute the outcomes of the \mooculus~apartment pet `election'
+  using \textbf{Plurality Voting}, \textbf{Borda Count}, and
+  \textbf{Instant Run-off Voting}.
+  \begin{freeResponse}
+    Using \underline{Plurality Voting}, we see that ``no pets'' wins, as that
+    option got $18$ votes, compared to the other option's $16$ and
+    $4$.
+
+
+    
+    Using \underline{Borda Count}, we have
+    \begin{description}
+      \item[Dogs:] $16\cdot 2 + 4 = 36$.
+      \item[Cats:] $16 +4\cdot 2+18 =42$.
+      \item[No Pets:] $18\cdot 2 = 36$.
+    \end{description}
+  \end{freeResponse}
+  We see that ``cats'' wins.
+
+  
+
+  Using \underline{Instant Run-Off Voting}, we have that ``dogs'' and
+  ``no pets'' win the first round, but the $4$ votes for ``cats'' go
+  to ``dogs'' next, and ``dogs'' win.
+\end{question}
+\mynewpage
+
+
+
+\begin{question}
+  Analyze the results of each of your `elections' from above. For each
+  method of counting the vote, answer:
+  \begin{enumerate}
+  \item How many people got their most preferred option?
+  \item How many people got their medium option? 
+  \item How many people got their least preferred option?
+  \end{enumerate}
+\end{question}
+\mynewpage
+
+
+
 
 
 
 
 
 \begin{question}
-  Pluarality
-  
-\end{question}
-\mynewpage
-
-
-
-\begin{question} Borda count
-\end{question}
-\mynewpage
-
-
-
-\begin{question}
-  Instant run-off voting, Ranked-choice Voting (RCV) 
-  
+  Find an example of Instant Run-Off Voting (Rank Choice Voting) and
+  example of Borda Count being used in the real world. Briefly
+  describe the situation where each has been used below.
+    
 \end{question}
 
 \end{document}
