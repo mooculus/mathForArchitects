@@ -1,0 +1,126 @@
+\documentclass[nooutcomes,noauthor,hints,handout]{ximera}
+
+\input{../preamble.tex}
+\title{Borda blues and other impossibilities}
+
+\author{Bart Snapp}
+
+\begin{document}
+\begin{abstract}
+  The subtleties of voting are strange.
+\end{abstract}
+\maketitle
+
+\begin{listOutcomes}
+\item Critically analyze data.
+\item Witness subtleties of voting systems through examples.
+\item Accommodate new knowledge from a primary source. 
+\end{listOutcomes}
+
+
+
+\mynewpage
+
+\begin{question}
+The Borda Count is pretty cool, but it does have some flaws. One of
+which is that adding irrelevant candidates can change the result of an
+election. Consider our \mooculus~apartment election. What if we add an additional candidate $X$ where:
+
+\begin{itemize}
+\item $16$ residents prefer dogs, better than cats, better than no pets at all, better than $X$.
+\item $4$ residents prefer cats, better than dogs, better than no pets at all, better than $X$.
+\item $18$ residents prefer no pets at all, better than $X$, better than cats, better
+  than dogs.
+\end{itemize}
+Now answer these questions:
+\begin{enumerate}
+\item Who wins the Borda Count before candidate $X$ is introduced?
+\item Who wins the Borda Count after candidate $X$ is introduced? (note,
+  now the options are awarded $3,2,1,0$ points)
+\item Did any of the residents change their order of preference in
+  regards to your answers in the two questions above?
+\item Why is this strange? Demonstrate understanding through your
+  explanation.
+\end{enumerate}
+\end{question}
+\mynewpage
+
+
+
+
+
+
+
+\begin{question}
+  In the mid 20th century, Kenneth Arrow proved the following theorem in his doctoral thesis.
+ \begin{mdframed}[style=OutcomeStyle]
+  \begin{quote}
+    Suppose that there is a voting system where:
+    \begin{itemize}
+    \item If we exclude all candidates except for $X$ and $Y$, then
+      the groups preference for $X$ and $Y$ should be unchanged when
+      all candidates are considered. This is known as \textit{Pareto
+        Efficiency}.
+    \item If voters prefer $X$ to $Y$, and more candidates are added
+      with their rankings interleaved with the previous, the groups
+      preference of $X$ to $Y$ is unchanged. This is known as
+      \textit{Independence of Irrelevant Alternatives}.
+    \end{itemize}
+    \textbf{Arrow's theorem} says that in this case,
+    there is a single voter who can manipulate the entire result of
+    the election, simply by changing their own vote.  That voter is
+    referred to as the ``dictator.''
+  \end{quote}
+ \end{mdframed}
+This theorem is a bit difficult to understand, so let's think in terms
+of our example:
+\begin{itemize}
+\item $16$ residents prefer dogs, better than cats, better than no pets at all.
+\item $4$ residents prefer cats, better than dogs, better than no pets at all.
+\item $18$ residents prefer no pets at all, better than cats, better
+  than dogs.
+\end{itemize}
+In particular, we'll explore why the theorem does NOT apply for the cases we consider. 
+\begin{enumerate}
+\item Who wins if the only options were cats versus dogs? What about
+  cats versus no pets?
+\item Explain why Arrow's theorem does \textbf{not apply to Plurality Voting} and
+  why Arrow's theorem does \textbf{not apply to Instant Run-Off Voting}.
+\item Now explain why Arrow's theorem does \textbf{not apply to the Borda Count}.
+\end{enumerate}
+
+\end{question}
+\mynewpage
+
+
+
+\begin{question}
+  Arrow's theorem is often called an ``impossibility'' theorem because it
+  can be stated as:
+  \begin{quote}
+    It's impossible to have a voting scheme that is Pareto Efficient,
+    Independent of Irrelevant Alternatives, with no dictators.
+  \end{quote}
+  Not to be outdone, Professor Mixion of The Ohio State University
+  coauthored the following paper: \link[\textit{An Impossibility
+      Theorem for
+      Gerrymandering}]{https://www.tandfonline.com/doi/full/10.1080/00029890.2018.1517571}.
+
+
+  Explain the statement of this so-called impossibility theorem for
+  gerrymandering in an accurate, but easy to understand way, in your
+  own words. To do this correctly you'll need to be specific and
+  explain quite a bit. However, all the answers are in Mixion and
+  Alexeev's paper, and you are more than equipped to find them!
+  \begin{hint}
+    As part of your explanation, you will need to use/define/explain
+    the terms: Districting system; one person, one vote; Polsby-Popper
+    compactness; bounded efficiency gap.
+  \end{hint}
+\end{question}
+
+
+
+
+
+\end{document}
