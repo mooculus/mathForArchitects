@@ -1,0 +1,110 @@
+\documentclass[noauthor,nooutcomes,handout]{ximera}
+
+\input{../preamble.tex}
+
+\title{Circles of all sizes}
+\author{Claire Merriman \and Bart Snapp}
+
+%% ONLY REQUIRES WHAT's YOUR ANGLE...
+
+
+
+\begin{document}
+\begin{abstract}
+  We'll explore some more properties of circles.
+\end{abstract}
+\maketitle
+
+\begin{listOutcomes}
+\item Use radians to find the length of a circle segment.
+\item Use formulas to solve word problems.
+\end{listOutcomes}
+
+%% \begin{listObjectives}
+%% \item Learn and apply basic geometric formulas,
+%% \item Explain why presented concepts and formulas are true,
+%% \end{listObjectives}
+
+
+\mynewpage
+
+\begin{question}
+  I was reading some fancy math the other day, it said for any shape
+  of area $A$, the perimeter of this shape is $P$ where:
+  \[
+  P \ge \frac{4\pi A}{C^2}
+  \]
+  Use the fact that a circle is the two dimensional shape of greatest
+  area for a given perimeter to deduce the inequality above.
+\end{question}
+\mynewpage
+
+
+
+
+\begin{question}
+\textbf{Radians} are a way to measure angles that connect the radius
+of a circle to its perimeter. $1 \ radian$ is the \textbf{angle made}
+when we \textbf{wrap a radius around the perimeter of a circle.} On a
+circle with radius $1\ unit$, the length of the thick arc is also
+$1\ unit$, so the marked angle has measure $1 \ radian$.
+
+
+\begin{center}
+\begin{tikzpicture}[geometryDiagrams]
+  \tkzDefPoint(0,0){O}
+  \tkzDefPoint(4,0){A}
+  \tkzDefPoint(4*cos(1),4*sin(1)){B}
+  \tkzDrawArc[ultra thick,black](O,A)(B)
+  \tkzDrawArc[](O,B)(A)
+  \tkzDrawLines[add = 0 and .5](O,A O,B)
+ % \tkzLablSegments[mark=|](O,A)
+  \tkzDrawPoints(O,A,B)
+  \tkzMarkAngle[size=0.75cm,mark=](A,O,B)
+   \tkzLabelAngle[pos = .8,right](A,O,B){$\theta=1\ rad$}
+ \end{tikzpicture}
+ 
+\end{center}
+
+The ever insightful Louie Llama is here to help!
+
+\begin{enumerate}
+    \item Louie Llama walks all the way around the  the circle. When he gets back to where he started, he has turned $2\pi \ rad$. Explain why in your own words. 
+    \item What is the length of thick segment if $\theta=\pi \ rad$? Why?
+    \item What is the length of the blue segment if $\theta=1 \ rad$ and the radius is $r$? Explain your reasoning.
+\end{enumerate}
+\end{question}
+\mynewpage
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{question} %% https://en.wikipedia.org/wiki/String_girdling_Earth 
+  Here a problem that is at least $300$ years old, so let's call it an  ``oldie, but a goodie!''
+  \begin{quote}
+    Imagine a chain, pulled tight around the Earth's equator. Suppose
+    you add an extra $10'$ to the chain. The chain is then raised up
+    uniformly, all around the Earth, as high as possible. How high is
+    that?
+  \end{quote}
+  Supposing that
+  \begin{itemize}
+  \item There are $5280$ feet in a mile, and
+  \item the radius of the Earth is $4000$ miles,
+  \end{itemize}
+  it is now time for you to try you hand at this classic.
+  \begin{enumerate}
+  \item Give a solution in feet. Show all work.
+  \item Is the answer surprising? Explain why you say yes or no.
+  \end{enumerate}
+\end{question}
+
+\end{document}
