@@ -1,4 +1,4 @@
-\documentclass[noauthor,nooutcomes,handout]{ximera}
+\documentclass[noauthor,hints,nooutcomes,handout]{ximera}
 
 \input{../preamble.tex}
 
@@ -16,6 +16,7 @@
 \maketitle
 
 \begin{listOutcomes}
+  \item Think about the isoperimetric inequality.
 \item Use radians to find the length of a circle segment.
 \item Use formulas to solve word problems.
 \end{listOutcomes}
@@ -32,10 +33,12 @@
   I was reading some fancy math the other day, it said for any shape
   of area $A$, the perimeter of this shape is $P$ where:
   \[
-  P \ge \frac{4\pi A}{C^2}
+  P \ge 2\pi\sqrt{A/\pi}
   \]
   Use the fact that a circle is the two dimensional shape of greatest
   area for a given perimeter to deduce the inequality above.
+  \begin{hint} Recall $A = \pi r^2$ and $C = 2\pi r$.
+  \end{hint}
 \end{question}
 \mynewpage
 
@@ -55,7 +58,7 @@ $1\ unit$, so the marked angle has measure $1 \ radian$.
   \tkzDefPoint(0,0){O}
   \tkzDefPoint(4,0){A}
   \tkzDefPoint(4*cos(1),4*sin(1)){B}
-  \tkzDrawArc[ultra thick,black](O,A)(B)
+  \tkzDrawArc[line width = 4,black](O,A)(B)
   \tkzDrawArc[](O,B)(A)
   \tkzDrawLines[add = 0 and .5](O,A O,B)
  % \tkzLablSegments[mark=|](O,A)
@@ -71,7 +74,7 @@ The ever insightful Louie Llama is here to help!
 \begin{enumerate}
     \item Louie Llama walks all the way around the  the circle. When he gets back to where he started, he has turned $2\pi \ rad$. Explain why in your own words. 
     \item What is the length of thick segment if $\theta=\pi \ rad$? Why?
-    \item What is the length of the blue segment if $\theta=1 \ rad$ and the radius is $r$? Explain your reasoning.
+    \item What is the length of the thick segment if $\theta=1 \ rad$ and the radius is $r$? Explain your reasoning.
 \end{enumerate}
 \end{question}
 \mynewpage
@@ -103,7 +106,13 @@ The ever insightful Louie Llama is here to help!
   it is now time for you to try you hand at this classic.
   \begin{enumerate}
   \item Give a solution in feet. Show all work.
-  \item Is the answer surprising? Explain why you say yes or no.
+  \item Now solve the problem AGAIN but for a table that is $2'$ in
+    radius; that is imagine a chain, pulled tight around a circular
+    table. Suppose you add an extra $10'$ to the chain. The chain is
+    then pulled away uniformly, all around the table, as far as
+    possible. How far is that?
+  \item Is the answer to the previous parts surprising? Explain why or
+    why not.
   \end{enumerate}
 \end{question}
 
