@@ -2,36 +2,10 @@
 
 \input{../preamble.tex}
 
-\title{Solar angle}
+\title{Solar zenith angle}
 
-\author{Claire Merriman and Bart Snapp}
+\author{Bart Snapp}
 
-%%
-%% https://tex.stackexchange.com/questions/132321/generate-analog-clock-with-numbered-face
-%%
-\newcommand\clock[3]{%
-\begin{tikzpicture}[line cap=round,line width=3pt]
-\filldraw [fill=white] (0,0) circle (2cm);
-\foreach \angle / \label in
-{0/3, 30/2, 60/1, 90/12, 120/11, 150/10, 180/9,
-210/8, 240/7, 270/6, 300/5, 330/4}
-{
-\draw[line width=1pt] (\angle:1.8cm) -- (\angle:2cm);
-\draw (\angle:1.4cm) node{\textsf{\label}};
-}
-\foreach \angle in {0,90,180,270}
-\draw[line width=2pt] (\angle:1.6cm) -- (\angle:2cm);
-\node[draw=none,font=\tiny,text=red] at (0,.9cm) {\mooculus};
-\draw[rotate=90,line width=2pt] (0,0) -- (-#1*30-#2*30/60:0.7cm); % hours
-\draw[rotate=90,line width=1.5pt] (0,0) -- (-#2*6:1cm); % minutes
-\draw[rotate=90,thin,red] (0,0) -- (-#3*6:1.2cm); % seconds
-\path [fill=red] (0,0) circle (2pt);
-%
-\end{tikzpicture}%
-}
-%%
-%%
-%%
 
 
 
@@ -44,12 +18,14 @@
 
 \begin{document}
 \begin{abstract}
-  SOLAR ANGLE
+  The solar zenith angle measures the height of the Sun.
 \end{abstract}
 \maketitle
 
 \begin{listOutcomes}
-\item ???
+\item Understand what is meant by the solar zenith angle.
+\item Connect the solar zenith angle to lines of latitude.
+\item Identify North using a analogue wrist watch on a clear sunny day.
 \end{listOutcomes}
 
 %% \begin{listObjectives}
@@ -59,25 +35,160 @@
 
 \mynewpage
 
+\begin{question}
+  Below we have a schematic diagram of the Earth and the Sun's rays
+  at summer equinox.
+  \begin{center}
+      \begin{tikzpicture}[geometryDiagrams,scale=1.5]
+        
+        \coordinate (O) at (0,0);
+        \coordinate (E) at (4,0);
+        \coordinate (E') at (5,0);
+        \coordinate (P) at (0,4);
+        \coordinate (P') at (0,5);
+        
+        \coordinate (L1) at ({4*cos(18)},{4*sin(18)});
+        \coordinate (L2) at ({4*cos(36)},{4*sin(36)});
+        \coordinate (L3) at ({4*cos(54)},{4*sin(54)});
+        \coordinate (L4) at ({4*cos(72)},{4*sin(72)});
+
+        \coordinate (L1') at ({5*cos(18)},{5*sin(18)});
+        \coordinate (L2') at ({5*cos(36)},{5*sin(36)});
+        \coordinate (L3') at ({5*cos(54)},{5*sin(54)});
+        \coordinate (L4') at ({5*cos(72)},{5*sin(72)});
+       
+        \coordinate (esun1) at (10,0);
+        \coordinate (esun2) at (6,0);
+
+        \coordinate (psun1) at (10,5);
+        \coordinate (psun2) at (6,5);
+        
+        \coordinate (l1sun1) at (10,{5*sin(18)});
+        \coordinate (l1sun2) at (6,{5*sin(18)});
+
+        \coordinate (l2sun1) at (10,{5*sin(36)});
+        \coordinate (l2sun2) at (6,{5*sin(36)});
+
+        \coordinate (l3sun1) at (10,{5*sin(54)});
+        \coordinate (l3sun2) at (6,{5*sin(54)});
+
+        \coordinate (l4sun1) at (10,{5*sin(72)});
+        \coordinate (l4sun2) at (6,{5*sin(72)});
+        
+        \begin{scope}
+        \clip (-.5,-.5) rectangle (6,6);
+        \tkzDrawCircle[ultra thick,fill=blue!10!white,draw=blue!50!black](O,E)
+        %\tkzDrawSegment[dashed](S',S)
+        %\tkzDrawSegment[dashed](A',KK)
+        %\tkzDrawSegment[line width=1mm, black,line cap=rect](A,H)
+        \tkzDrawSegment[line width=1mm, black!20!brown](E,E')
+        \tkzDrawSegment[line width=1mm, black!20!brown](P,P')
+        \tkzDrawSegment[line width=1mm, black!20!brown](L1,L1')
+        \tkzDrawSegment[line width=1mm, black!20!brown](L2,L2')
+        \tkzDrawSegment[line width=1mm, black!20!brown](L3,L3')
+        \tkzDrawSegment[line width=1mm, black!20!brown](L4,L4')
+        \end{scope}
+        %% \tkzDrawSegment[line width=2mm, yellow!50!black,->](esun1,esun2)
+        %% \tkzDrawSegment[line width=2mm, yellow!50!black,->](psun1,psun2)
+        %% \tkzDrawSegment[line width=2mm, yellow!50!black,->](l1sun1,l1sun2)
+        %% \tkzDrawSegment[line width=2mm, yellow!50!black,->](l2sun1,l2sun2)
+        %% \tkzDrawSegment[line width=2mm, yellow!50!black,->](l3sun1,l3sun2)
+        %% \tkzDrawSegment[line width=2mm, yellow!50!black,->](l4sun1,l4sun2)
+        
+        \tkzDrawSegment[line width=1mm, yellow!50!orange,->](esun1,esun2)
+        \tkzDrawSegment[line width=1mm, yellow!50!orange,->](psun1,psun2)
+        \tkzDrawSegment[line width=1mm, yellow!50!orange,->](l1sun1,l1sun2)
+        \tkzDrawSegment[line width=1mm, yellow!50!orange,->](l2sun1,l2sun2)
+        \tkzDrawSegment[line width=1mm, yellow!50!orange,->](l3sun1,l3sun2)
+        \tkzDrawSegment[line width=1mm, yellow!50!orange,->](l4sun1,l4sun2)
+
+        \node at (8,2) {Sun's rays};
+
+        
+        
+        \node[above] at (L1') {$18^\circ$};
+        \node[above] at (L2') {$36^\circ$};
+        \node[above] at (L3') {$54^\circ$};
+        \node[above] at (L4') {$72^\circ$};
+        \node[right] at (E') {$0^\circ$};
+        \node[left] at (P') {$90^\circ$};
+
+
+        \tkzDrawPoint(E)
+        \tkzDrawPoint(P)
+        \tkzDrawPoint(L1)
+        \tkzDrawPoint(L2)
+        \tkzDrawPoint(L3)
+        \tkzDrawPoint(L4)
+
+        %\tkzMarkAngle[size=.5,mark={}](S,O,A)
+
+        %\tkzMarkAngle[size=.3,mark={}](H,K,A)
+      \end{tikzpicture}
+  \end{center}
+  \begin{enumerate}
+  \item Why are the Sun's rays parallel?
+  \item At each drawn point on the Earth above, we have draw a stick
+    pointing ``straight up.'' Moreover, we have labeled this with the
+    so-called ``solar zenith angle.'' Identify and mark the geometric angle
+    that determines the value of the solar zenith angle.
+  \item \textbf{Lines of latitude} are formed by making an angle from
+    a desired position, to the center of the Earth, to the point on
+    the equator directly North/South of your position. \textbf{Explain}
+    the connection between the solar zenith angle and the lines of latitude.
+  \end{enumerate}
+ 
+\end{question}
+\mynewpage
+
+
+
 
 \begin{question}
-  Solar angle --- what is it?
+  Here are some questions tangentially related to the solar zenith angle.
+  \begin{enumerate}
+  \item What is special about the are of the Earth between the tropics? Explain using the solar zenith angle.
+  \item Why do the seasons happen? Explain using the solar zenith angle.
+  \item Columbus Ohio is located at very nearly $40^\circ$
+    latitude. What's the \textbf{highest solar zenith angle?} When does it
+    happen? What's the \textbf{lowest solar zenith angle?} When does it happen?
+  \end{enumerate}
 \end{question}
 
 \mynewpage
 
-\begin{question}
-Some basic question
-\end{question}
-\mynewpage
+
 
 
 \begin{question}
-  Using a watch to find north
+  Use the INTERNET to figure out how to use an analogue wrist watch to
+  deduce which direction is North is based on the Sun. 
+  \begin{enumerate}
+  \item Suppose it is morning and your hour hand is pointed at the
+    Sun.  Demonstrate understanding by showing the direction North in
+    the diagram below:
+    \begin{center}
+      \watch{7}{15}
+    \end{center}
+     \item Suppose it is afternoon and your hour hand is pointed at
+       the Sun. Demonstrate understanding by showing the direction
+       North in the diagram below:
+    \begin{center}
+      \watch{1}{30}
+    \end{center}
+  \item Suppose it is the afternoon `golden hour and your hour hand is
+    pointed at the Sun. Demonstrate understanding by showing the
+    direction North in the diagram below:
+    \begin{center}
+      \watch{6}{25}
+    \end{center}
+  \item Explain WHY this trick works. As part of your explanation,
+    include how to deal with times before/after noon AND how things
+    change if you are in the Southern Hemisphere.
+  \end{enumerate}
 
 
-\noindent\clock{1}{15}{30} \clock{2}{25}{15}
-\clock{12}{58}{10} \clock{6}{10}{45}
+
 
   
 \end{question}
