@@ -3,25 +3,23 @@
 \input{../preamble.tex}
 
 \title{Nothing but nets}
-\author{Bart Snapp and Jenny Sheldon}
+\author{Bart Snapp}
 
 \begin{document}
 \begin{abstract}
-  We study solids, and learn facts whose origins are both old and new.
+  We use nets to study paths on cubes.
 \end{abstract}
 \maketitle
 
 \begin{listOutcomes}
-\item Draw nets of Platonic solids.
-\item Evaluate nets of polyhedra in regards to real-world issues.
-\item Discover basic facts about Platonic solids.
+\item Draw nets of cubes.
+\item Use nets to find shortest paths on cubes.
 \end{listOutcomes}
 
 
 
-We are going to think about building polyhedra out
-of poster-board and tape. To do this, we're going to draw
-\textit{nets} of the various regular convex polyhedra.
+We are going to think about cubes, how a paper cube could be unfolded, and about paths on these cubes. An unfolded cube is called a \textit{net}.
+
 
 \begin{definition}
   A \textbf{net}\index{net of a polyhedron} of a polyhedron is a
@@ -34,48 +32,58 @@ of poster-board and tape. To do this, we're going to draw
 
 
 \begin{question}
-  Use the INTERNET (or your brain) to find nets for each of the five
-  Platonic solids. Display them here.
+  There are $11$ distinct nets for cubes. Use the INTERNET (or your
+  brain) to find all $11$ nets for a cube. Carefully draw them here.
   
 \end{question}
 \mynewpage
 
 \begin{question}
-  Time to think about nets.
-  \begin{enumerate}
-  \item Draw all possible nets of regular tetrahedra.
-  \item Think about building these nets using poster-board and
-    tape. Which nets would be ``best'' to use and why? Think about
-    ease of construction, strength of final solid, number of folds,
-    number of cuts, amount of tape, and \textbf{at least one more}
-    consideration.
-  \end{enumerate}
+  Here's an old puzzler: Suppose you are an ant standing at the corner
+  of a cube whose side length is $10'$. Find and describe the shortest
+  path the ant could walk to get to the opposite corner of the cube. What's the
+  length of this shortest path?
+ %%  Time to think about nets.
+%%   \begin{enumerate}
+%%   \item Draw all possible nets of regular tetrahedra.
+%%   \item Think about building these nets using poster-board and
+%%     tape. Which nets would be ``best'' to use and why? Think about
+%%     ease of construction, strength of final solid, number of folds,
+%%     number of cuts, amount of tape, and \textbf{at least one more}
+%%     consideration.
+%%   \end{enumerate}
 \end{question}
 \mynewpage
 
 \begin{question}
-  Most of the mathematics you learn in school is very old. The concept
-  of Platonic solids is thousands of years old. However, there is
-  always new knowledge to be created. As far as I know, this question
-  \begin{quote}
-    ``Consider a Platonic solid. Given a side length, what's the
-    \textbf{average} width of the solid?''
-  \end{quote}
-  wasn't completely addressed until the late Twentieth Century.
-  %% https://mathoverflow.net/questions/306318/average-caliper-diameter-mean-width-of-a-polyhedron
-  %% [1] J.W. Cahn, The significance of average mean curvature and its determination by quantitative metallography, Trans. Met. Soc. AIME 239 (1967) 610-616. behind a paywall
-  %% [2] R.E. Miles, Poisson flats in Euclidean spaces. Part I: A finite number of random uniform flats, Adv. App. Prob. 1 (1969) 211-237.
-  %% [3] R.E. Miles, Direct Derivations of Certain Surface Integral Formulae for the Mean Projections of a Convex Set, Adv. Applied Prob. 7 (1975), 818-829.
-  The answer is given by the formula
-  \[
-  n \cdot l \cdot (180-\theta)/720
-  \]
-  where $n$ is the number of edges, $l$ is the edge-length, and
-  $\theta$ is the \textbf{dihedral angle} of the regular $n$-gon for the given
-  Platonic solid. Suppose you wish to make a model of each of the
-  Platonic solids so that their average width is $10$
-  centimeters. \textbf{What should the edge length be in each case?
-    Show your work.}
+  Here's another old puzzler: Suppose you are an ant standing $1'$
+  directly below the middle of the top edge of a cube whose side
+  length is $10'$. Find and describe the shortest path the ant could
+  walk to get $1'$ directly above the middle of the opposite (bottom)
+  edge of a cube. What's the length of this shortest path?
+
+  %% Most of the mathematics you learn in school is very old. The concept
+  %% of Platonic solids is thousands of years old. However, there is
+  %% always new knowledge to be created. As far as I know, this question
+  %% \begin{quote}
+  %%   ``Consider a Platonic solid. Given a side length, what's the
+  %%   \textbf{average} width of the solid?''
+  %% \end{quote}
+  %% wasn't completely addressed until the late Twentieth Century.
+  %% %% https://mathoverflow.net/questions/306318/average-caliper-diameter-mean-width-of-a-polyhedron
+  %% %% [1] J.W. Cahn, The significance of average mean curvature and its determination by quantitative metallography, Trans. Met. Soc. AIME 239 (1967) 610-616. behind a paywall
+  %% %% [2] R.E. Miles, Poisson flats in Euclidean spaces. Part I: A finite number of random uniform flats, Adv. App. Prob. 1 (1969) 211-237.
+  %% %% [3] R.E. Miles, Direct Derivations of Certain Surface Integral Formulae for the Mean Projections of a Convex Set, Adv. Applied Prob. 7 (1975), 818-829.
+  %% The answer is given by the formula
+  %% \[
+  %% n \cdot l \cdot (180-\theta)/720
+  %% \]
+  %% where $n$ is the number of edges, $l$ is the edge-length, and
+  %% $\theta$ is the \textbf{dihedral angle} of the regular $n$-gon for the given
+  %% Platonic solid. Suppose you wish to make a model of each of the
+  %% Platonic solids so that their average width is $10$
+  %% centimeters. \textbf{What should the edge length be in each case?
+  %%   Show your work.}
 \end{question}
 
 \end{document}
