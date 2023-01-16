@@ -19,15 +19,106 @@ not, a reasonable estimate.
 \item Apply basic geometric formulas.
 \end{listOutcomes}
 
-Here are a bunch of formulas Dr.\ Snapp found on the internet at this site
-\begin{center}
-  \textit{https://sites.google.com/site/standardbasicengineering/home/useful-formula-for-finding-area-volume-of-solid-figures}
-\end{center}
-\begin{center}
-  \includegraphics[width=.4\textwidth]{photoFormula1.jpg} \qquad \includegraphics[width=.4\textwidth]{photoFormula2.jpg}
-\end{center}
+Here are a bunch of formulas Dr.\ Snapp has found useful in the past. %% found on the internet at this site
+%% \begin{center}
+%%   \textit{https://sites.google.com/site/standardbasicengineering/home/useful-formula-for-finding-area-volume-of-solid-figures}
+%% \end{center}
+%% \begin{center}
+%%   \includegraphics[width=.4\textwidth]{photoFormula1.jpg} \qquad \includegraphics[width=.4\textwidth]{photoFormula2.jpg}
+%% \end{center}
+\begin{mdframed}[style=OutcomeStyle]
+  \textbf{Formulas:} For three-dimensional solids, $A$ is the area of
+  the base.
 
-Let's think about some questions. 
+  \begin{description}
+  \item[Rectangle]$A= b\cdot h$
+    \hfil\raisebox{-2cm}{
+      \begin{tikzpicture}
+      \draw[ultra thick] (0,0) rectangle (3,1.5);
+      \node[below] at (1.5,0) {$b$};
+      \node[right] at (3,.75) {$h$};
+    \end{tikzpicture}}
+    
+  \item[Triangle] $A=\frac{b\cdot h}{2}$
+    \hfil\raisebox{-2cm}{
+     \begin{tikzpicture}
+      \draw[ultra thick] (0,0) -- (2,0) -- (3,1.5) -- (0,0) -- cycle;
+      \draw[dashed] (3,1.5) -- (3,0);
+      \node[below] at (,0) {$b$};
+      \node[right] at (3,.75) {$h$};
+    \end{tikzpicture}}
+  \item[Sheared Prism] $V = A \cdot h$.
+    \hfil\raisebox{-2cm}{
+      \begin{tikzpicture}
+      \draw[ultra thick] plot [smooth cycle] coordinates  {(0,0) (1,.5) (2,.6) (3,.5) (3,1) (2,1.5) (0,1) };
+
+      \draw[ultra thick] plot [smooth cycle] coordinates  {(1,1.5) (2,2) (3,2.1) (4,2) (4,2.5) (3,3) (1,2.5) };
+
+      \draw[ultra thick] (0,0) -- (1,1.5);
+
+      %% \draw[ultra thick] (1,.5) -- (2,2);
+
+      %% \draw[ultra thick] (2,.6) -- (3,2.1);
+
+      \draw[ultra thick] (3,.5) -- (4,2);
+
+      \draw[ultra thick] (0,1) -- (1,2.5);
+
+      
+      \draw[ultra thick,dashed] (3,1) -- (4,2.5);
+     
+      \draw[ultra thick,dashed] (2,1.5) -- (3,3);
+      
+
+      
+      \draw[dashed] (4,2) -- (4,.5);
+      \node at (2,1) {$A$};
+      \node[right] at (4,1.25) {$h$};
+    \end{tikzpicture}}
+  \item[Cone] $V = \frac{A\cdot h}{3}$ %$SA = A \cdot \sqrt{1 + \left(\frac{h}{r}\right)^2}$
+    \hfil\raisebox{-2cm}{
+      \begin{tikzpicture}
+      \draw[ultra thick] plot [smooth cycle] coordinates  {(0,0) (1,.5) (2,.6) (3,.5) (3,1) (2,1.5) (0,1) };
+
+      
+
+      \draw[ultra thick] (0,0) -- (4,2.5);
+
+      %% \draw[ultra thick] (1,.5) -- (2,2);
+
+      %% \draw[ultra thick] (2,.6) -- (3,2.1);
+
+      \draw[ultra thick] (3,.5) -- (4,2.5);
+
+      \draw[ultra thick] (0,1) -- (4,2.5);
+
+      
+      \draw[ultra thick,dashed] (3,1) -- (4,2.5);
+     
+      \draw[ultra thick,dashed] (2,1.5) -- (4,2.5);
+      \draw [fill=black] (4,2.5) circle (.05);
+
+
+      
+      \draw[dashed] (4,2) -- (4,.5);
+      \node at (2,1) {$A$};
+      \node[right] at (4,1.25) {$h$};
+    \end{tikzpicture}}
+  \item[Sphere] $V = \frac{4\pi r^3}{3}$ \qquad $SA = 4\pi r^2$
+    \hfil\raisebox{-2cm}{\begin{tikzpicture}
+      %% sphere
+      \draw[ultra thick] (1.75,0) arc (0:360:1.75);
+      %%%% Equator
+      \draw[ultra thick] (-1.75,0) arc (180:360:1.75 and .5);
+      \draw[ultra thick,dashed] (1.75,0) arc (0:180:1.75 and .5);
+
+      \draw [fill=black] (0,0) circle (.05);
+
+      \draw (0,0) -- (1.75,0);
+      \node[above] at (.8,0) {$r$};
+    \end{tikzpicture}}
+  \end{description}
+ \end{mdframed}
 
 
 \mynewpage
