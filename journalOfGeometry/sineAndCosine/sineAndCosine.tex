@@ -93,7 +93,7 @@ We can extend the definition of sine to any triangle if we
           \tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
           \tkzLabelAngle[pos=1.2](C,A,B){$\theta$}
 
-          \tkzDrawLine[altitude,dashed](A,B,C)\tkzGetPoint{D}
+          \tkzDrawAltitude[dashed](A,B,C)\tkzGetPoint{D}
           \tkzMarkRightAngle[thin](B,D,C)
           \tkzLabelSegment[left](D,B){$h$}  
         \end{tikzpicture}
@@ -115,7 +115,7 @@ We can extend the definition of sine to any triangle if we
           
           \tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
           \tkzLabelAngle[pos=1.2](C,A,B){$\theta$}
-          \tkzDrawLine[altitude,dashed](B,C,A)\tkzGetPoint{D}
+          \tkzDrawAltitude[dashed](B,C,A)\tkzGetPoint{D}
           \tkzMarkRightAngle[thin](B,D,C)
           \tkzLabelSegment[right](D,C){$h'$}
           \tkzDrawSegment[dashed](D,B)
