@@ -93,8 +93,10 @@ We can extend the definition of sine to any triangle if we
           \tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
           \tkzLabelAngle[pos=1.2](C,A,B){$\theta$}
 
-          \tkzDrawAltitude[dashed](A,B,C)\tkzGetPoint{D}
+          \tkzDefPointsBy[projection=onto A--C](B){D}.
+          
           \tkzMarkRightAngle[thin](B,D,C)
+          \tkzDrawSegment[dashed](B,D)
           \tkzLabelSegment[left](D,B){$h$}  
         \end{tikzpicture}
       \end{center}
@@ -115,7 +117,9 @@ We can extend the definition of sine to any triangle if we
           
           \tkzMarkAngle[size=1.5cm,thin,mark=](C,A,B)
           \tkzLabelAngle[pos=1.2](C,A,B){$\theta$}
-          \tkzDrawAltitude[dashed](B,C,A)\tkzGetPoint{D}
+          
+          \tkzDefPointsBy[projection=onto A--B](C){D}
+          \tkzDrawSegment[dashed](C,D)
           \tkzMarkRightAngle[thin](B,D,C)
           \tkzLabelSegment[right](D,C){$h'$}
           \tkzDrawSegment[dashed](D,B)
@@ -127,7 +131,7 @@ We can extend the definition of sine to any triangle if we
          height we choose, the value of $\boldsymbol{\sin(\theta)}$ will be the same.}
 
      \item Confirm that $\frac{h}{c} = \frac{h'}{b}$ in the diagrams
-       above by measuring, and hence directly computing
+       above by \textbf{measuring with a ruler,} and hence directly computing
        $\sin(\theta)$.
         \end{enumerate}
 \end{question}
