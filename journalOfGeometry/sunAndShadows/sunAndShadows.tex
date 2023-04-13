@@ -1,4 +1,4 @@
-\documentclass[noauthor,nooutcomes,handout,hints]{ximera}
+\documentclass[noauthor,nooutcomes,handout,hints,12pt]{ximera}
 
 \input{../preamble.tex}
 
@@ -35,16 +35,16 @@ reaches its highest point for the year on the \textbf{summer solstice.}
 
 \begin{center}
  
-\begin{tikzpicture}[x=.75cm,y=.75cm]
+\begin{tikzpicture}[x=.75cm,y=.75cm,scale=.8]
  \draw[thick] (0.2,0)--(3.2,0)--(3.2,-1.6);
  \draw[dashed] (-2.5,1.5)--(3.2,-1.6)--(3.2,-6.6)--(-2,4.97);
  \draw[thick] (3.2,-6.6)--(3.2,-9.6);
  \filldraw[color=yellow, fill=yellow, very thick](-2,4.97) circle (.5);
  \filldraw[color=yellow, fill=yellow, very thick](-2.5,1.5) circle (.5);
- \node at (1.5,.5) {overhang};
- \node[anchor=west] at (3.5, -.8) {gap between window and ceiling};
- \node[anchor=west] at (3.5, -4) {window};
- \node[anchor=west] at (3.5, -8) {height of the window from the floor};
+ \node at (1.8,.5) {\small overhang};
+ \node[anchor=west] at (3.5, -.8) {\small gap between window and ceiling};
+ \node[anchor=west] at (3.5, -4) {\small window};
+ \node[anchor=west] at (3.5, -8) {\small height of the window from the floor};
 \end{tikzpicture}
 \end{center}
 
@@ -96,9 +96,9 @@ reaches its highest point for the year on the \textbf{summer solstice.}
  building. For a $52\ foot$ tall building in Columbus, find:
  
 \begin{enumerate}
- \item The length of the area on the on the North of the building that
-   is in shade year round.
- \item The difference in the length of the shadow on the summer
+ \item The length of the area North of the building that is in the
+   shade year round.
+ \item The difference in the length of this shadow on the summer
    solstice and the winter solstice.
 \end{enumerate}
 \end{question}
