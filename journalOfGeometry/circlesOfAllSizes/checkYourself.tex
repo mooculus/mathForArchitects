@@ -2,7 +2,7 @@
 
 \input{../preamble}
 
-\author{Bart Snapp and Claire Merriman}
+\author{Bart Snapp}
 
 \checkYourselfAbstract
 
@@ -10,97 +10,47 @@
 \maketitle
 
 
-For Checks 1 through 4 below, consider this diagram:
-\begin{center}
-\begin{tikzpicture}[rotate=15, scale=1]
-  \coordinate (A) at (-2,0);
-  \coordinate (B) at (6,0);
-  \coordinate (C) at (-2,-4);
-  \coordinate (D) at (6,4);
-  \coordinate (E) at (2,0);
-  \coordinate (F) at (8,-4);
-  \coordinate (G) at (-4,0);
-  \coordinate (H) at (8,0);
-  \coordinate (I) at (-4,-4);
-  \tkzDrawPoints(A,B,C,D,E,F);
-  \draw (G)--(H);
-  \draw (I)--(F);
-  \draw (B)--(D)--(C)--(A);
-  \tkzLabelPoints[above](D,A,E)
-  \tkzLabelPoints[below](B,C,F)
-  \tkzMarkSegments[mark=|](A,E E,B)
-  \tkzMarkSegments[mark=||](C,E E,D)
-  \tkzMarkAngle[size=0.75cm,mark=](B,E,D)
-  \tkzMarkAngle[size=0.5cm,mark=](D,E,A)
-  \tkzMarkAngle[size=0.75cm,mark=](A,E,C)
-  \tkzMarkAngle[size=0.5cm,mark=](C,E,B)
-  \tkzMarkAngle[size=0.75,mark=](F,C,D)
-  \tkzLabelAngle[pos = -1](A,E,C){$\alpha$}
-  \tkzLabelAngle[pos = .7](C,E,B){$\beta$}
-  \tkzLabelAngle[pos = .7](D,E,A){$\gamma$}
-  \tkzLabelAngle[pos = -1](C,E,A){$\delta$}
-  \tkzLabelAngle[pos = 1](F,C,D){$\epsilon$}
-\end{tikzpicture}
-\end{center}
 
-\begin{exercise}
- The formula for $\beta$ in terms of $\alpha$ is:
- 
-\begin{enumerate}
-\begin{multicols}{2}
- \item $180^\circ-\alpha$
- \item $90^\circ-\beta$
- \item $\alpha$
- \item $360^\circ-\alpha$
-\end{multicols}
-\end{enumerate}
+
+\begin{exercise} %false
+ True or False: There exists a 2D-shape with perimeter $7$ square units
+ and area $4$ square units.
 \end{exercise}
 
-\begin{exercise}
- The formula for $\gamma$ in terms of $\alpha$ is:
- 
-\begin{enumerate}
-\begin{multicols}{2}
- \item $180^\circ-\alpha$
- \item $90^\circ-\beta$
- \item $\alpha$
- \item $360^\circ-\alpha$
-\end{multicols}
-\end{enumerate}
+\begin{exercise} %True
+  True or False: There exists a 2D-shape with perimeter $12$ square units
+  and area $10$ square units.
 \end{exercise}
 
-\begin{exercise}
- The formula for $\delta$ in terms of $\alpha$ is:
- 
-\begin{enumerate}
-\begin{multicols}{2}
- \item $180^\circ-\alpha$
- \item $90^\circ-\beta$
- \item $\alpha$
- \item $360^\circ-\alpha$
-\end{multicols}
-\end{enumerate}
-\end{exercise}
+    
+
+   
 
 \begin{exercise}
- The formula for $\epsilon$ in terms of $\alpha$ is:
- 
-\begin{enumerate}
-\begin{multicols}{2}
- \item $180^\circ-\alpha$
- \item $90^\circ-\beta$
- \item $\alpha$
- \item $360^\circ-\alpha$
-\end{multicols}
-\end{enumerate}
+ Suppose you have an arc of a circle that is $10$ units long. If the
+ arc makes an angle of $10$ degrees with the center of the circle,
+ what is the circumference of the circle?
 \end{exercise}
+
+
 
 \begin{exercise}
-  True or False:
-
-  ``A radian is just the angle made by the arc of a circle whose
-  length equals the raidus.''
+ Suppose you have a circle with a circumfrence of $300$ units. If an
+ arc makes an angle of $60$ degrees with the center of the circle,
+ what is the length of the arc?
 \end{exercise}
 
-\answerlistbox{(a)}{(a)}{(c)}{(c)}{True}
+
+
+
+
+\begin{exercise}
+Imagine a string, pulled tight around a circle of some radius. Suppose
+you add an extra $10''$ to the string. The string is then pulled away
+from the circle uniformly, all around the circle, as far as
+possible. How far is that?
+\end{exercise}
+
+
+\answerlistbox{False}{True}{$360$}{$50$}{$\frac{10}{2\pi}$}
 \end{document}
