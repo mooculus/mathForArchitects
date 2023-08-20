@@ -1,4 +1,4 @@
-\documentclass[handout,noauthor,nooutcomes,hints]{ximera}
+\documentclass[handout,noauthor,nooutcomes,hints,12pt]{ximera}
 \input{../preamble.tex}
 \title{Getting started}
 \author{Claire Merriman and Bart Snapp}
@@ -28,7 +28,19 @@
 
 
 \begin{question}
-Look around our classroom. How many tennis balls would it take to
+  Here's a scale picture of a baseball:
+  \begin{center}
+  \begin{tikzpicture}
+  % Define the radius of the circle (half of the diameter)
+  \def\ballradius{3.8cm} % 6.8 / 2
+
+  % Draw the circle
+  \draw[ultra thick] (0, 0) circle (\ballradius);
+
+  % You can add additional elements or labels here if needed
+  \end{tikzpicture}
+  \end{center}
+Look around our classroom. How many baseballs would it take to
 \begin{enumerate}
 \item Line one edge of the classroom?
  \item Cover the floor?
@@ -43,7 +55,8 @@ In each case, EXPLAIN how you arrive at your conclusion.
 
 
 \begin{question}
-Look around our classroom. How many ping pong balls would it take to
+Ping-pong balls have about half the diameter of a baseball. How
+many ping-pong balls
 \begin{enumerate}
 \item Line one edge of the classroom?
 \item Cover the floor?
@@ -57,17 +70,15 @@ In each case,  EXPLAIN how you arrive at your conclusion.
 
 
 \begin{question}
-  You notice that a tennis ball has about twice the diameter of a ping
-  pong ball. When you mention this to your friend and fellow student
-  \textit{Geometry Giorgio}, he suggests that we think in the
-  following way:
+  Your friend and fellow student \textit{Geometry Giorgio} suggests
+  that we think in the following way:
 \begin{quote}
-  Since a tennis ball has about twice the diameter of a ping pong
+  Since a baseball has about twice the diameter of a ping-pong
   ball, the answers for Problem $2$ above should all be about twice the
   answers from Problem $1$.
 \end{quote}
 Is \textit{Geometry Giorgio} correct?  If he is correct, explain
-why. If he is not correct, try to salvage and correct his reasoning.
+why. If he is not correct, explain how you know he is not correct.
 \end{question}
 
 
