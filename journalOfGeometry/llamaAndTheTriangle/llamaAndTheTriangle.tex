@@ -1,4 +1,4 @@
-\documentclass[nooutcomes,noauthor,handout]{ximera}
+\documentclass[nooutcomes,noauthor,handout,12pt]{ximera}
 
 \input{../preamble.tex}
 \title{Louie Llama and the triangle}
@@ -120,8 +120,8 @@ ROTATED one bit.
   \renewcommand{\arraystretch}{3}
   \begin{array}{|c||c|c|c|}\hline
     \text{$n$-gon} & \begin{minipage}{1.3in}\center sum of \\ interior angles \end{minipage} &
-    \begin{minipage}{1.5in}\center interior angles \\ of a regular $n$-gon\end{minipage} &
-      \begin{minipage}{1.5in}\center exterior angles \\ of a regular $n$-gon\end{minipage} \\\hline\hline
+    \begin{minipage}{1.5in}\center interior angle \\ of a regular $n$-gon\end{minipage} &
+      \begin{minipage}{1.5in}\center exterior (turning) angle \\ of a regular $n$-gon\end{minipage} \\\hline\hline
         3 & 180^\circ & 60^\circ  & 120^\circ \\\hline
         4 & & & \\\hline
         5 & & & \\\hline
@@ -139,13 +139,13 @@ ROTATED one bit.
     \text{$n$-gon} & \begin{minipage}{1.3in}\center sum of \\ interior angles \end{minipage} &
     \begin{minipage}{1.5in}\center interior angles \\ of a regular $n$-gon\end{minipage} &
       \begin{minipage}{1.5in}\center exterior angles \\ of a regular $n$-gon\end{minipage} \\\hline\hline
-        3 & 180^\circ & 60^\circ  & 120^\circ \\\hline
-        4 & 360^\circ & 90^\circ & 90^\circ \\\hline
-        5 & 540^\circ & 108^\circ & 72^\circ \\\hline
-        6 & 720^\circ & 120^\circ & 60^\circ\\\hline
-        7 & 900^\circ & 128.6^\circ& 51.4^\circ\\\hline
-        8 & 1080^\circ& 135^\circ& 45^\circ \\\hline\hline
-        n & (n-2)180^\circ  & \frac{(n-2)180^\circ}{n} & \frac{360^\circ}{n}\\\hline
+        3 & 180^\circ & 60^\circ  & 300^\circ \\\hline
+        4 & 360^\circ & 90^\circ & 270^\circ \\\hline
+        5 & 540^\circ & 108^\circ & 252^\circ \\\hline
+        6 & 720^\circ & 120^\circ & 240^\circ\\\hline
+        7 & 900^\circ & 128.6^\circ& 231.4^\circ\\\hline
+        8 & 1080^\circ& 135^\circ& 225^\circ \\\hline\hline
+        n & (n-2)180^\circ  & \frac{(n-2)180^\circ}{n} & 360^\circ - \frac{(n-2)180^\circ}{n}\\\hline
   \end{array}
   \]
   \end{freeResponse}
