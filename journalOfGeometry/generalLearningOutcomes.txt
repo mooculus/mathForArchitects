@@ -1,0 +1,17 @@
+To implement an abstract mathematical procedures in a concrete setting.
+
+
+To use abstract mathematical concepts to reason in a concrete setting.
+
+To understand basic algorithms.
+
+To write proofs as explanations designed to convince a specific audience.
+
+
+Identify and articulate
+
+Know when right and wrong.
+
+Computational experience
+
+Measuring experience.

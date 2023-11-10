@@ -1,0 +1,22 @@
+800x600 canvas
+
+20 pixels per foot.
+Wall thickness  4-6" or 10 pixels.
+
+Floor thickness 20 pixels
+
+Ground is at -170
+
+140 = 7' 
+
+width of building is 35'
+
+I used a modified bisection method to get the first floor flooring
+correct.
+
+I used the bisection method to find the pitch that would work, then used a pitch of 9/12.
+
+
+2 ASA were used to make the triangular roof
+
+bisection method to create rooms.  (the thick walls need adjustment)
