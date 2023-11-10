@@ -1,0 +1,85 @@
+\documentclass[nooutcomes,noauthor,hints]{ximera}
+
+\input{../preamble.tex}
+\title{The art gallery problem}
+
+\author{Bart Snapp}
+
+\begin{document}
+\begin{abstract}
+  Triangulate FTW!
+\end{abstract}
+\maketitle
+
+
+\begin{listOutcomes}
+\item 
+\item 
+\item 
+\end{listOutcomes}
+
+The \textit{art gallery problem} is a classic
+mathematics/computer-science problem.  Imagine an art gallery that has
+the shape of some polygon. We wish to \textbf{place as few cameras as
+  possible so that we may view every point inside the gallery.} We'll
+make the following assumptions:
+\begin{itemize}
+\item Cameras have a $360^\circ$ view, and
+\item cameras can view any point, as long as they are not obstructed
+    by a wall.
+\end{itemize}
+Here is our plan to solve this problem:
+\begin{itemize}
+\item We will argue that any polygon can be triangulated.
+\item We will argue that through our process of triangulating, an
+  $n$-gon is triangulated without adding any vertices.
+\item Each triangle only requires $1$ guard, at one of its $3$
+  vertices, so we require no more than $n/3$ cameras.
+\end{itemize}
+
+\mynewpage
+
+
+\begin{question}%http://cgm.cs.mcgill.ca/~godfried/teaching/cg-projects/97/Thierry/thierry507webprj/artgallery.html
+  It's a FACT: Every polygon has two ``ears!''
+  \begin{enumerate}
+    \item On
+      \link[Wikipedia]{https://en.wikipedia.org/wiki/Two_ears_theorem}
+      it says:
+      \begin{quote}
+        An \textbf{ear} of a polygon is defined as a vertex $v$ such that the
+        line segment between the two neighbors of $v$ lies entirely in
+        the interior of the polygon.
+      \end{quote}
+      DRAW a picture of a polygon that has at least $7$ sides and no
+      more than $2$ ears.
+    \item Here is an ALGORITHM for triangulating any polygon.
+    \item Now imagine an $n$-gon where $n> 4$. INSTEAD OF DOING INDUCTION TRY TO MAKE IT AN ALGORITHM.
+    \item If it has an ear, remove it.
+    \item If there are no ears...
+      \item Triangulate and then worst case. 
+  \end{enumerate}
+  
+  
+\end{question}
+
+\mynewpage
+
+
+\begin{question} POLYGON CAMERAS
+\end{question}
+
+\mynewpage
+
+
+\begin{question} WORST CASE // GIVE IT A TRY
+\end{question}
+
+
+
+
+
+
+
+
+\end{document}
