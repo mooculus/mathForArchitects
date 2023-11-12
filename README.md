@@ -5,7 +5,11 @@ Welcome to the Ximera Math for Architects repository! This repository contains t
 
 ## Authors
 
-This textbook was authored by: Clair Merriman, Jenny Sheldon, and Bart Snapp, with contributions from others mentioned within the documents themselves. 
+This textbook was authored by Claire Merriman, Jenny Sheldon, and Bart
+Snapp, with contributions from others mentioned within the documents
+themselves.  Special thanks to Dan Shapiro who suggested that Snapp
+apply for a course enhancement grant, and for continued support
+througout the years.
 
 ## How to Use This Textbook
 
@@ -16,7 +20,9 @@ To get started with the course, you can:
 
 ## Contributing
 
-We welcome contributions to improve and expand this textbook. If you find errors or have suggestions, please open an issue or submit a pull request.
+We welcome contributions to improve and expand this textbook. If you
+find errors or have suggestions, please open an issue or submit a pull
+request.
 
 ## License
 
@@ -28,8 +34,5 @@ This textbook is released under the [License Name](link-to-license), allowing fo
 [Ximera](https://ximera.osu.edu/) is an open-source platform for creating and publishing interactive online textbooks. It allows authors to build dynamic and engaging educational content with embedded exercises, quizzes, and interactive elements.
 
 
-## Acknowledgments
-
-Special thanks to [Acknowledged Contributor Name](link-to-contributor) for their contributions to this project.
 
 Happy learning!

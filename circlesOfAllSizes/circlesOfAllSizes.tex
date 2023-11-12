@@ -2,8 +2,8 @@
 
 \input{../preamble.tex}
 
-\title{Circles of all sizes (REWRITE DOG WALK 1m away)}
-\author{Claire Merriman \and Bart Snapp}
+\title{Circles of all sizes}
+\author{Claire Merriman \and Bart Snapp \and Dan Shapiro}
 
 %% ONLY REQUIRES WHAT's YOUR ANGLE...
 
@@ -16,9 +16,11 @@
 \maketitle
 
 \begin{listOutcomes}
-  \item Think about the isoperimetric inequality.
+%  \item Think about the isoperimetric inequality.
 \item Use angles to find the length of an arc of a circle.
+\item Notice an interesting mathematical property.
 \item Use formulas to solve word problems.
+\item Translate classroom mathematics into real world mathematics. 
 \end{listOutcomes}
 
 %% \begin{listObjectives}
@@ -29,17 +31,19 @@
 
 \mynewpage
 
-\begin{question}
-  I was reading some fancy math the other day, it said for any shape
-  of area $A$, the perimeter of this shape is $P$ where:
-  \[
-  P \ge 2\pi\sqrt{A/\pi}
-  \]
-  Use the fact that a circle is the two dimensional shape of greatest
-  area for a given perimeter to deduce the inequality above.
-  \begin{hint} Recall $A = \pi r^2$ and $C = 2\pi r$.
-  \end{hint}
-\end{question}
+%% \begin{question}
+%%   I was reading some fancy math the other day, it said for any shape
+%%   of area $A$, the perimeter of this shape is $P$ where:
+%%   \[
+%%   P \ge 2\pi\sqrt{A/\pi}
+%%   \]
+%%   Use the fact that a circle is the two dimensional shape of greatest
+%%   area for a given perimeter to deduce the inequality above.
+%%   \begin{hint} Recall $A = \pi r^2$ and $C = 2\pi r$.
+%%   \end{hint}
+%% \end{question}
+
+
 \mynewpage
 
 
@@ -66,13 +70,17 @@ related. Suppose we have a circle and an angle is made:
 \end{center}
 Answer these questions:
 \begin{enumerate}
-\item If the thick segment has a length of $45$ units and the angle is $45^\circ$, what is the circumference of the circle?
-\item If the thick segment has a length of $10$ units and the angle is $180^\circ$, what is the circumference of the circle?
-\item If the thick segment has a length of $25$ units and the angle is $60^\circ$, what is the circumference of the circle?
-\item If the thick segment has a length of $50$ units and the angle is $7^\circ$, what is the circumference of the circle?
-\item If the thick segment has a length of $x$ units and the angle is $\theta^\circ$, what is the circumference of the circle?
+%% \item If the thick segment has a length of $45$ units and the angle is $45^\circ$, what is the circumference of the circle?
+%% \item If the thick segment has a length of $10$ units and the angle is $180^\circ$, what is the circumference of the circle?
+%% \item If the thick segment has a length of $25$ units and the angle is $60^\circ$, what is the circumference of the circle?
+%% \item If the thick segment has a length of $50$ units and the angle is $7^\circ$, what is the circumference of the circle?
+  %% \item If the thick segment has a length of $x$ units and the angle is $\theta^\circ$, what is the circumference of the circle?
+\item If the radius of the circle is $1$ unit, and $\theta=180^\circ$, what is the length of the thick segment?
+\item If the radius of the circle is $1$ unit, and $\theta=270^\circ$, what is the length of the thick segment?
+\item If the radius of the circle is $1$ unit, and $\theta=10^\circ$, what is the length of the thick segment?
 \end{enumerate}
-and explain in words how to think about such problems.
+Now answer these questions \textbf{again}, but where the radius of the
+circle is $r$ units.
 \end{question}
 \mynewpage
 
@@ -88,39 +96,70 @@ and explain in words how to think about such problems.
 
 
 \begin{question} %% https://en.wikipedia.org/wiki/String_girdling_Earth 
-  Here a problem that is at least $300$ years old, so let's call it an  ``oldie, but a goodie!''
-  \begin{quote}
-    Imagine a chain, pulled tight around the Earth's equator. Suppose
-    you add an extra $10'$ to the chain. The chain is then raised up
-    uniformly, all around the Earth, as high as possible. How high is
-    that?
-  \end{quote}
-  Supposing that
-  \begin{itemize}
-  \item There are $5280$ feet in a mile, and
-  \item the radius of the Earth is $4000$ miles,
-  \end{itemize}
-  it is now time for you to try you hand at this classic.
-  \begin{enumerate}
-  \item Give a solution in feet. Show all work.
-  \item Now solve the problem AGAIN but for a table that is $2'$ in
-    radius; that is imagine a chain, pulled tight around a circular
-    table. Suppose you add an extra $10'$ to the chain. The chain is
-    then pulled away uniformly, all around the table, as far as
-    possible. How far is that?
-  \item Is the answer to the previous parts surprising? Explain why or
-    why not.
-  \end{enumerate}
-  \begin{freeResponse}
-    It is easiest to work with letters. If $R$ is the radius of the
-    circle, then we have
-    \begin{align*}
-      2\pi (R + d) &= 2\pi R +10,\\
-      2\pi R + 2\pi d &= 2\pi R + 10,\\
-      2\pi d &= 10,\\
-      d &= \frac{10}{2\pi}.
-    \end{align*}
-  \end{freeResponse}
+  %% Here a problem that is at least $300$ years old, so let's call it an  ``oldie, but a goodie!''
+  %% \begin{quote}
+  %%   Imagine a chain, pulled tight around the Earth's equator. Suppose
+  %%   you add an extra $10'$ to the chain. The chain is then raised up
+  %%   uniformly, all around the Earth, as high as possible. How high is
+  %%   that?
+  %% \end{quote}
+  %% Supposing that
+  %% \begin{itemize}
+  %% \item There are $5280$ feet in a mile, and
+  %% \item the radius of the Earth is $4000$ miles,
+  %% \end{itemize}
+  %% it is now time for you to try you hand at this classic.
+  %% \begin{enumerate}
+  %% \item Give a solution in feet. Show all work.
+  %% \item Now solve the problem AGAIN but for a table that is $2'$ in
+  %%   radius; that is imagine a chain, pulled tight around a circular
+  %%   table. Suppose you add an extra $10'$ to the chain. The chain is
+  %%   then pulled away uniformly, all around the table, as far as
+  %%   possible. How far is that?
+  %% \item Is the answer to the previous parts surprising? Explain why or
+  %%   why not.
+  %% \end{enumerate}
+  %% \begin{freeResponse}
+  %%   It is easiest to work with letters. If $R$ is the radius of the
+  %%   circle, then we have
+  %%   \begin{align*}
+  %%     2\pi (R + d) &= 2\pi R +10,\\
+  %%     2\pi R + 2\pi d &= 2\pi R + 10,\\
+  %%     2\pi d &= 10,\\
+  %%     d &= \frac{10}{2\pi}.
+  %%   \end{align*}
+  %% \end{freeResponse}
+
+ 
+Dr.\ Shapiro walks his dog Phido every day. Phido stays exactly one
+yard to Dr.\ Shapiro's right at all times.
+
+\begin{enumerate}
+\item Suppose Dr.\ Shapiro walks counterclockwise on a circular path
+  $100$ yards in diameter. How much farther does Phido walk than
+  Dr.\ Shapiro? 
+\item Suppose Dr.\ Shapiro walks counterclockwise on a square path
+  that is $100$ yards along a side.  How much farther does Phido walk than
+  Dr.\ Shapiro? 
+\item Suppose Dr.\ Shapiro walks counterclockwise on a regular
+  pentagonal path that is $100$ yards along a side.  How much farther does Phido walk than
+  Dr.\ Shapiro? 
+\end{enumerate}
+In each case, show all work, explain your reasoning, and I really
+encourage that you draw pictures to help.
+
+\end{question}
+
+\mynewpage
+
+
+\begin{question}
+  The inner lane of a running track around a football field is four
+  hundred meters in length.  Each lane after that is 1 yard farther
+  out.  If the finish lines are the same, how should the starting line
+  of each of the outer lanes be adjusted to make five lanes have equal
+  length? Show all work and explain your reasoning, and again, I
+  encourage you to draw pictures.
 \end{question}
 
 \end{document}
