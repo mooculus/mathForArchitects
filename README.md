@@ -26,7 +26,7 @@ request.
 
 ## License
 
-This textbook is released under the [License Name](link-to-license), allowing for free use, modification, and distribution.
+This textbook is released under the [CC-BY-NA-SA License](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en), allowing for free use, modification, and distribution.
 
 
 ## About Ximera
