@@ -1,6 +1,8 @@
 # Math for Architects
 
-Welcome to the Ximera Math for Architects repository! This repository contains the materials for an interactive and collaborative Math For Architects course using the Ximera platform.
+Welcome to the Ximera Math for Architects repository! This repository
+contains the materials for an interactive and collaborative Math For
+Architects course using the Ximera platform.
 
 
 ## Authors
@@ -31,7 +33,7 @@ This textbook is released under the [CC-BY-NA-SA License](https://creativecommon
 
 ## About Ximera
 
-[Ximera](https://ximera.osu.edu/) is an open-source platform for creating and publishing interactive online textbooks. It allows authors to build dynamic and engaging educational content with embedded exercises, quizzes, and interactive elements.
+[Ximera](https://github.com/XimeraProject) is an open-source platform for creating and publishing interactive online textbooks. It allows authors to build dynamic and engaging educational content with embedded exercises, quizzes, and interactive elements.
 
 
 
