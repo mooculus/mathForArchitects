@@ -11,20 +11,19 @@ This textbook was authored by Claire Merriman, Jenny Sheldon, and Bart
 Snapp, with contributions from others mentioned within the documents
 themselves.  Special thanks to Dan Shapiro who suggested that Snapp
 apply for a course enhancement grant, and for continued support
-througout the years.
+throughout the years.
 
 ## How to Use This Textbook
 
 To get started with the course, you can:
-1. **Clone or Fork the Repository:** Use Git to clone or fork this repository to your local machine.
-2. **Install Dependencies:** Follow the instructions in [INSTALL.md](link-to-installation-instructions) to set up any necessary dependencies.
-3. **Access the Textbook:** Open the `index.html` file in your web browser to start exploring the textbook.
+1. **Use the relased PDF** 
+2. **Clone or Fork the Repository:** Use Git to clone or fork this repository to your local machine.
 
 ## Contributing
 
 We welcome contributions to improve and expand this textbook. If you
-find errors or have suggestions, please open an issue or submit a pull
-request.
+find errors or have suggestions, please open an **issue** or submit a **pull
+request**.
 
 ## License
 
