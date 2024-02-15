@@ -1,0 +1,170 @@
+\documentclass[noauthor,nooutcomes,hints,handout,12pt]{ximera}
+
+
+%% Note,
+
+\input{../preamble.tex}
+
+\title{Fair division}
+\author{Bart Snapp}
+
+\begin{document}
+\begin{abstract}
+  We think about fair division and gerrymandering.
+\end{abstract}
+\maketitle
+
+\begin{listOutcomes}
+\item Describe what gerrymandering is.
+\item Understand what fair division is.
+\item Apply greedy methods that result in fair division.
+\item Understand what ``efficiency gap'' is in reference to
+  districting.
+\end{listOutcomes}
+
+
+
+
+
+\mynewpage
+
+
+
+
+
+
+\begin{question}
+ %% I'm old, and my dad, who is now deceased, grew up a long time ago. He
+ %% told me that when he was young, sharing a single bottle of
+ %% \textit{Coca-Cola} with his older brother was a \textbf{very special treat} (in
+ %% extreme contrast to today).
+
+ %% However, each brother wanted their own glass and there are no measuring
+ %% cups in the house and all cups are different sizes!
+
+ %% How can the brothers divide the \textit{Coca-Cola} fairly it so that
+ %% each brother is satisfied?  Note, neither brother can be trusted to
+  %% be fair!  Explain your reasoning.
+
+  Here is a moist, delicious, piece of cake:
+            
+\begin{verbatim}
+                                              ,:/+/-
+                        /M/              .,-=;//;-
+                   .:/= ;MH/,    ,=/+%$XH@MM#@:
+                  -$##@+$###@H@MMM#######H:.    -/H#
+             .,H@H@ X######@ -H#####@+-     -+H###@X
+              .,@##H;      +XM##M/,     =%@###@X;-
+            X%-  :M##########$.    .:%M###@%:
+            M##H,   +H@@@$/-.  ,;$M###@%,          -
+            M####M=,,---,.-%%H####M$:          ,+@##
+            @##################@/.         :%H##@$-
+            M###############H,         ;HM##M$=
+            #################.    .=$M##M$=
+            ################H..;XM##M$=          .:+
+            M###################@%=           =+@MH%
+            @################M/.          =+H#X%=
+            =+M##############M,       -/X#X+;.
+              .;XM##########H=    ,/X#H+:,
+                 .=+HM######M+/+HM@+=.
+                     ,:/%XM####H/.
+                          ,.:=-.                    
+\end{verbatim}
+
+Suppose you wish to split this cake with your friend \textit{Geometry
+  Giorgio.} However, you both want as much cake as possible. Also you
+do not trust each other to be fair. How do you agree to fairly split
+the cake?
+\end{question}
+
+
+\mynewpage
+
+
+\begin{question}
+Gerrymander the array below into $8$ districts ($6$ in each district)
+so that the \textbf{circles} win.
+\[
+\renewcommand{\arraystretch}{1}
+\setlength\tabcolsep{5mm}
+\huge
+\begin{array}{|c|c|c|c|c|c|}\hline
+\hspace{1em}\blacksquare \hspace*{1em} &\hspace{1em} \bigcirc\hspace*{1em} &\hspace{1em} \bigcirc\hspace*{1em} &\hspace{1em} \blacksquare\hspace*{1em} &\hspace{1em} \blacksquare \hspace*{1em} & \hspace*{1em}\bigcirc\hspace*{1em} \\\hline
+\bigcirc & \bigcirc & \blacksquare & \bigcirc & \blacksquare & \blacksquare \\\hline
+\bigcirc & \bigcirc & \bigcirc & \blacksquare & \bigcirc & \blacksquare \\\hline
+\bigcirc & \bigcirc & \blacksquare & \bigcirc & \bigcirc & \blacksquare \\\hline
+\blacksquare & \blacksquare & \bigcirc & \bigcirc & \bigcirc & \bigcirc \\\hline
+\bigcirc & \blacksquare & \blacksquare & \blacksquare & \blacksquare & \blacksquare \\\hline
+\blacksquare & \bigcirc & \blacksquare & \blacksquare & \bigcirc & \bigcirc \\\hline
+\blacksquare & \blacksquare & \blacksquare & \bigcirc & \blacksquare & \bigcirc \\\hline
+\end{array}
+\]
+Additionally, compute and interpret the \textbf{efficiency gap}. Show work and
+explain your reasoning.
+\end{question}
+
+\mynewpage
+
+
+\begin{question}
+  A recent paper, \link[\textit{A Partisan Solution to Partisan
+    Gerrymandering: The Define–Combine Procedure}, authors give a
+  method for districting based on fair division.]{https://www.cambridge.org/core/journals/political-analysis/article/partisan-solution-to-partisan-gerrymandering-the-definecombine-procedure/B0792DD0A49332944F2AF5FF6828E275} Here's the idea:
+ \begin{mdframed}[style=OutcomeStyle]
+    \begin{quote}
+      \textbf{To fairly district a total of $\boldsymbol N$ districts:}
+      \begin{itemize}
+      \item One party draws a map with $2N$ districts of equal population. 
+      \item The other party combines adjacent districts into $N$ districts of equal population. 
+      \end{itemize}
+    \end{quote}
+ \end{mdframed}
+ \begin{enumerate}
+ \item Gerrymander the array below into $16$ districts ($3$ in each district)
+   so that the \textbf{circles} win. 
+   \[
+   \renewcommand{\arraystretch}{1}
+   \setlength\tabcolsep{5mm}
+   \huge
+   \begin{array}{|c|c|c|c|c|c|}\hline
+     \hspace{1em}\blacksquare \hspace*{1em} &\hspace{1em} \bigcirc\hspace*{1em} &\hspace{1em} \bigcirc\hspace*{1em} &\hspace{1em} \blacksquare\hspace*{1em} &\hspace{1em} \blacksquare \hspace*{1em} & \hspace*{1em}\bigcirc\hspace*{1em} \\\hline
+     \bigcirc & \bigcirc & \blacksquare & \bigcirc & \blacksquare & \blacksquare \\\hline
+     \bigcirc & \bigcirc & \bigcirc & \blacksquare & \bigcirc & \blacksquare \\\hline
+     \bigcirc & \bigcirc & \blacksquare & \bigcirc & \bigcirc & \blacksquare \\\hline
+     \blacksquare & \blacksquare & \bigcirc & \bigcirc & \bigcirc & \bigcirc \\\hline
+     \bigcirc & \blacksquare & \blacksquare & \blacksquare & \blacksquare & \blacksquare \\\hline
+     \blacksquare & \bigcirc & \blacksquare & \blacksquare & \bigcirc & \bigcirc \\\hline
+     \blacksquare & \blacksquare & \blacksquare & \bigcirc & \blacksquare & \bigcirc \\\hline
+   \end{array}
+   \]
+   Additionally, compute and interpret the \textbf{efficiency gap}. Show work and
+   explain your reasoning.
+ \item Now combine adjacent districts, favoring \textbf{squares} as
+   much as possible.
+    \[
+   \renewcommand{\arraystretch}{1}
+   \setlength\tabcolsep{5mm}
+   \huge
+   \begin{array}{|c|c|c|c|c|c|}\hline
+     \hspace{1em}\blacksquare \hspace*{1em} &\hspace{1em} \bigcirc\hspace*{1em} &\hspace{1em} \bigcirc\hspace*{1em} &\hspace{1em} \blacksquare\hspace*{1em} &\hspace{1em} \blacksquare \hspace*{1em} & \hspace*{1em}\bigcirc\hspace*{1em} \\\hline
+     \bigcirc & \bigcirc & \blacksquare & \bigcirc & \blacksquare & \blacksquare \\\hline
+     \bigcirc & \bigcirc & \bigcirc & \blacksquare & \bigcirc & \blacksquare \\\hline
+     \bigcirc & \bigcirc & \blacksquare & \bigcirc & \bigcirc & \blacksquare \\\hline
+     \blacksquare & \blacksquare & \bigcirc & \bigcirc & \bigcirc & \bigcirc \\\hline
+     \bigcirc & \blacksquare & \blacksquare & \blacksquare & \blacksquare & \blacksquare \\\hline
+     \blacksquare & \bigcirc & \blacksquare & \blacksquare & \bigcirc & \bigcirc \\\hline
+     \blacksquare & \blacksquare & \blacksquare & \bigcirc & \blacksquare & \bigcirc \\\hline
+   \end{array}
+   \]
+   At this point you should have $8$ districts ($6$
+   in each district). Additionally, compute and interpret the
+   \textbf{efficiency gap}. Show work and explain your reasoning.
+ \item Discuss the effectiveness of this so-called \textit{Partisan
+   Solution to Partisan Gerrymandering.}
+ \end{enumerate}
+ \end{question}
+
+
+
+
+\end{document}
