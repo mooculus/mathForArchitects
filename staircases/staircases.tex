@@ -11,10 +11,10 @@
 \end{abstract}
 \maketitle
 
-\begin{listOutcomes}
+\begin{listOutcomes}  
 \item{Understand the geometric issues with designing a staircase.}
-\item{Interpret solutions for the geometric issues of designing a staircase.}
-\item{Reason through how to solve the geometric issues of designing a staircase.}
+\item{Organize and accommodate data.}
+\item{Interpret numerical data concerning the geometric issues of designing a staircase.}
 \item{Critique and dismantle reasonable hypotheses in regard to geometry and arithmetic.}
 \item{Recognize the limits of simple scaling.}
 \end{listOutcomes}
@@ -54,14 +54,14 @@ an allowed variance for these dimensions).
 \end{itemize}
 
 So suppose you want a \mooculus~Prefab staircase in a space that is
-$15$ feet wide and you need to connect to a floor $10$ feet above the
+$w=15$ feet wide and you need to connect to a floor $h=10$ feet above the
 ground. In this case you must have \emph{at least}
 \[
-\frac{10}{\left(31/48\right)} \ \text{stairs}
+\frac{h}{\left(31/48\right)}=\frac{10}{\left(31/48\right)} \ \text{stairs}
 \]
 and can have \emph{at most}
 \[
-\frac{15}{\left(5/6\right)} \ \text{stairs}.
+\frac{w}{\left(5/6\right)}=\frac{15}{\left(5/6\right)} \ \text{stairs}.
 \]
 
 
@@ -72,11 +72,11 @@ Of course, you must have a \emph{whole} number of stairs. We have two special fu
 \end{description}
 So we see
 \[
-\text{min number of stairs} = \left\lceil \frac{10}{\left(31/48\right)} \right\rceil
+\text{min number of stairs} = \left\lceil \frac{h}{\left(31/48\right)} \right\rceil = \left\lceil \frac{10}{\left(31/48\right)} \right\rceil
 \]
 and
 \[
-\text{max number of stairs} = \left\lfloor \frac{15}{\left(5/6\right)} \right\rfloor.
+\text{max number of stairs} =  \left\lfloor \frac{w}{\left(5/6\right)} \right\rfloor=\left\lfloor \frac{15}{\left(5/6\right)} \right\rfloor.
 \]
 
 
@@ -85,9 +85,12 @@ and
 
 \begin{question}
   Find all valid \mooculus~prefab staircases that will fit in a total
-  width of $15$ feet and total height of $10$ feet. In each case, give
-  the \textbf{number of stairs}, the \textbf{tread width}, and the
-  \textbf{riser height}.
+  width of $15$ feet and total height of $10$ feet.
+
+  \textbf{List all valid staircases in a table}, where the first
+  column is the \textbf{number of stairs}, the second column is the
+  \textbf{tread width}, the third column is the \textbf{riser height},
+  the fourth is the $\boldsymbol{(\textbf{number of stairs}) \cdot (\textbf{tread width})}$, and the final column is $\boldsymbol{(\textbf{number of stairs}) \cdot (\textbf{riser height})}$.
 
   \begin{freeResponse}
   When $w=15$ and $h=10$:
@@ -110,15 +113,13 @@ and
   find \textbf{all} valid \mooculus~prefab staircases that will fit in
   a total width of $20$ feet and total height of $13$ feet.
 
-  \textbf{List all valid staircases in a table}, including the
-  \textbf{number of stairs}, the \textbf{riser height}, and the
-  \textbf{tread width}. In each case, you must ensure that:
-  \begin{align*}
-    (\text{number of stairs}) \cdot (\text{tread width}) &= (\text{total width})\\
-    (\text{number of stairs}) \cdot (\text{riser height}) &= (\text{total height})
-  \end{align*}
-  Finally, \textbf{choose the most optimal one,
- according to Blondel's formula.}
+  \textbf{List all valid staircases in a table}, where the first
+  column is the \textbf{number of stairs}, the second column is the
+  \textbf{tread width}, the third column is the \textbf{riser height},
+  the fourth is the $\boldsymbol{(\textbf{number of stairs}) \cdot (\textbf{tread width})}$, and the final column is $\boldsymbol{(\textbf{number of stairs}) \cdot (\textbf{riser height})}$.
+
+ Finally, \textbf{choose the most optimal one, according to Blondel's
+   formula.}
 
   \begin{freeResponse}
     From the calculator, I see we can make four different staircases:
