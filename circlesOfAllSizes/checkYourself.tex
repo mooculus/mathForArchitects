@@ -11,19 +11,6 @@
 
 
 
-
-%% \begin{exercise} %false
-%%  True or False: There exists a 2D-shape with perimeter $7$ square units
-%%  and area $4$ square units.
-%% \end{exercise}
-
-%% \begin{exercise} %True
-%%   True or False: There exists a 2D-shape with perimeter $12$ square units
-%%   and area $10$ square units.
-%% \end{exercise}
-
-    
-
    
 
 \begin{exercise}
@@ -44,13 +31,58 @@
 
 
 
+
+
 \begin{exercise}
-Imagine a string, pulled tight around a circle of some radius. Suppose
-you add an extra $10''$ to the string. The string is then pulled away
-from the circle uniformly, all around the circle, as far as
-possible. How far is that?
+  Suppose Dr.\ Shapiro walks Phio counterclockwise along the star-path
+  below, where each ``leg'' of the star is $100$ yards.  Phido stays
+  exactly one yard to Dr.\ Shapiro's right at all times.
+  \begin{center}
+      \begin{tikzpicture}
+        \foreach \i in {1,...,7}
+                 {
+                   \draw ({2*sin(\i *360/7)},{2*cos(\i * 360/7)}) -- ({2*sin((\i+3)*360/(7))},{2*cos((\i+3)*360/(7))});
+                   %\node (1) at ({1.3*sin(\i *360/7)},{1.3*cos(\i *360/7)}) {$\beta$};
+                 }
+                 
+      \end{tikzpicture}
+  \end{center}
+  How much farther does Phido walk than
+  Dr.\ Shapiro? 
 \end{exercise}
 
 
-\answerlistbox{False}{True}{$360$}{$50$}{$\frac{10}{2\pi}$}
+\begin{exercise}
+  Suppose Dr.\ Shapiro walks Phio counterclockwise along the star-path
+  below, where each ``leg'' of the star is $100$ yards.  Phido stays
+  exactly one yard to Dr.\ Shapiro's right at all times.
+  \begin{center}
+    \begin{tikzpicture}
+      \foreach \i in {1,...,7}
+               {
+                 \draw ({2*sin(\i *360/7)},{2*cos(\i * 360/7)}) -- ({2*sin((\i+2)*360/(7))},{2*cos((\i+2)*360/(7))});
+                 %\node (1) at ({1.7*sin(\i *360/7)},{1.7*cos(\i *360/7)}) {$\gamma$};
+               }
+            
+    \end{tikzpicture}
+  \end{center}
+  How much farther does Phido walk than
+  Dr.\ Shapiro? 
+\end{exercise}
+
+
+
+\begin{exercise}
+Imagine a string, pulled tight around the planet Earth. Suppose you
+add an extra $10''$ to the string. The string is then pulled away from
+the Earth uniformly, all around the globe, as far as possible. How far
+is that?
+\end{exercise}
+
+
+
+
+
+
+\answerlistbox{$360$}{$50$}{$6\pi$ yards}{$4\pi$ yards}{$\frac{10}{2\pi}$ inches}
 \end{document}
