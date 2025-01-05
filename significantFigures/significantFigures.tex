@@ -1,12 +1,11 @@
 \documentclass[handout,noauthor,nooutcomes,hints,12pt]{ximera}
 \input{../preamble.tex}
-\title{Getting started}
-\author{Claire Merriman and Bart Snapp}
+\title{Significant digits}
+\author{Bart Snapp}
 
 \begin{document}
 \begin{abstract}
-  We make estimates of numbers of objects in every-day settings and we
-  observe the effects of scaling when we change objects.
+We will not delude ourselves with a false sense of precision. 
 \end{abstract}
 \maketitle
 
@@ -16,69 +15,77 @@
 %% \end{listObjectives}
 
 \begin{listOutcomes}
-  \item{Edit/create PDFs to create completed journal entries.}
-  \item{Hand-in journal entries online.}
-  \item{Work in nonstandard units.}
-  \item{Estimate areas and volumes in nonstandard units.}
-  \item{Critique and dismantle reasonable hypotheses in regard to geometry and
-              arithmetic.}
+  \item Identify the number of significant digits in an expression.
+  \item Apply the rules of significant digits in addition, subtraction.
+  \item Apply the rules of significant digits in multiplication, and division.
+  \item{Reflect on past work.}
 \end{listOutcomes}
 
+\begin{description}
+  \item[Rules for determining the number of significant digits]\hfil
+\begin{itemize}
+    \item All nonzero digits are significant.
+    \item Zeros between nonzero digits are significant.
+    \item Leading zeros are not significant.
+    \item Trailing zeros are significant only if there is a decimal point.
+\end{itemize}
+    \item[Addition and Subtraction]\hfil
+    \begin{itemize}
+      \item The sum or difference should have the same number of decimal places as the measurement with the fewest decimal places.
+    \end{itemize}
+    \item[Multiplication and Division]\hfil
+    \begin{itemize}
+      \item The product or quotient should have the same number of significant digits as the measurement with the fewest significant digits.
+    \end{itemize}
+\end{description}
 \mynewpage
 
 \begin{question}
-  Here's a scale picture of a large \textit{Happy Fun Ball}:
-  \begin{center}
-    \begin{tikzpicture}
-      % Define the radius of the circle (half of the diameter)
-      \def\ballradius{4.7cm} % 
-
-      % Draw the circle
-      \draw[ultra thick] (0, 0) circle (\ballradius);
-
-      % You can add additional elements or labels here if needed
-    \end{tikzpicture}
-  \end{center}
-  Look around the room you are in. How many large \textit{Happy Fun Balls}
-  would it take to:
-  \begin{enumerate}
-    \item Line one edge of the room?
-    \item Cover the floor?
-    \item Fill the room?
-  \end{enumerate}
-  In each case, EXPLAIN what you are doing and how you arrive at your conclusion.
-\end{question}
-\mynewpage
-
-\begin{question}
-  Small \textit{Happy Fun Balls} have a about one-third the diameter of a large
-  \textit{Happy Fun Ball}. How many small \textit{Happy Fun Balls} would it take
-  to:
-  \begin{enumerate}
-    \item Line one edge of the room?
-    \item Cover the floor?
-    \item Fill the room?
-  \end{enumerate}
-  In each case,  EXPLAIN what you are doing and how you arrive at your
-  conclusion.
-\end{question}
-\mynewpage
-
-\begin{question}
-  Your friend and fellow student \textit{Geometry Giorgio} suggests
-  that we think in the following way:
-  \begin{quote}
-    Since a large \textit{Happy Fun Ball} has about three times the
-    diameter of a small \textit{Happy Fun Ball,} the answers for Problem
-    $2$ above should all be about three times the answers from Problem
-    $1$.
-  \end{quote}
+  Let's see if you understand the rules above. Go to:
 \begin{center}
-  \bf Is \textit{Geometry Giorgio} correct?
+  \url{https://chemquiz.net/sig/}
 \end{center}
-Check your answers from Problems 1 and 2 and use them to either \textbf{validate or invalidate}
-\textit{Geometry Giorgio}'s claim. Explain what you do and explain to us how your computations helps you determine if 
-\textit{Geometry Giorgio} is in fact correct or not.
+and quiz yourself!
+\begin{itemize}
+  \item Select 5 problems.
+  \item Select all types of questions: Counting sig figs in numbers, Rounding numbers by sig figs, Multiplication \& division problems with sig figs, Addition \& subtraction problems with sig figs.
+  \item Select decimal (regular) notation
+  \item Choose your thousands separator.
+  \item No units. 
+  \item Fill-in-the-blank
+  \item Start!
+\end{itemize}
+Take the quiz until you achieve a perfect score. 
+
+\textbf{BELOW, DESCRIBE A PROBLEM YOU MISSED OR THOUGHT WAS TRICKY.} 
+\end{question}
+\mynewpage
+
+\begin{question}
+Demonstrate skill here by answering the following questions respecting significant digits. \textbf{In each case, explain your reasoning.}
+\begin{enumerate}
+  \item Compute: $32.8000 \cdot 7200$
+  \vfill
+
+  \item How many significant digits are in $191.000$?
+
+  \vfill 
+  \item Round  $3363750$ to $4$ significant digits.
+  \vfill
+
+  \item Compute:  $5290 - 0.3100$
+  \vfill
+  \item Compute: $87 900 000 + 10 000$
+\vfill
+\end{enumerate}
+
+
+\end{question}
+\mynewpage
+
+\begin{question}
+Let's reflect on the activity we did the previous class day. Express your answers from Problems 1 and 2 from that activity 
+respecting significant digits. Explain your reasoning. 
 \end{question}
 
 \end{document}
