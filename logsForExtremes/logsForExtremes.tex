@@ -1,0 +1,183 @@
+\documentclass[noauthor,nooutcomes,handout,hints,12pt]{ximera}
+
+\input{../preamble.tex} % <- Adjust this to your local setup if needed.
+
+\author{Bart Snapp}
+\title{Logs for extremes}
+
+\begin{document}
+\begin{abstract}
+    We use logarithms to compare and visualize quantities that range
+    across many orders of magnitude.
+\end{abstract}
+\maketitle
+
+\begin{listOutcomes}
+    \item Recall the definition of the logarithm.
+    \item Explore how log scales can help us compare vastly different numbers.
+    \item Practice plotting data that spans orders of magnitude.
+\end{listOutcomes}
+
+\begin{definition}
+    We define the \textbf{logarithm} as
+    \[
+        \log_b(a) = x
+        \quad\Leftrightarrow\quad
+        b^x = a.
+    \]
+\end{definition}
+
+In everyday life (and in architecture, science, and economics!), we
+often run into situations where numbers differ by factors of millions,
+billions, or more. A \textbf{logarithmic} scale helps us see, plot,
+and compare these extremes more easily.
+
+\mynewpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% QUESTION 1: SIZE OF THE KNOWN UNIVERSE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}
+    The edge of the \emph{observable} universe is around $47$ billion
+    light-years from Earth, which is an unfathomably large distance. However,
+    if we use what is called a \textbf{log-scale} on the vertical axis, meaning
+    we take some log (in this case $\log_{463}$) of the vertical values, we can
+    easily visualize the data, behold:
+    \begin{center}
+        \begin{tikzpicture}[x=1.5cm,y=1cm]
+            % A simple blank axis for the students to label
+            \draw[thin,->] (-.5,0)--(10.5,0);
+            \draw[thin,->] (0,-.5)--(0,10.5);
+            % Example tick marks (unlabeled, for students to fill in)
+            \foreach \y in {1,...,10}{
+            \draw (0,\y) -- ++(0.2,0);
+            \node at (-.4,\y) {$463^{\y}$};
+            }
+
+            \node[anchor=west] at (1,.2) {{\scriptsize Height of a human}};
+            \draw[fill=black] (1,.1) circle (.05);
+
+            \node[anchor=west] at (2,.95) {{\scriptsize Height of Eiffel Tower}};
+            \draw[fill=black] (2,.95) circle (.05);
+
+            \node[anchor=west] at (3,1.5) {{\scriptsize Height of Mount Everest}};
+            \draw[fill=black] (3,1.5) circle (.05);
+
+            \node[anchor=west] at (4,2.1) {{\scriptsize Distance to the International Space Station}};
+            \draw[fill=black] (4,2.1) circle (.05);
+            
+
+            \node[anchor=west] at (5,3.2) {{\scriptsize Distance to the Moon}};
+            \draw[fill=black] (5,3.2) circle (.05);
+
+            \node[anchor=west] at (6,4.2) {{\scriptsize Distance to the Sun}};
+            \draw[fill=black] (6,4.2) circle (.05);
+
+            \node[anchor=east] at (7,5.2) {{\scriptsize Distance to the edge of the solar system}};
+            \draw[fill=black] (7,5.2) circle (.05);
+
+            \node[anchor=east] at (8,7.8) {{\scriptsize Distance to the edge of the Milky Way}};
+            \draw[fill=black] (8,7.8) circle (.05);
+
+            \node[anchor=east] at (9,8.4) {{\scriptsize Distance to the Andromeda galaxy}};
+            \draw[fill=black] (9,8.4) circle (.05);
+
+            \node[anchor=east] at (10,10){{\scriptsize Distance to the edge of the universe}};
+            \draw[fill=black] (10,10) circle (.05);
+        \end{tikzpicture}
+    \end{center}
+    \begin{enumerate}
+        \item Starting with the same first tick-mark, how tall would this plot be if we used a linear scale instead of a log scale? Explain your reasoning.
+        \item Starting with the same first tick-mark, how tall would this plot be if we used a $\log_2$ scale? Explain your reasoning.
+    \end{enumerate}
+\end{question}
+
+\mynewpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% QUESTION 2: RICHTER SCALE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}
+    \textbf{Richter Scale for Earthquakes READING?}
+
+    Earthquake magnitudes are often reported using the (common) logarithm
+    base \(10\). For instance, a magnitude \(M\) earthquake satisfies
+    \[
+        M = \log_{10}\!\Bigl(\tfrac{A}{A_0}\Bigr),
+    \]
+    where \(A\) is the measured seismic wave amplitude and \(A_0\) is a
+    standard reference amplitude.
+
+    \begin{enumerate}
+        \item Suppose an earthquake measures \(M=7\). By what factor is its
+              seismic wave amplitude \(A\) bigger than the reference amplitude
+              \(A_0\)?
+
+        \item If another earthquake measures \(M=8\), how many times larger is
+              \emph{its} amplitude compared to the \(M=7\) quake?
+
+        \item Use the axes below to illustrate how quickly earthquake
+              amplitudes grow as \(M\) increases. Label some hypothetical
+              magnitudes (like 2, 5, 7, 9) along the axis.
+
+    \end{enumerate}
+
+    \begin{center}
+        \begin{tikzpicture}[x=1cm,y=1cm,scale=0.8]
+            % A simple blank axis for the students to label
+            \draw[thick,->] (0,0)--(10,0);
+            \foreach \x in {0,...,10}
+            \draw (\x,0) -- ++(0,0.2);
+
+            \node at (5,-1) {\small (Your Richter-scale labels here)};
+        \end{tikzpicture}
+    \end{center}
+\end{question}
+
+\mynewpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% QUESTION 3: WEALTH DISTRIBUTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}
+    \textbf{Wealth Distribution: Comparing Everyday Net Worth to Extreme
+        Fortunes}
+
+    According to data compiled at
+    \[
+        \texttt{http://www.righto.com/2024/10/wealth-distribution-in-united-states.html},
+    \]
+    net worth in the United States varies widely, from a median of
+    roughly \(\$100{,}000\) to the \(\$200\) billion range for some of the
+    richest individuals (e.g., Elon Musk).
+
+    \begin{enumerate}
+        \item On a single \textbf{logarithmic scale}, plot typical net worth
+              amounts such as:
+              \[
+                  \$1{,}000,\quad \$100{,}000,\quad \$1{,}000{,}000,\quad
+                  \$1{,}000{,}000{,}000,\quad
+                  \$200{,}000{,}000{,}000.
+              \]
+              Use the blank axis below and add your own labels or ticks as
+              needed.
+
+        \item Briefly discuss why it might be more intuitive to use a log scale
+              than a linear scale when comparing a typical family’s net worth
+              to
+              that of someone with \(\$200\) billion.
+    \end{enumerate}
+
+    \begin{center}
+        \begin{tikzpicture}[x=1cm,y=1cm,scale=0.8]
+            % A simple blank axis for the students to label
+            \draw[thick,->] (0,0)--(10,0);
+            \foreach \x in {0,...,10}
+            \draw (\x,0) -- ++(0,0.2);
+
+            \node at (5,-1) {\small (Place your net-worth labels here)};
+        \end{tikzpicture}
+    \end{center}
+\end{question}
+
+\end{document}
