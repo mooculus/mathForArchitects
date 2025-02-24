@@ -14,8 +14,9 @@
 
 \begin{listOutcomes}
     \item Recall the definition of the logarithm.
+    \item Read and interpret log scales.
     \item Explore how log scales can help us compare vastly different numbers.
-    \item Practice plotting data that spans orders of magnitude.
+    \item Plot data on a log-scale.
 \end{listOutcomes}
 
 \begin{definition}
@@ -35,7 +36,36 @@ and compare these extremes more easily.
 \mynewpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% QUESTION 1: SIZE OF THE KNOWN UNIVERSE
+% QUESTION 1: SHOW RICHTER SCALE, ASK ABOUT BASE, AND CONNECTION TO EXPONENTIAL GROWTH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}
+The Richter scale is a logarithmic scale used to measure the
+intensity of earthquakes.
+\begin{center}%%% https://civil-engg-world.blogspot.com/2009/03/magnitude-of-earthquake.html
+    \begin{tabular}{|c|c|c|}\hline
+        \textbf{Magnitude} & \textbf{TNT Energy} & \textbf{Example}                   \\\hline
+        1                  & 6 ounces            & Small blast at a construction site \\\hline
+        2                  & 13 pounds           & Small explosion                    \\\hline
+        3                  & 397 pounds          & Military bomb                      \\\hline
+        4                  & 6 tons              & 2001 El Salvador earthquake        \\\hline
+        5                  & 199 tons            & 2011 Lorca earthquake              \\\hline
+        6                  & 6270 tons           & 2022 Afghanistan earthquake        \\\hline
+        7                  & 199000 tons         & 2010 Haiti earthquake              \\\hline
+        8                  & 6270000 tons        & 2008 Sichuan earthquake            \\\hline
+        9                  & 199999000 tons      & 2004 Indian Ocean earthquake and
+        tsunami                                                                       \\\hline
+    \end{tabular}
+\end{center}
+\begin{enumerate}
+    \item What is the base of the logarithm in the Richter scale?
+    \item How does the Richter scale relate to the concept of exponential
+          growth?
+\end{enumerate}
+\end{question}
+
+\mynewpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% QUESTION 2: INTERPRETING LOG SCALES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{question}
     The edge of the \emph{observable} universe is around $47$ billion
@@ -50,22 +80,25 @@ and compare these extremes more easily.
             \draw[thin,->] (0,-.5)--(0,10.5);
             % Example tick marks (unlabeled, for students to fill in)
             \foreach \y in {1,...,10}{
-            \draw (0,\y) -- ++(0.2,0);
-            \node at (-.4,\y) {$463^{\y}$};
-            }
+                    \draw (0,\y) -- ++(0.2,0);
+                    %\node at (-1.5,\y) {$\log_{463}\left(463^{\y}\right)=\y$};
+                    \node[anchor=east] at (-.1,\y) {$\y$};
+                }
 
             \node[anchor=west] at (1,.2) {{\scriptsize Height of a human}};
             \draw[fill=black] (1,.1) circle (.05);
 
-            \node[anchor=west] at (2,.95) {{\scriptsize Height of Eiffel Tower}};
+            \node[anchor=west] at (2,.95) {{\scriptsize Height of Eiffel
+                        Tower}};
             \draw[fill=black] (2,.95) circle (.05);
 
-            \node[anchor=west] at (3,1.5) {{\scriptsize Height of Mount Everest}};
+            \node[anchor=west] at (3,1.5) {{\scriptsize Height of Mount
+                        Everest}};
             \draw[fill=black] (3,1.5) circle (.05);
 
-            \node[anchor=west] at (4,2.1) {{\scriptsize Distance to the International Space Station}};
+            \node[anchor=west] at (4,2.1) {{\scriptsize Distance to the
+                        International Space Station}};
             \draw[fill=black] (4,2.1) circle (.05);
-            
 
             \node[anchor=west] at (5,3.2) {{\scriptsize Distance to the Moon}};
             \draw[fill=black] (5,3.2) circle (.05);
@@ -73,29 +106,79 @@ and compare these extremes more easily.
             \node[anchor=west] at (6,4.2) {{\scriptsize Distance to the Sun}};
             \draw[fill=black] (6,4.2) circle (.05);
 
-            \node[anchor=east] at (7,5.2) {{\scriptsize Distance to the edge of the solar system}};
+            \node[anchor=east] at (7,5.2) {{\scriptsize Distance to the edge of
+                        the solar system}};
             \draw[fill=black] (7,5.2) circle (.05);
 
-            \node[anchor=east] at (8,7.8) {{\scriptsize Distance to the edge of the Milky Way}};
+            \node[anchor=east] at (8,7.8) {{\scriptsize Distance to the edge of
+                        the Milky Way}};
             \draw[fill=black] (8,7.8) circle (.05);
 
-            \node[anchor=east] at (9,8.4) {{\scriptsize Distance to the Andromeda galaxy}};
+            \node[anchor=east] at (9,8.4) {{\scriptsize Distance to the
+                        Andromeda galaxy}};
             \draw[fill=black] (9,8.4) circle (.05);
 
-            \node[anchor=east] at (10,10){{\scriptsize Distance to the edge of the universe}};
+            \node[anchor=east] at (10,10){{\scriptsize Distance to the edge of
+                        the universe}};
             \draw[fill=black] (10,10) circle (.05);
         \end{tikzpicture}
     \end{center}
     \begin{enumerate}
-        \item Starting with the same first tick-mark, how tall would this plot be if we used a linear scale instead of a log scale? Explain your reasoning.
-        \item Starting with the same first tick-mark, how tall would this plot be if we used a $\log_2$ scale? Explain your reasoning.
+        \item Starting with the same first tick-mark, how tall would this plot
+              be if we used a linear-scale instead of a log scale? Explain your reasoning.
+        \item Starting with the same first tick-mark, how tall would this plot
+              be if we used a $\log_2$-scale? Explain your reasoning.
     \end{enumerate}
 \end{question}
 
 \mynewpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% QUESTION 2: RICHTER SCALE
+% QUESTION 3: WEALTH DISTRIBUTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{question}
+    \textbf{Wealth Distribution: Comparing Everyday Net Worth to Extreme
+        Fortunes}
+
+    According to data compiled at
+    \begin{center}
+        \texttt{http://www.righto.com/2024/10/wealth-distribution-in-united-states.html},
+    \end{center}
+    net worth in the United States varies widely, from a median of
+    roughly \(\$100{,}000\) to the \(\$200\) billion range for some of the
+    richest individuals (e.g., Elon Musk).
+
+    \begin{enumerate}
+        \item On a single \textbf{logarithmic-scale}, plot typical net worth
+              amounts such as:
+              \[
+                  \$1{,}000,\quad \$100{,}000,\quad \$1{,}000{,}000,\quad
+                  \$1{,}000{,}000{,}000,\quad
+                  \$200{,}000{,}000{,}000.
+              \]
+              Use the blank axis below and add your own labels or ticks as
+              needed.
+
+        \item Briefly discuss why it might be more intuitive to use a log scale
+              than a linear scale when comparing a typical family's net worth
+              to
+              that of someone with \(\$200\) billion.
+    \end{enumerate}
+
+    \begin{center}
+        \begin{tikzpicture}[x=1cm,y=1cm,scale=0.8]
+            % A simple blank axis for the students to label
+            \draw[thick,->] (0,0)--(10,0);
+            \foreach \x in {0,...,10}
+            \draw (\x,0) -- ++(0,0.2);
+
+            \node at (5,-1) {\small (Place your net-worth labels here)};
+        \end{tikzpicture}
+    \end{center}
+\end{question}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% QUESTION 3: DISCOVER THE RICHTER SCALE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{question}
     \textbf{Richter Scale for Earthquakes READING?}
@@ -116,7 +199,7 @@ and compare these extremes more easily.
         \item If another earthquake measures \(M=8\), how many times larger is
               \emph{its} amplitude compared to the \(M=7\) quake?
 
-        \item Use the axes below to illustrate how quickly earthquake
+        \item Draw an axis below to illustrate how quickly earthquake
               amplitudes grow as \(M\) increases. Label some hypothetical
               magnitudes (like 2, 5, 7, 9) along the axis.
 
@@ -135,49 +218,5 @@ and compare these extremes more easily.
 \end{question}
 
 \mynewpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% QUESTION 3: WEALTH DISTRIBUTION
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{question}
-    \textbf{Wealth Distribution: Comparing Everyday Net Worth to Extreme
-        Fortunes}
-
-    According to data compiled at
-    \[
-        \texttt{http://www.righto.com/2024/10/wealth-distribution-in-united-states.html},
-    \]
-    net worth in the United States varies widely, from a median of
-    roughly \(\$100{,}000\) to the \(\$200\) billion range for some of the
-    richest individuals (e.g., Elon Musk).
-
-    \begin{enumerate}
-        \item On a single \textbf{logarithmic scale}, plot typical net worth
-              amounts such as:
-              \[
-                  \$1{,}000,\quad \$100{,}000,\quad \$1{,}000{,}000,\quad
-                  \$1{,}000{,}000{,}000,\quad
-                  \$200{,}000{,}000{,}000.
-              \]
-              Use the blank axis below and add your own labels or ticks as
-              needed.
-
-        \item Briefly discuss why it might be more intuitive to use a log scale
-              than a linear scale when comparing a typical family’s net worth
-              to
-              that of someone with \(\$200\) billion.
-    \end{enumerate}
-
-    \begin{center}
-        \begin{tikzpicture}[x=1cm,y=1cm,scale=0.8]
-            % A simple blank axis for the students to label
-            \draw[thick,->] (0,0)--(10,0);
-            \foreach \x in {0,...,10}
-            \draw (\x,0) -- ++(0,0.2);
-
-            \node at (5,-1) {\small (Place your net-worth labels here)};
-        \end{tikzpicture}
-    \end{center}
-\end{question}
 
 \end{document}
