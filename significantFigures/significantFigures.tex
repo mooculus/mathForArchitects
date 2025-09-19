@@ -3,6 +3,21 @@
 \title{Significant digits}
 \author{Bart Snapp}
 
+
+\newcommand{\stackedcircles}[3][0pt]{%
+  % #1: gap (optional), #2: count, #3: diameter
+  \pgfmathtruncatemacro{\N}{#2-1}
+  \pgfmathsetlengthmacro{\D}{#3}
+  \pgfmathsetlengthmacro{\R}{0.5*\D}
+  \pgfmathsetlengthmacro{\STEP}{\D + (#1)}
+  \begin{tikzpicture}[line cap=round]
+    \foreach \k in {0,...,\N} {
+      \draw (0,\k*\STEP) circle (\R);
+    }
+  \end{tikzpicture}%
+}
+
+
 \begin{document}
 \begin{abstract}
 We will not delude ourselves with a false sense of precision. 
@@ -15,40 +30,122 @@ We will not delude ourselves with a false sense of precision.
 %% \end{listObjectives}
 
 \begin{listOutcomes}
+  \item Use significant digits to express measurements.
   \item Identify the number of significant digits in an expression.
   \item Apply the rules of significant digits in addition, subtraction.
   \item Apply the rules of significant digits in multiplication, and division.
   \item{Reflect on past work.}
 \end{listOutcomes}
 
-\begin{description}
-  \item[Rules for determining the number of significant digits]\hfil
-\begin{itemize}
-    \item All nonzero digits are significant.
-    \item Zeros between nonzero digits are significant.
-    \item Leading zeros are not significant.
-    \item Trailing zeros are significant only if there is a decimal point.
-\end{itemize}
-    \item[Addition and Subtraction]\hfil
-    \begin{itemize}
-      \item The sum or difference should have the same number of decimal places as the measurement with the fewest decimal places.
-    \end{itemize}
-    \item[Multiplication and Division]\hfil
-    \begin{itemize}
-      \item The product or quotient should have the same number of significant digits as the measurement with the fewest significant digits.
-    \end{itemize}
-\end{description}
+% \begin{description}
+%   \item[Rules for determining the number of significant digits]\hfil
+% \begin{itemize}
+%     \item All nonzero digits are significant.
+%     \item Zeros between nonzero digits are significant.
+%     \item Leading zeros are not significant.
+%     \item Trailing zeros are significant only if there is a decimal point.
+% \end{itemize}
+%     \item[Addition and Subtraction]\hfil
+%     \begin{itemize}
+%       \item The sum or difference should have the same number of decimal places as the measurement with the fewest decimal places.
+%     \end{itemize}
+%     \item[Multiplication and Division]\hfil
+%     \begin{itemize}
+%       \item The product or quotient should have the same number of significant digits as the measurement with the fewest significant digits.
+%     \end{itemize}
+% \end{description}
+\mynewpage
+
+
+\begin{question}
+  We obtain significant digits by acknowledging our imprecision in  measurement. 
+  \begin{enumerate}
+    \item Look up measurement rules for significant digits 
+  online and \textbf{describe them here in your own words}.
+   \item Use the rules of significant digits to measure this LEGO minifigure with each ruler below. Explain in words what you do as you solve the problem.
+  \end{enumerate}
+\begin{center}
+  \begin{tikzpicture}[x=1.6cm,y=1.6cm,line cap=round]
+    \def\RulerH{4}        % height in "units"
+    \def\minor{0.15}       % minor tick length (cm)
+    \def\major{0.35}       % major tick length (cm)
+  
+    % spine
+    \draw[line width=0.6pt] (0,0) -- (0,\RulerH);
+  
+    % minor ticks every 0.1
+    \foreach \y in {0,0.1,...,4} {
+      \draw (0,\y) -- (\minor,\y);
+    }
+  
+    % major ticks every 1.0
+    \foreach \y in {0,1,...,4} {
+      \draw[line width=0.8pt] (0,\y) -- (\major,\y);
+    }
+  
+    % labels 1.0 .. 10.0
+    \foreach \y in {1,...,4} {
+      \node[anchor=west,scale=0.9] at (\major+0.08,\y)
+        {\pgfmathprintnumber[fixed,precision=1]{\y}};
+    }
+    \node[opacity=.4,anchor=south] at (0,-.11) {\includegraphics[height=2in]{lego-minifigure.png}};
+  \end{tikzpicture}
+  \qquad\qquad
+  \begin{tikzpicture}[x=2cm,y=3cm,line cap=round]
+    \def\RulerH{3}        % height in "units"
+    \def\minor{0.15}       % minor tick length (cm)
+    \def\major{0.35}       % major tick length (cm)
+  
+    % spine
+    \draw[line width=0.6pt] (0,-1) -- (0,\RulerH-1);
+  
+    % minor ticks every 0.1
+    \foreach \y in {0,0.1,...,3} {
+      \draw (0,\y-1) -- (\minor,\y-1);
+    }
+  
+    % major ticks every 1.0
+    \foreach \y in {0,1,...,3} {
+      \draw[line width=0.8pt] (0,\y-1) -- (\major,\y-1);
+    }
+  
+    % labels 1.0 .. 10.0
+    \foreach \y in {1,...,3} {
+      \node[anchor=west,scale=0.9] at (\major+0.08,\y-1)
+        {\pgfmathprintnumber[fixed,precision=1]{\y}};
+    }
+    \node[opacity=.4,anchor=south] at (0,-.11) {\includegraphics[height=2in]{lego-minifigure.png}};
+  \end{tikzpicture} 
+\end{center}
+
+
+\end{question}
+
+\mynewpage
+
+
+\begin{question}
+Now, let's use even more nonstandard units. In particular, measure the LEGO minifigure using units of the ``diameter of the circles below.'' Use significant digits to express your answer.
+Explain in words what you do as you solve the problem.
+\begin{center}
+\includegraphics[height=2in]{lego-minifigure.png} \stackedcircles{5}{12mm}
+\end{center}
+\end{question}
+
 \mynewpage
 
 \begin{question}
-  Let's see if you understand the rules above. Go to:
+  Time for some arithmetic respecting significant digits.
+  \begin{enumerate}
+  \item Look up arithmetic rules for significant digits online and describe them here in your own words.
+  \item Let's see if you understand the rules above. Go to:
 \begin{center}
   \url{https://chemquiz.net/sig/}
 \end{center}
 and quiz yourself!
 \begin{itemize}
-  \item Select 5 problems.
-  \item Select all types of questions: Counting sig figs in numbers, Rounding numbers by sig figs, Multiplication \& division problems with sig figs, Addition \& subtraction problems with sig figs.
+  \item Select 10 problems.
+  \item Select \textbf{all types} of questions: Counting sig figs in numbers, Rounding numbers by sig figs, Multiplication \& division problems with sig figs, Addition \& subtraction problems with sig figs.
   \item Select decimal (regular) notation
   \item Choose your thousands separator.
   \item No units. 
@@ -57,35 +154,36 @@ and quiz yourself!
 \end{itemize}
 Take the quiz until you achieve a perfect score. 
 
-\textbf{BELOW, DESCRIBE A PROBLEM YOU MISSED OR THOUGHT WAS TRICKY.} 
-\end{question}
-\mynewpage
-
-\begin{question}
-Demonstrate skill here by answering the following questions respecting significant digits. \textbf{In each case, explain your reasoning.}
-\begin{enumerate}
-  \item Compute: $32.8000 \cdot 7200$
-  \vfill
-
-  \item How many significant digits are in $191.000$?
-
-  \vfill 
-  \item Round  $3363750$ to $4$ significant digits.
-  \vfill
-
-  \item Compute:  $5290 - 0.3100$
-  \vfill
-  \item Compute: $87 900 000 + 10 000$
-\vfill
+\textbf{DESCRIBE A PROBLEM YOU MISSED OR THOUGHT WAS TRICKY.} 
 \end{enumerate}
-
-
 \end{question}
-\mynewpage
+% \mynewpage
 
-\begin{question}
-Let's reflect on the activity we did the previous class day. Express your answers from Problems 1 and 2 from that activity 
-respecting significant digits. Explain your reasoning. 
-\end{question}
+% \begin{question}
+% Demonstrate skill here by answering the following questions respecting significant digits. \textbf{In each case, explain your reasoning.}
+% \begin{enumerate}
+%   \item Compute: $32.8000 \cdot 7200$
+%   \vfill
+
+%   \item How many significant digits are in $191.000$?
+
+%   \vfill 
+%   \item Round  $3363750$ to $4$ significant digits.
+%   \vfill
+
+%   \item Compute:  $5290 - 0.3100$
+%   \vfill
+%   \item Compute: $87 900 000 + 10 000$
+% \vfill
+% \end{enumerate}
+
+
+% \end{question}
+% \mynewpage
+
+% \begin{question}
+% Let's reflect on the activity we did the previous class day. Express your answers from Problems 1 and 2 from that activity 
+% respecting significant digits. Explain your reasoning. 
+% \end{question}
 
 \end{document}

@@ -110,9 +110,8 @@ intensity of earthquakes.
                         the solar system}};
             \draw[fill=black] (7,5.2) circle (.05);
 
-            \node[anchor=east] at (8,7.8) {{\scriptsize Distance to the edge of
-                        the Milky Way}};
-            \draw[fill=black] (8,7.8) circle (.05);
+            \node[anchor=east] at (8,7.9) {{\scriptsize Diameter of the Milky Way}};
+            \draw[fill=black] (8,7.9) circle (.05);
 
             \node[anchor=east] at (9,8.4) {{\scriptsize Distance to the
                         Andromeda galaxy}};
@@ -137,86 +136,37 @@ intensity of earthquakes.
 % QUESTION 3: WEALTH DISTRIBUTION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{question}
-    \textbf{Wealth Distribution: Comparing Everyday Net Worth to Extreme
-        Fortunes}
-
-    According to data compiled at
-    \begin{center}
-        \texttt{http://www.righto.com/2024/10/wealth-distribution-in-united-states.html},
+In the United States, around $345$ million people have a net worth of less than $\$500$ million. In fact the median net worth of a family in the United States is around $\$100000$. 
+ If we visit the following website:
+\begin{center}
+        %\texttt{http://www.righto.com/2024/10/wealth-distribution-in-united-states.html}
+        \url{https://www.forbes.com/forbes-400/}
     \end{center}
-    net worth in the United States varies widely, from a median of
-    roughly \(\$100{,}000\) to the \(\$200\) billion range for some of the
-    richest individuals (e.g., Elon Musk).
-
+    we can see the net worth of the $400$ richest people in the United States.
     \begin{enumerate}
-        \item On a single \textbf{logarithmic-scale}, plot typical net worth
-              amounts such as:
-              \[
-                  \$1{,}000,\quad \$100{,}000,\quad \$1{,}000{,}000,\quad
-                  \$1{,}000{,}000{,}000,\quad
-                  \$200{,}000{,}000{,}000.
-              \]
-              Use the blank axis below and add your own labels or ticks as
-              needed.
-
+        \item Approximately what percentage of the population of the United States is $345$ million people?
+        \item On a single \textbf{logarithmic-scale}, plot typical net of the wealtheist, 100th wealthest, 200th wealthest, 300 wealthest, 
+        400 weathest person in the United States, along with $\$500000000$, and the median wealth of $\$100000$. Be sure to tell me the base of your logarithmic-scale.
+              \begin{center}
+              \begin{tikzpicture}[x=1.5cm,y=1cm]
+                % A simple blank axis for the students to label
+                \draw[thin,->] (-.5,0)--(10.5,0);
+                \draw[thin,->] (0,-.5)--(0,10.5);
+                % Example tick marks (unlabeled, for students to fill in)
+                \foreach \y in {1,...,10}{
+                        \draw (0,\y) -- ++(0.2,0);
+                        %\node at (-1.5,\y) {$\log_{463}\left(463^{\y}\right)=\y$};
+                        \node[anchor=east] at (-.1,\y) {$\y$};
+                    }
+                \end{tikzpicture}
+                \end{center}
         \item Briefly discuss why it might be more intuitive to use a log scale
               than a linear scale when comparing a typical family's net worth
               to
               that of someone with \(\$200\) billion.
     \end{enumerate}
 
-    \begin{center}
-        \begin{tikzpicture}[x=1cm,y=1cm,scale=0.8]
-            % A simple blank axis for the students to label
-            \draw[thick,->] (0,0)--(10,0);
-            \foreach \x in {0,...,10}
-            \draw (\x,0) -- ++(0,0.2);
-
-            \node at (5,-1) {\small (Place your net-worth labels here)};
-        \end{tikzpicture}
-    \end{center}
 \end{question}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% QUESTION 3: DISCOVER THE RICHTER SCALE
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{question}
-    \textbf{Richter Scale for Earthquakes READING?}
-
-    Earthquake magnitudes are often reported using the (common) logarithm
-    base \(10\). For instance, a magnitude \(M\) earthquake satisfies
-    \[
-        M = \log_{10}\!\Bigl(\tfrac{A}{A_0}\Bigr),
-    \]
-    where \(A\) is the measured seismic wave amplitude and \(A_0\) is a
-    standard reference amplitude.
-
-    \begin{enumerate}
-        \item Suppose an earthquake measures \(M=7\). By what factor is its
-              seismic wave amplitude \(A\) bigger than the reference amplitude
-              \(A_0\)?
-
-        \item If another earthquake measures \(M=8\), how many times larger is
-              \emph{its} amplitude compared to the \(M=7\) quake?
-
-        \item Draw an axis below to illustrate how quickly earthquake
-              amplitudes grow as \(M\) increases. Label some hypothetical
-              magnitudes (like 2, 5, 7, 9) along the axis.
-
-    \end{enumerate}
-
-    \begin{center}
-        \begin{tikzpicture}[x=1cm,y=1cm,scale=0.8]
-            % A simple blank axis for the students to label
-            \draw[thick,->] (0,0)--(10,0);
-            \foreach \x in {0,...,10}
-            \draw (\x,0) -- ++(0,0.2);
-
-            \node at (5,-1) {\small (Your Richter-scale labels here)};
-        \end{tikzpicture}
-    \end{center}
-\end{question}
-
-\mynewpage
 
 \end{document}
